@@ -1,0 +1,7 @@
+{
+    "services": {
+        "obfuscation_test": {
+            "id": "legacymappings:all_classes_are_deobfuscated_obfuscation_test"
+        }
+    }
+}
