@@ -266,8 +266,8 @@ c	net/minecraft/world/World	net/minecraft/world/World
 		p	3	p_72901_3_	stopOnLiquid	#stopOnLiquid, :, ~, allowLiquids
 	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;ZZZ)Lnet/minecraft/util/MovingObjectPosition;	func_147447_a	rayTraceBlocks	#rayTraceBlocks, :, rayTrace, :
 		c	Performs a raycast against all blocks in the world. Args : Vec1, Vec2, stopOnLiquid, ignoreBlockWithoutBoundingBox, returnLastUncollidableBlock
-		p	1	p_147447_1_	vec31	#vec31, :, start, from
-		p	2	p_147447_2_	vec32	#vec32, :, end, to
+		p	1	p_147447_1_	start	#vec31, :, start, from
+		p	2	p_147447_2_	end	#vec32, :, end, to
 		p	3	p_147447_3_	stopOnLiquid	#stopOnLiquid, :, ~, allowLiquids
 		p	4	p_147447_4_	ignoreBlockWithoutBoundingBox	#ignoreBlockWithoutBoundingBox, :, ~, ignoreBlocksWithoutCollision
 		p	5	p_147447_5_	returnLastUncollidableBlock	#returnLastUncollidableBlock, :, ~, ~
@@ -730,8 +730,8 @@ c	net/minecraft/world/World	net/minecraft/world/World
 		p	1	p_147442_1_	strength	#strength, :, thunderGradient, thunder
 	m	(II)I	func_72825_h	getTopSolidOrLiquidBlock	#getTopSolidOrLiquidBlock, :, ~, getSurfaceHeight
 		c	Finds the highest block on the x, z coordinate that is solid and returns its y coord. Args x, z
-		p	1	p_72825_1_	x	#~, ~, x, :
-		p	2	p_72825_2_	z	#~, ~, z, :
+		p	1	p_72825_1_	xIn	#~, ~, x, :
+		p	2	p_72825_2_	zIn	#~, ~, z, :
 	m	(III)Z	func_72937_j	canBlockSeeTheSky	#canBlockSeeTheSky, :, isAboveHighestBlock, hasSkyAccess
 		c	Checks if the specified block is able to see the sky
 		p	1	p_72937_1_	x	#~, ~, x, :

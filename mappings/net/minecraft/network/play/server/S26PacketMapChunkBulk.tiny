@@ -5,7 +5,7 @@ c	net/minecraft/network/play/server/S26PacketMapChunkBulk	net/minecraft/network/
 	f	[I	field_149265_c	sections	#~, ~, ~, sections
 	f	[I	field_149262_d	sectionsWithBlockIdsUpper	#~, ~, ~, sectionsWithBlockIdsUpper
 	f	[B	field_149263_e	compressedData	#~, ~, ~, compressedData
-	f	[[B	field_149260_f	data	#~, ~, ~, data
+	f	[[B	field_149260_f	theData	#~, ~, ~, data
 	f	I	field_149261_g	size	#~, ~, ~, size
 	f	Z	field_149267_h	isOverworld	#isOverworld, :, notNether, light
 	f	[B	field_149268_i	buffer	#~, ~, ~, buffer

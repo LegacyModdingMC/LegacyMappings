@@ -1,6 +1,6 @@
 tiny	2	0	srg	named	comment
 c	net/minecraft/client/gui/GuiListExtended	net/minecraft/client/gui/GuiListExtended	
-	m	(III)Z	func_148179_a	mouseClicked	#mouseClicked, :, :, :
+	m	(III)Z	func_148179_a	mouseClickedVanilla	#mouseClicked, :, :, :
 		p	1	p_148179_1_	mouseX	#mouseX, :, :, :
 		p	2	p_148179_2_	mouseY	#mouseY, :, :, :
 		p	3	p_148179_3_	mouseEvent	#mouseEvent, :, button, :

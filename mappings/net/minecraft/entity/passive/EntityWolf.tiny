@@ -3,7 +3,7 @@ c	net/minecraft/entity/passive/EntityWolf	net/minecraft/entity/passive/EntityWol
 	f	F	field_70926_e	headRotationCourse	#headRotationCourse, :, ~, begAnimationProgress
 		c	Float used to smooth the rotation of the wolf head
 	f	F	field_70924_f	headRotationCourseOld	#headRotationCourseOld, :, ~, lastBegAnimationProgress
-	f	Z	field_70925_g	isShaking	#isShaking, isWet, ~, furWet
+	f	Z	field_70925_g	isWet	#isShaking, isWet, ~, furWet
 		c	true is the wolf is wet else false
 	f	Z	field_70928_h	isShaking	#isShaking, :, ~, canShakeWaterOff
 		c	True if the wolf is shaking else False

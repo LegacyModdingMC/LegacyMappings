@@ -147,9 +147,9 @@ c	net/minecraft/world/chunk/Chunk	net/minecraft/world/chunk/Chunk
 		p	1	p_76611_1_	x	#x, :, :, localX
 		p	2	p_76611_2_	z	#z, :, :, localZ
 	m	(III)I	func_150808_b	getBlockLightOpacity	#getBlockLightOpacity, :, getBlockOpacity, getOpacityAt
-		p	1	p_150808_1_	x	#x, :, :, localX
+		p	1	p_150808_1_	localX	#x, :, :, localX
 		p	2	p_150808_2_	y	#y, :, :, :
-		p	3	p_150808_3_	z	#z, :, :, localZ
+		p	3	p_150808_3_	localZ	#z, :, :, localZ
 	m	(IIII)I	func_76629_c	getBlockLightValue	#getBlockLightValue, :, ~, getLightAt
 		c	Gets the amount of light on a block taking into account sunlight
 		p	1	p_76629_1_	localX	#~, ~, ~, localX

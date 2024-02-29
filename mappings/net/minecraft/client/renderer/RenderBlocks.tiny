@@ -392,7 +392,7 @@ c	net/minecraft/client/renderer/RenderBlocks	net/minecraft/client/renderer/Rende
 		p	4	p_147801_4_	z	#~, ~, ~, z
 	m	(Lnet/minecraft/block/BlockFlowerPot;III)Z	func_147752_a	renderBlockFlowerpot	#renderBlockFlowerpot, :, ~, tessellateFlowerPot
 		c	Renders flower pot
-		p	1	p_147752_1_	block	#~, ~, ~, block
+		p	1	p_147752_1_	blockIn	#~, ~, ~, block
 		p	2	p_147752_2_	x	#~, ~, ~, x
 		p	3	p_147752_3_	y	#~, ~, ~, y
 		p	4	p_147752_4_	z	#~, ~, ~, z

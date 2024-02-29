@@ -13,4 +13,4 @@ c	net/minecraft/client/gui/GuiOptionsRowList	net/minecraft/client/gui/GuiOptions
 		p	4	p_i45015_4_	yStart	#~, ~, ~, yStart
 		p	5	p_i45015_5_	yEnd	#~, ~, ~, yEnd
 		p	6	p_i45015_6_	entryHeight	#~, ~, ~, entryHeight
-		p	7	p_i45015_7_	options	#~, ~, ~, options
+		p	7	p_i45015_7_	optionsIn	#~, ~, ~, options

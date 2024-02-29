@@ -22,7 +22,7 @@ c	net/minecraft/client/stream/IStream	net/minecraft/client/stream/IStream
 		c	Shuts down a steam
 	m	()V	func_152935_j	update	#~, ~, update, :
 	m	()V	func_152922_k	submit	#~, ~, submit, :
-	m	()Z	func_152936_l	isLoggedIn	#~, ~, isLoginSuccessful, isLoggedIn
+	m	()Z	func_152936_l	isLoginSuccessful	#~, ~, isLoginSuccessful, isLoggedIn
 	m	()Z	func_152924_m	isReadyToBroadcast	#isReadyToBroadcast, :, isReady, isReadyToBroadcast
 	m	()Z	func_152934_n	isBroadcasting	#isBroadcasting, :, isLive, isBroadcasting
 	m	()Z	func_152919_o	isPaused	#isPaused, :, :, :
