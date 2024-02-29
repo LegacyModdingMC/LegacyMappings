@@ -78,6 +78,9 @@ val v2UnmergedMappingsJar = tasks.register<Jar>("v2UnmergedMappingsJar") {
   from(mappings) {
     rename("mappings.tiny", "mappings/mappings.tiny")
   }
+  from(project.file("LICENSE.MCP")) {
+    rename("LICENSE.MCP", "LICENSE")
+  }
   destinationDirectory.set(file("build/libs"))
   manifest {
     attributes(Pair("Minecraft-Version-Id", minecraftVersion))
@@ -90,6 +93,9 @@ val csvZip = tasks.register<Zip>("csvZip") {
   group = "mapping build"
   archiveFileName = "legacymappings-${mappingVersion}-csv.zip"
   from(mappings)
+  from(project.file("LICENSE.MCP")) {
+    rename("LICENSE.MCP", "LICENSE")
+  }
   destinationDirectory.set(file("build/libs"))
 }
 
