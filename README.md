@@ -58,7 +58,7 @@ Generates a new set of mappings in a single-file format which does not have the 
 
 This project uses data from the following projects:
 
-- [MCP](https://github.com/ModCoderPack/MCPMappingsArchive) (custom permissive license, see [MCP.LICENSE](MCP.LICENSE))
+- [MCP](https://github.com/ModCoderPack/MCPMappingsArchive) (custom permissive license, see [LICENSE.MCP](LICENSE.MCP))
 - [Legacy Yarn](https://github.com/Legacy-Fabric/yarn) ([CC0-1.0](LICENSE.CC0))
 - [Feather](https://github.com/OrnitheMC/feather-mappings/) ([CC0-1.0](LICENSE.CC0))
 
@@ -66,4 +66,4 @@ Additionally, some of the buildscript code was taken from [Yarn](https://github.
 
 ## License
 
-This project maintains MCP's license for the data (the contents of the `mappings` directory, and any exported mappings). Everything else (the buildscript code) is under the [Unlicense](UNLICENSE).
+This project maintains MCP's license for the data (the contents of the `mappings` directory, and any exported mappings). Everything else (the buildscript code) is under [CC0-1.0](LICENSE.CC0).
