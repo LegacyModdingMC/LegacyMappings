@@ -42,15 +42,18 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
 
         TaskProvider<GenerateMappingsTask> taskGenerateMappings = project.getTasks().register("generateMappings", GenerateMappingsTask.class, task -> {
             task.setGroup("mapping");
+            task.setDescription("Generates a new set of mappings, layering the mappings specified in the legacyMappings extension.");
         });
 
         TaskProvider<GenerateMappingsTask> taskGenerateDebugMappings = project.getTasks().register("generateDebugMappings", GenerateMappingsTask.class, task -> {
             task.setGroup("mapping");
+            task.setDescription("Generates a new set of mappings, layering the mappings specified in the legacyMappings extension. The MCP layers are not flattened in the comments.");
             task.getIsDebug().set(true);
         });
 
         TaskProvider<ExportMappingsTask> taskExportMappings = project.getTasks().register("exportMappings", ExportMappingsTask.class, task -> {
             task.setGroup("mapping build");
+            task.setDescription("Converts the mappings from source format into a consumable format.");
             task.getInputTinyDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
             task.getOutputTinyFile().set(project.getLayout().getBuildDirectory().file("mappings/mappings.tiny"));
             task.getOutputCsvDir().set(project.getLayout().getBuildDirectory().dir("mappings/csv"));
@@ -58,6 +61,7 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
 
         TaskProvider<PrepareEnigmaTask> taskPrepareEnigma = project.getTasks().register("prepareEnigma", PrepareEnigmaTask.class, task -> {
             task.setGroup("internal mapping");
+            task.setDescription("Converts the mappings and the Minecraft jar into a format Enigma can work with.");
             task.getInputSrgMergedMinecraftJar().set(srgMergedMinecraftJarRegular);
             task.getInputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
             task.getOutputEnigmaJar().set(project.getLayout().getBuildDirectory().file("legacy-mappings/enigma-workspace/minecraft.jar"));
@@ -66,6 +70,7 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
 
         TaskProvider<SaveEnigmaTask> taskSaveEnigma = project.getTasks().register("saveEnigma", SaveEnigmaTask.class, task -> {
             task.setGroup("internal mapping");
+            task.setDescription("Propagates the changes made to Enigma's copy of the mappings to the real version.");
             task.getInputEnigmaFile().set(taskPrepareEnigma.flatMap(PrepareEnigmaTask::getOutputEnigmaMapping));
             task.getOutputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
         });

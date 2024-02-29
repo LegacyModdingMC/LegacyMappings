@@ -71,6 +71,7 @@ tasks.remapDecompiledJar {
 }
 
 val v2UnmergedMappingsJar = tasks.register<Jar>("v2UnmergedMappingsJar") {
+  setDescription("Assembles a Yarn-style jar containing a tiny V2 mapping from the SRG namespace.");
   val mappings = tasks.exportMappings.flatMap { t -> t.outputTinyFile }
   group = "mapping build"
   archiveFileName = "legacymappings-${mappingVersion}-v2.jar"
@@ -84,6 +85,7 @@ val v2UnmergedMappingsJar = tasks.register<Jar>("v2UnmergedMappingsJar") {
 }
 
 val csvZip = tasks.register<Zip>("csvZip") {
+  setDescription("Assembles an MCP-style zip containing CSV files for method, field and parameter mappings.");
   val mappings = tasks.exportMappings.flatMap { t -> t.outputCsvDir }
   group = "mapping build"
   archiveFileName = "legacymappings-${mappingVersion}-csv.zip"
@@ -109,6 +111,7 @@ val openEnigma = tasks.register<JavaExec>("openEnigma") {
 }
 
 val enigma = tasks.register("enigma") {
+  setDescription("Opens Enigma for editing the mappings.");
   group = "mapping"
 }
 
