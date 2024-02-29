@@ -96,6 +96,7 @@ tasks.build.configure {
 }
 
 val openEnigma = tasks.register<JavaExec>("openEnigma") {
+  group = "internal mapping"
   classpath = enigmaRuntime
   mainClass.set("org.quiltmc.enigma.gui.Main")
   jvmArgs("-Xmx2048M", "-Denigma.legacymodding=true")
@@ -107,7 +108,9 @@ val openEnigma = tasks.register<JavaExec>("openEnigma") {
   )
 }
 
-val enigma = tasks.register("enigma")
+val enigma = tasks.register("enigma") {
+  group = "mapping"
+}
 
 enigma.configure { dependsOn(tasks.saveEnigma) }
 tasks.saveEnigma.configure { dependsOn(openEnigma) }

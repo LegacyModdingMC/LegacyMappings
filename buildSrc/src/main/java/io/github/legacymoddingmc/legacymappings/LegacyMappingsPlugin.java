@@ -41,15 +41,19 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
         srgMergedMinecraftJar = project.getLayout().getBuildDirectory().dir("legacy-mappings").get().file("srg_merged_minecraft.jar").getAsFile().toPath();
         srgMergedMinecraftSourcesJar = project.getLayout().getBuildDirectory().dir("legacy-mappings").get().file("srg_merged_minecraft-sources.jar").getAsFile().toPath();
 
-        TaskProvider<GenerateMappingsTask> taskGenerateMappings = project.getTasks().register("generateMappings", GenerateMappingsTask.class);
+        TaskProvider<GenerateMappingsTask> taskGenerateMappings = project.getTasks().register("generateMappings", GenerateMappingsTask.class, task -> {
+            task.setGroup("mapping");
+        });
 
         TaskProvider<ExportMappingsTask> taskExportMappings = project.getTasks().register("exportMappings", ExportMappingsTask.class, task -> {
+            task.setGroup("mapping build");
             task.getInputTinyDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
             task.getOutputTinyFile().set(project.getLayout().getBuildDirectory().file("mappings/mappings.tiny"));
             task.getOutputCsvDir().set(project.getLayout().getBuildDirectory().dir("mappings/csv"));
         });
 
         TaskProvider<PrepareEnigmaTask> taskPrepareEnigma = project.getTasks().register("prepareEnigma", PrepareEnigmaTask.class, task -> {
+            task.setGroup("internal mapping");
             task.getInputSrgMergedMinecraftJar().set(srgMergedMinecraftJarRegular);
             task.getInputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
             task.getOutputEnigmaJar().set(project.getLayout().getBuildDirectory().file("legacy-mappings/enigma-workspace/minecraft.jar"));
@@ -57,6 +61,7 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
         });
 
         TaskProvider<SaveEnigmaTask> taskSaveEnigma = project.getTasks().register("saveEnigma", SaveEnigmaTask.class, task -> {
+            task.setGroup("internal mapping");
             task.getInputEnigmaFile().set(taskPrepareEnigma.flatMap(PrepareEnigmaTask::getOutputEnigmaMapping));
             task.getOutputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
         });
