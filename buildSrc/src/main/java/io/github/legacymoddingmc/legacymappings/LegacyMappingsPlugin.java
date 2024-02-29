@@ -45,6 +45,11 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
             task.setGroup("mapping");
         });
 
+        TaskProvider<GenerateMappingsTask> taskGenerateDebugMappings = project.getTasks().register("generateDebugMappings", GenerateMappingsTask.class, task -> {
+            task.setGroup("mapping");
+            task.getIsDebug().set(true);
+        });
+
         TaskProvider<ExportMappingsTask> taskExportMappings = project.getTasks().register("exportMappings", ExportMappingsTask.class, task -> {
             task.setGroup("mapping build");
             task.getInputTinyDir().set(project.getLayout().getProjectDirectory().dir("mappings"));

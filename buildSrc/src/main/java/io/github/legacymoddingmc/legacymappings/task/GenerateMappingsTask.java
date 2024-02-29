@@ -19,6 +19,8 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.artifacts.Dependency;
+import org.gradle.api.provider.Property;
+import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.TaskAction;
 
 import java.io.CharArrayWriter;
@@ -72,7 +74,14 @@ public abstract class GenerateMappingsTask extends DefaultTask {
     private Path yarnPath;
     private Path featherPath;
 
-    private boolean writeToFile = false;
+    @Input
+    public abstract Property<Boolean> getIsDebug();
+
+    private boolean writeToFile;
+
+    public GenerateMappingsTask() {
+        getIsDebug().convention(false);
+    }
 
     @TaskAction
     public void run() throws IOException {
@@ -88,6 +97,8 @@ public abstract class GenerateMappingsTask extends DefaultTask {
 
         yarnPath = extractDep(ext.getYarn());
         featherPath = extractDep(ext.getFeather());
+
+        writeToFile = getIsDebug().get();
 
         generateMappings();
     }
@@ -187,9 +198,26 @@ public abstract class GenerateMappingsTask extends DefaultTask {
         // yarn adds some bogus source names
         dropBogusNames(joinedFinal, srgMcpUserdev, false);
 
+        List<String> layerOrder = ext.getLayerOrder();
+        List<String> commentOrder = ext.getCommentOrder();
+
+        if(getIsDebug().get()) {
+            boolean wroteMcp = false;
+            List<String> expandedCommentOrder = new ArrayList<>();
+            for(String s : commentOrder) {
+                if(!s.startsWith("mcp")) {
+                    expandedCommentOrder.add(s);
+                } else if(!wroteMcp) { // once is enough
+                    expandedCommentOrder.addAll(mcpLayerNames);
+                    wroteMcp = true;
+                }
+            }
+            commentOrder = expandedCommentOrder;
+        }
+
         MemoryMappingTree merged = layer(joinedFinal, "named",
-                ext.getLayerOrder(),
-                ext.getCommentOrder());
+                layerOrder,
+                commentOrder);
         MappingUtil.removeDuplicateSrgs(merged, srgJar, false);
         removeHardToMap(merged);
 
@@ -201,7 +229,8 @@ public abstract class GenerateMappingsTask extends DefaultTask {
             mergedCompleted.accept(new Tiny2FileWriter(writer, false));
             MappingUtil.writeTiny2Dir(writer.toString(), getProject().getLayout().getProjectDirectory().dir("mappings").getAsFile().toPath(), null);
         } else {
-            mergedCompleted.accept(MappingWriter.create(getProject().getLayout().getProjectDirectory().file("srgMcp.tiny").getAsFile().toPath(), MappingFormat.TINY_2_FILE), VisitOrder.createByName());
+            System.out.println("Writing debug mappings with comment order: " + commentOrder);
+            mergedCompleted.accept(MappingWriter.create(getProject().getLayout().getBuildDirectory().file("mappings/mappings-debug.tiny").get().getAsFile().toPath(), MappingFormat.TINY_2_FILE), VisitOrder.createByName());
         }
     }
 
