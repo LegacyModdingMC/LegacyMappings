@@ -67,7 +67,9 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
 
         TaskProvider<PrepareEnigmaTask> taskPrepareEnigma = project.getTasks().register("prepareEnigma", PrepareEnigmaTask.class, task -> {
             task.onlyIf(mappingsDirExists);
-            task.dependsOn("decompileSrgJar", "cleanupDecompSrgJar");
+            if(!Files.isRegularFile(srgMergedMinecraftJar)) {
+                task.dependsOn("decompileSrgJar", "cleanupDecompSrgJar");
+            }
             task.setGroup("internal mapping");
             task.setDescription("Converts the mappings and the Minecraft jar into a format Enigma can work with.");
             task.getInputSrgMergedMinecraftJar().set(srgMergedMinecraftJarRegular);
