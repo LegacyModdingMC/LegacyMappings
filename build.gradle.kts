@@ -95,17 +95,24 @@ tasks.build.configure {
   dependsOn(v2UnmergedMappingsJar, csvZip)
 }
 
-tasks.register<JavaExec>("enigma") {
+val openEnigma = tasks.register<JavaExec>("openEnigma") {
   classpath = enigmaRuntime
   mainClass.set("org.quiltmc.enigma.gui.Main")
   jvmArgs("-Xmx2048M", "-Denigma.legacymodding=true")
   args(
-      "-jar",
-      tasks.named<PrepareEnigmaTask>("prepareEnigma").get().outputEnigmaJar.get().asFile,
-      "-mappings",
-      tasks.named<PrepareEnigmaTask>("prepareEnigma").get().outputEnigmaMapping.get().asFile
+          "-jar",
+          tasks.named<PrepareEnigmaTask>("prepareEnigma").get().outputEnigmaJar.get().asFile,
+          "-mappings",
+          tasks.named<PrepareEnigmaTask>("prepareEnigma").get().outputEnigmaMapping.get().asFile
   )
 }
+
+val enigma = tasks.register("enigma")
+
+enigma.configure { dependsOn(tasks.saveEnigma) }
+tasks.saveEnigma.configure { dependsOn(openEnigma) }
+openEnigma.configure { dependsOn(tasks.prepareEnigma) }
+
 
 tasks.jar.configure { enabled = false }
 tasks.reobfJar.configure { enabled = false }

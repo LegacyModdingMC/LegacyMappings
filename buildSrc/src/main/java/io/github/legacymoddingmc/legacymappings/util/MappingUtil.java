@@ -13,6 +13,7 @@ import java.io.StringReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
@@ -190,5 +191,21 @@ public class MappingUtil {
             }
         }
         return lines;
+    }
+
+    public static void writeTiny2Dir(String string, Path outDir, Set<String> classesToWrite) throws IOException {
+        String header = string.split("\\n")[0];
+        List<String> classes = Arrays.asList(string.split("\\nc\\t")).stream().filter(c -> !c.startsWith("tiny")).map(c -> c = "c\t" + c).collect(Collectors.toList());
+        for(String classText : classes) {
+            int firstTab = classText.indexOf('\t');
+            int secondTab = classText.indexOf('\t', firstTab + 1);
+            String className = classText.substring(firstTab + 1, secondTab);
+
+            if(classesToWrite == null || classesToWrite.contains(className)) {
+                Path outPath = outDir.resolve(className + ".tiny");
+                Files.createDirectories(outPath.getParent());
+                Files.write(outPath, Arrays.asList((header + "\n" + classText).split("\\n")));
+            }
+        }
     }
 }

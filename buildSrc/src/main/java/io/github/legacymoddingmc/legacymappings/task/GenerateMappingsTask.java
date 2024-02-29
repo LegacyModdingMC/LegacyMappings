@@ -199,25 +199,9 @@ public abstract class GenerateMappingsTask extends DefaultTask {
         if(!writeToFile) {
             CharArrayWriter writer = new CharArrayWriter();
             mergedCompleted.accept(new Tiny2FileWriter(writer, false));
-            writeTiny2Dir(writer.toString(), getProject().getLayout().getProjectDirectory().dir("mappings").getAsFile().toPath(), null);
+            MappingUtil.writeTiny2Dir(writer.toString(), getProject().getLayout().getProjectDirectory().dir("mappings").getAsFile().toPath(), null);
         } else {
             mergedCompleted.accept(MappingWriter.create(getProject().getLayout().getProjectDirectory().file("srgMcp.tiny").getAsFile().toPath(), MappingFormat.TINY_2_FILE), VisitOrder.createByName());
-        }
-    }
-
-    private static void writeTiny2Dir(String string, Path outDir, Set<String> classesToWrite) throws IOException {
-        String header = string.split("\\n")[0];
-        List<String> classes = Arrays.asList(string.split("\\nc\\t")).stream().filter(c -> !c.startsWith("tiny")).map(c -> c = "c\t" + c).collect(Collectors.toList());
-        for(String classText : classes) {
-            int firstTab = classText.indexOf('\t');
-            int secondTab = classText.indexOf('\t', firstTab + 1);
-            String className = classText.substring(firstTab + 1, secondTab);
-
-            if(classesToWrite == null || classesToWrite.contains(className)) {
-                Path outPath = outDir.resolve(className + ".tiny");
-                Files.createDirectories(outPath.getParent());
-                Files.write(outPath, Arrays.asList((header + "\n" + classText).split("\\n")));
-            }
         }
     }
 

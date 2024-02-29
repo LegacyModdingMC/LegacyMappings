@@ -1,6 +1,7 @@
 package io.github.legacymoddingmc.legacymappings;
 
 import io.github.legacymoddingmc.legacymappings.task.PrepareEnigmaTask;
+import io.github.legacymoddingmc.legacymappings.task.SaveEnigmaTask;
 import io.github.legacymoddingmc.legacymappings.util.DependencyUtil;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
@@ -53,6 +54,11 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
             task.getInputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
             task.getOutputEnigmaJar().set(project.getLayout().getBuildDirectory().file("legacy-mappings/enigma-workspace/minecraft.jar"));
             task.getOutputEnigmaMapping().set(project.getLayout().getBuildDirectory().file("legacy-mappings/enigma-workspace/mappings.tiny"));
+        });
+
+        TaskProvider<SaveEnigmaTask> taskSaveEnigma = project.getTasks().register("saveEnigma", SaveEnigmaTask.class, task -> {
+            task.getInputEnigmaFile().set(taskPrepareEnigma.flatMap(PrepareEnigmaTask::getOutputEnigmaMapping));
+            task.getOutputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
         });
 
         setUpJarHack(project, taskGenerateMappings, taskPrepareEnigma);
