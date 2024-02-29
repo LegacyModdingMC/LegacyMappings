@@ -4,7 +4,9 @@ import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 
 import io.github.legacymoddingmc.legacymappings.task.GenerateMappingsTask;
+import io.github.legacymoddingmc.legacymappings.task.ExportMappingsTask;
 import org.gradle.api.Task;
+import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
 import org.gradle.api.tasks.TaskProvider;
 
@@ -75,6 +77,12 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
                 });
             });
         }
+
+        TaskProvider<ExportMappingsTask> taskExportMappings = project.getTasks().register("exportMappings", ExportMappingsTask.class, task -> {
+            task.getInputTinyDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
+            task.getOutputTinyFile().set(project.getLayout().getBuildDirectory().file("mappings/mappings.tiny"));
+            task.getOutputCsvDir().set(project.getLayout().getBuildDirectory().dir("mappings/csv"));
+        });
     }
 
     // I don't know how to add RFG to the buildSrc classpath without conflicting with the plugin in the regular project, lul

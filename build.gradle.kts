@@ -28,6 +28,40 @@ repositories {
   }
 }
 
+tasks.jar.configure { enabled = false }
+tasks.reobfJar.configure { enabled = false }
+tasks.reobfJar.configure { enabled = false }
+tasks.packageMcLauncher.configure { enabled = false }
+tasks.packagePatchedMc.configure { enabled = false }
+tasks.compileJava.configure { enabled = false }
+
+minecraft {
+  useForgeEmbeddedMappings = false
+  // hack: force generateForgeSrgMappings to rerun by setting a non-downloaded mapping, and outputting to a different
+  // directory than the one it checks
+  mcpMappingVersion = "11"
+}
+
+tasks.generateForgeSrgMappings {
+  methodsCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("methods.csv") }
+  fieldsCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("fields.csv") }
+
+  // TODO use tiny once support for it is implemented
+  //inputMcpTiny = tasks.exportMappings.flatMap { t -> t.outputTinyFile }
+
+  notchToSrg = layout.buildDirectory.file("userdev_local/notch-srg.srg")
+  notchToMcp = layout.buildDirectory.file("userdev_local/notch-mcp.srg")
+  srgToMcp = layout.buildDirectory.file("userdev_local/srg-mcp.srg")
+  mcpToSrg = layout.buildDirectory.file("userdev_local/mcp-srg.srg")
+  mcpToNotch = layout.buildDirectory.file("userdev_local/mcp-notch.srg")
+  srgExc = layout.buildDirectory.file("userdev_local/srg.exc")
+  mcpExc = layout.buildDirectory.file("userdev_local/mcp.exc")
+}
+
+tasks.remapDecompiledJar {
+  paramCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("params.csv") }
+}
+
 tasks.register<JavaExec>("enigma") {
   classpath = enigmaRuntime
   mainClass.set("cuchaz.enigma.gui.Main")
@@ -50,13 +84,6 @@ val enigmaRuntime: Configuration by configurations.creating {
 dependencies {
   enigmaRuntime("cuchaz:enigma-swing:2.4.1")
   enigmaRuntime("cuchaz:enigma-cli:2.4.1")
-}
-
-tasks.register("hello") {
-  doLast {
-    val files = project.configurations.getByName("mapping").files
-    println(files)
-  }
 }
 
 legacyMappings {
