@@ -170,13 +170,12 @@ public abstract class GenerateMappingsTask extends DefaultTask {
 
         // can't be bothered to softcode the order here. it's only used for javadoc.
         List<Pair<String, VisitableMappingTree>> mappingsToJoin = new ArrayList<>();
-        mappingsToJoin.add(Pair.of("mcpUserdev", srgMcpUserdev));
-        for(int i = 1; i < srgMcps.size(); i++) {
+        mappingsToJoin.add(Pair.of("yarn", srgYarn));
+        mappingsToJoin.add(Pair.of("feather", srgFeather));
+        for(int i = srgMcps.size() - 1; i >= 0; i--) {
             mappingsToJoin.add(Pair.of("mcp-" + i, srgMcps.get(i)));
         }
-        mappingsToJoin.add(Pair.of("feather", srgFeather));
-        mappingsToJoin.add(Pair.of("yarn", srgYarn));
-        mappingsToJoin.add(Pair.of("mcp-0", srgMcps.get(0)));
+        mappingsToJoin.add(Pair.of("mcpUserdev", srgMcpUserdev));
 
         MemoryMappingTree joined = joinMappings(mappingsToJoin);
         // yarn adds some bogus source names
@@ -197,9 +196,9 @@ public abstract class GenerateMappingsTask extends DefaultTask {
                 null);
 
         List<Pair<String, VisitableMappingTree>> finalMappingsToJoin = new ArrayList<>();
+        finalMappingsToJoin.add(Pair.of("mcpPreferNewer", srgMcpPreferNewer));
+        finalMappingsToJoin.add(Pair.of("mcpPreferOlder", srgMcpPreferOlder));
         finalMappingsToJoin.addAll(mappingsToJoin);
-        finalMappingsToJoin.add(finalMappingsToJoin.size() - 1, Pair.of("mcpPreferNewer", srgMcpPreferNewer));
-        finalMappingsToJoin.add(finalMappingsToJoin.size() - 1, Pair.of("mcpPreferOlder", srgMcpPreferOlder));
 
         MemoryMappingTree joinedFinal = joinMappings(finalMappingsToJoin);
         // yarn adds some bogus source names
