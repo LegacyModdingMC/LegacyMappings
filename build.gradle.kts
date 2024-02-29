@@ -28,6 +28,12 @@ repositories {
   }
 }
 
+// Fetch build number from Github Actions
+val buildNumber = System.getenv().get("BUILD_NUMBER") ?: "local"
+val minecraftVersion = "1.7.10"
+
+val mappingVersion = "${minecraftVersion}+build.$buildNumber"
+
 tasks.jar.configure { enabled = false }
 tasks.reobfJar.configure { enabled = false }
 tasks.reobfJar.configure { enabled = false }
@@ -60,6 +66,31 @@ tasks.generateForgeSrgMappings {
 
 tasks.remapDecompiledJar {
   paramCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("params.csv") }
+}
+
+val v2UnmergedMappingsJar = tasks.register<Jar>("v2UnmergedMappingsJar") {
+  val mappings = tasks.exportMappings.flatMap { t -> t.outputTinyFile }
+  group = "mapping build"
+  archiveFileName = "legacymappings-${mappingVersion}-v2.jar"
+  from(mappings) {
+    rename("mappings.tiny", "mappings/mappings.tiny")
+  }
+  destinationDirectory.set(file("build/libs"))
+  manifest {
+    attributes(Pair("Minecraft-Version-Id", minecraftVersion))
+  }
+}
+
+val csvZip = tasks.register<Zip>("csvZip") {
+  val mappings = tasks.exportMappings.flatMap { t -> t.outputCsvDir }
+  group = "mapping build"
+  archiveFileName = "legacymappings-${mappingVersion}-csv.zip"
+  from(mappings)
+  destinationDirectory.set(file("build/libs"))
+}
+
+tasks.build.configure {
+  dependsOn(v2UnmergedMappingsJar, csvZip)
 }
 
 tasks.register<JavaExec>("enigma") {
