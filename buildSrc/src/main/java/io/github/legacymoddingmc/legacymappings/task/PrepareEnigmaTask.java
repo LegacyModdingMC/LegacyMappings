@@ -125,7 +125,14 @@ public abstract class PrepareEnigmaTask extends DefaultTask {
 
         // enigma's parser parses null mappings as "", we don't want that so let's drop them
         for(ClassMapping cls : mappings.getClasses()) {
-            cls.getMethods().removeIf(m -> m.getDstName(0) == null);
+            cls.getMethods().removeIf(m -> {
+                if(m.getDstName(0) == null) {
+                    return true;
+                } else {
+                    m.getArgs().removeIf(a -> a.getDstName(0) == null);
+                    return false;
+                }
+            });
             cls.getFields().removeIf(f -> f.getDstName(0) == null);
         }
     }
