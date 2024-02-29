@@ -28,6 +28,24 @@ repositories {
       includeGroup("cpw.mods")
     }
   }
+
+  exclusiveContent {
+    forRepository {
+      ivy {
+        name = "Enigma releases"
+        url = uri("https://github.com/LegacyModdingMC/enigma/releases/download/")
+        patternLayout {
+          artifact("[revision]/[module]-[revision](-[classifier])(.[ext])")
+        }
+        metadataSources {
+          artifact()
+        }
+      }
+    }
+    filter {
+      includeGroup("io.github.legacymoddingmc")
+    }
+  }
 }
 
 // Fetch build number from Github Actions
@@ -145,7 +163,7 @@ val enigmaRuntime: Configuration by configurations.creating {
 }
 
 dependencies {
-  enigmaRuntime(files("libs/enigma-swing-2.2.0+local-all.jar"))
+  enigmaRuntime("io.github.legacymoddingmc:enigma-swing:2.2.1-lmmc:all")
 }
 
 legacyMappings {
