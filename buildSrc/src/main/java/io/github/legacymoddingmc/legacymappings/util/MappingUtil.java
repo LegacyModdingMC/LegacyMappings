@@ -1,6 +1,5 @@
 package io.github.legacymoddingmc.legacymappings.util;
 
-import io.github.legacymoddingmc.legacymappings.task.GenerateMappingsTask;
 import io.github.legacymoddingmc.legacymappings.util.JarInfo.ClassInfo;
 import net.fabricmc.mappingio.MappingReader;
 import net.fabricmc.mappingio.tree.MappingTree.ClassMapping;

@@ -1,8 +1,19 @@
 package io.github.legacymoddingmc.legacymappings.task;
 
+import com.opencsv.CSVParser;
+import com.opencsv.CSVParserBuilder;
+import com.opencsv.CSVWriterBuilder;
+import com.opencsv.ICSVWriter;
+import io.github.legacymoddingmc.legacymappings.util.MappingUtil;
 import net.fabricmc.mappingio.MappingWriter;
 import net.fabricmc.mappingio.format.MappingFormat;
+import net.fabricmc.mappingio.tree.MappingTree.ClassMapping;
+import net.fabricmc.mappingio.tree.MappingTree.FieldMapping;
+import net.fabricmc.mappingio.tree.MappingTree.MethodArgMapping;
+import net.fabricmc.mappingio.tree.MappingTree.MethodMapping;
+import net.fabricmc.mappingio.tree.MemoryMappingTree;
 import net.fabricmc.mappingio.tree.VisitOrder;
+import org.apache.commons.lang3.ObjectUtils;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
@@ -13,31 +24,10 @@ import org.gradle.api.tasks.TaskAction;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Iterator;
-import java.util.List;
-import java.util.stream.Stream;
-
-import org.apache.commons.lang3.ObjectUtils;
-
-import com.opencsv.CSVParser;
-import com.opencsv.CSVParserBuilder;
-import com.opencsv.CSVWriterBuilder;
-import com.opencsv.ICSVWriter;
-
-import net.fabricmc.mappingio.MappingReader;
-import net.fabricmc.mappingio.tree.MappingTree.ClassMapping;
-import net.fabricmc.mappingio.tree.MappingTree.FieldMapping;
-import net.fabricmc.mappingio.tree.MappingTree.MethodArgMapping;
-import net.fabricmc.mappingio.tree.MappingTree.MethodMapping;
-import net.fabricmc.mappingio.tree.MemoryMappingTree;
-
-import io.github.legacymoddingmc.legacymappings.util.MappingUtil;
 
 public abstract class ExportMappingsTask extends DefaultTask {
 

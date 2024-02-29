@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import io.github.legacymoddingmc.legacymappings.LegacyMappingsPlugin;
-
 public abstract class LegacyMappingsExtension {
 
     private final Project project;

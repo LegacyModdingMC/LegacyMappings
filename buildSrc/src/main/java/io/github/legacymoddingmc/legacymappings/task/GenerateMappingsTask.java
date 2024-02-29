@@ -1,21 +1,35 @@
 package io.github.legacymoddingmc.legacymappings.task;
 
 import com.google.common.base.Preconditions;
+import com.google.common.collect.Lists;
 import com.opencsv.CSVParser;
 import com.opencsv.CSVParserBuilder;
 import com.opencsv.CSVReader;
 import com.opencsv.CSVReaderBuilder;
 import io.github.legacymoddingmc.legacymappings.LegacyMappingsExtension;
 import io.github.legacymoddingmc.legacymappings.LegacyMappingsPlugin;
-import io.github.legacymoddingmc.legacymappings.util.JarInfo;
-import io.github.legacymoddingmc.legacymappings.util.JarInfo.ClassInfo;
-import io.github.legacymoddingmc.legacymappings.util.MappingUtil;
 import io.github.legacymoddingmc.legacymappings.util.DependencyUtil;
+import io.github.legacymoddingmc.legacymappings.util.JarInfo;
+import io.github.legacymoddingmc.legacymappings.util.MappingUtil;
 import net.fabricmc.mappingio.MappedElementKind;
+import net.fabricmc.mappingio.MappingReader;
+import net.fabricmc.mappingio.MappingWriter;
+import net.fabricmc.mappingio.adapter.MappingNsCompleter;
+import net.fabricmc.mappingio.adapter.MappingNsRenamer;
+import net.fabricmc.mappingio.adapter.MappingSourceNsSwitch;
+import net.fabricmc.mappingio.format.MappingFormat;
+import net.fabricmc.mappingio.format.srg.SrgFileReader;
+import net.fabricmc.mappingio.format.tiny.Tiny2FileWriter;
 import net.fabricmc.mappingio.tree.MappingTree;
-import net.fabricmc.mappingio.tree.MappingTree.MemberMapping;
+import net.fabricmc.mappingio.tree.MappingTree.ClassMapping;
+import net.fabricmc.mappingio.tree.MappingTree.ElementMapping;
+import net.fabricmc.mappingio.tree.MappingTree.FieldMapping;
+import net.fabricmc.mappingio.tree.MappingTree.MethodArgMapping;
+import net.fabricmc.mappingio.tree.MappingTree.MethodMapping;
+import net.fabricmc.mappingio.tree.MemoryMappingTree;
+import net.fabricmc.mappingio.tree.VisitOrder;
 import net.fabricmc.mappingio.tree.VisitableMappingTree;
-import org.apache.commons.io.FilenameUtils;
+import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.artifacts.Dependency;
@@ -24,44 +38,16 @@ import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.TaskAction;
 
 import java.io.CharArrayWriter;
-import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
-
-import com.google.common.collect.Lists;
-
-import net.fabricmc.mappingio.MappingReader;
-import net.fabricmc.mappingio.MappingWriter;
-import net.fabricmc.mappingio.adapter.MappingNsCompleter;
-import net.fabricmc.mappingio.adapter.MappingSourceNsSwitch;
-import net.fabricmc.mappingio.format.MappingFormat;
-import net.fabricmc.mappingio.format.srg.SrgFileReader;
-import net.fabricmc.mappingio.format.tiny.Tiny2FileWriter;
-import net.fabricmc.mappingio.tree.MemoryMappingTree;
-import net.fabricmc.mappingio.tree.VisitOrder;
-
-import java.util.HashSet;
-import java.util.stream.Collectors;
-
-import org.apache.commons.lang3.ObjectUtils;
-
-import net.fabricmc.mappingio.adapter.MappingNsRenamer;
-import net.fabricmc.mappingio.tree.MappingTree.ClassMapping;
-import net.fabricmc.mappingio.tree.MappingTree.ElementMapping;
-import net.fabricmc.mappingio.tree.MappingTree.FieldMapping;
-import net.fabricmc.mappingio.tree.MappingTree.MethodArgMapping;
-import net.fabricmc.mappingio.tree.MappingTree.MethodMapping;
 
 public abstract class GenerateMappingsTask extends DefaultTask {
 

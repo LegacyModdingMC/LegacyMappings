@@ -1,19 +1,6 @@
 package io.github.legacymoddingmc.legacymappings.util;
 
-import java.io.File;
-import java.io.IOException;
-import java.net.URI;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.*;
-import java.util.jar.JarEntry;
-import java.util.jar.JarFile;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
-
+import io.github.legacymoddingmc.legacymappings.util.JarInfo.ClassInfo.MethodInfo;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.tuple.Pair;
 import org.objectweb.asm.ClassReader;
@@ -22,7 +9,24 @@ import org.objectweb.asm.tree.ClassNode;
 import org.objectweb.asm.tree.LocalVariableNode;
 import org.objectweb.asm.tree.MethodNode;
 
-import io.github.legacymoddingmc.legacymappings.util.JarInfo.ClassInfo.MethodInfo;
+import java.io.IOException;
+import java.net.URI;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class JarInfo {
 

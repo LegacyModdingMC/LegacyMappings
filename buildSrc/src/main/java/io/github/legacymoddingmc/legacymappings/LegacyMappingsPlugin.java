@@ -1,13 +1,12 @@
 package io.github.legacymoddingmc.legacymappings;
 
+import io.github.legacymoddingmc.legacymappings.task.ExportMappingsTask;
+import io.github.legacymoddingmc.legacymappings.task.GenerateMappingsTask;
 import io.github.legacymoddingmc.legacymappings.task.PrepareEnigmaTask;
 import io.github.legacymoddingmc.legacymappings.task.SaveEnigmaTask;
 import io.github.legacymoddingmc.legacymappings.util.DependencyUtil;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
-
-import io.github.legacymoddingmc.legacymappings.task.GenerateMappingsTask;
-import io.github.legacymoddingmc.legacymappings.task.ExportMappingsTask;
 import org.gradle.api.Task;
 import org.gradle.api.file.RegularFile;
 import org.gradle.api.file.RegularFileProperty;
