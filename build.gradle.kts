@@ -1,4 +1,6 @@
 import io.github.legacymoddingmc.legacymappings.task.PrepareEnigmaTask
+import io.github.legacymoddingmc.legacymappings.LegacyMappingsPlugin
+import kotlin.io.path.exists
 
 // Use RFG to fetch the srg jar
 plugins {
@@ -65,16 +67,12 @@ minecraft {
   useForgeEmbeddedMappings = false
   // hack: force generateForgeSrgMappings to rerun by setting a non-downloaded mapping, and outputting to a different
   // directory than the one it checks
+  //
+  // ~.gradle/caches/minecraft/de/oceanlabs/mcp/mcp_stable/11/rfg_srgs must be empty for this to work
   mcpMappingVersion = "11"
 }
 
 tasks.generateForgeSrgMappings {
-  methodsCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("methods.csv") }
-  fieldsCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("fields.csv") }
-
-  // TODO use tiny once support for it is implemented
-  //inputMcpTiny = tasks.exportMappings.flatMap { t -> t.outputTinyFile }
-
   notchToSrg = layout.buildDirectory.file("userdev_local/notch-srg.srg")
   notchToMcp = layout.buildDirectory.file("userdev_local/notch-mcp.srg")
   srgToMcp = layout.buildDirectory.file("userdev_local/srg-mcp.srg")
@@ -84,8 +82,18 @@ tasks.generateForgeSrgMappings {
   mcpExc = layout.buildDirectory.file("userdev_local/mcp.exc")
 }
 
-tasks.remapDecompiledJar {
-  paramCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("params.csv") }
+if(LegacyMappingsPlugin.mappingsDirExists(project)) {
+  tasks.generateForgeSrgMappings {
+    methodsCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("methods.csv") }
+    fieldsCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("fields.csv") }
+
+    // TODO use tiny once support for it is implemented
+    //inputMcpTiny = tasks.exportMappings.flatMap { t -> t.outputTinyFile }
+  }
+
+  tasks.remapDecompiledJar {
+    paramCsv = tasks.exportMappings.flatMap { t -> t.outputCsvDir.file("params.csv") }
+  }
 }
 
 val v2UnmergedMappingsJar = tasks.register<Jar>("v2UnmergedMappingsJar") {
@@ -128,6 +136,7 @@ tasks.assemble.configure {
 }
 
 val openEnigma = tasks.register<JavaExec>("openEnigma") {
+  onlyIf(LegacyMappingsPlugin.mappingsDirExists)
   group = "internal mapping"
   classpath = enigmaRuntime
   mainClass.set("org.quiltmc.enigma.gui.Main")

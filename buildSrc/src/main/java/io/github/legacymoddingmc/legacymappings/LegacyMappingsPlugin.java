@@ -5,13 +5,16 @@ import io.github.legacymoddingmc.legacymappings.task.GenerateMappingsTask;
 import io.github.legacymoddingmc.legacymappings.task.PrepareEnigmaTask;
 import io.github.legacymoddingmc.legacymappings.task.SaveEnigmaTask;
 import io.github.legacymoddingmc.legacymappings.util.DependencyUtil;
+import org.apache.commons.io.FileUtils;
 import org.gradle.api.Plugin;
 import org.gradle.api.Project;
 import org.gradle.api.Task;
 import org.gradle.api.file.RegularFile;
 import org.gradle.api.file.RegularFileProperty;
+import org.gradle.api.specs.Spec;
 import org.gradle.api.tasks.TaskProvider;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Files;
@@ -21,6 +24,8 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
 
     public static Path srgMergedMinecraftJar;
     public static Path srgMergedMinecraftSourcesJar;
+
+    public static final Spec<? super Task> mappingsDirExists = c -> mappingsDirExists(c.getProject());
 
     @Override
     public void apply(Project project) {
@@ -52,6 +57,7 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
         });
 
         TaskProvider<ExportMappingsTask> taskExportMappings = project.getTasks().register("exportMappings", ExportMappingsTask.class, task -> {
+            task.onlyIf(mappingsDirExists);
             task.setGroup("mapping build");
             task.setDescription("Converts the mappings from source format into a consumable format.");
             task.getInputTinyDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
@@ -60,6 +66,8 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
         });
 
         TaskProvider<PrepareEnigmaTask> taskPrepareEnigma = project.getTasks().register("prepareEnigma", PrepareEnigmaTask.class, task -> {
+            task.onlyIf(mappingsDirExists);
+            task.dependsOn("decompileSrgJar", "cleanupDecompSrgJar");
             task.setGroup("internal mapping");
             task.setDescription("Converts the mappings and the Minecraft jar into a format Enigma can work with.");
             task.getInputSrgMergedMinecraftJar().set(srgMergedMinecraftJarRegular);
@@ -69,11 +77,13 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
         });
 
         TaskProvider<SaveEnigmaTask> taskSaveEnigma = project.getTasks().register("saveEnigma", SaveEnigmaTask.class, task -> {
+            task.onlyIf(mappingsDirExists);
             task.setGroup("internal mapping");
             task.setDescription("Propagates the changes made to Enigma's copy of the mappings to the real version.");
             task.getInputEnigmaFile().set(taskPrepareEnigma.flatMap(PrepareEnigmaTask::getOutputEnigmaMapping));
             task.getOutputMappingDir().set(project.getLayout().getProjectDirectory().dir("mappings"));
         });
+
 
         setUpJarHack(project, taskGenerateMappings, taskPrepareEnigma);
     }
@@ -135,5 +145,14 @@ public class LegacyMappingsPlugin implements Plugin<Project> {
         LegacyMappingsExtension ext = (LegacyMappingsExtension) project.getExtensions().getByName("legacyMappings");
         return DependencyUtil.extractDep(project, ext.getUserdev(),
                 project.getLayout().getBuildDirectory().dir("legacy-mappings/userdev").get().getAsFile().toPath());
+    }
+
+    public static boolean mappingsDirExists(Project p) {
+        try {
+            File mappingsDir = p.getLayout().getProjectDirectory().dir("mappings").getAsFile();
+            return mappingsDir.exists() && !FileUtils.isEmptyDirectory(mappingsDir);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
