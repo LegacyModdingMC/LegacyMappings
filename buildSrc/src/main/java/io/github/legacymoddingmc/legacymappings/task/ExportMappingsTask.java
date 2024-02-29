@@ -1,9 +1,11 @@
 package io.github.legacymoddingmc.legacymappings.task;
 
+import net.fabricmc.mappingio.MappingWriter;
+import net.fabricmc.mappingio.format.MappingFormat;
+import net.fabricmc.mappingio.tree.VisitOrder;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.file.DirectoryProperty;
 import org.gradle.api.file.RegularFileProperty;
-import org.gradle.api.tasks.Input;
 import org.gradle.api.tasks.InputDirectory;
 import org.gradle.api.tasks.OutputDirectory;
 import org.gradle.api.tasks.OutputFile;
@@ -15,8 +17,8 @@ import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Stream;
@@ -53,20 +55,25 @@ public abstract class ExportMappingsTask extends DefaultTask {
     }
 
     private static void exportCsv(Path srcDir, Path outDir) throws IOException {
-        MemoryMappingTree mappings = new MemoryMappingTree();
-        try(StringReader reader = new StringReader(String.join("\n", readSplitMappings(srcDir)))) {
-            MappingReader.read(reader, mappings);
-        }
-
-        writeCsv(mappings, outDir);
+        writeCsv(readSplitMappings(srcDir), outDir);
     }
 
     private static void build(Path srcDir, Path out) throws IOException {
         Files.createDirectories(out.getParent());
-        Files.write(out, readSplitMappings(srcDir), StandardOpenOption.CREATE);
+        MemoryMappingTree mappings = readSplitMappings(srcDir);
+        mappings.setDstNamespaces(Collections.singletonList("named"));
+        mappings.accept(MappingWriter.create(out, MappingFormat.TINY_2_FILE), VisitOrder.createByName());
     }
 
-    private static List<String> readSplitMappings(Path srcDir) throws IOException {
+    private static MemoryMappingTree readSplitMappings(Path srcDir) throws IOException {
+        MemoryMappingTree mappings = new MemoryMappingTree();
+        try(StringReader reader = new StringReader(String.join("\n", readSplitMappingLines(srcDir)))) {
+            MappingReader.read(reader, mappings);
+        }
+        return mappings;
+    }
+
+    private static List<String> readSplitMappingLines(Path srcDir) throws IOException {
         List<String> lines = new ArrayList<>();
         boolean wroteHeader = false;
         try(Stream<Path> files = Files.walk(srcDir)) {
