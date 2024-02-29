@@ -70,7 +70,7 @@ public abstract class GenerateMappingsTask extends DefaultTask {
     private Path yarnPath;
     private Path featherPath;
 
-    private boolean writeToFile = true;
+    private boolean writeToFile = false;
 
     @TaskAction
     public void run() throws IOException {
