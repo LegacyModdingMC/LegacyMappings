@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSapling	net/minecraft/block/BlockSapling	
+	f	[Ljava/lang/String;	field_149882_a	VARIANTS	#~, ~, ~, VARIANTS
+	f	[Lnet/minecraft/util/IIcon;	field_149881_b	SPRITES	#~, ~, ~, SPRITES
+	m	(Lnet/minecraft/world/World;IIII)Z	func_149880_a	isSapling	#~, ~, ~, isSapling
+		p	1	p_149880_1_	world	#~, ~, ~, world
+		p	2	p_149880_2_	x	#~, ~, ~, x
+		p	3	p_149880_3_	y	#~, ~, ~, y
+		p	4	p_149880_4_	z	#~, ~, ~, z
+		p	5	p_149880_5_	type	#~, ~, ~, type
+	m	(Lnet/minecraft/world/World;IIILjava/util/Random;)V	func_149879_c	markOrGrowMarked	#markOrGrowMarked, :, ~, tryGrow
+		p	1	p_149879_1_	world	#~, ~, ~, world
+		p	2	p_149879_2_	x	#~, ~, ~, x
+		p	3	p_149879_3_	y	#~, ~, ~, y
+		p	4	p_149879_4_	z	#~, ~, ~, z
+		p	5	p_149879_5_	rand	#~, ~, ~, rand
+	m	(Lnet/minecraft/world/World;IIILjava/util/Random;)V	func_149878_d	growTree	#growTree, :, ~, grow
+		p	1	p_149878_1_	world	#~, ~, ~, world
+		p	2	p_149878_2_	x	#~, ~, ~, x
+		p	3	p_149878_3_	y	#~, ~, ~, y
+		p	4	p_149878_4_	z	#~, ~, ~, z
+		p	5	p_149878_5_	rand	#~, ~, ~, rand
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

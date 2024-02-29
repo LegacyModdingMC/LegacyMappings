@@ -1,0 +1,57 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IntHashMap	net/minecraft/util/IntHashMap	
+	f	[Lnet/minecraft/util/IntHashMap$Entry;	field_76055_a	slots	#slots, :, ~, nodes
+		c	An array of HashEntries representing the heads of hash slot lists
+	f	I	field_76053_b	count	#count, :, size, :
+		c	The number of items stored in this map
+	f	I	field_76054_c	threshold	#threshold, :, capacity, threshold
+		c	The grow threshold
+	f	F	field_76051_d	growFactor	#growFactor, :, growthFactor, loadFactor
+		c	The scale factor used to determine when to grow the table
+	f	I	field_76052_e	versionStamp	#versionStamp, :, ~, modCount
+		c	A serial stamp used to mark changes
+	f	Ljava/util/Set;	field_76050_f	keySet	#keySet, :, ~, ids
+		c	The set of all the keys stored in this MCHash object
+	m	(I)Ljava/lang/Object;	func_76041_a	lookup	#lookup, :, get, :
+		c	Returns the object associated to a key
+		p	1	p_76041_1_	hashEntry	#hashEntry, :, key, :
+	m	(II)I	func_76043_a	getSlotIndex	#getSlotIndex, :, getIndex, index
+		c	Computes the index of the slot for the hash and slot count passed in.
+		p	0	p_76043_0_	hash	#hash, :, :, :
+		p	1	p_76043_1_	slotCount	#slotCount, :, bucketLength, cap
+	m	(IILjava/lang/Object;I)V	func_76040_a	insert	#insert, :, :, insertNode
+		c	Adds an object to a slot
+		p	1	p_76040_1_	hash	#~, ~, hash, :
+		p	2	p_76040_2_	key	#~, ~, key, :
+		p	3	p_76040_3_	value	#~, ~, value, :
+		p	4	p_76040_4_	index	#~, ~, index, :
+	m	(ILjava/lang/Object;)V	func_76038_a	addKey	#addKey, :, set, put
+		c	Adds a key and associated value to this map
+		p	1	p_76038_1_	hashEntry	#hashEntry, :, key, :
+		p	2	p_76038_2_	valueEntry	#valueEntry, :, value, :
+	m	([Lnet/minecraft/util/IntHashMap$Entry;)V	func_76048_a	copyTo	#copyTo, :, ~, addAll
+		c	Copies the hash slots to a new array
+		p	1	p_76048_1_	nodes	#~, ~, ~, nodes
+	m	(I)Z	func_76037_b	containsItem	#containsItem, :, hasEntry, contains
+		c	Return true if an object is associated with the given key
+		p	1	p_76037_1_	hashEntry	#hashEntry, :, key, :
+	m	()V	func_76046_c	clearMap	#clearMap, :, clear, :
+		c	Removes all entries from the map
+	m	(I)Lnet/minecraft/util/IntHashMap$Entry;	func_76045_c	lookupEntry	#lookupEntry, :, ~, getNode
+		c	Returns the key/object mapping for a given key as a MCHashEntry
+		p	1	p_76045_1_	hashEntry	#hashEntry, :, ~, key
+	m	(I)Ljava/lang/Object;	func_76049_d	removeObject	#removeObject, :, remove, :
+		c	Removes the specified object from the map and returns it
+		p	1	p_76049_1_	o	#o, :, key, :
+	m	(I)Lnet/minecraft/util/IntHashMap$Entry;	func_76036_e	removeEntry	#removeEntry, :, ~, removeNode
+		c	Removes the specified entry from the map and returns it
+		p	1	p_76036_1_	key	#~, ~, ~, key
+	m	(I)I	access$000	access$000	#~, ~, ~, syntheticGetHash
+		p	0	p_access$000_0_	i	#~, ~, ~, i
+	m	(I)I	func_76044_g	computeHash	#computeHash, :, hash, :
+		c	Makes the passed in integer suitable for hashing by a number of shifts
+		p	0	p_76044_0_	integer	#integer, :, key, :
+	m	(I)V	func_76047_h	grow	#grow, :, expandSize, resize
+		c	Increases the number of hash slots
+		p	1	p_76047_1_	size	#~, ~, updatedSize, size
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityHanging	net/minecraft/entity/EntityHanging	
+	f	I	field_82332_a	hangingDirection	#hangingDirection, :, ~, direction
+	f	I	field_146063_b	x	#~, ~, ~, x
+	f	I	field_146064_c	y	#~, ~, ~, y
+	f	I	field_146062_d	z	#~, ~, ~, z
+	f	I	field_70520_f	tickCounter1	#tickCounter1, :, obstructionCheckCounter, validationCooldown
+	m	(I)V	func_82328_a	setDirection	#setDirection, :, ~, setDirection
+		p	1	p_82328_1_	dir	#~, ~, ~, dir
+	m	(Lnet/minecraft/entity/Entity;)V	func_110128_b	onBroken	#onBroken, :, onBreak, onAttack
+		c	Called when this entity is broken. Entity parameter may be null.
+		p	1	p_110128_1_	brokenEntity	#brokenEntity, :, entity, :
+	m	(I)F	func_70517_b	getPositionOffset	#~, ~, ~, getPositionOffset
+		p	1	p_70517_1_	length	#~, ~, ~, length
+	m	()Z	func_70518_d	onValidSurface	#onValidSurface, :, isPosValid, :
+		c	checks to make sure painting can be placed there
+	m	()I	func_82329_d	getWidthPixels	#getWidthPixels, :, getWidth, :
+	m	()I	func_82330_g	getHeightPixels	#getHeightPixels, :, getHeight, :
+	m	(Lnet/minecraft/world/World;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1589_1_	world	#~, ~, ~, world
+		p	2	p_i1589_2_	x	#~, ~, ~, x
+		p	3	p_i1589_3_	y	#~, ~, ~, y
+		p	4	p_i1589_4_	z	#~, ~, ~, z
+		p	5	p_i1589_5_	dir	#~, ~, ~, dir
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1588_1_	worldIn	#worldIn, :, ~, ~

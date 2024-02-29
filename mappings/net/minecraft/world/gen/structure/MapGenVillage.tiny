@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenVillage	net/minecraft/world/gen/structure/MapGenVillage	
+	f	Ljava/util/List;	field_75055_e	villageSpawnBiomes	#villageSpawnBiomes, VILLAGE_SPAWN_BIOMES, BIOMES, VALID_BIOMES
+		c	A list of all the biomes villages can spawn in.
+	f	I	field_75054_f	terrainType	#terrainType, size, :, :
+		c	World terrain type, 0 for normal, 1 for flat map
+	f	I	field_82665_g	distance	#distance, :, :, :
+	f	I	field_82666_h	minTownSeparation	#minTownSeparation, :, ~, minDistance
+	m	(Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2093_1_	map	#map, :, :, options
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

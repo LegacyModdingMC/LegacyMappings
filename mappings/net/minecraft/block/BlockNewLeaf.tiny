@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockNewLeaf	net/minecraft/block/BlockNewLeaf	
+	f	[[Ljava/lang/String;	field_150132_N	BLOCK_IDS	#~, ~, ~, BLOCK_IDS
+	f	[Ljava/lang/String;	field_150133_O	VARIANTS	#~, ~, ~, VARIANTS
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

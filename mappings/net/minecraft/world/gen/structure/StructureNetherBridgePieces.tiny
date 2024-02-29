@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureNetherBridgePieces	net/minecraft/world/gen/structure/StructureNetherBridgePieces	
+	f	[Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;	field_78742_a	primaryComponents	#primaryComponents, PRIMARY_COMPONENTS, ~, BRIDGE_PIECE_WEIGHTS
+	f	[Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;	field_78741_b	secondaryComponents	#secondaryComponents, SECONDARY_COMPONENTS, ~, CASTLE_PIECE_WEIGHTS
+	m	()V	func_143049_a	registerNetherFortressPieces	#registerNetherFortressPieces, :, registerPieces, register
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;	access$000	access$000	#~, ~, ~, getAFortressPiece
+		p	0	p_access$000_0_	fortressPieceData	#~, ~, ~, fortressPieceData
+		p	1	p_access$000_1_	piecesList	#~, ~, ~, piecesList
+		p	2	p_access$000_2_	random	#~, ~, ~, random
+		p	3	p_access$000_3_	x	#~, ~, ~, x
+		p	4	p_access$000_4_	y	#~, ~, ~, y
+		p	5	p_access$000_5_	z	#~, ~, ~, z
+		p	6	p_access$000_6_	direction	#~, ~, ~, direction
+		p	7	p_access$000_7_	type	#~, ~, ~, type
+	m	()[Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;	access$100	access$100	#~, ~, ~, getPrimaryFortressPieces
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;	func_78738_b	createNextComponentRandom	#createNextComponentRandom, :, ~, createPiece
+		p	0	p_78738_0_	weight	#~, ~, ~, weight
+		p	1	p_78738_1_	entries	#~, ~, ~, entries
+		p	2	p_78738_2_	random	#~, ~, ~, random
+		p	3	p_78738_3_	x	#~, ~, ~, x
+		p	4	p_78738_4_	y	#~, ~, ~, y
+		p	5	p_78738_5_	z	#~, ~, ~, z
+		p	6	p_78738_6_	facing	#~, ~, ~, facing
+		p	7	p_78738_7_	generationDepth	#~, ~, ~, generationDepth
+	m	()[Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;	access$200	access$200	#~, ~, ~, getSecondaryFortressFeatures
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

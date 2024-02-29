@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/ServerStatusResponse$MinecraftProtocolVersionIdentifier	net/minecraft/network/ServerStatusResponse$MinecraftProtocolVersionIdentifier	
+	f	Ljava/lang/String;	field_151306_a	name	#name, :, ~, name
+	f	I	field_151305_b	protocol	#protocol, :, ~, protocol
+	m	()Ljava/lang/String;	func_151303_a	getName	#getName, :, ~, getName
+	m	()I	func_151304_b	getProtocol	#getProtocol, :, ~, getProtocol
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45275_1_	nameIn	#nameIn, :, ~, name
+		p	2	p_i45275_2_	protocolIn	#protocolIn, :, ~, protocol

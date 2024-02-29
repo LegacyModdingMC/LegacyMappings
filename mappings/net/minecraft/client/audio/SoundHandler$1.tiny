@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundHandler$1	net/minecraft/client/audio/SoundHandler$1	
+	m	()[Ljava/lang/reflect/Type;	getActualTypeArguments	getActualTypeArguments	#~, ~, ~, ~
+	m	()Ljava/lang/reflect/Type;	getOwnerType	getOwnerType	#~, ~, ~, ~
+	m	()Ljava/lang/reflect/Type;	getRawType	getRawType	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

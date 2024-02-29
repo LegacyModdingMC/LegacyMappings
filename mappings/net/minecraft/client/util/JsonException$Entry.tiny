@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/util/JsonException$Entry	net/minecraft/client/util/JsonException$Entry	
+	f	Ljava/lang/String;	field_151376_a	filename	#filename, :, ~, fileName
+	f	Ljava/util/List;	field_151375_b	jsonKeys	#jsonKeys, :, ~, jsonKeys
+	m	(Ljava/lang/String;)V	func_151373_a	addJsonKey	#addJsonKey, :, ~, addJsonKey
+		p	1	p_151373_1_	key	#key, :, ~, key
+	m	(Lnet/minecraft/client/util/JsonException$Entry;Ljava/lang/String;)V	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+		p	1	p_access$100_1_	p_access$100_1_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	func_151372_b	getJsonKeys	#getJsonKeys, :, ~, getJsonKeys
+	m	(Lnet/minecraft/client/util/JsonException$Entry;Ljava/lang/String;)Ljava/lang/String;	access$202	access$202	#~, ~, ~, ~
+		p	0	p_access$202_0_	p_access$202_0_	#~, ~, ~, ~
+		p	1	p_access$202_1_	p_access$202_1_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/util/JsonException$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45278_1_	p_i45278_1_	#~, ~, ~, ~

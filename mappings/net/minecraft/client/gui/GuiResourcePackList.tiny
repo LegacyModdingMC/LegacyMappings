@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiResourcePackList	net/minecraft/client/gui/GuiResourcePackList	
+	f	Lnet/minecraft/client/Minecraft;	field_148205_k	mc	#mc, :, clientInstance, minecraft
+	f	Ljava/util/List;	field_148204_l	resourcePackEntries	#resourcePackEntries, :, widgets, :
+	m	(Lnet/minecraft/client/Minecraft;IILjava/util/List;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45055_1_	mcIn	#mcIn, :, client, minecraft
+		p	2	p_i45055_2_	x	#~, ~, x, :
+		p	3	p_i45055_3_	y	#~, ~, y, :
+		p	4	p_i45055_4_	widgets	#~, ~, widgets, :
+	m	()Ljava/lang/String;	func_148202_k	getListHeader	#getListHeader, :, getTitle, :
+	m	()Ljava/util/List;	func_148201_l	getList	#getList, :, getWidgets, :

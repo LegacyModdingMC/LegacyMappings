@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerProfileCache$Serializer	net/minecraft/server/management/PlayerProfileCache$Serializer	
+	f	Lnet/minecraft/server/management/PlayerProfileCache;	field_152677_a	field_152677_a	#~, ~, ~, ~
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/server/management/PlayerProfileCache$ProfileEntry;	func_152675_a	deserialize	#~, ~, deserialize, :
+		p	1	p_152675_1_	p_152675_1_	#~, ~, ~, ~
+		p	2	p_152675_2_	p_152675_2_	#~, ~, ~, ~
+		p	3	p_152675_3_	p_152675_3_	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/management/PlayerProfileCache$ProfileEntry;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	func_152676_a	serialize	#~, ~, serialize, :
+		p	1	p_152676_1_	p_152676_1_	#~, ~, ~, ~
+		p	2	p_152676_2_	p_152676_2_	#~, ~, ~, ~
+		p	3	p_152676_3_	p_152676_3_	#~, ~, ~, ~
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize	deserialize	#~, ~, ~, ~
+		p	1	p_deserialize_1_	json	#~, ~, ~, json
+		p	2	p_deserialize_2_	type	#~, ~, ~, type
+		p	3	p_deserialize_3_	context	#~, ~, ~, context
+	m	(Ljava/lang/Object;Ljava/lang/reflect/Type;Lcom/google/gson/JsonSerializationContext;)Lcom/google/gson/JsonElement;	serialize	serialize	#~, ~, ~, ~
+		p	1	p_serialize_1_	entry	#~, ~, ~, entry
+		p	2	p_serialize_2_	type	#~, ~, ~, type
+		p	3	p_serialize_3_	context	#~, ~, ~, context
+	m	(Lnet/minecraft/server/management/PlayerProfileCache;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1162_1_	p_i1162_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/management/PlayerProfileCache;Lnet/minecraft/server/management/PlayerProfileCache$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1163_1_	scale	#scale, :, ~, ~
+		p	2	p_i1163_2_	p_i1163_2_	#~, ~, ~, ~

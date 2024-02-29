@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenStructureIO	net/minecraft/world/gen/structure/MapGenStructureIO	
+	f	Lorg/apache/logging/log4j/Logger;	field_151687_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Map;	field_143040_a	startNameToClassMap	#startNameToClassMap, :, configIdMap, ID_TO_START
+	f	Ljava/util/Map;	field_143038_b	startClassToNameMap	#startClassToNameMap, :, configClassMap, START_TO_ID
+	f	Ljava/util/Map;	field_143039_c	componentNameToClassMap	#componentNameToClassMap, :, pieceIdMap, ID_TO_PIECE
+	f	Ljava/util/Map;	field_143037_d	componentClassToNameMap	#componentClassToNameMap, :, pieceClassMap, PIECE_TO_ID
+	m	(Lnet/minecraft/world/gen/structure/StructureComponent;)Ljava/lang/String;	func_143036_a	getStructureComponentName	#getStructureComponentName, :, getId, :
+		p	0	p_143036_0_	component	#component, :, piece, :
+	m	(Lnet/minecraft/world/gen/structure/StructureStart;)Ljava/lang/String;	func_143033_a	getStructureStartName	#getStructureStartName, :, getId, :
+		p	0	p_143033_0_	start	#start, :, config, start
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/world/gen/structure/StructureStart;	func_143035_a	getStructureStart	#getStructureStart, :, getGeneratorConfigFromNbt, getStartFromNbt
+		p	0	p_143035_0_	tagCompound	#tagCompound, :, nbt, :
+		p	1	p_143035_1_	worldIn	#worldIn, :, world, :
+	m	(Ljava/lang/Class;Ljava/lang/String;)V	func_143031_a	registerStructureComponent	#registerStructureComponent, :, registerPiece, :
+		p	0	p_143031_0_	componentClass	#componentClass, :, structurePieceClass, pieceType
+		p	1	p_143031_1_	componentName	#componentName, :, name, id
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/world/gen/structure/StructureComponent;	func_143032_b	getStructureComponent	#getStructureComponent, :, getStructurePieceFromNbt, getPieceFromNbt
+		p	0	p_143032_0_	tagCompound	#tagCompound, :, nbt, :
+		p	1	p_143032_1_	worldIn	#worldIn, :, world, :
+	m	(Ljava/lang/Class;Ljava/lang/String;)V	func_143034_b	registerStructure	#registerStructure, :, register, registerStart
+		p	0	p_143034_0_	startClass	#startClass, :, structureConfigClass, startType
+		p	1	p_143034_1_	structureName	#structureName, :, name, id
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

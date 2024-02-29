@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/CombatEntry	net/minecraft/util/CombatEntry	
+	f	Lnet/minecraft/util/DamageSource;	field_94569_a	damageSrc	#damageSrc, :, damageSource, source
+	f	I	field_94567_b	time	#time, :, entityAge, :
+	f	F	field_94568_c	damage	#damage, :, :, :
+	f	F	field_94565_d	health	#health, :, entityHealth, :
+	f	Ljava/lang/String;	field_94566_e	fallSuffix	#fallSuffix, :, fallDeathSuffix, :
+	f	F	field_94564_f	fallDistance	#fallDistance, :, :, :
+	m	(Lnet/minecraft/util/DamageSource;IFFLjava/lang/String;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1564_1_	damageSrcIn	#damageSrcIn, :, damageSource, source
+		p	2	p_i1564_2_	timeIn	#timeIn, :, entityAge, :
+		p	3	p_i1564_3_	healthAmount	#healthAmount, :, entityOriginalHealth, entityHealth
+		p	4	p_i1564_4_	damageAmount	#damageAmount, :, damage, :
+		p	5	p_i1564_5_	fallSuffixIn	#fallSuffixIn, :, fallDeathSuffix, :
+		p	6	p_i1564_6_	fallDistanceIn	#fallDistanceIn, :, fallDistance, :
+	m	()Lnet/minecraft/util/DamageSource;	func_94560_a	getDamageSrc	#getDamageSrc, :, getDamageSource, :
+		c	Get the DamageSource of the CombatEntry instance.
+	m	()F	func_94563_c	getDamage	#getDamage, :, :, :
+	m	()Z	func_94559_f	isLivingDamageSrc	#isLivingDamageSrc, :, isAttackerLiving, :
+		c	Returns true if {@link net.minecraft.util.DamageSource#getEntity() damage source} is a living entity
+	m	()Ljava/lang/String;	func_94562_g	getFallSuffix	#getFallSuffix, :, getFallDeathSuffix, :
+	m	()Lnet/minecraft/util/IChatComponent;	func_151522_h	getDamageSrcDisplayName	#getDamageSrcDisplayName, :, getAttackerName, :
+	m	()F	func_94561_i	getDamageAmount	#getDamageAmount, :, getFallDistance, :

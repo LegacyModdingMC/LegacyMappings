@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagEnd	net/minecraft/nbt/NBTTagEnd	
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

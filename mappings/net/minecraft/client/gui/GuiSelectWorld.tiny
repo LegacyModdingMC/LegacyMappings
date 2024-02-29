@@ -1,0 +1,62 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSelectWorld	net/minecraft/client/gui/GuiSelectWorld	
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146630_A	renameButton	#renameButton, :, :, renameWorldButton
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146631_B	recreateButton	#recreateButton, :, :, recreateWorldButton
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146632_a	parentScreen	#parentScreen, :, parent, :
+	f	Ljava/lang/String;	field_146628_f	screenTitle	#screenTitle, :, title, :
+	f	Lorg/apache/logging/log4j/Logger;	field_146629_g	logger	#logger, :, LOGGER, :
+	f	Ljava/text/DateFormat;	field_146633_h	dateFormat	#~, ~, dateFormat, :
+	f	Z	field_146634_i	worldLoaded	#~, ~, joinedWorld, worldLoaded
+	f	I	field_146640_r	selectedIndex	#selectedIndex, :, selectedWorld, selectedWorldId
+		c	The list index of the currently-selected world
+	f	Ljava/util/List;	field_146639_s	saves	#~, ~, worlds, saves
+	f	Lnet/minecraft/client/gui/GuiSelectWorld$List;	field_146638_t	availableWorlds	#availableWorlds, :, ~, worldList
+	f	Ljava/lang/String;	field_146637_u	worldText	#~, ~, defaultWorldName, worldText
+	f	Ljava/lang/String;	field_146636_v	conversionText	#~, ~, mustConvertText, conversionText
+		c	The text to display when a world needs to be converted (e.g. when it needs to be converted from a lower version)
+	f	[Ljava/lang/String;	field_146635_w	gameModeTexts	#~, ~, gameModeTexts, :
+	f	Z	field_146643_x	confirmingDelete	#confirmingDelete, :, confimingDelete, isInChildScreen
+		c	Is true if the player is in a child screen (e.g. a confirmation screen).\nIs set to false again when the selectWorldScreen gets displayed again.
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146642_y	deleteButton	#deleteButton, :, :, deleteWorldButton
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146641_z	selectButton	#selectButton, :, :, playSelectedWorldButton
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1054_1_	parentScreenIn	#parentScreenIn, :, parent, :
+	m	()V	func_146618_g	addWorldSelectionButtons	#addWorldSelectionButtons, :, initButtons, addButtons
+	m	(Lnet/minecraft/client/gui/GuiYesNoCallback;Ljava/lang/String;I)Lnet/minecraft/client/gui/GuiYesNo;	func_152129_a	makeDeleteWorldYesNo	#makeDeleteWorldYesNo, :, createDeleteWarningScreen, createDeleteWorldConfirmationScreen
+		c	Generate a GuiYesNo asking for confirmation to delete a world\n \nCalled when user selects the "Delete" button.\n \n@param selectWorld A reference back to the GuiSelectWorld spawning the GuiYesNo\n@param name The name of the world selected for deletion\n@param id An arbitrary integer passed back to selectWorld's confirmClicked method
+		p	0	p_152129_0_	selectWorld	#selectWorld, :, consumer, ~
+		p	1	p_152129_1_	name	#name, :, worldName, ~
+		p	2	p_152129_2_	id	#id, :, :, ~
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Ljava/util/List;	access$000	access$000	#~, ~, ~, getSaves
+		p	0	p_access$000_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;I)I	access$102	access$102	#~, ~, ~, setSelectedWorldId
+		p	0	p_access$102_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+		p	1	p_access$102_1_	id	#~, ~, ~, id
+	m	(I)Ljava/lang/String;	func_146621_a	getSaveFileName	#~, ~, getWorldFileName, getSaveFileName
+		c	The world save name is the name of the save folder. When a world is created this\nis always equal to the world name, but can be different if the folder is either manually\neditted or if you create multiple worlds with the same name.
+		p	1	p_146621_1_	index	#~, ~, index, :
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)I	access$100	access$100	#~, ~, ~, getSelectedWorldId
+		p	0	p_access$100_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;	access$200	access$200	#~, ~, ~, getPlaySelectedWorldButton
+		p	0	p_access$200_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(I)Ljava/lang/String;	func_146614_d	getWorldName	#~, ~, getWorldName, :
+		p	1	p_146614_1_	index	#~, ~, index, :
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;	access$300	access$300	#~, ~, ~, getDeleteWorldButton
+		p	0	p_access$300_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(I)V	func_146615_e	loadWorld	#~, ~, joinWorld, loadWorld
+		p	1	p_146615_1_	id	#~, ~, index, id
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;	access$400	access$400	#~, ~, ~, getRenameWorldButton
+		p	0	p_access$400_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	()V	func_146627_h	loadLevelList	#loadLevelList, :, loadWorlds, getSaves
+		c	Load the existing world saves for display
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Lnet/minecraft/client/gui/GuiButton;	access$500	access$500	#~, ~, ~, getRecreateWorldButton
+		p	0	p_access$500_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Ljava/lang/String;	access$600	access$600	#~, ~, ~, getWorldText
+		p	0	p_access$600_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Ljava/text/DateFormat;	access$700	access$700	#~, ~, ~, getDateFormat
+		p	0	p_access$700_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)Ljava/lang/String;	access$800	access$800	#~, ~, ~, getConversionText
+		p	0	p_access$800_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)[Ljava/lang/String;	access$900	access$900	#~, ~, ~, getGameModeTexts
+		p	0	p_access$900_0_	selectWorldScreen	#~, ~, ~, selectWorldScreen
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

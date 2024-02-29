@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIAvoidEntity$1	net/minecraft/entity/ai/EntityAIAvoidEntity$1	
+	f	Lnet/minecraft/entity/ai/EntityAIAvoidEntity;	field_98219_c	entityAvoiderAI	#entityAvoiderAI, :, fleeGoal, :
+	m	(Lnet/minecraft/entity/ai/EntityAIAvoidEntity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1615_1_	fleeGoal	#~, ~, fleeGoal, ~

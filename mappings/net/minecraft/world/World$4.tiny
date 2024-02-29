@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/World$4	net/minecraft/world/World$4	
+	f	Lnet/minecraft/world/World;	field_151308_a	world	#~, ~, world, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45367_1_	worldIn	#worldIn, :, world, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

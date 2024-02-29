@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C03PacketPlayer	net/minecraft/network/play/client/C03PacketPlayer	
+	f	D	field_149479_a	x	#x, :, :, :
+	f	D	field_149477_b	y	#y, :, :, minY
+	f	D	field_149478_c	z	#z, :, :, :
+	f	D	field_149475_d	stance	#stance, :, ~, y
+	f	F	field_149476_e	yaw	#yaw, :, :, :
+	f	F	field_149473_f	pitch	#pitch, :, :, :
+	f	Z	field_149474_g	onGround	#onGround, :, :, :
+	f	Z	field_149480_h	moving	#moving, :, changePosition, hasPos
+	f	Z	field_149481_i	rotating	#rotating, :, changeLook, hasAngles
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45256_1_	isOnGround	#isOnGround, :, onGround, :
+	m	(Z)V	func_149469_a	setMoving	#setMoving, :, setPositionChanged, setHasPos
+		p	1	p_149469_1_	isMoving	#isMoving, :, changePosition, hasPos
+	m	()D	func_149464_c	getPositionX	#getPositionX, :, getX, :
+	m	()D	func_149467_d	getPositionY	#getPositionY, :, getY, getMinY
+	m	()D	func_149472_e	getPositionZ	#getPositionZ, :, getZ, :
+	m	()D	func_149471_f	getStance	#getStance, :, ~, getY
+	m	()F	func_149462_g	getYaw	#getYaw, :, :, :
+	m	()F	func_149470_h	getPitch	#getPitch, :, :, :
+	m	()Z	func_149465_i	isOnGround	#isOnGround, :, :, getOnGround
+	m	()Z	func_149466_j	isMoving	#isMoving, :, isPositionChanged, hasPos
+	m	()Z	func_149463_k	getRotating	#getRotating, :, isLookChanged, hasAngles
+	m	()V	<init>	<init>	#~, ~, ~, ~

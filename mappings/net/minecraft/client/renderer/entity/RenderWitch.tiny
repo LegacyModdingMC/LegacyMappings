@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderWitch	net/minecraft/client/renderer/entity/RenderWitch	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110910_a	witchTextures	#witchTextures, WITCH_TEXTURES, WITCH_TEX, WITCH_LOCATION
+	f	Lnet/minecraft/client/model/ModelWitch;	field_82414_a	witchModel	#witchModel, :, ~, model
+	m	()V	func_82410_b	translate	#~, ~, ~, translate
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

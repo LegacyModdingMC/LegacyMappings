@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockTNT	net/minecraft/block/BlockTNT	
+	f	Lnet/minecraft/util/IIcon;	field_150116_a	topSprite	#~, ~, top, topSprite
+	f	Lnet/minecraft/util/IIcon;	field_150115_b	bottomSprite	#~, ~, bottom, bottomSprite
+	m	(Lnet/minecraft/world/World;IIIILnet/minecraft/entity/EntityLivingBase;)V	func_150114_a	ignite	#~, ~, onTntPrimed, ignite
+		p	1	p_150114_1_	world	#~, ~, ~, world
+		p	2	p_150114_2_	x	#~, ~, ~, x
+		p	3	p_150114_3_	y	#~, ~, ~, y
+		p	4	p_150114_4_	z	#~, ~, ~, z
+		p	5	p_150114_5_	metadata	#~, ~, ~, metadata
+		p	6	p_150114_6_	igniter	#~, ~, ~, igniter
+	m	()V	<init>	<init>	#~, ~, ~, ~

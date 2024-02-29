@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemCloth	net/minecraft/item/ItemCloth	
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45358_1_	block	#block, :, ~, ~

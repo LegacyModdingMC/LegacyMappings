@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityDiggingFX	net/minecraft/client/particle/EntityDiggingFX	
+	f	Lnet/minecraft/block/Block;	field_145784_a	block	#~, ~, ~, block
+	m	(I)Lnet/minecraft/client/particle/EntityDiggingFX;	func_90019_g	applyRenderColor	#applyRenderColor, :, ~, updateColor
+		c	Creates a new EntityDiggingFX with the block render color applied to the base particle color
+		p	1	p_90019_1_	metadata	#~, ~, ~, metadata
+	m	(III)Lnet/minecraft/client/particle/EntityDiggingFX;	func_70596_a	applyColourMultiplier	#applyColourMultiplier, :, ~, updateColor
+		c	If the block has a colour multiplier, copies it to this particle and returns this particle.
+		p	1	p_70596_1_	x	#~, ~, ~, x
+		p	2	p_70596_2_	y	#~, ~, ~, y
+		p	3	p_70596_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;DDDDDDLnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1234_1_	world	#~, ~, ~, world
+		p	2	p_i1234_2_	x	#~, ~, ~, x
+		p	4	p_i1234_4_	y	#~, ~, ~, y
+		p	6	p_i1234_6_	z	#~, ~, ~, z
+		p	8	p_i1234_8_	velocityX	#~, ~, ~, velocityX
+		p	10	p_i1234_10_	velocityY	#~, ~, ~, velocityY
+		p	12	p_i1234_12_	velocityZ	#~, ~, ~, velocityZ
+		p	14	p_i1234_14_	block	#~, ~, ~, block
+		p	15	p_i1234_15_	metadata	#~, ~, ~, metadata

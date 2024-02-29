@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockJukebox$TileEntityJukebox	net/minecraft/block/BlockJukebox$TileEntityJukebox	
+	f	Lnet/minecraft/item/ItemStack;	field_145858_a	record	#record, :, ~, record
+	m	()Lnet/minecraft/item/ItemStack;	func_145856_a	getRecord	#getRecord, :, ~, getRecord
+	m	(Lnet/minecraft/item/ItemStack;)V	func_145857_a	setRecord	#setRecord, :, ~, setRecord
+		p	1	p_145857_1_	recordStack	#recordStack, :, ~, record
+	m	()V	<init>	<init>	#~, ~, ~, ~

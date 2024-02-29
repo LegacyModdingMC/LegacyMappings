@@ -1,0 +1,56 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/rcon/RConThreadBase	net/minecraft/network/rcon/RConThreadBase	
+	f	Z	field_72619_a	running	#running, :, :, :
+		c	True if the Thread is running, false otherwise
+	f	Lnet/minecraft/network/rcon/IServer;	field_72617_b	server	#server, :, :, :
+		c	Reference to the IServer object.
+	f	Ljava/lang/String;	field_164003_c	threadName	#threadName, :, description, :
+	f	Ljava/lang/Thread;	field_72618_c	rconThread	#rconThread, :, :, :
+		c	Thread for this runnable class
+	f	I	field_72615_d	maxStopWait	#maxStopWait, :, ~, five
+	f	Ljava/util/List;	field_72616_e	socketList	#socketList, :, sockets, :
+		c	A list of registered DatagramSockets
+	f	Ljava/util/List;	field_72614_f	serverSocketList	#serverSocketList, :, serverSockets, closeableSockets
+		c	A list of registered ServerSockets
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	field_164004_h	THREAD_ID	#THREAD_ID, :, ~, count
+	m	(Lnet/minecraft/network/rcon/IServer;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45300_1_	serverIn	#serverIn, :, server, :
+		p	2	p_i45300_2_	threadName	#threadName, :, description, :
+	m	()V	func_72602_a	startThread	#startThread, :, start, :
+		c	Creates a new Thread object from this class and starts running
+	m	(Ljava/lang/String;)V	func_72607_a	logDebug	#logDebug, :, log, :
+		c	Log debug message
+		p	1	p_72607_1_	msg	#msg, :, message, :
+	m	(Ljava/net/DatagramSocket;)V	func_72601_a	registerSocket	#registerSocket, :, :, :
+		c	Registers a DatagramSocket with this thread
+		p	1	p_72601_1_	socket	#socket, :, ~, datagramSocket
+	m	(Ljava/net/DatagramSocket;Z)Z	func_72604_a	closeSocket	#closeSocket, :, :, :
+		c	Closes the specified DatagramSocket
+		p	1	p_72604_1_	socket	#socket, :, :, :
+		p	2	p_72604_2_	removeFromList	#removeFromList, :, remove, :
+	m	(Ljava/net/ServerSocket;Z)Z	func_72605_a	closeServerSocket_do	#closeServerSocket_do, :, closeSocket, :
+		c	Closes the specified ServerSocket
+		p	1	p_72605_1_	socket	#socket, :, :, :
+		p	2	p_72605_2_	removeFromList	#removeFromList, :, remove, :
+	m	(Z)V	func_72612_a	closeAllSockets_do	#closeAllSockets_do, :, forceClose, :
+		c	Closes all of the opened sockets
+		p	1	p_72612_1_	logWarning	#logWarning, :, warn, :
+	m	(Ljava/lang/String;)V	func_72609_b	logInfo	#logInfo, :, info, :
+		c	Log information message
+		p	1	p_72609_1_	msg	#msg, :, message, :
+	m	(Ljava/net/ServerSocket;)Z	func_72608_b	closeServerSocket	#closeServerSocket, :, closeSocket, :
+		c	Closes the specified ServerSocket
+		p	1	p_72608_1_	socket	#socket, :, :, :
+	m	()Z	func_72613_c	isRunning	#isRunning, :, :, :
+		c	Returns true if the Thread is running, false otherwise
+	m	(Ljava/lang/String;)V	func_72606_c	logWarning	#logWarning, :, warn, :
+		c	Log warning message
+		p	1	p_72606_1_	msg	#msg, :, message, :
+	m	()I	func_72603_d	getNumberOfPlayers	#getNumberOfPlayers, :, getCurrentPlayerCount, :
+		c	Returns the number of players on the server
+	m	(Ljava/lang/String;)V	func_72610_d	logSevere	#logSevere, :, logError, :
+		c	Log severe error message
+		p	1	p_72610_1_	msg	#msg, :, essage, :
+	m	()V	func_72611_e	closeAllSockets	#closeAllSockets, :, forceClose, :
+		c	Closes all of the opened sockets
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,98 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityMinecart	net/minecraft/entity/item/EntityMinecart	
+	f	Z	field_70499_f	isInReverse	#isInReverse, :, yawFlipped, :
+	f	D	field_70508_aq	velocityX	#velocityX, :, clientXVelocity, :
+	f	D	field_70507_ar	velocityY	#velocityY, :, clientYVelocity, :
+	f	D	field_70506_as	velocityZ	#velocityZ, :, clientZVelocity, :
+	f	Ljava/lang/String;	field_94102_c	entityName	#entityName, :, customName, :
+	f	[[[I	field_70500_g	matrix	#matrix, MATRIX, ADJACENT_RAIL_POSITIONS, ADJACENT_RAIL_POSITIONS_BY_SHAPE
+		c	Minecart rotational logic matrix
+	f	I	field_70510_h	turnProgress	#turnProgress, :, clientInterpolationSteps, :
+		c	appears to be the progress of the turn
+	f	D	field_70511_i	minecartX	#minecartX, :, clientX, :
+	f	D	field_70509_j	minecartY	#minecartY, :, clientY, :
+	f	D	field_70514_an	minecartZ	#minecartZ, :, clientZ, :
+	f	D	field_70512_ao	minecartYaw	#minecartYaw, :, clientYaw, :
+	f	D	field_70513_ap	minecartPitch	#minecartPitch, :, clientPitch, :
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1713_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1713_2_	x	#x, :, :, :
+		p	4	p_i1713_4_	y	#y, :, :, :
+		p	6	p_i1713_6_	z	#z, :, :, :
+	m	(DDD)Lnet/minecraft/util/Vec3;	func_70489_a	getPos	#getPos, :, snapPositionToRail, :
+		p	1	p_70489_1_	x	#~, ~, x, :
+		p	3	p_70489_3_	y	#~, ~, y, :
+		p	5	p_70489_5_	z	#~, ~, z, :
+	m	(DDDD)Lnet/minecraft/util/Vec3;	func_70495_a	getPosOffset	#getPosOffset, :, snapPositionToRailWithOffset, :
+		c	This method is used to determine the minecart's render orientation, by computing a position along the rail slightly before and slightly after the minecart's actual position.
+		p	1	p_70495_1_	x	#x, :, :, :
+		p	3	p_70495_3_	y	#y, :, :, :
+		p	5	p_70495_5_	z	#z, :, :, :
+		p	7	p_70495_7_	offset	#offset, :, :, :
+	m	(F)V	func_70492_c	setDamage	#setDamage, :, setDamageWobbleStrength, :
+		c	Sets the current amount of damage the minecart has taken. Decreases over time. The cart breaks when this is over 40.
+		p	1	p_70492_1_	damage	#damage, :, damageWobbleStrength, strength
+	m	(IIIDDLnet/minecraft/block/Block;I)V	func_145821_a	moveOnRail	#~, ~, ~, moveOnRail
+		p	1	p_145821_1_	x	#~, ~, ~, x
+		p	2	p_145821_2_	y	#~, ~, ~, y
+		p	3	p_145821_3_	z	#~, ~, ~, z
+		p	4	p_145821_4_	cartVelocity	#~, ~, ~, cartVelocity
+		p	6	p_145821_6_	riderVelocity	#~, ~, ~, riderVelocity
+		p	8	p_145821_8_	block	#~, ~, ~, block
+		p	9	p_145821_9_	metadata	#~, ~, ~, metadata
+	m	(IIIZ)V	func_96095_a	onActivatorRailPass	#onActivatorRailPass, :, onActivatorRail, :
+		c	Called every tick the minecart is on an activator rail. Args: x, y, z, is the rail receiving power
+		p	1	p_96095_1_	x	#x, :, :, :
+		p	2	p_96095_2_	y	#y, :, :, :
+		p	3	p_96095_3_	z	#z, :, :, :
+		p	4	p_96095_4_	receivingPower	#receivingPower, :, powered, :
+	m	(Lnet/minecraft/world/World;DDDI)Lnet/minecraft/entity/item/EntityMinecart;	func_94090_a	createMinecart	#createMinecart, :, ~, create
+		c	Creates a new minecart of the specified type in the specified location in the given world. par0World - world to create the minecart in, double par1,par3,par5 represent x,y,z respectively. int par7 specifies the type: 1 for MinecartChest, 2 for MinecartFurnace, 3 for MinecartTNT, 4 for MinecartMobSpawner, 5 for MinecartHopper and 0 for a standard empty minecart
+		p	0	p_94090_0_	world	#~, ~, ~, world
+		p	1	p_94090_1_	x	#~, ~, ~, x
+		p	3	p_94090_3_	y	#~, ~, ~, y
+		p	5	p_94090_5_	z	#~, ~, ~, z
+		p	7	p_94090_7_	variant	#~, ~, ~, variant
+	m	(Ljava/lang/String;)V	func_96094_a	setMinecartName	#setMinecartName, setCustomNameTag, ~, setCustomName
+		c	Sets the minecart's name.
+		p	1	p_96094_1_	name	#name, :, ~, name
+	m	(Lnet/minecraft/util/DamageSource;)V	func_94095_a	killMinecart	#killMinecart, :, dropItems, :
+		p	1	p_94095_1_	source	#source, :, damageSource, :
+	m	(Z)V	func_94096_e	setHasDisplayTile	#setHasDisplayTile, :, setCustomBlockPresent, setHasCustomDisplayBlock
+		p	1	p_94096_1_	showBlock	#showBlock, :, present, hasCustomDisplayBlock
+	m	(D)V	func_94088_b	moveOffRail	#~, ~, ~, moveOffRail
+		p	1	p_94088_1_	maxOffRailSpeed	#~, ~, ~, maxOffRailSpeed
+	m	(I)V	func_70497_h	setRollingAmplitude	#setRollingAmplitude, :, setDamageWobbleTicks, :
+		c	Sets the rolling amplitude the cart rolls while being attacked.
+		p	1	p_70497_1_	rollingAmplitude	#rollingAmplitude, :, wobbleTicks, ticks
+	m	()V	func_94101_h	applyDrag	#applyDrag, :, applySlowdown, :
+	m	()F	func_70491_i	getDamage	#getDamage, :, getDamageWobbleStrength, :
+		c	Gets the current amount of damage the minecart has taken. Decreases over time. The cart breaks when this is over 40.
+	m	(I)V	func_70494_i	setRollingDirection	#setRollingDirection, :, setDamageWobbleSide, :
+		c	Sets the rolling direction the cart rolls while being attacked. Can be 1 or -1.
+		p	1	p_70494_1_	rollingDirection	#rollingDirection, :, wobbleSide, ticks
+	m	()I	func_70496_j	getRollingAmplitude	#getRollingAmplitude, :, getDamageWobbleTicks, :
+		c	Gets the rolling amplitude the cart rolls while being attacked.
+	m	(I)V	func_145819_k	setDisplayBlock	#~, ~, ~, setDisplayBlock
+		p	1	p_145819_1_	blockId	#~, ~, ~, blockId
+	m	()Z	func_145818_k_	hasCustomInventoryName	#hasCustomInventoryName, hasCustomName, ~, hasCustomName
+		c	Returns if the inventory is named
+	m	()I	func_70493_k	getRollingDirection	#getRollingDirection, :, getDamageWobbleSide, :
+		c	Gets the rolling direction the cart rolls while being attacked. Can be 1 or -1.
+	m	(I)V	func_94092_k	setDisplayTileData	#setDisplayTileData, :, ~, setDisplayBlockMetadata
+		p	1	p_94092_1_	metadata	#~, ~, ~, metadata
+	m	()I	func_94087_l	getMinecartType	#getMinecartType, :, ~, getMinecartType
+	m	(I)V	func_94086_l	setDisplayTileOffset	#setDisplayTileOffset, :, setCustomBlockOffset, setDisplayBlockOffset
+		p	1	p_94086_1_	displayTileOffset	#displayTileOffset, :, offset, :
+	m	()Lnet/minecraft/block/Block;	func_145820_n	getDisplayTile	#getDisplayTile, :, ~, getDisplayBlock
+	m	()Lnet/minecraft/block/Block;	func_145817_o	getDefaultDisplayTile	#getDefaultDisplayTile, :, ~, getDefaultDisplayBlock
+	m	()I	func_94098_o	getDisplayTileData	#getDisplayTileData, :, ~, getDisplayBlockMetadata
+	m	()I	func_94097_p	getDefaultDisplayTileData	#getDefaultDisplayTileData, :, ~, getDefaultDisplayBlockMetadata
+	m	()I	func_94099_q	getDisplayTileOffset	#getDisplayTileOffset, :, getBlockOffset, getDisplayBlockOffset
+	m	()I	func_94085_r	getDefaultDisplayTileOffset	#getDefaultDisplayTileOffset, :, getDefaultBlockOffset, getDefaultDisplayBlockOffset
+	m	()Z	func_94100_s	hasDisplayTile	#hasDisplayTile, :, hasCustomBlock, hasCustomDisplayBlock
+	m	()Ljava/lang/String;	func_95999_t	getCustomNameTag	#getCustomNameTag, :, ~, getCustomName
+		c	Gets the custom name assigned to this entity. If no custom name has been assigned, returns an empty string.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1712_1_	worldIn	#worldIn, :, ~, ~

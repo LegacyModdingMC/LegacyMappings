@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityFireworkOverlayFX	net/minecraft/client/particle/EntityFireworkOverlayFX	
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1206_1_	message	#message, :, ~, ~
+		p	2	p_i1206_2_	cause	#cause, :, ~, ~
+		p	4	p_i1206_4_	p_i1206_4_	#~, ~, ~, ~
+		p	6	p_i1206_6_	p_i1206_6_	#~, ~, ~, ~

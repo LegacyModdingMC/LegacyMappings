@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderCreeper	net/minecraft/client/renderer/entity/RenderCreeper	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110831_a	armoredCreeperTextures	#armoredCreeperTextures, :, ~, CREEPER_CHARGE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110830_f	creeperTextures	#creeperTextures, CREEPER_TEXTURES, TEXTURE, CREEPER_LOCATION
+	f	Lnet/minecraft/client/model/ModelBase;	field_77064_a	creeperModel	#creeperModel, :, ~, model
+		c	The creeper model.
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

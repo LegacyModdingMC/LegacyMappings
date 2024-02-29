@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/status/server/S00PacketServerInfo	net/minecraft/network/status/server/S00PacketServerInfo	
+	f	Lcom/google/gson/Gson;	field_149297_a	GSON	#GSON, :, :, :
+	f	Lnet/minecraft/network/ServerStatusResponse;	field_149296_b	response	#response, :, metadata, status
+	m	(Lnet/minecraft/network/ServerStatusResponse;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45273_1_	responseIn	#responseIn, :, metadata, status
+	m	()Lnet/minecraft/network/ServerStatusResponse;	func_149294_c	getResponse	#getResponse, :, getServerMetadata, getServerStatus
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

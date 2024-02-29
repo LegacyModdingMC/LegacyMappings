@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/entity/AbstractClientPlayer	net/minecraft/client/entity/AbstractClientPlayer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110312_d	locationSkin	#locationSkin, :, capeId, ~
+	f	Lnet/minecraft/util/ResourceLocation;	field_110314_b	locationStevePng	#locationStevePng, :, STEVE_TEXTURE, STEVE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110313_e	locationCape	#locationCape, :, skinId, ~
+	m	(Lnet/minecraft/util/ResourceLocation;Ljava/lang/String;)Lnet/minecraft/client/renderer/ThreadDownloadImageData;	func_110304_a	getDownloadImageSkin	#getDownloadImageSkin, :, loadSkin, loadTexture
+		p	0	p_110304_0_	resourceLocationIn	#resourceLocationIn, :, id, ~
+		p	1	p_110304_1_	username	#username, :, playerName, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/util/ResourceLocation;	func_110311_f	getLocationSkin	#getLocationSkin, :, getSkinId, getSkinTextureLocation
+		c	Returns true if the username has an associated skin.
+		p	0	p_110311_0_	username	#username, :, playerName, :
+	m	()Z	func_152122_n	hasCape	#hasCape, hasPlayerInfo, canRenderCapeTexture, ~
+		c	Checks if this instance of AbstractClientPlayer has any associated player data.
+	m	()Z	func_152123_o	hasSkin	#hasSkin, :, hasSkinTexture, ~
+		c	Returns true if the player has an associated skin.
+	m	()Lnet/minecraft/util/ResourceLocation;	func_110306_p	getLocationSkin	#getLocationSkin, :, getCapeId, getSkinTextureLocation
+		c	Returns true if the player instance has an associated skin.
+	m	()Lnet/minecraft/util/ResourceLocation;	func_110303_q	getLocationCape	#getLocationCape, :, getSkinId, getCapeTextureLocation
+	m	(Lnet/minecraft/world/World;Lcom/mojang/authlib/GameProfile;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45074_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i45074_2_	playerProfile	#playerProfile, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

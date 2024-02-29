@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityPigZombie	net/minecraft/entity/monster/EntityPigZombie	
+	f	Ljava/util/UUID;	field_110189_bq	ATTACK_SPEED_BOOST_MODIFIER_UUID	#ATTACK_SPEED_BOOST_MODIFIER_UUID, :, ATTACKING_SPEED_BOOST_UUID, ATTACKING_SPEED_BOOST_ID
+	f	Lnet/minecraft/entity/ai/attributes/AttributeModifier;	field_110190_br	ATTACK_SPEED_BOOST_MODIFIER	#ATTACK_SPEED_BOOST_MODIFIER, :, ~, ATTACKING_SPEED_BOOST
+	f	I	field_70837_d	angerLevel	#angerLevel, :, anger, angerValue
+		c	Above zero if this PigZombie is Angry.
+	f	I	field_70838_e	randomSoundDelay	#randomSoundDelay, :, angrySoundDelay, angerSoundDelay
+		c	A random delay until this PigZombie next makes a sound.
+	f	Lnet/minecraft/entity/Entity;	field_110191_bu	angerTarget	#~, ~, ~, angerTarget
+	m	(Lnet/minecraft/entity/Entity;)V	func_70835_c	becomeAngryAt	#becomeAngryAt, :, ~, getAngryTo
+		c	Causes this PigZombie to become angry at the supplied Entity (which will be a player).
+		p	1	p_70835_1_	target	#~, ~, ~, target
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1739_1_	worldIn	#worldIn, :, ~, ~

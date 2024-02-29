@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MovingObjectPosition$MovingObjectType	net/minecraft/util/MovingObjectPosition$MovingObjectType	
+	f	Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	MISS	MISS	#~, ~, MISS, :
+	f	Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	BLOCK	BLOCK	#~, ~, BLOCK, :
+	f	Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	ENTITY	ENTITY	#~, ~, ENTITY, :
+	f	[Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2302_1_	objectType	#objectType, :, ~, ~
+		p	2	p_i2302_2_	objectID	#objectID, :, ~, ~

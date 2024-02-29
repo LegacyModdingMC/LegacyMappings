@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockButtonWood	net/minecraft/block/BlockButtonWood	
+	m	()V	<init>	<init>	#~, ~, ~, ~

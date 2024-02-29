@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenSavanna	net/minecraft/world/biome/BiomeGenSavanna	
+	f	Lnet/minecraft/world/gen/feature/WorldGenSavannaTree;	field_150627_aC	SAVANNA_TREE	#SAVANNA_TREE, :, ~, ACACIA_TREE
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45383_1_	id	#id, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatStyle$1	net/minecraft/util/ChatStyle$1	
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

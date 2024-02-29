@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenRealmsProxy	net/minecraft/client/gui/GuiScreenRealmsProxy	
+	f	Lnet/minecraft/realms/RealmsScreen;	field_154330_a	proxy	#proxy, :, realmsScreen, ~
+	m	(Lnet/minecraft/realms/RealmsScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1087_1_	proxyIn	#proxyIn, :, realmsScreen, ~
+	m	()Lnet/minecraft/realms/RealmsScreen;	func_154321_a	getProxy	#getProxy, :, getRealmsScreen, ~
+	m	(Ljava/lang/String;I)Ljava/util/List;	func_154323_a	fontSplit	#fontSplit, :, wrapLines, ~
+		p	1	p_154323_1_	text	#text, :, :, ~
+		p	2	p_154323_2_	wrapWidth	#wrapWidth, :, i, ~
+	m	(Ljava/lang/String;III)V	func_154325_a	drawCenteredString	#drawCenteredString, :, :, ~
+		p	1	p_154325_1_	text	#text, :, :, ~
+		p	2	p_154325_2_	x	#x, :, :, ~
+		p	3	p_154325_3_	y	#y, :, :, ~
+		p	4	p_154325_4_	color	#color, :, :, ~
+	m	(Lnet/minecraft/realms/RealmsButton;)V	func_154327_a	buttonsAdd	#buttonsAdd, :, addButton, ~
+		p	1	p_154327_1_	button	#button, :, :, ~
+	m	(Ljava/lang/String;III)V	func_154322_b	drawString	#drawString, :, ~, ~
+		p	1	p_154322_1_	text	#text, :, ~, ~
+		p	2	p_154322_2_	x	#x, :, ~, ~
+		p	3	p_154322_3_	y	#y, :, ~, ~
+		p	4	p_154322_4_	color	#color, :, ~, ~
+	m	(Lnet/minecraft/realms/RealmsButton;)V	func_154328_b	buttonsRemove	#buttonsRemove, :, removeButton, ~
+		p	1	p_154328_1_	button	#button, :, :, ~
+	m	(Ljava/lang/String;)I	func_154326_c	getStringWidth	#getStringWidth, :, :, ~
+		p	1	p_154326_1_	text	#text, :, :, ~
+	m	(Ljava/lang/String;III)V	func_154319_c	fontDrawShadow	#fontDrawShadow, :, drawWithShadow, ~
+		p	1	p_154319_1_	text	#text, :, :, ~
+		p	2	p_154319_2_	x	#x, :, :, ~
+		p	3	p_154319_3_	y	#y, :, :, ~
+		p	4	p_154319_4_	color	#color, :, :, ~
+	m	()I	func_154329_h	getFontHeight	#getFontHeight, :, :, ~
+	m	()V	func_154324_i	buttonsClear	#buttonsClear, :, clear, ~
+	m	()Ljava/util/List;	func_154320_j	buttons	#buttons, :, getButtons, ~

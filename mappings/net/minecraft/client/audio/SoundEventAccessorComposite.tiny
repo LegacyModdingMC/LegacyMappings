@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundEventAccessorComposite	net/minecraft/client/audio/SoundEventAccessorComposite	
+	f	Ljava/util/List;	field_148736_a	soundPool	#soundPool, :, sounds, containers
+		c	A composite (List) of ISoundEventAccessors
+	f	Ljava/util/Random;	field_148734_b	rnd	#rnd, :, random, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_148735_c	soundLocation	#soundLocation, :, id, location
+	f	Lnet/minecraft/client/audio/SoundCategory;	field_148732_d	category	#category, :, soundCategory, category
+	f	D	field_148733_e	eventPitch	#eventPitch, :, volumeAdjustment, volumeMultiplier
+	f	D	field_148731_f	eventVolume	#eventVolume, :, pitchAdjustment, pitchMultiplier
+	m	(Lnet/minecraft/util/ResourceLocation;DDLnet/minecraft/client/audio/SoundCategory;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45120_1_	soundLocation	#soundLocation, :, id, location
+		p	2	p_i45120_2_	pitch	#pitch, :, volumeAdjustment, volumeMultiplier
+		p	4	p_i45120_4_	volume	#volume, :, pitchAdjustment, pitchMultiplier
+		p	6	p_i45120_6_	category	#category, :, soundCategory, category
+	m	(Lnet/minecraft/client/audio/ISoundEventAccessor;)V	func_148727_a	addSoundToEventPool	#addSoundToEventPool, :, add, :
+		p	1	p_148727_1_	sound	#sound, :, container, sound
+	m	()Lnet/minecraft/util/ResourceLocation;	func_148729_c	getSoundEventLocation	#getSoundEventLocation, :, getIdentifier, getLocation
+	m	()Lnet/minecraft/client/audio/SoundCategory;	func_148728_d	getSoundCategory	#getSoundCategory, :, :, getCategory

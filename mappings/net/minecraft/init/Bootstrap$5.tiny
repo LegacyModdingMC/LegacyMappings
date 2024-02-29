@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/init/Bootstrap$5	net/minecraft/init/Bootstrap$5	
+	f	Lnet/minecraft/dispenser/BehaviorDefaultDispenseItem;	field_150843_b	fallback	#~, ~, ~, fallback
+	m	()V	<init>	<init>	#~, ~, ~, ~

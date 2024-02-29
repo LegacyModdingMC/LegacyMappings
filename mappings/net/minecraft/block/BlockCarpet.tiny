@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCarpet	net/minecraft/block/BlockCarpet	
+	m	(I)V	func_150089_b	setBlockBoundsFromMeta	#setBlockBoundsFromMeta, :, setBoundingBoxWithData, updateShape
+		p	1	p_150089_1_	meta	#meta, :, data, metadata
+	m	(Lnet/minecraft/world/World;III)Z	func_150090_e	tryBreak	#~, ~, ~, tryBreak
+		p	1	p_150090_1_	world	#~, ~, ~, world
+		p	2	p_150090_2_	x	#~, ~, ~, x
+		p	3	p_150090_3_	y	#~, ~, ~, y
+		p	4	p_150090_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

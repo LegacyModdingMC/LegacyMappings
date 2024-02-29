@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityItem	net/minecraft/entity/item/EntityItem	
+	f	I	field_70292_b	age	#age, :, :, :
+		c	The age of this EntityItem (used to animate it up and down as well as expire it)
+	f	I	field_145804_b	delayBeforeCanPickup	#delayBeforeCanPickup, pickupDelay, :, pickUpDelay
+	f	F	field_70290_d	hoverStart	#hoverStart, :, hoverHeight, :
+		c	The EntityItem's random initial float height.
+	f	Lorg/apache/logging/log4j/Logger;	field_145803_d	logger	#logger, LOGGER, :, :
+	f	I	field_70291_e	health	#health, :, :, :
+		c	The health of this EntityItem. (For example, damage for tools)
+	f	Ljava/lang/String;	field_145801_f	thrower	#thrower, :, :, :
+	f	Ljava/lang/String;	field_145802_g	owner	#owner, :, :, :
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1709_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1709_2_	x	#x, :, :, :
+		p	4	p_i1709_4_	y	#y, :, :, :
+		p	6	p_i1709_6_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1710_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1710_2_	x	#x, :, :, :
+		p	4	p_i1710_4_	y	#y, :, :, :
+		p	6	p_i1710_6_	z	#z, :, :, :
+		p	8	p_i1710_8_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)V	func_92058_a	setEntityItemStack	#setEntityItemStack, setItem, setItemStack, :
+		c	Sets the ItemStack for this entity
+		p	1	p_92058_1_	stack	#stack, :, ~, stack
+	m	(Ljava/lang/String;)V	func_145797_a	setOwner	#setOwner, :, :, :
+		p	1	p_145797_1_	owner	#owner, :, :, :
+	m	(Lnet/minecraft/entity/item/EntityItem;)Z	func_70289_a	combineItems	#combineItems, :, tryMerge, canStack
+		c	Tries to merge this item with the item passed as the parameter. Returns true if successful. Either this item or the other item will  be removed from the world.
+		p	1	p_70289_1_	other	#other, :, :, item
+	m	(Ljava/lang/String;)V	func_145799_b	setThrower	#setThrower, :, :, :
+		p	1	p_145799_1_	thrower	#thrower, :, :, :
+	m	()V	func_70288_d	setAgeToCreativeDespawnTime	#setAgeToCreativeDespawnTime, :, ~, resetAge
+		c	sets the age of the item so that it'll despawn one minute after it has been dropped (instead of five). Used when items are dropped from players in creative mode
+	m	()Lnet/minecraft/item/ItemStack;	func_92059_d	getEntityItem	#getEntityItem, getItem, getItemStack, :
+		c	Returns the ItemStack corresponding to the Entity (Note: if no item exists, will log an error but still return an ItemStack containing Block.stone)
+	m	()Ljava/lang/String;	func_145798_i	getOwner	#getOwner, :, :, :
+	m	()Ljava/lang/String;	func_145800_j	getThrower	#getThrower, :, :, :
+	m	()V	func_85054_d	searchForOtherItemsNearby	#searchForOtherItemsNearby, :, tryMerge, :
+		c	Looks for other itemstacks nearby and tries to stack them together
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1711_1_	worldIn	#worldIn, :, ~, ~

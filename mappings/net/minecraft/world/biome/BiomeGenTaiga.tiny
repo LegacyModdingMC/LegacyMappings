@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenTaiga	net/minecraft/world/biome/BiomeGenTaiga	
+	f	Lnet/minecraft/world/gen/feature/WorldGenTaiga1;	field_150639_aC	PINE_GENERATOR	#PINE_GENERATOR, :, ~, PINE_TREE
+	f	Lnet/minecraft/world/gen/feature/WorldGenTaiga2;	field_150640_aD	SPRUCE_GENERATOR	#SPRUCE_GENERATOR, :, ~, SPRUCE_TREE
+	f	Lnet/minecraft/world/gen/feature/WorldGenMegaPineTree;	field_150641_aE	MEGA_PINE_GENERATOR	#MEGA_PINE_GENERATOR, :, ~, GIANT_PINE_TREE
+	f	Lnet/minecraft/world/gen/feature/WorldGenMegaPineTree;	field_150642_aF	MEGA_SPRUCE_GENERATOR	#MEGA_SPRUCE_GENERATOR, :, ~, GIANT_SPRUCE_TREE
+	f	Lnet/minecraft/world/gen/feature/WorldGenBlockBlob;	field_150643_aG	FOREST_ROCK_GENERATOR	#FOREST_ROCK_GENERATOR, :, ~, MOSSY_BOULDER
+	f	I	field_150644_aH	type	#type, :, ~, variant
+		c	The variant of forest. The possible values are:\n<br> 0: normal\n<br> 1: mega\n<br> 2: mega spruce
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45385_1_	id	#id, :, :, :
+		p	2	p_i45385_2_	variant	#~, ~, ~, variant
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

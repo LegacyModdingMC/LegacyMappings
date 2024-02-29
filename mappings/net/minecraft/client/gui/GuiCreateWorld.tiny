@@ -1,0 +1,51 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiCreateWorld	net/minecraft/client/gui/GuiCreateWorld	
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146324_A	btnMoreOptions	#btnMoreOptions, :, moreWorldOptionsButton, moreWorldOptions
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146325_B	btnMapFeatures	#btnMapFeatures, :, generateStructuresButton, generateStructures
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146326_C	btnBonusItems	#btnBonusItems, :, bonusChestButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146320_D	btnMapType	#btnMapType, :, mapTypeSwitchButton, mapTypeButton
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146321_E	btnAllowCommands	#btnAllowCommands, :, allowCommandsButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146322_F	btnCustomizeType	#btnCustomizeType, :, customizeButton, :
+	f	Ljava/lang/String;	field_146323_G	gameModeDesc1	#gameModeDesc1, :, firstGameModeDescriptionLine, :
+	f	Ljava/lang/String;	field_146328_H	gameModeDesc2	#gameModeDesc2, :, secondGameModeDescriptionLine, :
+	f	Ljava/lang/String;	field_146329_I	worldSeed	#worldSeed, :, seed, :
+	f	Ljava/lang/String;	field_146330_J	worldName	#worldName, :, levelName, worldName
+	f	I	field_146331_K	selectedIndex	#selectedIndex, :, generatorType, :
+	f	[Ljava/lang/String;	field_146327_L	disallowedFilenames	#disallowedFilenames, DISALLOWED_FILENAMES, ILLEGAL_FOLDER_NAMES, :
+		c	These filenames are known to be restricted on one or more OS's.
+	f	Ljava/lang/String;	field_146334_a	chunkProviderSettingsJson	#chunkProviderSettingsJson, :, generatorOptions, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146332_f	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146333_g	worldNameField	#worldNameField, :, levelNameField, displayNameField
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146335_h	worldSeedField	#worldSeedField, :, seedField, :
+	f	Ljava/lang/String;	field_146336_i	saveDirName	#saveDirName, :, saveDirectoryName, worldSaveName
+	f	Ljava/lang/String;	field_146342_r	gameMode	#gameMode, :, gamemodeName, gameModeName
+	f	Z	field_146341_s	generateStructuresEnabled	#generateStructuresEnabled, :, structures, :
+	f	Z	field_146340_t	allowCheats	#allowCheats, :, tweakedCheats, allowCommands
+		c	If cheats are allowed
+	f	Z	field_146339_u	allowCheatsWasSetByUser	#allowCheatsWasSetByUser, :, cheatsEnabled, :
+		c	User explicitly clicked "Allow Cheats" at some point\nPrevents value changes due to changing game mode
+	f	Z	field_146338_v	bonusChestEnabled	#bonusChestEnabled, :, bonusChest, :
+	f	Z	field_146337_w	hardCoreMode	#hardCoreMode, :, hardcore, :
+		c	Set to true when "hardcore" is the currently-selected gamemode
+	f	Z	field_146345_x	alreadyGenerated	#alreadyGenerated, :, creatingLevel, :
+	f	Z	field_146344_y	inMoreWorldOptionsDisplay	#inMoreWorldOptionsDisplay, :, moreOptionsOpen, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146343_z	btnGameMode	#btnGameMode, :, gameModeButton, gameMode
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1030_1_	parent	#~, ~, parent, :
+	m	()V	func_146314_g	calcSaveDirName	#calcSaveDirName, :, updateSaveFolderName, getSaveDirectoryName
+		c	Determine a save-directory name from the world name
+	m	(Lnet/minecraft/world/storage/WorldInfo;)V	func_146318_a	recreateFromExistingWorld	#recreateFromExistingWorld, :, copyWorld, :
+		c	Set the initial values of a new world to create, from the values from an existing world.\n \nCalled after construction when a user selects the "Recreate" button.\n \n@param original The world we're copying from
+		p	1	p_146318_1_	original	#original, :, properties, data
+	m	(Lnet/minecraft/world/storage/ISaveFormat;Ljava/lang/String;)Ljava/lang/String;	func_146317_a	getUncollidingSaveDirName	#getUncollidingSaveDirName, :, checkDirectoryName, getWorldSaveName
+		c	Ensures that a proposed directory name doesn't collide with existing names.\nReturns the name, possibly modified to avoid collisions.\n \n@param saveLoader used to check against existing names\n@param name the name to check, and possibly adjust (via the method's return)
+		p	0	p_146317_0_	saveLoader	#saveLoader, :, access, storageSource
+		p	1	p_146317_1_	name	#name, :, directoryName, worldName
+	m	(Z)V	func_146316_a	showMoreWorldOptions	#showMoreWorldOptions, :, setMoreOptionsOpen, setScreen
+		c	Shows additional world-creation options if toggle is true, otherwise shows main world-creation elements
+		p	1	p_146316_1_	toggle	#toggle, :, moreOptionsOpen, moreOptionsOPen
+	m	()V	func_146319_h	updateDisplayState	#updateDisplayState, :, updateSettingsLabels, :
+		c	Sets displayed GUI elements according to the current settings state
+	m	()V	func_146315_i	toggleMoreWorldOptions	#toggleMoreWorldOptions, :, toggleMoreOptions, :
+		c	Toggles between initial world-creation display, and "more options" display.\nCalled when user clicks "More World Options..." or "Done" (same button, different labels depending on current display).
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

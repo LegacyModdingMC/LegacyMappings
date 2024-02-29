@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/GuiConnecting	net/minecraft/client/multiplayer/GuiConnecting	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	field_146372_a	CONNECTION_ID	#CONNECTION_ID, :, CONNECTOR_THREADS_COUNT, connectorThreadsCount
+	f	Lorg/apache/logging/log4j/Logger;	field_146370_f	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/network/NetworkManager;	field_146371_g	networkManager	#networkManager, :, connection, :
+	f	Z	field_146373_h	cancel	#cancel, :, connectingCancelled, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146374_i	previousGuiScreen	#previousGuiScreen, :, parent, :
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/ServerData;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1181_1_	parent	#parent, :, :, :
+		p	2	p_i1181_2_	mcIn	#mcIn, :, client, minecraft
+		p	3	p_i1181_3_	serverDataIn	#serverDataIn, :, serverInfo, server
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1182_1_	parent	#parent, :, :, :
+		p	2	p_i1182_2_	mcIn	#mcIn, :, client, minecraft
+		p	3	p_i1182_3_	hostName	#hostName, :, address, :
+		p	4	p_i1182_4_	port	#port, :, :, :
+	m	()Lorg/apache/logging/log4j/Logger;	access$300	access$300	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/multiplayer/GuiConnecting;)Z	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/multiplayer/GuiConnecting;Lnet/minecraft/network/NetworkManager;)Lnet/minecraft/network/NetworkManager;	access$102	access$102	#~, ~, ~, ~
+		p	0	p_access$102_0_	p_access$102_0_	#~, ~, ~, ~
+		p	1	p_access$102_1_	p_access$102_1_	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	func_146367_a	connect	#connect, :, :, :
+		p	1	p_146367_1_	ip	#ip, :, address, :
+		p	2	p_146367_2_	port	#port, :, :, :
+	m	(Lnet/minecraft/client/multiplayer/GuiConnecting;)Lnet/minecraft/network/NetworkManager;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/multiplayer/GuiConnecting;)Lnet/minecraft/client/gui/GuiScreen;	access$200	access$200	#~, ~, ~, ~
+		p	0	p_access$200_0_	p_access$200_0_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

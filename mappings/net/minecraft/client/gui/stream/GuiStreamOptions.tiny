@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/stream/GuiStreamOptions	net/minecraft/client/gui/stream/GuiStreamOptions	
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_152312_a	STREAMING_OPTIONS	#~, ~, ~, STREAMING_OPTIONS
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_152316_f	CHAT_OPTIONS	#~, ~, ~, CHAT_OPTIONS
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_152317_g	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/settings/GameSettings;	field_152318_h	options	#~, ~, options, :
+	f	Ljava/lang/String;	field_152319_i	title	#~, ~, title, :
+	f	Ljava/lang/String;	field_152313_r	chatTitle	#~, ~, chatTitle, :
+	f	I	field_152314_s	chatTitleY	#~, ~, chatTitleY, ~
+	f	Z	field_152315_t	warning	#~, ~, modified, warning
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1073_1_	parentScreenIn	#parentScreenIn, :, parent, :
+		p	2	p_i1073_2_	options	#~, ~, options, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

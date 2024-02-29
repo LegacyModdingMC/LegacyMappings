@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/GLAllocation	net/minecraft/client/renderer/GLAllocation	
+	f	Ljava/util/Map;	field_74531_a	mapDisplayLists	#mapDisplayLists, :, ~, LIST_RANGES
+	f	Ljava/util/List;	field_74530_b	listDummy	#listDummy, :, ~, LISTS
+	m	()V	func_74525_a	deleteTexturesAndDisplayLists	#deleteTexturesAndDisplayLists, :, ~, releaseLists
+		c	Deletes all textures and display lists. Called when Minecraft is shutdown to free up resources.
+	m	(I)I	func_74526_a	generateDisplayLists	#generateDisplayLists, :, genLists, getLists
+		c	Generates the specified number of display lists and returns the first index.
+		p	0	p_74526_0_	range	#range, :, ~, s
+	m	(I)V	func_74523_b	deleteDisplayLists	#deleteDisplayLists, :, deleteSingletonList, releaseList
+		p	0	p_74523_0_	list	#list, :, ~, list
+	m	(I)Ljava/nio/ByteBuffer;	func_74524_c	createDirectByteBuffer	#createDirectByteBuffer, :, allocateByteBuffer, createByteBuffer
+		c	Creates and returns a direct byte buffer with the specified capacity. Applies native ordering to speed up access.
+		p	0	p_74524_0_	capacity	#capacity, :, size, capacity
+	m	(I)Ljava/nio/IntBuffer;	func_74527_f	createDirectIntBuffer	#createDirectIntBuffer, :, allocateIntBuffer, createIntBuffer
+		c	Creates and returns a direct int buffer with the specified capacity. Applies native ordering to speed up access.
+		p	0	p_74527_0_	capacity	#capacity, :, size, capacity
+	m	(I)Ljava/nio/FloatBuffer;	func_74529_h	createDirectFloatBuffer	#createDirectFloatBuffer, :, allocateFloatBuffer, createFloatBuffer
+		c	Creates and returns a direct float buffer with the specified capacity. Applies native ordering to speed up access.
+		p	0	p_74529_0_	capacity	#capacity, :, size, capacity
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

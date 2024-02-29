@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ServerListEntryLanDetected	net/minecraft/client/gui/ServerListEntryLanDetected	
+	f	Lnet/minecraft/client/Minecraft;	field_148293_a	mc	#mc, :, client, minecraft
+	f	Lnet/minecraft/client/network/LanServerDetector$LanServer;	field_148291_b	serverData	#serverData, :, ~, lanServerInfo
+	f	Lnet/minecraft/client/gui/GuiMultiplayer;	field_148292_c	screen	#screen, :, parent, multiplayerScreen
+	f	J	field_148290_d	lastClickTime	#lastClickTime, :, time, :
+	m	()Lnet/minecraft/client/network/LanServerDetector$LanServer;	func_148289_a	getLanServer	#getLanServer, :, ~, getLanServerInfo
+	m	(Lnet/minecraft/client/gui/GuiMultiplayer;Lnet/minecraft/client/network/LanServerDetector$LanServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45046_1_	screenIn	#screenIn, :, ~, multiplayerScreen
+		p	2	p_i45046_2_	serverDataIn	#serverDataIn, :, ~, lanServerInfo

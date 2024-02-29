@@ -1,0 +1,91 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiContainer	net/minecraft/client/gui/inventory/GuiContainer	
+	f	Lnet/minecraft/inventory/Slot;	field_146989_A	returningStackDestSlot	#returningStackDestSlot, :, touchDropOriginSlot, :
+	f	J	field_146990_B	returningStackTime	#returningStackTime, :, touchDropTime, :
+	f	Lnet/minecraft/item/ItemStack;	field_146991_C	returningStack	#returningStack, :, touchDropReturningStack, :
+		c	Used when touchscreen is enabled
+	f	Lnet/minecraft/inventory/Slot;	field_146985_D	currentDragTargetSlot	#currentDragTargetSlot, :, touchHoveredSlot, draggedInvSlot
+	f	J	field_146986_E	dragItemDropDelay	#dragItemDropDelay, :, touchDropTimer, :
+	f	I	field_146987_F	dragSplittingLimit	#dragSplittingLimit, :, heldButtonType, clickDragMode
+		c	The mode of dragging the item stack.\n<br>0: split evenly across all slots\n<br>1: add 1 item to every slot
+	f	I	field_146988_G	dragSplittingButton	#dragSplittingButton, :, heldButtonCode, clickDragButton
+		c	The mouse button that is used to drag the item stack
+	f	Z	field_146995_H	ignoreMouseUp	#ignoreMouseUp, :, cancelNextRelease, cancelNextMouseRelease
+	f	I	field_146996_I	dragSplittingRemnant	#dragSplittingRemnant, :, draggedStackRemainder, :
+	f	J	field_146997_J	lastClickTime	#lastClickTime, :, lastButtonClickTime, :
+	f	Lnet/minecraft/inventory/Slot;	field_146998_K	lastClickSlot	#lastClickSlot, :, lastClickedSlot, clickedInvSlot
+	f	I	field_146992_L	lastClickButton	#lastClickButton, :, lastClickedButton, :
+	f	Z	field_146993_M	doubleClick	#doubleClick, :, isDoubleClicking, :
+	f	Lnet/minecraft/item/ItemStack;	field_146994_N	shiftClickedSlot	#shiftClickedSlot, :, quickMovingStack, shiftClickedStack
+	f	Lnet/minecraft/util/ResourceLocation;	field_147001_a	inventoryBackground	#inventoryBackground, INVENTORY_BACKGROUND, INVENTORY_TEXTURE, MENU_LOCATION
+		c	The location of the inventory background texture
+	f	I	field_146999_f	xSize	#xSize, :, backgroundWidth, :
+		c	The X size of the inventory window in pixels.
+	f	I	field_147000_g	ySize	#ySize, :, backgroundHeight, :
+		c	The Y size of the inventory window in pixels.
+	f	Lnet/minecraft/inventory/Container;	field_147002_h	inventorySlots	#inventorySlots, :, screenHandler, menu
+		c	A list of the players inventory slots
+	f	I	field_147003_i	guiLeft	#guiLeft, :, x, :
+		c	Starting X position for the Gui. Inconsistent use for Gui backgrounds.
+	f	I	field_147009_r	guiTop	#guiTop, :, y, :
+		c	Starting Y position for the Gui. Inconsistent use for Gui backgrounds.
+	f	Ljava/util/Set;	field_147008_s	dragSplittingSlots	#dragSplittingSlots, :, cursorDragSlots, draggedInvSlots
+	f	Z	field_147007_t	dragSplitting	#dragSplitting, :, isCursorDragging, isDraggingStack
+	f	Lnet/minecraft/inventory/Slot;	field_147006_u	theSlot	#theSlot, hoveredSlot, focusedSlot, hoveredSlot
+		c	holds the slot currently hovered
+	f	Lnet/minecraft/inventory/Slot;	field_147005_v	clickedSlot	#clickedSlot, :, touchDragSlotStart, :
+		c	Used when touchscreen is enabled.
+	f	Z	field_147004_w	isRightMouseClick	#isRightMouseClick, :, touchIsRightClickDrag, :
+		c	Used when touchscreen is enabled.
+	f	Lnet/minecraft/item/ItemStack;	field_147012_x	draggedStack	#draggedStack, :, touchDragStack, :
+		c	Used when touchscreen is enabled
+	f	I	field_147011_y	touchUpX	#touchUpX, :, touchDropX, :
+	f	I	field_147010_z	touchUpY	#touchUpY, :, touchDropY, :
+	m	(Lnet/minecraft/inventory/Container;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1072_1_	inventorySlotsIn	#inventorySlotsIn, :, screenHandler, menu
+	m	()V	func_146980_g	updateDragSplitting	#updateDragSplitting, :, calculateOffset, updateDraggedStackRemainder
+	m	(FII)V	func_146976_a	drawGuiContainerBackgroundLayer	#drawGuiContainerBackgroundLayer, :, drawBackground, :
+		c	Args : renderPartialTicks, mouseX, mouseY
+		p	1	p_146976_1_	partialTicks	#partialTicks, :, delta, tickDelta
+		p	2	p_146976_2_	mouseX	#mouseX, :, :, :
+		p	3	p_146976_3_	mouseY	#mouseY, :, :, :
+	m	(Lnet/minecraft/inventory/Slot;)V	func_146977_a	drawSlot	#drawSlot, :, :, :
+		c	Draws the given slot: any item in it, the slot's background, the hovered highlight, etc.
+		p	1	p_146977_1_	slotIn	#slotIn, :, slot, invSlot
+	m	(Lnet/minecraft/inventory/Slot;II)Z	func_146981_a	isMouseOverSlot	#isMouseOverSlot, :, isPointOverSlot, isMouseOverSlot
+		c	Returns if the passed mouse position is over the specified slot.
+		p	1	p_146981_1_	slotIn	#slotIn, :, slot, invSlot
+		p	2	p_146981_2_	mouseX	#mouseX, :, pointX, mouseX
+		p	3	p_146981_3_	mouseY	#mouseY, :, pointY, mouseY
+	m	(Lnet/minecraft/inventory/Slot;III)V	func_146984_a	handleMouseClick	#handleMouseClick, :, onMouseClick, clickSlot
+		c	Called when the mouse is clicked over a slot or outside the gui.\n \n@param clickType Types: 0 for basic click, 1 for shift-click, 2 for hotbar, 3 for pickBlock, 4 for drop, 5 for item distribution drag, 6 for double click
+		p	1	p_146984_1_	slotIn	#slotIn, :, slot, invSlot
+		p	2	p_146984_2_	slotId	#slotId, :, invSlot, slotId
+		p	3	p_146984_3_	clickedButton	#clickedButton, :, button, clickData
+		p	4	p_146984_4_	clickType	#clickType, :, slotAction, actionType
+	m	(Lnet/minecraft/item/ItemStack;IILjava/lang/String;)V	func_146982_a	drawItemStack	#drawItemStack, :, drawItem, :
+		c	Render an ItemStack. Args : stack, x, y, format\n \n@param altText Should be null to display item stack size count, but can be set to show custom text where the stack size counter would be.
+		p	1	p_146982_1_	stack	#stack, :, :, :
+		p	2	p_146982_2_	x	#x, :, xPosition, x
+		p	3	p_146982_3_	y	#y, :, yPosition, y
+		p	4	p_146982_4_	altText	#altText, :, amountText, itemInfo
+	m	(I)Z	func_146983_a	checkHotbarKeys	#checkHotbarKeys, :, handleHotbarKeyPressed, moveHoveredSlotToHotbar
+		c	This function is what controls the hotbar shortcut check when you press a number key when hovering a stack.
+		p	1	p_146983_1_	keyCode	#keyCode, :, :, key
+	m	(II)V	func_146979_b	drawGuiContainerForegroundLayer	#drawGuiContainerForegroundLayer, :, drawForeground, :
+		c	Draw the foreground layer for the GuiContainer (everything in front of the items)
+		p	1	p_146979_1_	mouseX	#mouseX, :, :, :
+		p	2	p_146979_2_	mouseY	#mouseY, :, :, :
+	m	(II)Lnet/minecraft/inventory/Slot;	func_146975_c	getSlotAtPosition	#getSlotAtPosition, :, getSlotAt, getHoveredSlot
+		c	Returns the slot at the given coordinates or null if there is none.
+		p	1	p_146975_1_	x	#x, :, :, mouseX
+		p	2	p_146975_2_	y	#y, :, :, mouseY
+	m	(IIIIII)Z	func_146978_c	isPointInRegion	#isPointInRegion, :, isPointWithinBounds, isMouseInRegion
+		c	Test if the 2D point is in a rectangle (relative to the GUI). Args : rectX, rectY, rectWidth, rectHeight, pointX, pointY
+		p	1	p_146978_1_	left	#left, rectX, posX, x
+		p	2	p_146978_2_	top	#top, rectY, posY, y
+		p	3	p_146978_3_	right	#right, rectWidth, width, :
+		p	4	p_146978_4_	bottom	#bottom, rectHeight, height, :
+		p	5	p_146978_5_	pointX	#pointX, :, :, mouseX
+		p	6	p_146978_6_	pointY	#pointY, :, :, mouseY
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

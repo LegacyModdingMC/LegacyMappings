@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/ITickableSound	net/minecraft/client/audio/ITickableSound	
+	m	()Z	func_147667_k	isDonePlaying	#isDonePlaying, :, isDone, isStopped

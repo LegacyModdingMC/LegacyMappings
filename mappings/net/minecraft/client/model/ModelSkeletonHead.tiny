@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSkeletonHead	net/minecraft/client/model/ModelSkeletonHead	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82896_a	skeletonHead	#skeletonHead, :, ~, skull
+	m	(IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1155_1_	textureOffsetU	#~, ~, ~, textureOffsetU
+		p	2	p_i1155_2_	textureOffsetV	#~, ~, ~, textureOffsetV
+		p	3	p_i1155_3_	textureWidth	#~, ~, ~, textureWidth
+		p	4	p_i1155_4_	textureHeight	#~, ~, ~, textureHeight
+	m	()V	<init>	<init>	#~, ~, ~, ~

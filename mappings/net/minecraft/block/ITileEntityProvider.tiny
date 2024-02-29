@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/ITileEntityProvider	net/minecraft/block/ITileEntityProvider	
+	m	(Lnet/minecraft/world/World;I)Lnet/minecraft/tileentity/TileEntity;	func_149915_a	createNewTileEntity	#createNewTileEntity, :, createBlockEntity, :
+		c	Returns a new instance of a block's tile entity class. Called on placing the block.
+		p	1	p_149915_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149915_2_	meta	#meta, :, id, metadata

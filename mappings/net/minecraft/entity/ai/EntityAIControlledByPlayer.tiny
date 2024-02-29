@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIControlledByPlayer	net/minecraft/entity/ai/EntityAIControlledByPlayer	
+	f	Lnet/minecraft/entity/EntityLiving;	field_82640_a	thisEntity	#thisEntity, :, mob, :
+	f	F	field_82638_b	maxSpeed	#maxSpeed, :, speed, maxVelocity
+	f	F	field_82639_c	currentSpeed	#currentSpeed, :, ~, speed
+	f	Z	field_82636_d	speedBoosted	#speedBoosted, :, ~, moving
+		c	Whether the entity's speed is boosted.
+	f	I	field_82637_e	speedBoostTime	#speedBoostTime, :, ~, movingTicks
+		c	Counter for speed boosting, upon reaching maxSpeedBoostTime the speed boost will be disabled
+	f	I	field_82635_f	maxSpeedBoostTime	#maxSpeedBoostTime, :, ~, maxMovingTicks
+		c	Maximum time the entity's speed should be boosted for.
+	m	(Lnet/minecraft/entity/EntityLiving;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1620_1_	entitylivingIn	#entitylivingIn, :, mob, :
+		p	2	p_i1620_2_	maxspeed	#maxspeed, :, speed, maxVelocity
+	m	(Lnet/minecraft/block/Block;)Z	func_151498_a	isStairOrSlab	#isStairOrSlab, :, ~, canStepOnto
+		c	True if the block is a stair block or a slab block
+		p	1	p_151498_1_	blockIn	#blockIn, :, block, :
+	m	()Z	func_82634_f	isSpeedBoosted	#isSpeedBoosted, :, ~, isMoving
+		c	Return whether the entity's speed is boosted.
+	m	()V	func_82632_g	boostSpeed	#boostSpeed, :, ~, startMoving
+		c	Boost the entity's movement speed.
+	m	()Z	func_82633_h	isControlledByPlayer	#isControlledByPlayer, :, ~, canStartMoving
+		c	Return whether the entity is being controlled by a player.

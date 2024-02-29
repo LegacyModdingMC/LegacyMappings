@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiCreateFlatWorld$Details	net/minecraft/client/gui/GuiCreateFlatWorld$Details	
+	f	I	field_148228_k	selectedLayer	#selectedLayer, :, ~, focusedEntry
+		c	The currently selected layer; -1 if there is no selection. This is in the order that it is displayed on-screen, with the topmost layer having index 0.
+	f	Lnet/minecraft/client/gui/GuiCreateFlatWorld;	field_148227_l	parent	#~, ~, ~, parent
+	m	(IILnet/minecraft/item/ItemStack;)V	func_148225_a	drawItem	#drawItem, :, ~, renderIcon
+		c	Draws an item with a background at the given coordinates. The item and its background are 20 pixels tall/wide (though only the inner 18x18 is actually drawn on)
+		p	1	p_148225_1_	x	#x, :, ~, x
+		p	2	p_148225_2_	z	#z, :, ~, y
+		p	3	p_148225_3_	itemToDraw	#itemToDraw, :, ~, stack
+	m	(IIII)V	func_148224_c	drawItemBackground	#drawItemBackground, :, ~, renderIcon
+		c	Draws the background icon for an item, using a texture from stats.png with the given coords
+		p	1	p_148224_1_	x	#x, :, ~, x
+		p	2	p_148224_2_	z	#z, :, ~, y
+		p	3	p_148224_3_	textureX	#textureX, :, ~, u
+		p	4	p_148224_4_	textureY	#textureY, :, ~, v
+	m	(II)V	func_148226_e	drawItemBackground	#drawItemBackground, :, ~, renderIcon
+		c	Draws the background icon for an item, with the indented texture from stats.png
+		p	1	p_148226_1_	x	#x, :, ~, x
+		p	2	p_148226_2_	y	#y, :, ~, y
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45019_1_	p_i45019_1_	#~, ~, ~, ~

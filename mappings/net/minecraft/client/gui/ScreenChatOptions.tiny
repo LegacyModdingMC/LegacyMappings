@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ScreenChatOptions	net/minecraft/client/gui/ScreenChatOptions	
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_146399_a	CHAT_OPTIONS	#CHAT_OPTIONS, :, ~, CHAT_OPTIONS
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_146395_f	CAPE_OPTIONS	#~, ~, ~, CAPE_OPTIONS
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146396_g	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146400_h	game_settings	#game_settings, :, options, :
+	f	Ljava/lang/String;	field_146401_i	chatTitle	#chatTitle, :, title, chatOptionsTitle
+	f	Ljava/lang/String;	field_146398_r	multiplayerOptionsTitle	#~, ~, ~, multiplayerOptionsTitle
+	f	I	field_146397_s	seperatorWidth	#~, ~, ~, seperatorWidth
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1023_1_	parentScreenIn	#parentScreenIn, :, parent, :
+		p	2	p_i1023_2_	gameSettingsIn	#gameSettingsIn, :, options, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

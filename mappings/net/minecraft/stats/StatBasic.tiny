@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatBasic	net/minecraft/stats/StatBasic	
+	m	(Ljava/lang/String;Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45304_1_	statIdIn	#statIdIn, :, ~, ~
+		p	2	p_i45304_2_	statNameIn	#statNameIn, :, ~, ~
+	m	(Ljava/lang/String;Lnet/minecraft/util/IChatComponent;Lnet/minecraft/stats/IStatType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45303_1_	statIdIn	#statIdIn, :, ~, ~
+		p	2	p_i45303_2_	statNameIn	#statNameIn, :, ~, ~
+		p	3	p_i45303_3_	typeIn	#typeIn, :, ~, ~

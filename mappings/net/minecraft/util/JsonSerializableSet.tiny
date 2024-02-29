@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/JsonSerializableSet	net/minecraft/util/JsonSerializableSet	
+	f	Ljava/util/Set;	field_151004_a	underlyingSet	#underlyingSet, :, set, delegate
+		c	The set for this ForwardingSet to forward methods to.
+	m	()Ljava/lang/Object;	delegate	delegate	#~, ~, ~, ~
+	m	()Ljava/util/Collection;	delegate	delegate	#~, ~, ~, ~
+	m	()Ljava/util/Set;	delegate	delegate	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

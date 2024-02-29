@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/AnvilSaveConverter$1	net/minecraft/world/chunk/storage/AnvilSaveConverter$1	
+	f	Lnet/minecraft/world/chunk/storage/AnvilSaveConverter;	field_76172_a	parent	#parent, :, ~, saveData
+	m	(Ljava/io/File;Ljava/lang/String;)Z	accept	accept	#~, ~, ~, ~
+		p	1	p_accept_1_	file	#~, ~, ~, file
+		p	2	p_accept_2_	filename	#~, ~, ~, filename
+	m	(Lnet/minecraft/world/chunk/storage/AnvilSaveConverter;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2143_1_	p_i2143_1_	#~, ~, ~, ~

@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S18PacketEntityTeleport	net/minecraft/network/play/server/S18PacketEntityTeleport	
+	f	I	field_149458_a	entityId	#entityId, :, id, :
+	f	I	field_149456_b	posX	#posX, :, x, :
+	f	I	field_149457_c	posY	#posY, :, y, :
+	f	I	field_149454_d	posZ	#posZ, :, z, :
+	f	B	field_149455_e	yaw	#yaw, :, :, :
+	f	B	field_149453_f	pitch	#pitch, :, :, :
+	m	(IIIIBB)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45234_1_	id	#~, ~, id, :
+		p	2	p_i45234_2_	x	#~, ~, x, :
+		p	3	p_i45234_3_	y	#~, ~, y, :
+		p	4	p_i45234_4_	z	#~, ~, z, :
+		p	5	p_i45234_5_	yaw	#~, ~, yaw, :
+		p	6	p_i45234_6_	pitch	#~, ~, pitch, :
+	m	(Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45233_1_	entityIn	#entityIn, :, entity, :
+	m	()I	func_149451_c	getEntityId	#getEntityId, :, getId, :
+	m	()I	func_149449_d	getX	#getX, :, :, :
+	m	()I	func_149448_e	getY	#getY, :, :, :
+	m	()I	func_149446_f	getZ	#getZ, :, :, :
+	m	()B	func_149450_g	getYaw	#getYaw, :, :, :
+	m	()B	func_149447_h	getPitch	#getPitch, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,38 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityWolf	net/minecraft/entity/passive/EntityWolf	
+	f	F	field_70926_e	headRotationCourse	#headRotationCourse, :, ~, begAnimationProgress
+		c	Float used to smooth the rotation of the wolf head
+	f	F	field_70924_f	headRotationCourseOld	#headRotationCourseOld, :, ~, lastBegAnimationProgress
+	f	Z	field_70925_g	isShaking	#isShaking, isWet, ~, furWet
+		c	true is the wolf is wet else false
+	f	Z	field_70928_h	isShaking	#isShaking, :, ~, canShakeWaterOff
+		c	True if the wolf is shaking else False
+	f	F	field_70929_i	timeWolfIsShaking	#timeWolfIsShaking, :, ~, shakeProgress
+		c	This time increases while wolf is shaking and emitting water particles.
+	f	F	field_70927_j	prevTimeWolfIsShaking	#prevTimeWolfIsShaking, :, ~, lastShakeProgress
+	m	()Z	func_70921_u	getWolfShaking	#getWolfShaking, isWolfWet, ~, isFurWet
+		c	True if the wolf is wet
+	m	()F	func_70920_v	getTailRotation	#getTailRotation, :, ~, age
+	m	()Z	func_70919_bu	isAngry	#isAngry, :, :, :
+		c	Determines whether this wolf is angry or not.
+	m	()I	func_82186_bH	getCollarColor	#getCollarColor, :, ~, getCollarColor
+		c	Return this wolf's collar color.
+	m	()Z	func_70922_bv	isBegging	#isBegging, :, ~, isBegging
+	m	(FF)F	func_70923_f	getShakeAngle	#getShakeAngle, :, ~, getShakeAngle
+		p	1	p_70923_1_	tickdelta	#~, ~, ~, tickdelta
+		p	2	p_70923_2_	offset	#~, ~, ~, offset
+	m	(Z)V	func_70916_h	setAngry	#setAngry, :, updateAnger, :
+		c	Sets whether this wolf is angry or not.
+		p	1	p_70916_1_	angry	#angry, :, :, :
+	m	(Z)V	func_70918_i	setBegging	#setBegging, :, :, :
+		p	1	p_70918_1_	beg	#beg, :, begging, :
+	m	(F)F	func_70915_j	getShadingWhileShaking	#getShadingWhileShaking, getShadingWhileWet, ~, shakeLerp
+		c	Used when calculating the amount of shading to apply while the wolf is shaking.
+		p	1	p_70915_1_	tickDelta	#~, ~, ~, tickDelta
+	m	(F)F	func_70917_k	getInterestedAngle	#getInterestedAngle, :, ~, begLerp
+		p	1	p_70917_1_	tickDelta	#~, ~, ~, tickDelta
+	m	(I)V	func_82185_r	setCollarColor	#setCollarColor, :, ~, setCollarColor
+		c	Set this wolf's collar color.
+		p	1	p_82185_1_	color	#~, ~, ~, color
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1696_1_	worldIn	#worldIn, :, ~, world

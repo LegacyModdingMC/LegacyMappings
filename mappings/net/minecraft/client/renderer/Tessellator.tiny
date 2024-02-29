@@ -1,0 +1,136 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/Tessellator	net/minecraft/client/renderer/Tessellator	
+	f	Lnet/minecraft/client/renderer/Tessellator;	field_78398_a	instance	#instance, INSTANCE, :, :
+		c	The static instance of the Tessellator.
+	f	Ljava/nio/ByteBuffer;	field_78394_d	byteBuffer	#byteBuffer, :, buffer, byteBuffer
+		c	The byte buffer used for GL allocation.
+	f	Ljava/nio/IntBuffer;	field_147568_c	intBuffer	#intBuffer, :, bufferInt, intBuffer
+		c	The same memory as byteBuffer, but referenced as an integer buffer.
+	f	Ljava/nio/FloatBuffer;	field_147566_d	floatBuffer	#floatBuffer, :, bufferFloat, floatBuffer
+		c	The same memory as byteBuffer, but referenced as an float buffer.
+	f	Ljava/nio/ShortBuffer;	field_147567_e	shortBuffer	#shortBuffer, :, bufferShort, shortBuffer
+		c	The same memory as byteBuffer, but referenced as an short buffer.
+	f	[I	field_78405_h	rawBuffer	#rawBuffer, :, array, buffer
+		c	Raw integer array.
+	f	I	field_78406_i	vertexCount	#vertexCount, :, count, vertexCount
+		c	The number of vertices to be drawn in the next draw call. Reset to 0 between draw calls.
+	f	D	field_78403_j	textureU	#textureU, :, u, :
+		c	The first coordinate to be used for the texture.
+	f	D	field_78404_k	textureV	#textureV, :, v, :
+		c	The second coordinate to be used for the texture.
+	f	I	field_78401_l	brightness	#brightness, :, light, brightness
+	f	I	field_78402_m	color	#color, :, :, :
+		c	The color (RGBA) value to be used for the following draw call.
+	f	Z	field_78399_n	hasColor	#hasColor, :, :, colored
+		c	Whether the current draw object for this tessellator has color values.
+	f	Z	field_78400_o	hasTexture	#hasTexture, :, :, textured
+		c	Whether the current draw object for this tessellator has texture coordinates.
+	f	Z	field_78414_p	hasBrightness	#hasBrightness, :, hasLight, hasBrightness
+	f	Z	field_78413_q	hasNormals	#hasNormals, :, hasNormal, hasNormals
+		c	Whether the current draw object for this tessellator has normal values.
+	f	I	field_147569_p	rawBufferIndex	#rawBufferIndex, :, arrayIdx, index
+		c	The index into the raw buffer to be used for the next data.
+	f	I	field_78411_s	addedVertices	#addedVertices, :, vertexCount, nextVertexCount
+		c	The number of vertices manually added to the given draw call. This differs from vertexCount because it adds extra vertices when converting quads to triangles.
+	f	Z	field_78410_t	isColorDisabled	#isColorDisabled, :, fixedColor, uncolored
+		c	Disables all color information for the following draw call.
+	f	I	field_78409_u	drawMode	#drawMode, :, format, drawMode
+		c	The draw mode currently being used by the tessellator.
+	f	D	field_78408_v	xOffset	#xOffset, :, offsetX, :
+		c	An offset to be applied along the x-axis for all vertices in this draw call.
+	f	D	field_78407_w	yOffset	#yOffset, :, offsetY, :
+		c	An offset to be applied along the y-axis for all vertices in this draw call.
+	f	D	field_78417_x	zOffset	#zOffset, :, offsetZ, :
+		c	An offset to be applied along the z-axis for all vertices in this draw call.
+	f	I	field_78416_y	normal	#normal, :, :, normals
+		c	The normal to be applied to the face being drawn.
+	f	Z	field_78415_z	isDrawing	#isDrawing, :, tesselating, tessellating
+		c	Whether this tessellator is currently in draw mode.
+	f	I	field_78388_E	bufferSize	#bufferSize, :, bufferCapacity, size
+		c	The size of the buffers used (in integers).
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1250_1_	bufferSize	#bufferSize, :, bufferCapacity, size
+	m	()I	func_78381_a	draw	#draw, :, end, :
+		c	Draws the data set up in this tessellator and resets the state to prepare for new drawing.
+	m	(BBB)V	func_154352_a	color	#~, ~, ~, color
+		p	1	p_154352_1_	r	#~, ~, ~, r
+		p	2	p_154352_2_	g	#~, ~, ~, g
+		p	3	p_154352_3_	b	#~, ~, ~, b
+	m	(DD)V	func_78385_a	setTextureUV	#setTextureUV, :, texture, :
+		c	Sets the texture coordinates.
+		p	1	p_78385_1_	u	#~, ~, u, :
+		p	3	p_78385_3_	v	#~, ~, v, :
+	m	(DDD)V	func_78377_a	addVertex	#addVertex, :, vertex, :
+		c	Adds a vertex with the specified x,y,z to the current draw call. It will trigger a draw() if the buffer gets full.
+		p	1	p_78377_1_	x	#~, ~, x, :
+		p	3	p_78377_3_	y	#~, ~, y, :
+		p	5	p_78377_5_	z	#~, ~, z, :
+	m	(DDDDD)V	func_78374_a	addVertexWithUV	#addVertexWithUV, :, vertex, :
+		c	Adds a vertex specifying both x,y,z and the texture u,v for it.
+		p	1	p_78374_1_	x	#~, ~, x, :
+		p	3	p_78374_3_	y	#~, ~, y, :
+		p	5	p_78374_5_	z	#~, ~, z, :
+		p	7	p_78374_7_	u	#~, ~, u, :
+		p	9	p_78374_9_	v	#~, ~, v, :
+	m	(FFF)Lnet/minecraft/client/shader/TesselatorVertexState;	func_147564_a	getVertexState	#getVertexState, :, ~, buildState
+		p	1	p_147564_1_	x	#~, ~, ~, x
+		p	2	p_147564_2_	y	#~, ~, ~, y
+		p	3	p_147564_3_	z	#~, ~, ~, z
+	m	(FFFF)V	func_78369_a	setColorRGBA_F	#setColorRGBA_F, :, color, :
+		c	Sets the RGBA values for the color, converting from floats between 0 and 1 to integers from 0-255.
+		p	1	p_78369_1_	r	#~, ~, r, :
+		p	2	p_78369_2_	g	#~, ~, g, :
+		p	3	p_78369_3_	b	#~, ~, b, :
+		p	4	p_78369_4_	a	#~, ~, a, :
+	m	(I)V	func_78371_b	startDrawing	#startDrawing, :, begin, start
+		c	Resets tessellator state and prepares for drawing (with the specified draw mode).
+		p	1	p_78371_1_	drawMode	#~, ~, format, drawMode
+	m	(II)V	func_78384_a	setColorRGBA_I	#setColorRGBA_I, :, color, :
+		c	Sets the color to the given color (packed as bytes in integer) and alpha values.
+		p	1	p_78384_1_	rgb	#~, ~, rgb, :
+		p	2	p_78384_2_	a	#~, ~, alpha, a
+	m	(III)V	func_78376_a	setColorOpaque	#setColorOpaque, :, color, :
+		c	Sets the RGB values as specified, and sets alpha to opaque.
+		p	1	p_78376_1_	r	#~, ~, r, :
+		p	2	p_78376_2_	g	#~, ~, g, :
+		p	3	p_78376_3_	b	#~, ~, b, :
+	m	(IIII)V	func_78370_a	setColorRGBA	#setColorRGBA, :, color, :
+		c	Sets the RGBA values for the color. Also clamps them to 0-255.
+		p	1	p_78370_1_	red	#red, :, r, :
+		p	2	p_78370_2_	green	#green, :, g, :
+		p	3	p_78370_3_	blue	#blue, :, b, :
+		p	4	p_78370_4_	alpha	#alpha, :, a, :
+	m	(Lnet/minecraft/client/shader/TesselatorVertexState;)V	func_147565_a	setVertexState	#setVertexState, :, ~, setState
+		p	1	p_147565_1_	state	#~, ~, ~, state
+	m	()V	func_78382_b	startDrawingQuads	#startDrawingQuads, :, begin, start
+		c	Sets draw mode in the tessellator to draw quads.
+	m	(DDD)V	func_78373_b	setTranslation	#setTranslation, :, offset, :
+		c	Sets the translation for all vertices in the current draw call.
+		p	1	p_78373_1_	offsetX	#~, ~, x, offsetX
+		p	3	p_78373_3_	offsetY	#~, ~, y, offsetY
+		p	5	p_78373_5_	offsetZ	#~, ~, z, offsetZ
+	m	(FFF)V	func_78386_a	setColorOpaque_F	#setColorOpaque_F, :, color, :
+		c	Sets the RGB values as specified, converting from floats between 0 and 1 to integers from 0-255.
+		p	1	p_78386_1_	r	#~, ~, r, :
+		p	2	p_78386_2_	g	#~, ~, g, :
+		p	3	p_78386_3_	b	#~, ~, b, :
+	m	(I)V	func_78380_c	setBrightness	#setBrightness, :, setLight, brightness
+		p	1	p_78380_1_	brightness	#~, ~, light, brightness
+	m	()V	func_78383_c	disableColor	#disableColor, :, setFixedColor, uncolored
+		c	Disables colors for the current draw call.
+	m	(FFF)V	func_78375_b	setNormal	#setNormal, :, normal, :
+		c	Sets the normal for the current draw call.
+		p	1	p_78375_1_	x	#~, ~, x, :
+		p	2	p_78375_2_	y	#~, ~, y, :
+		p	3	p_78375_3_	z	#~, ~, z, :
+	m	(I)V	func_78378_d	setColorOpaque_I	#setColorOpaque_I, :, color, :
+		c	Sets the color to the given opaque value (stored as byte values packed in an integer).
+		p	1	p_78378_1_	rgb	#~, ~, rgb, :
+	m	()V	func_78379_d	reset	#reset, :, :, clear
+		c	Clears the tessellator state in preparation for new drawing.
+	m	(FFF)V	func_78372_c	addTranslation	#addTranslation, :, addOffset, :
+		c	Offsets the translation for all vertices in the current draw call.
+		p	1	p_78372_1_	offsetX	#~, ~, x, offsetX
+		p	2	p_78372_2_	offsetY	#~, ~, y, offsetY
+		p	3	p_78372_3_	offsetZ	#~, ~, z, offsetZ
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

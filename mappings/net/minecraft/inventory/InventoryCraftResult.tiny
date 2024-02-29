@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/InventoryCraftResult	net/minecraft/inventory/InventoryCraftResult	
+	f	[Lnet/minecraft/item/ItemStack;	field_70467_a	stackResult	#stackResult, :, stacks, :
+		c	A list of one item containing the result of the crafting formula
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,96 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/DamageSource	net/minecraft/util/DamageSource	
+	f	Lnet/minecraft/util/DamageSource;	field_76372_a	inFire	#inFire, IN_FIRE, FIRE, :
+	f	Lnet/minecraft/util/DamageSource;	field_76370_b	onFire	#onFire, ON_FIRE, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76371_c	lava	#lava, LAVA, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76368_d	inWall	#inWall, IN_WALL, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76369_e	drown	#drown, DROWN, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76366_f	starve	#starve, STARVE, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76367_g	cactus	#cactus, CACTUS, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76379_h	fall	#fall, FALL, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76380_i	outOfWorld	#outOfWorld, OUT_OF_WORLD, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76377_j	generic	#generic, GENERIC, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_76376_m	magic	#magic, MAGIC, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_82727_n	wither	#wither, WITHER, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_82728_o	anvil	#anvil, ANVIL, :, :
+	f	Lnet/minecraft/util/DamageSource;	field_82729_p	fallingBlock	#fallingBlock, FALLING_BLOCK, :, :
+	f	Ljava/lang/String;	field_76373_n	damageType	#damageType, :, name, :
+	f	Z	field_76374_o	isUnblockable	#isUnblockable, :, bypassesArmor, :
+		c	This kind of damage can be blocked or not.
+	f	Z	field_76385_p	isDamageAllowedInCreativeMode	#isDamageAllowedInCreativeMode, :, outOfWorld, :
+	f	Z	field_151520_r	damageIsAbsolute	#damageIsAbsolute, :, unblockable, :
+		c	Whether or not the damage ignores modification by potion effects or enchantments.
+	f	F	field_76384_q	hungerDamage	#hungerDamage, :, exhaustion, :
+	f	Z	field_76383_r	fireDamage	#fireDamage, :, fire, :
+		c	This kind of damage is based on fire or not.
+	f	Z	field_76382_s	projectile	#projectile, :, :, isProjectile
+		c	This kind of damage is based on a projectile or not.
+	f	Z	field_76381_t	difficultyScaled	#difficultyScaled, :, scaleWithDifficulty, :
+		c	Whether this damage source will have its damage amount scaled based on the current difficulty.
+	f	Z	field_82730_x	magicDamage	#magicDamage, :, magic, :
+		c	Whether the damage is magic based.
+	f	Z	field_76378_k	explosion	#explosion, :, explosive, :
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1566_1_	damageTypeIn	#damageTypeIn, :, name, :
+	m	()Z	func_76352_a	isProjectile	#isProjectile, :, :, :
+		c	Returns true if the damage is projectile based.
+	m	(Lnet/minecraft/world/Explosion;)Lnet/minecraft/util/DamageSource;	func_94539_a	setExplosionSource	#setExplosionSource, causeExplosionDamage, explosion, :
+		p	0	p_94539_0_	explosionIn	#explosionIn, :, explosion, :
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource;	func_92087_a	causeThornsDamage	#causeThornsDamage, :, thorns, :
+		c	Returns the EntityDamageSource of the Thorns enchantment
+		p	0	p_92087_0_	source	#source, :, attacker, :
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource;	func_76356_a	causeThrownDamage	#causeThrownDamage, :, thrownProjectile, :
+		p	0	p_76356_0_	source	#source, :, projectile, :
+		p	1	p_76356_1_	indirectEntityIn	#indirectEntityIn, :, attacker, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/util/DamageSource;	func_76358_a	causeMobDamage	#causeMobDamage, :, mob, :
+		p	0	p_76358_0_	mob	#mob, :, attacker, entity
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/util/DamageSource;	func_76365_a	causePlayerDamage	#causePlayerDamage, :, player, :
+		c	returns an EntityDamageSource of type player
+		p	0	p_76365_0_	player	#player, :, attacker, :
+	m	(Lnet/minecraft/entity/projectile/EntityArrow;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource;	func_76353_a	causeArrowDamage	#causeArrowDamage, :, arrow, :
+		c	returns EntityDamageSourceIndirect of an arrow
+		p	0	p_76353_0_	arrow	#arrow, :, :, :
+		p	1	p_76353_1_	indirectEntityIn	#indirectEntityIn, :, attacker, entity
+	m	(Lnet/minecraft/entity/projectile/EntityFireball;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource;	func_76362_a	causeFireballDamage	#causeFireballDamage, :, fire, :
+		c	returns EntityDamageSourceIndirect of a fireball
+		p	0	p_76362_0_	fireball	#fireball, :, projectile, projectileEntity
+		p	1	p_76362_1_	indirectEntityIn	#indirectEntityIn, :, attacker, entity
+	m	()Lnet/minecraft/util/DamageSource;	func_76349_b	setProjectile	#setProjectile, :, :, :
+		c	Define the damage type as projectile based.
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource;	func_76354_b	causeIndirectMagicDamage	#causeIndirectMagicDamage, :, magic, :
+		p	0	p_76354_0_	source	#source, :, magic, :
+		p	1	p_76354_1_	indirectEntityIn	#indirectEntityIn, :, attacker, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/util/IChatComponent;	func_151519_b	getDeathMessage	#getDeathMessage, :, :, :
+		c	Gets the death message that is displayed when the player dies
+		p	1	p_151519_1_	entityLivingBaseIn	#entityLivingBaseIn, :, entity, livingEntity
+	m	()Z	func_94541_c	isExplosion	#isExplosion, :, isExplosive, :
+	m	()Lnet/minecraft/util/DamageSource;	func_94540_d	setExplosion	#setExplosion, :, setExplosive, :
+	m	()Z	func_76363_c	isUnblockable	#isUnblockable, :, bypassesArmor, :
+	m	()F	func_76345_d	getHungerDamage	#getHungerDamage, :, getExhaustion, :
+		c	How much satiate(food) is consumed by this DamageSource
+	m	()Z	func_76357_e	canHarmInCreative	#canHarmInCreative, :, isOutOfWorld, :
+	m	()Z	func_151517_h	isDamageAbsolute	#isDamageAbsolute, :, isUnblockable, :
+		c	Whether or not the damage ignores modification by potion effects or enchantments.
+	m	()Lnet/minecraft/entity/Entity;	func_76364_f	getSourceOfDamage	#getSourceOfDamage, getImmediateSource, getSource, :
+		c	Retrieves the immediate causer of the damage, e.g. the arrow entity, not its shooter
+	m	()Lnet/minecraft/entity/Entity;	func_76346_g	getEntity	#getEntity, getTrueSource, getAttacker, :
+		c	Retrieves the true causer of the damage, e.g. the player who fired an arrow, the shulker who fired the bullet, etc.
+	m	()Lnet/minecraft/util/DamageSource;	func_76348_h	setDamageBypassesArmor	#setDamageBypassesArmor, :, setBypassesArmor, :
+	m	()Lnet/minecraft/util/DamageSource;	func_76359_i	setDamageAllowedInCreativeMode	#setDamageAllowedInCreativeMode, :, setOutOfWorld, :
+	m	()Lnet/minecraft/util/DamageSource;	func_151518_m	setDamageIsAbsolute	#setDamageIsAbsolute, :, setUnblockable, :
+		c	Sets a value indicating whether the damage is absolute (ignores modification by potion effects or enchantments), and also clears out hunger damage.
+	m	()Lnet/minecraft/util/DamageSource;	func_76361_j	setFireDamage	#setFireDamage, :, setFire, :
+		c	Define the damage type as fire based.
+	m	()Z	func_76347_k	isFireDamage	#isFireDamage, :, isFire, :
+		c	Returns true if the damage is fire based.
+	m	()Ljava/lang/String;	func_76355_l	getDamageType	#getDamageType, :, getName, :
+		c	Return the name of damage type.
+	m	()Lnet/minecraft/util/DamageSource;	func_76351_m	setDifficultyScaled	#setDifficultyScaled, :, setScaledWithDifficulty, :
+		c	Set whether this damage source will have its damage amount scaled based on the current difficulty.
+	m	()Z	func_76350_n	isDifficultyScaled	#isDifficultyScaled, :, isScaledWithDifficulty, :
+		c	Return whether this damage source will have its damage amount scaled based on the current difficulty.
+	m	()Z	func_82725_o	isMagicDamage	#isMagicDamage, :, getMagic, :
+		c	Returns true if the damage is magic based.
+	m	()Lnet/minecraft/util/DamageSource;	func_82726_p	setMagicDamage	#setMagicDamage, :, setUsesMagic, :
+		c	Define the damage type as magic based.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

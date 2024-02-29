@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S3BPacketScoreboardObjective	net/minecraft/network/play/server/S3BPacketScoreboardObjective	
+	f	Ljava/lang/String;	field_149343_a	objectiveName	#objectiveName, :, name, :
+	f	Ljava/lang/String;	field_149341_b	objectiveValue	#objectiveValue, :, displayName, :
+	f	I	field_149342_c	action	#action, :, mode, action
+		c	The type of update.\n<br>0: objective added\n<br>1: objective removed\n<br>2: display name changed
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45224_1_	objective	#~, ~, objective, :
+		p	2	p_i45224_2_	action	#~, ~, mode, action
+	m	()Ljava/lang/String;	func_149339_c	getObjectiveName	#getObjectiveName, :, getName, :
+	m	()Ljava/lang/String;	func_149337_d	getObjectiveValue	#getObjectiveValue, :, getDisplayName, :
+	m	()I	func_149338_e	getAction	#getAction, :, getMode, getAction
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,47 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/MerchantRecipe	net/minecraft/village/MerchantRecipe	
+	f	Lnet/minecraft/item/ItemStack;	field_77403_a	itemToBuy	#itemToBuy, :, stack1, primaryPayment
+		c	Item the Villager buys.
+	f	Lnet/minecraft/item/ItemStack;	field_77401_b	secondItemToBuy	#secondItemToBuy, :, stack2, secondaryPayment
+		c	Second Item the Villager buys.
+	f	Lnet/minecraft/item/ItemStack;	field_77402_c	itemToSell	#itemToSell, :, result, :
+		c	Item the Villager sells.
+	f	I	field_77400_d	toolUses	#toolUses, :, uses, :
+		c	Saves how much has been tool used when put into to slot to be enchanted.
+	f	I	field_82786_e	maxTradeUses	#maxTradeUses, :, maxUses, :
+		c	Maximum times this trade can be used.
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/Item;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1943_1_	buy1	#buy1, :, stack1, payment
+		p	2	p_i1943_2_	sellItem	#sellItem, :, result, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1942_1_	buy1	#buy1, :, stack1, payment
+		p	2	p_i1942_2_	sell	#sell, :, result, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1941_1_	buy1	#buy1, :, stack1, primaryPayment
+		p	2	p_i1941_2_	buy2	#buy2, :, stack2, secondaryPayment
+		p	3	p_i1941_3_	sell	#sell, :, result, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1940_1_	tagCompound	#tagCompound, :, nbt, :
+	m	()Lnet/minecraft/item/ItemStack;	func_77394_a	getItemToBuy	#getItemToBuy, :, getFirstStack, getPrimaryPayment
+		c	Gets the itemToBuy.
+	m	(I)V	func_82783_a	increaseMaxTradeUses	#increaseMaxTradeUses, :, increaseSpecialPrice, increaseMaxUses
+		p	1	p_82783_1_	increment	#increment, :, uses, :
+	m	(Lnet/minecraft/village/MerchantRecipe;)Z	func_77393_a	hasSameIDsAs	#hasSameIDsAs, :, ~, matchesPaymentItems
+		c	checks if both the first and second ItemToBuy IDs are the same
+		p	1	p_77393_1_	offer	#~, ~, ~, offer
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_77390_a	readFromTags	#readFromTags, :, readNbt, :
+		p	1	p_77390_1_	tagCompound	#tagCompound, :, nbt, :
+	m	()Lnet/minecraft/item/ItemStack;	func_77396_b	getSecondItemToBuy	#getSecondItemToBuy, :, getSecondStack, getSecondaryPayment
+		c	Gets secondItemToBuy.
+	m	(Lnet/minecraft/village/MerchantRecipe;)Z	func_77391_b	hasSameItemsAs	#hasSameItemsAs, :, ~, isCheaperThan
+		c	checks first and second ItemToBuy ID's and count. Calls hasSameIDs
+		p	1	p_77391_1_	offer	#~, ~, ~, offer
+	m	()Z	func_77398_c	hasSecondItemToBuy	#hasSecondItemToBuy, :, hasSecondStack, hasSecondaryPayment
+		c	Gets if Villager has secondItemToBuy.
+	m	()Lnet/minecraft/item/ItemStack;	func_77397_d	getItemToSell	#getItemToSell, :, getResult, :
+		c	Gets itemToSell.
+	m	()V	func_77399_f	incrementToolUses	#incrementToolUses, :, use, :
+	m	()Z	func_82784_g	isRecipeDisabled	#isRecipeDisabled, :, isDisabled, :
+	m	()V	func_82785_h	compensateToolUses	#compensateToolUses, :, clearUses, :
+		c	Compensates {@link net.minecraft.village.MerchantRecipe#toolUses toolUses} with {@link net.minecraft.village.MerchantRecipe#maxTradeUses maxTradeUses}
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_77395_g	writeToTags	#writeToTags, :, toNbt, :

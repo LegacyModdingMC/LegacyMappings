@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerBeacon$BeaconSlot	net/minecraft/inventory/ContainerBeacon$BeaconSlot	
+	f	Lnet/minecraft/inventory/ContainerBeacon;	field_82876_a	beacon	#beacon, :, ~, parent
+		c	The beacon this slot belongs to.
+	m	(Lnet/minecraft/inventory/ContainerBeacon;Lnet/minecraft/inventory/IInventory;III)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1801_2_	inventoryIn	#inventoryIn, :, ~, inventory
+		p	3	p_i1801_3_	index	#index, :, ~, slot
+		p	4	p_i1801_4_	xIn	#xIn, :, ~, x
+		p	5	p_i1801_5_	yIn	#yIn, :, ~, y
+		p	1	p_i1801_1_	p_i1801_1_	#~, ~, ~, ~

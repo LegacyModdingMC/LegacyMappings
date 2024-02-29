@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundManager$SoundSystemStarterThread	net/minecraft/client/audio/SoundManager$SoundSystemStarterThread	
+	f	Lnet/minecraft/client/audio/SoundManager;	field_148591_a	soundSystem	#~, ~, ~, soundSystem
+	m	(Ljava/lang/String;)Z	playing	playing	#~, ~, ~, ~
+		p	1	p_playing_1_	channel	#~, ~, ~, channel
+	m	(Lnet/minecraft/client/audio/SoundManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45117_1_	p_i45117_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundManager;Lnet/minecraft/client/audio/SoundManager$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45118_1_	p_i45118_1_	#~, ~, ~, ~
+		p	2	p_i45118_2_	p_i45118_2_	#~, ~, ~, ~

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPressurePlate$Sensitivity	net/minecraft/block/BlockPressurePlate$Sensitivity	
+	f	Lnet/minecraft/block/BlockPressurePlate$Sensitivity;	everything	everything	#~, ~, EVERYTHING, :
+	f	Lnet/minecraft/block/BlockPressurePlate$Sensitivity;	mobs	mobs	#~, ~, MOBS, :
+	f	Lnet/minecraft/block/BlockPressurePlate$Sensitivity;	players	players	#~, ~, PLAYERS, :
+	f	[Lnet/minecraft/block/BlockPressurePlate$Sensitivity;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/block/BlockPressurePlate$Sensitivity;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/block/BlockPressurePlate$Sensitivity;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45417_1_	p_i45417_1_	#~, ~, ~, ~
+		p	2	p_i45417_2_	p_i45417_2_	#~, ~, ~, ~

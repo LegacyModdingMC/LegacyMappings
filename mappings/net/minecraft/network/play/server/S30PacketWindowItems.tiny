@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S30PacketWindowItems	net/minecraft/network/play/server/S30PacketWindowItems	
+	f	I	field_148914_a	windowId	#windowId, :, screenId, menuId
+	f	[Lnet/minecraft/item/ItemStack;	field_148913_b	itemStacks	#itemStacks, :, stacks, :
+	m	(ILjava/util/List;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45186_1_	windowIdIn	#windowIdIn, :, screenId, menuId
+		p	2	p_i45186_2_	stacks	#~, ~, stacks, :
+	m	()I	func_148911_c	getWindowId	#getWindowId, :, getScreenId, getMenuId
+	m	()[Lnet/minecraft/item/ItemStack;	func_148910_d	getItemStacks	#getItemStacks, :, getSlotStacks, getStacks
+	m	()V	<init>	<init>	#~, ~, ~, ~

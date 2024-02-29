@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S28PacketEffect	net/minecraft/network/play/server/S28PacketEffect	
+	f	I	field_149251_a	soundType	#soundType, :, eventId, event
+	f	I	field_149249_b	soundData	#soundData, :, data, :
+		c	can be a block/item id or other depending on the soundtype
+	f	I	field_149250_c	xPos	#xPos, :, ~, x
+	f	I	field_149247_d	yPos	#yPos, :, ~, y
+	f	I	field_149248_e	zPos	#zPos, :, ~, z
+	f	Z	field_149246_f	serverWide	#serverWide, :, global, :
+		c	If true the sound is played across the server
+	m	()Z	func_149244_c	isSoundServerwide	#isSoundServerwide, :, isGlobal, :
+	m	()I	func_149242_d	getSoundType	#getSoundType, :, getEventId, getEvent
+	m	()I	func_149241_e	getSoundData	#getSoundData, :, getEffectData, getData
+	m	()I	func_149240_f	getPosX	#getPosX, :, ~, getX
+	m	()I	func_149243_g	getPosY	#getPosY, :, ~, getY
+	m	()I	func_149239_h	getPosZ	#getPosZ, :, ~, getZ
+	m	(IIIIIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45198_1_	event	#~, ~, ~, event
+		p	2	p_i45198_2_	x	#~, ~, ~, x
+		p	3	p_i45198_3_	y	#~, ~, ~, y
+		p	4	p_i45198_4_	z	#~, ~, ~, z
+		p	5	p_i45198_5_	data	#~, ~, ~, data
+		p	6	p_i45198_6_	global	#~, ~, ~, global
+	m	()V	<init>	<init>	#~, ~, ~, ~

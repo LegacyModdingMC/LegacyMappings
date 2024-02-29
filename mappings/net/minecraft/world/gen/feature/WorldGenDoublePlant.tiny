@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenDoublePlant	net/minecraft/world/gen/feature/WorldGenDoublePlant	
+	f	I	field_150549_a	plantType	#plantType, :, ~, variant
+	m	(I)V	func_150548_a	setVariant	#~, ~, ~, setVariant
+		p	1	p_150548_1_	variant	#~, ~, ~, variant
+	m	()V	<init>	<init>	#~, ~, ~, ~

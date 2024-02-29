@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerBiomeEdge	net/minecraft/world/gen/layer/GenLayerBiomeEdge	
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45475_1_	seed	#~, ~, seed, :
+		p	3	p_i45475_3_	parent	#~, ~, ~, parent
+	m	([I[IIIIIII)Z	func_151636_a	replaceBiomeEdgeIfNecessary	#replaceBiomeEdgeIfNecessary, :, ~, compareHillyBiomes
+		c	Creates a border around a biome if necessary, e.g. A transition from hot to cold climates would otherwise occur.
+		p	1	p_151636_1_	biome1	#~, ~, ~, biome1
+		p	2	p_151636_2_	biome2	#~, ~, ~, biome2
+		p	3	p_151636_3_	x	#~, ~, ~, x
+		p	4	p_151636_4_	y	#~, ~, ~, y
+		p	5	p_151636_5_	length	#~, ~, ~, length
+		p	6	p_151636_6_	width	#~, ~, ~, width
+		p	7	p_151636_7_	id1	#~, ~, ~, id1
+		p	8	p_151636_8_	id2	#~, ~, ~, id2
+	m	(II)Z	func_151634_b	canBiomesBeNeighbors	#canBiomesBeNeighbors, :, ~, shouldTransition
+		c	Returns if two biomes can logically be neighbors. If one is hot and the other cold, for example, it returns false.
+		p	1	p_151634_1_	id1	#~, ~, ~, id1
+		p	2	p_151634_2_	id2	#~, ~, ~, id2
+	m	([I[IIIIIII)Z	func_151635_b	replaceBiomeEdge	#replaceBiomeEdge, :, ~, compareDryBiomes
+		c	Creates a border around a biome.
+		p	1	p_151635_1_	biome1	#~, ~, ~, biome1
+		p	2	p_151635_2_	biome2	#~, ~, ~, biome2
+		p	3	p_151635_3_	x	#~, ~, ~, x
+		p	4	p_151635_4_	y	#~, ~, ~, y
+		p	5	p_151635_5_	length	#~, ~, ~, length
+		p	6	p_151635_6_	width	#~, ~, ~, width
+		p	7	p_151635_7_	id1	#~, ~, ~, id1
+		p	8	p_151635_8_	id2	#~, ~, ~, id2

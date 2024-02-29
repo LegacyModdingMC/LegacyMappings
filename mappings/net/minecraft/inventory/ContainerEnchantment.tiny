@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerEnchantment	net/minecraft/inventory/ContainerEnchantment	
+	f	Lnet/minecraft/inventory/IInventory;	field_75168_e	tableInventory	#tableInventory, :, inventory, enchantingTable
+		c	SlotEnchantmentTable object with ItemStack to be enchanted
+	f	J	field_75166_f	nameSeed	#nameSeed, :, ~, seed
+		c	used as seed for EnchantmentNameParts (see GuiEnchantment)
+	f	[I	field_75167_g	enchantLevels	#enchantLevels, :, enchantmentId, enchantingCosts
+		c	3-member array storing the enchantment levels of each slot
+	f	Lnet/minecraft/world/World;	field_75172_h	worldPointer	#worldPointer, world, :, :
+		c	current world (for bookshelf counting)
+	f	I	field_75173_i	posX	#posX, :, ~, x
+	f	I	field_75170_j	posY	#posY, :, ~, y
+	f	I	field_75171_k	posZ	#posZ, :, ~, z
+	f	Ljava/util/Random;	field_75169_l	rand	#rand, :, random, :
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1811_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1811_2_	world	#~, ~, ~, world
+		p	3	p_i1811_3_	x	#~, ~, ~, x
+		p	4	p_i1811_4_	y	#~, ~, ~, y
+		p	5	p_i1811_5_	z	#~, ~, ~, z

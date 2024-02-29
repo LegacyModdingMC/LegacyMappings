@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockButton	net/minecraft/block/BlockButton	
+	f	Z	field_150047_a	wooden	#wooden, :, :, :
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45396_1_	wooden	#wooden, :, :, :
+	m	(Lnet/minecraft/world/World;IIII)V	func_150042_a	updateNeighbor	#updateNeighbor, :, ~, updateNeighbors
+		p	1	p_150042_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150042_2_	x	#x, :, ~, x
+		p	3	p_150042_3_	y	#y, :, ~, y
+		p	4	p_150042_4_	z	#z, :, ~, z
+		p	5	p_150042_5_	dir	#~, ~, ~, dir
+	m	(I)V	func_150043_b	setBlockBoundsFromMeta	#setBlockBoundsFromMeta, :, ~, updateBoundingBox
+		p	1	p_150043_1_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/World;III)I	func_150045_e	findSolidSide	#findSolidSide, :, ~, getPlacementDirection
+		p	1	p_150045_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150045_2_	x	#x, :, ~, x
+		p	3	p_150045_3_	y	#y, :, ~, y
+		p	4	p_150045_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_150044_m	canStay	#canStay, :, ~, canSurviveOrBreak
+		p	1	p_150044_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150044_2_	x	#x, :, ~, x
+		p	3	p_150044_3_	y	#y, :, ~, y
+		p	4	p_150044_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;III)V	func_150046_n	activateButton	#activateButton, :, ~, updatePressed
+		p	1	p_150046_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150046_2_	x	#x, :, ~, x
+		p	3	p_150046_3_	y	#y, :, ~, y
+		p	4	p_150046_4_	z	#z, :, ~, z

@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRedstoneComparator	net/minecraft/block/BlockRedstoneComparator	
+	m	(Lnet/minecraft/world/World;IIILjava/util/Random;)V	func_149972_c	updateOutputState	#~, ~, ~, updateOutputState
+		p	1	p_149972_1_	world	#~, ~, ~, world
+		p	2	p_149972_2_	x	#~, ~, ~, x
+		p	3	p_149972_3_	y	#~, ~, ~, y
+		p	4	p_149972_4_	z	#~, ~, ~, z
+		p	5	p_149972_5_	random	#~, ~, ~, random
+	m	(I)Z	func_149969_d	isInCompareMode	#~, ~, ~, isInCompareMode
+		p	1	p_149969_1_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;III)Lnet/minecraft/tileentity/TileEntityComparator;	func_149971_e	getTileEntityComparator	#getTileEntityComparator, :, ~, getComparatorBlockEntity
+		c	Returns the blockTileEntity at given coordinates.
+		p	1	p_149971_1_	world	#~, ~, ~, world
+		p	2	p_149971_2_	x	#~, ~, ~, x
+		p	3	p_149971_3_	y	#~, ~, ~, y
+		p	4	p_149971_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;IIII)I	func_149970_j	getOutputStrength	#getOutputStrength, :, ~, calculateOutputSignal
+		p	1	p_149970_1_	world	#~, ~, ~, world
+		p	2	p_149970_2_	x	#~, ~, ~, x
+		p	3	p_149970_3_	y	#~, ~, ~, y
+		p	4	p_149970_4_	z	#~, ~, ~, z
+		p	5	p_149970_5_	metadata	#~, ~, ~, metadata
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45399_1_	powered	#powered, :, ~, ~

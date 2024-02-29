@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/NoiseGenerator	net/minecraft/world/gen/NoiseGenerator	
+	m	()V	<init>	<init>	#~, ~, ~, ~

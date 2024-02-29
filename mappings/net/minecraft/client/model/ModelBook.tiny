@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelBook	net/minecraft/client/model/ModelBook	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78102_a	coverRight	#coverRight, :, leftCover, :
+		c	Right cover renderer (when facing the book)
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78100_b	coverLeft	#coverLeft, :, rightCover, :
+		c	Left cover renderer (when facing the book)
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78101_c	pagesRight	#pagesRight, :, leftBlock, leftPage
+		c	The right pages renderer (when facing the book)
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78098_d	pagesLeft	#pagesLeft, :, rightBlock, rightPage
+		c	The left pages renderer (when facing the book)
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78099_e	flippingPageRight	#flippingPageRight, :, leftPage, leftFlippîngPage
+		c	Right cover renderer (when facing the book)
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78096_f	flippingPageLeft	#flippingPageLeft, :, rightPage, rightFlippingPage
+		c	Right cover renderer (when facing the book)
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78097_g	bookSpine	#bookSpine, :, spine, :
+		c	The renderer of spine of the book
+	m	()V	<init>	<init>	#~, ~, ~, ~

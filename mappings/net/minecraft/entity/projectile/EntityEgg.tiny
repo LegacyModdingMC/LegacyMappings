@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityEgg	net/minecraft/entity/projectile/EntityEgg	
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1779_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1781_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1781_2_	x	#x, :, ~, x
+		p	4	p_i1781_4_	y	#y, :, ~, y
+		p	6	p_i1781_6_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1780_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1780_2_	throwerIn	#throwerIn, :, ~, owner

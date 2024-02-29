@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkSystem	net/minecraft/network/NetworkSystem	
+	f	Z	field_151277_a	isAlive	#isAlive, :, active, open
+		c	True if this NetworkSystem has never had his endpoints terminated
+	f	Lorg/apache/logging/log4j/Logger;	field_151275_b	logger	#logger, LOGGER, :, :
+	f	Lio/netty/channel/nio/NioEventLoopGroup;	field_151276_c	eventLoops	#eventLoops, SERVER_NIO_EVENTLOOP, ~, NETWORK_GROUP
+	f	Lnet/minecraft/server/MinecraftServer;	field_151273_d	mcServer	#mcServer, server, :, :
+		c	Reference to the MinecraftServer object.
+	f	Ljava/util/List;	field_151274_e	endpoints	#endpoints, :, channels, :
+		c	Contains all endpoints added to this NetworkSystem
+	f	Ljava/util/List;	field_151272_f	networkManagers	#networkManagers, :, connections, :
+		c	A list containing all NetworkManager instances of all endpoints
+	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45292_1_	server	#server, :, :, :
+	m	()Ljava/net/SocketAddress;	func_151270_a	addLocalEndpoint	#addLocalEndpoint, :, bindLocal, :
+		c	Adds a channel that listens locally
+	m	(Ljava/net/InetAddress;I)V	func_151265_a	addLanEndpoint	#addLanEndpoint, addEndpoint, bind, :
+		c	Adds a channel that listens on publicly accessible network ports
+		p	1	p_151265_1_	address	#address, :, :, :
+		p	2	p_151265_2_	port	#port, :, :, :
+	m	(Lnet/minecraft/network/NetworkSystem;)Ljava/util/List;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	()V	func_151268_b	terminateEndpoints	#terminateEndpoints, :, stop, close
+		c	Shuts down all open endpoints (with immediate effect?)
+	m	(Lnet/minecraft/network/NetworkSystem;)Lnet/minecraft/server/MinecraftServer;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	()V	func_151269_c	networkTick	#networkTick, :, tick, :
+		c	Will try to process the packets received by each NetworkManager, gracefully manage processing failures and cleans up dead connections
+	m	()Lnet/minecraft/server/MinecraftServer;	func_151267_d	getServer	#getServer, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

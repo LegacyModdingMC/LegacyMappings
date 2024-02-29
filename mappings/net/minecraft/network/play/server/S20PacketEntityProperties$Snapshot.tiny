@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S20PacketEntityProperties$Snapshot	net/minecraft/network/play/server/S20PacketEntityProperties$Snapshot	
+	f	Lnet/minecraft/network/play/server/S20PacketEntityProperties;	field_151414_a	parentPacket	#~, ~, ~, parentPacket
+	f	Ljava/lang/String;	field_151412_b	name	#name, :, ~, id
+	f	D	field_151413_c	baseValue	#baseValue, :, ~, baseValue
+	f	Ljava/util/Collection;	field_151411_d	modifiers	#modifiers, :, ~, modifiers
+	m	()Ljava/lang/String;	func_151409_a	getName	#getName, :, ~, getId
+	m	()D	func_151410_b	getBaseValue	#getBaseValue, :, ~, getBaseValue
+	m	()Ljava/util/Collection;	func_151408_c	getModifiers	#getModifiers, :, ~, getModifiers
+	m	(Lnet/minecraft/network/play/server/S20PacketEntityProperties;Ljava/lang/String;DLjava/util/Collection;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i45235_2_	id	#~, ~, ~, id
+		p	3	p_i45235_3_	baseValue	#~, ~, ~, baseValue
+		p	5	p_i45235_5_	modifiers	#~, ~, ~, modifiers
+		p	1	p_i45235_1_	p_i45235_1_	#~, ~, ~, ~

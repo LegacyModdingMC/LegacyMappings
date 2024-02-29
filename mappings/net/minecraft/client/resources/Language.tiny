@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/Language	net/minecraft/client/resources/Language	
+	f	Ljava/lang/String;	field_135039_a	languageCode	#languageCode, :, code, :
+	f	Ljava/lang/String;	field_135037_b	region	#region, :, name, :
+	f	Ljava/lang/String;	field_135038_c	name	#name, :, region, :
+	f	Z	field_135036_d	bidirectional	#bidirectional, :, rightToLeft, bidirectional
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1303_1_	languageCodeIn	#languageCodeIn, :, code, :
+		p	2	p_i1303_2_	regionIn	#regionIn, :, name, :
+		p	3	p_i1303_3_	nameIn	#nameIn, :, region, :
+		p	4	p_i1303_4_	bidirectionalIn	#bidirectionalIn, :, rightToLeft, bidirectional
+	m	()Ljava/lang/String;	func_135034_a	getLanguageCode	#getLanguageCode, :, getCode, :
+	m	(Lnet/minecraft/client/resources/Language;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	()Z	func_135035_b	isBidirectional	#isBidirectional, :, isRightToLeft, isBidirectional
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	language	#~, ~, other, language
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, object, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

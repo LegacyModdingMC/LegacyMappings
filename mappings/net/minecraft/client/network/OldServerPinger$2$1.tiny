@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/OldServerPinger$2$1	net/minecraft/client/network/OldServerPinger$2$1	
+	f	Lnet/minecraft/client/network/OldServerPinger$2;	field_147220_a	channelInitializer	#~, ~, ~, channelInitializer
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;)V	channelRead0	channelRead0	#~, ~, channelRead0, :
+		p	1	p_channelRead0_1_	p_channelRead0_1_	#~, ~, ~, ~
+		p	2	p_channelRead0_2_	p_channelRead0_2_	#~, ~, ~, ~
+	m	(Lio/netty/channel/ChannelHandlerContext;)V	channelActive	channelActive	#~, ~, ~, ~
+		p	1	p_channelActive_1_	channelHandlerContext	#~, ~, ~, channelHandlerContext
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V	channelRead0	channelRead0	#~, ~, ~, ~
+		p	1	p_channelRead0_1_	channelHandlerContext	#~, ~, ~, channelHandlerContext
+		p	2	p_channelRead0_2_	buf	#~, ~, ~, buf
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V	exceptionCaught	exceptionCaught	#~, ~, ~, ~
+		p	1	p_exceptionCaught_1_	channelHandlerContext	#~, ~, ~, channelHandlerContext
+		p	2	p_exceptionCaught_2_	exeception	#~, ~, ~, exeception
+	m	(Lnet/minecraft/client/network/OldServerPinger$2;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45066_1_	p_i45066_1_	#~, ~, ~, ~

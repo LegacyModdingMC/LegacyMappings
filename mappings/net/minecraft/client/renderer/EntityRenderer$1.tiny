@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/EntityRenderer$1	net/minecraft/client/renderer/EntityRenderer$1	
+	f	Lnet/minecraft/client/renderer/EntityRenderer;	field_90032_a	entityRender	#entityRender, :, gameRenderer, :
+	m	(Lnet/minecraft/client/renderer/EntityRenderer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1243_1_	gameRenderer	#~, ~, gameRenderer, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

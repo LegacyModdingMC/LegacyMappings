@@ -1,0 +1,68 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/WorldChunkManager	net/minecraft/world/biome/WorldChunkManager	
+	f	Lnet/minecraft/world/gen/layer/GenLayer;	field_76944_d	genBiomes	#genBiomes, :, layer, biomes
+	f	Lnet/minecraft/world/gen/layer/GenLayer;	field_76945_e	biomeIndexLayer	#biomeIndexLayer, :, ~, biomesIndex
+		c	A GenLayer containing the indices into BiomeGenBase.biomeList[]
+	f	Lnet/minecraft/world/biome/BiomeCache;	field_76942_f	biomeCache	#biomeCache, :, ~, cache
+		c	The BiomeCache object for this world.
+	f	Ljava/util/List;	field_76943_g	biomesToSpawnIn	#biomesToSpawnIn, :, biomes, biomesForSpawnPoint
+		c	A list of biomes that the player can spawn in.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1976_1_	worldIn	#worldIn, :, world, :
+	m	()Ljava/util/List;	func_76932_a	getBiomesToSpawnIn	#getBiomesToSpawnIn, :, getBiomes, getBiomesForSpawnPoint
+		c	Gets the list of valid biomes for the player to spawn in.
+	m	(FI)F	func_76939_a	getTemperatureAtHeight	#getTemperatureAtHeight, :, ~, getTemperature
+		c	Return an adjusted version of a given temperature based on the y height
+		p	1	p_76939_1_	temperature	#~, ~, ~, temperature
+		p	2	p_76939_2_	precipitationHeight	#~, ~, ~, precipitationHeight
+	m	(II)Lnet/minecraft/world/biome/BiomeGenBase;	func_76935_a	getBiomeGenAt	#getBiomeGenAt, :, ~, getBiome
+		c	Returns the BiomeGenBase related to the x, z position on the world.
+		p	1	p_76935_1_	x	#~, ~, ~, x
+		p	2	p_76935_2_	z	#~, ~, ~, z
+	m	(IIILjava/util/List;)Z	func_76940_a	areBiomesViable	#areBiomesViable, :, isValid, areBiomesValid
+		c	checks given Chunk's Biomes against List of allowed ones
+		p	1	p_76940_1_	x	#x, :, :, :
+		p	2	p_76940_2_	z	#z, :, :, :
+		p	3	p_76940_3_	radius	#radius, :, :, range
+		p	4	p_76940_4_	allowed	#allowed, :, biomes, :
+	m	(IIILjava/util/List;Ljava/util/Random;)Lnet/minecraft/world/ChunkPosition;	func_150795_a	findBiomePosition	#findBiomePosition, :, ~, getBiomePos
+		p	1	p_150795_1_	x	#~, ~, ~, x
+		p	2	p_150795_2_	y	#~, ~, ~, y
+		p	3	p_150795_3_	z	#~, ~, ~, z
+		p	4	p_150795_4_	biomes	#~, ~, ~, biomes
+		p	5	p_150795_5_	random	#~, ~, ~, random
+	m	([FIIII)[F	func_76936_a	getRainfall	#getRainfall, :, ~, getDownfall
+		c	Returns a list of rainfall values for the specified blocks. Args: listToReuse, x, z, width, length.
+		p	2	p_76936_2_	x	#x, :, :, :
+		p	3	p_76936_3_	z	#z, :, :, :
+		p	4	p_76936_4_	width	#width, :, w, width
+		p	5	p_76936_5_	length	#length, :, h, length
+		p	1	p_76936_1_	listToReuse	#listToReuse, :, ~, downfall
+	m	([Lnet/minecraft/world/biome/BiomeGenBase;IIII)[Lnet/minecraft/world/biome/BiomeGenBase;	func_76937_a	getBiomesForGeneration	#getBiomesForGeneration, :, ~, getBiomesForGeneration
+		c	Returns an array of biomes for the location input.
+		p	1	p_76937_1_	biomes	#biomes, :, ~, biomes
+		p	2	p_76937_2_	x	#x, :, ~, x
+		p	3	p_76937_3_	z	#z, :, ~, z
+		p	4	p_76937_4_	width	#width, :, ~, width
+		p	5	p_76937_5_	height	#height, :, ~, length
+	m	([Lnet/minecraft/world/biome/BiomeGenBase;IIIIZ)[Lnet/minecraft/world/biome/BiomeGenBase;	func_76931_a	getBiomeGenAt	#getBiomeGenAt, getBiomes, ~, getBiomes
+		c	Return a list of biomes for the specified blocks. Args: listToReuse, x, y, width, length, cacheFlag (if false, don't check biomeCache to avoid infinite loop in BiomeCacheBlock)
+		p	1	p_76931_1_	listToReuse	#listToReuse, :, ~, biomes
+		p	2	p_76931_2_	x	#x, :, ~, x
+		p	3	p_76931_3_	z	#z, :, ~, z
+		p	4	p_76931_4_	width	#width, :, ~, width
+		p	5	p_76931_5_	length	#length, :, ~, length
+		p	6	p_76931_6_	cacheFlag	#cacheFlag, :, ~, isCached
+	m	()V	func_76938_b	cleanupCache	#cleanupCache, :, ~, tick
+		c	Calls the WorldChunkManager's biomeCache.cleanupCache()
+	m	([Lnet/minecraft/world/biome/BiomeGenBase;IIII)[Lnet/minecraft/world/biome/BiomeGenBase;	func_76933_b	loadBlockGeneratorData	#loadBlockGeneratorData, getBiomes, ~, getBiomes
+		c	Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the WorldChunkManager Args: oldBiomeList, x, z, width, depth
+		p	1	p_76933_1_	oldBiomeList	#oldBiomeList, :, ~, biomes
+		p	2	p_76933_2_	x	#x, :, ~, x
+		p	3	p_76933_3_	z	#z, :, ~, z
+		p	4	p_76933_4_	width	#width, :, ~, width
+		p	5	p_76933_5_	depth	#depth, :, ~, length
+	m	(JLnet/minecraft/world/WorldType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1975_1_	seed	#~, ~, ~, seed
+		p	3	p_i1975_3_	generatorType	#~, ~, ~, generatorType
+	m	()V	<init>	<init>	#~, ~, ~, ~

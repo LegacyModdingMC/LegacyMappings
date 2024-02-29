@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/JsonToNBT	net/minecraft/nbt/JsonToNBT	
+	f	Lorg/apache/logging/log4j/Logger;	field_150317_a	logger	#logger, LOGGER, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/nbt/NBTBase;	func_150315_a	parse	#~, ~, ~, parse
+		p	0	p_150315_0_	rawNbt	#~, ~, ~, rawNbt
+	m	(Ljava/lang/String;C)I	func_150312_a	getNextCharIndex	#getNextCharIndex, :, indexOf, findSeparator
+		c	Find a character that separates nbt elements. This is either the character that\nseparates key/value pairs or the character that separates elements in a list.\n\n@return the index of the character
+		p	0	p_150312_0_	str	#str, :, string, rawNbt
+		p	1	p_150312_1_	targetChar	#targetChar, :, c, chr
+	m	(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/nbt/JsonToNBT$Any;	func_150316_a	nameValueToNBT	#nameValueToNBT, :, ~, parseNbtEntry
+		p	0	p_150316_0_	key	#key, :, ~, key
+		p	1	p_150316_1_	value	#value, :, ~, rawElement
+	m	(Ljava/lang/String;Z)Ljava/lang/String;	func_150314_a	nextNameValuePair	#nextNameValuePair, :, getFirstElement, getNextEntry
+		p	0	p_150314_0_	str	#str, :, stringNbt, rawNbt
+		p	1	p_150314_1_	isCompound	#isCompound, :, hasKey, expectSeparator
+	m	(Ljava/lang/String;)I	func_150310_b	topTagsCount	#topTagsCount, :, getTopElementCount, :
+		p	0	p_150310_0_	str	#str, :, string, rawNbt
+	m	(Ljava/lang/String;Z)Ljava/lang/String;	func_150313_b	locateName	#locateName, :, getKey, :
+		p	0	p_150313_0_	str	#str, :, stringNbt, rawEntry
+		p	1	p_150313_1_	isArray	#isArray, :, missingKey, allowNoSeparator
+	m	(Ljava/lang/String;Z)Ljava/lang/String;	func_150311_c	locateValue	#locateValue, :, getValue, :
+		p	0	p_150311_0_	str	#str, :, stringNbt, rawEntry
+		p	1	p_150311_1_	isArray	#isArray, :, missingKey, allowNoSeparator
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

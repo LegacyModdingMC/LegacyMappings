@@ -1,0 +1,179 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/FontRenderer	net/minecraft/client/gui/FontRenderer	
+	f	I	field_78288_b	FONT_HEIGHT	#FONT_HEIGHT, :, fontHeight, :
+		c	the height in pixels of default text
+	f	Ljava/util/Random;	field_78289_c	fontRandom	#fontRandom, :, random, :
+	f	[Lnet/minecraft/util/ResourceLocation;	field_111274_c	unicodePageLocations	#unicodePageLocations, UNICODE_PAGE_LOCATIONS, PAGES, UNICODE_PAGE_LOCATIONS
+	f	[I	field_78286_d	charWidth	#charWidth, :, characterWidths, :
+		c	Array of width of all the characters in default.png
+	f	[B	field_78287_e	glyphWidth	#glyphWidth, :, glyphWidths, glyphSizes
+		c	Array of the start/end column (in upper/lower nibble) for every glyph in the /font directory.
+	f	[I	field_78285_g	colorCode	#colorCode, :, colorCodes, colors
+		c	Array of RGB triplets defining the 16 standard chat colors followed by 16 darker version of the same colors for drop shadows.
+	f	Lnet/minecraft/util/ResourceLocation;	field_111273_g	locationFontTexture	#locationFontTexture, :, fontTexture, fontLocation
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_78298_i	renderEngine	#renderEngine, :, textureManager, :
+		c	The RenderEngine used to load and setup glyph textures.
+	f	F	field_78295_j	posX	#posX, :, x, :
+		c	Current X coordinate at which to draw the next character.
+	f	F	field_78296_k	posY	#posY, :, y, :
+		c	Current Y coordinate at which to draw the next character.
+	f	Z	field_78293_l	unicodeFlag	#unicodeFlag, :, unicode, :
+		c	If true, strings should be rendered with Unicode fonts instead of the default.png font
+	f	Z	field_78294_m	bidiFlag	#bidiFlag, :, rightToLeft, bidirectional
+		c	If true, the Unicode Bidirectional Algorithm should be run before rendering any string.
+	f	F	field_78291_n	red	#red, :, :, r
+		c	Used to specify new red value for the current color.
+	f	F	field_78292_o	blue	#blue, :, green, g
+		c	Used to specify new blue value for the current color.
+	f	F	field_78306_p	green	#green, :, blue, b
+		c	Used to specify new green value for the current color.
+	f	F	field_78305_q	alpha	#alpha, :, :, a
+		c	Used to speify new alpha value for the current color.
+	f	I	field_78304_r	textColor	#textColor, :, color, :
+		c	Text color of the currently rendering string.
+	f	Z	field_78303_s	randomStyle	#randomStyle, :, obfuscated, :
+		c	Set if the "k" style (random) is active in currently rendering string
+	f	Z	field_78302_t	boldStyle	#boldStyle, :, bold, :
+		c	Set if the "l" style (bold) is active in currently rendering string
+	f	Z	field_78301_u	italicStyle	#italicStyle, :, italic, :
+		c	Set if the "o" style (italic) is active in currently rendering string
+	f	Z	field_78300_v	underlineStyle	#underlineStyle, :, underline, underlined
+		c	Set if the "n" style (underlined) is active in currently rendering string
+	f	Z	field_78299_w	strikethroughStyle	#strikethroughStyle, :, strikethrough, :
+		c	Set if the "m" style (strikethrough) is active in currently rendering string
+	m	(Lnet/minecraft/client/settings/GameSettings;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/TextureManager;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1035_1_	gameSettingsIn	#gameSettingsIn, :, options, :
+		p	2	p_i1035_2_	location	#location, :, fontTexture, fontLocation
+		p	3	p_i1035_3_	textureManagerIn	#textureManagerIn, :, textureManager, :
+		p	4	p_i1035_4_	unicode	#unicode, :, :, :
+	m	()Z	func_82883_a	getUnicodeFlag	#getUnicodeFlag, :, isUnicode, getUnicode
+		c	Get unicodeFlag controlling whether strings should be rendered with Unicode fonts instead of the default.png font.
+	m	(C)I	func_78263_a	getCharWidth	#getCharWidth, :, :, getWidth
+		c	Returns the width of this character as rendered.
+		p	1	p_78263_1_	character	#character, :, :, chr
+	m	(CZ)F	func_78277_a	renderUnicodeChar	#renderUnicodeChar, :, drawLayerUnicode, drawUnicodeGlyph
+		c	Render a single Unicode character at current (posX,posY) location using one of the /font/glyph_XX.png files...
+		p	1	p_78277_1_	ch	#ch, :, character, chr
+		p	2	p_78277_2_	italic	#italic, :, :, :
+	m	(I)Lnet/minecraft/util/ResourceLocation;	func_111271_a	getUnicodePageLocation	#getUnicodePageLocation, :, getFontPage, :
+		p	1	p_111271_1_	page	#page, :, :, :
+	m	(ICZ)F	func_78278_a	renderCharAtPos	#renderCharAtPos, :, ~, drawGlyph
+		c	Pick how to render a single character and return the width used.
+		p	1	p_78278_1_	index	#~, ~, ~, index
+		p	2	p_78278_2_	chr	#~, ~, ~, chr
+		p	3	p_78278_3_	italic	#~, ~, ~, italic
+	m	(IZ)F	func_78266_a	renderDefaultChar	#renderDefaultChar, :, drawLayerNormal, drawBasicGlyph
+		c	Render a single character with the default.png font at current (posX,posY) location...
+		p	1	p_78266_1_	ch	#ch, :, characterIndex, index
+		p	2	p_78266_2_	italic	#italic, :, :, :
+	m	(Ljava/lang/String;)I	func_78256_a	getStringWidth	#getStringWidth, :, :, getWidth
+		c	Returns the width of this string. Equivalent of FontMetrics.stringWidth(String s).
+		p	1	p_78256_1_	text	#text, :, :, :
+	m	(Ljava/lang/String;I)Ljava/lang/String;	func_78269_a	trimStringToWidth	#trimStringToWidth, :, trimToWidth, trim
+		c	Trims a string to fit a specified Width.
+		p	1	p_78269_1_	text	#text, :, :, :
+		p	2	p_78269_2_	width	#width, :, :, :
+	m	(Ljava/lang/String;III)I	func_78261_a	drawStringWithShadow	#drawStringWithShadow, :, ~, drawWithShadow
+		c	Draws the specified string with a shadow.
+		p	1	p_78261_1_	text	#text, :, :, :
+		p	2	p_78261_2_	x	#x, :, :, :
+		p	3	p_78261_3_	y	#y, :, :, :
+		p	4	p_78261_4_	color	#color, :, :, :
+	m	(Ljava/lang/String;IIII)V	func_78279_b	drawSplitString	#drawSplitString, :, drawTrimmed, drawSplit
+		c	Splits and draws a String with wordwrap (maximum length is parameter k)
+		p	1	p_78279_1_	str	#str, :, text, :
+		p	2	p_78279_2_	x	#x, :, :, :
+		p	3	p_78279_3_	y	#y, :, :, :
+		p	4	p_78279_4_	wrapWidth	#wrapWidth, :, maxWidth, width
+		p	5	p_78279_5_	textColor	#textColor, :, color, :
+	m	(Ljava/lang/String;IIIIZ)I	func_78274_b	renderStringAligned	#renderStringAligned, :, drawLayer, drawSplitLayer
+		c	Render string either left or right aligned depending on bidiFlag
+		p	1	p_78274_1_	text	#text, :, :, line
+		p	2	p_78274_2_	x	#x, :, :, :
+		p	3	p_78274_3_	y	#y, :, :, :
+		p	4	p_78274_4_	width	#width, :, :, :
+		p	5	p_78274_5_	color	#color, :, :, :
+		p	6	p_78274_6_	dropShadow	#dropShadow, :, shadow, colored
+	m	(Ljava/lang/String;IIIZ)I	func_85187_a	drawString	#drawString, :, draw, :
+		c	Draws the specified string. Args: string, x, y, color, dropShadow
+		p	1	p_85187_1_	text	#text, :, :, :
+		p	2	p_85187_2_	x	#x, :, :, :
+		p	3	p_85187_3_	y	#y, :, :, :
+		p	4	p_85187_4_	color	#color, :, :, :
+		p	5	p_85187_5_	dropShadow	#dropShadow, :, ~, shadow
+	m	(Ljava/lang/String;IZ)Ljava/lang/String;	func_78262_a	trimStringToWidth	#trimStringToWidth, :, trimToWidth, trim
+		c	Trims a string to a specified width, and will reverse it if par3 is set.
+		p	1	p_78262_1_	text	#text, :, :, :
+		p	2	p_78262_2_	width	#width, :, :, :
+		p	3	p_78262_3_	reverse	#reverse, :, backwards, inverse
+	m	(Ljava/lang/String;Z)V	func_78255_a	renderStringAtPos	#renderStringAtPos, :, draw, drawLayer
+		c	Render a single line string at the current (posX,posY) and update posX
+		p	1	p_78255_1_	text	#text, :, :, :
+		p	2	p_78255_2_	shadow	#shadow, :, :, :
+	m	(Z)V	func_78264_a	setUnicodeFlag	#setUnicodeFlag, :, setUnicode, :
+		c	Set unicodeFlag controlling whether strings should be rendered with Unicode fonts instead of the default.png font.
+		p	1	p_78264_1_	unicodeFlagIn	#unicodeFlagIn, :, unicode, :
+	m	()Z	func_78260_a	getBidiFlag	#getBidiFlag, :, isRightToLeft, isBidirectional
+		c	Get bidiFlag that controls if the Unicode Bidirectional Algorithm should be run before rendering any string
+	m	(C)Z	func_78272_b	isFormatColor	#isFormatColor, :, isColor, :
+		c	Checks if the char code is a hexadecimal character, used to set colour.
+		p	0	p_78272_0_	colorChar	#colorChar, :, character, chr
+	m	(I)V	func_78257_a	loadGlyphTexture	#loadGlyphTexture, :, bindPageTexture, bindFontPageTexture
+		c	Load one of the /font/glyph_XX.png into a new GL texture and store the texture ID in glyphTextureName array.
+		p	1	p_78257_1_	page	#page, :, index, page
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_147647_b	bidiReorder	#bidiReorder, :, mirror, bidirectionalShaping
+		c	Apply Unicode Bidirectional Algorithm to string and return a new possibly reordered string for visual rendering.
+		p	1	p_147647_1_	text	#text, :, :, :
+	m	(Ljava/lang/String;I)I	func_78267_b	splitStringWidth	#splitStringWidth, getWordWrappedHeight, getHeightSplit, splitAndGetHeight
+		c	Returns the width of the wordwrapped String (maximum length is parameter k)
+		p	1	p_78267_1_	str	#str, :, text, :
+		p	2	p_78267_2_	maxLength	#maxLength, :, width, :
+	m	(Ljava/lang/String;III)I	func_78276_b	drawString	#drawString, :, draw, :
+		c	Draws the specified string.
+		p	1	p_78276_1_	text	#text, :, :, :
+		p	2	p_78276_2_	x	#x, :, :, :
+		p	3	p_78276_3_	y	#y, :, :, :
+		p	4	p_78276_4_	color	#color, :, :, :
+	m	(Ljava/lang/String;IIIZ)I	func_78258_a	renderString	#renderString, :, ~, drawLayer
+		c	Render single line string by setting GL color, current (posX,posY), and calling renderStringAtPos()
+		p	1	p_78258_1_	text	#~, ~, ~, text
+		p	2	p_78258_2_	x	#~, ~, ~, x
+		p	3	p_78258_3_	y	#~, ~, ~, y
+		p	4	p_78258_4_	color	#~, ~, ~, color
+		p	5	p_78258_5_	colored	#~, ~, ~, colored
+	m	(Z)V	func_78275_b	setBidiFlag	#setBidiFlag, :, setRightToLeft, :
+		c	Set bidiFlag to control if the Unicode Bidirectional Algorithm should be run before rendering any string.
+		p	1	p_78275_1_	bidiFlagIn	#bidiFlagIn, :, rightToLeft, :
+	m	()V	func_111272_d	readFontTexture	#readFontTexture, :, init, :
+	m	(C)Z	func_78270_c	isFormatSpecial	#isFormatSpecial, :, isSpecial, isFormatting
+		c	Checks if the char code is O-K...lLrRk-o... used to set special formatting.
+		p	0	p_78270_0_	formatChar	#formatChar, :, character, chr
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_78273_d	trimStringNewline	#trimStringNewline, :, trimEndNewlines, trimLineBreaks
+		c	Remove all newline characters from the end of the string
+		p	1	p_78273_1_	text	#text, :, :, :
+	m	(Ljava/lang/String;I)Ljava/util/List;	func_78271_c	listFormattedStringToWidth	#listFormattedStringToWidth, :, wrapLines, split
+		c	Breaks a string into a list of pieces that will fit a specified width.
+		p	1	p_78271_1_	str	#str, :, text, :
+		p	2	p_78271_2_	wrapWidth	#wrapWidth, :, width, :
+	m	(Ljava/lang/String;IIIZ)V	func_78268_b	renderSplitString	#renderSplitString, :, drawTrimmed, splitAndDraw
+		c	Perform actual work of rendering a multi-line string with wordwrap and with darker drop shadow color if flag is set
+		p	1	p_78268_1_	str	#str, :, text, :
+		p	2	p_78268_2_	x	#x, :, :, :
+		p	3	p_78268_3_	y	#y, :, :, :
+		p	4	p_78268_4_	wrapWidth	#wrapWidth, :, maxWidth, width
+		p	5	p_78268_5_	addShadow	#addShadow, :, shadow, colored
+	m	()V	func_98306_d	readGlyphSizes	#readGlyphSizes, :, :, initGlyphSizes
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_78282_e	getFormatFromString	#getFormatFromString, :, getFormattingOnly, isolateFormatting
+		c	Digests a string for nonprinting formatting characters then returns a string containing only that formatting.
+		p	0	p_78282_0_	text	#text, :, :, :
+	m	(Ljava/lang/String;I)Ljava/lang/String;	func_78280_d	wrapFormattedStringToWidth	#wrapFormattedStringToWidth, :, wrapStringToWidth, insertLineBreaks
+		c	Inserts newline and formatting into a string to wrap it within the specified width.
+		p	1	p_78280_1_	str	#str, :, text, :
+		p	2	p_78280_2_	wrapWidth	#wrapWidth, :, width, :
+	m	()V	func_78265_b	resetStyles	#resetStyles, :, resetState, reset
+		c	Reset all style flag fields in the class to false; called at the start of string rendering
+	m	(Ljava/lang/String;I)I	func_78259_e	sizeStringToWidth	#sizeStringToWidth, :, getCharacterCountForWidth, indexAtWidth
+		c	Determines how many characters from the string will fit into the specified width.
+		p	1	p_78259_1_	str	#str, :, text, :
+		p	2	p_78259_2_	wrapWidth	#wrapWidth, :, offset, width
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

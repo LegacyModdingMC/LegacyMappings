@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIMoveThroughVillage	net/minecraft/entity/ai/EntityAIMoveThroughVillage	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75420_a	theEntity	#theEntity, entity, mob, entity
+	f	D	field_75418_b	movementSpeed	#movementSpeed, :, speed, :
+	f	Lnet/minecraft/pathfinding/PathEntity;	field_75419_c	entityPathNavigate	#entityPathNavigate, path, :, :
+		c	The PathNavigate of our entity.
+	f	Lnet/minecraft/village/VillageDoorInfo;	field_75416_d	doorInfo	#doorInfo, :, target, villageDoor
+	f	Z	field_75417_e	isNocturnal	#isNocturnal, :, requiresNighttime, friendly
+		c	friendly is true for iron golems and false for zombies.
+	f	Ljava/util/List;	field_75415_f	doorList	#doorList, :, visitedTargets, doors
+	m	(Lnet/minecraft/entity/EntityCreature;DZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1638_1_	theEntityIn	#theEntityIn, entityIn, mob, entity
+		p	2	p_i1638_2_	movementSpeedIn	#movementSpeedIn, :, speed, :
+		p	4	p_i1638_4_	isNocturnalIn	#isNocturnalIn, :, requiresNighttime, friendly
+	m	(Lnet/minecraft/village/VillageDoorInfo;)Z	func_75413_a	doesDoorListContain	#doesDoorListContain, :, ~, isDoorInRange
+		p	1	p_75413_1_	doorInfoIn	#doorInfoIn, :, ~, door
+	m	(Lnet/minecraft/village/Village;)Lnet/minecraft/village/VillageDoorInfo;	func_75412_a	findNearestDoor	#findNearestDoor, :, ~, findDoor
+		p	1	p_75412_1_	villageIn	#villageIn, :, village, :
+	m	()V	func_75414_f	resizeDoorList	#resizeDoorList, :, forgetOldTarget, clampDoorsListSize
+		c	If the size of the door list gets too big the first entry will get removed to keep the size equal to 15.

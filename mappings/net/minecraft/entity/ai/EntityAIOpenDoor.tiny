@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIOpenDoor	net/minecraft/entity/ai/EntityAIOpenDoor	
+	f	Z	field_75361_i	closeDoor	#closeDoor, :, delayedClose, shouldCloseDoor
+		c	If the entity close the door
+	f	I	field_75360_j	closeDoorTemporisation	#closeDoorTemporisation, :, ticksLeft, :
+		c	The temporisation before the entity close the door (in ticks, always 20 = 1 second)
+	m	(Lnet/minecraft/entity/EntityLiving;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1644_1_	entitylivingIn	#entitylivingIn, :, mob, :
+		p	2	p_i1644_2_	shouldClose	#shouldClose, :, delayedClose, shouldCloseDoor

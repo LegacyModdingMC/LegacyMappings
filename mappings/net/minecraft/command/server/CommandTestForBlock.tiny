@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandTestForBlock	net/minecraft/command/server/CommandTestForBlock	
+	m	(Lnet/minecraft/nbt/NBTBase;Lnet/minecraft/nbt/NBTBase;)Z	func_147181_a	matchesNbt	#~, ~, ~, matchesNbt
+		p	1	p_147181_1_	target	#~, ~, ~, target
+		p	2	p_147181_2_	nbt	#~, ~, ~, nbt
+	m	()V	<init>	<init>	#~, ~, ~, ~

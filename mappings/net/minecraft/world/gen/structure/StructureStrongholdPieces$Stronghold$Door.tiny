@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door	net/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door	
+	f	Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	OPENING	OPENING	#~, ~, OPENING, :
+	f	Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	WOOD_DOOR	WOOD_DOOR	#~, ~, WOOD_DOOR, :
+	f	Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	GRATES	GRATES	#~, ~, GRATES, GATES
+	f	Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	IRON_DOOR	IRON_DOOR	#~, ~, IRON_DOOR, :
+	f	[Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2086_1_	p_i2086_1_	#~, ~, ~, ~
+		p	2	p_i2086_2_	p_i2086_2_	#~, ~, ~, ~

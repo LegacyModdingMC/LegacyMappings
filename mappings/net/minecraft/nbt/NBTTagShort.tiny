@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagShort	net/minecraft/nbt/NBTTagShort	
+	f	S	field_74752_a	data	#data, :, value, :
+		c	The short value for the tag.
+	m	(S)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45135_1_	data	#data, :, value, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	o	#~, ~, o, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

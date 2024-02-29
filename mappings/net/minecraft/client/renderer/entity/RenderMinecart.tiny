@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderMinecart	net/minecraft/client/renderer/entity/RenderMinecart	
+	f	Lnet/minecraft/client/model/ModelBase;	field_77013_a	modelMinecart	#modelMinecart, :, ~, model
+		c	instance of ModelMinecart for rendering
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_94145_f	blockRenderer	#~, ~, ~, blockRenderer
+	f	Lnet/minecraft/util/ResourceLocation;	field_110804_g	minecartTextures	#minecartTextures, MINECART_TEXTURES, ~, MINECART_LOCATION
+	m	(Lnet/minecraft/entity/item/EntityMinecart;FLnet/minecraft/block/Block;I)V	func_147910_a	renderBlockInMinecart	#~, ~, ~, renderBlockInMinecart
+		p	1	p_147910_1_	minecart	#~, ~, ~, minecart
+		p	2	p_147910_2_	tickDelta	#~, ~, ~, tickDelta
+		p	3	p_147910_3_	block	#~, ~, ~, block
+		p	4	p_147910_4_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

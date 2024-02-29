@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/ChunkProviderServer	net/minecraft/world/gen/ChunkProviderServer	
+	f	Z	field_73250_a	loadChunkOnProvideRequest	#loadChunkOnProvideRequest, chunkLoadOverride, canGenerateChunks, forceLoad
+		c	if this is false, the defaultEmptyChunk will be returned by the provider
+	f	Lorg/apache/logging/log4j/Logger;	field_147417_b	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Set;	field_73248_b	chunksToUnload	#chunksToUnload, droppedChunks, chunksToUnload, :
+		c	used by unload100OldestChunks to iterate the loadedChunkHashMap for unload (underlying assumption, first in, first out)
+	f	Lnet/minecraft/world/chunk/Chunk;	field_73249_c	defaultEmptyChunk	#defaultEmptyChunk, dummyChunk, empty, :
+		c	a dummy chunk, returned in place of an actual chunk.
+	f	Lnet/minecraft/world/chunk/IChunkProvider;	field_73246_d	currentChunkProvider	#currentChunkProvider, serverChunkGenerator, chunkGenerator, generator
+		c	chunk generator object. Calls to load nonexistent chunks are forwarded to this object.
+	f	Lnet/minecraft/world/chunk/storage/IChunkLoader;	field_73247_e	currentChunkLoader	#currentChunkLoader, chunkLoader, chunkWriter, storage
+		c	Storage for all existing chunks.
+	f	Lnet/minecraft/util/LongHashMap;	field_73244_f	loadedChunkHashMap	#loadedChunkHashMap, loadedChunks, chunkMap, chunksByPos
+		c	map of chunk Id's to Chunk instances
+	f	Ljava/util/List;	field_73245_g	loadedChunks	#loadedChunks, :, chunks, :
+		c	All loaded chunks.
+	f	Lnet/minecraft/world/WorldServer;	field_73251_h	worldObj	#worldObj, world, :, :
+	m	(Lnet/minecraft/world/WorldServer;Lnet/minecraft/world/chunk/storage/IChunkLoader;Lnet/minecraft/world/chunk/IChunkProvider;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1520_1_	world	#~, ~, world, :
+		p	2	p_i1520_2_	storage	#~, ~, chunkWriter, storage
+		p	3	p_i1520_3_	generator	#~, ~, chunkProvider, generator
+	m	()Ljava/util/List;	func_152380_a	getChunks	#~, ~, getChunks, :
+	m	(Lnet/minecraft/world/chunk/Chunk;)V	func_73243_a	safeSaveExtraChunkData	#safeSaveExtraChunkData, saveChunkExtraData, saveEntities, :
+		c	used by saveChunks, but catches any exceptions if the save fails.
+		p	1	p_73243_1_	chunkIn	#chunkIn, :, chunk, :
+	m	()V	func_73240_a	unloadAllChunks	#unloadAllChunks, queueUnloadAll, unloadAll, unloadAllChunks
+		c	marks all chunks for unload, ignoring those near the spawn
+	m	(II)V	func_73241_b	unloadChunksIfNotNearSpawn	#unloadChunksIfNotNearSpawn, dropChunk, scheduleUnload, unloadChunk
+		c	marks chunk for unload by "unload100OldestChunks"  if there is no spawn point, or if the center of the chunk is outside 200 blocks (x or z) of the spawn
+		p	1	p_73241_1_	x	#x, :, y, chunkX
+		p	2	p_73241_2_	z	#z, :, :, chunkZ
+	m	(Lnet/minecraft/world/chunk/Chunk;)V	func_73242_b	safeSaveChunk	#safeSaveChunk, saveChunkData, saveChunk, :
+		c	used by saveChunks, but catches any exceptions if the save fails.
+		p	1	p_73242_1_	chunkIn	#chunkIn, :, chunk, :
+	m	(II)Lnet/minecraft/world/chunk/Chunk;	func_73239_e	safeLoadChunk	#safeLoadChunk, loadChunkFromFile, loadChunk, :
+		c	used by loadChunk, but catches any exceptions if the load fails.
+		p	1	p_73239_1_	x	#x, :, :, chunkX
+		p	2	p_73239_2_	z	#z, :, :, chunkZ
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

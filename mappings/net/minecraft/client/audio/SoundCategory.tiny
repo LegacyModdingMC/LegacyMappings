@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundCategory	net/minecraft/client/audio/SoundCategory	
+	f	Lnet/minecraft/client/audio/SoundCategory;	MASTER	MASTER	#~, ~, MASTER, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	MUSIC	MUSIC	#~, ~, MUSIC, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	RECORDS	RECORDS	#~, ~, RECORDS, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	WEATHER	WEATHER	#~, ~, WEATHER, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	BLOCKS	BLOCKS	#~, ~, BLOCKS, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	MOBS	MOBS	#~, ~, MOBS, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	ANIMALS	ANIMALS	#~, ~, ANIMALS, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	PLAYERS	PLAYERS	#~, ~, PLAYERS, :
+	f	Lnet/minecraft/client/audio/SoundCategory;	AMBIENT	AMBIENT	#~, ~, AMBIENT, :
+	f	Ljava/util/Map;	field_147168_j	NAME_CATEGORY_MAP	#NAME_CATEGORY_MAP, :, NAME_MAP, BY_NAME
+	f	Ljava/util/Map;	field_147169_k	ID_CATEGORY_MAP	#ID_CATEGORY_MAP, :, CATEGORY_MAP, BY_ID
+	f	Ljava/lang/String;	field_147166_l	categoryName	#categoryName, :, name, :
+	f	I	field_147167_m	categoryId	#categoryId, :, id, :
+	f	[Lnet/minecraft/client/audio/SoundCategory;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;ILjava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45126_3_	name	#name, :, :, :
+		p	4	p_i45126_4_	id	#id, :, :, :
+		p	1	p_i45126_1_	p_i45126_1_	#~, ~, ~, ~
+		p	2	p_i45126_2_	p_i45126_2_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	func_147155_a	getCategoryName	#getCategoryName, :, getName, :
+	m	(Ljava/lang/String;)Lnet/minecraft/client/audio/SoundCategory;	func_147154_a	getCategory	#getCategory, :, byName, :
+		p	0	p_147154_0_	name	#name, :, :, :
+	m	()I	func_147156_b	getCategoryId	#getCategoryId, :, getId, :
+	m	(Ljava/lang/String;)Lnet/minecraft/client/audio/SoundCategory;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/client/audio/SoundCategory;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiIngameMenu	net/minecraft/client/gui/GuiIngameMenu	
+	f	I	field_146445_a	saveStep	#saveStep, :, :, optionsButtonId
+	f	I	field_146444_f	visibleTime	#visibleTime, :, ticks, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

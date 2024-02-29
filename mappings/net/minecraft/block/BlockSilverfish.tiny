@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSilverfish	net/minecraft/block/BlockSilverfish	
+	f	[Ljava/lang/String;	field_150198_a	VARIANTS	#~, ~, ~, VARIANTS
+	m	(Lnet/minecraft/block/Block;)Z	func_150196_a	canBeInfested	#~, ~, ~, canBeInfested
+		p	0	p_150196_0_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/block/Block;I)I	func_150195_a	getVariant	#~, ~, ~, getVariant
+		p	0	p_150195_0_	block	#~, ~, ~, block
+		p	1	p_150195_1_	metadata	#~, ~, ~, metadata
+	m	(I)Lorg/apache/commons/lang3/tuple/ImmutablePair;	func_150197_b	getHostBlock	#~, ~, ~, getHostBlock
+		p	0	p_150197_0_	variant	#~, ~, ~, variant
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

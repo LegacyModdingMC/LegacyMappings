@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelWitch	net/minecraft/client/model/ModelWitch	
+	f	Z	field_82900_g	holdingItem	#holdingItem, :, ~, heldItemId
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82901_h	mole	#mole, :, ~, mole
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82902_i	witchHat	#witchHat, :, ~, hat
+	m	(F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1166_1_	p_i1166_1_	#~, ~, ~, ~

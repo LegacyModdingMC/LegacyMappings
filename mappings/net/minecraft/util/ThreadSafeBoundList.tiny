@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ThreadSafeBoundList	net/minecraft/util/ThreadSafeBoundList	
+	f	[Ljava/lang/Object;	field_152759_a	buffer	#~, ~, data, buffer
+	f	Ljava/lang/Class;	field_152760_b	type	#~, ~, clazz, type
+	f	Ljava/util/concurrent/locks/ReadWriteLock;	field_152761_c	lock	#~, ~, readWriteLock, lock
+	f	I	field_152762_d	size	#~, ~, lastReadIndex, size
+	f	I	field_152763_e	head	#~, ~, lastWrittenIndex, head
+	m	(Ljava/lang/Class;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1126_1_	type	#~, ~, clazz, type
+		p	2	p_i1126_2_	size	#~, ~, size, :
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	func_152757_a	add	#~, ~, add, :
+		p	1	p_152757_1_	value	#~, ~, item, value
+	m	()I	func_152758_b	capacity	#~, ~, size, capacity
+	m	()[Ljava/lang/Object;	func_152756_c	array	#~, ~, copyAndGetData, array

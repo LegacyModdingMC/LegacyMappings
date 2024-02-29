@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$16	net/minecraft/client/Minecraft$16	
+	f	Lnet/minecraft/client/Minecraft;	field_152128_a	field_152128_a	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1099_1_	mcIn	#mcIn, :, ~, ~

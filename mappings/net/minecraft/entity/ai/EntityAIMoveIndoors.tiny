@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIMoveIndoors	net/minecraft/entity/ai/EntityAIMoveIndoors	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75424_a	entityObj	#entityObj, entity, :, :
+	f	Lnet/minecraft/village/VillageDoorInfo;	field_75422_b	doorInfo	#doorInfo, :, door, :
+	f	I	field_75423_c	insidePosX	#insidePosX, :, x, :
+	f	I	field_75421_d	insidePosZ	#insidePosZ, :, y, :
+	m	(Lnet/minecraft/entity/EntityCreature;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1637_1_	entityObjIn	#entityObjIn, entityIn, entity, :

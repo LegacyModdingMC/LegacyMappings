@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S27PacketExplosion	net/minecraft/network/play/server/S27PacketExplosion	
+	f	D	field_149158_a	posX	#posX, :, x, :
+	f	D	field_149156_b	posY	#posY, :, y, :
+	f	D	field_149157_c	posZ	#posZ, :, z, :
+	f	F	field_149154_d	strength	#strength, :, radius, power
+	f	Ljava/util/List;	field_149155_e	affectedBlockPositions	#affectedBlockPositions, :, affectedBlocks, damagedBlocks
+	f	F	field_149152_f	motionX	#motionX, :, playerVelocityX, :
+	f	F	field_149153_g	motionY	#motionY, :, playerVelocityY, :
+	f	F	field_149159_h	motionZ	#motionZ, :, playerVelocityZ, :
+	m	(DDDFLjava/util/List;Lnet/minecraft/util/Vec3;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45193_1_	x	#~, ~, x, :
+		p	3	p_i45193_3_	y	#y, :, :, :
+		p	5	p_i45193_5_	z	#z, :, :, :
+		p	7	p_i45193_7_	strengthIn	#strengthIn, :, radius, power
+		p	8	p_i45193_8_	affectedBlocksIn	#affectedBlocksIn, :, affectedBlocks, damagedBlocks
+		p	9	p_i45193_9_	playerVelocity	#~, ~, velocity, playerVelocity
+	m	()F	func_149149_c	getMotionX	#getMotionX, :, getPlayerVelocityX, :
+	m	()F	func_149144_d	getMotionY	#getMotionY, :, getPlayerVelocityY, :
+	m	()F	func_149147_e	getMotionZ	#getMotionZ, :, getPlayerVelocityZ, :
+	m	()D	func_149148_f	getX	#getX, :, :, :
+	m	()D	func_149143_g	getY	#getY, :, :, :
+	m	()D	func_149145_h	getZ	#getZ, :, :, :
+	m	()F	func_149146_i	getStrength	#getStrength, :, getRadius, getPower
+	m	()Ljava/util/List;	func_149150_j	getAffectedBlockPositions	#getAffectedBlockPositions, :, getAffectedBlocks, getDamagedBlocks
+	m	()V	<init>	<init>	#~, ~, ~, ~

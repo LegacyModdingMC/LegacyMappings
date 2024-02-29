@@ -1,0 +1,202 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureComponent	net/minecraft/world/gen/structure/StructureComponent	
+	f	Lnet/minecraft/world/gen/structure/StructureBoundingBox;	field_74887_e	boundingBox	#boundingBox, :, :, bounds
+	f	I	field_74885_f	coordBaseMode	#coordBaseMode, :, ~, facing
+		c	switches the Coordinate System base off the Bounding Box
+	f	I	field_74886_g	componentType	#componentType, :, chainLength, generationDepth
+		c	The type ID of this component.
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2091_1_	type	#type, :, chainLength, generationDepth
+	m	()Lnet/minecraft/world/ChunkPosition;	func_151553_a	getCenterPos	#~, ~, ~, getCenterPos
+	m	(I)I	func_74862_a	getYWithOffset	#getYWithOffset, :, applyYTransform, transformY
+		p	1	p_74862_1_	y	#y, :, :, :
+	m	(II)I	func_74865_a	getXWithOffset	#getXWithOffset, :, applyXTransform, transformX
+		p	1	p_74865_1_	x	#x, :, :, :
+		p	2	p_74865_2_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/world/gen/structure/StructureBoundingBox;)Lnet/minecraft/block/Block;	func_151548_a	getBlockAtCurrentPosition	#getBlockAtCurrentPosition, :, ~, getBlock
+		p	1	p_151548_1_	world	#~, ~, ~, world
+		p	2	p_151548_2_	x	#~, ~, ~, x
+		p	3	p_151548_3_	y	#~, ~, ~, y
+		p	4	p_151548_4_	z	#~, ~, ~, z
+		p	5	p_151548_5_	bounds	#~, ~, ~, bounds
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/block/Block;IIIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V	func_151550_a	placeBlockAtCurrentPosition	#placeBlockAtCurrentPosition, :, ~, setBlockWithMetadata
+		c	current Position depends on currently set Coordinates mode, is computed here
+		p	1	p_151550_1_	world	#~, ~, ~, world
+		p	2	p_151550_2_	block	#~, ~, ~, block
+		p	3	p_151550_3_	metadata	#~, ~, ~, metadata
+		p	4	p_151550_4_	x	#~, ~, ~, x
+		p	5	p_151550_5_	y	#~, ~, ~, y
+		p	6	p_151550_6_	z	#~, ~, ~, z
+		p	7	p_151550_7_	bounds	#~, ~, ~, bounds
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z	func_74860_a	isLiquidInStructureBoundingBox	#isLiquidInStructureBoundingBox, :, isTouchingLiquid, bordersOnLiquids
+		c	checks the entire StructureBoundingBox for Liquids
+		p	1	p_74860_1_	worldIn	#worldIn, :, world, :
+		p	2	p_74860_2_	boundingboxIn	#boundingboxIn, :, box, bounds
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIII)V	func_74878_a	fillWithAir	#fillWithAir, :, setAir, fillAir
+		c	arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ)
+		p	1	p_74878_1_	worldIn	#worldIn, :, world, :
+		p	2	p_74878_2_	structurebb	#structurebb, :, box, bounds
+		p	3	p_74878_3_	minX	#minX, :, :, :
+		p	4	p_74878_4_	minY	#minY, :, :, :
+		p	5	p_74878_5_	minZ	#minZ, :, :, :
+		p	6	p_74878_6_	maxX	#maxX, :, :, :
+		p	7	p_74878_7_	maxY	#maxY, :, :, :
+		p	8	p_74878_8_	maxZ	#maxZ, :, :, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIILnet/minecraft/block/Block;ILnet/minecraft/block/Block;IZ)V	func_151556_a	fillWithMetadataBlocks	#fillWithMetadataBlocks, :, ~, fillWithOutline
+		c	arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, Block placeBlock, int placeBlockMetadata, Block replaceBlock, int replaceBlockMetadata, boolean alwaysreplace)
+		p	1	p_151556_1_	world	#~, ~, ~, world
+		p	2	p_151556_2_	bounds	#~, ~, ~, bounds
+		p	3	p_151556_3_	minX	#~, ~, ~, minX
+		p	4	p_151556_4_	minY	#~, ~, ~, minY
+		p	5	p_151556_5_	minZ	#~, ~, ~, minZ
+		p	6	p_151556_6_	maxX	#~, ~, ~, maxX
+		p	7	p_151556_7_	maxY	#~, ~, ~, maxY
+		p	8	p_151556_8_	maxZ	#~, ~, ~, maxZ
+		p	9	p_151556_9_	edge	#~, ~, ~, edge
+		p	10	p_151556_10_	edgeMetadata	#~, ~, ~, edgeMetadata
+		p	11	p_151556_11_	filler	#~, ~, ~, filler
+		p	12	p_151556_12_	fillerMetadata	#~, ~, ~, fillerMetadata
+		p	13	p_151556_13_	avoidAir	#~, ~, ~, avoidAir
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIILnet/minecraft/block/Block;Lnet/minecraft/block/Block;Z)V	func_151549_a	fillWithBlocks	#fillWithBlocks, :, ~, fillWithOutline
+		c	arguments: (World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, int placeBlock, int replaceBlock, boolean alwaysreplace)
+		p	1	p_151549_1_	world	#~, ~, ~, world
+		p	2	p_151549_2_	bounds	#~, ~, ~, bounds
+		p	3	p_151549_3_	minX	#~, ~, ~, minX
+		p	4	p_151549_4_	minY	#~, ~, ~, minY
+		p	5	p_151549_5_	minZ	#~, ~, ~, minZ
+		p	6	p_151549_6_	maxX	#~, ~, ~, maxX
+		p	7	p_151549_7_	maxY	#~, ~, ~, maxY
+		p	8	p_151549_8_	maxZ	#~, ~, ~, maxZ
+		p	9	p_151549_9_	edge	#~, ~, ~, edge
+		p	10	p_151549_10_	filler	#~, ~, ~, filler
+		p	11	p_151549_11_	avoidAir	#~, ~, ~, avoidAir
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIILnet/minecraft/block/Block;Z)V	func_151547_a	placeUpperHemisphere	#~, ~, ~, placeUpperHemisphere
+		p	1	p_151547_1_	world	#~, ~, ~, world
+		p	2	p_151547_2_	bounds	#~, ~, ~, bounds
+		p	3	p_151547_3_	minX	#~, ~, ~, minX
+		p	4	p_151547_4_	minY	#~, ~, ~, minY
+		p	5	p_151547_5_	minZ	#~, ~, ~, minZ
+		p	6	p_151547_6_	maxX	#~, ~, ~, maxX
+		p	7	p_151547_7_	maxY	#~, ~, ~, maxY
+		p	8	p_151547_8_	maxZ	#~, ~, ~, maxZ
+		p	9	p_151547_9_	block	#~, ~, ~, block
+		p	10	p_151547_10_	avoidAir	#~, ~, ~, avoidAir
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIIIIIZLjava/util/Random;Lnet/minecraft/world/gen/structure/StructureComponent$BlockSelector;)V	func_74882_a	fillWithRandomizedBlocks	#fillWithRandomizedBlocks, :, ~, fill
+		c	arguments: World worldObj, StructureBoundingBox structBB, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, boolean alwaysreplace, Random rand, StructurePieceBlockSelector blockselector
+		p	1	p_74882_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_74882_2_	boundingboxIn	#boundingboxIn, :, ~, bounds
+		p	3	p_74882_3_	minX	#minX, :, ~, minX
+		p	4	p_74882_4_	minY	#minY, :, ~, minY
+		p	5	p_74882_5_	minZ	#minZ, :, ~, minZ
+		p	6	p_74882_6_	maxX	#maxX, :, ~, maxX
+		p	7	p_74882_7_	maxY	#maxY, :, ~, maxY
+		p	8	p_74882_8_	maxZ	#maxZ, :, ~, maxZ
+		p	9	p_74882_9_	alwaysReplace	#alwaysReplace, :, ~, avoidAir
+		p	10	p_74882_10_	rand	#rand, :, ~, random
+		p	11	p_74882_11_	blockselector	#blockselector, :, ~, blocks
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;FIIIIIILnet/minecraft/block/Block;Lnet/minecraft/block/Block;Z)V	func_151551_a	randomlyFillWithBlocks	#randomlyFillWithBlocks, :, ~, fillRandomlyWithOutline
+		c	arguments: World worldObj, StructureBoundingBox structBB, Random rand, float randLimit, int minX, int minY, int minZ, int maxX, int maxY, int maxZ, Block placeBlock, Block replaceBlock, boolean alwaysreplace
+		p	1	p_151551_1_	world	#~, ~, ~, world
+		p	2	p_151551_2_	bounds	#~, ~, ~, bounds
+		p	3	p_151551_3_	random	#~, ~, ~, random
+		p	4	p_151551_4_	threshold	#~, ~, ~, threshold
+		p	5	p_151551_5_	minX	#~, ~, ~, minX
+		p	6	p_151551_6_	minY	#~, ~, ~, minY
+		p	7	p_151551_7_	minZ	#~, ~, ~, minZ
+		p	8	p_151551_8_	maxX	#~, ~, ~, maxX
+		p	9	p_151551_9_	maxY	#~, ~, ~, maxY
+		p	10	p_151551_10_	maxZ	#~, ~, ~, maxZ
+		p	11	p_151551_11_	edge	#~, ~, ~, edge
+		p	12	p_151551_12_	filler	#~, ~, ~, filler
+		p	13	p_151551_13_	avoidAir	#~, ~, ~, avoidAir
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;FIIILnet/minecraft/block/Block;I)V	func_151552_a	setBlockWithThreshold	#~, ~, ~, setBlockWithThreshold
+		p	1	p_151552_1_	world	#~, ~, ~, world
+		p	2	p_151552_2_	bounds	#~, ~, ~, bounds
+		p	3	p_151552_3_	random	#~, ~, ~, random
+		p	4	p_151552_4_	threshold	#~, ~, ~, threshold
+		p	5	p_151552_5_	x	#~, ~, ~, x
+		p	6	p_151552_6_	y	#~, ~, ~, y
+		p	7	p_151552_7_	z	#~, ~, ~, z
+		p	8	p_151552_8_	block	#~, ~, ~, block
+		p	9	p_151552_9_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;IIII)V	func_74881_a	placeDoorAtCurrentPosition	#placeDoorAtCurrentPosition, :, ~, placeWoodenDoor
+		p	1	p_74881_1_	world	#~, ~, ~, world
+		p	2	p_74881_2_	box	#~, ~, ~, box
+		p	3	p_74881_3_	random	#~, ~, ~, random
+		p	4	p_74881_4_	x	#~, ~, ~, x
+		p	5	p_74881_5_	y	#~, ~, ~, y
+		p	6	p_74881_6_	z	#~, ~, ~, z
+		p	7	p_74881_7_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;IIII[Lnet/minecraft/util/WeightedRandomChestContent;I)Z	func_74869_a	generateStructureDispenserContents	#generateStructureDispenserContents, :, ~, placeDispenserWithLoot
+		c	Used to generate dispenser contents for structures. ex: Jungle Temples.
+		p	1	p_74869_1_	world	#~, ~, ~, world
+		p	2	p_74869_2_	bounds	#~, ~, ~, bounds
+		p	3	p_74869_3_	random	#~, ~, ~, random
+		p	4	p_74869_4_	x	#~, ~, ~, x
+		p	5	p_74869_5_	y	#~, ~, ~, y
+		p	6	p_74869_6_	z	#~, ~, ~, z
+		p	7	p_74869_7_	facing	#~, ~, ~, facing
+		p	8	p_74869_8_	entries	#~, ~, ~, entries
+		p	9	p_74869_9_	amount	#~, ~, ~, amount
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Ljava/util/Random;III[Lnet/minecraft/util/WeightedRandomChestContent;I)Z	func_74879_a	generateStructureChestContents	#generateStructureChestContents, :, ~, placeChestWithLoot
+		c	Used to generate chests with items in it. ex: Temple Chests, Village Blacksmith Chests, Mineshaft Chests.
+		p	1	p_74879_1_	world	#~, ~, ~, world
+		p	2	p_74879_2_	bounds	#~, ~, ~, bounds
+		p	3	p_74879_3_	random	#~, ~, ~, random
+		p	4	p_74879_4_	x	#~, ~, ~, x
+		p	5	p_74879_5_	y	#~, ~, ~, y
+		p	6	p_74879_6_	z	#~, ~, ~, z
+		p	7	p_74879_7_	entries	#~, ~, ~, entries
+		p	8	p_74879_8_	amount	#~, ~, ~, amount
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)V	func_143009_a	readStructureBaseNBT	#readStructureBaseNBT, :, fromNbt, readNbt
+		c	Reads and sets structure base data (boundingbox, {@link net.minecraft.world.gen.structure.StructureComponent#coordBaseMode coordBase} and {@link net.minecraft.world.gen.structure.StructureComponent#componentType componentType})
+		p	1	p_143009_1_	worldIn	#worldIn, :, world, :
+		p	2	p_143009_2_	tagCompound	#tagCompound, :, nbt, :
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z	func_74875_a	addComponentParts	#addComponentParts, :, generate, postProcess
+		c	second Part of Structure generating, this for example places Spiderwebs, Mob Spawners, it closes Mineshafts at the end, it adds Fences...
+		p	1	p_74875_1_	worldIn	#worldIn, :, world, :
+		p	2	p_74875_2_	randomIn	#randomIn, :, random, :
+		p	3	p_74875_3_	structureBoundingBoxIn	#structureBoundingBoxIn, :, boundingBox, bounds
+	m	(Lnet/minecraft/block/Block;I)I	func_151555_a	getMetadataWithOffset	#getMetadataWithOffset, :, getData, postProcessBlockMetadata
+		c	Returns the direction-shifted metadata for blocks that require orientation, e.g. doors, stairs, ladders.
+		p	1	p_151555_1_	blockIn	#blockIn, :, block, :
+		p	2	p_151555_2_	meta	#meta, :, type, facing
+	m	(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;)V	func_74861_a	buildComponent	#buildComponent, :, fillOpenings, addChildren
+		c	Initiates construction of the Structure Component picked, at the current Location of StructGen
+		p	1	p_74861_1_	componentIn	#componentIn, :, start, :
+		p	2	p_74861_2_	listIn	#listIn, :, pieces, :
+		p	3	p_74861_3_	rand	#rand, :, random, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_143012_a	writeStructureToNBT	#writeStructureToNBT, :, serialize, writeNbt
+		c	(abstract) Helper method to write subclass data to NBT
+		p	1	p_143012_1_	tagCompound	#tagCompound, :, structureNbt, nbt
+	m	(Ljava/util/List;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74883_a	findIntersecting	#findIntersecting, :, getOverlappingPiece, getIntersectingPiece
+		c	Discover if bounding box can fit within the current bounding box object.
+		p	0	p_74883_0_	listIn	#listIn, :, pieces, :
+		p	1	p_74883_1_	boundingboxIn	#boundingboxIn, :, box, bounds
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_143010_b	createStructureBaseNBT	#createStructureBaseNBT, :, toNbt, :
+		c	Writes structure base data (id, boundingbox, {@link net.minecraft.world.gen.structure.StructureComponent#coordBaseMode coordBase} and {@link net.minecraft.world.gen.structure.StructureComponent#componentType componentType}) to new NBTTagCompound and returns it.
+	m	(II)I	func_74873_b	getZWithOffset	#getZWithOffset, :, applyZTransform, transformZ
+		p	1	p_74873_1_	x	#x, :, :, :
+		p	2	p_74873_2_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V	func_74871_b	clearCurrentPositionBlocksUpwards	#clearCurrentPositionBlocksUpwards, :, clearBlocksUpwards, fillAirColumnUp
+		c	Deletes all continuous blocks from selected position upwards. Stops at hitting air.
+		p	1	p_74871_1_	worldIn	#worldIn, :, world, :
+		p	2	p_74871_2_	x	#x, :, :, :
+		p	3	p_74871_3_	y	#y, :, :, :
+		p	4	p_74871_4_	z	#z, :, :, :
+		p	5	p_74871_5_	structurebb	#structurebb, :, box, bounds
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/block/Block;IIIILnet/minecraft/world/gen/structure/StructureBoundingBox;)V	func_151554_b	fillColumnDown	#~, ~, ~, fillColumnDown
+		p	1	p_151554_1_	world	#~, ~, ~, world
+		p	2	p_151554_2_	block	#~, ~, ~, block
+		p	3	p_151554_3_	metadata	#~, ~, ~, metadata
+		p	4	p_151554_4_	x	#~, ~, ~, x
+		p	5	p_151554_5_	y	#~, ~, ~, y
+		p	6	p_151554_6_	z	#~, ~, ~, z
+		p	7	p_151554_7_	bounds	#~, ~, ~, bounds
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_143011_b	readStructureFromNBT	#readStructureFromNBT, :, deserialize, readNbt
+		c	(abstract) Helper method to read subclass data from NBT
+		p	1	p_143011_1_	tagCompound	#tagCompound, :, structureNbt, nbt
+	m	()Lnet/minecraft/world/gen/structure/StructureBoundingBox;	func_74874_b	getBoundingBox	#getBoundingBox, :, :, getBounds
+	m	()I	func_74877_c	getComponentType	#getComponentType, :, getChainLength, getGenerationDepth
+		c	Returns the component type ID of this component.
+	m	()V	<init>	<init>	#~, ~, ~, ~

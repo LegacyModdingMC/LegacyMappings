@@ -1,0 +1,63 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityCreature	net/minecraft/entity/EntityCreature	
+	f	Lnet/minecraft/entity/Entity;	field_70789_a	entityToAttack	#entityToAttack, :, ~, target
+		c	The Entity this EntityCreature is set to attack.
+	f	Z	field_70787_b	hasAttacked	#hasAttacked, :, ~, wasAttacking
+		c	returns true if a creature has attacked recently only used for creepers and skeletons
+	f	I	field_70788_c	fleeingTick	#fleeingTick, :, ~, fastMovementCooldown
+		c	Used to make a creature speed up and wander away when hit.
+	f	Lnet/minecraft/pathfinding/PathEntity;	field_70786_d	pathToEntity	#pathToEntity, :, ~, path
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_70775_bC	homePosition	#homePosition, :, ~, pos
+	f	F	field_70772_bD	maximumHomeDistance	#maximumHomeDistance, :, positionTargetRange, villageRadius
+		c	If -1 there is no maximum distance
+	f	Lnet/minecraft/entity/ai/EntityAIBase;	field_110178_bs	aiBase	#aiBase, :, goal, goToWalkTargetGoal
+	f	Z	field_110180_bt	isMovementAITaskSet	#isMovementAITaskSet, :, ~, leechedNavigation
+		c	change navigation type when the mob is leeached
+	f	Ljava/util/UUID;	field_110179_h	FLEEING_SPEED_MODIFIER_UUID	#FLEEING_SPEED_MODIFIER_UUID, :, FLEEING_SPEED_BONUS_ID, FLEEING_SPEED_BONUS_UUID
+	f	Lnet/minecraft/entity/ai/attributes/AttributeModifier;	field_110181_i	FLEEING_SPEED_MODIFIER	#FLEEING_SPEED_MODIFIER, :, :, FLEEING_SPEED_BONUS
+	m	(III)F	func_70783_a	getBlockPathWeight	#getBlockPathWeight, :, ~, getPathfindingFavor
+		c	Takes a coordinate in and returns a weight to determine how likely this creature will try to path to the block. Args: x, y, z
+		p	1	p_70783_1_	x	#~, ~, ~, x
+		p	2	p_70783_2_	y	#~, ~, ~, y
+		p	3	p_70783_3_	z	#~, ~, ~, z
+	m	(IIII)V	func_110171_b	setHomeArea	#setHomeArea, :, ~, setVillagePosAndRadius
+		p	1	p_110171_1_	x	#~, ~, ~, x
+		p	2	p_110171_2_	y	#~, ~, ~, y
+		p	3	p_110171_3_	z	#~, ~, ~, z
+		p	4	p_110171_4_	villageRadius	#~, ~, ~, villageRadius
+	m	(Lnet/minecraft/pathfinding/PathEntity;)V	func_70778_a	setPathToEntity	#setPathToEntity, :, ~, setPath
+		c	sets the EntityCreature's walk path
+		p	1	p_70778_1_	path	#~, ~, ~, path
+	m	(Lnet/minecraft/entity/Entity;F)V	func_70785_a	attackEntity	#attackEntity, :, ~, attack
+		c	Basic mob attack. Default to touch of death in EntityCreature. Overridden by each mob to define their attack.
+		p	1	p_70785_1_	target	#~, ~, ~, target
+		p	2	p_70785_2_	power	#~, ~, ~, power
+	m	(III)Z	func_110176_b	isWithinHomeDistance	#isWithinHomeDistance, :, ~, isValidGoalTarget
+		p	1	p_110176_1_	x	#~, ~, ~, x
+		p	2	p_110176_2_	y	#~, ~, ~, y
+		p	3	p_110176_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/entity/Entity;)V	func_70784_b	setTarget	#setTarget, :, ~, setTarget
+		c	Sets the entity which is to be attacked.
+		p	1	p_70784_1_	target	#~, ~, ~, target
+	m	()Z	func_70780_i	isMovementCeased	#isMovementCeased, :, ~, wasAttacking
+		c	Disables a mob's ability to move on its own while true.
+	m	()V	func_70779_j	updateWanderPath	#updateWanderPath, :, ~, setNewWanderingPath
+		c	Time remaining during which the Animal is sped up and flees.
+	m	()Lnet/minecraft/entity/Entity;	func_70782_k	findPlayerToAttack	#findPlayerToAttack, :, ~, findClosestAttackablePlayer
+		c	Finds the closest player within 16 blocks to attack, or null if this Entity isn't interested in attacking (Animals, Spiders at day, peaceful PigZombies).
+	m	()Z	func_70781_l	hasPath	#hasPath, :, shouldContinue, hasPath
+		c	if the entity has a PathEntity to follow, it returns true, else false
+	m	()Lnet/minecraft/entity/Entity;	func_70777_m	getEntityToAttack	#getEntityToAttack, :, ~, getTarget
+		c	returns the target Entity
+	m	()Z	func_110173_bK	isWithinHomeDistanceCurrentPosition	#isWithinHomeDistanceCurrentPosition, :, isInWalkTargetRange, isInVillage
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_110172_bL	getHomePosition	#getHomePosition, :, ~, getPos
+		c	Returns the chunk coordinate object of the home position.
+	m	()F	func_110174_bM	getMaximumHomeDistance	#getMaximumHomeDistance, :, getPositionTargetRange, getVillageRadius
+	m	()V	func_110177_bN	detachHome	#detachHome, :, ~, resetVillageRadius
+	m	()Z	func_110175_bO	hasHome	#hasHome, :, hasPositionTarget, inVillage
+		c	Returns whether a home area is defined for this entity.
+	m	(F)V	func_142017_o	onLeashDistance	#onLeashDistance, :, ~, updateForLeashLength
+		p	1	p_142017_1_	leashLength	#~, ~, ~, leashLength
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1602_1_	worldIn	#worldIn, :, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSign	net/minecraft/client/model/ModelSign	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78166_a	signBoard	#signBoard, :, plate, board
+		c	The board on a sign that has the writing on it.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78165_b	signStick	#signStick, :, stick, pole
+		c	The stick a sign stands on.
+	m	()V	func_78164_a	renderSign	#renderSign, :, render, :
+		c	Renders the sign model through TileEntitySignRenderer
+	m	()V	<init>	<init>	#~, ~, ~, ~

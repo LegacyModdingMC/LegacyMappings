@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityJumpHelper	net/minecraft/entity/ai/EntityJumpHelper	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75663_a	entity	#entity, :, mob, :
+	f	Z	field_75662_b	isJumping	#isJumping, :, active, :
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1612_1_	entityIn	#entityIn, :, mob, :
+	m	()V	func_75660_a	setJumping	#setJumping, :, setActive, :
+	m	()V	func_75661_b	doJump	#doJump, :, tick, :
+		c	Called to actually make the entity jump if isJumping is true.

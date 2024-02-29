@@ -1,0 +1,38 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/pathfinding/PathEntity	net/minecraft/pathfinding/PathEntity	
+	f	[Lnet/minecraft/pathfinding/PathPoint;	field_75884_a	points	#points, :, nodes, :
+		c	The actual points in the path
+	f	I	field_75882_b	currentPathIndex	#currentPathIndex, :, currentNodeIndex, currentIndex
+		c	PathEntity Array Index the Entity is currently targeting
+	f	I	field_75883_c	pathLength	#pathLength, :, nodeCount, length
+		c	The total length of the path
+	m	([Lnet/minecraft/pathfinding/PathPoint;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2136_1_	pathpoints	#pathpoints, :, nodes, :
+	m	()V	func_75875_a	incrementPathIndex	#incrementPathIndex, :, next, advance
+		c	Directs this path to the next point in its array
+	m	(I)Lnet/minecraft/pathfinding/PathPoint;	func_75877_a	getPathPointFromIndex	#getPathPointFromIndex, :, getNode, :
+		c	return the PathPoint located at the specified PathIndex, usually the current one
+		p	1	p_75877_1_	index	#index, :, :, :
+	m	(Lnet/minecraft/pathfinding/PathEntity;)Z	func_75876_a	isSamePath	#isSamePath, :, equalsPath, equals
+		c	Returns true if the EntityPath are the same. Non instance related equals.
+		p	1	p_75876_1_	pathentityIn	#pathentityIn, :, path, other
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/Vec3;	func_75878_a	getPosition	#getPosition, :, getCurrentPosition, getCurrentPos
+		c	returns the current PathEntity target node as Vec3D
+		p	1	p_75878_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;I)Lnet/minecraft/util/Vec3;	func_75881_a	getVectorFromIndex	#getVectorFromIndex, :, getNodePosition, getPos
+		c	Gets the vector of the PathPoint associated with the given index.
+		p	1	p_75881_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_75881_2_	index	#index, :, :, :
+	m	()Z	func_75879_b	isFinished	#isFinished, :, :, isDone
+		c	Returns true if this path has reached the end
+	m	(I)V	func_75871_b	setCurrentPathLength	#setCurrentPathLength, :, setNodeCount, truncate
+		p	1	p_75871_1_	length	#length, :, index, length
+	m	(Lnet/minecraft/util/Vec3;)Z	func_75880_b	isDestinationSame	#isDestinationSame, :, equalsEndPos, isOnTarget
+		c	Returns true if the final PathPoint in the PathEntity is equal to Vec3D coords.
+		p	1	p_75880_1_	vec	#vec, :, pos, :
+	m	()Lnet/minecraft/pathfinding/PathPoint;	func_75870_c	getFinalPathPoint	#getFinalPathPoint, :, getEnd, getTarget
+		c	returns the last PathPoint of the Array
+	m	(I)V	func_75872_c	setCurrentPathIndex	#setCurrentPathIndex, :, setCurrentNode, setCurrentIndex
+		p	1	p_75872_1_	currentPathIndexIn	#currentPathIndexIn, :, index, :
+	m	()I	func_75874_d	getCurrentPathLength	#getCurrentPathLength, :, getNodeCount, length
+	m	()I	func_75873_e	getCurrentPathIndex	#getCurrentPathIndex, :, getCurrentNode, getCurrentIndex

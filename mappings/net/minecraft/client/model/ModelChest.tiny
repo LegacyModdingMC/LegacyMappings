@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelChest	net/minecraft/client/model/ModelChest	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78234_a	chestLid	#chestLid, :, lid, :
+		c	The chest lid in the chest's model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78232_b	chestBelow	#chestBelow, :, base, :
+		c	The model of the bottom of the chest.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78233_c	chestKnob	#chestKnob, :, lock, :
+		c	The chest's knob in the chest model.
+	m	()V	func_78231_a	renderAll	#renderAll, :, renderParts, :
+		c	This method renders out all parts of the chest model.
+	m	()V	<init>	<init>	#~, ~, ~, ~

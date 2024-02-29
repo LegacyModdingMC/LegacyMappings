@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerWorkbench	net/minecraft/inventory/ContainerWorkbench	
+	f	Lnet/minecraft/inventory/InventoryCrafting;	field_75162_e	craftMatrix	#craftMatrix, :, craftingInv, craftingTable
+		c	The crafting matrix inventory (3x3).
+	f	Lnet/minecraft/inventory/IInventory;	field_75160_f	craftResult	#craftResult, :, resultInv, resultInventory
+	f	Lnet/minecraft/world/World;	field_75161_g	worldObj	#worldObj, world, :, :
+	f	I	field_75164_h	posX	#posX, :, ~, x
+	f	I	field_75165_i	posY	#posY, :, ~, y
+	f	I	field_75163_j	posZ	#posZ, :, ~, z
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1808_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1808_2_	world	#~, ~, ~, world
+		p	3	p_i1808_3_	x	#~, ~, ~, x
+		p	4	p_i1808_4_	y	#~, ~, ~, y
+		p	5	p_i1808_5_	z	#~, ~, ~, z

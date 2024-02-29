@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntitySheep	net/minecraft/entity/passive/EntitySheep	
+	f	[[F	field_70898_d	fleeceColorTable	#fleeceColorTable, :, ~, DYE_COLORS
+		c	Holds the RGB table of the sheep colors - in OpenGL glColor3f values - used to render the sheep colored fleece.
+	f	Lnet/minecraft/inventory/InventoryCrafting;	field_90016_e	inventoryCrafting	#inventoryCrafting, :, ~, inventory
+		c	Internal crafting inventory used to check the result of mixing dyes corresponding to the fleece color when breeding sheep.
+	f	I	field_70899_e	sheepTimer	#sheepTimer, :, eatGrassTimer, :
+		c	Used to control movement as well as wool regrowth. Set to 40 on handleHealthUpdate and counts down with each tick.
+	f	Lnet/minecraft/entity/ai/EntityAIEatGrass;	field_146087_bs	entityAIEatGrass	#entityAIEatGrass, :, eatGrassGoal, :
+	m	(Ljava/util/Random;)I	func_70895_a	getRandomFleeceColor	#getRandomFleeceColor, :, ~, generateBasicRandomColor
+		c	This method is called when a sheep spawns in the world to select the color of sheep fleece.
+		p	0	p_70895_0_	random	#~, ~, ~, random
+	m	(Lnet/minecraft/entity/passive/EntityAnimal;Lnet/minecraft/entity/passive/EntityAnimal;)I	func_90014_a	getDyeBasedOnParents	#getDyeBasedOnParents, :, ~, getChildColor
+		p	1	p_90014_1_	firstParent	#~, ~, ~, firstParent
+		p	2	p_90014_2_	secondParent	#~, ~, ~, secondParent
+	m	(Lnet/minecraft/entity/passive/EntityAnimal;)I	func_90013_b	getDyeFromFleeceColor	#getDyeFromFleeceColor, :, ~, getSwappedColor
+		c	Returns the data value for the dye that matches the sheep's fleece color
+		p	1	p_90013_1_	sheep	#~, ~, ~, sheep
+	m	()I	func_70896_n	getFleeceColor	#getFleeceColor, :, ~, getColor
+	m	()Z	func_70892_o	getSheared	#getSheared, :, isSheared, :
+		c	returns true if a sheeps wool has been sheared
+	m	(Z)V	func_70893_e	setSheared	#setSheared, :, :, :
+		c	make a sheep sheared if set to true
+		p	1	p_70893_1_	sheared	#sheared, :, ~, sheared
+	m	(F)F	func_70894_j	getHeadRotationPointY	#getHeadRotationPointY, :, ~, getNeckAngle
+		p	1	p_70894_1_	delta	#~, ~, ~, delta
+	m	(F)F	func_70890_k	getHeadRotationAngleX	#getHeadRotationAngleX, :, ~, getHeadAngle
+		p	1	p_70890_1_	delta	#~, ~, ~, delta
+	m	(I)V	func_70891_b	setFleeceColor	#setFleeceColor, :, ~, setColor
+		p	1	p_70891_1_	id	#~, ~, ~, id
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1691_1_	worldIn	#worldIn, :, ~, world
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

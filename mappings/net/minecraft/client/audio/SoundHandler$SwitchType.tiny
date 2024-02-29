@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundHandler$SwitchType	net/minecraft/client/audio/SoundHandler$SwitchType	
+	f	[I	field_148765_a	ALL	#~, ~, ~, ALL
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundRegistry	net/minecraft/client/audio/SoundRegistry	
+	f	Ljava/util/Map;	field_148764_a	soundRegistry	#soundRegistry, :, sounds, :
+		c	Contains all registered sound
+	m	(Lnet/minecraft/client/audio/SoundEventAccessorComposite;)V	func_148762_a	registerSound	#registerSound, :, add, :
+		p	1	p_148762_1_	pool	#~, ~, set, pool
+	m	()V	func_148763_c	clearMap	#clearMap, :, clearRegistry, clear
+		c	Reset the underlying sound map (Called on resource manager reload)
+	m	()V	<init>	<init>	#~, ~, ~, ~

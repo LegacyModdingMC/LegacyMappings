@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSpider	net/minecraft/client/renderer/entity/RenderSpider	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110891_a	spiderEyesTextures	#spiderEyesTextures, :, ~, SPIDER_EYES_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110890_f	spiderTextures	#spiderTextures, SPIDER_TEXTURES, SPIDER_TEX, SPIDER_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

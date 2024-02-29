@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/SaveHandler	net/minecraft/world/storage/SaveHandler	
+	f	Lorg/apache/logging/log4j/Logger;	field_151478_a	logger	#logger, LOGGER, :, :
+	f	Ljava/io/File;	field_75770_b	worldDirectory	#worldDirectory, :, worldDir, dir
+		c	The directory in which to save world data.
+	f	Ljava/io/File;	field_75771_c	playersDirectory	#playersDirectory, :, playerDataDir, :
+		c	The directory in which to save player data.
+	f	Ljava/io/File;	field_75768_d	mapDataDir	#mapDataDir, :, dataDir, :
+	f	J	field_75769_e	initializationTime	#initializationTime, :, startTime, :
+		c	The time in milliseconds when this field was initialized. Stored in the session lock file.
+	f	Ljava/lang/String;	field_75767_f	saveDirectoryName	#saveDirectoryName, :, worldName, name
+		c	The directory name of the world
+	m	(Ljava/io/File;Ljava/lang/String;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2146_1_	savesDirectory	#savesDirectory, :, savesFolder, savesDir
+		p	2	p_i2146_2_	directoryName	#directoryName, :, worldName, name
+		p	3	p_i2146_3_	playersDirectoryIn	#playersDirectoryIn, :, createPlayerDataDir, :
+	m	()V	func_75766_h	setSessionLock	#setSessionLock, :, writeSessionLock, :
+		c	Creates a session lock file for this process
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

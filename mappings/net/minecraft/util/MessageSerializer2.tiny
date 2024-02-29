@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MessageSerializer2	net/minecraft/util/MessageSerializer2	
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBuf;)V	encode	encode	#~, ~, encode, :
+		p	1	p_encode_1_	p_encode_1_	#~, ~, ~, ~
+		p	2	p_encode_2_	p_encode_2_	#~, ~, ~, ~
+		p	3	p_encode_3_	p_encode_3_	#~, ~, ~, ~
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Lio/netty/buffer/ByteBuf;)V	encode	encode	#~, ~, ~, ~
+		p	1	p_encode_1_	context	#~, ~, ~, context
+		p	2	p_encode_2_	buffer	#~, ~, ~, buffer
+		p	3	p_encode_3_	parentBuffer	#~, ~, ~, parentBuffer
+	m	()V	<init>	<init>	#~, ~, ~, ~

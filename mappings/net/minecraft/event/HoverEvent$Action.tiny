@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/event/HoverEvent$Action	net/minecraft/event/HoverEvent$Action	
+	f	Lnet/minecraft/event/HoverEvent$Action;	SHOW_TEXT	SHOW_TEXT	#~, ~, SHOW_TEXT, :
+	f	Lnet/minecraft/event/HoverEvent$Action;	SHOW_ACHIEVEMENT	SHOW_ACHIEVEMENT	#~, ~, SHOW_ACHIEVEMENT, :
+	f	Lnet/minecraft/event/HoverEvent$Action;	SHOW_ITEM	SHOW_ITEM	#~, ~, SHOW_ITEM, :
+	f	Ljava/util/Map;	field_150690_d	nameMapping	#nameMapping, NAME_MAPPING, NAME_TO_ACTION, BY_KEY
+	f	Z	field_150691_e	allowedInChat	#allowedInChat, :, userDefinable, allowFromRemoteSource
+	f	Ljava/lang/String;	field_150688_f	canonicalName	#canonicalName, :, name, key
+	f	[Lnet/minecraft/event/HoverEvent$Action;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;ILjava/lang/String;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45157_3_	canonicalNameIn	#canonicalNameIn, :, name, key
+		p	4	p_i45157_4_	allowedInChatIn	#allowedInChatIn, :, userDefinable, allowFromRemoteSource
+		p	1	p_i45157_1_	p_i45157_1_	#~, ~, ~, ~
+		p	2	p_i45157_2_	p_i45157_2_	#~, ~, ~, ~
+	m	()Z	func_150686_a	shouldAllowInChat	#shouldAllowInChat, :, isUserDefinable, allowFromRemoteSource
+		c	Indicates whether this event can be run from chat text.
+	m	(Ljava/lang/String;)Lnet/minecraft/event/HoverEvent$Action;	func_150684_a	getValueByCanonicalName	#getValueByCanonicalName, :, byName, byKey
+		c	Gets a value by its canonical name.
+		p	0	p_150684_0_	canonicalNameIn	#canonicalNameIn, :, name, key
+	m	()Ljava/lang/String;	func_150685_b	getCanonicalName	#getCanonicalName, :, getName, getKey
+		c	Gets the canonical name for this action (e.g., "show_achievement")
+	m	(Ljava/lang/String;)Lnet/minecraft/event/HoverEvent$Action;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/event/HoverEvent$Action;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

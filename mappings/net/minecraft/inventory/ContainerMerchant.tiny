@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerMerchant	net/minecraft/inventory/ContainerMerchant	
+	f	Lnet/minecraft/entity/IMerchant;	field_75178_e	theMerchant	#theMerchant, merchant, trader, :
+		c	Instance of Merchant.
+	f	Lnet/minecraft/inventory/InventoryMerchant;	field_75176_f	merchantInventory	#merchantInventory, :, traderInventory, :
+	f	Lnet/minecraft/world/World;	field_75177_g	theWorld	#theWorld, world, :, :
+		c	Instance of World.
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/entity/IMerchant;Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1821_1_	playerInventory	#playerInventory, :, :, :
+		p	2	p_i1821_2_	merchant	#merchant, :, trader, :
+		p	3	p_i1821_3_	worldIn	#worldIn, :, world, :
+	m	()Lnet/minecraft/inventory/InventoryMerchant;	func_75174_d	getMerchantInventory	#getMerchantInventory, :, getTraderInventory, :
+	m	(I)V	func_75175_c	setCurrentRecipeIndex	#setCurrentRecipeIndex, :, setRecipeIndex, :
+		p	1	p_75175_1_	currentRecipeIndex	#currentRecipeIndex, :, index, :

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S32PacketConfirmTransaction	net/minecraft/network/play/server/S32PacketConfirmTransaction	
+	f	I	field_148894_a	windowId	#windowId, :, id, menuId
+	f	S	field_148892_b	actionNumber	#actionNumber, :, actionId, :
+	f	Z	field_148893_c	accepted	#accepted, :, :, :
+	m	(ISZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45182_1_	windowIdIn	#windowIdIn, :, id, menuId
+		p	2	p_i45182_2_	actionNumberIn	#actionNumberIn, :, actionId, :
+		p	3	p_i45182_3_	accepted	#~, ~, accepted, :
+	m	()I	func_148889_c	getWindowId	#getWindowId, :, getId, getMenuId
+	m	()S	func_148890_d	getActionNumber	#getActionNumber, :, getActionId, :
+	m	()Z	func_148888_e	wasAccepted	#wasAccepted, :, :, getAccepted
+	m	()V	<init>	<init>	#~, ~, ~, ~

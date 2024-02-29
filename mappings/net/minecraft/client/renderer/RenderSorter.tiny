@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/RenderSorter	net/minecraft/client/renderer/RenderSorter	
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_78945_a	baseEntity	#baseEntity, :, ~, camera
+		c	The entity (usually the player) that the camera is inside.
+	m	(Lnet/minecraft/client/renderer/WorldRenderer;Lnet/minecraft/client/renderer/WorldRenderer;)I	compare	compare	#~, ~, compare, :
+		p	1	p_compare_1_	p_compare_1_	#~, ~, ~, ~
+		p	2	p_compare_2_	p_compare_2_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	#~, ~, ~, ~
+		p	1	p_compare_1_	chunk1	#~, ~, ~, chunk1
+		p	2	p_compare_2_	chunk2	#~, ~, ~, chunk2
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1241_1_	camera	#~, ~, ~, camera

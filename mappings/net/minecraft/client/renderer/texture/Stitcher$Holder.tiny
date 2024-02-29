@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/Stitcher$Holder	net/minecraft/client/renderer/texture/Stitcher$Holder	
+	f	Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	field_98151_a	theTexture	#theTexture, sprite, ~, sprite
+	f	I	field_94204_c	width	#width, :, ~, width
+	f	I	field_94201_d	height	#height, :, ~, height
+	f	I	field_147968_d	mipmapLevelHolder	#mipmapLevelHolder, :, ~, mipLevel
+	f	Z	field_94202_e	rotated	#rotated, :, ~, rotated
+	f	F	field_94205_a	scaleFactor	#scaleFactor, :, ~, size
+	m	()Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	func_98150_a	getAtlasSprite	#getAtlasSprite, :, ~, getSprite
+	m	(I)V	func_94196_a	setNewDimension	#setNewDimension, :, ~, setSize
+		p	1	p_94196_1_	size	#~, ~, ~, size
+	m	(Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	()I	func_94197_a	getWidth	#getWidth, :, ~, getWidth
+	m	()I	func_94199_b	getHeight	#getHeight, :, ~, getHeight
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	other	#~, ~, ~, other
+	m	()V	func_94194_d	rotate	#rotate, :, ~, toggleRotated
+	m	()Z	func_94195_e	isRotated	#isRotated, :, ~, isRotated
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45094_1_	theTextureIn	#theTextureIn, :, ~, sprite
+		p	2	p_i45094_2_	mipmapLevelHolderIn	#mipmapLevelHolderIn, :, ~, mipLevel

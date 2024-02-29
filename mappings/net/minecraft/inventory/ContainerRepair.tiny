@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerRepair	net/minecraft/inventory/ContainerRepair	
+	f	I	field_82854_e	maximumCost	#maximumCost, :, repairCost, :
+		c	The maximum cost of repairing/renaming in the anvil.
+	f	Lorg/apache/logging/log4j/Logger;	field_148326_f	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/inventory/IInventory;	field_82852_f	outputSlot	#outputSlot, :, resultInventory, :
+		c	Here comes out item you merged and/or renamed.
+	f	Lnet/minecraft/inventory/IInventory;	field_82853_g	inputSlots	#inputSlots, :, inventory, inputInventory
+		c	The 2slots where you put your items in that you want to merge and/or rename.
+	f	Lnet/minecraft/world/World;	field_82860_h	theWorld	#theWorld, world, :, :
+	f	I	field_82861_i	x	#~, ~, ~, x
+	f	I	field_82858_j	y	#~, ~, ~, y
+	f	I	field_82859_k	z	#~, ~, ~, z
+	f	I	field_82856_l	stackSizeToBeUsedInRepair	#stackSizeToBeUsedInRepair, materialCost, ~, minRepairItemCount
+		c	determined by damage of input item and stackSize of repair materials
+	f	Ljava/lang/String;	field_82857_m	repairedItemName	#repairedItemName, :, ~, itemName
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_82855_n	thePlayer	#thePlayer, player, :, :
+		c	The player that has this container open.
+	m	(Ljava/lang/String;)V	func_82850_a	updateItemName	#updateItemName, :, rename, setItemName
+		c	used by the Anvil GUI to update the Item Name being typed by the player
+		p	1	p_82850_1_	newName	#newName, :, customName, name
+	m	(Lnet/minecraft/inventory/ContainerRepair;)Lnet/minecraft/inventory/IInventory;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/inventory/ContainerRepair;)I	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	()V	func_82848_d	updateRepairOutput	#updateRepairOutput, :, updateResult, :
+		c	called when the Anvil Input Slot changes, calculates the new result and puts it in the output slot
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1800_1_	inventory	#~, ~, ~, inventory
+		p	2	p_i1800_2_	world	#~, ~, ~, world
+		p	3	p_i1800_3_	x	#~, ~, ~, x
+		p	4	p_i1800_4_	y	#~, ~, ~, y
+		p	5	p_i1800_5_	z	#~, ~, ~, z
+		p	6	p_i1800_6_	player	#~, ~, ~, player
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

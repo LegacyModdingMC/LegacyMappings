@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSpider	net/minecraft/client/model/ModelSpider	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78209_a	spiderHead	#spiderHead, :, ~, head
+		c	The spider's head box
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78207_b	spiderNeck	#spiderNeck, :, ~, neck
+		c	The spider's neck box
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78208_c	spiderBody	#spiderBody, :, ~, body
+		c	The spider's body box
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78205_d	spiderLeg1	#spiderLeg1, :, ~, backRightLeg
+		c	Spider's first leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78206_e	spiderLeg2	#spiderLeg2, :, ~, backLeftLeg
+		c	Spider's second leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78203_f	spiderLeg3	#spiderLeg3, :, ~, backMiddleRightLeg
+		c	Spider's third leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78204_g	spiderLeg4	#spiderLeg4, :, ~, backMiddleLeftLeg
+		c	Spider's fourth leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78212_h	spiderLeg5	#spiderLeg5, :, ~, frontMiddleRightLeg
+		c	Spider's fifth leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78213_i	spiderLeg6	#spiderLeg6, :, ~, frontMiddleLeftLeg
+		c	Spider's sixth leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78210_j	spiderLeg7	#spiderLeg7, :, ~, frontRightLeg
+		c	Spider's seventh leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78211_k	spiderLeg8	#spiderLeg8, :, ~, frontLeftLeg
+		c	Spider's eight leg
+	m	()V	<init>	<init>	#~, ~, ~, ~

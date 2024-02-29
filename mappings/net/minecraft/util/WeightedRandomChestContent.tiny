@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/WeightedRandomChestContent	net/minecraft/util/WeightedRandomChestContent	
+	f	Lnet/minecraft/item/ItemStack;	field_76297_b	theItemId	#theItemId, :, content, stack
+		c	The Item/Block ID to generate in the Chest.
+	f	I	field_76295_d	theMinimumChanceToGenerateItem	#theMinimumChanceToGenerateItem, minStackSize, min, minItemChance
+		c	The minimum chance of item generating.
+	f	I	field_76296_e	theMaximumChanceToGenerateItem	#theMaximumChanceToGenerateItem, maxStackSize, max, maxItemChance
+		c	The maximum chance of item generating.
+	m	(Lnet/minecraft/item/Item;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45311_1_	item	#~, ~, item, :
+		p	2	p_i45311_2_	metadata	#~, ~, meta, metadata
+		p	3	p_i45311_3_	minimumChance	#minimumChance, :, min, minItemChance
+		p	4	p_i45311_4_	maximumChance	#maximumChance, :, max, maxItemChance
+		p	5	p_i45311_5_	itemWeightIn	#itemWeightIn, :, weight, :
+	m	(Lnet/minecraft/item/ItemStack;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1558_1_	stack	#stack, :, content, stack
+		p	2	p_i1558_2_	minimumChance	#minimumChance, :, min, minItemChance
+		p	3	p_i1558_3_	maximumChance	#maximumChance, :, max, maxItemChance
+		p	4	p_i1558_4_	itemWeightIn	#itemWeightIn, :, weight, :
+	m	(Ljava/util/Random;[Lnet/minecraft/util/WeightedRandomChestContent;Lnet/minecraft/tileentity/TileEntityDispenser;I)V	func_150706_a	generateDispenserContents	#generateDispenserContents, :, generateLoot, addLoot
+		p	0	p_150706_0_	random	#~, ~, random, :
+		p	1	p_150706_1_	entries	#~, ~, pool, entries
+		p	2	p_150706_2_	dispenser	#~, ~, dispenser, :
+		p	3	p_150706_3_	amount	#~, ~, items, amount
+	m	(Ljava/util/Random;[Lnet/minecraft/util/WeightedRandomChestContent;Lnet/minecraft/inventory/IInventory;I)V	func_76293_a	generateChestContents	#generateChestContents, :, generateLoot, addLoot
+		c	Generates the Chest contents.
+		p	0	p_76293_0_	random	#~, ~, random, :
+		p	1	p_76293_1_	entries	#~, ~, pool, entries
+		p	2	p_76293_2_	inventory	#~, ~, inventory, :
+		p	3	p_76293_3_	amount	#~, ~, items, amount
+	m	([Lnet/minecraft/util/WeightedRandomChestContent;[Lnet/minecraft/util/WeightedRandomChestContent;)[Lnet/minecraft/util/WeightedRandomChestContent;	func_92080_a	addAll	#~, ~, union, addAll
+		p	0	p_92080_0_	entries	#~, ~, ~, entries
+		p	1	p_92080_1_	moreEntries	#~, ~, ~, moreEntries

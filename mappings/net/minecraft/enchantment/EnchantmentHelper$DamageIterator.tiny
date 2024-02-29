@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentHelper$DamageIterator	net/minecraft/enchantment/EnchantmentHelper$DamageIterator	
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_151366_a	user	#user, :, ~, attacker
+		c	The user of the enchantment
+	f	Lnet/minecraft/entity/Entity;	field_151365_b	target	#target, :, ~, target
+		c	The target entity being damaged
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	(Lnet/minecraft/enchantment/EnchantmentHelper$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45359_1_	p_i45359_1_	#~, ~, ~, ~

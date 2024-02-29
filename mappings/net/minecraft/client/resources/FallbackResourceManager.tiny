@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/FallbackResourceManager	net/minecraft/client/resources/FallbackResourceManager	
+	f	Ljava/util/List;	field_110540_a	resourcePacks	#resourcePacks, :, :, fallbacks
+		c	All resource packs for this domain, as ordered by the options menu. Packs later in the list have higher priority than those earlier in the list.
+	f	Lnet/minecraft/client/resources/data/IMetadataSerializer;	field_110539_b	frmMetadataSerializer	#frmMetadataSerializer, :, serializer, metadataSerializers
+	m	(Lnet/minecraft/client/resources/data/IMetadataSerializer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1289_1_	frmMetadataSerializerIn	#frmMetadataSerializerIn, :, serializer, metadataSerializers
+	m	(Lnet/minecraft/client/resources/IResourcePack;)V	func_110538_a	addResourcePack	#addResourcePack, :, :, add
+		p	1	p_110538_1_	resourcePack	#resourcePack, :, pack, :
+	m	(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/util/ResourceLocation;	func_110537_b	getLocationMcmeta	#getLocationMcmeta, :, ~, getMetadataLocation
+		p	0	p_110537_0_	location	#location, :, ~, location

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStoneSlab	net/minecraft/block/BlockStoneSlab	
+	f	Lnet/minecraft/util/IIcon;	field_150007_M	topSprite	#~, ~, ~, topSprite
+	f	[Ljava/lang/String;	field_150006_b	VARIANTS	#~, ~, ~, VARIANTS
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45431_1_	doubleSlab	#~, ~, ~, doubleSlab
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

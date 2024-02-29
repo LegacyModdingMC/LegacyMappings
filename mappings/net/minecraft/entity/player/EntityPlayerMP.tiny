@@ -1,0 +1,88 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/EntityPlayerMP	net/minecraft/entity/player/EntityPlayerMP	
+	f	Lnet/minecraft/network/NetHandlerPlayServer;	field_71135_a	playerNetServerHandler	#playerNetServerHandler, connection, networkHandler, :
+		c	The NetServerHandler assigned to this player by the ServerConfigurationManager.
+	f	Lnet/minecraft/server/MinecraftServer;	field_71133_b	mcServer	#mcServer, server, :, :
+		c	Reference to the MinecraftServer object.
+	f	Lorg/apache/logging/log4j/Logger;	field_147102_bM	logger	#logger, LOGGER, :, :
+	f	Ljava/lang/String;	field_71148_cg	translator	#translator, language, :, :
+	f	Ljava/util/List;	field_71130_g	destroyedItemsNetCache	#destroyedItemsNetCache, entityRemoveQueue, removedEntities, :
+		c	entities added to this list will  be packet29'd to the player
+	f	Lnet/minecraft/stats/StatisticsFile;	field_147103_bO	statsFile	#statsFile, :, statHandler, stats
+	f	F	field_130068_bO	combinedHealth	#combinedHealth, lastHealthScore, syncedHealth, completeHealth
+		c	the total health of the player, includes actual health and absorption health. Updated every tick.
+	f	F	field_71149_ch	lastHealth	#lastHealth, :, :, :
+		c	amount of health the client was last set to
+	f	I	field_71146_ci	lastFoodLevel	#lastFoodLevel, :, lastHungerLevel, :
+		c	set to foodStats.GetFoodLevel
+	f	Z	field_71147_cj	wasHungry	#wasHungry, :, :, :
+		c	set to foodStats.getSaturationLevel() == 0.0F each tick
+	f	I	field_71144_ck	lastExperience	#lastExperience, :, lastXp, lastSentXp
+		c	Amount of experience the client was last set to
+	f	I	field_147101_bU	respawnInvulnerabilityTicks	#respawnInvulnerabilityTicks, :, spawnProtectionTicks, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	field_71143_cn	chatVisibility	#chatVisibility, :, ~, chatVisibility
+	f	Z	field_71140_co	chatColours	#chatColours, :, chatColors, :
+	f	J	field_143005_bX	playerLastActiveTime	#playerLastActiveTime, :, lastActionTime, :
+	f	I	field_71139_cq	currentWindowId	#currentWindowId, :, screenHandlerSyncId, menuId
+		c	The currently in use window ID. Incremented every time a window is opened.
+	f	Lnet/minecraft/server/management/ItemInWorldManager;	field_71134_c	theItemInWorldManager	#theItemInWorldManager, interactionManager, :, :
+		c	The ItemInWorldManager belonging to this player
+	f	D	field_71131_d	managedPosX	#managedPosX, :, serverPosX, trackedX
+		c	player X position as seen by PlayerManager
+	f	D	field_71132_e	managedPosZ	#managedPosZ, :, serverPosZ, trackedZ
+		c	player Z position as seen by PlayerManager
+	f	Ljava/util/List;	field_71129_f	loadedChunks	#loadedChunks, :, :, newLoadedChunks
+		c	LinkedList that holds the loaded chunks.
+	f	Z	field_71137_h	isChangingQuantityOnly	#isChangingQuantityOnly, :, skipPacketSlotUpdates, useItemCooldown
+		c	set to true when player is moving quantity of items from one inventory to another(crafting) but item in either slot is not changed
+	f	I	field_71138_i	ping	#ping, :, :, :
+	f	Z	field_71136_j	playerConqueredTheEnd	#playerConqueredTheEnd, queuedEndExit, killedEnderdragon, leavingTheEnd
+		c	Set when a player beats the ender dragon, used to respawn the player at the spawn point while retaining inventory and XP
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/WorldServer;Lcom/mojang/authlib/GameProfile;Lnet/minecraft/server/management/ItemInWorldManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45285_1_	server	#server, :, :, :
+		p	2	p_i45285_2_	worldIn	#worldIn, :, world, :
+		p	3	p_i45285_3_	profile	#profile, :, :, :
+		p	4	p_i45285_4_	interactionManager	#interactionManager, interactionManagerIn, interactionManager, :
+	m	(FFZZ)V	func_110430_a	setEntityActionState	#setEntityActionState, :, ~, setPlayerInput
+		p	1	p_110430_1_	strafe	#strafe, :, ~, sidewaysSpeed
+		p	2	p_110430_2_	forward	#forward, :, ~, forwardSpeed
+		p	3	p_110430_3_	jumping	#jumping, :, ~, jumping
+		p	4	p_110430_4_	sneaking	#sneaking, :, ~, sneaking
+	m	(Lnet/minecraft/network/play/client/C15PacketClientSettings;)V	func_147100_a	handleClientSettings	#handleClientSettings, :, ~, updateSettings
+		p	1	p_147100_1_	packetIn	#packetIn, :, ~, packet
+	m	(Ljava/lang/String;)V	func_147095_a	requestTexturePackLoad	#requestTexturePackLoad, :, ~, sendResourcePack
+		c	on receiving this message the client (if permission is given) will download the requested textures
+		p	1	p_147095_1_	url	#~, ~, ~, url
+	m	(Lnet/minecraft/inventory/Container;)V	func_71120_a	sendContainerToPlayer	#sendContainerToPlayer, :, refreshScreenHandler, setMenu
+		p	1	p_71120_1_	containerIn	#containerIn, :, handler, :
+	m	(DZ)V	func_71122_b	handleFalling	#handleFalling, :, handleFall, :
+		c	process player falling based on movement packet
+		p	1	p_71122_1_	y	#y, :, distance, :
+		p	3	p_71122_3_	onGroundIn	#onGroundIn, :, ~, onGround
+	m	(Lnet/minecraft/tileentity/TileEntity;)V	func_147097_b	sendTileEntityUpdate	#sendTileEntityUpdate, :, updateBlockEntity, :
+		p	1	p_147097_1_	blockEntity	#~, ~, blockEntity, :
+	m	()V	func_71117_bO	getNextWindowId	#getNextWindowId, :, incrementSyncId, :
+		c	get the next window id to use
+	m	(Lnet/minecraft/entity/Entity;)V	func_152339_d	removeEntity	#removeEntity, :, stopTracking, remove
+		c	Sends a packet to the player to remove an entity.
+		p	1	p_152339_1_	entityIn	#entityIn, :, entity, :
+	m	()V	func_71116_b	addSelfToInternalCraftingInventory	#addSelfToInternalCraftingInventory, :, listenToScreenHandler, initMenu
+	m	()V	func_71127_g	onUpdateEntity	#onUpdateEntity, :, tickPlayer, :
+	m	()V	func_147098_j	updateBiomesExplored	#updateBiomesExplored, :, updateExploreredBiomes, :
+		c	Updates all biomes that have been explored by this player and triggers Adventuring Time if player qualifies.
+	m	()V	func_71113_k	updateHeldItem	#updateHeldItem, :, ~, use
+		c	updates item held by mouse
+	m	()V	func_71128_l	closeContainer	#closeContainer, :, closeOpenedScreenHandler, doCloseMenu
+		c	Closes the container the player currently has open.
+	m	()V	func_71123_m	mountEntityAndWakeUp	#mountEntityAndWakeUp, :, ~, onDisconnect
+	m	()V	func_71118_n	setPlayerHealthUpdated	#setPlayerHealthUpdated, :, markHealthDirty, :
+		c	this function is called when a players inventory is sent to him, lastHealth is updated on any dimension transitions, then reset.
+	m	()Lnet/minecraft/world/WorldServer;	func_71121_q	getServerForPlayer	#getServerForPlayer, getServerWorld, :, :
+	m	()Ljava/lang/String;	func_71114_r	getPlayerIP	#getPlayerIP, :, getIp, :
+		c	Gets the player's IP address. Used in /banip.
+	m	()Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	func_147096_v	getChatVisibility	#getChatVisibility, :, ~, getChatVisibility
+	m	()V	func_143004_u	markPlayerActive	#markPlayerActive, :, updateLastActionTime, :
+	m	()Lnet/minecraft/stats/StatisticsFile;	func_147099_x	getStatFile	#getStatFile, :, getStatHandler, getStats
+		c	Gets the stats file for reading achievements
+	m	()J	func_154331_x	getLastActiveTime	#getLastActiveTime, :, getLastActionTime, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

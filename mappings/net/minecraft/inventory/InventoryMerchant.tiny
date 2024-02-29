@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/InventoryMerchant	net/minecraft/inventory/InventoryMerchant	
+	f	Lnet/minecraft/entity/IMerchant;	field_70476_a	theMerchant	#theMerchant, merchant, trader, :
+	f	[Lnet/minecraft/item/ItemStack;	field_70474_b	theInventory	#theInventory, slots, inventory, stacks
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_70475_c	thePlayer	#thePlayer, player, :, :
+	f	Lnet/minecraft/village/MerchantRecipe;	field_70472_d	currentRecipe	#currentRecipe, :, tradeOffer, offer
+	f	I	field_70473_e	currentRecipeIndex	#currentRecipeIndex, :, ~, offerIndex
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/IMerchant;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1820_1_	thePlayerIn	#thePlayerIn, :, player, :
+		p	2	p_i1820_2_	theMerchantIn	#theMerchantIn, :, trader, :
+	m	(I)V	func_70471_c	setCurrentRecipeIndex	#setCurrentRecipeIndex, :, setRecipeIndex, setOffer
+		p	1	p_70471_1_	currentRecipeIndexIn	#currentRecipeIndexIn, :, ~, index
+	m	(I)Z	func_70469_d	inventoryResetNeededOnSlotChange	#inventoryResetNeededOnSlotChange, :, ~, isInputSlot
+		c	if par1 slot has changed, does resetRecipeAndSlots need to be called?
+		p	1	p_70469_1_	slotIn	#slotIn, :, slot, :
+	m	()V	func_70470_g	resetRecipeAndSlots	#resetRecipeAndSlots, :, updateRecipes, updateOffer
+	m	()Lnet/minecraft/village/MerchantRecipe;	func_70468_h	getCurrentRecipe	#getCurrentRecipe, :, getTradeOffer, getOffer

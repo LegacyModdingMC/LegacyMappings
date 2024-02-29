@@ -1,0 +1,841 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/World	net/minecraft/world/World	
+	f	Lnet/minecraft/village/VillageCollection;	field_72982_D	villageCollectionObj	#villageCollectionObj, villageCollection, villageState, villages
+	f	Lnet/minecraft/village/VillageSiege;	field_72983_E	villageSiegeObj	#villageSiegeObj, :, zombieSiegeManager, villageSiege
+	f	Lnet/minecraft/profiler/Profiler;	field_72984_F	theProfiler	#theProfiler, profiler, :, :
+	f	Lnet/minecraft/scoreboard/Scoreboard;	field_96442_D	worldScoreboard	#worldScoreboard, :, scoreboard, :
+	f	Z	field_72995_K	isRemote	#isRemote, :, isClient, isMultiplayer
+		c	This is set to true for client worlds, and false for server worlds.
+	f	Ljava/util/Set;	field_72993_I	activeChunkSet	#activeChunkSet, :, ~, tickingChunks
+		c	Positions to update
+	f	Z	field_72985_G	spawnHostileMobs	#spawnHostileMobs, :, spawnAnimals, :
+		c	indicates if enemies are spawned or not
+	f	Z	field_72992_H	spawnPeacefulMobs	#spawnPeacefulMobs, :, spawnMonsters, :
+		c	A flag indicating whether we should spawn peaceful mobs.
+	f	[I	field_72994_J	lightUpdateBlockList	#lightUpdateBlockList, :, updateLightBlocks, scheduledLightUpdates
+		c	is a temporary list of blocks and light values used when updating light levels. Holds up to 32x32x32 blocks (the maximum influence of a light source.) Every element is a packed bit value: 0000000000LLLLzzzzzzyyyyyyxxxxxx. The 4-bit L is a light level used when darkening blocks. 6-bit numbers x, y and z represent the block's offset from the original block, plus 32 (i.e. value of 31 would mean a -1 offset
+	f	Ljava/util/Calendar;	field_83016_L	theCalendar	#theCalendar, calendar, calender, calendar
+	f	I	field_72990_M	ambientTickCountdown	#ambientTickCountdown, :, ~, ambientSoundCooldown
+		c	number of ticks until the next random ambients play
+	f	Ljava/util/ArrayList;	field_72998_d	collidingBoundingBoxes	#collidingBoundingBoxes, :, ~, collisions
+	f	Z	field_147481_N	processingLoadedTiles	#processingLoadedTiles, :, iteratingTickingBlockEntities, isTickingBlockEntities
+		c	True while the World is ticking {@link #tickableTileEntities}, to prevent CME's if any of those ticks create more tile entities.
+	f	Ljava/util/List;	field_147484_a	addedTileEntityList	#addedTileEntityList, :, pendingBlockEntities, :
+		c	Tile Entity additions that were deferred because the World was still iterating existing Tile Entities; will be added to the world at the end of the tick.
+	f	Ljava/util/List;	field_147483_b	tileEntitiesToBeRemoved	#tileEntitiesToBeRemoved, :, unloadedBlockEntities, removedBlockEntities
+		c	Tile Entity removals that were deferred because the World was still iterating existing Tile Entities; will be removed from the world at the end of the tick.
+	f	J	field_73001_c	cloudColour	#cloudColour, :, cloudColor, :
+	f	Z	field_72999_e	scheduledUpdatesAreImmediate	#scheduledUpdatesAreImmediate, :, immediateUpdates, doTicksImmediately
+		c	boolean; if true updates scheduled by scheduleBlockUpdate happen immediately
+	f	Ljava/util/List;	field_72996_f	loadedEntityList	#loadedEntityList, :, loadedEntities, entities
+		c	A list of all Entities in all currently-loaded chunks
+	f	Ljava/util/List;	field_72997_g	unloadedEntityList	#unloadedEntityList, :, unloadedEntities, entitiesToRemove
+	f	Ljava/util/List;	field_147482_g	loadedTileEntityList	#loadedTileEntityList, :, blockEntities, :
+		c	A list of the loaded tile entities in the world
+	f	Ljava/util/List;	field_73010_i	playerEntities	#playerEntities, :, :, players
+		c	Array list of players in the world.
+	f	Ljava/util/List;	field_73007_j	weatherEffects	#weatherEffects, :, entities, globalEntities
+		c	a list of all the lightning entities
+	f	I	field_73008_k	skylightSubtracted	#skylightSubtracted, :, ambientDarkness, :
+		c	How much light is subtracted from full daylight
+	f	I	field_73005_l	updateLCG	#updateLCG, :, lcgBlockSeed, randomTickLCG
+		c	Contains the current Linear Congruential Generator seed for block updates. Used with an A value of 3 and a C value of 0x3c6ef35f, producing a highly planar series of values ill-suited for choosing random blocks in a 16x128x16 field.
+	f	I	field_73006_m	DIST_HASH_MAGIC	#DIST_HASH_MAGIC, :, unusedIncrement, randomTickLCGIncrement
+		c	magic number used to generate fast random numbers for 3d distribution within a chunk
+	f	F	field_73003_n	prevRainingStrength	#prevRainingStrength, :, rainGradientPrev, prevRain
+	f	F	field_73004_o	rainingStrength	#rainingStrength, :, rainGradient, rain
+	f	F	field_73018_p	prevThunderingStrength	#prevThunderingStrength, :, thunderGradientPrev, prevThunder
+	f	F	field_73017_q	thunderingStrength	#thunderingStrength, :, thunderGradient, thunder
+	f	I	field_73016_r	lastLightningBolt	#lastLightningBolt, :, ~, lightningCooldown
+		c	Set to 2 whenever a lightning bolt is generated in SSP. Decrements if > 0 in updateWeather(). Value appears to be unused.
+	f	Lnet/minecraft/world/EnumDifficulty;	field_73013_u	difficultySetting	#difficultySetting, :, ~, difficulty
+		c	Option > Difficulty setting (0 - 3)
+	f	Ljava/util/Random;	field_73012_v	rand	#rand, :, random, :
+		c	RNG for World.
+	f	Lnet/minecraft/world/WorldProvider;	field_73011_w	provider	#provider, :, dimension, :
+		c	The WorldProvider instance that World uses.
+	f	Ljava/util/List;	field_73021_x	worldAccesses	#worldAccesses, eventListeners, :, :
+	f	Lnet/minecraft/world/chunk/IChunkProvider;	field_73020_y	chunkProvider	#chunkProvider, :, :, chunkSource
+		c	Handles chunk operations and caching
+	f	Lnet/minecraft/world/storage/ISaveHandler;	field_73019_z	saveHandler	#saveHandler, :, :, storage
+	f	Lnet/minecraft/world/storage/WorldInfo;	field_72986_A	worldInfo	#worldInfo, :, levelProperties, data
+		c	holds information about a world (size on disk, time, spawn point, seed, ...)
+	f	Z	field_72987_B	findingSpawnPoint	#findingSpawnPoint, :, ~, isSearchingSpawnPoint
+		c	Boolean that is set to true when trying to find a spawn point
+	f	Lnet/minecraft/world/storage/MapStorage;	field_72988_C	mapStorage	#mapStorage, :, persistentStateManager, savedDataStorage
+	m	()Ljava/lang/String;	func_72827_u	getProviderName	#getProviderName, :, getDebugString, getChunkSourceDebugInfo
+		c	Returns the name of the current chunk provider, by calling chunkprovider.makeString()
+	m	(III)Ljava/util/Random;	func_72843_D	setRandomSeed	#setRandomSeed, :, getStructureRandom, setRandomSeed
+		c	puts the World Random seed to a specific state dependant on the inputs
+		p	1	p_72843_1_	seedX	#seedX, :, x, :
+		p	2	p_72843_2_	seedY	#seedY, :, z, :
+		p	3	p_72843_3_	seedZ	#seedZ, :, seed, :
+	m	()V	func_72966_v	calculateInitialSkylight	#calculateInitialSkylight, :, calculateAmbientDarkness, initAmbientDarkness
+		c	Called on construction of the World class to setup the initial skylight values
+	m	(III)F	func_147473_B	getLocalDifficulty	#~, ~, getLocalDifficulty, :
+		p	1	p_147473_1_	x	#x, :, :, :
+		p	2	p_147473_2_	y	#y, :, :, :
+		p	3	p_147473_3_	z	#z, :, :, :
+	m	()V	func_72903_x	setActivePlayerChunksAndCheckLight	#setActivePlayerChunksAndCheckLight, :, updateLighting, purgeTickingChunks
+	m	()Ljava/util/List;	func_72910_y	getLoadedEntityList	#getLoadedEntityList, :, getLoadedEntities, getEntities
+		c	Accessor for world Loaded Entity List
+	m	()V	func_72882_A	sendQuittingDisconnectingPacket	#sendQuittingDisconnectingPacket, :, disconnect, :
+		c	If on MP, sends a quitting packet.
+	m	()V	func_72906_B	checkSessionLock	#checkSessionLock, :, readSaveLock, checkSessionLock
+		c	Checks whether the session lock file was modified by another process
+	m	()J	func_72905_C	getSeed	#getSeed, :, :, :
+		c	Retrieve the world seed from level.dat
+	m	()J	func_82737_E	getTotalWorldTime	#getTotalWorldTime, :, getLastUpdateTime, getTime
+	m	()J	func_72820_D	getWorldTime	#getWorldTime, :, getTimeOfDay, :
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_72861_E	getSpawnPoint	#getSpawnPoint, :, getWorldSpawnPos, getSpawnPoint
+		c	Returns the coordinates of the spawn point
+	m	()Lnet/minecraft/world/chunk/IChunkProvider;	func_72863_F	getChunkProvider	#getChunkProvider, :, :, getChunkSource
+		c	gets the IChunkProvider this world uses.
+	m	()Lnet/minecraft/world/storage/ISaveHandler;	func_72860_G	getSaveHandler	#getSaveHandler, :, :, getStorage
+		c	Returns this world's current save handler
+	m	()Lnet/minecraft/world/storage/WorldInfo;	func_72912_H	getWorldInfo	#getWorldInfo, :, getLevelProperties, getData
+		c	Gets the World's WorldInfo instance
+	m	()Lnet/minecraft/world/GameRules;	func_82736_K	getGameRules	#getGameRules, :, :, :
+		c	Gets the GameRules instance.
+	m	()Z	func_72911_I	isThundering	#isThundering, :, :, :
+		c	Returns true if the current thunder strength (weighted with the rain strength) is greater than 0.9
+	m	()Z	func_72896_J	isRaining	#isRaining, :, :, :
+		c	Returns true if the current rain strength is greater than 0.2
+	m	()I	func_72940_L	getActualHeight	#getActualHeight, :, getEffectiveHeight, getDimensionHeight
+		c	Returns current world height.
+	m	()D	func_72919_O	getHorizon	#getHorizon, :, getHorizonHeight, :
+		c	Returns horizon height for use in rendering the sky.
+	m	()Ljava/util/Calendar;	func_83015_S	getCurrentDate	#getCurrentDate, :, getCalenderInstance, getCalendar
+		c	returns a calendar object containing the current date
+	m	()Lnet/minecraft/scoreboard/Scoreboard;	func_96441_U	getScoreboard	#getScoreboard, :, :, :
+	m	()V	func_147450_X	onEntityChanged	#~, ~, ~, onEntityChanged
+	m	()V	func_72947_a	calculateInitialWeather	#calculateInitialWeather, :, initWeatherGradients, initWeather
+		c	Called from World constructor to set rainingStrength and thunderingStrength
+	m	(DDDD)Lnet/minecraft/entity/player/EntityPlayer;	func_72977_a	getClosestPlayer	#getClosestPlayer, :, :, :
+		c	Gets the closest player to the point within the specified distance (distance can be set to less than 0 to not limit the distance). Args: x, y, z, dist
+		p	1	p_72977_1_	x	#x, :, :, :
+		p	3	p_72977_3_	y	#y, :, :, :
+		p	5	p_72977_5_	z	#z, :, :, :
+		p	7	p_72977_7_	distance	#distance, :, maxDistance, range
+	m	(DDDDDDLnet/minecraft/nbt/NBTTagCompound;)V	func_92088_a	makeFireworks	#makeFireworks, :, addFireworkParticle, addFireworksParticle
+		p	1	p_92088_1_	x	#x, :, :, :
+		p	3	p_92088_3_	y	#y, :, :, :
+		p	5	p_92088_5_	z	#z, :, :, :
+		p	7	p_92088_7_	motionX	#motionX, :, velocityX, :
+		p	9	p_92088_9_	motionY	#motionY, :, velocityY, :
+		p	11	p_92088_11_	motionZ	#motionZ, :, velocityZ, :
+		p	13	p_92088_13_	compund	#compund, compound, nbt, :
+	m	(DDDLjava/lang/String;FF)V	func_72908_a	playSoundEffect	#playSoundEffect, :, playSound, :
+		c	Play a sound effect. Many many parameters for this function. Not sure what they do, but a classic call is : (double)i + 0.5D, (double)j + 0.5D, (double)k + 0.5D, 'random.door_open', 1.0F, world.rand.nextFloat() * 0.1F + 0.9F with i,j,k position of the block.
+		p	1	p_72908_1_	x	#x, :, :, :
+		p	3	p_72908_3_	y	#y, :, :, :
+		p	5	p_72908_5_	z	#z, :, :, :
+		p	7	p_72908_7_	soundName	#soundName, :, sound, :
+		p	8	p_72908_8_	volume	#volume, :, :, :
+		p	9	p_72908_9_	pitch	#pitch, :, :, :
+	m	(DDDLjava/lang/String;FFZ)V	func_72980_b	playSound	#playSound, :, :, :
+		c	par8 is loudness, all pars passed to minecraftInstance.sndManager.playSound
+		p	1	p_72980_1_	x	#x, :, :, :
+		p	3	p_72980_3_	y	#y, :, :, :
+		p	5	p_72980_5_	z	#z, :, :, :
+		p	7	p_72980_7_	soundName	#soundName, :, sound, :
+		p	8	p_72980_8_	volume	#volume, :, :, :
+		p	9	p_72980_9_	pitch	#pitch, :, :, :
+		p	10	p_72980_10_	distanceDelay	#distanceDelay, :, useDistance, ignoreDistance
+	m	(F)I	func_72967_a	calculateSkylightSubtracted	#calculateSkylightSubtracted, :, ~, calculateAmbientDarkness
+		c	Returns the amount of skylight subtracted for the current time
+		p	1	p_72967_1_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(I)Lnet/minecraft/entity/Entity;	func_73045_a	getEntityByID	#getEntityByID, :, getEntityById, getEntity
+		c	Returns the Entity with the given ID, or null if it doesn't exist in this World.
+		p	1	p_73045_1_	id	#id, :, :, networkId
+	m	(IIII)Z	func_72873_a	doChunksNearChunkExist	#doChunksNearChunkExist, :, isRegionAroundLoaded, isAreaLoaded
+		c	Checks if any of the chunks within distance (argument 4) blocks of the given block exist
+		p	1	p_72873_1_	x	#~, ~, x, :
+		p	2	p_72873_2_	y	#~, ~, y, :
+		p	3	p_72873_3_	z	#~, ~, z, :
+		p	4	p_72873_4_	range	#~, ~, radius, range
+	m	(IIIII)Z	func_72921_c	setBlockMetadataWithNotify	#setBlockMetadataWithNotify, :, ~, setBlockMetadata
+		c	Sets the blocks metadata and if set will then notify blocks that this block changed, depending on the flag. Args: x, y, z, metadata, flag. See setBlock for flag description
+		p	1	p_72921_1_	x	#~, ~, x, :
+		p	2	p_72921_2_	y	#~, ~, y, :
+		p	3	p_72921_3_	z	#~, ~, z, :
+		p	4	p_72921_4_	metadata	#~, ~, ~, metadata
+		p	5	p_72921_5_	flags	#~, ~, ~, flags
+	m	(IIILnet/minecraft/world/EnumSkyBlock;)I	func_98179_a	computeLightValue	#computeLightValue, :, ~, getRawLight
+		p	1	p_98179_1_	x	#x, :, ~, x
+		p	2	p_98179_2_	y	#y, :, ~, y
+		p	3	p_98179_3_	z	#z, :, ~, z
+		p	4	p_98179_4_	type	#~, ~, ~, type
+	m	(IIILnet/minecraft/block/Block;)Z	func_147477_a	isBlockTickScheduledThisTick	#isBlockTickScheduledThisTick, :, isTicking, willTickThisTick
+		c	Returns true if the given block will receive a scheduled tick in this tick. Args: X, Y, Z, Block
+		p	1	p_147477_1_	x	#~, ~, ~, x
+		p	2	p_147477_2_	y	#~, ~, ~, y
+		p	3	p_147477_3_	z	#~, ~, ~, z
+		p	4	p_147477_4_	block	#~, ~, ~, block
+	m	(IIILnet/minecraft/block/Block;I)V	func_147464_a	scheduleBlockUpdate	#scheduleBlockUpdate, :, ~, scheduleTick
+		c	Schedules a tick to a block with a delay (Most commonly the tick rate)
+		p	1	p_147464_1_	x	#~, ~, ~, x
+		p	2	p_147464_2_	y	#~, ~, ~, y
+		p	3	p_147464_3_	z	#~, ~, ~, z
+		p	4	p_147464_4_	block	#~, ~, ~, block
+		p	5	p_147464_5_	delay	#~, ~, ~, delay
+	m	(IIILnet/minecraft/block/Block;II)V	func_147454_a	scheduleBlockUpdateWithPriority	#scheduleBlockUpdateWithPriority, :, setTickPriority, scheduleTick
+		p	1	p_147454_1_	x	#~, ~, ~, x
+		p	2	p_147454_2_	y	#~, ~, ~, y
+		p	3	p_147454_3_	z	#~, ~, ~, z
+		p	4	p_147454_4_	block	#~, ~, ~, block
+		p	5	p_147454_5_	delay	#~, ~, ~, delay
+		p	6	p_147454_6_	priority	#~, ~, ~, priority
+	m	(IIILnet/minecraft/tileentity/TileEntity;)V	func_147455_a	setTileEntity	#setTileEntity, :, ~, setBlockEntity
+		p	1	p_147455_1_	x	#x, :, :, :
+		p	2	p_147455_2_	y	#y, :, :, :
+		p	3	p_147455_3_	z	#z, :, :, :
+		p	4	p_147455_4_	tileEntityIn	#tileEntityIn, :, blockEntity, :
+	m	(IIIZ)Z	func_147480_a	breakBlock	#breakBlock, :, ~, breakBlock
+		c	Breaks the block at the given location. Args: x, y, z, dropBlock.\n \n@param x The X co-ordinate for the block\n@param y The Y co-ordinate for the block\n@param z The Z co-ordinate for the block\n@param dropBlock If the block should be dropped in-world
+		p	1	p_147480_1_	x	#x, :, :, :
+		p	2	p_147480_2_	y	#y, :, :, :
+		p	3	p_147480_3_	z	#z, :, :, :
+		p	4	p_147480_4_	dropBlock	#dropBlock, :, ~, dropItems
+	m	(IILnet/minecraft/world/chunk/Chunk;)V	func_147467_a	playMoodSoundAndCheckLight	#playMoodSoundAndCheckLight, :, ~, tickAmbienceAndLight
+		p	3	p_147467_3_	chunkIn	#chunkIn, :, chunk, :
+		p	1	p_147467_1_	x	#x, :, ~, x
+		p	2	p_147467_2_	z	#z, :, ~, z
+	m	(J)V	func_82738_a	setTotalWorldTime	#setTotalWorldTime, :, setTime, :
+		p	1	p_82738_1_	worldTime	#worldTime, :, time, :
+	m	(Lnet/minecraft/world/IWorldAccess;)V	func_72954_a	addWorldAccess	#addWorldAccess, addEventListener, addListener, addEventListener
+		c	Adds a IWorldAccess to the list of worldAccesses
+		p	1	p_72954_1_	worldAccess	#worldAccess, listener, :, :
+	m	(Lnet/minecraft/world/WorldSettings;)V	func_72963_a	initialize	#initialize, :, setPropertiesInitialized, init
+		p	1	p_72963_1_	settings	#settings, :, info, settings
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_147466_a	doesBlockHaveSolidTopSurface	#doesBlockHaveSolidTopSurface, :, canBuildOnTopOfBlock, hasSolidTop
+		c	Returns true if the block at the given coordinate has a solid (buildable) top surface.
+		p	0	p_147466_0_	worldIn	#worldIn, :, ~, world
+		p	1	p_147466_1_	x	#x, :, ~, x
+		p	2	p_147466_2_	y	#y, :, ~, y
+		p	3	p_147466_3_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/EnumSkyBlock;III)I	func_72925_a	getSkyBlockTypeBrightness	#getSkyBlockTypeBrightness, :, ~, getBrightness
+		c	Brightness for SkyBlock.Sky is clear white and (through color computing it is assumed) DEPENDENT ON DAYTIME. Brightness for SkyBlock.Block is yellowish and independent.
+		p	1	p_72925_1_	type	#~, ~, lightType, type
+		p	2	p_72925_2_	x	#~, ~, x, :
+		p	3	p_72925_3_	y	#~, ~, y, :
+		p	4	p_72925_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;IIIZILnet/minecraft/entity/Entity;Lnet/minecraft/item/ItemStack;)Z	func_147472_a	canPlaceEntityOnSide	#canPlaceEntityOnSide, :, ~, canReplace
+		c	Returns true if the given Entity can be placed on the given side of the given block position.
+		p	1	p_147472_1_	block	#~, ~, ~, block
+		p	2	p_147472_2_	x	#~, ~, ~, x
+		p	3	p_147472_3_	y	#~, ~, ~, y
+		p	4	p_147472_4_	z	#~, ~, ~, z
+		p	5	p_147472_5_	isFalling	#~, ~, ~, isFalling
+		p	6	p_147472_6_	face	#~, ~, ~, face
+		p	7	p_147472_7_	entity	#~, ~, ~, entity
+		p	8	p_147472_8_	stack	#~, ~, ~, stack
+	m	(Lnet/minecraft/tileentity/TileEntity;)V	func_147457_a	markTileEntityForRemoval	#markTileEntityForRemoval, :, queueBlockEntity, unloadBlockEntity
+		c	Adds the specified TileEntity to the pending removal list.
+		p	1	p_147457_1_	tileEntityIn	#tileEntityIn, :, blockEntity, :
+	m	(Lnet/minecraft/world/chunk/Chunk;Z)Ljava/util/List;	func_72920_a	getPendingBlockUpdates	#getPendingBlockUpdates, :, getScheduledTicks, :
+		p	1	p_72920_1_	chunkIn	#chunkIn, :, chunk, :
+		p	2	p_72920_2_	remove	#remove, :, ~, remove
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;	func_147461_a	getCollisionBoxes	#getCollisionBoxes, :, ~, getBlockCollisions
+		p	1	p_147461_1_	bb	#bb, :, box, shape
+	m	(Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/block/material/Material;)Z	func_72875_a	isMaterialInBB	#isMaterialInBB, :, containsMaterial, :
+		c	Returns true if the given bounding box contains the given material
+		p	1	p_72875_1_	bb	#bb, :, box, bounds
+		p	2	p_72875_2_	materialIn	#materialIn, :, material, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/block/material/Material;Lnet/minecraft/entity/Entity;)Z	func_72918_a	handleMaterialAcceleration	#handleMaterialAcceleration, :, ~, applyLiquidDrag
+		c	handles the acceleration of an object whilst in water. Not sure if it is used elsewhere.
+		p	1	p_72918_1_	bb	#bb, :, box, bounds
+		p	2	p_72918_2_	materialIn	#materialIn, :, material, :
+		p	3	p_72918_3_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/entity/Entity;)Z	func_72917_a	checkNoEntityCollision	#checkNoEntityCollision, :, hasEntityIn, canBuildIn
+		c	Returns true if there are no solid, live entities in the specified AxisAlignedBB, excluding the given entity
+		p	1	p_72917_1_	bb	#bb, :, box, bounds
+		p	2	p_72917_2_	entityIn	#entityIn, :, except, ignore
+	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/AxisAlignedBB;)F	func_72842_a	getBlockDensity	#getBlockDensity, :, ~, getBlockDensity
+		c	Gets the percentage of real blocks within within a bounding box, along a specified vector.
+		p	1	p_72842_1_	vec	#vec, :, pos, :
+		p	2	p_72842_2_	bb	#bb, :, box, bounds
+	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;	func_72933_a	rayTraceBlocks	#rayTraceBlocks, :, rayTrace, :
+		c	Performs a raycast against all blocks in the world except liquids.
+		p	1	p_72933_1_	start	#start, :, :, from
+		p	2	p_72933_2_	end	#end, :, :, to
+	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;Z)Lnet/minecraft/util/MovingObjectPosition;	func_72901_a	rayTraceBlocks	#rayTraceBlocks, :, rayTrace, :
+		c	Performs a raycast against all blocks in the world, and optionally liquids.
+		p	1	p_72901_1_	start	#start, :, :, from
+		p	2	p_72901_2_	end	#end, :, :, to
+		p	3	p_72901_3_	stopOnLiquid	#stopOnLiquid, :, ~, allowLiquids
+	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;ZZZ)Lnet/minecraft/util/MovingObjectPosition;	func_147447_a	rayTraceBlocks	#rayTraceBlocks, :, rayTrace, :
+		c	Performs a raycast against all blocks in the world. Args : Vec1, Vec2, stopOnLiquid, ignoreBlockWithoutBoundingBox, returnLastUncollidableBlock
+		p	1	p_147447_1_	vec31	#vec31, :, start, from
+		p	2	p_147447_2_	vec32	#vec32, :, end, to
+		p	3	p_147447_3_	stopOnLiquid	#stopOnLiquid, :, ~, allowLiquids
+		p	4	p_147447_4_	ignoreBlockWithoutBoundingBox	#ignoreBlockWithoutBoundingBox, :, ~, ignoreBlocksWithoutCollision
+		p	5	p_147447_5_	returnLastUncollidableBlock	#returnLastUncollidableBlock, :, ~, ~
+	m	(Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReportCategory;	func_72914_a	addWorldInfoToCrashReport	#addWorldInfoToCrashReport, :, addToCrashReport, populateCrashReport
+		c	Adds some basic stats of the world to the given crash report.
+		p	1	p_72914_1_	report	#report, :, :, :
+	m	(Ljava/lang/Class;)I	func_72907_a	countEntities	#countEntities, :, getPersistentEntityCount, getEntityCount
+		c	Counts how many entities of an entity class exist in the world. Args: entityClass
+		p	1	p_72907_1_	entityType	#entityType, :, entityClass, type
+	m	(Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;	func_72872_a	getEntitiesWithinAABB	#getEntitiesWithinAABB, :, getEntitiesInBox, getEntities
+		c	Returns all entities of the specified class type which intersect with the AABB. Args: entityClass, aabb
+		p	1	p_72872_1_	classEntity	#classEntity, :, except, type
+		p	2	p_72872_2_	bb	#bb, :, box, bounds
+	m	(Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/entity/Entity;)Lnet/minecraft/entity/Entity;	func_72857_a	findNearestEntityWithinAABB	#findNearestEntityWithinAABB, :, getEntitiesByClass, getClosestEntity
+		p	1	p_72857_1_	entityType	#entityType, :, entityClass, type
+		p	2	p_72857_2_	aabb	#aabb, :, box, bounds
+		p	3	p_72857_3_	closestTo	#closestTo, :, except, entity
+	m	(Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/command/IEntitySelector;)Ljava/util/List;	func_82733_a	selectEntitiesWithinAABB	#selectEntitiesWithinAABB, :, getEntitiesInBox, getEntities
+		p	1	p_82733_1_	clazz	#clazz, :, except, type
+		p	2	p_82733_2_	bb	#bb, :, box, :
+		p	3	p_82733_3_	selector	#selector, :, entityPredicate, filter
+	m	(Ljava/lang/Class;Ljava/lang/String;)Lnet/minecraft/world/WorldSavedData;	func_72943_a	loadItemData	#loadItemData, loadData, getOrCreateState, loadSavedData
+		c	Loads an existing MapDataBase corresponding to the given String id from disk using the MapStorage, instantiating the given Class, or returns null if none such file exists. args: Class to instantiate, String dataid
+		p	1	p_72943_1_	clazz	#clazz, :, cls, type
+		p	2	p_72943_2_	dataID	#dataID, :, name, id
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayer;	func_72924_a	getPlayerEntityByName	#getPlayerEntityByName, :, getPlayerByName, getPlayer
+		c	Find a player by name in this world.
+		p	1	p_72924_1_	name	#name, :, :, :
+	m	(Ljava/lang/String;DDDDDD)V	func_72869_a	spawnParticle	#spawnParticle, :, :, addParticle
+		c	Spawns a particle.  Args particleName, x, y, z, velX, velY, velZ
+		p	1	p_72869_1_	particleName	#particleName, :, :, type
+		p	2	p_72869_2_	x	#x, :, :, :
+		p	4	p_72869_4_	y	#y, :, :, :
+		p	6	p_72869_6_	z	#z, :, :, :
+		p	8	p_72869_8_	velocityX	#velocityX, :, :, :
+		p	10	p_72869_10_	velocityY	#velocityY, :, :, :
+		p	12	p_72869_12_	velocityZ	#velocityZ, :, :, :
+	m	(Ljava/lang/String;III)V	func_72934_a	playRecord	#playRecord, :, :, onRecordRemoved
+		c	Plays a record at the specified coordinates of the specified name. Args: recordName, x, y, z
+		p	1	p_72934_1_	recordName	#recordName, :, :, name
+		p	2	p_72934_2_	x	#x, :, :, :
+		p	3	p_72934_3_	y	#y, :, :, :
+		p	4	p_72934_4_	z	#z, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/world/WorldSavedData;)V	func_72823_a	setItemData	#setItemData, setData, replaceState, setSavedData
+		c	Assigns the given String id to the given MapDataBase using the MapStorage, removing any existing ones of the same id.
+		p	1	p_72823_1_	dataID	#dataID, :, name, id
+		p	2	p_72823_2_	worldSavedDataIn	#worldSavedDataIn, :, state, data
+	m	(Ljava/util/Collection;)V	func_147448_a	addTileEntities	#addTileEntities, :, addBlockEntities, loadBlockEntities
+		p	1	p_147448_1_	tileEntityCollection	#tileEntityCollection, :, collection, blockEntities
+	m	(Ljava/util/List;)V	func_72868_a	addLoadedEntities	#addLoadedEntities, :, loadEntities, :
+		c	adds entities to the loaded entities list, and loads thier skins.
+		p	1	p_72868_1_	entities	#~, ~, entities, :
+	m	(Ljava/util/UUID;)Lnet/minecraft/entity/player/EntityPlayer;	func_152378_a	getPlayerEntityByUUID	#getPlayerEntityByUUID, :, getPlayerByUuid, ~
+		p	1	p_152378_1_	uuid	#uuid, :, :, ~
+	m	(Lnet/minecraft/entity/Entity;)V	func_72923_a	onEntityAdded	#onEntityAdded, :, onEntitySpawned, onEntityAdded
+		p	1	p_72923_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;B)V	func_72960_a	setEntityState	#setEntityState, :, sendEntityStatus, doEntityEvent
+		c	sends a Packet 38 (Entity Status) to all tracked players of that entity
+		p	1	p_72960_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72960_2_	state	#state, :, status, event
+	m	(Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/player/EntityPlayer;	func_72890_a	getClosestPlayerToEntity	#getClosestPlayerToEntity, :, getClosestPlayer, :
+		c	Gets the closest player to the entity within the specified distance (if distance is less than 0 then ignored). Args: entity, dist
+		p	1	p_72890_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72890_2_	distance	#distance, :, maxDistance, range
+	m	(Lnet/minecraft/entity/Entity;DDDFZ)Lnet/minecraft/world/Explosion;	func_72876_a	createExplosion	#createExplosion, :, :, explode
+		c	Creates an explosion. Args: entity, x, y, z, strength
+		p	1	p_72876_1_	entityIn	#entityIn, :, entity, source
+		p	2	p_72876_2_	x	#x, :, :, :
+		p	4	p_72876_4_	y	#y, :, :, :
+		p	6	p_72876_6_	z	#z, :, :, :
+		p	8	p_72876_8_	strength	#strength, :, power, :
+		p	9	p_72876_9_	isSmoking	#isSmoking, damagesTerrain, destructive, :
+	m	(Lnet/minecraft/entity/Entity;DDDFZZ)Lnet/minecraft/world/Explosion;	func_72885_a	newExplosion	#newExplosion, :, createExplosion, explode
+		c	returns a new explosion. Does initiation (at time of writing Explosion is not finished)
+		p	1	p_72885_1_	entityIn	#entityIn, :, entity, source
+		p	2	p_72885_2_	x	#x, :, :, :
+		p	4	p_72885_4_	y	#y, :, :, :
+		p	6	p_72885_6_	z	#z, :, :, :
+		p	8	p_72885_8_	strength	#strength, :, power, :
+		p	9	p_72885_9_	isFlaming	#isFlaming, causesFire, createFire, :
+		p	10	p_72885_10_	isSmoking	#isSmoking, damagesTerrain, destructive, :
+	m	(Lnet/minecraft/entity/Entity;F)Lnet/minecraft/util/Vec3;	func_72833_a	getSkyColor	#getSkyColor, :, ~, getSkyColor
+		c	Calculates the color for the skybox
+		p	1	p_72833_1_	entityIn	#entityIn, :, ~, entity
+		p	2	p_72833_2_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/Entity;IIIFZZZZ)Lnet/minecraft/pathfinding/PathEntity;	func_72844_a	getEntityPathToXYZ	#getEntityPathToXYZ, :, ~, findPath
+		c	Args : entity, x, y, z, range, canPassOpenWoodenDoors, canPassClosedWoodenDoors, avoidsWater, canSwim
+		p	1	p_72844_1_	entity	#~, ~, entity, :
+		p	2	p_72844_2_	x	#~, ~, ~, x
+		p	3	p_72844_3_	y	#~, ~, ~, y
+		p	4	p_72844_4_	z	#~, ~, ~, z
+		p	5	p_72844_5_	range	#~, ~, ~, range
+		p	6	p_72844_6_	canWalkThroughDoors	#~, ~, ~, canWalkThroughDoors
+		p	7	p_72844_7_	canOpenDoors	#~, ~, ~, canOpenDoors
+		p	8	p_72844_8_	canFloat	#~, ~, ~, canFloat
+		p	9	p_72844_9_	canSwim	#~, ~, ~, canSwim
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;	func_72945_a	getCollidingBoundingBoxes	#getCollidingBoundingBoxes, :, doesBoxCollide, getCollisions
+		c	Returns a list of bounding boxes that collide with aabb excluding the passed in entity's collision. Args: entity, aabb
+		p	1	p_72945_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72945_2_	bb	#bb, :, box, shape
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/command/IEntitySelector;)Ljava/util/List;	func_94576_a	getEntitiesWithinAABBExcludingEntity	#getEntitiesWithinAABBExcludingEntity, :, getEntitiesIn, getEntities
+		p	1	p_94576_1_	exclude	#~, ~, entity, exclude
+		p	2	p_94576_2_	bounds	#~, ~, box, bounds
+		p	3	p_94576_3_	filter	#~, ~, entityPredicate, filter
+	m	(Lnet/minecraft/entity/Entity;Ljava/lang/String;FF)V	func_72956_a	playSoundAtEntity	#playSoundAtEntity, :, playSound, :
+		c	Plays a sound at the entity's position. Args: entity, sound, volume (relative to 1.0), and frequency (or pitch, also relative to 1.0).
+		p	1	p_72956_1_	entityIn	#entityIn, :, entity, source
+		p	2	p_72956_2_	name	#name, :, sound, :
+		p	3	p_72956_3_	volume	#volume, :, :, :
+		p	4	p_72956_4_	pitch	#pitch, :, :, :
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;FZZZZ)Lnet/minecraft/pathfinding/PathEntity;	func_72865_a	getPathEntityToEntity	#getPathEntityToEntity, :, ~, findPath
+		p	1	p_72865_1_	entity	#~, ~, ~, entity
+		p	2	p_72865_2_	target	#~, ~, ~, target
+		p	3	p_72865_3_	range	#~, ~, ~, range
+		p	4	p_72865_4_	canWalkThroughDoors	#~, ~, ~, canWalkThroughDoors
+		p	5	p_72865_5_	canOpenDoors	#~, ~, ~, canOpenDoors
+		p	6	p_72865_6_	canFloat	#~, ~, ~, canFloat
+		p	7	p_72865_7_	canSwim	#~, ~, ~, canSwim
+	m	(Lnet/minecraft/entity/Entity;Z)V	func_72866_a	updateEntityWithOptionalForce	#updateEntityWithOptionalForce, :, checkChunk, updateEntity
+		c	Will update the entity in the world if the chunk the entity is in is currently loaded or its forced to update. Args: entity, forceUpdate
+		p	1	p_72866_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72866_2_	forceUpdate	#forceUpdate, :, bl, requireLoaded
+	m	(Lnet/minecraft/entity/player/EntityPlayer;III)Z	func_72962_a	canMineBlock	#canMineBlock, :, ~, canModify
+		c	Called when checking if a certain block can be mined or not. The 'spawn safe zone' check is located here.
+		p	1	p_72962_1_	player	#player, :, ~, player
+		p	2	p_72962_2_	x	#x, :, ~, x
+		p	3	p_72962_3_	y	#y, :, ~, y
+		p	4	p_72962_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/entity/player/EntityPlayer;IIII)Z	func_72886_a	extinguishFire	#extinguishFire, :, ~, extinguishFire
+		c	If the block in the given direction of the given coordinate is fire, extinguish it. Args: Player, X,Y,Z, blockDirection
+		p	1	p_72886_1_	player	#player, :, :, :
+		p	2	p_72886_2_	x	#x, :, :, :
+		p	3	p_72886_3_	y	#y, :, :, :
+		p	4	p_72886_4_	z	#z, :, :, :
+		p	5	p_72886_5_	side	#side, :, :, face
+	m	(Lnet/minecraft/entity/player/EntityPlayer;IIIII)V	func_72889_a	playAuxSFXAtEntity	#playAuxSFXAtEntity, :, dispatchEvent, doEvent
+		c	See description for playAuxSFX.
+		p	1	p_72889_1_	player	#player, :, playerEntity, source
+		p	2	p_72889_2_	type	#~, ~, type, :
+		p	3	p_72889_3_	x	#x, :, :, :
+		p	4	p_72889_4_	y	#y, :, :, :
+		p	5	p_72889_5_	z	#z, :, :, :
+		p	6	p_72889_6_	data	#~, ~, data, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;FF)V	func_85173_a	playSoundToNearExcept	#playSoundToNearExcept, :, playSound, :
+		c	Plays sound to all near players except the player reference given
+		p	1	p_85173_1_	player	#player, :, :, source
+		p	2	p_85173_2_	name	#name, :, sound, :
+		p	3	p_85173_3_	volume	#volume, :, :, :
+		p	4	p_85173_4_	pitch	#pitch, :, :, :
+	m	(Z)Z	func_72955_a	tickUpdates	#tickUpdates, :, ~, doScheduledTicks
+		c	Runs through the list of updates to run and ticks them
+		p	1	p_72955_1_	runAllPending	#runAllPending, :, ~, flush
+			c	Flush all scheduled ticks, rather than just the ones scheduled for this tick.
+	m	(ZZ)V	func_72891_a	setAllowedSpawnTypes	#setAllowedSpawnTypes, :, setMobSpawning, setAllowedMobSpawns
+		c	Set which types of mobs are allowed to spawn (peaceful vs hostile).
+		p	1	p_72891_1_	hostile	#hostile, :, spawnAnimals, :
+		p	2	p_72891_2_	peaceful	#peaceful, :, spawnMonsters, :
+	m	()V	func_72835_b	tick	#tick, :, :, :
+		c	Runs a single tick for the world
+	m	(DDD)F	func_147462_b	getTensionFactorForBlock	#getTensionFactorForBlock, :, getLocalDifficulty, :
+		c	returns a float value that can be used to determine how likely something is to go awry in the area. It increases based on how long the player is within the vicinity, the lunar phase, and game difficulty. The value can be up to 1.5 on the highest difficulty, 1.0 otherwise.
+		p	1	p_147462_1_	x	#x, :, :, :
+		p	3	p_147462_3_	y	#y, :, :, :
+		p	5	p_147462_5_	z	#z, :, :, :
+	m	(DDDD)Lnet/minecraft/entity/player/EntityPlayer;	func_72846_b	getClosestVulnerablePlayer	#getClosestVulnerablePlayer, :, getClosestVisiblePlayer, getClosestPlayerToAttack
+		c	Returns the closest vulnerable player within the given radius, or null if none is found.
+		p	1	p_72846_1_	entityX	#~, ~, x, entityX
+		p	3	p_72846_3_	entityY	#~, ~, y, entityY
+		p	5	p_72846_5_	entityZ	#~, ~, z, entityZ
+		p	7	p_72846_7_	range	#~, ~, maxDistance, range
+	m	(F)F	func_72971_b	getSunBrightness	#getSunBrightness, :, ~, calculateAmbientLight
+		c	Returns the sun brightness - checks time of day, rain and thunder
+		p	1	p_72971_1_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(II)Lnet/minecraft/block/Block;	func_147474_b	getTopBlock	#getTopBlock, :, ~, getSurfaceBlock
+		c	Returns the top-most block of the ground above sea-level.
+		p	1	p_147474_1_	x	#x, :, ~, x
+		p	2	p_147474_2_	z	#z, :, ~, z
+	m	(IIII)V	func_72975_g	markBlocksDirtyVertical	#markBlocksDirtyVertical, :, ~, checkLight
+		c	marks a vertical line of blocks as dirty
+		p	1	p_72975_1_	x1	#x1, x, :, :
+		p	2	p_72975_2_	z1	#z1, z, :, :
+		p	3	p_72975_3_	x2	#x2, y1, minY, :
+		p	4	p_72975_4_	z2	#z2, y2, maxY, :
+	m	(IIIII)V	func_82739_e	playBroadcastSound	#playBroadcastSound, :, dispatchWorldEvent, doGlobalEvent
+		p	1	p_82739_1_	type	#~, ~, eventId, type
+		p	2	p_82739_2_	x	#~, ~, x, :
+		p	3	p_82739_3_	y	#~, ~, y, :
+		p	4	p_82739_4_	z	#~, ~, z, :
+		p	5	p_82739_5_	data	#~, ~, data, :
+	m	(IIIIII)Z	func_72904_c	checkChunksExist	#checkChunksExist, :, isRegionLoaded, isAreaLoaded
+		c	Checks between a min and max all the chunks inbetween actually exist. Args: minX, minY, minZ, maxX, maxY, maxZ
+		p	1	p_72904_1_	minX	#~, ~, minX, :
+		p	2	p_72904_2_	minY	#~, ~, minY, :
+		p	3	p_72904_3_	minZ	#~, ~, minZ, :
+		p	4	p_72904_4_	maxX	#~, ~, maxX, :
+		p	5	p_72904_5_	maxY	#~, ~, maxY, :
+		p	6	p_72904_6_	maxZ	#~, ~, maxZ, :
+	m	(IIILnet/minecraft/block/Block;)Z	func_147449_b	setBlock	#setBlock, :, ~, setBlock
+		c	Sets a block by a coordinate
+		p	1	p_147449_1_	x	#x, :, ~, x
+		p	2	p_147449_2_	y	#y, :, ~, y
+		p	3	p_147449_3_	z	#z, :, ~, z
+		p	4	p_147449_4_	blockType	#blockType, :, ~, block
+	m	(IIILnet/minecraft/block/Block;I)V	func_147441_b	notifyBlocksOfNeighborChange	#notifyBlocksOfNeighborChange, :, onBlockUpdatedAtFace, updateNeighborsExcept
+		p	1	p_147441_1_	x	#~, ~, x, :
+		p	2	p_147441_2_	y	#~, ~, y, :
+		p	3	p_147441_3_	z	#~, ~, z, :
+		p	4	p_147441_4_	block	#~, ~, block, :
+		p	5	p_147441_5_	dir	#~, ~, direction, dir
+	m	(IIILnet/minecraft/block/Block;II)V	func_147446_b	loadScheduledTick	#~, ~, ~, loadScheduledTick
+		p	1	p_147446_1_	x	#~, ~, ~, x
+		p	2	p_147446_2_	y	#~, ~, ~, y
+		p	3	p_147446_3_	z	#~, ~, ~, z
+		p	4	p_147446_4_	block	#~, ~, ~, block
+		p	5	p_147446_5_	delay	#~, ~, ~, delay
+		p	6	p_147446_6_	priority	#~, ~, ~, priority
+	m	(IIILnet/minecraft/tileentity/TileEntity;)V	func_147476_b	markTileEntityChunkModified	#markTileEntityChunkModified, :, markDirty, onBlockEntityChanged
+		c	Args: X, Y, Z, tile entity Marks the chunk the tile entity is in as modified. This is essential as chunks that are not marked as modified may be rolled back when exiting the game.
+		p	1	p_147476_1_	x	#~, ~, x, :
+		p	2	p_147476_2_	y	#~, ~, y, :
+		p	3	p_147476_3_	z	#~, ~, z, :
+		p	4	p_147476_4_	blockEntity	#~, ~, blockEntity, :
+	m	(IIIZ)I	func_72849_a	getBlockLightValue_do	#getBlockLightValue_do, :, ~, getRawBrightness
+		c	Gets the light value of a block location. This is the actual function that gets the value and has a bool flag that indicates if its a half step block to get the maximum light value of a direct neighboring block (left, right, forward, back, and up)
+		p	1	p_72849_1_	x	#~, ~, x, :
+		p	2	p_72849_2_	y	#~, ~, y, :
+		p	3	p_72849_3_	z	#~, ~, z, :
+		p	4	p_72849_4_	useNeighborLight	#~, ~, ~, useNeighborLight
+	m	(J)V	func_72877_b	setWorldTime	#setWorldTime, :, setTimeOfDay, :
+		c	Sets the world time.
+		p	1	p_72877_1_	time	#time, :, :, :
+	m	(Lnet/minecraft/world/IWorldAccess;)V	func_72848_b	removeWorldAccess	#removeWorldAccess, removeEventListener, removeListener, removeEventListener
+		c	Removes a worldAccess from the worldAccesses object
+		p	1	p_72848_1_	worldAccess	#worldAccess, listener, :, :
+	m	(Lnet/minecraft/world/EnumSkyBlock;III)I	func_72972_b	getSavedLightValue	#getSavedLightValue, :, ~, getLight
+		c	Returns saved light value without taking into account the time of day.  Either looks in the sky light map or block light map based on the enumSkyBlock arg.
+		p	1	p_72972_1_	type	#~, ~, lightType, type
+		p	2	p_72972_2_	x	#~, ~, x, :
+		p	3	p_72972_3_	y	#~, ~, y, :
+		p	4	p_72972_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/world/EnumSkyBlock;IIII)V	func_72915_b	setLightValue	#setLightValue, :, ~, setLight
+		c	Sets the light value either into the sky map or block map depending on if enumSkyBlock is set to sky or block. Args: enumSkyBlock, x, y, z, lightValue
+		p	1	p_72915_1_	type	#~, ~, lightType, type
+		p	2	p_72915_2_	x	#~, ~, x, :
+		p	3	p_72915_3_	y	#~, ~, y, :
+		p	4	p_72915_4_	z	#~, ~, z, :
+		p	5	p_72915_5_	light	#~, ~, ~, light
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_72855_b	checkNoEntityCollision	#checkNoEntityCollision, :, hasEntityIn, canBuildIn
+		c	Returns true if there are no solid, live entities in the specified AxisAlignedBB
+		p	1	p_72855_1_	bb	#bb, :, box, bounds
+	m	(Lnet/minecraft/util/AxisAlignedBB;Lnet/minecraft/block/material/Material;)Z	func_72830_b	isAABBInMaterial	#isAABBInMaterial, :, containsBlockWithMaterial, containsLiquid
+		c	checks if the given AABB is in the material given. Used while swimming.
+		p	1	p_72830_1_	bb	#bb, :, box, bounds
+		p	2	p_72830_2_	materialIn	#materialIn, :, material, :
+	m	(Ljava/lang/String;)I	func_72841_b	getUniqueDataId	#getUniqueDataId, :, getIntState, getSavedDataCount
+		c	Returns an unique new data id from the MapStorage for the given prefix and saves the idCounts map to the 'idcounts' file.
+		p	1	p_72841_1_	key	#key, :, name, id
+	m	(Ljava/lang/String;III)Lnet/minecraft/world/ChunkPosition;	func_147440_b	findClosestStructure	#findClosestStructure, :, getFeatureLocation, findNearestStructure
+		c	Returns the location of the closest structure of the specified type. If not found returns null.
+		p	1	p_147440_1_	type	#type, :, featureName, type
+		p	2	p_147440_2_	x	#x, :, startX, x
+		p	3	p_147440_3_	y	#y, :, startY, y
+		p	4	p_147440_4_	z	#z, :, startZ, z
+	m	(Ljava/util/List;)V	func_72828_b	unloadEntities	#unloadEntities, :, :, :
+		c	Adds a list of entities to be unloaded on the next pass of World.updateEntities()
+		p	1	p_72828_1_	entities	#~, ~, entities, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_72847_b	onEntityRemoved	#onEntityRemoved, :, :, :
+		p	1	p_72847_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/player/EntityPlayer;	func_72856_b	getClosestVulnerablePlayerToEntity	#getClosestVulnerablePlayerToEntity, :, getClosestVisiblePlayer, getClosestPlayerToAttack
+		c	Returns the closest vulnerable player to this entity within the given radius, or null if none is found
+		p	1	p_72856_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72856_2_	distance	#distance, :, maxDistance, range
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;)Ljava/util/List;	func_72839_b	getEntitiesWithinAABBExcludingEntity	#getEntitiesWithinAABBExcludingEntity, :, getEntitiesIn, getEntities
+		c	Will get all entities within the specified AABB excluding the one passed into it. Args: entityToExclude, aabb
+		p	1	p_72839_1_	entityIn	#entityIn, :, entity, exclude
+		p	2	p_72839_2_	bb	#bb, :, box, bounds
+	m	()V	func_72854_c	updateAllPlayersSleepingFlag	#updateAllPlayersSleepingFlag, :, updateSleepingStatus, updateSleepingPlayers
+		c	Updates the flag that indicates whether or not all players in the world are sleeping.
+	m	(F)F	func_72826_c	getCelestialAngle	#getCelestialAngle, :, getSkyAngle, getTimeOfDay
+		c	calls calculateCelestialAngle
+		p	1	p_72826_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(II)Z	func_72916_c	chunkExists	#chunkExists, isSpawnChunk, isChunkInsideSpawnChunks, isChunkLoadedAt
+		c	Returns whether a chunk exists at chunk coordinates x, y
+		p	1	p_72916_1_	x	#x, :, chunkX, :
+		p	2	p_72916_2_	z	#z, :, chunkZ, :
+	m	(IIIII)V	func_72926_e	playAuxSFX	#playAuxSFX, :, dispatchEvent, doEvent
+		c	See description for func_72706_a.
+		p	1	p_72926_1_	type	#~, ~, type, :
+		p	2	p_72926_2_	x	#x, :, :, :
+		p	3	p_72926_3_	y	#y, :, :, :
+		p	4	p_72926_4_	z	#z, :, :, :
+		p	5	p_72926_5_	data	#~, ~, data, :
+	m	(IIIIII)V	func_147458_c	markBlockRangeForRenderUpdate	#markBlockRangeForRenderUpdate, :, onRenderRegionUpdate, onRegionChanged
+		c	Notifies all listening IWorldEventListeners of an update within the given bounds.
+		p	1	p_147458_1_	x1	#x1, :, :, minX
+		p	2	p_147458_2_	y1	#y1, :, :, minY
+		p	3	p_147458_3_	z1	#z1, :, :, minZ
+		p	4	p_147458_4_	x2	#x2, :, :, maxX
+		p	5	p_147458_5_	y2	#y2, :, :, maxY
+		p	6	p_147458_6_	z2	#z2, :, :, maxZ
+	m	(IIILnet/minecraft/block/Block;)V	func_147444_c	notifyBlockChange	#notifyBlockChange, :, ~, onBlockChanged
+		c	The block type change and need to notify other systems  Args: x, y, z, blockID
+		p	1	p_147444_1_	x	#~, ~, ~, x
+		p	2	p_147444_2_	y	#~, ~, ~, y
+		p	3	p_147444_3_	z	#~, ~, ~, z
+		p	4	p_147444_4_	block	#~, ~, ~, block
+	m	(IIILnet/minecraft/block/Block;II)V	func_147452_c	addBlockEvent	#addBlockEvent, :, ~, addBlockEvent
+		c	Adds a block event with the given Args to the blockEventCache. During the next tick(), the block specified will have its onBlockEvent handler called with the given parameters. Args: X,Y,Z, Block, EventID, EventParameter
+		p	1	p_147452_1_	x	#x, :, ~, x
+		p	2	p_147452_2_	y	#y, :, ~, y
+		p	3	p_147452_3_	z	#z, :, ~, z
+		p	4	p_147452_4_	blockIn	#blockIn, :, ~, block
+		p	5	p_147452_5_	eventId	#eventId, :, ~, type
+		p	6	p_147452_6_	eventParameter	#eventParameter, :, ~, data
+	m	(IIIZ)Z	func_147445_c	isBlockNormalCubeDefault	#isBlockNormalCubeDefault, :, ~, isOpaqueFullCube
+		c	Checks if the block is a solid, normal cube. If the chunk does not exist, or is not loaded, it returns the boolean parameter
+		p	1	p_147445_1_	x	#x, :, :, :
+		p	2	p_147445_2_	y	#y, :, :, :
+		p	3	p_147445_3_	z	#z, :, :, :
+		p	4	p_147445_4_	def	#def, :, ~, defaultValue
+	m	(Lnet/minecraft/world/EnumSkyBlock;III)Z	func_147463_c	updateLightByType	#updateLightByType, :, ~, checkLight
+		p	1	p_147463_1_	type	#~, ~, ~, type
+		p	2	p_147463_2_	x	#~, ~, ~, x
+		p	3	p_147463_3_	y	#~, ~, ~, y
+		p	4	p_147463_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_72829_c	checkBlockCollision	#checkBlockCollision, :, isBoxNotEmpty, containsNonAir
+		c	Returns true if there are any blocks in the region constrained by an AxisAlignedBB
+		p	1	p_72829_1_	bb	#bb, :, box, bounds
+	m	(Lnet/minecraft/entity/Entity;)Z	func_72942_c	addWeatherEffect	#addWeatherEffect, :, addEntity, addGlobalEntity
+		c	adds a lightning bolt to the list of lightning bolts in this world.
+		p	1	p_72942_1_	entityIn	#entityIn, :, entity, :
+	m	(F)F	func_72929_e	getCelestialAngleRadians	#getCelestialAngleRadians, :, getSkyAngleRadians, getSunAngle
+		c	Return getCelestialAngle()*2*PI
+		p	1	p_72929_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(II)Lnet/minecraft/world/chunk/Chunk;	func_72938_d	getChunkFromBlockCoords	#getChunkFromBlockCoords, :, getChunkFromPos, getChunk
+		c	Returns a chunk looked up by block coordinates. Args: x, z
+		p	1	p_72938_1_	x	#~, ~, x, :
+		p	2	p_72938_2_	z	#~, ~, z, :
+	m	(III)Z	func_72899_e	blockExists	#blockExists, :, isPosLoaded, isChunkLoaded
+		c	Returns whether a block exists at world coordinates x, y, z
+		p	1	p_72899_1_	x	#~, ~, x, :
+		p	2	p_72899_2_	y	#~, ~, y, :
+		p	3	p_72899_3_	z	#~, ~, z, :
+	m	(IIIII)V	func_147443_d	destroyBlockInWorldPartially	#destroyBlockInWorldPartially, :, ~, updateBlockMiningProgress
+		c	Starts (or continues) destroying a block with given ID at the given coordinates for the given partially destroyed value
+		p	1	p_147443_1_	id	#~, ~, ~, id
+		p	2	p_147443_2_	x	#x, :, ~, x
+		p	3	p_147443_3_	y	#y, :, ~, y
+		p	4	p_147443_4_	z	#z, :, ~, z
+		p	5	p_147443_5_	blockDamage	#blockDamage, :, ~, progress
+	m	(IIILnet/minecraft/block/Block;)V	func_147459_d	notifyBlocksOfNeighborChange	#notifyBlocksOfNeighborChange, :, notifyOfNeighborChange, updateNeighbors
+		p	1	p_147459_1_	x	#~, ~, x, :
+		p	2	p_147459_2_	y	#~, ~, y, :
+		p	3	p_147459_3_	z	#~, ~, z, :
+		p	4	p_147459_4_	block	#~, ~, block, :
+	m	(IIILnet/minecraft/block/Block;II)Z	func_147465_d	setBlock	#setBlock, :, :, setBlockWithMetadata
+		c	Sets the block ID and metadata at a given location. Args: X, Y, Z, new block ID, new metadata, flags. Flag 1 will cause a block update. Flag 2 will send the change to clients (you almost always want this). Flag 4 prevents the block from being re-rendered, if this is a client world. Flags can be added together.
+		p	1	p_147465_1_	x	#x, :, ~, x
+		p	2	p_147465_2_	y	#y, :, ~, y
+		p	3	p_147465_3_	z	#z, :, ~, z
+		p	4	p_147465_4_	blockIn	#blockIn, :, ~, block
+		p	5	p_147465_5_	metadataIn	#metadataIn, :, ~, metadata
+		p	6	p_147465_6_	flags	#flags, :, ~, flags
+	m	(IIIZ)Z	func_72834_c	canBlockFreeze	#canBlockFreeze, :, canWaterFreeze, canFreeze
+		c	checks to see if a given block is both water, and cold enough to freeze - if the par4 boolean is set, this will only return true if there is a non-water block immediately adjacent to the specified block
+		p	1	p_72834_1_	x	#x, :, :, :
+		p	2	p_72834_2_	y	#y, :, :, :
+		p	3	p_72834_3_	z	#z, :, :, :
+		p	4	p_72834_4_	byWater	#byWater, :, needsShore, needsAdjacentNonWaterBlock
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_72953_d	isAnyLiquid	#isAnyLiquid, containsAnyLiquid, containsFluid, containsLiquid
+		c	Returns if any of the blocks within the aabb are liquids. Args: aabb
+		p	1	p_72953_1_	bb	#bb, :, box, bounds
+	m	(Lnet/minecraft/entity/Entity;)Z	func_72838_d	spawnEntityInWorld	#spawnEntityInWorld, spawnEntity, :, addEntity
+		c	Called to place all entities as part of a world
+		p	1	p_72838_1_	entityIn	#entityIn, :, entity, :
+	m	(F)Lnet/minecraft/util/Vec3;	func_72824_f	getCloudColour	#getCloudColour, :, getCloudColor, :
+		p	1	p_72824_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(II)Lnet/minecraft/world/chunk/Chunk;	func_72964_e	getChunkFromChunkCoords	#getChunkFromChunkCoords, getChunk, :, getChunkAt
+		c	Returns back a chunk looked up by chunk coordinates Args: x, y
+		p	1	p_72964_1_	chunkX	#chunkX, :, :, :
+		p	2	p_72964_2_	chunkZ	#chunkZ, :, :, :
+	m	(IIILnet/minecraft/block/Block;)V	func_147460_e	notifyBlockOfNeighborChange	#notifyBlockOfNeighborChange, :, updateNeighbors, neighborChanged
+		c	Notifies a block that one of its neighbor change to the specified type Args: x, y, z, block
+		p	1	p_147460_1_	x	#~, ~, ~, x
+		p	2	p_147460_2_	y	#~, ~, ~, y
+		p	3	p_147460_3_	z	#~, ~, ~, z
+		p	4	p_147460_4_	neighborBlock	#~, ~, ~, neighborBlock
+	m	(IIIZ)Z	func_147478_e	canSnowAt	#canSnowAt, :, ~, canSnowFall
+		p	1	p_147478_1_	x	#x, :, ~, x
+		p	2	p_147478_2_	y	#y, :, ~, y
+		p	3	p_147478_3_	z	#z, :, ~, z
+		p	4	p_147478_4_	checkLight	#checkLight, :, ~, checkLight
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_147470_e	isFlammableWithin	#isFlammableWithin, :, containsFireSource, :
+		p	1	p_147470_1_	bb	#bb, :, box, bounds
+	m	(Lnet/minecraft/entity/Entity;)V	func_72900_e	removeEntity	#removeEntity, :, :, :
+		c	Schedule the entity for removal during the next tick. Marks the entity dead in anticipation.
+		p	1	p_72900_1_	entityIn	#entityIn, :, entity, :
+	m	()V	func_72974_f	setSpawnLocation	#setSpawnLocation, setInitialSpawnLocation, setDefaultSpawnClient, resetSpawnPoint
+		c	Sets a new spawn location by finding an uncovered block at a random (x,z) location in the chunk.
+	m	(F)Lnet/minecraft/util/Vec3;	func_72948_g	getFogColor	#getFogColor, :, :, :
+		c	Returns vector(ish) with R/G/B for fog
+		p	1	p_72948_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(II)I	func_72976_f	getHeightValue	#getHeightValue, :, getHighestBlockY, getHeight
+		c	Returns the y coordinate with a block in it at this x, z coordinate
+		p	1	p_72976_1_	x	#~, ~, x, :
+		p	2	p_72976_2_	z	#~, ~, z, :
+	m	(III)Z	func_147468_f	setBlockToAir	#setBlockToAir, :, ~, removeBlock
+		c	Sets a block to 0 and notifies relevant systems with the block change  Args: x, y, z
+		p	1	p_147468_1_	x	#x, :, :, :
+		p	2	p_147468_2_	y	#y, :, :, :
+		p	3	p_147468_3_	z	#z, :, :, :
+	m	(IIII)Z	func_94574_k	getIndirectPowerOutput	#getIndirectPowerOutput, :, isFacePowered, hasSignal
+		c	Returns the indirect signal strength being outputted by the given block in the *opposite* of the given direction. Args: X, Y, Z, direction
+		p	1	p_94574_1_	x	#x, :, :, :
+		p	2	p_94574_2_	y	#y, :, :, :
+		p	3	p_94574_3_	z	#z, :, :, :
+		p	4	p_94574_4_	directionIn	#directionIn, :, side, dir
+	m	(IIILnet/minecraft/block/Block;)V	func_147453_f	updateNeighborsAboutBlockChange	#updateNeighborsAboutBlockChange, :, ~, updateNeighborComparators
+		p	1	p_147453_1_	x	#x, :, ~, x
+		p	2	p_147453_2_	yPos	#yPos, :, ~, y
+		p	3	p_147453_3_	z	#z, :, ~, z
+		p	4	p_147453_4_	blockIn	#blockIn, :, ~, block
+	m	(Lnet/minecraft/entity/Entity;)V	func_72973_f	removePlayerEntityDangerously	#removePlayerEntityDangerously, removeEntityDangerously, ~, removeEntityNow
+		c	Do NOT use this method to remove normal entities- use normal removeEntity
+		p	1	p_72973_1_	entityIn	#entityIn, :, entity, :
+	m	()V	func_147456_g	updateBlocks	#updateBlocks, :, tickBlocks, tickChunks
+	m	(F)F	func_72880_h	getStarBrightness	#getStarBrightness, :, ~, getStarBrightness
+		c	How bright are stars in the sky
+		p	1	p_72880_1_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(II)I	func_82734_g	getChunkHeightMapMinimum	#getChunkHeightMapMinimum, getChunksLowestHorizon, getMinimunChunkHightmap, getLowestHeight
+		c	Gets the heightMapMinimum field of the given chunk, or 0 if the chunk is not loaded. Coords are in blocks. Args: X, Z
+		p	1	p_82734_1_	x	#x, :, :, :
+		p	2	p_82734_2_	z	#z, :, :, :
+	m	(III)V	func_147471_g	markBlockForUpdate	#markBlockForUpdate, :, ~, onBlockChanged
+		p	1	p_147471_1_	x	#~, ~, ~, x
+		p	2	p_147471_2_	y	#~, ~, ~, y
+		p	3	p_147471_3_	z	#~, ~, ~, z
+	m	(IIII)I	func_72878_l	getIndirectPowerLevelTo	#getIndirectPowerLevelTo, :, getPowerAtFace, getSignal
+		c	Gets the power level from a certain block face.  Args: x, y, z, direction
+		p	1	p_72878_1_	x	#x, :, :, :
+		p	2	p_72878_2_	y	#y, :, :, :
+		p	3	p_72878_3_	z	#z, :, :, :
+		p	4	p_72878_4_	directionIn	#directionIn, :, side, dir
+	m	(Lnet/minecraft/entity/Entity;)V	func_72870_g	updateEntity	#updateEntity, :, checkChunk, updateEntity
+		c	Will update the entity in the world if the chunk the entity is in is currently loaded. Args: entity
+		p	1	p_72870_1_	ent	#ent, :, entity, :
+	m	()V	func_72939_s	updateEntities	#updateEntities, :, tickEntities, :
+		c	Updates (and cleans up) entities and tile entities
+	m	(F)F	func_72819_i	getWeightedThunderStrength	#getWeightedThunderStrength, getThunderStrength, getThunderGradient, getThunder
+		p	1	p_72819_1_	delta	#delta, :, offset, tickDelta
+	m	(II)I	func_72874_g	getPrecipitationHeight	#getPrecipitationHeight, :, getSurfaceY, getPrecipitationHeight
+		c	Gets the height to which rain/snow will fall. Calculates it if not already stored.
+		p	1	p_72874_1_	x	#~, ~, x, :
+		p	2	p_72874_2_	z	#~, ~, z, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_72897_h	joinEntityInSurroundings	#joinEntityInSurroundings, :, loadEntity, addEntityAlways
+		c	spwans an entity and loads surrounding chunks
+		p	1	p_72897_1_	entityIn	#entityIn, :, entity, :
+	m	(F)V	func_147442_i	setThunderStrength	#setThunderStrength, :, setThunderGradient, setThunder
+		c	Sets the strength of the thunder.
+		p	1	p_147442_1_	strength	#strength, :, thunderGradient, thunder
+	m	(II)I	func_72825_h	getTopSolidOrLiquidBlock	#getTopSolidOrLiquidBlock, :, ~, getSurfaceHeight
+		c	Finds the highest block on the x, z coordinate that is solid and returns its y coord. Args x, z
+		p	1	p_72825_1_	x	#~, ~, x, :
+		p	2	p_72825_2_	z	#~, ~, z, :
+	m	(III)Z	func_72937_j	canBlockSeeTheSky	#canBlockSeeTheSky, :, isAboveHighestBlock, hasSkyAccess
+		c	Checks if the specified block is able to see the sky
+		p	1	p_72937_1_	x	#~, ~, x, :
+		p	2	p_72937_2_	y	#~, ~, y, :
+		p	3	p_72937_3_	z	#~, ~, z, :
+	m	()Lnet/minecraft/world/chunk/IChunkProvider;	func_72970_h	createChunkProvider	#createChunkProvider, :, getChunkCache, createChunkCache
+		c	Creates the chunk provider for this world. Called in the constructor. Retrieves provider from worldProvider?
+	m	(F)F	func_72867_j	getRainStrength	#getRainStrength, :, getRainGradient, getRain
+		c	Not sure about this actually. Reverting this one myself.
+		p	1	p_72867_1_	delta	#delta, :, offset, tickDelta
+	m	(III)I	func_72883_k	getFullBlockLightValue	#getFullBlockLightValue, :, ~, getLight
+		c	Does the same as getBlockLightValue_do but without checking if its not a normal block
+		p	1	p_72883_1_	x	#~, ~, x, :
+		p	2	p_72883_2_	y	#~, ~, y, :
+		p	3	p_72883_3_	z	#~, ~, z, :
+	m	(F)V	func_72894_k	setRainStrength	#setRainStrength, :, setRainGradient, setRain
+		c	Sets the strength of the rain.
+		p	1	p_72894_1_	strength	#strength, :, rainGradient, rain
+	m	(III)I	func_72957_l	getBlockLightValue	#getBlockLightValue, :, ~, getRawBrightness
+		c	Gets the light value of a block location
+		p	1	p_72957_1_	x	#~, ~, x, :
+		p	2	p_72957_2_	y	#~, ~, y, :
+		p	3	p_72957_3_	z	#~, ~, z, :
+	m	(III)V	func_147479_m	markBlockForRenderUpdate	#markBlockForRenderUpdate, :, ~, onLightChanged
+		c	On the client, re-renders this block. On the server, does nothing. Used for lighting updates.
+		p	1	p_147479_1_	x	#~, ~, ~, x
+		p	2	p_147479_2_	y	#~, ~, ~, y
+		p	3	p_147479_3_	z	#~, ~, ~, z
+	m	(III)F	func_72801_o	getLightBrightness	#getLightBrightness, :, ~, getBrightness
+		c	Returns how bright the block is shown as which is the block's light value looked up in a lookup table (light values aren't linear for brightness). Args: x, y, z
+		p	1	p_72801_1_	x	#~, ~, ~, x
+		p	2	p_72801_2_	y	#~, ~, ~, y
+		p	3	p_72801_3_	z	#~, ~, ~, z
+	m	()V	func_72979_l	updateWeather	#updateWeather, :, tickWeather, :
+		c	Updates all weather states.
+	m	()I	func_152379_p	getRenderDistanceChunks	#getRenderDistanceChunks, :, getNextMapId, getChunkViewDistance
+	m	(III)V	func_147475_p	removeTileEntity	#removeTileEntity, :, ~, removeBlockEntity
+		p	1	p_147475_1_	x	#x, :, :, :
+		p	2	p_147475_2_	y	#y, :, :, :
+		p	3	p_147475_3_	z	#z, :, :, :
+	m	(III)Z	func_147469_q	isBlockFullCube	#isBlockFullCube, :, isLargerThanFullCube, isFullCube
+		p	1	p_147469_1_	x	#x, :, :, :
+		p	2	p_147469_2_	y	#y, :, :, :
+		p	3	p_147469_3_	z	#z, :, :, :
+	m	(III)Z	func_72884_u	isBlockFreezable	#isBlockFreezable, :, ~, canFreeze
+		c	checks to see if a given block is both water and is cold enough to freeze
+		p	1	p_72884_1_	x	#x, :, :, :
+		p	2	p_72884_2_	y	#y, :, :, :
+		p	3	p_72884_3_	z	#z, :, :, :
+	m	(III)Z	func_72850_v	isBlockFreezableNaturally	#isBlockFreezableNaturally, :, ~, canFreezeNaturally
+		c	checks to see if a given block is both water and has at least one immediately adjacent non-water block
+		p	1	p_72850_1_	x	#x, :, :, :
+		p	2	p_72850_2_	y	#y, :, :, :
+		p	3	p_72850_3_	z	#z, :, :, :
+	m	(III)Z	func_147451_t	updateAllLightTypes	#updateAllLightTypes, :, ~, checkLight
+		p	1	p_147451_1_	x	#x, :, ~, x
+		p	2	p_147451_2_	y	#y, :, ~, y
+		p	3	p_147451_3_	z	#z, :, ~, z
+	m	(III)I	func_94577_B	getBlockPowerInput	#getBlockPowerInput, :, ~, getDirectNeighborSignal
+		c	Returns the highest redstone signal strength powering the given block. Args: X, Y, Z.
+		p	1	p_94577_1_	x	#x, :, ~, x
+		p	2	p_94577_2_	y	#y, :, ~, y
+		p	3	p_94577_3_	z	#z, :, ~, z
+	m	()Lnet/minecraft/world/biome/WorldChunkManager;	func_72959_q	getWorldChunkManager	#getWorldChunkManager, getBiomeProvider, getBiomeSource, :
+	m	(III)Z	func_72864_z	isBlockIndirectlyGettingPowered	#isBlockIndirectlyGettingPowered, :, isAnyFacePowered, hasNeighborSignal
+		c	Used to see if one of the blocks next to you or your block is getting power from a neighboring block. Used by items like TNT or Doors so they don't have redstone going straight into them.  Args: x, y, z
+		p	1	p_72864_1_	x	#x, :, :, :
+		p	2	p_72864_2_	y	#y, :, :, :
+		p	3	p_72864_3_	z	#z, :, :, :
+	m	()Z	func_72935_r	isDaytime	#isDaytime, :, isDay, isSunny
+		c	Checks whether its daytime by seeing if the light subtracted from the skylight is less than 4
+	m	(III)I	func_94572_D	getStrongestIndirectPower	#getStrongestIndirectPower, :, ~, getNeighborSignal
+		c	Returns the redstone signal the given position is receiving from neighboring blocks.
+		p	1	p_94572_1_	x	#x, :, ~, x
+		p	2	p_94572_2_	y	#y, :, ~, y
+		p	3	p_94572_3_	z	#z, :, ~, z
+	m	()I	func_72853_d	getMoonPhase	#getMoonPhase, :, :, :
+	m	(III)V	func_72950_A	setSpawnLocation	#setSpawnLocation, :, setSpawnPos, setSpawnPoint
+		p	1	p_72950_1_	x	#~, ~, x, :
+		p	2	p_72950_2_	y	#~, ~, y, :
+		p	3	p_72950_3_	z	#~, ~, z, :
+	m	()F	func_130001_d	getCurrentMoonPhaseFactor	#getCurrentMoonPhaseFactor, :, getMoonSize, :
+		c	gets the current fullness of the moon expressed as a float between 1.0 and 0.0, in steps of .25
+	m	(III)Z	func_72951_B	canLightningStrikeAt	#canLightningStrikeAt, isRainingAt, isBeingRainedOn, isRaining
+		c	Checks to see if there is currently rain hitting this coordinate
+		p	1	p_72951_1_	x	#x, :, :, :
+		p	2	p_72951_2_	y	#y, :, :, :
+		p	3	p_72951_3_	z	#z, :, :, :
+	m	()Ljava/lang/String;	func_72981_t	getDebugLoadedEntities	#getDebugLoadedEntities, :, addDetailsToCrashReport, getEntitiesDebugInfo
+		c	This string is 'All: (number of loaded entities)' Viewable by press ing F3
+	m	(III)Z	func_72958_C	isBlockHighHumidity	#isBlockHighHumidity, :, isHighHumidity, isHumid
+		c	Checks to see if the biome rainfall values for a given x,y,z coordinate set are extremely high
+		p	1	p_72958_1_	x	#x, :, :, :
+		p	2	p_72958_2_	y	#y, :, :, :
+		p	3	p_72958_3_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/storage/ISaveHandler;Ljava/lang/String;Lnet/minecraft/world/WorldSettings;Lnet/minecraft/world/WorldProvider;Lnet/minecraft/profiler/Profiler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45369_1_	storage	#~, ~, ~, storage
+		p	2	p_i45369_2_	name	#~, ~, ~, name
+		p	3	p_i45369_3_	settings	#~, ~, ~, settings
+		p	4	p_i45369_4_	dimension	#~, ~, ~, dimension
+		p	5	p_i45369_5_	profiler	#~, ~, ~, profiler
+	m	(Lnet/minecraft/world/storage/ISaveHandler;Ljava/lang/String;Lnet/minecraft/world/WorldProvider;Lnet/minecraft/world/WorldSettings;Lnet/minecraft/profiler/Profiler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45368_1_	storage	#~, ~, ~, storage
+		p	2	p_i45368_2_	name	#~, ~, ~, name
+		p	3	p_i45368_3_	dimension	#~, ~, ~, dimension
+		p	4	p_i45368_4_	settings	#~, ~, ~, settings
+		p	5	p_i45368_5_	profiler	#~, ~, ~, profiler

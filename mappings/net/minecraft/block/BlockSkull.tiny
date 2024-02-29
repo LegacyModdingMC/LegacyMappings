@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSkull	net/minecraft/block/BlockSkull	
+	m	(Lnet/minecraft/world/World;IIII)Z	func_149966_a	isSkull	#~, ~, ~, isSkull
+		p	1	p_149966_1_	world	#~, ~, ~, world
+		p	2	p_149966_2_	x	#~, ~, ~, x
+		p	3	p_149966_3_	y	#~, ~, ~, y
+		p	4	p_149966_4_	z	#~, ~, ~, z
+		p	5	p_149966_5_	type	#~, ~, ~, type
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/tileentity/TileEntitySkull;)V	func_149965_a	makeWither	#makeWither, :, ~, trySpawn
+		p	1	p_149965_1_	world	#~, ~, ~, world
+		p	2	p_149965_2_	x	#~, ~, ~, x
+		p	3	p_149965_3_	y	#~, ~, ~, y
+		p	4	p_149965_4_	z	#~, ~, ~, z
+		p	5	p_149965_5_	skull	#~, ~, ~, skull
+	m	()V	<init>	<init>	#~, ~, ~, ~

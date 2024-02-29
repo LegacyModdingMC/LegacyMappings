@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityFireball	net/minecraft/entity/projectile/EntityFireball	
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_70235_a	shootingEntity	#shootingEntity, :, target, shooter
+	f	I	field_70236_j	ticksAlive	#ticksAlive, :, life, ticksInBlock
+	f	I	field_70234_an	ticksInAir	#ticksInAir, :, ~, ticksInAir
+	f	D	field_70232_b	accelerationX	#accelerationX, :, powerX, accelerationX
+	f	D	field_70233_c	accelerationY	#accelerationY, :, powerY, accelerationY
+	f	D	field_70230_d	accelerationZ	#accelerationZ, :, powerZ, accelerationZ
+	f	I	field_145795_e	xTile	#xTile, :, blockX, :
+	f	I	field_145793_f	yTile	#yTile, :, blockY, :
+	f	I	field_145794_g	zTile	#zTile, :, blockZ, :
+	f	Lnet/minecraft/block/Block;	field_145796_h	inTile	#inTile, :, inBlock, :
+	f	Z	field_70238_i	inGround	#inGround, :, :, :
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1760_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1760_2_	x	#x, :, :, :
+		p	4	p_i1760_4_	y	#y, :, :, :
+		p	6	p_i1760_6_	z	#z, :, :, :
+		p	8	p_i1760_8_	accelX	#accelX, :, powerX, accelerationX
+		p	10	p_i1760_10_	accelY	#accelY, :, powerY, accelerationY
+		p	12	p_i1760_12_	accelZ	#accelZ, :, powerZ, accelerationZ
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1761_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1761_2_	shooter	#shooter, :, target, shooter
+		p	3	p_i1761_3_	accelX	#accelX, :, directionX, accelerationX
+		p	5	p_i1761_5_	accelY	#accelY, :, directionY, accelerationY
+		p	7	p_i1761_7_	accelZ	#accelZ, :, directionZ, accelerationZ
+	m	(Lnet/minecraft/util/MovingObjectPosition;)V	func_70227_a	onImpact	#onImpact, :, onEntityHit, onHit
+		c	Called when this EntityFireball hits a block or entity.
+		p	1	p_70227_1_	movingObject	#movingObject, result, hitResult, :
+	m	()F	func_82341_c	getMotionFactor	#getMotionFactor, :, getDrag, :
+		c	Return the motion factor for this projectile. The factor is multiplied by the original motion.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1759_1_	worldIn	#worldIn, :, ~, ~

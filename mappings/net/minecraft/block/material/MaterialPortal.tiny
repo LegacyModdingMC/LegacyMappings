@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/material/MaterialPortal	net/minecraft/block/material/MaterialPortal	
+	m	(Lnet/minecraft/block/material/MapColor;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2118_1_	color	#color, :, ~, ~

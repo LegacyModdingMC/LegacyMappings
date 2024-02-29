@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSoup	net/minecraft/item/ItemSoup	
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45330_1_	healAmount	#healAmount, :, hungerPoints, :

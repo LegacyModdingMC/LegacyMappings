@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityBrewingStand	net/minecraft/tileentity/TileEntityBrewingStand	
+	f	[I	field_145941_a	inputSlots	#inputSlots, SLOTS_FOR_UP, inputs, INGREDIENT_SLOTS
+		c	an array of the input slot indices
+	f	[I	field_145947_i	outputSlots	#outputSlots, OUTPUT_SLOTS, outputs, POTION_SLOTS
+		c	an array of the output slot indices
+	f	[Lnet/minecraft/item/ItemStack;	field_145945_j	brewingItemStacks	#brewingItemStacks, :, stacks, inputs
+		c	The ItemStacks currently placed in the slots of the brewing stand
+	f	I	field_145946_k	brewTime	#brewTime, :, :, timer
+	f	I	field_145943_l	filledSlots	#filledSlots, :, ~, hasInput
+		c	an integer with each bit specifying whether that slot of the stand contains a potion
+	f	Lnet/minecraft/item/Item;	field_145944_m	ingredientID	#ingredientID, :, itemBrewing, ingredient
+		c	used to check if the current ingredient has been removed from the brewing stand during brewing
+	f	Ljava/lang/String;	field_145942_n	customName	#customName, :, :, :
+	m	(Ljava/lang/String;)V	func_145937_a	setName	#setName, :, setCustomName, :
+		p	1	p_145937_1_	name	#name, :, :, :
+	m	(ILnet/minecraft/item/ItemStack;)I	func_145936_c	getPotionResult	#getPotionResult, :, getBrewEffectData, updatePotion
+		c	The result of brewing a potion of the specified damage value with an ingredient itemstack.
+		p	1	p_145936_1_	meta	#meta, :, data, metadata
+		p	2	p_145936_2_	stack	#stack, :, :, potion
+	m	(I)V	func_145938_d	setBrewTime	#setBrewTime, :, ~, setTimer
+		p	1	p_145938_1_	timer	#~, ~, ~, timer
+	m	()I	func_145935_i	getBrewTime	#getBrewTime, :, ~, getTimer
+	m	()I	func_145939_j	getFilledSlots	#getFilledSlots, :, ~, findFilledInputs
+		c	Returns an integer with each bit specifying whether that slot of the stand contains a potion
+	m	()Z	func_145934_k	canBrew	#canBrew, :, :, canFinishBrewing
+	m	()V	func_145940_l	brewPotions	#brewPotions, :, brew, finishBrewing
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

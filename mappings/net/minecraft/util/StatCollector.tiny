@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/StatCollector	net/minecraft/util/StatCollector	
+	f	Lnet/minecraft/util/StringTranslate;	field_74839_a	localizedName	#localizedName, :, LANGUAGE, :
+	f	Lnet/minecraft/util/StringTranslate;	field_150828_b	fallbackTranslator	#fallbackTranslator, :, EMPTY, DEFAULT_LANGUAGE
+		c	A StringTranslate instance using the hardcoded default locale (en_US).  Used as a fallback in case the shared StringTranslate singleton instance fails to translate a key.
+	m	()J	func_150827_a	getLastTranslationUpdateTimeInMilliseconds	#getLastTranslationUpdateTimeInMilliseconds, :, getTimeLoaded, getLoadTimestamp
+		c	Gets the time, in milliseconds since epoch, that the translation mapping was last updated
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_74838_a	translateToLocal	#translateToLocal, :, translate, :
+		c	Translates a Stat name
+		p	0	p_74838_0_	key	#key, :, :, :
+	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	func_74837_a	translateToLocalFormatted	#translateToLocalFormatted, :, translate, :
+		c	Translates a Stat name with format args
+		p	0	p_74837_0_	key	#key, :, :, :
+		p	1	p_74837_1_	format	#format, :, args, :
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_150826_b	translateToFallback	#translateToFallback, :, thisIsNotUsedAnyWhereAndThisMethodDoesNotWorkSoPleaseDoNotUseThis, translateDefault
+		c	Translates a Stat name using the fallback (hardcoded en_US) locale.  Looks like it's only intended to be used if translateToLocal fails.
+		p	0	p_150826_0_	key	#key, :, :, :
+	m	(Ljava/lang/String;)Z	func_94522_b	canTranslate	#canTranslate, :, hasTranslation, :
+		c	Determines whether or not translateToLocal will find a translation for the given key.
+		p	0	p_94522_0_	key	#key, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

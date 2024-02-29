@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/AnvilChunkLoader$PendingChunk	net/minecraft/world/chunk/storage/AnvilChunkLoader$PendingChunk	
+	f	Lnet/minecraft/world/ChunkCoordIntPair;	field_76548_a	chunkCoordinate	#chunkCoordinate, :, ~, pos
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_76547_b	nbtTags	#nbtTags, :, ~, data
+	m	(Lnet/minecraft/world/ChunkCoordIntPair;Lnet/minecraft/nbt/NBTTagCompound;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2002_1_	pos	#~, ~, ~, pos
+		p	2	p_i2002_2_	data	#~, ~, ~, data

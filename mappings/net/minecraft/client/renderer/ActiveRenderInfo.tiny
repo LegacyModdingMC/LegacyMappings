@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/ActiveRenderInfo	net/minecraft/client/renderer/ActiveRenderInfo	
+	f	F	field_74592_a	objectX	#objectX, :, ~, x
+		c	The calculated view object X coordinate
+	f	F	field_74590_b	objectY	#objectY, :, ~, y
+		c	The calculated view object Y coordinate
+	f	F	field_74591_c	objectZ	#objectZ, :, ~, z
+		c	The calculated view object Z coordinate
+	f	F	field_74588_d	rotationX	#rotationX, :, :, dx
+		c	The X component of the entity's yaw rotation
+	f	F	field_74589_e	rotationXZ	#rotationXZ, :, :, dy
+		c	The combined X and Z components of the entity's pitch rotation
+	f	F	field_74586_f	rotationZ	#rotationZ, :, :, dz
+		c	The Z component of the entity's yaw rotation
+	f	F	field_74587_g	rotationYZ	#rotationYZ, :, :, forwards
+		c	The Y component (scaled along the Z axis) of the entity's pitch rotation
+	f	F	field_74596_h	rotationXY	#rotationXY, :, :, sideways
+		c	The Y component (scaled along the X axis) of the entity's pitch rotation
+	f	Ljava/nio/IntBuffer;	field_74597_i	viewport	#viewport, :, VIEWPORT, glIntBuffer
+		c	The current GL viewport
+	f	Ljava/nio/FloatBuffer;	field_74594_j	modelview	#modelview, :, MODELMATRIX, glFloatBuffer1
+		c	The current GL modelview matrix
+	f	Ljava/nio/FloatBuffer;	field_74595_k	projection	#projection, :, PROJECTIONMATRIX, glFloatBuffer2
+		c	The current GL projection matrix
+	f	Ljava/nio/FloatBuffer;	field_74593_l	objectCoords	#objectCoords, :, OBJECTPOS, POSITION_BUFFER
+		c	The computed view object coordinates
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;F)Lnet/minecraft/block/Block;	func_151460_a	getBlockAtEntityViewpoint	#getBlockAtEntityViewpoint, :, ~, isInLiquid
+		p	0	p_151460_0_	world	#~, ~, ~, world
+		p	1	p_151460_1_	entity	#~, ~, ~, entity
+		p	2	p_151460_2_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Z)V	func_74583_a	updateRenderInfo	#updateRenderInfo, :, update, setup
+		c	Updates the current render info and camera location based on entity look angles and 1st/3rd person view mode
+		p	0	p_74583_0_	entityplayerIn	#entityplayerIn, :, player, camera
+		p	1	p_74583_1_	thirdPerson	#~, ~, thirdPerson, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;D)Lnet/minecraft/util/Vec3;	func_74585_b	projectViewFromEntity	#projectViewFromEntity, :, ~, getEntityPosVec3d
+		c	Returns a vector representing the projection along the given entity's view for the given distance
+		p	0	p_74585_0_	entity	#~, ~, ~, entity
+		p	1	p_74585_1_	tickDelta	#~, ~, ~, tickDelta
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

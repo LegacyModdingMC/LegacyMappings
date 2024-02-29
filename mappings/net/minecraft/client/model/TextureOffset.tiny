@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/TextureOffset	net/minecraft/client/model/TextureOffset	
+	f	I	field_78783_a	textureOffsetX	#textureOffsetX, :, x, u
+		c	The x coordinate offset of the texture
+	f	I	field_78782_b	textureOffsetY	#textureOffsetY, :, y, v
+		c	The y coordinate offset of the texture
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1175_1_	textureOffsetXIn	#textureOffsetXIn, :, x, u
+		p	2	p_i1175_2_	textureOffsetYIn	#textureOffsetYIn, :, y, v

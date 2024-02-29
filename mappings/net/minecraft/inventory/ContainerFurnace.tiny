@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerFurnace	net/minecraft/inventory/ContainerFurnace	
+	f	Lnet/minecraft/tileentity/TileEntityFurnace;	field_75158_e	tileFurnace	#tileFurnace, :, ~, furnace
+	f	I	field_75156_f	lastCookTime	#lastCookTime, :, cookTime, :
+	f	I	field_75157_g	lastBurnTime	#lastBurnTime, :, ~, fuelTime
+	f	I	field_75159_h	lastItemBurnTime	#lastItemBurnTime, :, ~, totalFuelTime
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityFurnace;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1812_1_	invPlayer	#invPlayer, :, ~, playerInventory
+		p	2	p_i1812_2_	teFurnace	#teFurnace, :, ~, furnace

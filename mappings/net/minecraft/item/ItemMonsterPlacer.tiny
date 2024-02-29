@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemMonsterPlacer	net/minecraft/item/ItemMonsterPlacer	
+	f	Lnet/minecraft/util/IIcon;	field_94593_a	theIcon	#theIcon, :, ~, texture
+	m	(Lnet/minecraft/world/World;IDDD)Lnet/minecraft/entity/Entity;	func_77840_a	spawnCreature	#spawnCreature, :, spawnEntity, :
+		c	Spawns the creature specified by the egg's type in the location specified by the last three parameters. Parameters: world, entityID, x, y, z.
+		p	0	p_77840_0_	worldIn	#worldIn, :, world, :
+		p	1	p_77840_1_	entityID	#entityID, :, id, :
+		p	2	p_77840_2_	x	#x, :, :, :
+		p	4	p_77840_4_	y	#y, :, :, :
+		p	6	p_77840_6_	z	#z, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

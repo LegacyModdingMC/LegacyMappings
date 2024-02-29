@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/Team	net/minecraft/scoreboard/Team	
+	m	(Lnet/minecraft/scoreboard/Team;)Z	func_142054_a	isSameTeam	#isSameTeam, :, isEqual, isAlliedTo
+		c	Same as ==
+		p	1	p_142054_1_	other	#other, :, team, :
+	m	()Ljava/lang/String;	func_96661_b	getRegisteredName	#getRegisteredName, getName, :, :
+		c	Retrieve the name by which this team is registered in the scoreboard
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_142053_d	formatString	#formatString, :, decorateName, getMemberDisplayName
+		c	Formats the given text as a member of this team, using the prefix and suffix.\n \n@param input The text (usually a player/entity name) to format
+		p	1	p_142053_1_	input	#input, :, name, member
+	m	()Z	func_96665_g	getAllowFriendlyFire	#getAllowFriendlyFire, :, isFriendlyFireAllowed, allowFriendlyFire
+		c	Checks whether friendly fire (PVP between members of the team) is allowed.
+	m	()Z	func_98297_h	getSeeFriendlyInvisiblesEnabled	#getSeeFriendlyInvisiblesEnabled, :, shouldShowFriendlyInvisibles, showFriendlyInvisibles
+		c	Checks whether members of this team can see other members that are invisible.
+	m	()V	<init>	<init>	#~, ~, ~, ~

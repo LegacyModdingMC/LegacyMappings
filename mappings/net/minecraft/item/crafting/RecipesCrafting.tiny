@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/RecipesCrafting	net/minecraft/item/crafting/RecipesCrafting	
+	m	(Lnet/minecraft/item/crafting/CraftingManager;)V	func_77589_a	addRecipes	#addRecipes, :, register, :
+		c	Adds the crafting recipes to the CraftingManager.
+		p	1	p_77589_1_	manager	#manager, :, recipes, manager
+	m	()V	<init>	<init>	#~, ~, ~, ~

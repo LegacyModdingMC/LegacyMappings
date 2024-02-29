@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelChicken	net/minecraft/client/model/ModelChicken	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78142_a	head	#head, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78140_b	body	#body, :, torso, body
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78141_c	rightLeg	#rightLeg, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78138_d	leftLeg	#leftLeg, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78139_e	rightWing	#rightWing, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78136_f	leftWing	#leftWing, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78137_g	bill	#bill, :, beak, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78143_h	chin	#chin, :, wattle, waddle
+	m	()V	<init>	<init>	#~, ~, ~, ~

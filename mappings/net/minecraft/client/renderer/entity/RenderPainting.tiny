@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderPainting	net/minecraft/client/renderer/entity/RenderPainting	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110807_a	KRISTOFFER_PAINTING_TEXTURE	#KRISTOFFER_PAINTING_TEXTURE, :, ~, PAINTINGS_LOCATION
+	m	(Lnet/minecraft/entity/item/EntityPainting;FF)V	func_77008_a	setLightmap	#setLightmap, :, ~, transformRenderPosition
+		p	1	p_77008_1_	painting	#painting, :, ~, painting
+		p	2	p_77008_2_	horizontalOffset	#~, ~, ~, horizontalOffset
+		p	3	p_77008_3_	hightOffset	#~, ~, ~, hightOffset
+	m	(Lnet/minecraft/entity/item/EntityPainting;IIII)V	func_77010_a	renderPainting	#renderPainting, :, ~, renderPainting
+		p	1	p_77010_1_	painting	#painting, :, ~, painting
+		p	2	p_77010_2_	width	#width, :, ~, width
+		p	3	p_77010_3_	height	#height, :, ~, height
+		p	4	p_77010_4_	textureU	#textureU, :, ~, widthOffset
+		p	5	p_77010_5_	textureV	#textureV, :, ~, heightOffset
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

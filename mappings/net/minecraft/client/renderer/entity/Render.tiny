@@ -1,0 +1,90 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/Render	net/minecraft/client/renderer/entity/Render	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110778_a	shadowTextures	#shadowTextures, SHADOW_TEXTURES, SHADOW_TEXTURE, SHADOW_LOCATION
+	f	Lnet/minecraft/client/renderer/entity/RenderManager;	field_76990_c	renderManager	#renderManager, :, dispatcher, :
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147909_c	blockRenderer	#~, ~, ~, blockRenderer
+	f	F	field_76989_e	shadowSize	#shadowSize, :, :, :
+	f	F	field_76987_f	shadowOpaque	#shadowOpaque, :, shadowDarkness, :
+		c	Determines the darkness of the object's shadow. Higher value makes a darker shadow.
+	f	Z	field_147908_f	staticEntity	#staticEntity, :, ~, isStatic
+		c	Unused field.
+	m	()Z	func_147905_a	isStaticEntity	#isStaticEntity, :, ~, isStatic
+	m	(Lnet/minecraft/block/Block;DDDIIIFFDDD)V	func_147907_a	renderShadowOnBlock	#~, ~, ~, renderShadowOnBlock
+		p	1	p_147907_1_	block	#~, ~, ~, block
+		p	2	p_147907_2_	dx	#~, ~, ~, dx
+		p	4	p_147907_4_	dy	#~, ~, ~, dy
+		p	6	p_147907_6_	dz	#~, ~, ~, dz
+		p	8	p_147907_8_	dxBlock	#~, ~, ~, dxBlock
+		p	9	p_147907_9_	dyBlock	#~, ~, ~, dyBlock
+		p	10	p_147907_10_	dzBlock	#~, ~, ~, dzBlock
+		p	11	p_147907_11_	yaw	#~, ~, ~, yaw
+		p	12	p_147907_12_	shadowSize	#~, ~, ~, shadowSize
+		p	13	p_147907_13_	cx	#~, ~, ~, cx
+		p	15	p_147907_15_	cy	#~, ~, ~, cy
+		p	17	p_147907_17_	cz	#~, ~, ~, cz
+	m	(Lnet/minecraft/util/AxisAlignedBB;)V	func_76980_a	renderAABB	#renderAABB, :, ~, drawBox
+		c	Adds to the tesselator a box using the aabb for the bounds. Args: aabb
+		p	0	p_76980_0_	box	#~, ~, ~, box
+	m	(Lnet/minecraft/util/AxisAlignedBB;DDD)V	func_76978_a	renderOffsetAABB	#renderOffsetAABB, :, ~, renderAreaEffectCloud
+		c	Renders a white box with the bounds of the AABB translated by the offset. Args: aabb, x, y, z
+		p	0	p_76978_0_	boundingBox	#boundingBox, :, box, bounds
+		p	1	p_76978_1_	x	#x, :, ~, dx
+		p	3	p_76978_3_	y	#y, :, ~, dy
+		p	5	p_76978_5_	z	#z, :, ~, dz
+	m	(Lnet/minecraft/client/renderer/entity/RenderManager;)V	func_76976_a	setRenderManager	#setRenderManager, :, setRenderDispatcher, setEntityRenderDispatcher
+		c	Sets the RenderManager.
+		p	1	p_76976_1_	dispatcher	#~, ~, dispatcher, :
+	m	(Lnet/minecraft/util/ResourceLocation;)V	func_110776_a	bindTexture	#bindTexture, :, :, :
+		p	1	p_110776_1_	location	#location, :, id, location
+	m	(Lnet/minecraft/client/renderer/texture/IIconRegister;)V	func_94143_a	updateIcons	#updateIcons, :, ~, loadSprites
+		p	1	p_94143_1_	loader	#~, ~, ~, loader
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/ResourceLocation;	func_110775_a	getEntityTexture	#getEntityTexture, :, getTexture, getTextureLocation
+		c	Returns the location of an entity's texture. Doesn't seem to be called unless you call Render.bindEntityTexture.
+		p	1	p_110775_1_	entity	#entity, :, :, :
+	m	(Lnet/minecraft/entity/Entity;DDDF)V	func_76977_a	renderEntityOnFire	#renderEntityOnFire, :, renderFire, renderOnFire
+		c	Renders fire on top of the entity. Args: entity, x, y, z, partialTickTime
+		p	1	p_76977_1_	entity	#entity, :, :, :
+		p	2	p_76977_2_	x	#x, :, :, dx
+		p	4	p_76977_4_	y	#y, :, :, dy
+		p	6	p_76977_6_	z	#z, :, :, dz
+		p	8	p_76977_8_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/Entity;DDDFF)V	func_76986_a	doRender	#doRender, :, render, :
+		c	Actually renders the given argument. This is a synthetic bridge method, always casting down its argument and then handing it off to a worker function which does the actual work. In all probabilty, the class Render is generic (Render<T extends Entity) and this method has signature public void func_76986_a(T entity, double d, double d1, double d2, float f, float f1). But JAD is pre 1.5 so doesn't do that.
+		p	1	p_76986_1_	entity	#entity, :, :, :
+		p	2	p_76986_2_	x	#x, :, :, dx
+		p	4	p_76986_4_	y	#y, :, :, dy
+		p	6	p_76986_6_	z	#z, :, :, dz
+		p	8	p_76986_8_	entityYaw	#entityYaw, :, yaw, :
+		p	9	p_76986_9_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(Lnet/minecraft/entity/Entity;Ljava/lang/String;DDDI)V	func_147906_a	renderLivingLabel	#renderLivingLabel, :, renderLabelIfPresent, renderNameTag
+		c	Renders an entity's name above its head
+		p	1	p_147906_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_147906_2_	str	#str, :, text, name
+		p	3	p_147906_3_	x	#x, :, :, dx
+		p	5	p_147906_5_	y	#y, :, :, dy
+		p	7	p_147906_7_	z	#z, :, :, dz
+		p	9	p_147906_9_	maxDistance	#maxDistance, :, :, distance
+	m	(Lnet/minecraft/entity/Entity;)V	func_110777_b	bindEntityTexture	#bindEntityTexture, :, ~, bindTexture
+		p	1	p_110777_1_	entity	#~, ~, ~, entity
+	m	(Lnet/minecraft/entity/Entity;DDDFF)V	func_76979_b	doRenderShadowAndFire	#doRenderShadowAndFire, :, postRender, :
+		c	Renders the entity's shadow and fire (if its on fire). Args: entity, x, y, z, yaw, partialTickTime
+		p	1	p_76979_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_76979_2_	x	#x, :, :, dx
+		p	4	p_76979_4_	y	#y, :, :, dy
+		p	6	p_76979_6_	z	#z, :, :, dz
+		p	8	p_76979_8_	yaw	#yaw, :, :, :
+		p	9	p_76979_9_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()Lnet/minecraft/client/gui/FontRenderer;	func_76983_a	getFontRendererFromRenderManager	#getFontRendererFromRenderManager, :, getFontRenderer, getTextRenderer
+		c	Returns the font renderer from the set render manager
+	m	(Lnet/minecraft/entity/Entity;DDDFF)V	func_76975_c	renderShadow	#renderShadow, :, :, :
+		c	Renders the entity shadows at the position, shadow alpha and partialTickTime. Args: entity, x, y, z, shadowAlpha, partialTickTime
+		p	1	p_76975_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_76975_2_	x	#x, :, :, dx
+		p	4	p_76975_4_	y	#y, :, :, dy
+		p	6	p_76975_6_	z	#z, :, :, dz
+		p	9	p_76975_9_	partialTicks	#partialTicks, :, tickDelta, :
+		p	8	p_76975_8_	shadowAlpha	#shadowAlpha, :, ~, yaw
+	m	()Lnet/minecraft/world/World;	func_76982_b	getWorldFromRenderManager	#getWorldFromRenderManager, :, getWorld, :
+		c	Returns the render manager's world object
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/event/HoverEvent	net/minecraft/event/HoverEvent	
+	f	Lnet/minecraft/event/HoverEvent$Action;	field_150704_a	action	#action, :, :, :
+	f	Lnet/minecraft/util/IChatComponent;	field_150703_b	value	#value, :, :, :
+	m	(Lnet/minecraft/event/HoverEvent$Action;Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45158_1_	actionIn	#actionIn, :, action, :
+		p	2	p_i45158_2_	valueIn	#valueIn, :, value, :
+	m	()Lnet/minecraft/event/HoverEvent$Action;	func_150701_a	getAction	#getAction, :, :, :
+		c	Gets the action to perform when this event is raised.
+	m	()Lnet/minecraft/util/IChatComponent;	func_150702_b	getValue	#getValue, :, :, :
+		c	Gets the value to perform the action on when this event is raised.  For example, if the action is "show item", this would be the item to show.
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, object, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIEatGrass	net/minecraft/entity/ai/EntityAIEatGrass	
+	f	I	field_151502_a	eatingGrassTimer	#eatingGrassTimer, :, timer, :
+		c	Number of ticks since the entity started to eat grass
+	f	Lnet/minecraft/entity/EntityLiving;	field_151500_b	grassEaterEntity	#grassEaterEntity, :, mob, :
+		c	The entity owner of this AITask
+	f	Lnet/minecraft/world/World;	field_151501_c	entityWorld	#entityWorld, :, world, :
+		c	The world the grass eater entity is eating from
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45314_1_	grassEaterEntityIn	#grassEaterEntityIn, :, mob, :
+	m	()I	func_151499_f	getEatingGrassTimer	#getEatingGrassTimer, :, getTimer, :
+		c	Number of ticks since the entity started to eat grass

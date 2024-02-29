@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SimpleReloadableResourceManager	net/minecraft/client/resources/SimpleReloadableResourceManager	
+	f	Lorg/apache/logging/log4j/Logger;	field_147967_a	logger	#logger, LOGGER, :, :
+	f	Lcom/google/common/base/Joiner;	field_130074_a	joinerResourcePacks	#joinerResourcePacks, JOINER_RESOURCE_PACKS, JOINER, :
+	f	Ljava/util/Map;	field_110548_a	domainResourceManagers	#domainResourceManagers, :, fallbackManagers, packs
+	f	Ljava/util/List;	field_110546_b	reloadListeners	#reloadListeners, :, listeners, :
+	f	Ljava/util/Set;	field_135057_d	setResourceDomains	#setResourceDomains, :, namespaces, :
+	f	Lnet/minecraft/client/resources/data/IMetadataSerializer;	field_110547_c	rmMetadataSerializer	#rmMetadataSerializer, :, metaSerializer, metadataSerializers
+	m	(Lnet/minecraft/client/resources/data/IMetadataSerializer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1299_1_	rmMetadataSerializerIn	#rmMetadataSerializerIn, :, metaSerializer, metadataSerializers
+	m	(Lnet/minecraft/client/resources/IResourcePack;)V	func_110545_a	reloadResourcePack	#reloadResourcePack, :, add, :
+		p	1	p_110545_1_	resourcePack	#resourcePack, :, pack, :
+	m	()V	func_110543_a	clearResources	#clearResources, :, clear, :
+	m	()V	func_110544_b	notifyReloadListeners	#notifyReloadListeners, :, notifyListeners, reloadListeners
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

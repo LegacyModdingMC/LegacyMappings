@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/MapGenCavesHell	net/minecraft/world/gen/MapGenCavesHell	
+	m	(JII[Lnet/minecraft/block/Block;DDD)V	func_151544_a	place	#~, ~, ~, place
+		p	1	p_151544_1_	seed	#~, ~, ~, seed
+		p	3	p_151544_3_	chunkX	#~, ~, ~, chunkX
+		p	4	p_151544_4_	chunkZ	#~, ~, ~, chunkZ
+		p	5	p_151544_5_	blocks	#~, ~, ~, blocks
+		p	6	p_151544_6_	x	#~, ~, ~, x
+		p	8	p_151544_8_	y	#~, ~, ~, y
+		p	10	p_151544_10_	z	#~, ~, ~, z
+	m	(JII[Lnet/minecraft/block/Block;DDDFFFIID)V	func_151543_a	placeBranch	#~, ~, ~, placeBranch
+		p	1	p_151543_1_	seed	#~, ~, ~, seed
+		p	3	p_151543_3_	chunkX	#~, ~, ~, chunkX
+		p	4	p_151543_4_	chunkZ	#~, ~, ~, chunkZ
+		p	5	p_151543_5_	blocks	#~, ~, ~, blocks
+		p	6	p_151543_6_	x	#~, ~, ~, x
+		p	8	p_151543_8_	y	#~, ~, ~, y
+		p	10	p_151543_10_	z	#~, ~, ~, z
+		p	12	p_151543_12_	baseWidth	#~, ~, ~, baseWidth
+		p	13	p_151543_13_	yaw	#~, ~, ~, yaw
+		p	14	p_151543_14_	pitch	#~, ~, ~, pitch
+		p	15	p_151543_15_	branch	#~, ~, ~, branch
+		p	16	p_151543_16_	branchCount	#~, ~, ~, branchCount
+		p	17	p_151543_17_	widthHeightRatio	#~, ~, ~, widthHeightRatio
+	m	()V	<init>	<init>	#~, ~, ~, ~

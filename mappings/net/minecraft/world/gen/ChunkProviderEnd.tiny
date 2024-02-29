@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/ChunkProviderEnd	net/minecraft/world/gen/ChunkProviderEnd	
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73196_a	noiseGen4	#noiseGen4, :, ~, scaleNoiseGenerator
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73194_b	noiseGen5	#noiseGen5, :, ~, depthNoiseGenerator
+	f	[D	field_73195_c	noiseData1	#noiseData1, :, ~, mainNoiseBuffer
+	f	[D	field_73192_d	noiseData2	#noiseData2, :, ~, minLimitNoiseBuffer
+	f	[D	field_73193_e	noiseData3	#noiseData3, :, ~, maxLimitNoiseBuffer
+	f	[D	field_73190_f	noiseData4	#noiseData4, :, ~, scaleNoiseBuffer
+	f	[D	field_73191_g	noiseData5	#noiseData5, :, ~, depthNoiseBuffer
+	f	[[I	field_73203_h	field_73203_h	#~, ~, ~, ~
+	f	Ljava/util/Random;	field_73204_i	endRNG	#endRNG, :, random, :
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73201_j	noiseGen1	#noiseGen1, :, ~, minLimitPerlinNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73202_k	noiseGen2	#noiseGen2, :, ~, maxLimitPerlinNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73199_l	noiseGen3	#noiseGen3, :, ~, mainPerlinNoise
+	f	Lnet/minecraft/world/World;	field_73200_m	endWorld	#endWorld, :, world, :
+	f	[D	field_73197_n	densities	#densities, :, ~, heightMap
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_73198_o	biomesForGeneration	#biomesForGeneration, :, ~, biomes
+		c	The biomes that are used to generate the chunk
+	m	(Lnet/minecraft/world/World;J)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2007_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i2007_2_	seed	#seed, :, ~, seed
+	m	(II[Lnet/minecraft/block/Block;[Lnet/minecraft/world/biome/BiomeGenBase;)V	func_147420_a	generate	#~, ~, ~, generate
+		p	1	p_147420_1_	chunkX	#~, ~, ~, chunkX
+		p	2	p_147420_2_	chunkZ	#~, ~, ~, chunkZ
+		p	3	p_147420_3_	blocks	#~, ~, ~, blocks
+		p	4	p_147420_4_	biomes	#~, ~, ~, biomes
+	m	([DIIIIII)[D	func_73187_a	initializeNoiseField	#initializeNoiseField, :, ~, populateHeightMap
+		c	generates a subset of the level's terrain data. Takes 7 arguments: the [empty] noise array, the position, and the size.
+		p	1	p_73187_1_	heightMap	#~, ~, ~, heightMap
+		p	2	p_73187_2_	x	#~, ~, ~, x
+		p	3	p_73187_3_	y	#~, ~, ~, y
+		p	4	p_73187_4_	z	#~, ~, ~, z
+		p	5	p_73187_5_	sizeX	#~, ~, ~, sizeX
+		p	6	p_73187_6_	sizeY	#~, ~, ~, sizeY
+		p	7	p_73187_7_	sizeZ	#~, ~, ~, sizeZ
+	m	(II[Lnet/minecraft/block/Block;[Lnet/minecraft/world/biome/BiomeGenBase;)V	func_147421_b	generateSurfaces	#~, ~, ~, generateSurfaces
+		p	1	p_147421_1_	chunkX	#~, ~, ~, chunkX
+		p	2	p_147421_2_	chunkZ	#~, ~, ~, chunkZ
+		p	3	p_147421_3_	blocks	#~, ~, ~, blocks
+		p	4	p_147421_4_	biomes	#~, ~, ~, biomes

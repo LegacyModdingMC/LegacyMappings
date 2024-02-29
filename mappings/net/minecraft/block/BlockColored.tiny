@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockColored	net/minecraft/block/BlockColored	
+	f	[Lnet/minecraft/util/IIcon;	field_150033_a	blockSprite	#~, ~, ~, blockSprite
+	m	(I)I	func_150032_b	getColor	#~, ~, ~, getColor
+		p	0	p_150032_0_	id	#~, ~, ~, id
+	m	(I)I	func_150031_c	getColorId	#~, ~, ~, getColorId
+		p	0	p_150031_0_	id	#~, ~, ~, id
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45398_1_	materialIn	#materialIn, :, ~, ~

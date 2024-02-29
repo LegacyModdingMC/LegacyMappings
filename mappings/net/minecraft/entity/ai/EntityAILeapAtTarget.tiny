@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAILeapAtTarget	net/minecraft/entity/ai/EntityAILeapAtTarget	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75328_a	leaper	#leaper, :, mob, :
+		c	The entity that is leaping.
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75326_b	leapTarget	#leapTarget, :, attacker, targetEntity
+		c	The entity that the leaper is leaping towards.
+	f	F	field_75327_c	leapMotionY	#leapMotionY, :, speed, :
+		c	The entity's motionY after leaping.
+	m	(Lnet/minecraft/entity/EntityLiving;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1630_1_	leapingEntity	#leapingEntity, :, mob, :
+		p	2	p_i1630_2_	leapMotionYIn	#leapMotionYIn, :, speed, :

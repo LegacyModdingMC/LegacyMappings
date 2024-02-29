@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerAddIsland	net/minecraft/world/gen/layer/GenLayerAddIsland	
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2119_1_	seed	#~, ~, ~, seed
+		p	3	p_i2119_3_	parent	#~, ~, ~, parent

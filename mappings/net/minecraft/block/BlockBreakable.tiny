@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockBreakable	net/minecraft/block/BlockBreakable	
+	f	Z	field_149996_a	ignoreSimilarity	#ignoreSimilarity, :, ignoreSimilar, sideVisible
+	f	Ljava/lang/String;	field_149995_b	name	#name, :, ~, spriteName
+	m	(Ljava/lang/String;Lnet/minecraft/block/material/Material;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45411_1_	name	#name, :, ~, spriteName
+		p	2	p_i45411_2_	materialIn	#materialIn, :, ~, material
+		p	3	p_i45411_3_	ignoreSimilarity	#ignoreSimilarity, :, ~, sideVisible

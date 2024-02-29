@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiButtonLanguage	net/minecraft/client/gui/GuiButtonLanguage	
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1041_1_	buttonID	#buttonID, :, id, x
+		p	2	p_i1041_2_	xPos	#xPos, :, x, y
+		p	3	p_i1041_3_	yPos	#yPos, :, y, id

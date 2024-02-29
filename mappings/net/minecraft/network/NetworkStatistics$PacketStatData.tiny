@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkStatistics$PacketStatData	net/minecraft/network/NetworkStatistics$PacketStatData	
+	f	J	field_152496_a	totalBytes	#totalBytes, :, ~, ~
+	f	I	field_152497_b	count	#count, :, ~, ~
+	f	D	field_152498_c	averageBytes	#averageBytes, :, ~, ~
+	m	()J	func_152493_a	getTotalBytes	#getTotalBytes, :, ~, ~
+	m	(J)Lnet/minecraft/network/NetworkStatistics$PacketStatData;	func_152494_a	func_152494_a	#~, ~, ~, ~
+		p	1	p_152494_1_	p_152494_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/network/NetworkStatistics$PacketStatData;)J	access$300	access$300	#~, ~, ~, ~
+		p	0	p_access$300_0_	p_access$300_0_	#~, ~, ~, ~
+	m	()I	func_152495_b	getCount	#getCount, :, ~, ~
+	m	(Lnet/minecraft/network/NetworkStatistics$PacketStatData;)I	access$400	access$400	#~, ~, ~, ~
+		p	0	p_access$400_0_	p_access$400_0_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(JID)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1184_1_	worldIn	#worldIn, :, ~, ~
+		p	3	p_i1184_3_	p_i1184_3_	#~, ~, ~, ~
+		p	4	p_i1184_4_	p_i1184_4_	#~, ~, ~, ~
+	m	(JIDLnet/minecraft/network/NetworkStatistics$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1185_1_	p_i1185_1_	#~, ~, ~, ~
+		p	3	p_i1185_3_	p_i1185_3_	#~, ~, ~, ~
+		p	4	p_i1185_4_	p_i1185_4_	#~, ~, ~, ~
+		p	6	p_i1185_6_	p_i1185_6_	#~, ~, ~, ~

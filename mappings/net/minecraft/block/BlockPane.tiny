@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPane	net/minecraft/block/BlockPane	
+	f	Ljava/lang/String;	field_150101_M	sideSpriteName	#~, ~, ~, sideSpriteName
+	f	Lnet/minecraft/util/IIcon;	field_150102_N	topSprite	#~, ~, ~, topSprite
+	f	Ljava/lang/String;	field_150100_a	topSpriteName	#~, ~, ~, topSpriteName
+	f	Z	field_150099_b	canDrop	#canDrop, :, :, hasDrops
+	m	(Lnet/minecraft/block/Block;)Z	func_150098_a	canPaneConnectToBlock	#canPaneConnectToBlock, :, canConnectToGlass, shouldConnectTo
+		p	1	p_150098_1_	blockIn	#blockIn, :, block, :
+	m	()Lnet/minecraft/util/IIcon;	func_150097_e	getTopSprite	#~, ~, ~, getTopSprite
+	m	(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/block/material/Material;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45432_1_	sideSpriteName	#~, ~, ~, sideSpriteName
+		p	2	p_i45432_2_	topSpriteName	#~, ~, ~, topSpriteName
+		p	3	p_i45432_3_	material	#~, ~, ~, material
+		p	4	p_i45432_4_	hasDrops	#~, ~, ~, hasDrops

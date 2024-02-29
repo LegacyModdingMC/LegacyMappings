@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/IInventory	net/minecraft/inventory/IInventory	
+	m	()I	func_70302_i_	getSizeInventory	#getSizeInventory, :, getInvSize, getSize
+		c	Returns the number of slots in the inventory.
+	m	(I)Lnet/minecraft/item/ItemStack;	func_70301_a	getStackInSlot	#getStackInSlot, :, getInvStack, getStack
+		c	Returns the stack in slot i
+		p	1	p_70301_1_	slotIn	#slotIn, index, slot, :
+	m	(II)Lnet/minecraft/item/ItemStack;	func_70298_a	decrStackSize	#decrStackSize, :, takeInvStack, removeStack
+		c	Removes from an inventory slot (first arg) up to a specified number (second arg) of items and returns them in a new stack.
+		p	1	p_70298_1_	index	#index, :, slot, :
+		p	2	p_70298_2_	count	#count, :, amount, :
+	m	(ILnet/minecraft/item/ItemStack;)V	func_70299_a	setInventorySlotContents	#setInventorySlotContents, :, setInvStack, setStack
+		c	Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
+		p	1	p_70299_1_	index	#index, :, slot, :
+		p	2	p_70299_2_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_70300_a	isUseableByPlayer	#isUseableByPlayer, isUsableByPlayer, canPlayerUseInv, isValid
+		c	Do not make give this method the name canInteractWith because it clashes with Container
+		p	1	p_70300_1_	player	#player, :, :, :
+	m	(I)Lnet/minecraft/item/ItemStack;	func_70304_b	getStackInSlotOnClosing	#getStackInSlotOnClosing, removeStackFromSlot, removeInvStack, removeStackQuietly
+		c	When some containers are closed they call this on each slot, then drop whatever it returns as an EntityItem - like when you close a workbench GUI.
+		p	1	p_70304_1_	index	#index, :, slot, :
+	m	()Ljava/lang/String;	func_145825_b	getInventoryName	#getInventoryName, :, ~, getInventoryName
+		c	Returns the name of the inventory
+	m	(ILnet/minecraft/item/ItemStack;)Z	func_94041_b	isItemValidForSlot	#isItemValidForSlot, :, isValidInvStack, canSetStack
+		c	Returns true if automation is allowed to insert the given stack (ignoring stack size) into the given slot.
+		p	1	p_94041_1_	index	#index, :, slot, :
+		p	2	p_94041_2_	stack	#stack, :, :, :
+	m	()I	func_70297_j_	getInventoryStackLimit	#getInventoryStackLimit, :, getInvMaxStackAmount, getMaxStackSize
+		c	Returns the maximum stack size for a inventory slot.
+	m	()V	func_70295_k_	openInventory	#openInventory, openChest, ~, onOpen
+	m	()V	func_70305_f	closeInventory	#closeInventory, closeChest, ~, onClose

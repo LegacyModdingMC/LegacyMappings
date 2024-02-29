@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIOcelotSit	net/minecraft/entity/ai/EntityAIOcelotSit	
+	f	Lnet/minecraft/entity/passive/EntityOcelot;	field_151493_a	ocelot	#ocelot, :, :, :
+	f	D	field_151491_b	speed	#~, ~, ~, speed
+	f	I	field_151492_c	timer	#~, ~, ~, timer
+	f	I	field_151489_d	sittingTimer	#~, ~, ~, sittingTimer
+	f	I	field_151490_e	maxStayTime	#~, ~, ~, maxStayTime
+	f	I	field_151487_f	targetBlockX	#~, ~, ~, targetBlockX
+	f	I	field_151488_g	targetBlockY	#~, ~, ~, targetBlockY
+	f	I	field_151494_h	targetBlockZ	#~, ~, ~, targetBlockZ
+	m	(Lnet/minecraft/entity/passive/EntityOcelot;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45315_1_	ocelotIn	#ocelotIn, :, ocelot, :
+		p	2	p_i45315_2_	speed	#~, ~, speed, :
+	m	(Lnet/minecraft/world/World;III)Z	func_151486_a	canSitOnBlock	#~, ~, ~, canSitOnBlock
+		p	1	p_151486_1_	world	#~, ~, ~, world
+		p	2	p_151486_2_	x	#~, ~, ~, x
+		p	3	p_151486_3_	y	#~, ~, ~, y
+		p	4	p_151486_4_	z	#~, ~, ~, z
+	m	()Z	func_151485_f	isNearValidBlock	#~, ~, ~, isNearValidBlock

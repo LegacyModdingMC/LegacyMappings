@@ -1,0 +1,122 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MathHelper	net/minecraft/util/MathHelper	
+	f	[F	field_76144_a	SIN_TABLE	#SIN_TABLE, :, SINE_TABLE, :
+		c	A table of sin values computed from 0 (inclusive) to 2*pi (exclusive), with steps of 2*PI / 65536.
+	f	[I	field_151242_b	multiplyDeBruijnBitPosition	#multiplyDeBruijnBitPosition, MULTIPLY_DE_BRUIJN_BIT_POSITION, :, :
+		c	Though it looks like an array, this is really more like a mapping.  Key (index of this array) is the upper 5 bits of the result of multiplying a 32-bit unsigned integer by the B(2, 5) De Bruijn sequence 0x077CB531.  Value (value stored in the array) is the unique index (from the right) of the leftmost one-bit in a 32-bit unsigned integer that can cause the upper 5 bits to get that value.  Used for highly optimized "find the log-base-2 of this number" calculations.
+	m	(D)F	func_76133_a	sqrt_double	#sqrt_double, sqrt, :, :
+		p	0	p_76133_0_	value	#value, :, d, x
+	m	(DD)D	func_76132_a	abs_max	#abs_max, absMax, :, :
+		c	Maximum of the absolute value of two numbers.
+		p	0	p_76132_0_	a	#~, ~, a, :
+		p	2	p_76132_2_	b	#~, ~, b, :
+	m	(DDD)D	func_151237_a	clamp_double	#clamp_double, clamp, :, :
+		p	0	p_151237_0_	num	#num, :, value, x
+		p	2	p_151237_2_	min	#min, :, :, :
+		p	4	p_151237_4_	max	#max, :, :, :
+	m	(F)F	func_76126_a	sin	#sin, :, :, :
+		c	sin looked up in a table
+		p	0	p_76126_0_	value	#value, :, f, x
+	m	(FFF)F	func_76131_a	clamp_float	#clamp_float, clamp, :, :
+		c	Returns the value of the first parameter, clamped to be within the lower and upper limits given by the second and third parameters
+		p	0	p_76131_0_	num	#num, :, value, x
+		p	1	p_76131_1_	min	#min, :, :, :
+		p	2	p_76131_2_	max	#max, :, :, :
+	m	(I)I	func_76130_a	abs_int	#abs_int, abs, :, :
+		c	Returns the unsigned value of an int.
+		p	0	p_76130_0_	value	#value, :, i, x
+	m	(II)I	func_76137_a	bucketInt	#bucketInt, intFloorDiv, floorDiv, :
+		c	Buckets an integer with specifed bucket sizes.  Args: i, bucketSize
+		p	0	p_76137_0_	a	#~, ~, dividend, a
+		p	1	p_76137_1_	b	#~, ~, divisor, b
+	m	(III)I	func_76125_a	clamp_int	#clamp_int, clamp, :, :
+		c	Returns the value of the first parameter, clamped to be within the lower and upper limits given by the second and third parameters.
+		p	0	p_76125_0_	num	#num, :, value, x
+		p	1	p_76125_1_	min	#min, :, :, :
+		p	2	p_76125_2_	max	#max, :, :, :
+	m	(Ljava/lang/String;)Z	func_76139_a	stringNullOrLengthZero	#stringNullOrLengthZero, :, isEmpty, :
+		c	Tests if a string is null or of length zero
+		p	0	p_76139_0_	string	#~, ~, string, :
+	m	(Ljava/lang/String;D)D	func_82712_a	parseDoubleWithDefault	#parseDoubleWithDefault, getDouble, parseDouble, :
+		c	parses the string as double or returns the second parameter if it fails.
+		p	0	p_82712_0_	value	#value, :, string, s
+		p	1	p_82712_1_	defaultValue	#defaultValue, :, fallback, defaultValue
+	m	(Ljava/lang/String;DD)D	func_82713_a	parseDoubleWithDefaultAndMax	#parseDoubleWithDefaultAndMax, getDouble, parseDouble, :
+		p	0	p_82713_0_	value	#value, :, string, s
+		p	1	p_82713_1_	defaultValue	#defaultValue, :, fallback, defaultValue
+		p	3	p_82713_3_	max	#max, :, minimum, min
+	m	(Ljava/lang/String;I)I	func_82715_a	parseIntWithDefault	#parseIntWithDefault, getInt, parseInt, :
+		c	parses the string as integer or returns the second parameter if it fails
+		p	0	p_82715_0_	value	#value, :, string, s
+		p	1	p_82715_1_	defaultValue	#defaultValue, :, fallback, defaultValue
+	m	(Ljava/lang/String;II)I	func_82714_a	parseIntWithDefaultAndMax	#parseIntWithDefaultAndMax, getInt, parseInt, :
+		c	parses the string as integer or returns the second parameter if it fails. this value is capped to par2
+		p	0	p_82714_0_	value	#value, :, string, s
+		p	1	p_82714_1_	defaultValue	#defaultValue, :, fallback, defaultValue
+		p	2	p_82714_2_	max	#max, :, minimum, min
+	m	(Ljava/util/Random;DD)D	func_82716_a	getRandomDoubleInRange	#getRandomDoubleInRange, nextDouble, :, :
+		p	0	p_82716_0_	random	#random, :, :, :
+		p	1	p_82716_1_	minimum	#minimum, :, min, :
+		p	3	p_82716_3_	maximum	#maximum, :, max, :
+	m	(Ljava/util/Random;FF)F	func_151240_a	randomFloatClamp	#randomFloatClamp, nextFloat, :, :
+		p	0	p_151240_0_	random	#random, :, :, :
+		p	1	p_151240_1_	minimum	#minimum, :, min, :
+		p	2	p_151240_2_	maximum	#maximum, :, max, :
+	m	(Ljava/util/Random;II)I	func_76136_a	getRandomIntegerInRange	#getRandomIntegerInRange, getInt, nextInt, :
+		p	0	p_76136_0_	random	#random, :, :, :
+		p	1	p_76136_1_	minimum	#minimum, :, min, :
+		p	2	p_76136_2_	maximum	#maximum, :, max, :
+	m	([J)D	func_76127_a	average	#average, :, :, :
+		p	0	p_76127_0_	values	#values, :, array, s
+	m	(D)I	func_76140_b	truncateDoubleToInt	#truncateDoubleToInt, fastFloor, :, :
+		c	returns par0 cast as an int, and no greater than Integer.MAX_VALUE-1024
+		p	0	p_76140_0_	value	#value, :, d, x
+	m	(DDD)D	func_151238_b	denormalizeClamp	#denormalizeClamp, clampedLerp, :, :
+		p	0	p_151238_0_	lowerBnd	#lowerBnd, :, start, min
+		p	2	p_151238_2_	upperBnd	#upperBnd, :, end, max
+		p	4	p_151238_4_	slide	#slide, :, delta, :
+	m	(F)F	func_76134_b	cos	#cos, :, :, :
+		c	cos looked up in the sin table with the appropriate offset
+		p	0	p_76134_0_	value	#value, :, f, x
+	m	(I)I	func_151236_b	roundUpToPowerOfTwo	#roundUpToPowerOfTwo, smallestEncompassingPowerOfTwo, :, :
+		c	Returns the input value rounded up to the next highest power of two.
+		p	0	p_151236_0_	value	#value, :, :, x
+	m	(II)I	func_154354_b	roundUp	#roundUp, :, :, ~
+		c	Rounds the first parameter up to the next interval of the second parameter.\n \nFor instance, {@code roundUp(1, 4)} returns 4; {@code roundUp(0, 4)} returns 0; and {@code roundUp(4, 4)} returns 4.
+		p	0	p_154354_0_	number	#number, :, value, ~
+		p	1	p_154354_1_	interval	#interval, :, stepSize, ~
+	m	(D)I	func_76128_c	floor_double	#floor_double, floor, :, :
+		c	Returns the greatest integer less than or equal to the double argument
+		p	0	p_76128_0_	value	#value, :, d, x
+	m	(F)F	func_76129_c	sqrt_float	#sqrt_float, sqrt, :, :
+		p	0	p_76129_0_	value	#value, :, f, x
+	m	(I)I	func_151239_c	calculateLogBaseTwo	#calculateLogBaseTwo, log2, :, :
+		c	Efficiently calculates the floor of the base-2 log of an integer value.  This is effectively the index of the highest bit that is set.  For example, if the number in binary is 0...100101, this will return 5.
+		p	0	p_151239_0_	value	#value, :, :, x
+	m	(D)J	func_76124_d	floor_double_long	#floor_double_long, lfloor, :, :
+		c	Long version of floor_double
+		p	0	p_76124_0_	value	#value, :, d, x
+	m	(F)I	func_76141_d	floor_float	#floor_float, floor, :, :
+		c	Returns the greatest integer less than or equal to the float argument
+		p	0	p_76141_0_	value	#value, :, f, x
+	m	(I)Z	func_151235_d	isPowerOfTwo	#isPowerOfTwo, :, :, :
+		c	Is the given value a power of two?  (1, 2, 4, 8, 16, ...)
+		p	0	p_151235_0_	value	#value, :, :, x
+	m	(D)I	func_154353_e	absFloor	#absFloor, :, :, ~
+		p	0	p_154353_0_	value	#value, :, d, ~
+	m	(F)F	func_76135_e	abs	#abs, :, :, :
+		p	0	p_76135_0_	value	#value, :, f, x
+	m	(I)I	func_151241_e	calculateLogBaseTwoDeBruijn	#calculateLogBaseTwoDeBruijn, log2DeBruijn, :, :
+		c	Uses a B(2, 5) De Bruijn sequence and a lookup table to efficiently calculate the log-base-two of the given value.  Optimized for cases where the input value is a power-of-two.  If the input value is not a power-of-two, then subtract 1 from the return value.
+		p	0	p_151241_0_	value	#value, :, :, x
+	m	(D)I	func_76143_f	ceiling_double_int	#ceiling_double_int, ceil, :, :
+		p	0	p_76143_0_	value	#value, :, d, x
+	m	(F)I	func_76123_f	ceiling_float_int	#ceiling_float_int, ceil, :, :
+		p	0	p_76123_0_	value	#value, :, f, x
+	m	(D)D	func_76138_g	wrapAngleTo180_double	#wrapAngleTo180_double, wrapDegrees, :, :
+		c	the angle is reduced to an angle between -180 and +180 by mod, and a 360 check
+		p	0	p_76138_0_	value	#value, :, degrees, :
+	m	(F)F	func_76142_g	wrapAngleTo180_float	#wrapAngleTo180_float, wrapDegrees, :, :
+		c	the angle is reduced to an angle between -180 and +180 by mod, and a 360 check
+		p	0	p_76142_0_	value	#value, :, degrees, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockEndPortalFrame	net/minecraft/block/BlockEndPortalFrame	
+	f	Lnet/minecraft/util/IIcon;	field_150023_a	iconEndPortalFrameTop	#iconEndPortalFrameTop, :, ~, spriteTop
+	f	Lnet/minecraft/util/IIcon;	field_150022_b	iconEndPortalFrameEye	#iconEndPortalFrameEye, :, ~, spriteEye
+	m	(I)Z	func_150020_b	isEnderEyeInserted	#isEnderEyeInserted, :, ~, hasEye
+		c	checks if an ender eye has been inserted into the frame block. parameters: metadata
+		p	0	p_150020_0_	metadata	#~, ~, ~, metadata
+	m	()Lnet/minecraft/util/IIcon;	func_150021_e	getIconEndPortalFrameEye	#getIconEndPortalFrameEye, :, ~, getEye
+	m	()V	<init>	<init>	#~, ~, ~, ~

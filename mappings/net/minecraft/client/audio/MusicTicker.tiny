@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/MusicTicker	net/minecraft/client/audio/MusicTicker	
+	f	Ljava/util/Random;	field_147679_a	rand	#rand, :, random, :
+	f	Lnet/minecraft/client/Minecraft;	field_147677_b	mc	#mc, :, ~, minecraft
+	f	Lnet/minecraft/client/audio/ISound;	field_147678_c	currentMusic	#currentMusic, :, ~, currentMusic
+	f	I	field_147676_d	timeUntilNextMusic	#timeUntilNextMusic, :, timeUntilNextSong, :
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45112_1_	mcIn	#mcIn, :, ~, minecraft

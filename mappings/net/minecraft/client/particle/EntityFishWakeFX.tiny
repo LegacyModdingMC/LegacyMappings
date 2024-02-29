@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityFishWakeFX	net/minecraft/client/particle/EntityFishWakeFX	
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45073_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i45073_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i45073_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i45073_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i45073_8_	p_i45073_8_	#~, ~, ~, ~
+		p	10	p_i45073_10_	p_i45073_10_	#~, ~, ~, ~
+		p	12	p_i45073_12_	p_i45073_12_	#~, ~, ~, ~

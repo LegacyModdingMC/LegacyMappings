@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/MinecraftServer$1	net/minecraft/server/MinecraftServer$1	
+	f	Lnet/minecraft/server/MinecraftServer;	field_74267_a	mcServer	#mcServer, :, ~, server
+		c	Reference to the MinecraftServer object.
+	f	J	field_96245_b	startTime	#startTime, :, ~, lastUpdateTime
+	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1493_1_	p_i1493_1_	#~, ~, ~, ~

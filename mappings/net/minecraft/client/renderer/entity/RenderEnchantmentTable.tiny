@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderEnchantmentTable	net/minecraft/client/renderer/entity/RenderEnchantmentTable	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147540_b	TEXTURE_BOOK	#TEXTURE_BOOK, :, BOOK_TEXTURE, BOOK_LOCATION
+		c	The texture for the book above the enchantment table.
+	f	Lnet/minecraft/client/model/ModelBook;	field_147541_c	modelBook	#modelBook, :, bookModel, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

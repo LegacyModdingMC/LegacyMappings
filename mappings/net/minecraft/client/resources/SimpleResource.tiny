@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SimpleResource	net/minecraft/client/resources/SimpleResource	
+	f	Ljava/util/Map;	field_110535_a	mapMetadataSections	#mapMetadataSections, :, metaProviders, metadataProviders
+	f	Lnet/minecraft/util/ResourceLocation;	field_110533_b	srResourceLocation	#srResourceLocation, :, id, location
+	f	Ljava/io/InputStream;	field_110534_c	resourceInputStream	#resourceInputStream, :, inputStream, resource
+	f	Ljava/io/InputStream;	field_110531_d	mcmetaInputStream	#mcmetaInputStream, :, metaInputStream, metadata
+	f	Lnet/minecraft/client/resources/data/IMetadataSerializer;	field_110532_e	srMetadataSerializer	#srMetadataSerializer, :, metaSerializer, metadataSerializers
+	f	Z	field_110529_f	mcmetaJsonChecked	#mcmetaJsonChecked, :, readMetadata, hasReadMetadata
+	f	Lcom/google/gson/JsonObject;	field_110530_g	mcmetaJson	#mcmetaJson, :, metadata, metadataJson
+	m	(Lnet/minecraft/util/ResourceLocation;Ljava/io/InputStream;Ljava/io/InputStream;Lnet/minecraft/client/resources/data/IMetadataSerializer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1300_1_	location	#~, ~, id, location
+		p	2	p_i1300_2_	resource	#~, ~, inputStream, resource
+		p	3	p_i1300_3_	metadata	#~, ~, metaInputStream, metadata
+		p	4	p_i1300_4_	metadataSerializers	#~, ~, metaSerializer, metadataSerializers
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, o, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~

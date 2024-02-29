@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFarmland	net/minecraft/block/BlockFarmland	
+	f	Lnet/minecraft/util/IIcon;	field_149824_a	iconDry	#iconDry, :, ~, spriteWet
+		c	The texture to use for the top of dry farmland.
+	f	Lnet/minecraft/util/IIcon;	field_149823_b	iconWet	#iconWet, :, ~, spriteDry
+		c	The texture to use for the top of wet (watered) farmland.
+	m	(Lnet/minecraft/world/World;III)Z	func_149822_e	hasVegetation	#~, ~, ~, hasVegetation
+		p	1	p_149822_1_	world	#~, ~, ~, world
+		p	2	p_149822_2_	x	#~, ~, ~, x
+		p	3	p_149822_3_	y	#~, ~, ~, y
+		p	4	p_149822_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_149821_m	isIrrigated	#~, ~, ~, isIrrigated
+		p	1	p_149821_1_	world	#~, ~, ~, world
+		p	2	p_149821_2_	x	#~, ~, ~, x
+		p	3	p_149821_3_	y	#~, ~, ~, y
+		p	4	p_149821_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

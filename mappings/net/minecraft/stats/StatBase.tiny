@@ -1,0 +1,46 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatBase	net/minecraft/stats/StatBase	
+	f	Lnet/minecraft/util/IChatComponent;	field_75978_a	statName	#statName, :, nameId, name
+		c	The Stat name
+	f	Lnet/minecraft/stats/IStatType;	field_75976_b	type	#type, formatter, statTypeProvider, formatter
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_150957_c	objectiveCriteria	#objectiveCriteria, :, criterion, :
+	f	Ljava/lang/Class;	field_150956_d	serializableClazz	#serializableClazz, :, jsonElementProvider, progressType
+	f	Ljava/lang/String;	field_75975_e	statId	#statId, :, name, key
+		c	The Stat ID
+	f	Z	field_75972_f	isIndependent	#isIndependent, :, localOnly, local
+	f	Lnet/minecraft/stats/IStatType;	field_75980_h	simpleStatType	#simpleStatType, :, INTEGER_PROVIDER, NUMBER_FORMATTER
+	f	Lnet/minecraft/stats/IStatType;	field_75981_i	timeStatType	#timeStatType, :, TIME_PROVIDER, TIME_FORMATTER
+	f	Lnet/minecraft/stats/IStatType;	field_75979_j	distanceStatType	#distanceStatType, :, DISTANCE_PROVIDER, DISTANCE_FORMATTER
+	f	Lnet/minecraft/stats/IStatType;	field_111202_k	divideByTen	#divideByTen, :, DAMAGE_PROVIDER, DIVIDE_BY_TEN_FORMATTER
+	f	Ljava/text/NumberFormat;	field_75977_c	numberFormat	#numberFormat, :, DEFAULT_NUMER_FORMAT, NUMBER_FORMAT
+	f	Ljava/text/DecimalFormat;	field_75974_d	decimalFormat	#decimalFormat, :, DEFAULT_DECIMAL_FORMAT, DECIMAL_FORMAT
+	m	(Ljava/lang/String;Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45308_1_	statIdIn	#statIdIn, :, name, key
+		p	2	p_i45308_2_	statNameIn	#statNameIn, :, nameId, name
+	m	(Ljava/lang/String;Lnet/minecraft/util/IChatComponent;Lnet/minecraft/stats/IStatType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45307_1_	statIdIn	#statIdIn, :, name, key
+		p	2	p_i45307_2_	statNameIn	#statNameIn, :, nameId, name
+		p	3	p_i45307_3_	typeIn	#typeIn, formatterIn, statTypeProvider, formatter
+	m	(I)Ljava/lang/String;	func_75968_a	format	#format, :, formatValue, format
+		p	1	p_75968_1_	number	#number, :, value, :
+	m	(Ljava/lang/Class;)Lnet/minecraft/stats/StatBase;	func_150953_b	setSerializableClazz	#setSerializableClazz, :, setJsonElementProvider, setProgressType
+		p	1	p_150953_1_	clazz	#clazz, :, :, progressType
+	m	()Z	func_75967_d	isAchievement	#isAchievement, :, :, :
+		c	Returns whether or not the StatBase-derived class is a statistic (running counter) or an achievement (one-shot).
+	m	()Lnet/minecraft/util/IChatComponent;	func_150951_e	getStatName	#getStatName, :, getText, getDecoratedName
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, object, :
+	m	()Lnet/minecraft/stats/StatBase;	func_75971_g	registerStat	#registerStat, :, addStat, register
+		c	Register the stat into StatList.
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Lnet/minecraft/stats/StatBase;	func_75966_h	initIndependentStat	#initIndependentStat, :, localOnly, setLocal
+		c	Initializes the current stat as independent (i.e., lacking prerequisites for being updated) and returns the current instance.
+	m	()Lnet/minecraft/util/IChatComponent;	func_150955_j	createChatComponent	#createChatComponent, :, ~, getNameForChat
+		c	1.8.9
+	m	()Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	func_150952_k	getCriteria	#getCriteria, :, getCriterion, :
+		c	1.8.9
+	m	()Ljava/lang/Class;	func_150954_l	getSerializableClazz	#getSerializableClazz, :, getJsonElementProvider, getProgressType
+	m	()Ljava/text/NumberFormat;	access$000	access$000	#~, ~, getDefaultNumberFormat, ~
+	m	()Ljava/text/DecimalFormat;	access$100	access$100	#~, ~, getDefaultDecimalFormat, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

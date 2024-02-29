@@ -1,0 +1,88 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/potion/PotionHelper	net/minecraft/potion/PotionHelper	
+	f	Ljava/lang/String;	field_77924_a	unusedString	#unusedString, :, UNCRAFTABLE, :
+	f	Ljava/lang/String;	field_77922_b	sugarEffect	#sugarEffect, :, SUGAR, :
+	f	Ljava/lang/String;	field_77923_c	ghastTearEffect	#ghastTearEffect, :, GHAST_TEAR, :
+	f	Ljava/lang/String;	field_77920_d	spiderEyeEffect	#spiderEyeEffect, :, POISON, :
+	f	Ljava/lang/String;	field_77921_e	fermentedSpiderEyeEffect	#fermentedSpiderEyeEffect, :, FERMENTED_SPIDER_EYE, :
+	f	Ljava/lang/String;	field_77918_f	speckledMelonEffect	#speckledMelonEffect, :, GLISTERING_MELON, :
+	f	Ljava/lang/String;	field_77919_g	blazePowderEffect	#blazePowderEffect, :, BLAZE_POWDER, :
+	f	Ljava/lang/String;	field_77931_h	magmaCreamEffect	#magmaCreamEffect, :, MAGMA_CREAM, :
+	f	Ljava/lang/String;	field_77932_i	redstoneEffect	#redstoneEffect, :, REDSTONE, :
+	f	Ljava/lang/String;	field_77929_j	glowstoneEffect	#glowstoneEffect, :, GLOWSTONE, :
+	f	Ljava/lang/String;	field_77930_k	gunpowderEffect	#gunpowderEffect, :, GUNPOWDER, :
+	f	Ljava/lang/String;	field_82818_l	goldenCarrotEffect	#goldenCarrotEffect, :, GOLDEN_CARROT, :
+	f	Ljava/lang/String;	field_151423_m	pufferfishEffect	#pufferfishEffect, :, WATER_BREATHING, :
+	f	Ljava/util/HashMap;	field_77927_l	potionRequirements	#potionRequirements, :, ~, RECIPES
+	f	Ljava/util/HashMap;	field_77928_m	potionAmplifiers	#potionAmplifiers, :, ~, EFFECT_CACHE
+		c	Potion effect amplifier map
+	f	Ljava/util/HashMap;	field_77925_n	DATAVALUE_COLORS	#DATAVALUE_COLORS, :, ~, COLOR_CACHE
+	f	[Ljava/lang/String;	field_77926_o	potionPrefixes	#potionPrefixes, :, ~, NAMES
+		c	An array of possible potion prefix names, as translation IDs.
+	m	(I)I	func_77909_a	getPotionPrefixIndex	#getPotionPrefixIndex, :, ~, getId
+		c	Given a potion data value, get its prefix index number.
+		p	0	p_77909_0_	dataValue	#dataValue, :, ~, metadata
+	m	(II)Z	func_77914_a	checkFlag	#checkFlag, :, ~, hasFlag
+		c	Is the bit given set to 1?
+		p	0	p_77914_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77914_1_	flag	#~, ~, ~, flag
+	m	(IIIIII)I	func_77908_a	getPotionPrefixIndexFlags	#getPotionPrefixIndexFlags, :, ~, remap
+		p	0	p_77908_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77908_1_	flag1	#~, ~, ~, flag1
+		p	2	p_77908_2_	flag2	#~, ~, ~, flag2
+		p	3	p_77908_3_	flag3	#~, ~, ~, flag3
+		p	4	p_77908_4_	flag4	#~, ~, ~, flag4
+		p	5	p_77908_5_	flag5	#~, ~, ~, flag5
+	m	(IIZZZ)I	func_77906_a	brewBitOperations	#brewBitOperations, :, ~, updateMetadata
+		c	Does bit operations for brewPotionData, given data, the index of the bit being operated upon, whether the bit will be removed, whether the bit will be toggled (NOT), or whether the data field will be set to 0 if the bit is not present.
+		p	0	p_77906_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77906_1_	flag	#~, ~, ~, flag
+		p	2	p_77906_2_	remove	#~, ~, ~, remove
+		p	3	p_77906_3_	toggle	#~, ~, ~, toggle
+		p	4	p_77906_4_	clear	#~, ~, ~, clear
+	m	(ILjava/lang/String;)I	func_77913_a	applyIngredient	#applyIngredient, :, getStatusEffectData, updateMetadata
+		c	Generate a data value for a potion, given its previous data value and the encoded string of new effects it will receive
+		p	0	p_77913_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77913_1_	recipe	#~, ~, ~, recipe
+	m	(IZ)I	func_77915_a	getLiquidColor	#getLiquidColor, :, getColor, :
+		c	Given a potion data value, get the associated liquid color (optionally bypassing the cache)
+		p	0	p_77915_0_	dataValue	#dataValue, :, ~, metadata
+		p	1	p_77915_1_	bypassCache	#bypassCache, :, ~, ignoreCache
+	m	(Ljava/lang/String;III)I	func_77912_a	parsePotionEffects	#parsePotionEffects, :, ~, getEffectAmplifier
+		p	0	p_77912_0_	recipe	#~, ~, ~, recipe
+		p	1	p_77912_1_	start	#~, ~, ~, start
+		p	2	p_77912_2_	end	#~, ~, ~, end
+		p	3	p_77912_3_	metadata	#~, ~, ~, metadata
+	m	(Ljava/util/Collection;)I	func_77911_a	calcPotionLiquidColor	#calcPotionLiquidColor, :, ~, getColor
+		c	Given a {@link Collection}<{@link PotionEffect}> will return an Integer color.
+		p	0	p_77911_0_	effects	#~, ~, ~, effects
+	m	(ZZZIIII)I	func_77904_a	getPotionEffect	#getPotionEffect, :, ~, updatePotionEffectMetadata
+		p	4	p_77904_4_	flag	#~, ~, ~, flag
+		p	6	p_77904_6_	metadata	#~, ~, ~, metadata
+		p	0	p_77904_0_	p_77904_0_	#~, ~, ~, ~
+		p	1	p_77904_1_	p_77904_1_	#~, ~, ~, ~
+		p	2	p_77904_2_	p_77904_2_	#~, ~, ~, ~
+		p	3	p_77904_3_	p_77904_3_	#~, ~, ~, ~
+		p	5	p_77904_5_	p_77904_5_	#~, ~, ~, ~
+	m	(IZ)Ljava/util/List;	func_77917_b	getPotionEffects	#getPotionEffects, :, :, getStatusEffects
+		c	Returns a list of effects for the specified potion damage value.
+		p	0	p_77917_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77917_1_	ignoreUsability	#~, ~, ~, ignoreUsability
+	m	(Ljava/util/Collection;)Z	func_82817_b	getAreAmbient	#getAreAmbient, :, ~, isAllAmbient
+		c	Check whether a {@link Collection}<{@link PotionEffect}> are all ambient.
+		p	0	p_82817_0_	potionEffects	#potionEffects, :, ~, effects
+	m	(I)Ljava/lang/String;	func_77905_c	getPotionPrefix	#getPotionPrefix, :, ~, getName
+		c	Given a potion data value, get its prefix as a translation ID.
+		p	0	p_77905_0_	dataValue	#dataValue, :, ~, metadata
+	m	(II)I	func_77910_c	isFlagSet	#isFlagSet, :, ~, getFlag
+		c	Returns 1 if the flag is set, 0 if it is not set.
+		p	0	p_77910_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77910_1_	flag	#~, ~, ~, flag
+	m	(II)I	func_77916_d	isFlagUnset	#isFlagUnset, :, ~, getFlagInverse
+		c	Returns 0 if the flag is set, 1 if it is not set.
+		p	0	p_77916_0_	metadata	#~, ~, ~, metadata
+		p	1	p_77916_1_	flag	#~, ~, ~, flag
+	m	(I)I	func_77907_h	countSetFlags	#countSetFlags, :, ~, getAmountOfOnes
+		c	Count the number of bits in an integer set to ON.
+		p	0	p_77907_0_	p_77907_0_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityItemFrame	net/minecraft/entity/item/EntityItemFrame	
+	f	F	field_82337_e	itemDropChance	#itemDropChance, :, setDropChance, :
+		c	Chance for this item frame's item to drop from the frame.
+	m	(Lnet/minecraft/item/ItemStack;)V	func_82334_a	setDisplayedItem	#setDisplayedItem, :, setHeldItemStack, addItemToItemFrame
+		p	1	p_82334_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)V	func_110131_b	removeFrameFromMap	#removeFrameFromMap, :, removeFromFrame, removeItem
+		c	Removes the dot representing this frame's position from the map when the item frame is broken.
+		p	1	p_110131_1_	stack	#stack, :, map, item
+	m	(Lnet/minecraft/entity/Entity;Z)V	func_146065_b	dropItemOrSelf	#dropItemOrSelf, :, dropHeldStack, dropItemOrItemFrame
+		p	1	p_146065_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_146065_2_	shouldDropSelf	#~, ~, alwaysDrop, shouldDropSelf
+	m	(I)V	func_82336_g	setItemRotation	#setItemRotation, :, setRotation, setItemRotation
+		p	1	p_82336_1_	rotationIn	#rotationIn, :, value, rotation
+	m	()Lnet/minecraft/item/ItemStack;	func_82335_i	getDisplayedItem	#getDisplayedItem, :, getHeldItemStack, getItemStackInItemFrame
+	m	()I	func_82333_j	getRotation	#getRotation, :, rotation, :
+		c	Return the rotation of the item currently on this frame.
+	m	(Lnet/minecraft/world/World;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1591_1_	world	#~, ~, ~, world
+		p	2	p_i1591_2_	x	#~, ~, ~, x
+		p	3	p_i1591_3_	y	#~, ~, ~, y
+		p	4	p_i1591_4_	z	#~, ~, ~, z
+		p	5	p_i1591_5_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1590_1_	worldIn	#worldIn, :, ~, ~

@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/settings/KeyBinding	net/minecraft/client/settings/KeyBinding	
+	f	Ljava/util/List;	field_74516_a	keybindArray	#keybindArray, KEYBIND_ARRAY, KEYS, ALL
+	f	Lnet/minecraft/util/IntHashMap;	field_74514_b	hash	#hash, HASH, KEY_MAP, BY_KEY_CODE
+	f	Ljava/util/Set;	field_151473_c	keybindSet	#keybindSet, KEYBIND_SET, categories, CATEGORIES
+	f	Ljava/lang/String;	field_74515_c	keyDescription	#keyDescription, :, translationKey, name
+	f	I	field_151472_e	keyCodeDefault	#keyCodeDefault, :, defaultCode, defaultKeyCode
+	f	Ljava/lang/String;	field_151471_f	keyCategory	#keyCategory, :, category, :
+	f	I	field_74512_d	keyCode	#keyCode, :, code, keyCode
+	f	Z	field_74513_e	pressed	#pressed, :, :, :
+		c	because _303 wanted me to call it that(Caironater)
+	f	I	field_151474_i	pressTime	#pressTime, :, timesPressed, clickCount
+	m	(Ljava/lang/String;ILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45001_1_	description	#description, :, translationKey, name
+		p	2	p_i45001_2_	keyCode	#keyCode, :, code, keyCode
+		p	3	p_i45001_3_	category	#category, :, :, :
+	m	()V	func_74506_a	unPressAllKeys	#unPressAllKeys, :, unpressAll, releaseAll
+	m	(I)V	func_74507_a	onTick	#onTick, :, onKeyPressed, click
+		p	0	p_74507_0_	keyCode	#keyCode, :, :, :
+	m	(IZ)V	func_74510_a	setKeyBindState	#setKeyBindState, :, setKeyPressed, set
+		p	0	p_74510_0_	keyCode	#keyCode, :, :, :
+		p	1	p_74510_1_	pressed	#pressed, :, :, :
+	m	(Lnet/minecraft/client/settings/KeyBinding;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	()V	func_74508_b	resetKeyBindingArrayAndHash	#resetKeyBindingArrayAndHash, :, updateKeysByCode, resetMapping
+	m	(I)V	func_151462_b	setKeyCode	#setKeyCode, :, setCode, setKeyCode
+		p	1	p_151462_1_	keyCode	#keyCode, :, code, keyCode
+	m	()Ljava/util/Set;	func_151467_c	getKeybinds	#getKeybinds, :, getCategories, :
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	other	#~, ~, other, :
+	m	()Z	func_151470_d	getIsKeyPressed	#getIsKeyPressed, isKeyDown, isPressed, :
+		c	Returns true if the key is pressed (used for continuous querying). Should be used in tickers.
+	m	()Ljava/lang/String;	func_151466_e	getKeyCategory	#getKeyCategory, :, getCategory, :
+	m	()Z	func_151468_f	isPressed	#isPressed, :, wasPressed, consumeClick
+		c	Returns true on the initial key press. For continuous querying use {@link isKeyDown()}. Should be used in key events.
+	m	()Ljava/lang/String;	func_151464_g	getKeyDescription	#getKeyDescription, :, getTranslationKey, getName
+	m	()I	func_151469_h	getKeyCodeDefault	#getKeyCodeDefault, :, getDefaultCode, getDefaultKeyCode
+	m	()I	func_151463_i	getKeyCode	#getKeyCode, :, getCode, getKeyCode
+	m	()V	func_74505_d	unpressKey	#unpressKey, :, reset, release
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

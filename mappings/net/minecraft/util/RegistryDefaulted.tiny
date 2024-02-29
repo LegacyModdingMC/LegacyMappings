@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/RegistryDefaulted	net/minecraft/util/RegistryDefaulted	
+	f	Ljava/lang/Object;	field_82597_b	defaultObject	#defaultObject, :, defaultValue, :
+		c	Default object for this registry, returned when an object is not found.
+	m	(Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1366_1_	defaultObjectIn	#defaultObjectIn, :, defaultValue, :

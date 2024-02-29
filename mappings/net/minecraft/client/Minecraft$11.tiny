@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$11	net/minecraft/client/Minecraft$11	
+	f	Lnet/minecraft/client/Minecraft;	field_90046_a	theMinecraft	#theMinecraft, :, client, ~
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1004_1_	client	#~, ~, client, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

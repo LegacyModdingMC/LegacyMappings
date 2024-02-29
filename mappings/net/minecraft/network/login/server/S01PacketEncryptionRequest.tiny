@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/login/server/S01PacketEncryptionRequest	net/minecraft/network/login/server/S01PacketEncryptionRequest	
+	f	Ljava/lang/String;	field_149612_a	hashedServerId	#hashedServerId, :, serverId, key
+	f	Ljava/security/PublicKey;	field_149610_b	publicKey	#publicKey, :, :, :
+	f	[B	field_149611_c	verifyToken	#verifyToken, :, nonce, :
+	m	(Ljava/lang/String;Ljava/security/PublicKey;[B)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45268_1_	serverId	#serverId, :, :, key
+		p	2	p_i45268_2_	key	#key, :, publicKey, :
+		p	3	p_i45268_3_	verifyToken	#verifyToken, :, nonce, :
+	m	()Ljava/lang/String;	func_149609_c	getServerId	#getServerId, :, :, getServerKey
+	m	()Ljava/security/PublicKey;	func_149608_d	getPublicKey	#getPublicKey, :, :, :
+	m	()[B	func_149607_e	getVerifyToken	#getVerifyToken, :, getNonce, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

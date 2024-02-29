@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSign	net/minecraft/block/BlockSign	
+	f	Ljava/lang/Class;	field_149968_a	blockEntityType	#~, ~, ~, blockEntityType
+	f	Z	field_149967_b	standing	#~, ~, ~, standing
+	m	(Ljava/lang/Class;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45426_1_	blockEntityType	#~, ~, ~, blockEntityType
+		p	2	p_i45426_2_	standing	#~, ~, ~, standing

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SimpleReloadableResourceManager$1	net/minecraft/client/resources/SimpleReloadableResourceManager$1	
+	f	Lnet/minecraft/client/resources/SimpleReloadableResourceManager;	field_130076_a	theSimpleReloadableResourceManager	#theSimpleReloadableResourceManager, :, ~, manager
+	m	(Lnet/minecraft/client/resources/IResourcePack;)Ljava/lang/String;	apply	apply	#~, ~, apply, :
+		p	1	p_apply_1_	p_apply_1_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	apply	apply	#~, ~, ~, ~
+		p	1	p_apply_1_	resourcePack	#~, ~, ~, resourcePack
+	m	(Lnet/minecraft/client/resources/SimpleReloadableResourceManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1298_1_	p_i1298_1_	#~, ~, ~, ~

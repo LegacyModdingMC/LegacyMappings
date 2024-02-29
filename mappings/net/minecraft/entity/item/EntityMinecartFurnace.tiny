@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityMinecartFurnace	net/minecraft/entity/item/EntityMinecartFurnace	
+	f	D	field_94111_a	pushX	#pushX, :, :, :
+	f	D	field_94109_b	pushZ	#pushZ, :, :, :
+	f	I	field_94110_c	fuel	#fuel, :, :, :
+	m	()Z	func_94108_c	isMinecartPowered	#isMinecartPowered, :, isLit, :
+	m	(Z)V	func_94107_f	setMinecartPowered	#setMinecartPowered, :, setLit, :
+		p	1	p_94107_1_	lit	#~, ~, lit, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1718_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1719_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1719_2_	x	#x, :, ~, x
+		p	4	p_i1719_4_	y	#y, :, ~, y
+		p	6	p_i1719_6_	z	#z, :, ~, z

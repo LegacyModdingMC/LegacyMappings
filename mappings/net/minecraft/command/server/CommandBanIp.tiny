@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandBanIp	net/minecraft/command/server/CommandBanIp	
+	f	Ljava/util/regex/Pattern;	field_147211_a	IP_PATTERN	#IP_PATTERN, :, ~, REGEX_PATTERN
+		c	A regex that matches ip addresses
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;Ljava/lang/String;)V	func_147210_a	banIp	#~, ~, ~, banIp
+		p	1	p_147210_1_	sender	#sender, :, ~, commmand
+		p	2	p_147210_2_	address	#address, :, ~, name
+		p	3	p_147210_3_	reason	#reason, :, ~, reason
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

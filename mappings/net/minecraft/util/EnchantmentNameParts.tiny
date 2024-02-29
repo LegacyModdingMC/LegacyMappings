@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EnchantmentNameParts	net/minecraft/util/EnchantmentNameParts	
+	f	Lnet/minecraft/util/EnchantmentNameParts;	field_148338_a	instance	#instance, INSTANCE, :, :
+	f	Ljava/util/Random;	field_148336_b	rand	#rand, :, random, :
+	f	[Ljava/lang/String;	field_148337_c	namePartsArray	#namePartsArray, :, stringray, words
+	m	()Ljava/lang/String;	func_148334_a	generateNewRandomName	#generateNewRandomName, :, getRandomString, getRandomPhrase
+		c	Randomly generates a new name built up of 3 or 4 randomly selected words.
+	m	(J)V	func_148335_a	reseedRandomGenerator	#reseedRandomGenerator, :, setSeed, :
+		c	Resets the underlying random number generator using a given seed.
+		p	1	p_148335_1_	seed	#seed, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

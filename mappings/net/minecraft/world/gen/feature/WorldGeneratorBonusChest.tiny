@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGeneratorBonusChest	net/minecraft/world/gen/feature/WorldGeneratorBonusChest	
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_76546_a	theBonusChestGenerator	#theBonusChestGenerator, :, ~, lootEntries
+		c	Instance of WeightedRandomChestContent what will randomly generate items into the Bonus Chest.
+	f	I	field_76545_b	itemsToGenerateInBonusChest	#itemsToGenerateInBonusChest, :, maxItemsToGenerate, amountOfLoot
+		c	Value of this int will determine how much items gonna generate in Bonus Chest.
+	m	([Lnet/minecraft/util/WeightedRandomChestContent;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2010_1_	lootEntries	#~, ~, ~, lootEntries
+		p	2	p_i2010_2_	amountOfLoot	#~, ~, ~, amountOfLoot

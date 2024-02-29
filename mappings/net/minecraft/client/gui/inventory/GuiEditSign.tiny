@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiEditSign	net/minecraft/client/gui/inventory/GuiEditSign	
+	f	Lnet/minecraft/tileentity/TileEntitySign;	field_146848_f	tileSign	#tileSign, :, sign, :
+		c	Reference to the sign object.
+	f	I	field_146849_g	updateCounter	#updateCounter, :, ticksSinceOpened, :
+		c	Counts the number of screen updates.
+	f	I	field_146851_h	editLine	#editLine, :, currentRow, :
+		c	The index of the line that is being edited.
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146852_i	doneBtn	#doneBtn, :, doneButton, :
+		c	"Done" button for the GUI.
+	m	(Lnet/minecraft/tileentity/TileEntitySign;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1097_1_	teSign	#teSign, :, sign, :

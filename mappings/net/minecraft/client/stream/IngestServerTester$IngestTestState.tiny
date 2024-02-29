@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/IngestServerTester$IngestTestState	net/minecraft/client/stream/IngestServerTester$IngestTestState	
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	Uninitalized	Uninitalized	#~, ~, UNINITALIZED, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	Starting	Starting	#~, ~, STARTING, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	ConnectingToServer	ConnectingToServer	#~, ~, CONNECTING_TO_SERVER, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	TestingServer	TestingServer	#~, ~, TESTING_SERVER, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	DoneTestingServer	DoneTestingServer	#~, ~, DONE_TESTING_SERVER, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	Finished	Finished	#~, ~, FINISHED, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	Cancelled	Cancelled	#~, ~, CANCELLED, :
+	f	Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	Failed	Failed	#~, ~, FAILED, :
+	f	[Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/client/stream/IngestServerTester$IngestTestState;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1016_1_	p_i1016_1_	#~, ~, ~, ~
+		p	2	p_i1016_2_	p_i1016_2_	#~, ~, ~, ~

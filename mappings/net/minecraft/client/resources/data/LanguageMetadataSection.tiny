@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/LanguageMetadataSection	net/minecraft/client/resources/data/LanguageMetadataSection	
+	f	Ljava/util/Collection;	field_135019_a	languages	#languages, :, definitions, languageDefinitions
+	m	()Ljava/util/Collection;	func_135018_a	getLanguages	#getLanguages, :, getLanguageDefinitions, :
+	m	(Ljava/util/Collection;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1311_1_	languagesIn	#languagesIn, :, ~, languageDefinitions

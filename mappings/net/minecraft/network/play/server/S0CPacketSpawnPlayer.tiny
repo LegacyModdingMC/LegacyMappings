@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S0CPacketSpawnPlayer	net/minecraft/network/play/server/S0CPacketSpawnPlayer	
+	f	I	field_148957_a	entityId	#entityId, :, id, :
+	f	Lcom/mojang/authlib/GameProfile;	field_148955_b	profile	#~, ~, ~, profile
+	f	I	field_148956_c	x	#x, :, :, :
+	f	I	field_148953_d	y	#y, :, :, :
+	f	I	field_148954_e	z	#z, :, :, :
+	f	B	field_148951_f	yaw	#yaw, :, :, :
+	f	B	field_148952_g	pitch	#pitch, :, :, :
+	f	I	field_148959_h	currentItem	#currentItem, :, handStackid, heldItemId
+	f	Lnet/minecraft/entity/DataWatcher;	field_148960_i	watcher	#watcher, :, tracker, :
+	f	Ljava/util/List;	field_148958_j	dataManagerEntries	#dataManagerEntries, :, dataTrackerEntries, dataEntries
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45171_1_	player	#player, :, :, :
+	m	()Ljava/util/List;	func_148944_c	getDataManagerEntries	#getDataManagerEntries, :, getDataTrackerEntries, :
+	m	()I	func_148943_d	getEntityID	#getEntityID, :, getId, :
+	m	()Lcom/mojang/authlib/GameProfile;	func_148948_e	getProfile	#~, ~, ~, getProfile
+	m	()I	func_148942_f	getX	#getX, :, :, :
+	m	()I	func_148949_g	getY	#getY, :, :, :
+	m	()I	func_148946_h	getZ	#getZ, :, :, :
+	m	()B	func_148941_i	getYaw	#getYaw, :, :, :
+	m	()B	func_148945_j	getPitch	#getPitch, :, :, :
+	m	()I	func_148947_k	getCurrentItemID	#getCurrentItemID, :, getHandStackId, getHeldItemId
+	m	()V	<init>	<init>	#~, ~, ~, ~

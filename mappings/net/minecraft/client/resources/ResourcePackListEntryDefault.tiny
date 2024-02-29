@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackListEntryDefault	net/minecraft/client/resources/ResourcePackListEntryDefault	
+	f	Lorg/apache/logging/log4j/Logger;	field_148322_c	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/resources/IResourcePack;	field_148320_d	resourcePack	#resourcePack, :, pack, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_148321_e	resourcePackIcon	#resourcePackIcon, :, identifier, iconLocation
+	m	(Lnet/minecraft/client/gui/GuiScreenResourcePacks;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45052_1_	resourcePacksGUIIn	#resourcePacksGUIIn, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

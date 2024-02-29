@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/NextTickListEntry	net/minecraft/world/NextTickListEntry	
+	f	I	field_77183_a	xCoord	#xCoord, :, x, :
+		c	X position this tick is occuring at
+	f	I	field_77181_b	yCoord	#yCoord, :, y, :
+		c	Y position this tick is occuring at
+	f	I	field_77182_c	zCoord	#zCoord, :, z, :
+		c	Z position this tick is occuring at
+	f	J	field_77180_e	scheduledTime	#scheduledTime, :, time, :
+		c	Time this tick is scheduled to occur at
+	f	I	field_82754_f	priority	#priority, :, :, :
+	f	J	field_77177_f	nextTickEntryID	#nextTickEntryID, :, entries, idCounter
+		c	The id number for the next tick entry
+	f	Lnet/minecraft/block/Block;	field_151352_g	block	#block, :, :, :
+	f	J	field_77178_g	tickEntryID	#tickEntryID, :, id, :
+		c	The id of the tick entry
+	m	(IIILnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45370_1_	x	#~, ~, x, :
+		p	2	p_i45370_2_	y	#~, ~, y, :
+		p	3	p_i45370_3_	z	#~, ~, z, :
+		p	4	p_i45370_4_	block	#~, ~, block, :
+	m	()Lnet/minecraft/block/Block;	func_151351_a	getBlock	#getBlock, :, :, :
+	m	(I)V	func_82753_a	setPriority	#setPriority, :, :, :
+		p	1	p_82753_1_	priorityIn	#priorityIn, :, position, priority
+	m	(J)Lnet/minecraft/world/NextTickListEntry;	func_77176_a	setScheduledTime	#setScheduledTime, :, setTime, :
+		c	Sets the scheduled time for this tick entry
+		p	1	p_77176_1_	scheduledTimeIn	#scheduledTimeIn, :, time, :
+	m	(Lnet/minecraft/world/NextTickListEntry;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	other	#~, ~, entry, other
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, object, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

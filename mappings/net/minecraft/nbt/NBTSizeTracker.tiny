@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTSizeTracker	net/minecraft/nbt/NBTSizeTracker	
+	f	Lnet/minecraft/nbt/NBTSizeTracker;	field_152451_a	INFINITE	#INFINITE, :, DEFAULT, UNLIMITED
+	f	J	field_152452_b	spaceAllocated	#spaceAllocated, max, :, limit
+	f	J	field_152453_c	spaceRead	#spaceRead, read, pos, bytesRead
+	m	(J)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1203_1_	worldIn	#worldIn, :, max, limit
+	m	(J)V	func_152450_a	addSpaceRead	#addSpaceRead, read, add, read
+		c	Adds to the amount of space read by this NBTSizeTracker. Throws an exception when the spaceRead is over the spaceAllocated.
+		p	1	p_152450_1_	size	#size, bits, :, bytes
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

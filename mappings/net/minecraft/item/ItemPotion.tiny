@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemPotion	net/minecraft/item/ItemPotion	
+	f	Ljava/util/HashMap;	field_77836_a	effectCache	#effectCache, :, ~, potionEffectCache
+		c	Contains a map from integers to the list of potion effects that potions with that damage value confer (to prevent recalculating it).
+	f	Ljava/util/Map;	field_77835_b	SUB_ITEMS_CACHE	#SUB_ITEMS_CACHE, :, STATUS_EFFECTS_2, ITEM_STACKS
+	f	Lnet/minecraft/util/IIcon;	field_94591_c	splashPotion	#~, ~, ~, splashPotion
+	f	Lnet/minecraft/util/IIcon;	field_94590_d	drinkablePotion	#~, ~, ~, drinkablePotion
+	f	Lnet/minecraft/util/IIcon;	field_94592_ct	potionOverlay	#~, ~, ~, potionOverlay
+	m	(Ljava/lang/String;)Lnet/minecraft/util/IIcon;	func_94589_d	getPotionSprite	#~, ~, ~, getPotionSprite
+		p	0	p_94589_0_	bottleType	#~, ~, ~, bottleType
+	m	(I)Ljava/util/List;	func_77834_f	getEffects	#getEffects, :, getPotionEffects, getEffectsFromMetadata
+		c	Returns a list of effects for the specified potion damage value.
+		p	1	p_77834_1_	meta	#meta, :, id, metadata
+	m	(I)Z	func_77831_g	isSplash	#isSplash, :, isThrowable, isSplashPotion
+		c	returns wether or not a potion is a throwable splash potion based on damage value
+		p	0	p_77831_0_	meta	#meta, :, ~, i
+	m	(Lnet/minecraft/item/ItemStack;)Ljava/util/List;	func_77832_l	getEffects	#getEffects, :, getCustomPotionEffects, getPotionEffects
+		c	Returns a list of potion effects for the specified itemstack.
+		p	1	p_77832_1_	stack	#stack, :, :, item
+	m	(I)I	func_77620_a	getColorFromDamage	#getColorFromDamage, :, getColor, getPotionColor
+		p	1	p_77620_1_	meta	#meta, :, ~, metadata
+	m	(I)Z	func_77833_h	isEffectInstant	#isEffectInstant, :, isInstant, hasPotionMetadataEfects
+		p	1	p_77833_1_	meta	#meta, :, id, metadata
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

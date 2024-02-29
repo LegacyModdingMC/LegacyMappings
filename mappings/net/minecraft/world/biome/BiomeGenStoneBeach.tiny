@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenStoneBeach	net/minecraft/world/biome/BiomeGenStoneBeach	
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45384_1_	id	#id, :, ~, ~

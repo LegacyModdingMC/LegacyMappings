@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityBlaze	net/minecraft/entity/monster/EntityBlaze	
+	f	F	field_70847_d	heightOffset	#heightOffset, :, eyeOffset, :
+		c	Random offset used in floating behaviour
+	f	I	field_70848_e	heightOffsetUpdateTime	#heightOffsetUpdateTime, :, eyeOffsetCooldown, :
+		c	ticks until heightOffset is randomized
+	f	I	field_70846_g	fireActivation	#~, ~, ~, fireActivation
+	m	(Z)V	func_70844_e	setOnFire	#setOnFire, :, setFireActive, :
+		p	1	p_70844_1_	onFire	#onFire, :, value, active
+	m	()Z	func_70845_n	isCharged	#isCharged, :, isFireActive, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1731_1_	worldIn	#worldIn, :, ~, world

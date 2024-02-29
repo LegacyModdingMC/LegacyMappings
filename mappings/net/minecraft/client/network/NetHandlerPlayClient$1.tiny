@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/NetHandlerPlayClient$1	net/minecraft/client/network/NetHandlerPlayClient$1	
+	f	Ljava/lang/String;	field_146300_a	name	#~, ~, ~, name
+	f	Lnet/minecraft/client/network/NetHandlerPlayClient;	field_146299_f	networkHandler	#~, ~, ~, networkHandler
+	m	(Lnet/minecraft/client/network/NetHandlerPlayClient;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45060_1_	p_i45060_1_	#~, ~, ~, ~
+		p	2	p_i45060_2_	p_i45060_2_	#~, ~, ~, ~

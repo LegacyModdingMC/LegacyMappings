@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/LoadingScreenRenderer	net/minecraft/client/LoadingScreenRenderer	
+	f	Ljava/lang/String;	field_73727_a	message	#message, :, ~, task
+	f	Lnet/minecraft/client/Minecraft;	field_73725_b	mc	#mc, :, client, minecraft
+		c	A reference to the Minecraft object.
+	f	Ljava/lang/String;	field_73726_c	currentlyDisplayedText	#currentlyDisplayedText, :, title, :
+		c	The text currently displayed (i.e. the argument to the last call to printText or func_73722_d)
+	f	J	field_73723_d	systemTime	#systemTime, :, ~, systemTime
+		c	The system's time represented in milliseconds.
+	f	Z	field_73724_e	loadingSuccess	#loadingSuccess, :, ~, updated
+		c	True if the loading ended with a success
+	f	Lnet/minecraft/client/gui/ScaledResolution;	field_146587_f	scaledResolution	#scaledResolution, :, window, :
+	f	Lnet/minecraft/client/shader/Framebuffer;	field_146588_g	framebuffer	#framebuffer, :, :, target
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1017_1_	mcIn	#mcIn, :, client, minecraft
+	m	(Ljava/lang/String;)V	func_73722_d	displayString	#displayString, :, ~, setTitle
+		p	1	p_73722_1_	message	#message, :, title, :

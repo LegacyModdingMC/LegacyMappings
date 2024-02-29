@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRedstoneTorch	net/minecraft/block/BlockRedstoneTorch	
+	f	Z	field_150113_a	isOn	#isOn, :, lit, :
+	f	Ljava/util/Map;	field_150112_b	toggles	#toggles, :, turnOffEntries, RECENT_TOGGLES
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45423_1_	isOn	#isOn, :, lit, :
+	m	(Lnet/minecraft/world/World;IIIZ)Z	func_150111_a	shouldBurnOut	#~, ~, ~, shouldBurnOut
+		p	1	p_150111_1_	world	#~, ~, ~, world
+		p	2	p_150111_2_	x	#~, ~, ~, x
+		p	3	p_150111_3_	y	#~, ~, ~, y
+		p	4	p_150111_4_	z	#~, ~, ~, z
+		p	5	p_150111_5_	logToggle	#~, ~, ~, logToggle
+	m	(Lnet/minecraft/world/World;III)Z	func_150110_m	hasNeighborSignal	#~, ~, ~, hasNeighborSignal
+		p	1	p_150110_1_	world	#~, ~, ~, world
+		p	2	p_150110_2_	x	#~, ~, ~, x
+		p	3	p_150110_3_	y	#~, ~, ~, y
+		p	4	p_150110_4_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

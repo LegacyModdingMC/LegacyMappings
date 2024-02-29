@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/WorldChunkManagerHell	net/minecraft/world/biome/WorldChunkManagerHell	
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76947_d	biomeGenerator	#biomeGenerator, biome, :, :
+		c	The biome generator object.
+	f	F	field_76946_f	rainfall	#rainfall, :, ~, downfall
+		c	The rainfall in the world
+	m	(Lnet/minecraft/world/biome/BiomeGenBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45374_1_	biome	#~, ~, biome, :
+		p	2	p_i45374_2_	downfall	#~, ~, ~, downfall

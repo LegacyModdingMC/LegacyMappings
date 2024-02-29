@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkManager$1	net/minecraft/network/NetworkManager$1	
+	f	Lnet/minecraft/network/EnumConnectionState;	field_150717_a	packetNetworkState	#~, ~, packetState, packetNetworkState
+	f	Lnet/minecraft/network/EnumConnectionState;	field_150715_b	protocolNetworkState	#~, ~, state, protocolNetworkState
+	f	Lnet/minecraft/network/Packet;	field_150716_c	packet	#~, ~, packet, :
+	f	[Lio/netty/util/concurrent/GenericFutureListener;	field_150713_d	listener	#~, ~, listeners, listener
+	f	Lnet/minecraft/network/NetworkManager;	field_150714_e	connection	#~, ~, clientConnection, connection
+	m	(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/network/EnumConnectionState;Lnet/minecraft/network/EnumConnectionState;Lnet/minecraft/network/Packet;[Lio/netty/util/concurrent/GenericFutureListener;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45143_1_	clientConnection	#~, ~, clientConnection, ~
+		p	2	p_i45143_2_	packetState	#~, ~, packetState, ~
+		p	3	p_i45143_3_	state	#~, ~, state, ~
+		p	4	p_i45143_4_	packet	#~, ~, packet, ~
+		p	5	p_i45143_5_	listeners	#~, ~, listeners, ~
+	m	()V	run	run	#~, ~, ~, ~

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/handshake/INetHandlerHandshakeServer	net/minecraft/network/handshake/INetHandlerHandshakeServer	
+	m	(Lnet/minecraft/network/handshake/client/C00Handshake;)V	func_147383_a	processHandshake	#processHandshake, :, onHandshake, handleHandshake
+		c	There are two recognized intentions for initiating a handshake: logging in and acquiring server status. The NetworkManager's protocol will be reconfigured according to the specified intention, although a login-intention must pass a versioncheck or receive a disconnect otherwise
+		p	1	p_147383_1_	packetIn	#packetIn, :, packet, :

@@ -1,0 +1,62 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/boss/EntityDragon	net/minecraft/entity/boss/EntityDragon	
+	f	Z	field_70994_bF	slowed	#slowed, :, ~, restrictMovement
+		c	Activated if the dragon is flying though obsidian, white stone or bedrock. Slows movement and animation speed.
+	f	I	field_70995_bG	deathTicks	#deathTicks, :, ~, ticksSinceDeath
+	f	Lnet/minecraft/entity/item/EntityEnderCrystal;	field_70992_bH	healingEnderCrystal	#healingEnderCrystal, :, connectedCrystal, :
+		c	The current endercrystal that is healing this dragon
+	f	Lnet/minecraft/entity/Entity;	field_70993_bI	target	#target, :, :, :
+	f	D	field_70978_d	targetZ	#targetZ, :, ~, targetZ
+	f	[[D	field_70979_e	ringBuffer	#ringBuffer, :, segmentCircularBuffer, circularSegmentBuffer
+		c	Ring buffer array for the last 64 Y-positions and yaw rotations. Used to calculate offsets for the animations.
+	f	I	field_70976_f	ringBufferIndex	#ringBufferIndex, :, latestSegment, :
+		c	Index into the ring buffer. Incremented once per tick and restarts at 0 once it reaches the end of the buffer.
+	f	[Lnet/minecraft/entity/boss/EntityDragonPart;	field_70977_g	dragonPartArray	#dragonPartArray, :, parts, :
+		c	An array containing all body parts of this dragon
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70986_h	dragonPartHead	#dragonPartHead, :, partHead, head
+		c	The head bounding box of a dragon
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70987_i	dragonPartBody	#dragonPartBody, :, partBody, body
+		c	The body bounding box of a dragon
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70985_j	dragonPartTail1	#dragonPartTail1, :, partTail1, tailBase
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70984_by	dragonPartTail2	#dragonPartTail2, :, partTail2, tailMiddle
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70982_bz	dragonPartTail3	#dragonPartTail3, :, partTail3, tailEnd
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70983_bA	dragonPartWing1	#dragonPartWing1, :, partWingRight, rightWing
+	f	Lnet/minecraft/entity/boss/EntityDragonPart;	field_70990_bB	dragonPartWing2	#dragonPartWing2, :, partWingLeft, leftWing
+	f	F	field_70991_bC	prevAnimTime	#prevAnimTime, :, prevWingPosition, lastWingPosition
+		c	Animation time at previous tick.
+	f	F	field_70988_bD	animTime	#animTime, :, wingPosition, :
+		c	Animation time, used to control the speed of the animation cycles (wings flapping, jaw opening, etc.)
+	f	Z	field_70989_bE	forceNewTarget	#forceNewTarget, :, ~, needsNewTarget
+		c	Force selecting a new flight target at next tick if set to true.
+	f	D	field_70980_b	targetX	#targetX, :, ~, targetX
+	f	D	field_70981_c	targetY	#targetY, :, ~, targetY
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_70972_a	destroyBlocksInAABB	#destroyBlocksInAABB, :, destroyBlocks, :
+		c	Destroys all blocks that aren't associated with 'The End' inside the given bounding box.
+		p	1	p_70972_1_	bounds	#~, ~, area, bounds
+	m	(Ljava/util/List;)V	func_70970_a	collideWithEntities	#collideWithEntities, :, launchLivingEntities, flingLivingEntities
+		c	Pushes all entities inside the list away from the enderdragon.
+		p	1	p_70970_1_	entities	#~, ~, entities, :
+	m	(D)F	func_70973_b	simplifyAngle	#simplifyAngle, :, wrapYawChange, wrapAngle
+		c	Simplifies the value of a number by adding/subtracting 180 to the point that the number is between -180 and 180.
+		p	1	p_70973_1_	angle	#~, ~, yawDegrees, angle
+	m	(IF)[D	func_70974_a	getMovementOffsets	#getMovementOffsets, :, getSegmentProperties, :
+		c	Returns a double[3] array with movement offsets, used to calculate trailing tail/neck positions. [0] = yaw offset, [1] = y offset, [2] = unused, always 0. Parameters: buffer index offset, partial ticks.
+		p	1	p_70974_1_	segment	#~, ~, segmentNumber, segment
+		p	2	p_70974_2_	tickDelta	#~, ~, tickDelta, :
+	m	(II)V	func_70975_a	createEnderPortal	#createEnderPortal, :, ~, createPortal
+		c	Creates the ender portal leading back to the normal world after defeating the enderdragon.
+		p	1	p_70975_1_	x	#~, ~, ~, x
+		p	2	p_70975_2_	z	#~, ~, ~, z
+	m	(Ljava/util/List;)V	func_70971_b	attackEntitiesInList	#attackEntitiesInList, :, damageLivingEntities, :
+		c	Attacks all entities inside this list, dealing 5 hearts of damage.
+		p	1	p_70971_1_	entities	#~, ~, entities, :
+	m	()V	func_70969_j	updateDragonEnderCrystal	#updateDragonEnderCrystal, :, tickWithEndCrystals, tickEndCrystalInteraction
+		c	Updates the state of the enderdragon's current endercrystal.
+	m	()V	func_70967_k	setNewTarget	#setNewTarget, :, ~, chooseTarget
+		c	Sets a new target for the flight AI. It can be a random coordinate or a nearby player.
+	m	(Lnet/minecraft/util/DamageSource;F)Z	func_82195_e	attackDragonFrom	#attackDragonFrom, :, ~, damageDragon
+		c	Provides a way to cause damage to an ender dragon.
+		p	1	p_82195_1_	source	#source, :, ~, soure
+		p	2	p_82195_2_	amount	#amount, :, ~, amount
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1700_1_	worldIn	#worldIn, :, ~, world

@@ -1,0 +1,70 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityFX	net/minecraft/client/particle/EntityFX	
+	f	D	field_70555_ap	interpPosZ	#interpPosZ, :, ~, currentZ
+		c	Linear interpolation between the previous and current Z position of the particle\ncurrently being rendered.
+	f	F	field_70552_h	particleRed	#particleRed, :, red, :
+		c	The red amount of color. Used as a percentage, 1.0 = 255 and 0.0 = 0.
+	f	F	field_70553_i	particleGreen	#particleGreen, :, green, :
+		c	The green amount of color. Used as a percentage, 1.0 = 255 and 0.0 = 0.
+	f	F	field_70551_j	particleBlue	#particleBlue, :, blue, :
+		c	The blue amount of color. Used as a percentage, 1.0 = 255 and 0.0 = 0.
+	f	F	field_82339_as	particleAlpha	#particleAlpha, :, alpha, :
+		c	Particle alpha
+	f	Lnet/minecraft/util/IIcon;	field_70550_a	particleIcon	#particleIcon, :, ~, sprite
+		c	The icon field from which the given particle pulls its texture.
+	f	D	field_70556_an	interpPosX	#interpPosX, :, ~, currentX
+		c	Linear interpolation between the previous and current X position of the particle\ncurrently being rendered.
+	f	D	field_70554_ao	interpPosY	#interpPosY, :, ~, currentY
+		c	Linear interpolation between the previous and current Y position of the particle\ncurrently being rendered.
+	f	I	field_94054_b	particleTextureIndexX	#particleTextureIndexX, :, ~, miscTexRow
+	f	I	field_94055_c	particleTextureIndexY	#particleTextureIndexY, :, ~, miscTexColumn
+	f	F	field_70548_b	particleTextureJitterX	#particleTextureJitterX, :, ~, randomUOffset
+	f	F	field_70549_c	particleTextureJitterY	#particleTextureJitterY, :, ~, randomVOffset
+	f	I	field_70546_d	particleAge	#particleAge, :, age, :
+	f	I	field_70547_e	particleMaxAge	#particleMaxAge, :, maxAge, lifetime
+	f	F	field_70544_f	particleScale	#particleScale, :, scale, :
+	f	F	field_70545_g	particleGravity	#particleGravity, :, gravityStrength, gravity
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1218_1_	world	#~, ~, world, :
+		p	2	p_i1218_2_	x	#~, ~, x, :
+		p	4	p_i1218_4_	y	#~, ~, y, :
+		p	6	p_i1218_6_	z	#~, ~, z, :
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1219_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1219_2_	xCoordIn	#xCoordIn, :, x, :
+		p	4	p_i1219_4_	yCoordIn	#yCoordIn, :, y, :
+		p	6	p_i1219_6_	zCoordIn	#zCoordIn, :, z, :
+		p	8	p_i1219_8_	xSpeedIn	#xSpeedIn, :, velocityX, :
+		p	10	p_i1219_10_	ySpeedIn	#ySpeedIn, :, velocityY, :
+		p	12	p_i1219_12_	zSpeedIn	#zSpeedIn, :, velocityZ, :
+	m	()I	func_70537_b	getFXLayer	#getFXLayer, :, getLayer, getTextureType
+		c	Retrieve what effect layer (what texture) the particle should be rendered with. 0 for the particle sprite sheet, 1 for the main Texture atlas, and 3 for a custom texture
+	m	(F)Lnet/minecraft/client/particle/EntityFX;	func_70543_e	multiplyVelocity	#multiplyVelocity, :, move, multiplyVelocity
+		p	1	p_70543_1_	multiplier	#multiplier, :, ~, value
+	m	(Lnet/minecraft/client/renderer/Tessellator;FFFFFF)V	func_70539_a	renderParticle	#renderParticle, :, ~, render
+		p	1	p_70539_1_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	2	p_70539_2_	tickDelta	#~, ~, ~, tickDelta
+		p	3	p_70539_3_	dx	#~, ~, ~, dx
+		p	4	p_70539_4_	dy	#~, ~, ~, dy
+		p	5	p_70539_5_	dz	#~, ~, ~, dz
+		p	6	p_70539_6_	forwards	#~, ~, ~, forwards
+		p	7	p_70539_7_	sideways	#~, ~, ~, sideways
+	m	(Lnet/minecraft/util/IIcon;)V	func_110125_a	setParticleIcon	#setParticleIcon, :, ~, setTexture
+		p	1	p_110125_1_	sprite	#~, ~, ~, sprite
+	m	()F	func_70534_d	getRedColorF	#getRedColorF, :, getRed, :
+	m	(FFF)V	func_70538_b	setRBGColorF	#setRBGColorF, :, setColor, :
+		p	1	p_70538_1_	particleRedIn	#particleRedIn, :, red, :
+		p	2	p_70538_2_	particleGreenIn	#particleGreenIn, :, green, :
+		p	3	p_70538_3_	particleBlueIn	#particleBlueIn, :, blue, :
+	m	()F	func_70542_f	getGreenColorF	#getGreenColorF, :, getGreen, :
+	m	()F	func_70535_g	getBlueColorF	#getBlueColorF, :, getBlue, :
+	m	(F)Lnet/minecraft/client/particle/EntityFX;	func_70541_f	multipleParticleScaleBy	#multipleParticleScaleBy, :, scale, multiplyScale
+		p	1	p_70541_1_	scale	#scale, :, ~, value
+	m	(F)V	func_82338_g	setAlphaF	#setAlphaF, :, setColorAlpha, setAlpha
+		c	Sets the particle alpha (float)
+		p	1	p_82338_1_	alpha	#alpha, :, :, :
+	m	()V	func_94053_h	nextTextureIndexX	#nextTextureIndexX, :, ~, incrMiscTexRow
+	m	(I)V	func_70536_a	setParticleTextureIndex	#setParticleTextureIndex, :, setMiscTexture, :
+		c	Public method to set private field particleTextureIndex.
+		p	1	p_70536_1_	particleTextureIndex	#particleTextureIndex, :, ~, textureId
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

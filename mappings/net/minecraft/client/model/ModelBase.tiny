@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelBase	net/minecraft/client/model/ModelBase	
+	f	Ljava/util/Map;	field_78094_a	modelTextureMap	#modelTextureMap, :, textureMap, texturePositions
+		c	A mapping for all texture offsets
+	f	F	field_78095_p	onGround	#onGround, swingProgress, handSwingProgress, :
+	f	Z	field_78093_q	isRiding	#isRiding, :, riding, hasVehicle
+	f	Ljava/util/List;	field_78092_r	boxList	#boxList, :, parts, :
+		c	This is a list of all the boxes (ModelRenderer.class) in the current model.
+	f	Z	field_78091_s	isChild	#isChild, :, child, isBaby
+	f	I	field_78090_t	textureWidth	#textureWidth, :, :, :
+	f	I	field_78089_u	textureHeight	#textureHeight, :, :, :
+	m	(FFFFFFLnet/minecraft/entity/Entity;)V	func_78087_a	setRotationAngles	#setRotationAngles, :, setAngles, :
+		c	Sets the model's various rotation angles. For bipeds, par1 and par2 are used for animating the movement of arms and legs, where par1 represents the time(so that arms and legs swing back and forth) and par2 represents how "far" arms and legs can swing at most.
+		p	1	p_78087_1_	limbSwing	#limbSwing, :, handSwing, :
+		p	2	p_78087_2_	limbSwingAmount	#limbSwingAmount, :, handSwingAmount, :
+		p	3	p_78087_3_	ageInTicks	#ageInTicks, :, tickDelta, age
+		p	4	p_78087_4_	netHeadYaw	#netHeadYaw, :, age, yaw
+		p	5	p_78087_5_	headPitch	#headPitch, :, :, pitch
+		p	6	p_78087_6_	scaleFactor	#scaleFactor, :, scale, :
+		p	7	p_78087_7_	entityIn	#entityIn, :, entity, :
+	m	(Ljava/lang/String;)Lnet/minecraft/client/model/TextureOffset;	func_78084_a	getTextureOffset	#getTextureOffset, :, getTexture, getTexturePos
+		p	1	p_78084_1_	partName	#partName, :, id, :
+	m	(Ljava/lang/String;II)V	func_78085_a	setTextureOffset	#setTextureOffset, :, putTexture, setTexturePos
+		p	1	p_78085_1_	partName	#partName, :, id, :
+		p	2	p_78085_2_	x	#x, :, :, u
+		p	3	p_78085_3_	y	#y, :, :, v
+	m	(Ljava/util/Random;)Lnet/minecraft/client/model/ModelRenderer;	func_85181_a	getRandomModelBox	#getRandomModelBox, :, ~, pickPart
+		p	1	p_85181_1_	rand	#rand, :, ~, random
+	m	(Lnet/minecraft/entity/Entity;FFFFFF)V	func_78088_a	render	#render, :, :, :
+		c	Sets the models various rotation angles then renders the model.
+		p	1	p_78088_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_78088_2_	limbSwing	#limbSwing, :, handSwing, :
+		p	3	p_78088_3_	limbSwingAmount	#limbSwingAmount, :, handSwingAmount, :
+		p	4	p_78088_4_	ageInTicks	#ageInTicks, :, tickDelta, age
+		p	5	p_78088_5_	netHeadYaw	#netHeadYaw, :, age, yaw
+		p	6	p_78088_6_	headPitch	#headPitch, :, :, pitch
+		p	7	p_78088_7_	scale	#scale, :, :, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;FFF)V	func_78086_a	setLivingAnimations	#setLivingAnimations, :, animateModel, renderMobAnimation
+		c	Used for easily adding entity-dependent animations. The second and third float params here are the same second and third as in the setRotationAngles method.
+		p	1	p_78086_1_	entitylivingbaseIn	#entitylivingbaseIn, :, entity, :
+		p	2	p_78086_2_	limbSwing	#limbSwing, :, limbAngle, handSwing
+		p	3	p_78086_3_	limbSwingAmount	#limbSwingAmount, :, limbDistance, handSwingAmount
+		p	4	p_78086_4_	partialTickTime	#partialTickTime, :, tickDelta, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

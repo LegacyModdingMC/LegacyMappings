@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandSpreadPlayers$Position	net/minecraft/command/CommandSpreadPlayers$Position	
+	f	D	field_111101_a	x	#x, :, ~, x
+	f	D	field_111100_b	z	#z, :, ~, z
+	m	()V	func_111095_a	normalize	#normalize, :, ~, normalize
+	m	(DDDD)Z	func_111093_a	clamp	#clamp, :, ~, clamp
+		p	1	p_111093_1_	minX	#~, ~, ~, minX
+		p	3	p_111093_3_	minZ	#~, ~, ~, minZ
+		p	5	p_111093_5_	maxX	#~, ~, ~, maxX
+		p	7	p_111093_7_	maxZ	#~, ~, ~, maxZ
+	m	(Lnet/minecraft/world/World;)I	func_111092_a	getSpawnY	#getSpawnY, :, ~, getAboveHighestNonAir
+		p	1	p_111092_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/command/CommandSpreadPlayers$Position;)D	func_111099_a	dist	#dist, :, ~, distanceTo
+		p	1	p_111099_1_	pos	#pos, :, ~, other
+	m	(Ljava/util/Random;DDDD)V	func_111097_a	randomize	#randomize, :, ~, setPileLocation
+		p	1	p_111097_1_	rand	#rand, :, ~, random
+		p	2	p_111097_2_	minX	#~, ~, ~, minX
+		p	4	p_111097_4_	minZ	#~, ~, ~, minZ
+		p	6	p_111097_6_	maxX	#~, ~, ~, maxX
+		p	8	p_111097_8_	maxZ	#~, ~, ~, maxZ
+	m	()F	func_111096_b	getLength	#getLength, :, ~, absolute
+	m	(Lnet/minecraft/world/World;)Z	func_111098_b	isSafe	#isSafe, :, ~, isNotFireOrLiquidAtTopOfWorld
+		p	1	p_111098_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/command/CommandSpreadPlayers$Position;)V	func_111094_b	moveAway	#moveAway, :, ~, subtract
+		p	1	p_111094_1_	pos	#pos, :, ~, other
+	m	(DD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1358_1_	xIn	#xIn, :, ~, x
+		p	3	p_i1358_3_	zIn	#zIn, :, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

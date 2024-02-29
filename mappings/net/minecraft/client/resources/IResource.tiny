@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/IResource	net/minecraft/client/resources/IResource	
+	m	(Ljava/lang/String;)Lnet/minecraft/client/resources/data/IMetadataSection;	func_110526_a	getMetadata	#getMetadata, :, :, :
+		p	1	p_110526_1_	sectionName	#sectionName, :, key, name
+	m	()Ljava/io/InputStream;	func_110527_b	getInputStream	#getInputStream, :, :, asStream
+	m	()Z	func_110528_c	hasMetadata	#hasMetadata, :, :, :

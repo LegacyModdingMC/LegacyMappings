@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandEnchant	net/minecraft/command/CommandEnchant	
+	m	()[Ljava/lang/String;	func_90022_d	getListOfPlayers	#getListOfPlayers, :, ~, getPlayerNames
+	m	()V	<init>	<init>	#~, ~, ~, ~

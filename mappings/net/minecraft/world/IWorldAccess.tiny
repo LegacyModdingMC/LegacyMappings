@@ -1,0 +1,80 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/IWorldAccess	net/minecraft/world/IWorldAccess	
+	m	(III)V	func_147586_a	markBlockForUpdate	#markBlockForUpdate, :, ~, onBlockChanged
+		c	On the client, re-renders the block. On the server, sends the block to the client (which will re-render it), including the tile entity description packet if applicable. Args: x, y, z
+		p	1	p_147586_1_	x	#~, ~, ~, x
+		p	2	p_147586_2_	y	#~, ~, ~, y
+		p	3	p_147586_3_	z	#~, ~, ~, z
+	m	(IIIII)V	func_82746_a	broadcastSound	#broadcastSound, :, dispatchWorldEvent, doGlobalEvent
+		p	1	p_82746_1_	type	#~, ~, eventId, type
+		p	2	p_82746_2_	x	#~, ~, x, :
+		p	3	p_82746_3_	y	#~, ~, y, :
+		p	4	p_82746_4_	z	#~, ~, z, :
+		p	5	p_82746_5_	data	#~, ~, data, :
+	m	(IIIIII)V	func_147585_a	markBlockRangeForRenderUpdate	#markBlockRangeForRenderUpdate, :, onRenderRegionUpdate, onRegionChanged
+		c	On the client, re-renders all blocks in this range, inclusive. On the server, does nothing. Args: min x, min y, min z, max x, max y, max z
+		p	1	p_147585_1_	x1	#x1, :, :, minX
+		p	2	p_147585_2_	y1	#y1, :, :, minY
+		p	3	p_147585_3_	z1	#z1, :, :, minZ
+		p	4	p_147585_4_	x2	#x2, :, :, maxX
+		p	5	p_147585_5_	y2	#y2, :, :, maxY
+		p	6	p_147585_6_	z2	#z2, :, :, maxZ
+	m	(Ljava/lang/String;DDDDDD)V	func_72708_a	spawnParticle	#spawnParticle, :, :, addParticle
+		c	Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
+		p	1	p_72708_1_	type	#~, ~, particleName, type
+		p	2	p_72708_2_	x	#~, ~, x, :
+		p	4	p_72708_4_	y	#~, ~, y, :
+		p	6	p_72708_6_	z	#~, ~, z, :
+		p	8	p_72708_8_	velocityX	#~, ~, velocityX, :
+		p	10	p_72708_10_	velocityY	#~, ~, velocityY, :
+		p	12	p_72708_12_	velocityZ	#~, ~, velocityZ, :
+	m	(Ljava/lang/String;DDDFF)V	func_72704_a	playSound	#playSound, :, :, :
+		c	Plays the specified sound. Arg: soundName, x, y, z, volume, pitch
+		p	1	p_72704_1_	soundName	#soundName, :, name, :
+		p	2	p_72704_2_	x	#x, :, :, :
+		p	4	p_72704_4_	y	#y, :, :, :
+		p	6	p_72704_6_	z	#z, :, :, :
+		p	8	p_72704_8_	volume	#volume, :, :, pitch
+		p	9	p_72704_9_	pitch	#pitch, :, :, volume
+	m	(Ljava/lang/String;III)V	func_72702_a	playRecord	#playRecord, :, :, onRecordRemoved
+		c	Plays the specified record. Arg: recordName, x, y, z
+		p	1	p_72702_1_	record	#~, ~, recordName, record
+		p	2	p_72702_2_	x	#~, ~, x, :
+		p	3	p_72702_3_	y	#~, ~, y, :
+		p	4	p_72702_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_72703_a	onEntityCreate	#onEntityCreate, onEntityAdded, onEntitySpawned, onEntityAdded
+		c	Called on all IWorldAccesses when an entity is created or loaded. On client worlds, starts downloading any necessary textures. On server worlds, adds the entity to the entity tracker.
+		p	1	p_72703_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;IIIII)V	func_72706_a	playAuxSFX	#playAuxSFX, :, dispatchEvent, doEvent
+		c	Plays a pre-canned sound effect along with potentially auxiliary data-driven one-shot behaviour (particles, etc).
+		p	1	p_72706_1_	source	#~, ~, player, source
+		p	2	p_72706_2_	type	#~, ~, type, :
+		p	3	p_72706_3_	x	#~, ~, x, :
+		p	4	p_72706_4_	y	#~, ~, y, :
+		p	5	p_72706_5_	z	#~, ~, z, :
+		p	6	p_72706_6_	data	#~, ~, data, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Ljava/lang/String;DDDFF)V	func_85102_a	playSoundToNearExcept	#playSoundToNearExcept, :, playSound, :
+		c	Plays sound to all near players except the player reference given
+		p	1	p_85102_1_	except	#except, :, :, source
+		p	2	p_85102_2_	soundName	#soundName, :, name, :
+		p	3	p_85102_3_	x	#x, :, :, :
+		p	5	p_85102_5_	y	#y, :, :, :
+		p	7	p_85102_7_	z	#z, :, :, :
+		p	9	p_85102_9_	volume	#volume, :, :, pitch
+		p	10	p_85102_10_	pitch	#pitch, :, :, volume
+	m	()V	func_147584_b	onStaticEntitiesChanged	#onStaticEntitiesChanged, :, ~, onEntityChanged
+	m	(III)V	func_147588_b	markBlockForRenderUpdate	#markBlockForRenderUpdate, :, ~, onLightChanged
+		c	On the client, re-renders this block. On the server, does nothing. Used for lighting updates.
+		p	1	p_147588_1_	x	#~, ~, ~, x
+		p	2	p_147588_2_	y	#~, ~, ~, y
+		p	3	p_147588_3_	z	#~, ~, ~, z
+	m	(IIIII)V	func_147587_b	destroyBlockPartially	#destroyBlockPartially, :, ~, updateBlockMiningProgress
+		c	Starts (or continues) destroying a block with given ID at the given coordinates for the given partially destroyed value
+		p	1	p_147587_1_	id	#~, ~, ~, id
+		p	2	p_147587_2_	x	#~, ~, ~, x
+		p	3	p_147587_3_	y	#~, ~, ~, y
+		p	4	p_147587_4_	z	#~, ~, ~, z
+		p	5	p_147587_5_	progress	#~, ~, ~, progress
+	m	(Lnet/minecraft/entity/Entity;)V	func_72709_b	onEntityDestroy	#onEntityDestroy, onEntityRemoved, :, :
+		c	Called on all IWorldAccesses when an entity is unloaded or destroyed. On client worlds, releases any downloaded textures. On server worlds, removes the entity from the entity tracker.
+		p	1	p_72709_1_	entityIn	#entityIn, :, entity, :

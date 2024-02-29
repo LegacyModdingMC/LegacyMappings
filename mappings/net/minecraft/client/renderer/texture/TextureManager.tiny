@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/TextureManager	net/minecraft/client/renderer/texture/TextureManager	
+	f	Lorg/apache/logging/log4j/Logger;	field_147646_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Map;	field_110585_a	mapTextureObjects	#mapTextureObjects, :, textures, :
+	f	Ljava/util/Map;	field_130089_b	mapResourceLocations	#mapResourceLocations, :, ~, textureAtlases
+	f	Ljava/util/List;	field_110583_b	listTickables	#listTickables, :, tickables, tickableTextures
+	f	Ljava/util/Map;	field_110584_c	mapTextureCounters	#mapTextureCounters, :, dynamicIdCounter, :
+	f	Lnet/minecraft/client/resources/IResourceManager;	field_110582_d	theResourceManager	#theResourceManager, resourceManager, :, :
+	m	(Lnet/minecraft/client/resources/IResourceManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1284_1_	resourceManager	#resourceManager, :, :, :
+	m	(I)Lnet/minecraft/util/ResourceLocation;	func_130087_a	getResourceLocation	#getResourceLocation, :, ~, getAtlas
+		p	1	p_130087_1_	type	#~, ~, ~, type
+	m	(Lnet/minecraft/util/ResourceLocation;)V	func_110577_a	bindTexture	#bindTexture, :, :, bind
+		p	1	p_110577_1_	resource	#resource, :, id, location
+	m	(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/TextureMap;)Z	func_130088_a	loadTextureMap	#loadTextureMap, :, ~, registerAtlas
+		p	1	p_130088_1_	location	#~, ~, ~, location
+		p	2	p_130088_2_	atlas	#~, ~, ~, atlas
+	m	(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/ITextureObject;)Z	func_110579_a	loadTexture	#loadTexture, :, :, register
+		p	1	p_110579_1_	textureLocation	#textureLocation, :, identifier, id
+		p	2	p_110579_2_	textureObj	#textureObj, :, texture, :
+	m	(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/ITickableTextureObject;)Z	func_110580_a	loadTickableTexture	#loadTickableTexture, :, :, register
+		p	1	p_110580_1_	textureLocation	#textureLocation, :, identifier, location
+		p	2	p_110580_2_	textureObj	#textureObj, :, texture, tickableTexture
+	m	(Ljava/lang/String;Lnet/minecraft/client/renderer/texture/DynamicTexture;)Lnet/minecraft/util/ResourceLocation;	func_110578_a	getDynamicTextureLocation	#getDynamicTextureLocation, :, registerDynamicTexture, register
+		p	1	p_110578_1_	name	#name, :, prefix, path
+		p	2	p_110578_2_	texture	#texture, :, :, dynamicTexture
+	m	(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/renderer/texture/ITextureObject;	func_110581_b	getTexture	#getTexture, :, :, get
+		p	1	p_110581_1_	textureLocation	#textureLocation, :, id, :
+	m	(Lnet/minecraft/util/ResourceLocation;)V	func_147645_c	deleteTexture	#deleteTexture, :, close, :
+		p	1	p_147645_1_	textureLocation	#textureLocation, :, id, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

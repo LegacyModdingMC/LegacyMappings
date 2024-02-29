@@ -1,0 +1,196 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/RenderGlobal	net/minecraft/client/renderer/RenderGlobal	
+	f	Lnet/minecraft/client/Minecraft;	field_72777_q	mc	#mc, :, client, minecraft
+		c	A reference to the Minecraft object.
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147592_B	renderBlocksRg	#renderBlocksRg, :, blockRenderer, :
+	f	Ljava/nio/IntBuffer;	field_72775_s	glOcclusionQueryBase	#glOcclusionQueryBase, :, ~, arbOcclusionBuffer
+		c	OpenGL occlusion query base
+	f	Z	field_72774_t	occlusionEnabled	#occlusionEnabled, :, ~, glArbOcclusion
+		c	Is occlusion testing enabled
+	f	I	field_72773_u	cloudTickCounter	#cloudTickCounter, :, ticks, :
+		c	counts the cloud render updates. Used with mod to stagger some updates
+	f	I	field_72772_v	starGLCallList	#starGLCallList, :, starsList, starsGlList
+		c	The star GL Call list
+	f	I	field_72771_w	glSkyList	#glSkyList, :, lightSkyList, lightSkyGlList
+		c	OpenGL sky list
+	f	I	field_72781_x	glSkyList2	#glSkyList2, :, darkSkyList, darkSkyGlList
+		c	OpenGL sky list 2
+	f	I	field_72780_y	minBlockX	#minBlockX, :, ~, chunkGridMinX
+		c	Minimum block X
+	f	I	field_72779_z	minBlockY	#minBlockY, :, ~, chunkGridMinY
+		c	Minimum block Y
+	f	I	field_72741_A	minBlockZ	#minBlockZ, :, ~, chunkGridMinZ
+		c	Minimum block Z
+	f	I	field_72742_B	maxBlockX	#maxBlockX, :, ~, chunkGridMaxX
+		c	Maximum block X
+	f	I	field_72743_C	maxBlockY	#maxBlockY, :, ~, chunkGridMaxY
+		c	Maximum block Y
+	f	I	field_72737_D	maxBlockZ	#maxBlockZ, :, ~, chunkGridMaxZ
+		c	Maximum block Z
+	f	Ljava/util/Map;	field_72738_E	damagedBlocks	#damagedBlocks, :, blockBreakingInfos, miningProgress
+		c	Stores blocks currently being broken. Key is entity ID of the thing doing the breaking. Value is a DestroyBlockProgress
+	f	Ljava/util/Map;	field_147593_P	mapSoundPositions	#mapSoundPositions, :, playingSongs, :
+		c	Currently playing sounds.  Type:  HashMap<ChunkCoordinates, ISound>
+	f	[Lnet/minecraft/util/IIcon;	field_94141_F	destroyBlockIcons	#destroyBlockIcons, :, ~, miningProgressSprites
+	f	Z	field_147595_R	displayListEntitiesDirty	#displayListEntitiesDirty, :, needsTerrainUpdate, shouldRebuildStaticEntities
+	f	I	field_147594_S	displayListEntities	#displayListEntities, :, ~, glCallList
+	f	I	field_72739_F	renderDistanceChunks	#renderDistanceChunks, :, renderDistance, viewDistance
+	f	I	field_72740_G	renderEntitiesStartupCounter	#renderEntitiesStartupCounter, :, totalEntityCount, entityRenderCooldown
+		c	Render entities startup counter (init value=2)
+	f	I	field_72748_H	countEntitiesTotal	#countEntitiesTotal, :, rendererdEntityCount, entityCount
+		c	Count entities total
+	f	I	field_72749_I	countEntitiesRendered	#countEntitiesRendered, :, hiddenEntityCount, globalEntityCount
+		c	Count entities rendered
+	f	I	field_72750_J	countEntitiesHidden	#countEntitiesHidden, :, blockEntityCount, culledEntityCount
+		c	Count entities hidden
+	f	I	field_72751_K	renderersLoaded	#renderersLoaded, :, ~, chunkCount
+		c	How many renderers are loaded this frame that try to be rendered
+	f	I	field_72744_L	renderersBeingClipped	#renderersBeingClipped, :, ~, invisibleChunkCount
+		c	How many renderers are being clipped by the frustrum this frame
+	f	Ljava/util/List;	field_147598_a	tileEntities	#tileEntities, :, blockEntities, globalBlockEntities
+	f	I	field_72745_M	renderersBeingOccluded	#renderersBeingOccluded, :, ~, glArbOccludedChunkCount
+		c	How many renderers are being occluded this frame
+	f	I	field_72746_N	renderersBeingRendered	#renderersBeingRendered, :, ~, compiledChunkCount
+		c	How many renderers are actually being rendered this frame
+	f	I	field_72747_O	renderersSkippingRenderPass	#renderersSkippingRenderPass, :, ~, solidChunkCount
+		c	How many renderers are skipping rendering due to not having a render pass this frame
+	f	I	field_72753_P	dummyRenderInt	#dummyRenderInt, :, ~, ~
+		c	Dummy render int
+	f	I	field_72752_Q	worldRenderersCheckIndex	#worldRenderersCheckIndex, :, ~, chunkSortIndex
+		c	World renderers check index
+	f	Ljava/util/List;	field_72755_R	glRenderLists	#glRenderLists, renderInfos, visibleChunks, renderList
+		c	List of OpenGL lists for the current render pass
+	f	[Lnet/minecraft/client/renderer/RenderList;	field_72754_S	allRenderLists	#allRenderLists, :, ~, renderStages
+		c	All render lists (fixed length 4)
+	f	Ljava/nio/IntBuffer;	field_72761_c	occlusionResult	#occlusionResult, :, ~, occlusionBuffer
+		c	Occlusion query result
+	f	D	field_72758_d	prevSortX	#prevSortX, :, ~, cameraX
+		c	Previous x position when the renderers were sorted. (Once the distance moves more than 4 units they will be resorted)
+	f	D	field_72759_e	prevSortY	#prevSortY, :, ~, cameraY
+		c	Previous y position when the renderers were sorted. (Once the distance moves more than 4 units they will be resorted)
+	f	D	field_72756_f	prevSortZ	#prevSortZ, :, ~, cameraZ
+		c	Previous Z position when the renderers were sorted. (Once the distance moves more than 4 units they will be resorted)
+	f	D	field_147596_f	prevRenderSortX	#prevRenderSortX, :, lastTranslucentSortX, prevCameraX
+	f	D	field_147597_g	prevRenderSortY	#prevRenderSortY, :, lastTranslucentSortY, prevCameraY
+	f	D	field_147602_h	prevRenderSortZ	#prevRenderSortZ, :, lastTranslucentSortZ, prevCameraZ
+	f	I	field_147603_i	prevChunkSortX	#prevChunkSortX, :, ~, cameraChunkX
+	f	I	field_147600_j	prevChunkSortY	#prevChunkSortY, :, ~, cameraChunkY
+	f	I	field_147601_k	prevChunkSortZ	#prevChunkSortZ, :, ~, cameraChunkZ
+	f	I	field_72757_g	frustumCheckOffset	#frustumCheckOffset, :, ~, frustumUpdateIndex
+		c	The offset used to determine if a renderer is one of the sixteenth that are being updated this frame
+	f	Lorg/apache/logging/log4j/Logger;	field_147599_m	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_110927_h	locationMoonPhasesPng	#locationMoonPhasesPng, MOON_PHASES_TEXTURES, MOON_PHASES, MOON_PHASES_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110928_i	locationSunPng	#locationSunPng, SUN_TEXTURES, SUN, SUN_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110925_j	locationCloudsPng	#locationCloudsPng, CLOUDS_TEXTURES, CLOUDS, CLOUDS_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110926_k	locationEndSkyPng	#locationEndSkyPng, END_SKY_TEXTURES, END_SKY, END_SKY_LOCATION
+	f	Lnet/minecraft/client/multiplayer/WorldClient;	field_72769_h	theWorld	#theWorld, world, :, :
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_72770_i	renderEngine	#renderEngine, :, textureManager, :
+		c	The RenderEngine instance used by RenderGlobal
+	f	Ljava/util/List;	field_72767_j	worldRenderersToUpdate	#worldRenderersToUpdate, :, ~, pendingChunks
+	f	[Lnet/minecraft/client/renderer/WorldRenderer;	field_72768_k	sortedWorldRenderers	#sortedWorldRenderers, :, ~, compiledChunks
+	f	[Lnet/minecraft/client/renderer/WorldRenderer;	field_72765_l	worldRenderers	#worldRenderers, :, ~, chunkStorage
+	f	I	field_72766_m	renderChunksWide	#renderChunksWide, :, ~, chunkGridSizeX
+	f	I	field_72763_n	renderChunksTall	#renderChunksTall, :, ~, chunkGridSizeY
+	f	I	field_72764_o	renderChunksDeep	#renderChunksDeep, :, ~, chunkGridSizeZ
+	f	I	field_72778_p	glRenderListBase	#glRenderListBase, :, ~, translucentGlList
+		c	OpenGL render lists base
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1249_1_	mcIn	#mcIn, :, minecraftClient, minecraft
+	m	()V	func_72712_a	loadRenderers	#loadRenderers, :, reload, :
+		c	Loads all the renderers and sets up the basic settings usage
+	m	(DDDF)Z	func_72721_a	hasCloudFog	#hasCloudFog, :, hasThickFog, hasThiccFog
+		c	Checks if the given position is to be rendered with cloud fog
+		p	1	p_72721_1_	x	#x, :, ~, x
+		p	3	p_72721_3_	y	#y, :, ~, y
+		p	5	p_72721_5_	z	#z, :, ~, z
+		p	7	p_72721_7_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(F)V	func_72714_a	renderSky	#renderSky, :, :, :
+		c	Renders the sky with the partial tick time. Args: partialTickTime
+		p	1	p_72714_1_	tickDelta	#~, ~, tickDelta, :
+	m	(ID)V	func_72733_a	renderAllRenderLists	#renderAllRenderLists, :, ~, render
+		c	Render all render lists
+		p	1	p_72733_1_	renderStage	#~, ~, ~, renderStage
+		p	2	p_72733_2_	tickDelta	#~, ~, ~, tickDelta
+	m	(II)V	func_72720_a	checkOcclusionQueryResult	#checkOcclusionQueryResult, createBindEntityOutlineFbs, onResized, queryGlArbOcclusion
+		p	1	p_72720_1_	width	#width, :, :, from
+		p	2	p_72720_2_	height	#height, :, :, to
+	m	(IIID)I	func_72724_a	renderSortedRenderers	#renderSortedRenderers, :, ~, render
+		c	Renders the sorted renders for the specified render pass. Args: startRenderer, numRenderers, renderPass, partialTickTime
+		p	1	p_72724_1_	renderStartIndex	#~, ~, ~, renderStartIndex
+		p	2	p_72724_2_	chunksToRender	#~, ~, ~, chunksToRender
+		p	3	p_72724_3_	renderStage	#~, ~, ~, renderStage
+		p	4	p_72724_4_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/util/AxisAlignedBB;I)V	func_147590_a	drawOutlinedBoundingBox	#drawOutlinedBoundingBox, :, ~, renderOutline
+		c	Draws lines for the edges of the bounding box.
+		p	0	p_147590_0_	shape	#~, ~, ~, shape
+		p	1	p_147590_1_	color	#~, ~, ~, color
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;)V	func_72732_a	setWorldAndLoadRenderers	#setWorldAndLoadRenderers, :, setWorld, :
+		c	set null to clear
+		p	1	p_72732_1_	worldClientIn	#worldClientIn, :, world, :
+	m	(Lnet/minecraft/client/renderer/Tessellator;Lnet/minecraft/entity/player/EntityPlayer;F)V	func_72717_a	drawBlockDamageTexture	#drawBlockDamageTexture, :, ~, renderMiningProgress
+		p	1	p_72717_1_	buffer	#~, ~, ~, buffer
+		p	2	p_72717_2_	player	#~, ~, ~, player
+		p	3	p_72717_3_	coordinateScaling	#~, ~, ~, coordinateScaling
+	m	(Lnet/minecraft/client/renderer/culling/ICamera;F)V	func_72729_a	clipRenderersByFrustum	#clipRenderersByFrustum, :, ~, updateFrustums
+		c	Checks all renderers that previously weren't in the frustum and 1/16th of those that previously were in the frustum for frustum clipping Args: frustum, partialTickTime
+		p	1	p_72729_1_	culler	#~, ~, ~, culler
+		p	2	p_72729_2_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/client/renderer/texture/IIconRegister;)V	func_94140_a	registerDestroyBlockIcons	#registerDestroyBlockIcons, :, ~, loadSprites
+		p	1	p_94140_1_	loader	#~, ~, ~, loader
+	m	(Lnet/minecraft/entity/EntityLivingBase;ID)I	func_72719_a	sortAndRender	#sortAndRender, :, ~, render
+		c	Sorts all renderers based on the passed in entity. Args: entityLiving, renderPass, partialTickTime
+		p	1	p_72719_1_	camera	#~, ~, ~, camera
+		p	2	p_72719_2_	type	#~, ~, ~, type
+		p	3	p_72719_3_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/client/renderer/culling/ICamera;F)V	func_147589_a	renderEntities	#renderEntities, :, ~, renderEntities
+		c	Renders all entities within range and within the frustrum. Args: pos, frustrum, partialTickTime
+		p	1	p_147589_1_	camera	#~, ~, ~, camera
+		p	2	p_147589_2_	view	#~, ~, ~, view
+		p	3	p_147589_3_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;Z)Z	func_72716_a	updateRenderers	#updateRenderers, :, ~, compileChunks
+		c	Updates some of the renderers sorted by distance from the player
+		p	1	p_72716_1_	camera	#~, ~, ~, camera
+		p	2	p_72716_2_	dontDoExtraLogic	#~, ~, ~, dontDoExtraLogic
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/util/MovingObjectPosition;IF)V	func_72731_b	drawSelectionBox	#drawSelectionBox, :, drawBlockOutline, renderBlockOutline
+		c	Draws the selection box for the player. Args: entityPlayer, rayTraceHit, i, itemStack, partialTickTime
+		p	1	p_72731_1_	player	#player, :, :, :
+		p	2	p_72731_2_	movingObjectPositionIn	#movingObjectPositionIn, :, hitResult, hit
+		p	4	p_72731_4_	partialTicks	#partialTicks, :, tickDelta, :
+		p	3	p_72731_3_	execute	#execute, :, ~, ~
+	m	(F)V	func_72718_b	renderClouds	#renderClouds, :, ~, renderClouds
+		p	1	p_72718_1_	tickDelta	#~, ~, tickDelta, :
+	m	(IIIIII)V	func_72725_b	markBlocksForUpdate	#markBlocksForUpdate, :, updateBlock, markDirty
+		c	Marks the blocks in the given range for update
+		p	1	p_72725_1_	x1	#x1, :, ~, minX
+		p	2	p_72725_2_	y1	#y1, :, ~, minY
+		p	3	p_72725_3_	z1	#z1, :, ~, minZ
+		p	4	p_72725_4_	x2	#x2, :, ~, maxX
+		p	5	p_72725_5_	y2	#y2, :, ~, maxY
+		p	6	p_72725_6_	z2	#z2, :, ~, maxZ
+	m	(Ljava/lang/String;DDDDDD)Lnet/minecraft/client/particle/EntityFX;	func_72726_b	doSpawnParticle	#doSpawnParticle, :, spawnParticleInternal, tryAddParticle
+		c	Spawns a particle. Arg: particleType, x, y, z, velX, velY, velZ
+		p	1	p_72726_1_	type	#~, ~, particleName, type
+		p	2	p_72726_2_	x	#~, ~, x, :
+		p	4	p_72726_4_	y	#~, ~, y, :
+		p	6	p_72726_6_	z	#~, ~, z, :
+		p	8	p_72726_8_	velocityX	#~, ~, velocityX, :
+		p	10	p_72726_10_	velocityY	#~, ~, velocityY, :
+		p	12	p_72726_12_	maxZ	#~, ~, velocityZ, maxZ
+	m	(F)V	func_72736_c	renderCloudsFancy	#renderCloudsFancy, :, ~, renderFancyClouds
+		c	Renders the 3d fancy clouds
+		p	1	p_72736_1_	tickDelta	#~, ~, tickDelta, :
+	m	(III)V	func_72722_c	markRenderersForNewPosition	#markRenderersForNewPosition, :, ~, updateRenderBoundaries
+		c	Goes through all the renderers setting new positions on them and those that have their position changed are adding to be updated
+		p	1	p_72722_1_	cameraX	#~, ~, ~, cameraX
+		p	2	p_72722_2_	cameraY	#~, ~, ~, cameraY
+		p	3	p_72722_3_	cameraZ	#~, ~, ~, cameraZ
+	m	()Ljava/lang/String;	func_72735_c	getDebugInfoRenders	#getDebugInfoRenders, :, getChunksDebugString, getChunkDebugInfo
+		c	Gets the render info for use on the Debug screen
+	m	()Ljava/lang/String;	func_72723_d	getDebugInfoEntities	#getDebugInfoEntities, :, getEntitiesDebugString, getEntityDebugInfo
+		c	Gets the entities info for use on the Debug screen
+	m	()V	func_147591_f	rebuildDisplayListEntities	#rebuildDisplayListEntities, :, ~, rebuildStaticEntities
+	m	()V	func_72734_e	updateClouds	#updateClouds, :, tick, :
+	m	()V	func_72728_f	deleteAllDisplayLists	#deleteAllDisplayLists, :, cleanUp, deleteGlLists
+		c	Deletes all display lists
+	m	()V	func_72730_g	renderStars	#renderStars, :, ~, renderStars
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

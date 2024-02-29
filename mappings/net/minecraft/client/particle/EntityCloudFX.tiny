@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityCloudFX	net/minecraft/client/particle/EntityCloudFX	
+	f	F	field_70569_a	oSize	#oSize, :, prevScale, baseScale
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1221_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1221_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1221_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1221_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1221_8_	p_i1221_8_	#~, ~, ~, ~
+		p	10	p_i1221_10_	p_i1221_10_	#~, ~, ~, ~
+		p	12	p_i1221_12_	p_i1221_12_	#~, ~, ~, ~

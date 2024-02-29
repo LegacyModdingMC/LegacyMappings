@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/DataWatcher$WatchableObject	net/minecraft/entity/DataWatcher$WatchableObject	
+	f	I	field_75678_a	objectType	#objectType, :, ~, type
+		c	A number that encodes the type of data stored in this entry.
+	f	I	field_75676_b	dataValueId	#dataValueId, :, ~, id
+		c	id of max 31
+	f	Ljava/lang/Object;	field_75677_c	watchedObject	#watchedObject, :, ~, value
+	f	Z	field_75675_d	watched	#watched, :, ~, modified
+	m	()I	func_75672_a	getDataValueId	#getDataValueId, :, ~, getId
+	m	(Ljava/lang/Object;)V	func_75673_a	setObject	#setObject, :, ~, setValue
+		p	1	p_75673_1_	object	#object, :, ~, value
+	m	(Lnet/minecraft/entity/DataWatcher$WatchableObject;Z)Z	access$002	access$002	#~, ~, ~, setModified
+		p	0	p_access$002_0_	entry	#~, ~, ~, entry
+		p	1	p_access$002_1_	modified	#~, ~, ~, modified
+	m	(Z)V	func_75671_a	setWatched	#setWatched, :, ~, setModified
+		p	1	p_75671_1_	watched	#watched, :, ~, modified
+	m	()Ljava/lang/Object;	func_75669_b	getObject	#getObject, :, ~, getValue
+	m	()I	func_75674_c	getObjectType	#getObjectType, :, ~, getType
+	m	()Z	func_75670_d	isWatched	#isWatched, :, ~, isModified
+	m	(IILjava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1603_1_	type	#type, :, ~, type
+		p	2	p_i1603_2_	id	#id, :, ~, id
+		p	3	p_i1603_3_	object	#object, :, ~, value

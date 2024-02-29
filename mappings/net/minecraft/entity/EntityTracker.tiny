@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityTracker	net/minecraft/entity/EntityTracker	
+	f	Lorg/apache/logging/log4j/Logger;	field_151249_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/world/WorldServer;	field_72795_a	theWorld	#theWorld, world, :, :
+	f	Ljava/util/Set;	field_72793_b	trackedEntities	#trackedEntities, entries, trackedEntities, entries
+		c	List of tracked entities, used for iteration operations on tracked entities.
+	f	Lnet/minecraft/util/IntHashMap;	field_72794_c	trackedEntityIDs	#trackedEntityIDs, trackedEntityHashTable, trackedEntityIds, :
+		c	Used for identity lookup of tracked entities.
+	f	I	field_72792_d	entityViewDistance	#entityViewDistance, maxTrackingDistanceThreshold, ~, viewDistance
+		c	"Max track distance", measured in blocks.
+	m	(Lnet/minecraft/world/WorldServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1516_1_	theWorldIn	#theWorldIn, :, world, :
+	m	()V	func_72788_a	updateTrackedEntities	#updateTrackedEntities, tick, ~, tick
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_72787_a	removePlayerFromTrackers	#removePlayerFromTrackers, :, ~, removeListener
+		p	1	p_72787_1_	player	#player, :, playerEntity, player
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;Lnet/minecraft/world/chunk/Chunk;)V	func_85172_a	sendLeashedEntitiesInChunk	#sendLeashedEntitiesInChunk, :, ~, updateListener
+		c	Send packets to player for every tracked entity in this chunk that is either leashed to something or someone, or has passengers
+		p	1	p_85172_1_	player	#player, :, playerEntity, player
+		p	2	p_85172_2_	chunkIn	#chunkIn, :, chunk, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_72786_a	addEntityToTracker	#addEntityToTracker, track, startTracking, onEntityAdded
+		c	if entity is a player sends all tracked events to the player, otherwise, adds with a visibility and update arate based on the class type
+		p	1	p_72786_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;II)V	func_72791_a	addEntityToTracker	#addEntityToTracker, track, startTracking, :
+		p	1	p_72791_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72791_2_	trackingRange	#trackingRange, :, ~, trackedDistance
+		p	3	p_72791_3_	updateFrequency	#updateFrequency, :, ~, tracingFrequency
+	m	(Lnet/minecraft/entity/Entity;IIZ)V	func_72785_a	addEntityToTracker	#addEntityToTracker, track, startTracking, :
+		c	Args : Entity, trackingRange, updateFrequency, sendVelocityUpdates
+		p	1	p_72785_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_72785_2_	trackingRange	#trackingRange, :, ~, trackedDistance
+		p	3	p_72785_3_	updateFrequency	#updateFrequency, :, ~, tracingFrequency
+		p	4	p_72785_4_	sendVelocityUpdates	#sendVelocityUpdates, :, ~, alwaysUpdateVelocity
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/network/Packet;)V	func_151247_a	sendToAllTrackingEntity	#sendToAllTrackingEntity, sendToTracking, sendToOtherTrackingEntities, sendToListeners
+		p	1	p_151247_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_151247_2_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_72790_b	removeEntityFromAllTrackingPlayers	#removeEntityFromAllTrackingPlayers, untrack, ~, onEntityRemoved
+		c	Removes the given entity, sending removal packets to all players tracking it. Called when the entity is dead.\n \n@param entityIn The entity to untrack
+		p	1	p_72790_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/network/Packet;)V	func_151248_b	sendToTrackingAndSelf	#sendToTrackingAndSelf, :, sendToAllTrackingEntities, sendToListenersAndTrackedEntityIfPlayer
+		p	1	p_151248_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_151248_2_	packetIn	#packetIn, :, packet, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

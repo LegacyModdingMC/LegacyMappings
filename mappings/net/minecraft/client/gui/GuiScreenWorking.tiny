@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenWorking	net/minecraft/client/gui/GuiScreenWorking	
+	f	Ljava/lang/String;	field_146591_a	title	#title, :, :, :
+	f	Ljava/lang/String;	field_146589_f	stage	#stage, :, task, :
+	f	I	field_146590_g	progress	#progress, :, :, :
+	f	Z	field_146592_h	doneWorking	#doneWorking, :, done, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

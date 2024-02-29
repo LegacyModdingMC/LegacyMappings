@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldSavedData	net/minecraft/world/WorldSavedData	
+	f	Z	field_76189_a	dirty	#dirty, :, :, :
+		c	Whether this MapDataBase needs saving to disk.
+	f	Ljava/lang/String;	field_76190_i	mapName	#mapName, :, id, :
+		c	The name of the map data nbt
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2141_1_	name	#name, :, id, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_76184_a	readFromNBT	#readFromNBT, :, fromNbt, readNbt
+		c	reads in data from the NBTTagCompound into this MapDataBase
+		p	1	p_76184_1_	nbt	#nbt, :, :, :
+	m	(Z)V	func_76186_a	setDirty	#setDirty, :, :, :
+		c	Sets the dirty state of this MapDataBase, whether it needs saving to disk.
+		p	1	p_76186_1_	isDirty	#isDirty, :, dirty, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_76187_b	writeToNBT	#writeToNBT, :, toNbt, writeNbt
+		c	write data to NBTTagCompound from this MapDataBase, similar to Entities and TileEntities
+		p	1	p_76187_1_	nbt	#nbt, :, :, :
+	m	()V	func_76185_a	markDirty	#markDirty, :, :, :
+		c	Marks this MapDataBase dirty, to be saved to disk when the level next saves.
+	m	()Z	func_76188_b	isDirty	#isDirty, :, :, :
+		c	Whether this MapDataBase needs saving to disk.

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentHelper$ModifierLiving	net/minecraft/enchantment/EnchantmentHelper$ModifierLiving	
+	f	F	field_77495_a	livingModifier	#livingModifier, :, ~, damage
+		c	Used to calculate the (magic) extra damage based on enchantments of current equipped player item.
+	f	Lnet/minecraft/entity/EnumCreatureAttribute;	field_77494_b	entityLiving	#entityLiving, :, ~, entity
+		c	Used as parameter to calculate the (magic) extra damage based on enchantments of current equipped player item.
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	(Lnet/minecraft/enchantment/EnchantmentHelper$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1928_1_	p_i1928_1_	#~, ~, ~, ~

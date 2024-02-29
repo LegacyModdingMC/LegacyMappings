@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenerator	net/minecraft/world/gen/feature/WorldGenerator	
+	f	Z	field_76488_a	doBlockNotify	#doBlockNotify, :, emitNeighborBlockUpdates, notifyNeighbors
+		c	Sets wither or not the generator should notify blocks of blocks it changes. When the world is first generated, this is false, when saplings grow, this is true.
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2013_1_	notify	#notify, :, emitNeighborBlockUpdates, notifyNeighbors
+	m	(DDD)V	func_76487_a	setScale	#setScale, :, ~, prepare
+		c	Rescales the generator settings, only used in WorldGenBigTree
+		p	1	p_76487_1_	d0	#~, ~, ~, d0
+		p	3	p_76487_3_	d1	#~, ~, ~, d1
+		p	5	p_76487_5_	d2	#~, ~, ~, d2
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;)V	func_150515_a	setBlock	#~, ~, ~, setBlock
+		p	1	p_150515_1_	world	#~, ~, ~, world
+		p	2	p_150515_2_	x	#~, ~, ~, x
+		p	3	p_150515_3_	y	#~, ~, ~, y
+		p	4	p_150515_4_	z	#~, ~, ~, z
+		p	5	p_150515_5_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;I)V	func_150516_a	setBlockAndNotifyAdequately	#setBlockAndNotifyAdequately, :, ~, setBlockWithMetadata
+		p	1	p_150516_1_	world	#~, ~, ~, world
+		p	2	p_150516_2_	x	#~, ~, ~, x
+		p	3	p_150516_3_	y	#~, ~, ~, y
+		p	4	p_150516_4_	z	#~, ~, ~, z
+		p	5	p_150516_5_	block	#~, ~, ~, block
+		p	6	p_150516_6_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;III)Z	func_76484_a	generate	#generate, :, ~, place
+		p	1	p_76484_1_	world	#~, ~, ~, world
+		p	2	p_76484_2_	random	#~, ~, ~, random
+		p	3	p_76484_3_	x	#~, ~, ~, x
+		p	4	p_76484_4_	y	#~, ~, ~, y
+		p	5	p_76484_5_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

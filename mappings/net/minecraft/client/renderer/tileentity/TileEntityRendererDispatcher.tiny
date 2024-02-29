@@ -1,0 +1,48 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher	net/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher	
+	f	Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;	field_147556_a	instance	#instance, :, INSTANCE, :
+	f	D	field_147554_b	staticPlayerX	#staticPlayerX, :, CAMERA_X, offsetX
+		c	The player's current X position (same as playerX)
+	f	D	field_147555_c	staticPlayerY	#staticPlayerY, :, CAMERA_Y, offsetY
+		c	The player's current Y position (same as playerY)
+	f	D	field_147552_d	staticPlayerZ	#staticPlayerZ, :, CAMERA_Z, offsetZ
+		c	The player's current Z position (same as playerZ)
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_147553_e	renderEngine	#renderEngine, :, textureManager, :
+	f	Lnet/minecraft/world/World;	field_147550_f	worldObj	#worldObj, world, :, :
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_147551_g	entity	#entity, :, ~, camera
+	f	F	field_147562_h	entityYaw	#entityYaw, :, cameraYaw, :
+	f	F	field_147563_i	entityPitch	#entityPitch, :, cameraPitch, :
+	f	D	field_147560_j	entityX	#entityX, :, cameraX, :
+	f	D	field_147561_k	entityY	#entityY, :, cameraY, :
+	f	D	field_147558_l	entityZ	#entityZ, :, cameraZ, :
+	f	Ljava/util/Map;	field_147559_m	mapSpecialRenderers	#mapSpecialRenderers, renderers, :, :
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_147557_n	fontRenderer	#fontRenderer, :, textRenderer, :
+	m	()Lnet/minecraft/client/gui/FontRenderer;	func_147548_a	getFontRenderer	#getFontRenderer, :, getTextRenderer, :
+	m	(Lnet/minecraft/world/World;)V	func_147543_a	setWorld	#setWorld, :, :, :
+		p	1	p_147543_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/entity/EntityLivingBase;F)V	func_147542_a	cacheActiveRenderInfo	#cacheActiveRenderInfo, :, ~, prepare
+		p	1	p_147542_1_	world	#~, ~, ~, world
+		p	2	p_147542_2_	textureManager	#~, ~, ~, textureManager
+		p	3	p_147542_3_	font	#~, ~, ~, font
+		p	4	p_147542_4_	camera	#~, ~, ~, camera
+		p	5	p_147542_5_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/tileentity/TileEntity;)Z	func_147545_a	hasSpecialRenderer	#hasSpecialRenderer, :, hasRenderer, :
+		c	Returns true if this TileEntity instance has a TileEntitySpecialRenderer associated with it, false otherwise.
+		p	1	p_147545_1_	blockEntity	#~, ~, entity, blockEntity
+	m	(Lnet/minecraft/tileentity/TileEntity;DDDF)V	func_147549_a	renderTileEntityAt	#renderTileEntityAt, render, renderBlockEntity, render
+		c	Render this TileEntity at a given set of coordinates
+		p	1	p_147549_1_	tileEntityIn	#tileEntityIn, :, blockEntity, :
+		p	2	p_147549_2_	x	#x, :, :, :
+		p	4	p_147549_4_	y	#y, :, :, :
+		p	6	p_147549_6_	z	#z, :, :, :
+		p	8	p_147549_8_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(Lnet/minecraft/tileentity/TileEntity;F)V	func_147544_a	renderTileEntity	#renderTileEntity, :, render, :
+		c	Render this TileEntity at its current position from the player
+		p	1	p_147544_1_	blockEntity	#~, ~, entity, blockEntity
+		p	2	p_147544_2_	tickDelta	#~, ~, tickDelta, :
+	m	(Ljava/lang/Class;)Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer;	func_147546_a	getSpecialRendererByClass	#getSpecialRendererByClass, getRenderer, render, getRenderer
+		p	1	p_147546_1_	teClass	#teClass, :, clazz, type
+	m	(Lnet/minecraft/tileentity/TileEntity;)Lnet/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer;	func_147547_b	getSpecialRenderer	#getSpecialRenderer, getRenderer, :, :
+		p	1	p_147547_1_	tileEntityIn	#tileEntityIn, :, entity, blockEntity
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

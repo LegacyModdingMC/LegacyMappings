@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityLookHelper	net/minecraft/entity/ai/EntityLookHelper	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75659_a	entity	#entity, :, :, mob
+	f	F	field_75657_b	deltaLookYaw	#deltaLookYaw, :, yaw, :
+		c	The amount of change that is made each update for an entity facing a direction.
+	f	F	field_75658_c	deltaLookPitch	#deltaLookPitch, :, pitch, :
+		c	The amount of change that is made each update for an entity facing a direction.
+	f	Z	field_75655_d	isLooking	#isLooking, :, active, :
+		c	Whether or not the entity is trying to look at something.
+	f	D	field_75656_e	posX	#posX, :, lookX, :
+	f	D	field_75653_f	posY	#posY, :, lookY, :
+	f	D	field_75654_g	posZ	#posZ, :, lookZ, :
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1613_1_	entitylivingIn	#entitylivingIn, :, entity, mob
+	m	()V	func_75649_a	onUpdateLook	#onUpdateLook, :, tick, :
+		c	Updates look
+	m	(DDDFF)V	func_75650_a	setLookPosition	#setLookPosition, :, lookAt, :
+		c	Sets position to look at
+		p	1	p_75650_1_	x	#x, :, :, :
+		p	3	p_75650_3_	y	#y, :, :, :
+		p	5	p_75650_5_	z	#z, :, :, :
+		p	7	p_75650_7_	deltaYaw	#deltaYaw, :, yaw, :
+		p	8	p_75650_8_	deltaPitch	#deltaPitch, :, pitch, :
+	m	(FFF)F	func_75652_a	updateRotation	#updateRotation, :, clampAndWrapAngle, :
+		p	1	p_75652_1_	yaw1	#~, ~, from, yaw1
+		p	2	p_75652_2_	yaw2	#~, ~, to, yaw2
+		p	3	p_75652_3_	maxOffset	#~, ~, max, maxOffset
+			c	The maximum offset that is allowed between the yaw1 and yaw2
+	m	(Lnet/minecraft/entity/Entity;FF)V	func_75651_a	setLookPositionWithEntity	#setLookPositionWithEntity, :, lookAt, setLookatValues
+		c	Sets position to look at using entity
+		p	1	p_75651_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_75651_2_	deltaYaw	#deltaYaw, :, yaw, :
+		p	3	p_75651_3_	deltaPitch	#deltaPitch, :, pitch, :

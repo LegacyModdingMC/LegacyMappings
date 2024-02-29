@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemHangingEntity	net/minecraft/item/ItemHangingEntity	
+	f	Ljava/lang/Class;	field_82811_a	hangingEntityClass	#hangingEntityClass, :, decorationClass, type
+	m	(Ljava/lang/Class;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45342_1_	entityClass	#entityClass, :, clazz, decorationClass
+	m	(Lnet/minecraft/world/World;IIII)Lnet/minecraft/entity/EntityHanging;	func_82810_a	createHangingEntity	#createHangingEntity, :, ~, hang
+		c	Create the hanging entity associated to this item.
+		p	1	p_82810_1_	world	#~, ~, ~, world
+		p	2	p_82810_2_	x	#~, ~, ~, x
+		p	3	p_82810_3_	y	#~, ~, ~, y
+		p	4	p_82810_4_	z	#~, ~, ~, z
+		p	5	p_82810_5_	dir	#~, ~, ~, dir

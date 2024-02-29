@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiFurnace	net/minecraft/client/gui/inventory/GuiFurnace	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147087_u	furnaceGuiTextures	#furnaceGuiTextures, FURNACE_GUI_TEXTURES, TEXTURE, MENU_LOCATION
+	f	Lnet/minecraft/tileentity/TileEntityFurnace;	field_147086_v	tileFurnace	#tileFurnace, :, ~, furnace
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityFurnace;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1091_1_	inventory	#~, ~, ~, inventory
+		p	2	p_i1091_2_	parentBlockEntity	#~, ~, ~, parentBlockEntity
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

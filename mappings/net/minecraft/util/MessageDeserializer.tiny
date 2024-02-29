@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MessageDeserializer	net/minecraft/util/MessageDeserializer	
+	f	Lorg/apache/logging/log4j/Logger;	field_150800_a	logger	#logger, LOGGER, :, :
+	f	Lorg/apache/logging/log4j/Marker;	field_150799_b	RECEIVED_PACKET_MARKER	#RECEIVED_PACKET_MARKER, :, MARKER, :
+	f	Lnet/minecraft/network/NetworkStatistics;	field_152499_c	direction	#direction, :, ~, ~
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V	decode	decode	#~, ~, ~, ~
+		p	1	p_decode_1_	context	#~, ~, ~, context
+		p	2	p_decode_2_	buffer	#~, ~, ~, buffer
+		p	3	p_decode_3_	packets	#~, ~, ~, packets
+	m	(Lnet/minecraft/network/NetworkStatistics;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1183_1_	p_i1183_1_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

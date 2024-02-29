@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/Entity$SwitchEnumEntitySize	net/minecraft/entity/Entity$SwitchEnumEntitySize	
+	f	[I	field_96565_a	field_96565_a	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

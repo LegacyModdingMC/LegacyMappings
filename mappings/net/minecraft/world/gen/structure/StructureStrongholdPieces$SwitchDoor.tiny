@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$SwitchDoor	net/minecraft/world/gen/structure/StructureStrongholdPieces$SwitchDoor	
+	f	[I	field_75245_a	doorEnum	#doorEnum, :, ~, entrancePieceTypes
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

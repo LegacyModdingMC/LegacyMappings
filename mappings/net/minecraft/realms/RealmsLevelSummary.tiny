@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsLevelSummary	net/minecraft/realms/RealmsLevelSummary	
+	f	Lnet/minecraft/world/storage/SaveFormatComparator;	levelSummary	levelSummary	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/storage/SaveFormatComparator;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsLevelSummary;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	()I	getGameMode	getGameMode	#~, ~, ~, ~
+	m	()J	getLastPlayed	getLastPlayed	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getLevelId	getLevelId	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getLevelName	getLevelName	#~, ~, ~, ~
+	m	()J	getSizeOnDisk	getSizeOnDisk	#~, ~, ~, ~
+	m	()Z	hasCheats	hasCheats	#~, ~, ~, ~
+	m	()Z	isHardcore	isHardcore	#~, ~, ~, ~
+	m	()Z	isRequiresConversion	isRequiresConversion	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/storage/SaveFormatComparator;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1109_1_	levelSummaryIn	#levelSummaryIn, :, ~, ~

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenSavanna$Mutated	net/minecraft/world/biome/BiomeGenSavanna$Mutated	
+	m	(ILnet/minecraft/world/biome/BiomeGenBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45382_1_	p_i45382_1_	#~, ~, ~, ~
+		p	2	p_i45382_2_	p_i45382_2_	#~, ~, ~, ~

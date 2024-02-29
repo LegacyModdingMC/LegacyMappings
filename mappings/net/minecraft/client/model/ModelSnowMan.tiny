@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSnowMan	net/minecraft/client/model/ModelSnowMan	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78196_a	body	#body, :, ~, top
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78194_b	bottomBody	#bottomBody, :, ~, bottom
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78195_c	head	#head, :, ~, head
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78192_d	rightHand	#rightHand, :, ~, rightArm
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78193_e	leftHand	#leftHand, :, ~, leftArm
+	m	()V	<init>	<init>	#~, ~, ~, ~

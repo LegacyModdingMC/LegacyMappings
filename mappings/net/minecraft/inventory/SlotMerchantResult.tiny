@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/SlotMerchantResult	net/minecraft/inventory/SlotMerchantResult	
+	f	Lnet/minecraft/inventory/InventoryMerchant;	field_75233_a	theMerchantInventory	#theMerchantInventory, merchantInventory, traderInventory, :
+		c	Merchant's inventory.
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_75232_b	thePlayer	#thePlayer, player, :, :
+		c	The Player whos trying to buy/sell stuff.
+	f	I	field_75231_g	removeCount	#removeCount, :, amount, removeAmount
+	f	Lnet/minecraft/entity/IMerchant;	field_75234_h	theMerchant	#theMerchant, merchant, trader, :
+		c	"Instance" of the Merchant.
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/IMerchant;Lnet/minecraft/inventory/InventoryMerchant;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1822_1_	player	#player, :, :, :
+		p	2	p_i1822_2_	merchant	#merchant, :, trader, :
+		p	3	p_i1822_3_	merchantInventory	#merchantInventory, :, traderInventory, :
+		p	4	p_i1822_4_	slotIndex	#slotIndex, :, index, slot
+		p	5	p_i1822_5_	xPosition	#xPosition, :, x, :
+		p	6	p_i1822_6_	yPosition	#yPosition, :, y, :
+	m	(Lnet/minecraft/village/MerchantRecipe;Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z	func_75230_a	doTrade	#doTrade, :, depleteBuyItems, acceptPayment
+		p	1	p_75230_1_	trade	#trade, :, offer, :
+		p	2	p_75230_2_	firstItem	#firstItem, :, first, primaryPayment
+		p	3	p_75230_3_	secondItem	#secondItem, :, second, secondaryPayment

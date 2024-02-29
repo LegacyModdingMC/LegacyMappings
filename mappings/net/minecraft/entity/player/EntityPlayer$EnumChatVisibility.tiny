@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/EntityPlayer$EnumChatVisibility	net/minecraft/entity/player/EntityPlayer$EnumChatVisibility	
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	FULL	FULL	#~, ~, FULL, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	SYSTEM	SYSTEM	#~, ~, SYSTEM, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	HIDDEN	HIDDEN	#~, ~, HIDDEN, :
+	f	[Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	field_151432_d	ID_LOOKUP	#ID_LOOKUP, :, TYPE, ALL
+	f	I	field_151433_e	chatVisibility	#chatVisibility, :, id, index
+	f	Ljava/lang/String;	field_151430_f	resourceKey	#resourceKey, :, key, id
+	f	[Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;IILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45323_3_	id	#id, :, :, index
+		p	4	p_i45323_4_	resourceKey	#resourceKey, :, key, id
+		p	1	p_i45323_1_	p_i45323_1_	#~, ~, ~, ~
+		p	2	p_i45323_2_	p_i45323_2_	#~, ~, ~, ~
+	m	()I	func_151428_a	getChatVisibility	#getChatVisibility, :, getId, getIndex
+	m	(I)Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	func_151426_a	getEnumChatVisibility	#getEnumChatVisibility, :, get, byIndex
+		p	0	p_151426_0_	id	#id, :, :, index
+	m	()Ljava/lang/String;	func_151429_b	getResourceKey	#getResourceKey, :, getKey, getId
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

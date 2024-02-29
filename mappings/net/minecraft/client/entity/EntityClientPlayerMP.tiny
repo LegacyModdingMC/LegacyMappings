@@ -1,0 +1,41 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/entity/EntityClientPlayerMP	net/minecraft/client/entity/EntityClientPlayerMP	
+	f	Lnet/minecraft/client/network/NetHandlerPlayClient;	field_71174_a	sendQueue	#sendQueue, connection, ~, networkHandler
+	f	Lnet/minecraft/stats/StatFileWriter;	field_146108_bO	statWriter	#statWriter, :, ~, stats
+	f	D	field_71179_j	oldPosX	#oldPosX, :, ~, lastX
+	f	D	field_71177_cg	oldMinY	#oldMinY, :, ~, lastMinY
+		c	Old Minimum Y of the bounding box
+	f	D	field_71178_ch	oldPosY	#oldPosY, :, ~, lastY
+	f	D	field_71175_ci	oldPosZ	#oldPosZ, :, ~, lastZ
+	f	F	field_71176_cj	oldRotationYaw	#oldRotationYaw, :, ~, lastYaw
+	f	F	field_71172_ck	oldRotationPitch	#oldRotationPitch, :, ~, lastPitch
+	f	Z	field_71173_cl	wasOnGround	#wasOnGround, :, ~, wasOnGround
+		c	Check if was on ground last update
+	f	Z	field_71170_cm	wasSneaking	#wasSneaking, :, ~, wasSneaking
+		c	Used to check if the player has started or stopped sneaking and needs to tell the server.
+	f	Z	field_71171_cn	wasSprinting	#wasSprinting, :, ~, wasSprinting
+		c	Used to check if the player has started or stopped sprinting and needs to tell the server.
+	f	I	field_71168_co	ticksSinceMovePacket	#ticksSinceMovePacket, :, ~, movementUpdateTimer
+		c	Counter used to ensure that the server sends a move packet (Packet11, 12 or 13) to the client at least once a second.
+	f	Z	field_71169_cp	hasSetHealth	#hasSetHealth, :, ~, healthInitialized
+		c	has the client player's health been set?
+	f	Ljava/lang/String;	field_142022_ce	clientBrand	#clientBrand, serverBrand, ~, serverBrand
+	m	()V	func_71166_b	sendMotionUpdates	#sendMotionUpdates, :, ~, updateMovement
+		c	Send updated motion and position information to the server
+	m	(Ljava/lang/String;)V	func_71165_d	sendChatMessage	#sendChatMessage, :, ~, sendChat
+		c	Sends a chat message from the player. Args: chatMessage
+		p	1	p_71165_1_	message	#message, :, ~, message
+	m	()V	func_92015_f	closeScreenNoPacket	#closeScreenNoPacket, :, ~, doCloseMenu
+		c	Closes the GUI screen without sending a packet to the server
+	m	(Ljava/lang/String;)V	func_142020_c	setClientBrand	#setClientBrand, :, ~, setServerBrand
+		p	1	p_142020_1_	brand	#brand, :, ~, serverBrand
+	m	()V	func_110322_i	sendHorseInteraction	#sendHorseInteraction, :, ~, openRidingInventory
+	m	()Ljava/lang/String;	func_142021_k	getClientBrand	#getClientBrand, getServerBrand, ~, getServerBrand
+		c	Gets the brand of the currently connected server. May be null if the server hasn't yet sent brand information. Server brand information is sent over the {@code MC|Brand} plugin channel, and is used to identify modded servers in crash reports.
+	m	()Lnet/minecraft/stats/StatFileWriter;	func_146107_m	getStatFileWriter	#getStatFileWriter, :, ~, getStats
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/World;Lnet/minecraft/util/Session;Lnet/minecraft/client/network/NetHandlerPlayClient;Lnet/minecraft/stats/StatFileWriter;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45064_1_	minecraft	#~, ~, ~, minecraft
+		p	2	p_i45064_2_	world	#~, ~, ~, world
+		p	3	p_i45064_3_	session	#~, ~, ~, session
+		p	4	p_i45064_4_	networkHandler	#~, ~, ~, networkHandler
+		p	5	p_i45064_5_	statHandler	#~, ~, ~, statHandler

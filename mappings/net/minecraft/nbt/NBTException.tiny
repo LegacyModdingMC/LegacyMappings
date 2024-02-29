@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTException	net/minecraft/nbt/NBTException	
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45136_1_	message	#message, :, cause, :

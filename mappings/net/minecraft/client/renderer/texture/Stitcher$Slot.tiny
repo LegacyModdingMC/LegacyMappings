@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/Stitcher$Slot	net/minecraft/client/renderer/texture/Stitcher$Slot	
+	f	I	field_94192_a	originX	#originX, :, ~, originX
+	f	I	field_94190_b	originY	#originY, :, ~, originY
+	f	I	field_94191_c	width	#width, :, ~, width
+	f	I	field_94188_d	height	#height, :, ~, height
+	f	Ljava/util/List;	field_94189_e	subSlots	#subSlots, :, ~, subSlots
+	f	Lnet/minecraft/client/renderer/texture/Stitcher$Holder;	field_94187_f	holder	#holder, :, ~, holder
+	m	()Lnet/minecraft/client/renderer/texture/Stitcher$Holder;	func_94183_a	getStitchHolder	#getStitchHolder, :, ~, getHolder
+	m	(Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)Z	func_94182_a	addSlot	#addSlot, :, ~, add
+		p	1	p_94182_1_	holderIn	#holderIn, :, ~, holder
+	m	(Ljava/util/List;)V	func_94184_a	getAllStitchSlots	#getAllStitchSlots, :, ~, collect
+		c	Gets the slot and all its subslots
+		p	1	p_94184_1_	slots	#~, ~, ~, slots
+	m	()I	func_94186_b	getOriginX	#getOriginX, :, ~, getX
+	m	()I	func_94185_c	getOriginY	#getOriginY, :, ~, getY
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1277_1_	originXIn	#originXIn, :, ~, originX
+		p	2	p_i1277_2_	originYIn	#originYIn, :, ~, originY
+		p	3	p_i1277_3_	widthIn	#widthIn, :, ~, width
+		p	4	p_i1277_4_	heightIn	#heightIn, :, ~, height

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S38PacketPlayerListItem	net/minecraft/network/play/server/S38PacketPlayerListItem	
+	f	Ljava/lang/String;	field_149126_a	playerName	#~, ~, ~, playerName
+	f	Z	field_149124_b	online	#~, ~, ~, online
+	f	I	field_149125_c	ping	#~, ~, ~, ping
+	m	()Ljava/lang/String;	func_149122_c	getPlayerName	#~, ~, ~, getPlayerName
+	m	()Z	func_149121_d	getOnline	#~, ~, ~, getOnline
+	m	()I	func_149120_e	getPing	#~, ~, ~, getPing
+	m	(Ljava/lang/String;ZI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45209_1_	playerName	#~, ~, ~, playerName
+		p	2	p_i45209_2_	online	#~, ~, ~, online
+		p	3	p_i45209_3_	ping	#~, ~, ~, ping
+	m	()V	<init>	<init>	#~, ~, ~, ~

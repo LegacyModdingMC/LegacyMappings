@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/LongHashMap$Entry	net/minecraft/util/LongHashMap$Entry	
+	f	J	field_76150_a	key	#key, :, ~, key
+		c	the key as a long (for playerInstances it is the x in the most significant 32 bits and then y)
+	f	Ljava/lang/Object;	field_76148_b	value	#value, :, ~, value
+		c	the value held by the hash at the specified key
+	f	Lnet/minecraft/util/LongHashMap$Entry;	field_76149_c	nextEntry	#nextEntry, :, ~, next
+		c	the next hashentry in the table
+	f	I	field_76147_d	hash	#hash, :, ~, hash
+	m	()J	func_76146_a	getKey	#getKey, :, ~, getKey
+	m	()Ljava/lang/Object;	func_76145_b	getValue	#getValue, :, ~, getValue
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, ~, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(IJLjava/lang/Object;Lnet/minecraft/util/LongHashMap$Entry;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1553_1_	hash	#~, ~, ~, hash
+		p	2	p_i1553_2_	key	#~, ~, ~, key
+		p	4	p_i1553_4_	value	#~, ~, ~, value
+		p	5	p_i1553_5_	next	#~, ~, ~, next

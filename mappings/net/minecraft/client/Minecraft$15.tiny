@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$15	net/minecraft/client/Minecraft$15	
+	f	Lnet/minecraft/client/Minecraft;	field_152389_a	field_152389_a	#~, ~, ~, ~
+	m	()Ljava/lang/String;	func_152388_a	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1101_1_	mcIn	#mcIn, :, ~, ~

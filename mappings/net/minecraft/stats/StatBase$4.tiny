@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatBase$4	net/minecraft/stats/StatBase$4	
+	m	()V	<init>	<init>	#~, ~, ~, ~

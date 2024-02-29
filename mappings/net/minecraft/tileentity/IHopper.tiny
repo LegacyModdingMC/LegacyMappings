@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/IHopper	net/minecraft/tileentity/IHopper	
+	m	()D	func_96109_aB	getYPos	#getYPos, :, getY, :
+		c	Gets the world Y position for this hopper entity.
+	m	()D	func_96108_aC	getZPos	#getZPos, :, getZ, :
+		c	Gets the world Z position for this hopper entity.
+	m	()D	func_96107_aA	getXPos	#getXPos, :, getX, :
+		c	Gets the world X position for this hopper entity.

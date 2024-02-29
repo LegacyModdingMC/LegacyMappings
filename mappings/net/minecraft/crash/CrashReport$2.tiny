@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/crash/CrashReport$2	net/minecraft/crash/CrashReport$2	
+	f	Lnet/minecraft/crash/CrashReport;	field_71496_a	theCrashReport	#theCrashReport, :, crashReport, :
+		c	Reference to the CrashReport object.
+	m	(Lnet/minecraft/crash/CrashReport;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1339_1_	crashReport	#~, ~, crashReport, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

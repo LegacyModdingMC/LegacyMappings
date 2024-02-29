@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityWitherSkull	net/minecraft/entity/projectile/EntityWitherSkull	
+	m	(Z)V	func_82343_e	setInvulnerable	#setInvulnerable, :, setCharged, :
+		c	Set whether this skull comes from an invulnerable (aura) wither boss.
+		p	1	p_82343_1_	invulnerable	#invulnerable, :, charged, :
+	m	()Z	func_82342_d	isInvulnerable	#isInvulnerable, :, isCharged, :
+		c	Return whether this skull comes from an invulnerable (aura) wither boss.
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1795_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1795_2_	x	#x, :, ~, x
+		p	4	p_i1795_4_	y	#y, :, ~, y
+		p	6	p_i1795_6_	z	#z, :, ~, z
+		p	8	p_i1795_8_	accelX	#accelX, :, ~, velocityX
+		p	10	p_i1795_10_	accelY	#accelY, :, ~, velocityY
+		p	12	p_i1795_12_	accelZ	#accelZ, :, ~, velocityZ
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1794_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1794_2_	shooter	#shooter, :, ~, owner
+		p	3	p_i1794_3_	accelX	#accelX, :, ~, x
+		p	5	p_i1794_5_	accelY	#accelY, :, ~, y
+		p	7	p_i1794_7_	accelZ	#accelZ, :, ~, z
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1793_1_	worldIn	#worldIn, :, ~, ~

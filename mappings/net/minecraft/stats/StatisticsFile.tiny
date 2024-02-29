@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatisticsFile	net/minecraft/stats/StatisticsFile	
+	f	Lorg/apache/logging/log4j/Logger;	field_150889_b	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/server/MinecraftServer;	field_150890_c	mcServer	#mcServer, server, :, :
+	f	Ljava/io/File;	field_150887_d	statsFile	#statsFile, :, file, :
+	f	Ljava/util/Set;	field_150888_e	dirty	#dirty, :, pendingStats, dirtyStats
+	f	I	field_150885_f	lastStatRequest	#lastStatRequest, :, lastStatsUpdate, lastUpdate
+	f	Z	field_150886_g	hasUnsentAchievement	#hasUnsentAchievement, :, ~, dirty
+	m	()V	func_150882_a	readStatFile	#readStatFile, :, ~, load
+	m	(Ljava/lang/String;)Ljava/util/Map;	func_150881_a	parseJson	#parseJson, :, ~, deserialize
+		p	1	p_150881_1_	data	#~, ~, ~, data
+	m	(Ljava/util/Map;)Ljava/lang/String;	func_150880_a	dumpJson	#dumpJson, :, ~, serialize
+		p	0	p_150880_0_	stats	#~, ~, ~, stats
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_150876_a	sendStats	#sendStats, :, ~, sendStats
+		p	1	p_150876_1_	player	#player, :, ~, player
+	m	()V	func_150883_b	saveStatFile	#saveStatFile, :, save, :
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_150884_b	sendAchievements	#sendAchievements, :, ~, sendAchievements
+		p	1	p_150884_1_	player	#player, :, ~, player
+	m	()Ljava/util/Set;	func_150878_c	getDirty	#getDirty, :, takePendingStats, takeDirty
+	m	()V	func_150877_d	markAllDirty	#markAllDirty, :, updateStatSet, markAllDirty
+	m	()Z	func_150879_e	hasUnsentAchievement	#hasUnsentAchievement, :, ~, isDirty
+	m	(Lnet/minecraft/server/MinecraftServer;Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45306_1_	serverIn	#serverIn, :, ~, server
+		p	2	p_i45306_2_	statsFileIn	#statsFileIn, :, ~, file
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

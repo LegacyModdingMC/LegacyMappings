@@ -1,0 +1,50 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/shader/ShaderManager	net/minecraft/client/shader/ShaderManager	
+	f	Lorg/apache/logging/log4j/Logger;	field_148003_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/shader/ShaderDefault;	field_148001_b	defaultShaderUniform	#defaultShaderUniform, DEFAULT_SHADER_UNIFORM, dummyUniform, DUMMY_UNIFORM
+	f	Lnet/minecraft/client/shader/ShaderManager;	field_148002_c	staticShaderManager	#staticShaderManager, :, activeProgram, lastAppliedEffect
+	f	I	field_147999_d	currentProgram	#currentProgram, :, activeProgramRef, lastProgramId
+	f	Z	field_148000_e	lastCull	#lastCull, :, active, cullEnabled
+	f	Ljava/util/Map;	field_147997_f	shaderSamplers	#shaderSamplers, :, samplerBinds, samplerMap
+		c	maps sampler names to their texture
+	f	Ljava/util/List;	field_147998_g	samplerNames	#samplerNames, :, :, :
+	f	Ljava/util/List;	field_148010_h	shaderSamplerLocations	#shaderSamplerLocations, :, samplerShaderLocs, samplerLocations
+	f	Ljava/util/List;	field_148011_i	shaderUniforms	#shaderUniforms, :, uniformData, uniforms
+	f	Ljava/util/List;	field_148008_j	shaderUniformLocations	#shaderUniformLocations, :, uniformLocs, uniformLocations
+	f	Ljava/util/Map;	field_148009_k	mappedShaderUniforms	#mappedShaderUniforms, :, uniformByName, uniformMap
+	f	I	field_148006_l	program	#program, :, programRef, programId
+	f	Ljava/lang/String;	field_148007_m	programFilename	#programFilename, :, name, :
+	f	Z	field_148004_n	useFaceCulling	#useFaceCulling, :, useCullFace, cull
+	f	Z	field_148005_o	isDirty	#isDirty, :, uniformStateDirty, dirty
+	f	Lnet/minecraft/client/util/JsonBlendingMode;	field_148016_p	field_148016_p	#field_148016_p, blendingMode, blendState, blend
+	f	Ljava/util/List;	field_148015_q	attribLocations	#attribLocations, :, attribLocs, attributes
+	f	Ljava/util/List;	field_148014_r	attributes	#attributes, :, attribNames, attributeNames
+	f	Lnet/minecraft/client/shader/ShaderLoader;	field_148013_s	vertexShaderLoader	#vertexShaderLoader, :, vertex, vertexProgram
+	f	Lnet/minecraft/client/shader/ShaderLoader;	field_148012_t	fragmentShaderLoader	#fragmentShaderLoader, :, fragment, fragmentProgram
+	m	(Lnet/minecraft/client/resources/IResourceManager;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45087_1_	resourceManager	#resourceManager, :, manager, resourceManager
+		p	2	p_i45087_2_	programName	#programName, :, name, :
+	m	()V	func_147988_a	deleteShader	#deleteShader, :, close, :
+	m	(Lcom/google/gson/JsonElement;)V	func_147996_a	parseSampler	#parseSampler, :, addSampler, parseSamplerNode
+		p	1	p_147996_1_	element	#element, :, jsonElement, json
+	m	(Ljava/lang/String;)Lnet/minecraft/client/shader/ShaderUniform;	func_147991_a	getShaderUniform	#getShaderUniform, :, getUniformByName, getUniform
+		c	gets a shader uniform for the name given. null if not found.
+		p	1	p_147991_1_	name	#name, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	func_147992_a	addSamplerTexture	#addSamplerTexture, :, bindSampler, setSampler
+		c	adds a shader sampler texture. if it already exists, replaces it.
+		p	1	p_147992_1_	name	#name, :, samplerName, name
+		p	2	p_147992_2_	samplerTexture	#samplerTexture, :, object, sampler
+	m	()V	func_147993_b	endShader	#endShader, :, disable, clear
+	m	(Lcom/google/gson/JsonElement;)V	func_147987_b	parseUniform	#parseUniform, :, addUniform, parseUniformNode
+		p	1	p_147987_1_	element	#element, :, jsonElement, json
+	m	(Ljava/lang/String;)Lnet/minecraft/client/shader/ShaderUniform;	func_147984_b	getShaderUniformOrDefault	#getShaderUniformOrDefault, :, getUniformByNameOrDummy, safeGetUniform
+		c	gets a shader uniform for the name given. if not found, returns a default not-null value
+		p	1	p_147984_1_	name	#name, :, :, :
+	m	()V	func_147995_c	useShader	#useShader, :, enable, apply
+	m	()V	func_147985_d	markDirty	#markDirty, :, markUniformsDirty, markDirty
+	m	()Lnet/minecraft/client/shader/ShaderLoader;	func_147989_e	getVertexShaderLoader	#getVertexShaderLoader, :, getVsh, getVertexProgram
+	m	()Lnet/minecraft/client/shader/ShaderLoader;	func_147994_f	getFragmentShaderLoader	#getFragmentShaderLoader, :, getFsh, getFragmentProgram
+	m	()I	func_147986_h	getProgram	#getProgram, :, getProgramRef, getId
+	m	()V	func_147990_i	setupUniforms	#setupUniforms, :, finalizeUniformsAndSamplers, updateLocations
+		c	goes through the parsed uniforms and samplers and connects them to their GL counterparts.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

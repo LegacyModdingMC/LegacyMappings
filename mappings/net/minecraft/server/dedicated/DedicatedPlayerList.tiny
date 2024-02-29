@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/dedicated/DedicatedPlayerList	net/minecraft/server/dedicated/DedicatedPlayerList	
+	f	Lorg/apache/logging/log4j/Logger;	field_164439_d	LOGGER	#LOGGER, :, :, :
+	m	(Lnet/minecraft/server/dedicated/DedicatedServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1503_1_	server	#server, :, :, :
+	m	()V	func_72419_u	saveOpsList	#saveOpsList, :, saveOpList, saveOps
+	m	()V	func_72418_v	readWhiteList	#readWhiteList, :, loadWhitelist, :
+	m	()V	func_72421_w	saveWhiteList	#saveWhiteList, :, saveWhitelist, :
+	m	()V	func_152618_v	saveIpBanList	#saveIpBanList, :, :, ~
+	m	()V	func_152617_w	saveUserBanList	#saveUserBanList, :, :, ~
+	m	()V	func_152619_x	loadIpBanList	#loadIpBanList, :, :, ~
+	m	()V	func_152620_y	loadUserBansList	#loadUserBansList, :, loadUserBanList, ~
+	m	()V	func_72417_t	loadOpsList	#loadOpsList, :, loadOpList, loadOps
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

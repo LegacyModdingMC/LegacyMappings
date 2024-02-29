@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S19PacketEntityHeadLook	net/minecraft/network/play/server/S19PacketEntityHeadLook	
+	f	I	field_149384_a	entityId	#entityId, :, entity, id
+	f	B	field_149383_b	yaw	#yaw, :, headYaw, :
+	m	(Lnet/minecraft/entity/Entity;B)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45214_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_i45214_2_	headYaw	#~, ~, headYaw, :
+	m	(Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;	func_149381_a	getEntity	#getEntity, :, :, :
+		p	1	p_149381_1_	worldIn	#worldIn, :, world, :
+	m	()B	func_149380_c	getYaw	#getYaw, :, getHeadYaw, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

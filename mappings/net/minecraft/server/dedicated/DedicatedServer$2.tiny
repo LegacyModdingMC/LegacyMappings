@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/dedicated/DedicatedServer$2	net/minecraft/server/dedicated/DedicatedServer$2	
+	f	Lnet/minecraft/server/dedicated/DedicatedServer;	field_72428_a	server	#server, :, ~, server
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/dedicated/DedicatedServer;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45280_1_	message	#message, messageIn, ~, ~
+		p	2	p_i45280_2_	cause	#cause, :, ~, ~

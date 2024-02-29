@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EffectRenderer$2	net/minecraft/client/particle/EffectRenderer$2	
+	f	I	field_147898_a	id	#~, ~, ~, id
+	f	Lnet/minecraft/client/particle/EffectRenderer;	field_147897_b	particleManager	#~, ~, ~, particleManager
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/particle/EffectRenderer;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45069_1_	p_i45069_1_	#~, ~, ~, ~
+		p	2	p_i45069_2_	p_i45069_2_	#~, ~, ~, ~

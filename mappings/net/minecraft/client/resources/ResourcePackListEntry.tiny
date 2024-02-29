@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackListEntry	net/minecraft/client/resources/ResourcePackListEntry	
+	f	Lnet/minecraft/client/Minecraft;	field_148317_a	mc	#mc, :, client, minecraft
+	f	Lnet/minecraft/client/gui/GuiScreenResourcePacks;	field_148315_b	resourcePacksGUI	#resourcePacksGUI, :, screen, parent
+	f	Lnet/minecraft/util/ResourceLocation;	field_148316_c	RESOURCE_PACKS_TEXTURE	#RESOURCE_PACKS_TEXTURE, :, RESOURCE_PACKS_TEX, RESOURCE_PACKS_LOCATION
+	m	(Lnet/minecraft/client/gui/GuiScreenResourcePacks;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45051_1_	resourcePacksGUIIn	#resourcePacksGUIIn, :, screen, parent
+	m	()Ljava/lang/String;	func_148311_a	getResourcePackDescription	#getResourcePackDescription, :, getDescription, :
+	m	()Ljava/lang/String;	func_148312_b	getResourcePackName	#getResourcePackName, :, getName, :
+	m	()V	func_148313_c	bindResourcePackIcon	#bindResourcePackIcon, :, bindIcon, :
+	m	()Z	func_148310_d	showHoverOverlay	#showHoverOverlay, :, isVisible, canMove
+	m	()Z	func_148309_e	canMoveRight	#canMoveRight, :, isNotSelected, canMoveRight
+	m	()Z	func_148308_f	canMoveLeft	#canMoveLeft, :, isSelected, canMoveLeft
+	m	()Z	func_148314_g	canMoveUp	#canMoveUp, :, canSortUp, canMoveUp
+	m	()Z	func_148307_h	canMoveDown	#canMoveDown, :, canSortDown, canMoveDown
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

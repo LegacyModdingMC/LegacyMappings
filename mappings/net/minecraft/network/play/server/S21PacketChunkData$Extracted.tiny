@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S21PacketChunkData$Extracted	net/minecraft/network/play/server/S21PacketChunkData$Extracted	
+	f	[B	field_150282_a	data	#data, :, ~, bytes
+	f	I	field_150280_b	dataSize	#dataSize, :, ~, sectionsWithData
+	f	I	field_150281_c	sectionsWithBlockIdsUpper	#~, ~, ~, sectionsWithBlockIdsUpper
+	m	()V	<init>	<init>	#~, ~, ~, ~

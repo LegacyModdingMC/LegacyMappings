@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityLeashKnot	net/minecraft/entity/EntityLeashKnot	
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/entity/EntityLeashKnot;	func_110129_a	attatch	#~, ~, ~, attatch
+		p	0	p_110129_0_	world	#~, ~, ~, world
+		p	1	p_110129_1_	x	#~, ~, ~, x
+		p	2	p_110129_2_	y	#~, ~, ~, y
+		p	3	p_110129_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/entity/EntityLeashKnot;	func_110130_b	getKnotForBlock	#getKnotForBlock, :, ~, getOrCreate
+		p	0	p_110130_0_	world	#~, ~, ~, world
+		p	1	p_110130_1_	x	#~, ~, ~, x
+		p	2	p_110130_2_	y	#~, ~, ~, y
+		p	3	p_110130_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1593_1_	world	#~, ~, ~, world
+		p	2	p_i1593_2_	x	#~, ~, ~, x
+		p	3	p_i1593_3_	y	#~, ~, ~, y
+		p	4	p_i1593_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1592_1_	worldIn	#worldIn, :, ~, ~

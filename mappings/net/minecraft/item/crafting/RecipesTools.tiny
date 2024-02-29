@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/RecipesTools	net/minecraft/item/crafting/RecipesTools	
+	f	[[Ljava/lang/String;	field_77588_a	recipePatterns	#recipePatterns, :, pattern, patterns
+	f	[[Ljava/lang/Object;	field_77587_b	recipeItems	#recipeItems, :, items, recipes
+	m	(Lnet/minecraft/item/crafting/CraftingManager;)V	func_77586_a	addRecipes	#addRecipes, :, register, :
+		c	Adds the tool recipes to the CraftingManager.
+		p	1	p_77586_1_	manager	#manager, :, recipes, manager
+	m	()V	<init>	<init>	#~, ~, ~, ~

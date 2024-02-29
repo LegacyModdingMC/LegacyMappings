@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ScaledResolution	net/minecraft/client/gui/ScaledResolution	
+	f	I	field_78333_a	scaledWidth	#scaledWidth, :, width, :
+	f	I	field_78331_b	scaledHeight	#scaledHeight, :, height, :
+	f	D	field_78332_c	scaledWidthD	#scaledWidthD, :, scaledWidth, :
+	f	D	field_78329_d	scaledHeightD	#scaledHeightD, :, scaledHeight, :
+	f	I	field_78330_e	scaleFactor	#scaleFactor, :, :, scale
+	m	()I	func_78326_a	getScaledWidth	#getScaledWidth, :, getWidth, :
+	m	()I	func_78328_b	getScaledHeight	#getScaledHeight, :, getHeight, :
+	m	()D	func_78327_c	getScaledWidth_double	#getScaledWidth_double, :, getScaledWidth, :
+	m	()D	func_78324_d	getScaledHeight_double	#getScaledHeight_double, :, getScaledHeight, :
+	m	()I	func_78325_e	getScaleFactor	#getScaleFactor, :, :, getScale
+	m	(Lnet/minecraft/client/Minecraft;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1094_1_	player	#player, :, ~, minecraft
+		p	2	p_i1094_2_	width	#~, ~, ~, width
+		p	3	p_i1094_3_	height	#~, ~, ~, height

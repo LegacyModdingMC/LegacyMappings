@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenMesa	net/minecraft/world/biome/BiomeGenMesa	
+	f	[B	field_150621_aC	clayBands	#clayBands, :, ~, clayLayers
+	f	J	field_150622_aD	worldSeed	#worldSeed, :, seed, :
+	f	Lnet/minecraft/world/gen/NoiseGeneratorPerlin;	field_150623_aE	pillarNoise	#pillarNoise, :, heightCutoffNoise, clayPillarNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorPerlin;	field_150624_aF	pillarRoofNoise	#pillarRoofNoise, :, heightNoise, claySurfaceNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorPerlin;	field_150625_aG	clayBandsOffsetNoise	#clayBandsOffsetNoise, :, layerNoise, clayOffsetNoise
+	f	Z	field_150626_aH	brycePillars	#brycePillars, :, ~, mutated
+	f	Z	field_150620_aI	hasForest	#hasForest, :, ~, hasTrees
+	m	(IZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45380_1_	id	#id, :, :, :
+		p	2	p_i45380_2_	mutated	#~, ~, ~, mutated
+		p	3	p_i45380_3_	hasTrees	#~, ~, ~, hasTrees
+	m	(J)V	func_150619_a	generateBands	#generateBands, :, initLayerBlocks, placeClayLayers
+		p	1	p_150619_1_	seed	#~, ~, seed, :
+	m	(III)B	func_150618_d	getClayLayer	#~, ~, ~, getClayLayer
+		p	1	p_150618_1_	x	#~, ~, ~, x
+		p	2	p_150618_2_	y	#~, ~, ~, y
+		p	3	p_150618_3_	z	#~, ~, ~, z

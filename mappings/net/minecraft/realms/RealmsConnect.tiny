@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsConnect	net/minecraft/realms/RealmsConnect	
+	f	Lorg/apache/logging/log4j/Logger;	LOGGER	LOGGER	#~, ~, ~, ~
+	f	Z	aborted	aborted	#~, ~, ~, ~
+	f	Lnet/minecraft/network/NetworkManager;	connection	connection	#~, ~, ~, ~
+	f	Lnet/minecraft/realms/RealmsScreen;	onlineScreen	onlineScreen	#~, ~, ~, ~
+	m	()V	abort	abort	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsConnect;)Z	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsConnect;)Lnet/minecraft/network/NetworkManager;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsConnect;Lnet/minecraft/network/NetworkManager;)Lnet/minecraft/network/NetworkManager;	access$102	access$102	#~, ~, ~, ~
+		p	0	p_access$102_0_	p_access$102_0_	#~, ~, ~, ~
+		p	1	p_access$102_1_	p_access$102_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsConnect;)Lnet/minecraft/realms/RealmsScreen;	access$200	access$200	#~, ~, ~, ~
+		p	0	p_access$200_0_	p_access$200_0_	#~, ~, ~, ~
+	m	()Lorg/apache/logging/log4j/Logger;	access$300	access$300	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	connect	connect	#~, ~, ~, ~
+		p	1	p_connect_1_	p_connect_1_	#~, ~, ~, ~
+		p	2	p_connect_2_	p_connect_2_	#~, ~, ~, ~
+	m	()V	tick	tick	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1079_1_	onlineScreenIn	#onlineScreenIn, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

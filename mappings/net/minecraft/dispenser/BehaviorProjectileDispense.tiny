@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/BehaviorProjectileDispense	net/minecraft/dispenser/BehaviorProjectileDispense	
+	m	()F	func_82498_a	getProjectileInaccuracy	#getProjectileInaccuracy, :, getVariation, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/dispenser/IPosition;)Lnet/minecraft/entity/IProjectile;	func_82499_a	getProjectileEntity	#getProjectileEntity, :, getProjectile, createProjectile
+		c	Return the projectile entity spawned by this dispense behavior.
+		p	1	p_82499_1_	worldIn	#worldIn, :, world, :
+		p	2	p_82499_2_	position	#position, :, pos, :
+	m	()F	func_82500_b	getProjectileVelocity	#getProjectileVelocity, :, getForce, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

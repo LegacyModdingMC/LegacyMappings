@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/IEntitySelector$1	net/minecraft/command/IEntitySelector$1	
+	m	()V	<init>	<init>	#~, ~, ~, ~

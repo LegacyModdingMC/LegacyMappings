@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderCaveSpider	net/minecraft/client/renderer/entity/RenderCaveSpider	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110893_a	caveSpiderTextures	#caveSpiderTextures, CAVE_SPIDER_TEXTURES, TEXTURE, CAVE_SPIDER_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

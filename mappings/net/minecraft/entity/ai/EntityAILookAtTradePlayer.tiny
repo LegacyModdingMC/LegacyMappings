@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAILookAtTradePlayer	net/minecraft/entity/ai/EntityAILookAtTradePlayer	
+	f	Lnet/minecraft/entity/passive/EntityVillager;	field_75335_b	theMerchant	#theMerchant, villager, :, :
+	m	(Lnet/minecraft/entity/passive/EntityVillager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1633_1_	theMerchantIn	#theMerchantIn, villagerIn, villager, :

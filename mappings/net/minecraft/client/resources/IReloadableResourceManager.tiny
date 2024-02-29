@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/IReloadableResourceManager	net/minecraft/client/resources/IReloadableResourceManager	
+	m	(Lnet/minecraft/client/resources/IResourceManagerReloadListener;)V	func_110542_a	registerReloadListener	#registerReloadListener, :, registerListener, addListener
+		c	Registers a listener to be invoked every time the resource manager reloads. NOTE: The listener is immediately invoked once when it is registered.
+		p	1	p_110542_1_	reloadListener	#reloadListener, :, listener, :
+	m	(Ljava/util/List;)V	func_110541_a	reloadResources	#reloadResources, :, reload, :
+		c	Releases all current resource packs, loads the given list, then triggers all listeners
+		p	1	p_110541_1_	resourcesPacksList	#resourcesPacksList, :, resourcePacks, packs

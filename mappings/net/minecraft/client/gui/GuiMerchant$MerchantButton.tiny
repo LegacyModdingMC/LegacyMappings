@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiMerchant$MerchantButton	net/minecraft/client/gui/GuiMerchant$MerchantButton	
+	f	Z	field_146157_o	forward	#forward, :, ~, hasHeight
+	m	(IIIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1095_1_	buttonID	#buttonID, :, ~, x
+		p	2	p_i1095_2_	x	#x, :, ~, y
+		p	3	p_i1095_3_	y	#y, :, ~, id
+		p	4	p_i1095_4_	hasHeight	#~, ~, ~, hasHeight

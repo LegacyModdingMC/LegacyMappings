@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackRepository$1	net/minecraft/client/resources/ResourcePackRepository$1	
+	m	(Ljava/io/File;)Z	accept	accept	#~, ~, ~, ~
+		p	1	p_accept_1_	file	#~, ~, ~, file
+	m	()V	<init>	<init>	#~, ~, ~, ~

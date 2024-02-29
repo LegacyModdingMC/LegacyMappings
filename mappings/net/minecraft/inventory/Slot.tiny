@@ -1,0 +1,59 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/Slot	net/minecraft/inventory/Slot	
+	f	I	field_75225_a	slotIndex	#slotIndex, :, invSlot, slot
+		c	The index of the slot in the inventory.
+	f	Lnet/minecraft/inventory/IInventory;	field_75224_c	inventory	#inventory, :, :, :
+		c	The inventory we want to extract a slot from.
+	f	I	field_75222_d	slotNumber	#slotNumber, :, id, :
+		c	the id of the slot(also the index in the inventory arraylist)
+	f	I	field_75223_e	xDisplayPosition	#xDisplayPosition, xPos, x, :
+		c	display position of the inventory slot on the screen x axis
+	f	I	field_75221_f	yDisplayPosition	#yDisplayPosition, yPos, y, :
+		c	display position of the inventory slot on the screen y axis
+	m	(Lnet/minecraft/inventory/IInventory;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1824_1_	inventoryIn	#inventoryIn, :, inventory, :
+		p	2	p_i1824_2_	index	#index, :, invSlot, slot
+		p	3	p_i1824_3_	xPosition	#xPosition, :, x, :
+		p	4	p_i1824_4_	yPosition	#yPosition, :, y, :
+	m	()I	func_75219_a	getSlotStackLimit	#getSlotStackLimit, :, getMaxStackAmount, getMaxStackSize
+		c	Returns the maximum stack size for a given slot (usually the same as getInventoryStackLimit(), but 1 in the case of armor slots)
+	m	(I)Lnet/minecraft/item/ItemStack;	func_75209_a	decrStackSize	#decrStackSize, :, takeStack, removeStack
+		c	Decrease the size of the stack in slot (first int arg) by the amount of the second int arg. Returns the new stack.
+		p	1	p_75209_1_	amount	#amount, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_75214_a	isItemValid	#isItemValid, :, canInsert, canSetStack
+		c	Check if the stack is a valid item for this slot. Always true beside for the armor slots.
+		p	1	p_75214_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;I)V	func_75210_a	onCrafting	#onCrafting, :, onCrafted, onQuickMoved
+		c	the itemStack passed in is the output - ie, iron ingots, and pickaxes, not ore and wood. Typically increases an internal count then calls onCrafting(item).
+		p	1	p_75210_1_	stack	#stack, :, :, :
+		p	2	p_75210_2_	amount	#amount, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V	func_75220_a	onSlotChange	#onSlotChange, :, onStackChanged, onQuickMoved
+		c	if par2 has more items than par1, onCrafting(item,countIncrease) is called
+		p	1	p_75220_1_	oldStack	#~, ~, originalItem, oldStack
+		p	2	p_75220_2_	newStack	#~, ~, newItem, newStack
+	m	(Lnet/minecraft/inventory/IInventory;I)Z	func_75217_a	isSlotInInventory	#isSlotInInventory, isHere, equals, :
+		c	returns true if this slot is in par2 of par1
+		p	1	p_75217_1_	inv	#inv, :, inventory, :
+		p	2	p_75217_2_	slotIn	#slotIn, :, slot, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_82869_a	canTakeStack	#canTakeStack, :, canTakeItems, canPickUp
+		c	Return whether this slot's stack can be taken from this slot.
+		p	1	p_82869_1_	playerIn	#playerIn, :, playerEntity, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)V	func_82870_a	onPickupFromSlot	#onPickupFromSlot, :, onTakeItem, onStackRemovedByPlayer
+		p	1	p_82870_1_	playerIn	#playerIn, :, player, :
+		p	2	p_82870_2_	stack	#stack, :, :, :
+	m	()Z	func_111238_b	canBeHovered	#canBeHovered, isEnabled, doDrawHoveringEffect, isActive
+		c	Actualy only call when we want to render the white square effect over the slots. Return always True, except for the armor slot of the Donkey/Mule (we can't interact with the Undead and Skeleton horses)
+	m	(Lnet/minecraft/item/ItemStack;)V	func_75208_c	onCrafting	#onCrafting, :, onCrafted, checkAchievements
+		c	the itemStack passed in is the output - ie, iron ingots, and pickaxes, not ore and wood.
+		p	1	p_75208_1_	stack	#stack, :, :, :
+	m	()Lnet/minecraft/util/IIcon;	func_75212_b	getBackgroundIconIndex	#getBackgroundIconIndex, :, ~, getTexture
+		c	Returns the icon index on items.png that is used as background image of the slot.
+	m	(Lnet/minecraft/item/ItemStack;)V	func_75215_d	putStack	#putStack, :, setStack, :
+		c	Helper method to put a stack in the slot.
+		p	1	p_75215_1_	stack	#stack, :, :, :
+	m	()Lnet/minecraft/item/ItemStack;	func_75211_c	getStack	#getStack, :, :, :
+		c	Helper fnct to get the stack in the slot.
+	m	()Z	func_75216_d	getHasStack	#getHasStack, :, hasStack, :
+		c	Returns if this slot contains a stack.
+	m	()V	func_75218_e	onSlotChanged	#onSlotChanged, :, markDirty, :
+		c	Called when the stack in a Slot changes

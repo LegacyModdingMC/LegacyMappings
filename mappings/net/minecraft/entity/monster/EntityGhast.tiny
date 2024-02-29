@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityGhast	net/minecraft/entity/monster/EntityGhast	
+	f	D	field_70796_c	waypointY	#waypointY, :, ~, wanderTargetY
+	f	D	field_70793_d	waypointZ	#waypointZ, :, ~, wanderTargetZ
+	f	I	field_70794_e	prevAttackCounter	#prevAttackCounter, :, ~, attackCooldown
+	f	I	field_70791_f	attackCounter	#attackCounter, :, ~, shootingCooldown
+	f	Lnet/minecraft/entity/Entity;	field_70792_g	targetedEntity	#targetedEntity, :, ~, target
+	f	I	field_70798_h	aggroCooldown	#aggroCooldown, :, ~, aggressiveCooldown
+		c	Cooldown time between target loss and new target aquirement.
+	f	I	field_92014_j	explosionStrength	#explosionStrength, :, fireballStrength, :
+		c	The explosion radius of spawned fireballs.
+	f	I	field_70797_a	courseChangeCooldown	#courseChangeCooldown, :, ~, collisionCheckCooldown
+	f	D	field_70795_b	waypointX	#waypointX, :, ~, wanderTargetX
+	m	(DDDD)Z	func_70790_a	isCourseTraversable	#isCourseTraversable, :, ~, willCollide
+		c	True if the ghast has an unobstructed line of travel to the waypoint.
+		p	1	p_70790_1_	x	#~, ~, ~, x
+		p	3	p_70790_3_	y	#~, ~, ~, y
+		p	5	p_70790_5_	z	#~, ~, ~, z
+		p	7	p_70790_7_	steps	#~, ~, ~, steps
+	m	()Z	func_110182_bF	isAttacking	#isAttacking, :, isShooting, isCharging
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1735_1_	worldIn	#worldIn, :, ~, ~

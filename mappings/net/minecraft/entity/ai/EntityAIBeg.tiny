@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIBeg	net/minecraft/entity/ai/EntityAIBeg	
+	f	Lnet/minecraft/entity/passive/EntityWolf;	field_75387_a	theWolf	#theWolf, wolf, :, wolfEntity
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_75385_b	thePlayer	#thePlayer, player, begFrom, playerEntity
+	f	Lnet/minecraft/world/World;	field_75386_c	worldObject	#worldObject, world, :, :
+	f	F	field_75383_d	minPlayerDistance	#minPlayerDistance, :, begDistance, :
+	f	I	field_75384_e	timeoutCounter	#timeoutCounter, :, timer, :
+	m	(Lnet/minecraft/entity/passive/EntityWolf;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1617_1_	wolf	#wolf, :, :, ~
+		p	2	p_i1617_2_	minDistance	#minDistance, :, begDistance, ~
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_75382_a	hasPlayerGotBoneInHand	#hasPlayerGotBoneInHand, hasTemptationItemInHand, isAttractive, :
+		c	Gets if the Player has the Bone in the hand.
+		p	1	p_75382_1_	player	#player, :, :, :

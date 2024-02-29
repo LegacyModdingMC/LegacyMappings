@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserList	net/minecraft/server/management/UserList	
+	f	Lorg/apache/logging/log4j/Logger;	field_152693_a	logger	#logger, LOGGER, :, :
+	f	Lcom/google/gson/Gson;	field_152694_b	gson	#gson, :, GSON, gson
+	f	Ljava/io/File;	field_152695_c	saveFile	#saveFile, :, file, :
+	f	Ljava/util/Map;	field_152696_d	values	#values, :, map, users
+	f	Z	field_152697_e	lanServer	#lanServer, :, enabled, :
+	f	Ljava/lang/reflect/ParameterizedType;	field_152698_f	saveFileFormat	#saveFileFormat, USER_LIST_ENTRY_TYPE, ~, ENTRY_TYPE
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1144_1_	saveFile	#saveFile, :, file, :
+	m	()[Ljava/lang/String;	func_152685_a	getKeys	#getKeys, :, getNames, :
+	m	(Lcom/google/gson/JsonObject;)Lnet/minecraft/server/management/UserListEntry;	func_152682_a	createEntry	#createEntry, :, fromJson, deserialize
+		p	1	p_152682_1_	entryData	#entryData, :, jsonObject, json
+	m	(Ljava/lang/Object;)Ljava/lang/String;	func_152681_a	getObjectKey	#getObjectKey, :, toString, getKey
+		c	Gets the key value for the given object
+		p	1	p_152681_1_	obj	#obj, :, profile, user
+	m	(Lnet/minecraft/server/management/UserListEntry;)V	func_152687_a	addEntry	#addEntry, :, add, :
+		c	Adds an entry to the list
+		p	1	p_152687_1_	entry	#entry, :, configEntry, entry
+	m	(Z)V	func_152686_a	setLanServer	#setLanServer, :, setEnabled, :
+		p	1	p_152686_1_	state	#state, :, enabled, :
+	m	()Z	func_152689_b	isLanServer	#isLanServer, :, isEnabled, :
+	m	(Ljava/lang/Object;)Lnet/minecraft/server/management/UserListEntry;	func_152683_b	getEntry	#getEntry, :, get, :
+		p	1	p_152683_1_	obj	#obj, :, object, user
+	m	()Ljava/io/File;	func_152691_c	getSaveFile	#getSaveFile, :, getFile, :
+	m	(Ljava/lang/Object;)V	func_152684_c	removeEntry	#removeEntry, :, remove, :
+		p	1	p_152684_1_	entry	#entry, :, object, user
+	m	()Z	func_152690_d	hasEntries	#hasEntries, isEmpty, :, :
+	m	(Ljava/lang/Object;)Z	func_152692_d	hasEntry	#hasEntry, :, contains, :
+		p	1	p_152692_1_	entry	#entry, :, ~, user
+	m	()Ljava/util/Map;	func_152688_e	getValues	#getValues, :, values, getEntries
+	m	()V	func_152678_f	writeChanges	#writeChanges, :, save, :
+	m	()V	func_152679_g	readSavedFile	#readSavedFile, :, load, :
+	m	()V	func_152680_h	removeExpired	#removeExpired, :, removeInvalidEntries, removeExpiredEntries
+		c	Removes expired bans from the list. Never actually does anything since UserListEntry#hasBanExpired always returns false. Appears to be an effort by Mojang to add temp ban functionality. (1.7.10)
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

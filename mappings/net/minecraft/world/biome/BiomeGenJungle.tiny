@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenJungle	net/minecraft/world/biome/BiomeGenJungle	
+	f	Z	field_150614_aC	isEdge	#isEdge, :, ~, edge
+	m	(IZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45379_1_	id	#id, :, :, :
+		p	2	p_i45379_2_	edge	#~, ~, ~, edge

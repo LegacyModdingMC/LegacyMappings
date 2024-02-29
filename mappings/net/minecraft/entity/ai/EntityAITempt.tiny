@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAITempt	net/minecraft/entity/ai/EntityAITempt	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75284_a	temptedEntity	#temptedEntity, :, mob, entity
+		c	The entity using this AI that is tempted by the player.
+	f	D	field_75282_b	speed	#speed, :, :, :
+	f	D	field_75283_c	targetX	#targetX, :, lastPlayerX, targetX
+		c	X position of player tempting this mob
+	f	D	field_75280_d	targetY	#targetY, :, lastPlayerY, targetY
+		c	Y position of player tempting this mob
+	f	D	field_75281_e	targetZ	#targetZ, :, lastPlayerZ, targetZ
+		c	Z position of player tempting this mob
+	f	D	field_75278_f	pitch	#pitch, :, lastPlayerPitch, targetPitch
+		c	Tempting player's pitch
+	f	D	field_75279_g	yaw	#yaw, :, lastPlayerYaw, targetYaw
+		c	Tempting player's yaw
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_75289_h	temptingPlayer	#temptingPlayer, :, closestPlayer, player
+		c	The player that is tempting the entity that is using this AI.
+	f	I	field_75290_i	delayTemptCounter	#delayTemptCounter, :, cooldown, delay
+		c	A counter that is decremented each time the shouldExecute method is called. The shouldExecute method will always return false if delayTemptCounter is greater than 0.
+	f	Z	field_75287_j	isRunning	#isRunning, :, active, :
+		c	True if this EntityAITempt task is running
+	f	Lnet/minecraft/item/Item;	field_151484_k	temptItem	#temptItem, :, food, temptingItem
+	f	Z	field_75285_l	scaredByPlayerMovement	#scaredByPlayerMovement, :, canBeScared, scaredByMovement
+		c	Whether the entity using this AI will be scared by the tempter's sudden movement.
+	f	Z	field_75286_m	avoidWater	#avoidWater, :, ~, inWater
+	m	(Lnet/minecraft/entity/EntityCreature;DLnet/minecraft/item/Item;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45316_1_	temptedEntityIn	#temptedEntityIn, :, mob, entity
+		p	2	p_i45316_2_	speedIn	#speedIn, :, speed, :
+		p	4	p_i45316_4_	temptItemIn	#temptItemIn, :, food, temptingItem
+		p	5	p_i45316_5_	scaredByPlayerMovementIn	#scaredByPlayerMovementIn, :, canBeScared, scaredByMovement
+	m	()Z	func_75277_f	isRunning	#isRunning, :, isActive, :
+		c	@see #isRunning

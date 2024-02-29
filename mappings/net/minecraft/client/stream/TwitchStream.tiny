@@ -1,0 +1,47 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/TwitchStream	net/minecraft/client/stream/TwitchStream	
+	f	Lorg/apache/logging/log4j/Marker;	field_152949_a	STREAM_MARKER	#STREAM_MARKER, :, streamMarker, MARKER
+	f	Lorg/apache/logging/log4j/Logger;	field_152950_b	LOGGER	#LOGGER, :, :, :
+	f	Lnet/minecraft/client/stream/BroadcastController;	field_152951_c	broadcastController	#broadcastController, :, streamController, broadcastController
+	f	Lnet/minecraft/client/stream/ChatController;	field_152952_d	chatController	#chatController, :, twitch, chat
+	f	Lnet/minecraft/client/Minecraft;	field_152953_e	mc	#mc, :, client, minecraft
+		c	the minecraft instance
+	f	Lnet/minecraft/util/IChatComponent;	field_152954_f	twitchComponent	#twitchComponent, :, twitchText, title
+	f	Ljava/util/Map;	field_152955_g	chatUserInfo	#~, ~, twitchChat, chatUserInfo
+	f	Lnet/minecraft/client/shader/Framebuffer;	field_152956_h	framebuffer	#framebuffer, :, :, renderTarget
+	f	Z	field_152957_i	streamSendMetadata	#~, ~, streamSendMetadata, ~
+	f	I	field_152958_j	targetFPS	#targetFPS, :, targetFps, ~
+		c	stream's target fps
+	f	J	field_152959_k	field_152959_k	#~, ~, ~, ~
+	f	Z	field_152960_l	streamFinished	#~, ~, streamFinished, ~
+	f	Z	field_152961_m	loggedIn	#loggedIn, :, :, ~
+	f	Z	field_152962_n	paused	#~, ~, paused, :
+	f	Z	field_152963_o	micEnabled	#~, ~, micEnabled, ~
+	f	Lnet/minecraft/client/stream/IStream$AuthFailureReason;	field_152964_p	authFailureReason	#authFailureReason, :, ~, errorReason
+	f	Z	field_152965_q	initialized	#~, ~, initialized, ~
+	m	()V	func_152942_I	func_152942_I	#~, ~, ~, ~
+	m	()Lorg/apache/logging/log4j/Logger;	access$000	access$000	#~, ~, ~, ~
+	m	(F)I	func_152948_a	formatStreamFps	#formatStreamFps, :, setStreamFps, ~
+		p	0	p_152948_0_	p_152948_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/stream/TwitchStream;)Lnet/minecraft/client/stream/BroadcastController;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/stream/TwitchStream;Lnet/minecraft/client/stream/IStream$AuthFailureReason;)Lnet/minecraft/client/stream/IStream$AuthFailureReason;	access$302	access$302	#~, ~, ~, ~
+		p	0	p_access$302_0_	p_access$302_0_	#~, ~, ~, ~
+		p	1	p_access$302_1_	p_access$302_1_	#~, ~, ~, ~
+	m	(Ljava/lang/String;Ltv/twitch/chat/ChatMessage;)V	func_152939_a	func_152939_a	#~, ~, ~, ~
+		p	1	p_152939_1_	p_152939_1_	#~, ~, ~, ~
+		p	2	p_152939_2_	p_152939_2_	#~, ~, ~, ~
+	m	(Ljava/util/HashSet;Ljava/util/HashSet;I)Z	func_152940_a	func_152940_a	#~, ~, ~, ~
+		p	1	p_152940_1_	p_152940_1_	#~, ~, ~, ~
+		p	2	p_152940_2_	p_152940_2_	#~, ~, ~, ~
+		p	3	p_152940_3_	p_152940_3_	#~, ~, ~, ~
+	m	(F)I	func_152946_b	formatStreamKbps	#formatStreamKbps, :, setStreamBitrate, ~
+		p	0	p_152946_0_	p_152946_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/stream/TwitchStream;)Lnet/minecraft/client/stream/ChatController;	access$200	access$200	#~, ~, ~, ~
+		p	0	p_access$200_0_	p_access$200_0_	#~, ~, ~, ~
+	m	(F)F	func_152947_c	formatStreamBps	#formatStreamBps, :, setStreamBytesPerPixel, ~
+		p	0	p_152947_0_	p_152947_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1012_1_	mcIn	#mcIn, :, ~, minecraft
+		p	2	p_i1012_2_	p_i1012_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

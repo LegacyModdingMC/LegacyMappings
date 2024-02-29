@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelGhast	net/minecraft/client/model/ModelGhast	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78128_a	body	#body, :, :, :
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78127_b	tentacles	#tentacles, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

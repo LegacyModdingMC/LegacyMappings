@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/ImageBufferDownload	net/minecraft/client/renderer/ImageBufferDownload	
+	f	[I	field_78438_a	imageData	#imageData, :, data, :
+	f	I	field_78436_b	imageWidth	#imageWidth, :, width, :
+	f	I	field_78437_c	imageHeight	#imageHeight, :, height, :
+	m	(IIII)V	func_78434_a	setAreaTransparent	#setAreaTransparent, :, setTransperant, setTransparent
+		c	Makes the given area of the image transparent if it was previously completely opaque (used to remove the outer layer of a skin around the head if it was saved all opaque; this would be redundant so it's assumed that the skin maker is just using an image editor without an alpha channel)
+		p	1	p_78434_1_	uMin	#~, ~, uMin, :
+		p	2	p_78434_2_	vMin	#~, ~, vMin, :
+		p	3	p_78434_3_	uMax	#~, ~, uMax, :
+		p	4	p_78434_4_	vMax	#~, ~, vMax, :
+	m	(IIII)V	func_78433_b	setAreaOpaque	#setAreaOpaque, :, setOpaque, :
+		c	Makes the given area of the image opaque
+		p	1	p_78433_1_	x	#x, :, uMin, :
+		p	2	p_78433_2_	y	#y, :, vMin, :
+		p	3	p_78433_3_	width	#width, :, uMax, :
+		p	4	p_78433_4_	height	#height, :, vMax, :
+	m	(IIII)Z	func_78435_c	hasTransparency	#hasTransparency, :, hasTransperancy, :
+		c	Returns true if the given area of the image contains transparent pixels
+		p	1	p_78435_1_	uMin	#~, ~, uMin, :
+		p	2	p_78435_2_	vMin	#~, ~, vMin, :
+		p	3	p_78435_3_	uMax	#~, ~, uMax, :
+		p	4	p_78435_4_	vMax	#~, ~, vMax, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

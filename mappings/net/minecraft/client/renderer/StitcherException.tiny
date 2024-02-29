@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/StitcherException	net/minecraft/client/renderer/StitcherException	
+	f	Lnet/minecraft/client/renderer/texture/Stitcher$Holder;	field_98149_a	holder	#holder, :, ~, stitchHolder
+	m	(Lnet/minecraft/client/renderer/texture/Stitcher$Holder;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2344_1_	holderIn	#holderIn, :, ~, stitchHolder
+		p	2	p_i2344_2_	message	#message, :, ~, reason

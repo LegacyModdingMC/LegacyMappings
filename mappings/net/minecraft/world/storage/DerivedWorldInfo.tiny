@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/DerivedWorldInfo	net/minecraft/world/storage/DerivedWorldInfo	
+	f	Lnet/minecraft/world/storage/WorldInfo;	field_76115_a	theWorldInfo	#theWorldInfo, delegate, levelProperties, properties
+		c	Instance of WorldInfo.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2145_1_	worldInfoIn	#worldInfoIn, :, ~, ~

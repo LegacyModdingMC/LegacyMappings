@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/CompressedStreamTools	net/minecraft/nbt/CompressedStreamTools	
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)[B	func_74798_a	compress	#compress, :, writeCompressed, write
+		p	0	p_74798_0_	nbt	#~, ~, nbt, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/DataOutput;)V	func_74800_a	write	#write, :, :, :
+		p	0	p_74800_0_	compound	#compound, :, nbt, :
+		p	1	p_74800_1_	output	#output, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/File;)V	func_74793_a	safeWrite	#safeWrite, :, :, writeSafely
+		p	0	p_74793_0_	compound	#compound, :, nbt, :
+		p	1	p_74793_1_	fileIn	#fileIn, :, file, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/OutputStream;)V	func_74799_a	writeCompressed	#writeCompressed, :, :, :
+		c	Write the compound, gzipped, to the outputstream.
+		p	0	p_74799_0_	compound	#compound, :, nbt, :
+		p	1	p_74799_1_	outputStream	#outputStream, :, stream, os
+	m	(Lnet/minecraft/nbt/NBTBase;Ljava/io/DataOutput;)V	func_150663_a	writeTag	#writeTag, :, write, :
+		p	0	p_150663_0_	tag	#tag, :, nbt, :
+		p	1	p_150663_1_	output	#output, :, :, :
+	m	(Ljava/io/DataInput;ILnet/minecraft/nbt/NBTSizeTracker;)Lnet/minecraft/nbt/NBTBase;	func_152455_a	read	#read, :, :, :
+		p	0	p_152455_0_	input	#input, :, :, :
+		p	1	p_152455_1_	depth	#depth, :, :, :
+		p	2	p_152455_2_	accounter	#accounter, :, tracker, limiter
+	m	(Ljava/io/DataInput;Lnet/minecraft/nbt/NBTSizeTracker;)Lnet/minecraft/nbt/NBTTagCompound;	func_152456_a	read	#read, :, :, :
+		c	Reads the given DataInput, constructs, and returns an NBTTagCompound with the data from the DataInput
+		p	0	p_152456_0_	input	#input, :, :, :
+		p	1	p_152456_1_	accounter	#accounter, :, trakcer, limiter
+	m	(Ljava/io/DataInputStream;)Lnet/minecraft/nbt/NBTTagCompound;	func_74794_a	read	#read, :, :, :
+		c	Reads from a CompressedStream.
+		p	0	p_74794_0_	inputStream	#inputStream, :, stream, is
+	m	(Ljava/io/File;)Lnet/minecraft/nbt/NBTTagCompound;	func_74797_a	read	#read, :, :, :
+		p	0	p_74797_0_	fileIn	#fileIn, :, file, :
+	m	(Ljava/io/File;Lnet/minecraft/nbt/NBTSizeTracker;)Lnet/minecraft/nbt/NBTTagCompound;	func_152458_a	readFromFile	#readFromFile, :, read, :
+		p	0	p_152458_0_	file	#~, ~, file, :
+		p	1	p_152458_1_	limiter	#~, ~, tracker, limiter
+	m	(Ljava/io/InputStream;)Lnet/minecraft/nbt/NBTTagCompound;	func_74796_a	readCompressed	#readCompressed, :, :, :
+		c	Load the gzipped compound from the inputstream.
+		p	0	p_74796_0_	is	#is, :, stream, is
+	m	([BLnet/minecraft/nbt/NBTSizeTracker;)Lnet/minecraft/nbt/NBTTagCompound;	func_152457_a	decompress	#decompress, :, readCompressed, read
+		p	0	p_152457_0_	bytes	#~, ~, bytes, :
+		p	1	p_152457_1_	limiter	#~, ~, tracker, limiter
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Ljava/io/File;)V	func_74795_b	write	#write, :, :, :
+		p	0	p_74795_0_	compound	#compound, :, nbt, :
+		p	1	p_74795_1_	fileIn	#fileIn, :, file, :

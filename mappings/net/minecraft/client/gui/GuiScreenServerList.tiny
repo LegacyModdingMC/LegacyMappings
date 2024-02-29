@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenServerList	net/minecraft/client/gui/GuiScreenServerList	
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146303_a	lastScreen	#lastScreen, :, parent, :
+	f	Lnet/minecraft/client/multiplayer/ServerData;	field_146301_f	serverData	#serverData, :, info, server
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146302_g	ipEdit	#ipEdit, :, serverField, :
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/multiplayer/ServerData;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1031_1_	lastScreenIn	#lastScreenIn, :, parent, :
+		p	2	p_i1031_2_	serverDataIn	#serverDataIn, :, info, server

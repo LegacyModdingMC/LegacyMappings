@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIPlay	net/minecraft/entity/ai/EntityAIPlay	
+	f	Lnet/minecraft/entity/passive/EntityVillager;	field_75262_a	villagerObj	#villagerObj, villager, :, :
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75260_b	targetVillager	#targetVillager, :, ~, target
+	f	D	field_75261_c	speed	#speed, :, :, :
+	f	I	field_75259_d	playTime	#playTime, :, counter, actionCountdown
+	m	(Lnet/minecraft/entity/passive/EntityVillager;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1646_1_	villagerObjIn	#villagerObjIn, villagerIn, villager, :
+		p	2	p_i1646_2_	speedIn	#speedIn, :, speed, :

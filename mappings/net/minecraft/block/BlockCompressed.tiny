@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCompressed	net/minecraft/block/BlockCompressed	
+	f	Lnet/minecraft/block/material/MapColor;	field_150202_a	color	#~, ~, ~, color
+	m	(Lnet/minecraft/block/material/MapColor;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45414_1_	color	#~, ~, ~, color

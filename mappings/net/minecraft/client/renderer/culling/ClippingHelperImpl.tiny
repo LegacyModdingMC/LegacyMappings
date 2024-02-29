@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/culling/ClippingHelperImpl	net/minecraft/client/renderer/culling/ClippingHelperImpl	
+	f	Lnet/minecraft/client/renderer/culling/ClippingHelperImpl;	field_78563_e	instance	#instance, :, :, INSTANCE
+	f	Ljava/nio/FloatBuffer;	field_78561_f	projectionMatrixBuffer	#projectionMatrixBuffer, :, projectionBuffer, :
+	f	Ljava/nio/FloatBuffer;	field_78562_g	modelviewMatrixBuffer	#modelviewMatrixBuffer, :, modelBuffer, :
+	f	Ljava/nio/FloatBuffer;	field_78564_h	floatBuffer16	#floatBuffer16, :, ~, clipBuffer
+	m	()Lnet/minecraft/client/renderer/culling/ClippingHelper;	func_78558_a	getInstance	#getInstance, :, :, :
+		c	Initialises the ClippingHelper object then returns an instance of it.
+	m	([[FI)V	func_78559_a	normalize	#normalize, :, ~, normalize
+		c	Normalize the frustum.
+		p	1	p_78559_1_	frustum	#~, ~, ~, frustum
+		p	2	p_78559_2_	face	#~, ~, ~, face
+	m	()V	func_78560_b	init	#init, :, start, compute
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

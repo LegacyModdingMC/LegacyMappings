@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiControls	net/minecraft/client/gui/GuiControls	
+	f	Ljava/lang/String;	field_146495_a	screenTitle	#screenTitle, :, title, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_146491_f	buttonId	#buttonId, :, selectedKeyBinding, :
+		c	The ID of the button that has been pressed.
+	f	J	field_152177_g	time	#time, :, :, ~
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_146492_g	optionsArr	#optionsArr, OPTIONS_ARR, ~, OPTIONS
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146496_h	parentScreen	#parentScreen, :, parent, :
+		c	A reference to the screen object that created this. Used for navigating between screens.
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146497_i	options	#options, :, :, :
+		c	Reference to the GameSettings object.
+	f	Lnet/minecraft/client/gui/GuiKeyBindingList;	field_146494_r	keyBindingList	#keyBindingList, :, keyBindingListWidget, controlsList
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146493_s	buttonReset	#buttonReset, :, resetButton, resetAllButton
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1027_1_	screen	#screen, :, parent, :
+		p	2	p_i1027_2_	settings	#settings, :, options, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

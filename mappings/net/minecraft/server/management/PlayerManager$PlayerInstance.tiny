@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerManager$PlayerInstance	net/minecraft/server/management/PlayerManager$PlayerInstance	
+	f	Lnet/minecraft/server/management/PlayerManager;	field_73265_a	thePlayerManager	#thePlayerManager, :, playerWorldManager, ~
+	f	Ljava/util/List;	field_73263_b	playersWatchingChunk	#playersWatchingChunk, :, players, :
+		c	the list of all players in this instance (chunk)
+	f	Lnet/minecraft/world/ChunkCoordIntPair;	field_73264_c	chunkLocation	#chunkLocation, chunkCoords, chunkPos, pos
+		c	note: this is final
+	f	[S	field_151254_d	locationOfBlockChange	#locationOfBlockChange, :, ~, dirtyBlocks
+	f	I	field_73262_e	numberOfTilesToUpdate	#numberOfTilesToUpdate, numBlocksToUpdate, ~, blocksChanged
+		c	the number of blocks that need to be updated next tick
+	f	I	field_73260_f	flagsYAreasToUpdate	#flagsYAreasToUpdate, :, ~, dirtySections
+		c	Integer field where each bit means to make update 16x16x16 division of chunk (from bottom).
+	f	J	field_111198_g	previousWorldTime	#previousWorldTime, :, ~, lastUpdateTime
+		c	time what is using when chunk InhabitedTime is being calculated
+	m	(Lnet/minecraft/server/management/PlayerManager;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1518_1_	mapIn	#mapIn, :, manager, ~
+		p	2	p_i1518_2_	chunkX	#chunkX, :, x, chunkX
+		p	3	p_i1518_3_	chunkZ	#chunkZ, :, z, chunkZ
+	m	()V	func_111194_a	processChunk	#processChunk, :, ~, updateInhabitedTime
+		c	This method currently only increases chunk inhabited time. Extension is possible in next versions
+	m	(III)V	func_151253_a	flagChunkForUpdate	#flagChunkForUpdate, :, ~, onBlockChanged
+		p	1	p_151253_1_	x	#x, :, ~, localX
+		p	2	p_151253_2_	y	#y, :, ~, y
+		p	3	p_151253_3_	z	#z, :, ~, localZ
+	m	(Lnet/minecraft/tileentity/TileEntity;)V	func_151252_a	sendTileToAllPlayersWatchingChunk	#sendTileToAllPlayersWatchingChunk, :, ~, sendBlockEntityUpdate
+		p	1	p_151252_1_	theTileEntity	#theTileEntity, :, ~, blockEntity
+	m	(Lnet/minecraft/world/chunk/Chunk;)V	func_111196_a	increaseInhabitedTime	#increaseInhabitedTime, :, ~, updateInhabitedTime
+		c	Increases chunk inhabited time every 8000 ticks
+		p	1	p_111196_1_	theChunk	#theChunk, :, ~, chunk
+	m	(Lnet/minecraft/network/Packet;)V	func_151251_a	sendToAllPlayersWatchingChunk	#sendToAllPlayersWatchingChunk, :, ~, sendPacket
+		p	1	p_151251_1_	thePacket	#thePacket, :, ~, packet
+	m	(Lnet/minecraft/server/management/PlayerManager$PlayerInstance;)Lnet/minecraft/world/ChunkCoordIntPair;	access$500	access$500	#~, ~, ~, getChunkpOS
+		p	0	p_access$500_0_	playerChunkManager	#~, ~, ~, playerChunkManager
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_73255_a	addPlayer	#addPlayer, :, :, :
+		p	1	p_73255_1_	player	#player, :, :, :
+	m	()V	func_73254_a	sendChunkUpdate	#sendChunkUpdate, onUpdate, ~, sendChanges
+	m	(Lnet/minecraft/server/management/PlayerManager$PlayerInstance;)Ljava/util/List;	access$600	access$600	#~, ~, ~, getPlayers
+		p	0	p_access$600_0_	playerChunkManager	#~, ~, ~, playerChunkManager
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_73252_b	removePlayer	#removePlayer, :, ~, removePlayer
+		p	1	p_73252_1_	player	#player, :, :, :

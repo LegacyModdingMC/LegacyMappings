@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C15PacketClientSettings	net/minecraft/network/play/client/C15PacketClientSettings	
+	f	Ljava/lang/String;	field_149530_a	lang	#lang, :, language, :
+	f	I	field_149528_b	view	#view, :, viewDistance, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	field_149529_c	chatVisibility	#chatVisibility, :, ~, chatVisibility
+	f	Z	field_149526_d	enableColors	#enableColors, :, chatColors, :
+	f	Lnet/minecraft/world/EnumDifficulty;	field_149527_e	difficulty	#difficulty, :, ~, difficulty
+	f	Z	field_149525_f	showCape	#showCape, :, ~, showCape
+	m	()Ljava/lang/String;	func_149524_c	getLang	#getLang, :, getLanguage, :
+	m	()I	func_149521_d	getView	#getView, getModelPartFlags, getPlayerModelBitMask, getViewDistance
+	m	()Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	func_149523_e	getChatVisibility	#getChatVisibility, :, ~, getChatVisibility
+	m	()Z	func_149520_f	isColorsEnabled	#isColorsEnabled, :, hasChatColors, getChatColors
+	m	()Lnet/minecraft/world/EnumDifficulty;	func_149518_g	getDifficulty	#getDifficulty, :, ~, getDifficulty
+	m	()Z	func_149519_h	isShowCape	#isShowCape, :, ~, getShowCape
+	m	(Ljava/lang/String;ILnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;ZLnet/minecraft/world/EnumDifficulty;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45243_1_	language	#~, ~, ~, language
+		p	2	p_i45243_2_	viewDistance	#~, ~, ~, viewDistance
+		p	3	p_i45243_3_	chatVisibility	#~, ~, ~, chatVisibility
+		p	4	p_i45243_4_	chatColors	#~, ~, ~, chatColors
+		p	5	p_i45243_5_	difficulty	#~, ~, ~, difficulty
+		p	6	p_i45243_6_	showCape	#~, ~, ~, showCape
+	m	()V	<init>	<init>	#~, ~, ~, ~

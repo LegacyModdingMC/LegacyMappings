@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockBrewingStand	net/minecraft/block/BlockBrewingStand	
+	f	Ljava/util/Random;	field_149961_a	rand	#rand, :, ~, random
+	f	Lnet/minecraft/util/IIcon;	field_149960_b	iconBrewingStandBase	#iconBrewingStandBase, :, ~, baseSprite
+	m	()Lnet/minecraft/util/IIcon;	func_149959_e	getIconBrewingStandBase	#getIconBrewingStandBase, :, ~, getBaseSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

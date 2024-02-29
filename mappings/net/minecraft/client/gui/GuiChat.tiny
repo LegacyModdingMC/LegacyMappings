@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiChat	net/minecraft/client/gui/GuiChat	
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146415_a	inputField	#inputField, :, chatField, :
+		c	Chat entry field
+	f	Ljava/util/Set;	field_152175_f	supportedProtocols	#supportedProtocols, :, ~, ~
+	f	Lorg/apache/logging/log4j/Logger;	field_146408_f	logger	#logger, LOGGER, :, :
+	f	Ljava/lang/String;	field_146410_g	historyBuffer	#historyBuffer, :, originalChatText, lastChatMessage
+	f	I	field_146416_h	sentHistoryCursor	#sentHistoryCursor, :, messageHistorySize, :
+		c	keeps position of which chat message you will select when you press up, (does not increase for duplicated messages sent immediately after each other)
+	f	Z	field_146417_i	playerNamesFound	#playerNamesFound, :, foundNames, reset
+	f	Z	field_146414_r	waitingOnAutocomplete	#waitingOnAutocomplete, :, waiting, completed
+	f	I	field_146413_s	autocompleteIndex	#autocompleteIndex, :, currentSelection, currentMessageId
+	f	Ljava/util/List;	field_146412_t	foundPlayerNames	#foundPlayerNames, :, suggestions, messageHistory
+	f	Ljava/net/URI;	field_146411_u	clickedURI	#clickedURI, :, ~, uri
+		c	used to pass around the URI to various dialogues and to the host os
+	f	Ljava/lang/String;	field_146409_v	defaultInputFieldText	#defaultInputFieldText, :, lastChatFieldText, initialChatText
+		c	is the text that appears when you press the chat key and the input box appears pre-filled
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1024_1_	defaultText	#defaultText, :, lastChatFieldText, initialChatText
+	m	()V	func_146404_p_	autocompletePlayerNames	#autocompletePlayerNames, :, showSuggestion, reset
+	m	(Ljava/lang/String;)V	func_146403_a	submitChatMessage	#submitChatMessage, :, ~, sendMessage
+		p	1	p_146403_1_	message	#~, ~, ~, message
+	m	(Ljava/lang/String;Ljava/lang/String;)V	func_146405_a	sendAutocompleteRequest	#sendAutocompleteRequest, :, requestAutocomplete, goThroughHistory
+		p	1	p_146405_1_	text	#~, ~, partialMessage, text
+		p	2	p_146405_2_	cursor	#~, ~, nextWord, cursor
+	m	(Ljava/net/URI;)V	func_146407_a	openLink	#openLink, :, ~, openLink
+		p	1	p_146407_1_	uri	#~, ~, ~, uri
+	m	([Ljava/lang/String;)V	func_146406_a	onAutocompleteResponse	#onAutocompleteResponse, :, setSuggestions, setMessageHistory
+		p	1	p_146406_1_	messages	#~, ~, suggestions, messages
+	m	(I)V	func_146402_a	getSentHistory	#getSentHistory, :, setChatFromHistory, goThroughHistory
+		c	input is relative and is applied directly to the sentHistoryCursor so -1 is the previous message, 1 is the next message from the current cursor position
+		p	1	p_146402_1_	msgPos	#msgPos, :, index, numberOfNewMessages
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

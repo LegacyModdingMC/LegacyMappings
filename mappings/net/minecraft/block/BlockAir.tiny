@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockAir	net/minecraft/block/BlockAir	
+	c	
+	m	()V	<init>	<init>	#~, ~, ~, ~

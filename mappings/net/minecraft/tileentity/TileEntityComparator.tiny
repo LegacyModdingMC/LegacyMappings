@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityComparator	net/minecraft/tileentity/TileEntityComparator	
+	f	I	field_145997_a	outputSignal	#outputSignal, :, :, :
+	m	()I	func_145996_a	getOutputSignal	#getOutputSignal, :, :, :
+	m	(I)V	func_145995_a	setOutputSignal	#setOutputSignal, :, :, :
+		p	1	p_145995_1_	outputSignalIn	#outputSignalIn, :, outputSignal, signal
+	m	()V	<init>	<init>	#~, ~, ~, ~

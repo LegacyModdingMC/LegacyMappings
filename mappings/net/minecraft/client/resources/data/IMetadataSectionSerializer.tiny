@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/IMetadataSectionSerializer	net/minecraft/client/resources/data/IMetadataSectionSerializer	
+	m	()Ljava/lang/String;	func_110483_a	getSectionName	#getSectionName, :, getName, :
+		c	The name of this section type as it appears in JSON.

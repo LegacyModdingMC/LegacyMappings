@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityMobSpawner	net/minecraft/tileentity/TileEntityMobSpawner	
+	f	Lnet/minecraft/tileentity/MobSpawnerBaseLogic;	field_145882_a	spawnerLogic	#spawnerLogic, :, behaviorHandler, spawner
+	m	()Lnet/minecraft/tileentity/MobSpawnerBaseLogic;	func_145881_a	getSpawnerBaseLogic	#getSpawnerBaseLogic, :, getLogic, getSpawner
+	m	()V	<init>	<init>	#~, ~, ~, ~

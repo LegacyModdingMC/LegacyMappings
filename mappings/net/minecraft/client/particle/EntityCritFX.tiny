@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityCritFX	net/minecraft/client/particle/EntityCritFX	
+	f	F	field_70561_a	initialParticleScale	#initialParticleScale, :, ~, baseScale
+	m	(Lnet/minecraft/world/World;DDDDDDF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1202_1_	world	#~, ~, ~, world
+		p	2	p_i1202_2_	x	#~, ~, ~, x
+		p	4	p_i1202_4_	y	#~, ~, ~, y
+		p	6	p_i1202_6_	z	#~, ~, ~, z
+		p	8	p_i1202_8_	velocityX	#~, ~, ~, velocityX
+		p	10	p_i1202_10_	velocityY	#~, ~, ~, velocityY
+		p	12	p_i1202_12_	velocityZ	#~, ~, ~, velocityZ
+		p	14	p_i1202_14_	scaleFactor	#~, ~, ~, scaleFactor
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1201_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1201_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1201_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1201_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1201_8_	p_i1201_8_	#~, ~, ~, ~
+		p	10	p_i1201_10_	p_i1201_10_	#~, ~, ~, ~
+		p	12	p_i1201_12_	p_i1201_12_	#~, ~, ~, ~

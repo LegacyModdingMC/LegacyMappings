@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRailBase	net/minecraft/block/BlockRailBase	
+	f	Z	field_150053_a	isPowered	#isPowered, :, forbidCurves, alwaysStraight
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45389_1_	isPowered	#isPowered, :, allowCurves, alwaysStraight
+	m	(Lnet/minecraft/world/World;IIIIILnet/minecraft/block/Block;)V	func_150048_a	onRedstoneSignal	#onRedstoneSignal, :, ~, updateState
+		c	Called when the rail is given a redstone signal.
+		p	1	p_150048_1_	world	#~, ~, ~, world
+		p	2	p_150048_2_	x	#~, ~, ~, x
+		p	3	p_150048_3_	y	#~, ~, ~, y
+		p	4	p_150048_4_	z	#~, ~, ~, z
+		p	5	p_150048_5_	metadata	#~, ~, ~, metadata
+		p	6	p_150048_6_	shape	#~, ~, ~, shape
+		p	7	p_150048_7_	neighborBlock	#~, ~, ~, neighborBlock
+	m	(Lnet/minecraft/world/World;IIIZ)V	func_150052_a	refreshTrackShape	#refreshTrackShape, :, ~, updateShape
+		c	Completely recalculates the track shape based on neighboring tracks.
+		p	1	p_150052_1_	world	#~, ~, ~, world
+		p	2	p_150052_2_	x	#~, ~, ~, x
+		p	3	p_150052_3_	y	#~, ~, ~, y
+		p	4	p_150052_4_	z	#~, ~, ~, z
+		p	5	p_150052_5_	force	#~, ~, ~, force
+	m	(Lnet/minecraft/block/Block;)Z	func_150051_a	isRailBlock	#isRailBlock, :, ~, isRail
+		c	Return true if the parameter is a blockID for a valid rail block (current is rail, powered or detector).
+		p	0	p_150051_0_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/world/World;III)Z	func_150049_b_	isRailBlockAt	#isRailBlockAt, :, ~, isRail
+		c	Returns true if the block at the coordinates of world passed is a valid rail block (current is rail, powered or detector).
+		p	0	p_150049_0_	world	#~, ~, ~, world
+		p	1	p_150049_1_	x	#~, ~, ~, x
+		p	2	p_150049_2_	y	#~, ~, ~, y
+		p	3	p_150049_3_	z	#~, ~, ~, z
+	m	()Z	func_150050_e	isPowered	#isPowered, :, ~, isAlwaysStraight
+		c	Returns true if the block is power related rail.

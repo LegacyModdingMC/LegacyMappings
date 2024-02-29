@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureNetherBridgePieces$Straight	net/minecraft/world/gen/structure/StructureNetherBridgePieces$Straight	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Straight;	func_74983_a	createValidComponent	#createValidComponent, :, ~, of
+		c	Creates and returns a new component piece. Or null if it could not find enough room to place it.
+		p	0	p_74983_0_	pieces	#~, ~, ~, pieces
+		p	1	p_74983_1_	random	#~, ~, ~, random
+		p	2	p_74983_2_	x	#~, ~, ~, x
+		p	3	p_74983_3_	y	#~, ~, ~, y
+		p	4	p_74983_4_	z	#~, ~, ~, z
+		p	5	p_74983_5_	facing	#~, ~, ~, facing
+		p	6	p_74983_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2044_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2044_2_	random	#~, ~, ~, random
+		p	3	p_i2044_3_	box	#~, ~, ~, box
+		p	4	p_i2044_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

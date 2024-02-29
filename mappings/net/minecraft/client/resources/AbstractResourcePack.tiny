@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/AbstractResourcePack	net/minecraft/client/resources/AbstractResourcePack	
+	f	Ljava/io/File;	field_110597_b	resourcePackFile	#resourcePackFile, :, base, file
+	f	Lorg/apache/logging/log4j/Logger;	field_110598_a	resourceLog	#resourceLog, LOGGER, :, :
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1287_1_	resourcePackFileIn	#resourcePackFileIn, :, base, file
+	m	(Lnet/minecraft/client/resources/data/IMetadataSerializer;Ljava/io/InputStream;Ljava/lang/String;)Lnet/minecraft/client/resources/data/IMetadataSection;	func_110596_a	readMetadata	#readMetadata, :, parseMetadata, getMetadataSection
+		p	0	p_110596_0_	metadataSerializer	#metadataSerializer, :, serializer, metadataSerializers
+		p	1	p_110596_1_	file	#~, ~, inputStream, file
+		p	2	p_110596_2_	sectionName	#sectionName, :, key, name
+	m	(Ljava/io/File;Ljava/io/File;)Ljava/lang/String;	func_110595_a	getRelativeName	#getRelativeName, :, relativize, :
+		p	0	p_110595_0_	dir	#~, ~, base, dir
+		p	1	p_110595_1_	file	#~, ~, target, file
+	m	(Ljava/lang/String;)Ljava/io/InputStream;	func_110591_a	getInputStreamByName	#getInputStreamByName, :, openFile, openResource
+		p	1	p_110591_1_	name	#name, :, :, path
+	m	(Ljava/lang/String;)Z	func_110593_b	hasResourceName	#hasResourceName, :, containsFile, hasResource
+		p	1	p_110593_1_	name	#name, :, :, path
+	m	(Lnet/minecraft/util/ResourceLocation;)Ljava/lang/String;	func_110592_c	locationToName	#locationToName, :, getFilename, getPathToResource
+		p	0	p_110592_0_	location	#location, :, id, location
+	m	(Ljava/lang/String;)V	func_110594_c	logNameNotLowercase	#logNameNotLowercase, :, warnNonLowercaseNamespace, :
+		p	1	p_110594_1_	name	#name, :, namespace, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

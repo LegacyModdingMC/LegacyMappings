@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiScreenHorseInventory	net/minecraft/client/gui/inventory/GuiScreenHorseInventory	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147031_u	horseGuiTextures	#horseGuiTextures, HORSE_GUI_TEXTURES, TEXTURE, MENU_LOCATION
+	f	Lnet/minecraft/inventory/IInventory;	field_147030_v	playerInventory	#playerInventory, :, armorInventory, :
+		c	The player inventory bound to this GUI.
+	f	Lnet/minecraft/inventory/IInventory;	field_147029_w	horseInventory	#horseInventory, :, chestInventory, :
+		c	The horse inventory bound to this GUI.
+	f	Lnet/minecraft/entity/passive/EntityHorse;	field_147034_x	horseEntity	#horseEntity, :, entity, horse
+		c	The EntityHorse whose inventory is currently being accessed.
+	f	F	field_147033_y	mousePosx	#mousePosx, :, mouseX, :
+		c	The mouse x-position recorded during the last rendered frame.
+	f	F	field_147032_z	mousePosY	#mousePosY, :, mouseY, :
+		c	The mouse y-position recorded during the last renderered frame.
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/inventory/IInventory;Lnet/minecraft/entity/passive/EntityHorse;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1093_1_	playerInv	#playerInv, :, armor, armorInventory
+		p	2	p_i1093_2_	horseInv	#horseInv, :, chest, chestInventory
+		p	3	p_i1093_3_	horse	#horse, :, entity, horse
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

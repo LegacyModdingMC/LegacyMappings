@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntityRendererPiston	net/minecraft/client/renderer/tileentity/TileEntityRendererPiston	
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147516_b	blockRenderer	#~, ~, ~, blockRenderer
+	m	()V	<init>	<init>	#~, ~, ~, ~

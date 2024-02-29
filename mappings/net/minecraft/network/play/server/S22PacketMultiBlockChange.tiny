@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S22PacketMultiBlockChange	net/minecraft/network/play/server/S22PacketMultiBlockChange	
+	f	Lorg/apache/logging/log4j/Logger;	field_148927_a	logger	#logger, :, ~, LOGGER
+	f	Lnet/minecraft/world/ChunkCoordIntPair;	field_148925_b	chunkPosCoord	#chunkPosCoord, chunkPos, pos, chunkPos
+	f	[B	field_148926_c	updates	#~, ~, ~, updates
+	f	I	field_148924_d	blockChangeCount	#~, ~, ~, blockChangeCount
+	m	(I[SLnet/minecraft/world/chunk/Chunk;)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45181_3_	chunkIn	#chunkIn, :, chunk, :
+		p	1	p_i45181_1_	blockChangeCount	#~, ~, ~, blockChangeCount
+		p	2	p_i45181_2_	crammedPositionsIn	#crammedPositionsIn, :, ~, positions
+	m	()Lnet/minecraft/world/ChunkCoordIntPair;	func_148920_c	getChunkPos	#~, ~, ~, getChunkPos
+	m	()[B	func_148921_d	getUpdates	#~, ~, ~, getUpdates
+	m	()I	func_148922_e	getBlockChangeCount	#~, ~, ~, getBlockChangeCount
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

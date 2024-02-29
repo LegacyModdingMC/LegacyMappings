@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandSummon	net/minecraft/command/server/CommandSummon	
+	m	()[Ljava/lang/String;	func_147182_d	getEntityIds	#~, ~, ~, getEntityIds
+	m	()V	<init>	<init>	#~, ~, ~, ~

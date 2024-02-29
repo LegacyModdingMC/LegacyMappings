@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAILookAtVillager	net/minecraft/entity/ai/EntityAILookAtVillager	
+	f	Lnet/minecraft/entity/monster/EntityIronGolem;	field_75397_a	theGolem	#theGolem, ironGolem, golem, :
+	f	Lnet/minecraft/entity/passive/EntityVillager;	field_75395_b	theVillager	#theVillager, villager, targetVillager, villager
+	f	I	field_75396_c	lookTime	#lookTime, :, lookCountdown, :
+	m	(Lnet/minecraft/entity/monster/EntityIronGolem;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1643_1_	theGolemIn	#theGolemIn, ironGolemIn, golem, :

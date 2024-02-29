@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/FileResourcePack	net/minecraft/client/resources/FileResourcePack	
+	f	Lcom/google/common/base/Splitter;	field_110601_c	entryNameSplitter	#entryNameSplitter, ENTRY_NAME_SPLITTER, TYPE_NAMESPACE_SPLITTER, :
+	f	Ljava/util/zip/ZipFile;	field_110600_d	resourcePackZipFile	#resourcePackZipFile, :, file, zip
+	m	()V	close	close	#~, ~, ~, ~
+	m	()Ljava/util/zip/ZipFile;	func_110599_c	getResourcePackZipFile	#getResourcePackZipFile, :, getZipFile, openZip
+	m	()V	finalize	finalize	#~, ~, ~, ~
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1290_1_	resourcePackFileIn	#resourcePackFileIn, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

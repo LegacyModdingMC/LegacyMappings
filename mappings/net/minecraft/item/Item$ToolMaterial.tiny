@@ -1,0 +1,41 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/Item$ToolMaterial	net/minecraft/item/Item$ToolMaterial	
+	f	Lnet/minecraft/item/Item$ToolMaterial;	WOOD	WOOD	#~, ~, WOOD, :
+	f	Lnet/minecraft/item/Item$ToolMaterial;	STONE	STONE	#~, ~, STONE, :
+	f	Lnet/minecraft/item/Item$ToolMaterial;	IRON	IRON	#~, ~, IRON, :
+	f	Lnet/minecraft/item/Item$ToolMaterial;	EMERALD	EMERALD	#~, ~, DIAMOND, :
+	f	Lnet/minecraft/item/Item$ToolMaterial;	GOLD	GOLD	#~, ~, GOLD, :
+	f	I	field_78001_f	harvestLevel	#harvestLevel, :, ~, strength
+		c	The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = WOOD/GOLD)
+	f	I	field_78002_g	maxUses	#maxUses, :, ~, maxDurability
+		c	The number of uses this material allows. (wood = 59, stone = 131, iron = 250, diamond = 1561, gold = 32)
+	f	F	field_78010_h	efficiencyOnProperMaterial	#efficiencyOnProperMaterial, efficiency, ~, miningSpeed
+		c	The strength of this tool material against blocks which it is effective against.
+	f	F	field_78011_i	damageVsEntity	#damageVsEntity, attackDamage, ~, attackDamage
+		c	Damage versus entities.
+	f	I	field_78008_j	enchantability	#enchantability, :, ~, enchantability
+		c	Defines the natural enchantability factor of the material.
+	f	[Lnet/minecraft/item/Item$ToolMaterial;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	()I	func_77997_a	getMaxUses	#getMaxUses, :, ~, getMaxDurability
+		c	The number of uses this material allows. (wood = 59, stone = 131, iron = 250, diamond = 1561, gold = 32)
+	m	()F	func_77998_b	getEfficiencyOnProperMaterial	#getEfficiencyOnProperMaterial, getEfficiency, ~, getMiningSpeed
+		c	The strength of this tool material against blocks which it is effective against.
+	m	()F	func_78000_c	getDamageVsEntity	#getDamageVsEntity, getAttackDamage, ~, getAttackDamage
+		c	Damage versus entities.
+	m	()I	func_77996_d	getHarvestLevel	#getHarvestLevel, :, ~, getStrength
+		c	The level of material this tool can harvest (3 = DIAMOND, 2 = IRON, 1 = STONE, 0 = IRON/GOLD)
+	m	()I	func_77995_e	getEnchantability	#getEnchantability, :, ~, getEnchantability
+		c	Return the natural enchantability factor of the material.
+	m	()Lnet/minecraft/item/Item;	func_150995_f	getBaseItemForRepair	#getBaseItemForRepair, getRepairItem, ~, getRepairIngredient
+	m	(Ljava/lang/String;)Lnet/minecraft/item/Item$ToolMaterial;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/item/Item$ToolMaterial;	values	values	#~, ~, ~, ~
+	m	(Ljava/lang/String;IIIFFI)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1874_3_	harvestLevel	#harvestLevel, :, ~, strength
+		p	4	p_i1874_4_	maxUses	#maxUses, :, ~, maxDurability
+		p	5	p_i1874_5_	efficiency	#efficiency, :, ~, miningSpeed
+		p	6	p_i1874_6_	damageVsEntity	#damageVsEntity, :, ~, attackDamage
+		p	7	p_i1874_7_	enchantability	#enchantability, :, ~, enchantability
+		p	1	p_i1874_1_	p_i1874_1_	#~, ~, ~, ~
+		p	2	p_i1874_2_	p_i1874_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,132 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/PlayerControllerMP	net/minecraft/client/multiplayer/PlayerControllerMP	
+	f	Lnet/minecraft/client/Minecraft;	field_78776_a	mc	#mc, :, client, minecraft
+		c	The Minecraft instance.
+	f	Lnet/minecraft/client/network/NetHandlerPlayClient;	field_78774_b	netClientHandler	#netClientHandler, connection, networkHandler, :
+	f	I	field_78775_c	currentBlockX	#currentBlockX, :, ~, targetBlockX
+		c	PosX of the current block being destroyed
+	f	I	field_78772_d	currentBlockY	#currentBlockY, :, ~, targetBlockY
+		c	PosY of the current block being destroyed
+	f	I	field_78773_e	currentblockZ	#currentblockZ, :, ~, targetBlockZ
+		c	PosZ of the current block being destroyed
+	f	Lnet/minecraft/item/ItemStack;	field_85183_f	currentItemHittingBlock	#currentItemHittingBlock, :, selectedStack, miningTool
+		c	The Item currently being used to destroy a block
+	f	F	field_78770_f	curBlockDamageMP	#curBlockDamageMP, :, currentBreakingProgress, miningProgress
+		c	Current block damage (MP)
+	f	F	field_78780_h	stepSoundTickCounter	#stepSoundTickCounter, :, blockBreakingSoundCooldown, miningSoundTimer
+		c	Tick counter, when it hits 4 it resets back to 0 and plays the step sound
+	f	I	field_78781_i	blockHitDelay	#blockHitDelay, :, blockBreakingCooldown, miningCooldown
+		c	Delays the first damage on the block after the first click on the block
+	f	Z	field_78778_j	isHittingBlock	#isHittingBlock, :, breakingBlock, isMiningBlock
+		c	Tells if the player is hitting a block
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_78779_k	currentGameType	#currentGameType, :, gameMode, :
+		c	Current game type for the player
+	f	I	field_78777_l	currentPlayerItem	#currentPlayerItem, :, lastSelectedSlot, selectedHotbarSlot
+		c	Index of the current item held by the player in the inventory hotbar
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/network/NetHandlerPlayClient;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45062_1_	mcIn	#mcIn, :, client, minecraft
+		p	2	p_i45062_2_	netHandler	#netHandler, :, networkHandler, :
+	m	()Z	func_78747_a	enableEverythingIsScrewedUpMode	#enableEverythingIsScrewedUpMode, isSpectator, :, isInSpectatorMode
+		c	If modified to return true, the player spins around slowly around (0, 68.5, 0). The GUI is disabled, the view is set to first person, and both chat and menu are disabled. Unless the server is modified to ignore illegal stances, attempting to enter a world at all will result in an immediate kick due to an illegal stance. Appears to be left-over debug, or demo code.
+	m	(II)V	func_78756_a	sendEnchantPacket	#sendEnchantPacket, :, clickButton, clickMenuButton
+		c	GuiEnchantment uses this during multiplayer to tell PlayerControllerMP to send a packet indicating the enchantment action the player has taken.
+		p	1	p_78756_1_	windowID	#windowID, :, syncId, menuId
+		p	2	p_78756_2_	button	#button, :, buttonId, :
+	m	(III)Z	func_85182_a	sameToolAndBlock	#sameToolAndBlock, :, ~, isMiningBlock
+		p	1	p_85182_1_	x	#x, :, ~, x
+		p	2	p_85182_2_	y	#y, :, ~, y
+		p	3	p_85182_3_	z	#z, :, ~, z
+	m	(IIII)Z	func_78751_a	onPlayerDestroyBlock	#onPlayerDestroyBlock, :, ~, finishMiningBlock
+		c	Called when a player completes the destruction of a block
+		p	1	p_78751_1_	x	#x, :, ~, x
+		p	2	p_78751_2_	y	#y, :, ~, y
+		p	3	p_78751_3_	z	#z, :, ~, z
+		p	4	p_78751_4_	side	#side, :, ~, face
+	m	(IIIILnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;	func_78753_a	windowClick	#windowClick, :, clickSlot, :
+		c	Handles slot clicks sends a packet to the server.
+		p	1	p_78753_1_	windowId	#windowId, :, syncId, :
+		p	2	p_78753_2_	slotId	#slotId, :, :, :
+		p	3	p_78753_3_	mouseButtonClicked	#mouseButtonClicked, :, mouseButton, clickData
+		p	4	p_78753_4_	mode	#mode, :, actionType, :
+		p	5	p_78753_5_	player	#player, playerIn, player, :
+	m	(Lnet/minecraft/item/ItemStack;)V	func_78752_a	sendPacketDropItem	#sendPacketDropItem, :, dropCreativeStack, dropStackFromCreativeMenu
+		c	Sends a Packet107 to the server to drop the item on the ground
+		p	1	p_78752_1_	itemStackIn	#itemStackIn, :, stack, :
+	m	(Lnet/minecraft/item/ItemStack;I)V	func_78761_a	sendSlotPacket	#sendSlotPacket, :, clickCreativeStack, addStackToCreativeMenu
+		c	Used in PlayerControllerMP to update the server with an ItemStack in a slot.
+		p	1	p_78761_1_	itemStackIn	#itemStackIn, :, stack, :
+		p	2	p_78761_2_	slotId	#slotId, :, :, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/stats/StatFileWriter;)Lnet/minecraft/client/entity/EntityClientPlayerMP;	func_147493_a	createPlayer	#createPlayer, :, ~, createPlayer
+		p	1	p_147493_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_147493_2_	stats	#stats, :, ~, statHandler
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_78746_a	setGameType	#setGameType, :, setGameMode, :
+		c	Sets the game type for the player.
+		p	1	p_78746_1_	type	#type, :, gameMode, :
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/multiplayer/PlayerControllerMP;IIII)V	func_78744_a	clickBlockCreative	#clickBlockCreative, :, ~, mineBlockInCreative
+		c	Block dig operation in creative mode (instantly digs the block).
+		p	0	p_78744_0_	minecraftIn	#minecraftIn, :, client, minecraft
+		p	1	p_78744_1_	playerController	#playerController, :, interactionManager, :
+		p	2	p_78744_2_	x	#x, :, ~, x
+		p	3	p_78744_3_	y	#y, :, ~, y
+		p	4	p_78744_4_	z	#z, :, ~, z
+		p	5	p_78744_5_	side	#side, :, ~, face
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_78748_a	setPlayerCapabilities	#setPlayerCapabilities, :, copyAbilities, refreshAbilities
+		c	Sets player capabilities depending on current gametype. params: player
+		p	1	p_78748_1_	player	#player, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z	func_78769_a	sendUseItem	#sendUseItem, :, interactItem, useItem
+		c	Notifies the server of things like consuming food, etc...
+		p	1	p_78769_1_	player	#player, playerIn, player, :
+		p	2	p_78769_2_	worldIn	#worldIn, :, world, :
+		p	3	p_78769_3_	itemStackIn	#itemStackIn, :, stack, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;IIIILnet/minecraft/util/Vec3;)Z	func_78760_a	onPlayerRightClick	#onPlayerRightClick, :, ~, useBlock
+		c	Handles a players right click. Args: player, world, x, y, z, side, hitVec
+		p	1	p_78760_1_	player	#player, :, ~, player
+		p	2	p_78760_2_	worldIn	#worldIn, :, ~, world
+		p	3	p_78760_3_	itemStackIn	#itemStackIn, :, ~, stack
+		p	4	p_78760_4_	x	#x, :, ~, x
+		p	5	p_78760_5_	y	#y, :, ~, y
+		p	6	p_78760_6_	z	#z, :, ~, z
+		p	7	p_78760_7_	side	#side, :, ~, face
+		p	8	p_78760_8_	hitVector	#hitVector, :, ~, hitPos
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/Entity;)V	func_78764_a	attackEntity	#attackEntity, :, :, :
+		c	Attacks an entity
+		p	1	p_78764_1_	player	#player, playerIn, player, :
+		p	2	p_78764_2_	targetEntity	#targetEntity, :, target, :
+	m	()Z	func_78755_b	shouldDrawHUD	#shouldDrawHUD, :, hasStatusBars, :
+	m	(IIII)V	func_78743_b	clickBlock	#clickBlock, :, ~, startMiningBlock
+		c	Called by Minecraft class when the player is hitting a block with an item. Args: x, y, z, side
+		p	1	p_78743_1_	x	#x, :, ~, x
+		p	2	p_78743_2_	y	#y, :, ~, y
+		p	3	p_78743_3_	z	#z, :, ~, z
+		p	4	p_78743_4_	side	#side, :, ~, face
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_78745_b	flipPlayer	#flipPlayer, :, :, setFacingSouth
+		c	Flips the player around. Args: player
+		p	1	p_78745_1_	player	#player, playerIn, player, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/Entity;)Z	func_78768_b	interactWithEntitySendPacket	#interactWithEntitySendPacket, :, interactEntity, :
+		c	Send packet to server - player is interacting with another entity (left click)
+		p	1	p_78768_1_	player	#player, playerIn, player, :
+		p	2	p_78768_2_	targetEntity	#targetEntity, :, entity, target
+	m	()V	func_78767_c	resetBlockRemoving	#resetBlockRemoving, :, cancelBlockBreaking, stopMiningBlock
+		c	Resets current block damage and field_78778_j
+	m	(IIII)V	func_78759_c	onPlayerDamageBlock	#onPlayerDamageBlock, :, ~, updateBlockMining
+		c	Called when a player damages a block and updates damage counters
+		p	1	p_78759_1_	x	#x, :, ~, x
+		p	2	p_78759_2_	y	#y, :, ~, y
+		p	3	p_78759_3_	z	#z, :, ~, z
+		p	4	p_78759_4_	side	#side, :, ~, face
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_78766_c	onStoppedUsingItem	#onStoppedUsingItem, :, stopUsingItem, stopUsingHand
+		p	1	p_78766_1_	player	#player, playerIn, player, :
+	m	()F	func_78757_d	getBlockReachDistance	#getBlockReachDistance, :, getReachDistance, getReach
+		c	player reach distance = 4F
+	m	()V	func_78765_e	updateController	#updateController, :, tick, :
+	m	()Z	func_78763_f	gameIsSurvivalOrAdventure	#gameIsSurvivalOrAdventure, :, hasExperienceBar, hasXpBar
+	m	()Z	func_78762_g	isNotCreative	#isNotCreative, :, hasLimitedAttackSpeed, hasAttackCooldown
+		c	Checks if the player is not creative, used for checking if it should break a block instantly
+	m	()Z	func_78758_h	isInCreativeMode	#isInCreativeMode, :, hasCreativeInventory, :
+		c	returns true if player is in creative mode
+	m	()Z	func_78749_i	extendedReach	#extendedReach, :, hasExtendedReach, :
+		c	true for hitting entities far away.
+	m	()Z	func_110738_j	isRidingHorse	#isRidingHorse, :, hasRidingInventory, :
+		c	Checks if the player is riding a horse, used to chose the GUI to open
+	m	()V	func_78750_j	syncCurrentPlayItem	#syncCurrentPlayItem, :, syncSelectedSlot, updateSelectedHotbarSlot
+		c	Syncs the current player item with the server

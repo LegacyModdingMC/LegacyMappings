@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/ServerData	net/minecraft/client/multiplayer/ServerData	
+	f	Ljava/lang/String;	field_78847_a	serverName	#serverName, :, name, :
+	f	Ljava/lang/String;	field_78845_b	serverIP	#serverIP, :, address, :
+	f	Ljava/lang/String;	field_78846_c	populationInfo	#populationInfo, :, playerCountLabel, onlinePlayers
+		c	the string indicating number of players on and capacity of the server that is shown on the server browser (i.e. "5/20" meaning 5 slots used out of 20 slots total)
+	f	Ljava/lang/String;	field_78843_d	serverMOTD	#serverMOTD, :, label, description
+		c	(better variable name would be 'hostname') server name as displayed in the server browser's second line (grey text)
+	f	J	field_78844_e	pingToServer	#pingToServer, :, ping, :
+		c	last server ping that showed up in the server browser
+	f	I	field_82821_f	version	#version, :, protocolVersion, protocol
+	f	Ljava/lang/String;	field_82822_g	gameVersion	#gameVersion, :, version, :
+		c	Game version for this server.
+	f	Z	field_78841_f	pinged	#pinged, :, online, isLoaded
+	f	Ljava/lang/String;	field_147412_i	playerList	#playerList, :, playerListSummary, playerListString
+	f	Lnet/minecraft/client/multiplayer/ServerData$ServerResourceMode;	field_152587_j	resourceMode	#resourceMode, :, ~, ~
+	f	Ljava/lang/String;	field_147411_m	serverIcon	#serverIcon, :, icon, :
+	f	Z	field_152588_l	lanServer	#lanServer, :, local, ~
+	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1193_1_	name	#~, ~, name, :
+		p	2	p_i1193_2_	address	#~, ~, address, :
+	m	(Ljava/lang/String;Ljava/lang/String;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1055_1_	lastScreenIn	#lastScreenIn, :, name, ~
+		p	2	p_i1055_2_	address	#~, ~, address, ~
+		p	3	p_i1055_3_	local	#~, ~, local, ~
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_78836_a	getNBTCompound	#getNBTCompound, :, serialize, toNbt
+		c	Returns an NBTTagCompound with the server's name, IP and maybe acceptTextures.
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_152583_a	copyFrom	#copyFrom, :, :, ~
+		p	1	p_152583_1_	serverDataIn	#serverDataIn, :, info, ~
+	m	(Lnet/minecraft/client/multiplayer/ServerData$ServerResourceMode;)V	func_152584_a	setResourceMode	#setResourceMode, :, ~, setAcceptTextures
+		p	1	p_152584_1_	mode	#mode, :, ~, ~
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/client/multiplayer/ServerData;	func_78837_a	getServerDataFromNBTCompound	#getServerDataFromNBTCompound, :, deserialize, fromNbt
+		c	Takes an NBTTagCompound with 'name' and 'ip' keys, returns a ServerData instance.
+		p	0	p_78837_0_	nbtCompound	#nbtCompound, :, nbt, :
+	m	(Ljava/lang/String;)V	func_147407_a	setBase64EncodedIconData	#setBase64EncodedIconData, :, setIcon, :
+		p	1	p_147407_1_	icon	#icon, :, :, :
+	m	()Lnet/minecraft/client/multiplayer/ServerData$ServerResourceMode;	func_152586_b	getResourceMode	#getResourceMode, :, ~, acceptTextures
+	m	()Ljava/lang/String;	func_147409_e	getBase64EncodedIconData	#getBase64EncodedIconData, :, getIcon, :
+		c	Returns the base-64 encoded representation of the server's icon, or null if not available
+	m	()Z	func_152585_d	isLanServer	#isLanServer, :, isLocal, ~

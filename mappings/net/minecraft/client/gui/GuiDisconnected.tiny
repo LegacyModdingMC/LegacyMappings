@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiDisconnected	net/minecraft/client/gui/GuiDisconnected	
+	f	Ljava/lang/String;	field_146306_a	reason	#reason, :, name, :
+	f	Lnet/minecraft/util/IChatComponent;	field_146304_f	message	#message, :, reason, ~
+	f	Ljava/util/List;	field_146305_g	multilineMessage	#multilineMessage, :, reasonFormatted, textLines
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146307_h	parentScreen	#parentScreen, :, parent, :
+	m	(Lnet/minecraft/client/gui/GuiScreen;Ljava/lang/String;Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45020_1_	screen	#screen, :, parent, :
+		p	2	p_i45020_2_	reasonLocalizationKey	#reasonLocalizationKey, :, name, :
+		p	3	p_i45020_3_	chatComp	#chatComp, :, reason, :

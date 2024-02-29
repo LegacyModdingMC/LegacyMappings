@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderArrow	net/minecraft/client/renderer/entity/RenderArrow	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110780_a	arrowTextures	#arrowTextures, :, TEXTURE, ARROW_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

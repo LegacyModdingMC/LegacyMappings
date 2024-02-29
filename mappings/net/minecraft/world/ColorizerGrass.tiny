@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/ColorizerGrass	net/minecraft/world/ColorizerGrass	
+	f	[I	field_77481_a	grassBuffer	#grassBuffer, :, colorMap, colors
+		c	Color buffer for grass
+	m	(DD)I	func_77480_a	getGrassColor	#getGrassColor, :, getColor, :
+		c	Gets grass color from temperature and humidity. Args: temperature, humidity
+		p	0	p_77480_0_	temperature	#temperature, :, :, :
+		p	2	p_77480_2_	humidity	#humidity, :, :, :
+	m	([I)V	func_77479_a	setGrassBiomeColorizer	#setGrassBiomeColorizer, :, setColorMap, set
+		p	0	p_77479_0_	grassBufferIn	#grassBufferIn, :, map, colors
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

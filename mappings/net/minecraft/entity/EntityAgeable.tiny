@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityAgeable	net/minecraft/entity/EntityAgeable	
+	f	F	field_98056_d	ageWidth	#ageWidth, :, ~, ageWidth
+	f	F	field_98057_e	ageHeight	#ageHeight, :, ~, ageHeight
+	m	(F)V	func_98055_j	setScale	#setScale, :, ~, resizeBounds
+		p	1	p_98055_1_	scale	#scale, :, ~, size
+	m	(I)V	func_110195_a	addGrowth	#addGrowth, :, ~, growUp
+		c	"Adds the value of the parameter times 20 to the age of this entity. If the entity is an adult (if the entity's age is greater than 0), it will have no effect."
+		p	1	p_110195_1_	growth	#growth, :, ~, age
+	m	(Lnet/minecraft/entity/EntityAgeable;)Lnet/minecraft/entity/EntityAgeable;	func_90011_a	createChild	#createChild, :, breed, makeChild
+		p	1	p_90011_1_	ageable	#ageable, :, entity, other
+	m	(Z)V	func_98054_a	setScaleForAge	#setScaleForAge, :, ~, setAgeSize
+		c	"Sets the scale for an ageable entity according to the boolean parameter, which says if it's a child."
+		p	1	p_98054_1_	child	#child, :, ~, isBaby
+	m	(I)V	func_70873_a	setGrowingAge	#setGrowingAge, :, setAge, setBreedingAge
+		c	The age value may be negative or positive or zero. If it's negative, it get's incremented on each tick, if it's positive, it get's decremented each tick. With a negative value the Entity is considered a child.
+		p	1	p_70873_1_	age	#age, :, ~, age
+	m	()I	func_70874_b	getGrowingAge	#getGrowingAge, :, age, getBreedingAge
+		c	The age value may be negative or positive or zero. If it's negative, it get's incremented on each tick, if it's positive, it get's decremented each tick. Don't confuse this with EntityLiving.getAge. With a negative value the Entity is considered a child.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1578_1_	worldIn	#worldIn, :, ~, ~

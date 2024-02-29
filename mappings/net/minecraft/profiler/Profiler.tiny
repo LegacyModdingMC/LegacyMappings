@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/profiler/Profiler	net/minecraft/profiler/Profiler	
+	f	Z	field_76327_a	profilingEnabled	#profilingEnabled, :, enabled, isProfiling
+		c	Flag profiling enabled
+	f	Lorg/apache/logging/log4j/Logger;	field_151234_b	logger	#logger, LOGGER, :, :
+	f	Ljava/util/List;	field_76325_b	sectionList	#sectionList, :, path, locations
+		c	List of parent sections
+	f	Ljava/util/List;	field_76326_c	timestampList	#timestampList, :, timeList, times
+		c	List of timestamps (System.nanoTime)
+	f	Ljava/lang/String;	field_76323_d	profilingSection	#profilingSection, :, fullLocation, currentLocation
+		c	Current profiling section
+	f	Ljava/util/Map;	field_76324_e	profilingMap	#profilingMap, :, profilingLocationTimes, locationToTime
+		c	Profiling map
+	m	()V	func_76317_a	clearProfiling	#clearProfiling, :, reset, :
+		c	Clear profiling.
+	m	(Ljava/lang/String;)V	func_76320_a	startSection	#startSection, :, push, :
+		c	Start section
+		p	1	p_76320_1_	name	#name, :, location, :
+	m	()V	func_76319_b	endSection	#endSection, :, pop, :
+		c	End section
+	m	(Ljava/lang/String;)Ljava/util/List;	func_76321_b	getProfilingData	#getProfilingData, :, getData, getResults
+		c	Get profiling data
+		p	1	p_76321_1_	profilerName	#profilerName, :, location, :
+	m	()Ljava/lang/String;	func_76322_c	getNameOfLastSection	#getNameOfLastSection, :, getCurrentLocation, :
+	m	(Ljava/lang/String;)V	func_76318_c	endStartSection	#endStartSection, :, swap, :
+		c	End current section and start a new section
+		p	1	p_76318_1_	name	#name, :, location, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

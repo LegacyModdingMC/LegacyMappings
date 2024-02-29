@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/ScoreObjective	net/minecraft/scoreboard/ScoreObjective	
+	f	Lnet/minecraft/scoreboard/Scoreboard;	field_96686_a	theScoreboard	#theScoreboard, scoreboard, :, :
+	f	Ljava/lang/String;	field_96684_b	name	#name, :, :, :
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_96685_c	objectiveCriteria	#objectiveCriteria, :, criteria, criterion
+		c	The ScoreObjectiveCriteria for this objetive
+	f	Ljava/lang/String;	field_96683_d	displayName	#displayName, :, ~, displayName
+	m	(Lnet/minecraft/scoreboard/Scoreboard;Ljava/lang/String;Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2307_1_	theScoreboardIn	#theScoreboardIn, scoreboard, :, :
+		p	2	p_i2307_2_	nameIn	#nameIn, :, name, :
+		p	3	p_i2307_3_	objectiveCriteriaIn	#objectiveCriteriaIn, :, criteria, criterion
+	m	()Lnet/minecraft/scoreboard/Scoreboard;	func_96682_a	getScoreboard	#getScoreboard, :, :, :
+	m	(Ljava/lang/String;)V	func_96681_a	setDisplayName	#setDisplayName, :, ~, setDisplayName
+		p	1	p_96681_1_	nameIn	#nameIn, :, ~, displayName
+	m	()Ljava/lang/String;	func_96679_b	getName	#getName, :, :, :
+	m	()Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	func_96680_c	getCriteria	#getCriteria, :, getCriterion, :
+	m	()Ljava/lang/String;	func_96678_d	getDisplayName	#getDisplayName, :, :, :

@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$House1	net/minecraft/world/gen/structure/StructureVillagePieces$House1	
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$House1;	func_74898_a	of	#~, ~, ~, of
+		p	0	p_74898_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_74898_1_	pieces	#~, ~, ~, pieces
+		p	2	p_74898_2_	random	#~, ~, ~, random
+		p	3	p_74898_3_	x	#~, ~, ~, x
+		p	4	p_74898_4_	y	#~, ~, ~, y
+		p	5	p_74898_5_	z	#~, ~, ~, z
+		p	6	p_74898_6_	facing	#~, ~, ~, facing
+		p	7	p_74898_7_	generationDepth	#~, ~, ~, generationDepth
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2094_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_i2094_2_	generationDepth	#~, ~, ~, generationDepth
+		p	3	p_i2094_3_	random	#~, ~, ~, random
+		p	4	p_i2094_4_	box	#~, ~, ~, box
+		p	5	p_i2094_5_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

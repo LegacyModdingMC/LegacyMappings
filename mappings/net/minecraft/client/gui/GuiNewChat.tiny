@@ -1,0 +1,61 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiNewChat	net/minecraft/client/gui/GuiNewChat	
+	f	Lorg/apache/logging/log4j/Logger;	field_146249_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/Minecraft;	field_146247_f	mc	#mc, :, client, minecraft
+	f	Ljava/util/List;	field_146248_g	sentMessages	#sentMessages, :, messageHistory, recentMessages
+		c	A list of messages previously sent through the chat GUI
+	f	Ljava/util/List;	field_146252_h	chatLines	#chatLines, :, messages, :
+		c	Chat lines to be displayed in the chat box
+	f	Ljava/util/List;	field_146253_i	drawnChatLines	#drawnChatLines, :, visibleMessages, trimmedMessages
+		c	List of the ChatLines currently drawn
+	f	I	field_146250_j	scrollPos	#scrollPos, :, scrolledLines, scroll
+	f	Z	field_146251_k	isScrolled	#isScrolled, :, hasUnreadNewMessages, hasNewMessagesSinceScroll
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1022_1_	mcIn	#mcIn, :, client, minecraft
+	m	()V	func_146231_a	clearChatMessages	#clearChatMessages, :, clear, :
+		c	Clears the chat.
+	m	(F)I	func_146233_a	calculateChatboxWidth	#calculateChatboxWidth, :, getWidth, :
+		p	0	p_146233_0_	scale	#scale, :, chatWidth, :
+	m	(I)V	func_146230_a	drawChat	#drawChat, :, render, :
+		p	1	p_146230_1_	updateCounter	#updateCounter, :, ticks, :
+	m	(II)Lnet/minecraft/util/IChatComponent;	func_146236_a	getChatComponent	#getChatComponent, :, getTextAt, getMessageAt
+		c	Gets the chat component under the mouse
+		p	1	p_146236_1_	mouseX	#mouseX, :, x, :
+		p	2	p_146236_2_	mouseY	#mouseY, :, y, :
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_146227_a	printChatMessage	#printChatMessage, :, addMessage, :
+		p	1	p_146227_1_	chatComponent	#chatComponent, :, message, :
+	m	(Lnet/minecraft/util/IChatComponent;I)V	func_146234_a	printChatMessageWithOptionalDeletion	#printChatMessageWithOptionalDeletion, :, addMessage, :
+		c	prints the ChatComponent to Chat. If the ID is not 0, deletes an existing Chat Line of that ID from the GUI
+		p	1	p_146234_1_	chatComponent	#chatComponent, :, message, :
+		p	2	p_146234_2_	chatLineId	#chatLineId, :, messageId, id
+	m	(Lnet/minecraft/util/IChatComponent;IIZ)V	func_146237_a	setChatLine	#setChatLine, :, addMessage, :
+		p	1	p_146237_1_	chatComponent	#chatComponent, :, message, :
+		p	2	p_146237_2_	chatLineId	#chatLineId, :, messageId, id
+		p	3	p_146237_3_	updateCounter	#updateCounter, :, timestamp, time
+		p	4	p_146237_4_	displayOnly	#displayOnly, :, ignoreLimit, deleted
+	m	(Ljava/lang/String;)V	func_146239_a	addToSentMessages	#addToSentMessages, :, addToMessageHistory, addRecentMessage
+		c	Adds this string to the list of sent messages, for recall using the up/down arrow keys
+		p	1	p_146239_1_	message	#message, :, :, :
+	m	()V	func_146245_b	refreshChat	#refreshChat, :, reset, :
+	m	(F)I	func_146243_b	calculateChatboxHeight	#calculateChatboxHeight, :, getHeight, :
+		p	0	p_146243_0_	scale	#scale, :, chatHeight, :
+	m	(I)V	func_146229_b	scroll	#scroll, :, :, :
+		c	Scrolls the chat by the given number of lines.
+		p	1	p_146229_1_	amount	#amount, :, lines, :
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_146235_b	formatColors	#formatColors, :, ~, prepareMessage
+		p	1	p_146235_1_	message	#~, ~, ~, message
+	m	()Ljava/util/List;	func_146238_c	getSentMessages	#getSentMessages, :, getMessageHistory, getRecentMessages
+		c	Gets the list of messages previously sent through the chat GUI
+	m	(I)V	func_146242_c	deleteChatLine	#deleteChatLine, :, removeMessage, :
+		c	finds and deletes a Chat line by ID
+		p	1	p_146242_1_	id	#id, :, messageId, id
+	m	()V	func_146240_d	resetScroll	#resetScroll, :, :, :
+		c	Resets the chat scroll (executed when the GUI is closed, among others)
+	m	()Z	func_146241_e	getChatOpen	#getChatOpen, :, isChatFocused, :
+		c	Returns true if the chat GUI is open
+	m	()I	func_146228_f	getChatWidth	#getChatWidth, :, getWidth, :
+	m	()I	func_146246_g	getChatHeight	#getChatHeight, :, getHeight, :
+	m	()F	func_146244_h	getChatScale	#getChatScale, :, :, :
+		c	Returns the chatscale from mc.gameSettings.chatScale
+	m	()I	func_146232_i	getLineCount	#getLineCount, :, getVisibleLineCount, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/InventoryLargeChest	net/minecraft/inventory/InventoryLargeChest	
+	f	Ljava/lang/String;	field_70479_a	name	#name, :, translationKey, name
+		c	Name of the chest.
+	f	Lnet/minecraft/inventory/IInventory;	field_70477_b	upperChest	#upperChest, :, ~, inventory1
+		c	Inventory object corresponding to double chest upper part
+	f	Lnet/minecraft/inventory/IInventory;	field_70478_c	lowerChest	#lowerChest, :, ~, inventory2
+		c	Inventory object corresponding to double chest lower part
+	m	(Lnet/minecraft/inventory/IInventory;)Z	func_90010_a	isPartOfLargeChest	#isPartOfLargeChest, :, isPart, contains
+		c	Return whether the given inventory is part of this large chest.
+		p	1	p_90010_1_	inventoryIn	#inventoryIn, :, inventory, :
+	m	(Ljava/lang/String;Lnet/minecraft/inventory/IInventory;Lnet/minecraft/inventory/IInventory;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1559_1_	name	#~, ~, ~, name
+		p	2	p_i1559_2_	inventory1	#~, ~, ~, inventory1
+		p	3	p_i1559_3_	inventory2	#~, ~, ~, inventory2

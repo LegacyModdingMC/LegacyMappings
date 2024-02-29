@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemFishingRod	net/minecraft/item/ItemFishingRod	
+	f	Lnet/minecraft/util/IIcon;	field_94598_a	theIcon	#theIcon, :, ~, fishingRodSprite
+	m	()Lnet/minecraft/util/IIcon;	func_94597_g	getFishingRodSprite	#~, ~, ~, getFishingRodSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

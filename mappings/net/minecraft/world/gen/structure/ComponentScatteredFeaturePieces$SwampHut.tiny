@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$SwampHut	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$SwampHut	
+	f	Z	field_82682_h	hasWitch	#hasWitch, :, ~, hasWitch
+		c	Whether this swamp hut has a witch.
+	m	(Ljava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2066_1_	random	#~, ~, ~, random
+		p	2	p_i2066_2_	x	#~, ~, ~, x
+		p	3	p_i2066_3_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

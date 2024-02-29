@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentHelper$IModifier	net/minecraft/enchantment/EnchantmentHelper$IModifier	
+	m	(Lnet/minecraft/enchantment/Enchantment;I)V	func_77493_a	calculateModifier	#calculateModifier, :, ~, apply
+		c	Generic method use to calculate modifiers of offensive or defensive enchantment values.
+		p	1	p_77493_1_	enchantmentIn	#enchantmentIn, :, ~, enchantment
+		p	2	p_77493_2_	enchantmentLevel	#enchantmentLevel, :, ~, level

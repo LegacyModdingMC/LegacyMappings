@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/ChatController$SwitchChatState	net/minecraft/client/stream/ChatController$SwitchChatState	
+	f	[I	field_152982_a	field_152982_a	#~, ~, ~, ~
+	f	[I	field_152983_b	field_152983_b	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

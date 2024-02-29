@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$StairsStraight	net/minecraft/world/gen/structure/StructureStrongholdPieces$StairsStraight	
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$StairsStraight;	func_75028_a	findValidPlacement	#findValidPlacement, :, ~, of
+		p	0	p_75028_0_	pieces	#~, ~, ~, pieces
+		p	1	p_75028_1_	random	#~, ~, ~, random
+		p	2	p_75028_2_	x	#~, ~, ~, x
+		p	3	p_75028_3_	y	#~, ~, ~, y
+		p	4	p_75028_4_	z	#~, ~, ~, z
+		p	5	p_75028_5_	facing	#~, ~, ~, facing
+		p	6	p_75028_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2085_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2085_2_	random	#~, ~, ~, random
+		p	3	p_i2085_3_	box	#~, ~, ~, box
+		p	4	p_i2085_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

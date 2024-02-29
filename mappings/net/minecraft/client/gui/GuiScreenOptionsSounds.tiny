@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenOptionsSounds	net/minecraft/client/gui/GuiScreenOptionsSounds	
+	f	Ljava/lang/String;	field_146507_a	title	#title, :, name, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146505_f	parent	#parent, :, :, :
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146506_g	game_settings_4	#game_settings_4, :, options, :
+		c	Reference to the GameSettings object.
+	f	Ljava/lang/String;	field_146508_h	offDisplayString	#offDisplayString, :, off, :
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45025_1_	parentIn	#parentIn, :, parent, :
+		p	2	p_i45025_2_	settingsIn	#settingsIn, :, options, :
+	m	(Lnet/minecraft/client/gui/GuiScreenOptionsSounds;)Lnet/minecraft/client/settings/GameSettings;	access$000	access$000	#~, ~, ~, getOptions
+		p	0	p_access$000_0_	soundScreen	#~, ~, ~, soundScreen
+	m	(Lnet/minecraft/client/audio/SoundCategory;)Ljava/lang/String;	func_146504_a	getSoundVolume	#getSoundVolume, :, getVolume, :
+		p	1	p_146504_1_	soundCatecory	#~, ~, soundCategory, soundCatecory

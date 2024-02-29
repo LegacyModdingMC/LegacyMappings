@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsSharedConstants	net/minecraft/realms/RealmsSharedConstants	
+	f	I	NETWORK_PROTOCOL_VERSION	NETWORK_PROTOCOL_VERSION	#~, ~, ~, ~
+	f	I	TICKS_PER_SECOND	TICKS_PER_SECOND	#~, ~, ~, ~
+	f	Ljava/lang/String;	VERSION_STRING	VERSION_STRING	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

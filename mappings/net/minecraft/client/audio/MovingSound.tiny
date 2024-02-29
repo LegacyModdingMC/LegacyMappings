@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/MovingSound	net/minecraft/client/audio/MovingSound	
+	f	Z	field_147668_j	donePlaying	#donePlaying, :, done, :
+	m	(Lnet/minecraft/util/ResourceLocation;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45104_1_	location	#location, :, ~, ~

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSnow	net/minecraft/block/BlockSnow	
+	m	(I)V	func_150154_b	getBoundsForLayers	#getBoundsForLayers, :, updateBoundingBox, updateShape
+		p	1	p_150154_1_	layers	#~, ~, layers, :
+	m	(Lnet/minecraft/world/World;III)Z	func_150155_m	tryBreak	#~, ~, ~, tryBreak
+		p	1	p_150155_1_	world	#~, ~, ~, world
+		p	2	p_150155_2_	x	#~, ~, ~, x
+		p	3	p_150155_3_	y	#~, ~, ~, y
+		p	4	p_150155_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

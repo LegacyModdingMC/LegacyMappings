@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeEndDecorator	net/minecraft/world/biome/BiomeEndDecorator	
+	f	Lnet/minecraft/world/gen/feature/WorldGenerator;	field_76835_L	spikeGen	#spikeGen, :, endStoneFillerFeature, pillar
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EnumCreatureAttribute	net/minecraft/entity/EnumCreatureAttribute	
+	f	Lnet/minecraft/entity/EnumCreatureAttribute;	UNDEFINED	UNDEFINED	#~, ~, DEFAULT, UNDEFINED
+	f	Lnet/minecraft/entity/EnumCreatureAttribute;	UNDEAD	UNDEAD	#~, ~, UNDEAD, :
+	f	Lnet/minecraft/entity/EnumCreatureAttribute;	ARTHROPOD	ARTHROPOD	#~, ~, ARTHROPOD, :
+	f	[Lnet/minecraft/entity/EnumCreatureAttribute;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/EnumCreatureAttribute;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/entity/EnumCreatureAttribute;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1597_1_	p_i1597_1_	#~, ~, ~, ~
+		p	2	p_i1597_2_	p_i1597_2_	#~, ~, ~, ~

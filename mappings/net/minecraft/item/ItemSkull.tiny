@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSkull	net/minecraft/item/ItemSkull	
+	f	[Ljava/lang/String;	field_94587_a	PLAYER_SKULL_TYPES	#~, ~, ~, PLAYER_SKULL_TYPES
+	f	[Ljava/lang/String;	field_82807_a	skullTypes	#skullTypes, SKULL_TYPES, :, :
+	f	[Lnet/minecraft/util/IIcon;	field_94586_c	sprites	#~, ~, ~, sprites
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityIronGolem	net/minecraft/entity/monster/EntityIronGolem	
+	f	Lnet/minecraft/village/Village;	field_70857_d	villageObj	#villageObj, village, :, :
+	f	I	field_70858_e	homeCheckTimer	#homeCheckTimer, :, ~, mobTickCooldown
+		c	deincrements, and a distance-to-home check is done at 0
+	f	I	field_70855_f	attackTimer	#attackTimer, :, attackTicksLeft, :
+	f	I	field_70856_g	holdRoseTick	#holdRoseTick, :, lookingAtVillagerTicksLeft, :
+	m	(Z)V	func_70851_e	setHoldingRose	#setHoldingRose, :, setLookingAtVillager, :
+		p	1	p_70851_1_	lookingAtVillager	#~, ~, lookingAtVillager, :
+	m	()Lnet/minecraft/village/Village;	func_70852_n	getVillage	#getVillage, :, ~, getVillage
+	m	()I	func_70854_o	getAttackTimer	#getAttackTimer, :, getAttackTicksLeft, :
+	m	()I	func_70853_p	getHoldRoseTick	#getHoldRoseTick, :, getLookingAtVillagerTicks, :
+	m	()Z	func_70850_q	isPlayerCreated	#isPlayerCreated, :, :, :
+	m	(Z)V	func_70849_f	setPlayerCreated	#setPlayerCreated, :, :, :
+		p	1	p_70849_1_	playerCreated	#playerCreated, :, :, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1694_1_	worldIn	#worldIn, :, ~, ~

@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityEnderman	net/minecraft/entity/monster/EntityEnderman	
+	f	Ljava/util/UUID;	field_110192_bp	attackingSpeedBoostModifierUUID	#attackingSpeedBoostModifierUUID, ATTACKING_SPEED_BOOST_ID, ATTACKING_SPEED_BOOST_UUID, ATTACK_SPEED_BOOST_UUID
+	f	Lnet/minecraft/entity/ai/attributes/AttributeModifier;	field_110193_bq	attackingSpeedBoostModifier	#attackingSpeedBoostModifier, ATTACKING_SPEED_BOOST, endermanAttributeModifier, ATTACK_SPEED_BOOST
+	f	[Z	field_70827_d	carriableBlocks	#carriableBlocks, CARRIABLE_BLOCKS, ~, HOLDABLE_BLOCKS
+	f	I	field_70828_e	teleportDelay	#teleportDelay, :, ~, teleportCountdown
+		c	Counter to delay the teleportation of an enderman towards the currently attacked target
+	f	I	field_70826_g	stareTimer	#stareTimer, :, ~, angryStareCooldown
+		c	A player must stare at an enderman for 5 ticks before it becomes aggressive. This field counts those ticks.
+	f	Lnet/minecraft/entity/Entity;	field_110194_bu	lastEntityToAttack	#lastEntityToAttack, :, ~, lastTarget
+	f	Z	field_104003_g	isAggressive	#isAggressive, :, ~, angry
+	m	(I)V	func_70817_b	setCarryingData	#setCarryingData, :, ~, setCarriedBlockMetadata
+		c	Set the metadata of the block an enderman carries
+		p	1	p_70817_1_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/Block;)V	func_146081_a	setCarriedBlock	#setCarriedBlock, :, ~, setCarriedBlock
+		c	Sets the block carried by this Enderman
+		p	1	p_146081_1_	carriedBlock	#~, ~, ~, carriedBlock
+	m	(Z)V	func_70819_e	setScreaming	#setScreaming, :, ~, setAngry
+		p	1	p_70819_1_	screaming	#screaming, :, ~, angry
+	m	()Z	func_70820_n	teleportRandomly	#teleportRandomly, :, :, tryRandomTeleport
+		c	Teleport the enderman to a random nearby position
+	m	(Lnet/minecraft/entity/Entity;)Z	func_70816_c	teleportToEntity	#teleportToEntity, :, teleportTo, tryTeleportTo
+		c	Teleport the enderman to another entity
+		p	1	p_70816_1_	target	#~, ~, entity, target
+	m	()Lnet/minecraft/block/Block;	func_146080_bZ	getCarriedBlock	#getCarriedBlock, :, ~, getCarriedBlock
+		c	Gets the block carried by this Enderman
+	m	()I	func_70824_q	getCarryingData	#getCarryingData, :, ~, getCarriedBlockMetadata
+		c	Get the metadata of the block an enderman carries
+	m	()Z	func_70823_r	isScreaming	#isScreaming, :, isAngry, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_70821_d	shouldAttackPlayer	#shouldAttackPlayer, :, isPlayerStaring, canGetAngryAt
+		c	Checks to see if this enderman should be attacking this player
+		p	1	p_70821_1_	player	#player, :, :, target
+	m	(DDD)Z	func_70825_j	teleportTo	#teleportTo, :, :, tryTeleport
+		c	Teleport the enderman
+		p	1	p_70825_1_	x	#x, :, :, :
+		p	3	p_70825_3_	y	#y, :, :, :
+		p	5	p_70825_5_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1734_1_	worldIn	#worldIn, :, ~, world
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

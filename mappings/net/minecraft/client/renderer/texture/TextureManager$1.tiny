@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/TextureManager$1	net/minecraft/client/renderer/texture/TextureManager$1	
+	f	Lnet/minecraft/client/renderer/texture/ITextureObject;	field_135062_a	theTextureObject	#theTextureObject, :, texture, :
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_135061_b	theTextureManager	#theTextureManager, :, textureManager, :
+	m	(Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/renderer/texture/ITextureObject;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1283_1_	textureManager	#~, ~, textureManager, ~
+		p	2	p_i1283_2_	texture	#~, ~, texture, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

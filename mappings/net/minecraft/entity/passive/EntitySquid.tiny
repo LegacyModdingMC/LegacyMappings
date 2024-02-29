@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntitySquid	net/minecraft/entity/passive/EntitySquid	
+	f	F	field_70872_bC	randomMotionVecX	#randomMotionVecX, :, constantVelocityX, randomX
+	f	F	field_70869_bD	randomMotionVecY	#randomMotionVecY, :, constantVelocityY, randomY
+	f	F	field_70870_bE	randomMotionVecZ	#randomMotionVecZ, :, constantVelocityZ, randomZ
+	f	F	field_70861_d	squidPitch	#squidPitch, :, tiltAngle, squidPitch
+	f	F	field_70862_e	prevSquidPitch	#prevSquidPitch, :, prevTiltAngle, lastSquidPitch
+	f	F	field_70859_f	squidYaw	#squidYaw, :, rollAngle, squidYaw
+	f	F	field_70860_g	prevSquidYaw	#prevSquidYaw, :, prevRollAngle, lastSquisYaw
+	f	F	field_70867_h	squidRotation	#squidRotation, :, thrustTimer, squidRotation
+		c	appears to be rotation in radians; we already have pitch & yaw, so this completes the triumvirate.
+	f	F	field_70868_i	prevSquidRotation	#prevSquidRotation, :, prevThrustTimer, lastSquidRotation
+		c	previous squidRotation in radians
+	f	F	field_70866_j	tentacleAngle	#tentacleAngle, :, :, tentacleRotation
+		c	angle of the tentacles in radians
+	f	F	field_70865_by	lastTentacleAngle	#lastTentacleAngle, :, prevTentacleAngle, lastTentacleRotation
+		c	the last calculated angle of the tentacles in radians
+	f	F	field_70863_bz	randomMotionSpeed	#randomMotionSpeed, :, constantVelocityRate, :
+	f	F	field_70864_bA	rotationVelocity	#rotationVelocity, :, thrustTimerSpeed, movementVelocity
+		c	change in squidRotation in radians.
+	f	F	field_70871_bB	rotateSpeed	#rotateSpeed, :, turningSpeed, rotationVelocity
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1693_1_	worldIn	#worldIn, :, ~, ~

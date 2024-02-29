@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/MapGenBase	net/minecraft/world/gen/MapGenBase	
+	f	I	field_75040_a	range	#range, :, complexity, range
+		c	The number of Chunks to gen-check in any given direction.
+	f	Ljava/util/Random;	field_75038_b	rand	#rand, :, random, :
+		c	The RNG used by the MapGen classes.
+	f	Lnet/minecraft/world/World;	field_75039_c	worldObj	#worldObj, world, :, :
+		c	This world object.
+	m	(Lnet/minecraft/world/World;IIII[Lnet/minecraft/block/Block;)V	func_151538_a	place	#~, ~, ~, place
+		p	1	p_151538_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_151538_2_	chunkX	#~, ~, ~, chunkX
+		p	3	p_151538_3_	chunkZ	#~, ~, ~, chunkZ
+		p	4	p_151538_4_	centerChunkX	#~, ~, ~, centerChunkX
+		p	5	p_151538_5_	centerChunkZ	#~, ~, ~, centerChunkZ
+		p	6	p_151538_6_	blocks	#~, ~, ~, blocks
+	m	(Lnet/minecraft/world/chunk/IChunkProvider;Lnet/minecraft/world/World;II[Lnet/minecraft/block/Block;)V	func_151539_a	generate	#generate, :, ~, place
+		p	1	p_151539_1_	source	#~, ~, ~, source
+		p	2	p_151539_2_	world	#~, ~, ~, world
+		p	3	p_151539_3_	chunkX	#~, ~, ~, chunkX
+		p	4	p_151539_4_	chunkZ	#~, ~, ~, chunkZ
+		p	5	p_151539_5_	blocks	#~, ~, ~, blocks
+	m	()V	<init>	<init>	#~, ~, ~, ~

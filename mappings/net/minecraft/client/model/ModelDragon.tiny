@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelDragon	net/minecraft/client/model/ModelDragon	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78221_a	head	#head, :, :, :
+		c	The head Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78219_b	spine	#spine, :, neck, :
+		c	The spine Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78220_c	jaw	#jaw, :, :, :
+		c	The jaw Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78217_d	body	#body, :, :, :
+		c	The body Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78218_e	rearLeg	#rearLeg, :, :, :
+		c	The rear leg Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78215_f	frontLeg	#frontLeg, :, :, :
+		c	The front leg Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78216_g	rearLegTip	#rearLegTip, :, :, :
+		c	The rear leg tip Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78226_h	frontLegTip	#frontLegTip, :, :, :
+		c	The front leg tip Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78227_i	rearFoot	#rearFoot, :, :, :
+		c	The rear foot Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78224_j	frontFoot	#frontFoot, :, :, :
+		c	The front foot Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78225_k	wing	#wing, :, :, :
+		c	The wing Model renderer of the dragon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78222_l	wingTip	#wingTip, :, :, :
+		c	The wing tip Model renderer of the dragon
+	f	F	field_78223_m	partialTicks	#partialTicks, :, tickDelta, :
+	m	(D)F	func_78214_a	updateRotations	#updateRotations, :, clampAngle, tickRotation
+		c	Updates the rotations in the parameters for rotations greater than 180 degrees or less than -180 degrees. It adds or subtracts 360 degrees, so that the appearance is the same, although the numbers are then simplified to range -180 to 180
+		p	1	p_78214_1_	rotation	#~, ~, angle, rotation
+	m	(F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1169_1_	reduction	#~, ~, ~, reduction

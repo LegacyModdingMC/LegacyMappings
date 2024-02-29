@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/SpawnerAnimals	net/minecraft/world/SpawnerAnimals	
+	f	Ljava/util/HashMap;	field_77193_b	eligibleChunksForSpawning	#eligibleChunksForSpawning, :, ~, mobSpawningChunks
+		c	The 17x17 area around the player where mobs can spawn
+	m	(Lnet/minecraft/world/World;II)Lnet/minecraft/world/ChunkPosition;	func_151350_a	getRandomPosInChunk	#~, ~, getRandomPosInChunk, :
+		p	0	p_151350_0_	world	#~, ~, world, :
+		p	1	p_151350_1_	chunkX	#~, ~, chunkX, :
+		p	2	p_151350_2_	chunkZ	#~, ~, chunkZ, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/biome/BiomeGenBase;IIIILjava/util/Random;)V	func_77191_a	performWorldGenSpawning	#performWorldGenSpawning, :, spawnMobs, populateChunk
+		c	Called during chunk generation to spawn initial creatures.
+		p	0	p_77191_0_	worldIn	#worldIn, :, world, :
+		p	1	p_77191_1_	biomeIn	#biomeIn, :, biome, :
+		p	2	p_77191_2_	centerX	#centerX, :, x, chunkCenterX
+		p	3	p_77191_3_	centerZ	#centerZ, :, z, chunkCenterZ
+		p	4	p_77191_4_	diameterX	#diameterX, :, randomX, rangeX
+		p	5	p_77191_5_	diameterZ	#diameterZ, :, randomZ, rangeZ
+		p	6	p_77191_6_	randomIn	#randomIn, :, random, :
+	m	(Lnet/minecraft/world/WorldServer;ZZZ)I	func_77192_a	findChunksForSpawning	#findChunksForSpawning, :, tickSpawners, tick
+		c	adds all chunks within the spawn radius of the players to eligibleChunksForSpawning. pars: the world, hostileCreatures, passiveCreatures. returns number of eligible chunks.
+		p	1	p_77192_1_	worldServerIn	#worldServerIn, :, world, :
+		p	2	p_77192_2_	spawnHostileMobs	#spawnHostileMobs, :, spawnAnimals, :
+		p	3	p_77192_3_	spawnPeacefulMobs	#spawnPeacefulMobs, :, spawnMonsters, :
+		p	4	p_77192_4_	spawnOnSetTickRate	#spawnOnSetTickRate, :, ~, spawnRareMobs
+	m	(Lnet/minecraft/entity/EnumCreatureType;Lnet/minecraft/world/World;III)Z	func_77190_a	canCreatureTypeSpawnAtLocation	#canCreatureTypeSpawnAtLocation, :, canSpawnAt, isValidSpawnPos
+		c	Returns whether or not the specified creature type can spawn at the specified location.
+		p	0	p_77190_0_	category	#~, ~, category, :
+		p	1	p_77190_1_	world	#~, ~, world, :
+		p	2	p_77190_2_	x	#~, ~, x, :
+		p	3	p_77190_3_	y	#~, ~, y, :
+		p	4	p_77190_4_	z	#~, ~, z, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

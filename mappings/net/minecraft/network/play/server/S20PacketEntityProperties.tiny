@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S20PacketEntityProperties	net/minecraft/network/play/server/S20PacketEntityProperties	
+	f	I	field_149445_a	entityId	#entityId, :, :, id
+	f	Ljava/util/List;	field_149444_b	snapshots	#snapshots, :, entries, :
+	m	(ILjava/util/Collection;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45236_1_	entityIdIn	#entityIdIn, :, entityId, id
+		p	2	p_i45236_2_	attributes	#~, ~, attributes, :
+	m	()I	func_149442_c	getEntityId	#getEntityId, :, :, :
+	m	()Ljava/util/List;	func_149441_d	getSnapshots	#getSnapshots, :, getEntries, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

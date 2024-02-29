@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityEnderEye	net/minecraft/entity/item/EntityEnderEye	
+	f	D	field_70224_b	targetX	#targetX, :, :, :
+		c	'x' location the eye should float towards.
+	f	D	field_70225_c	targetY	#targetY, :, :, :
+		c	'y' location the eye should float towards.
+	f	D	field_70222_d	targetZ	#targetZ, :, :, :
+		c	'z' location the eye should float towards.
+	f	I	field_70223_e	despawnTimer	#despawnTimer, :, lifespan, :
+	f	Z	field_70221_f	shatterOrDrop	#shatterOrDrop, :, dropsItem, :
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1758_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1758_2_	x	#x, :, :, :
+		p	4	p_i1758_4_	y	#y, :, :, :
+		p	6	p_i1758_6_	z	#z, :, :, :
+	m	(DID)V	func_70220_a	moveTowards	#moveTowards, :, ~, setTarget
+		c	The location the eye should float/move towards. Currently used for moving towards the nearest stronghold. Args: strongholdX, strongholdY, strongholdZ
+		p	1	p_70220_1_	x	#~, ~, ~, x
+		p	3	p_70220_3_	y	#~, ~, ~, y
+		p	4	p_70220_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1757_1_	worldIn	#worldIn, :, ~, ~

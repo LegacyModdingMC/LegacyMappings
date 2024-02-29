@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/IAttribute	net/minecraft/entity/ai/attributes/IAttribute	
+	m	()Ljava/lang/String;	func_111108_a	getAttributeUnlocalizedName	#getAttributeUnlocalizedName, getName, getId, getName
+	m	(D)D	func_111109_a	clampValue	#clampValue, :, clamp, :
+		p	1	p_111109_1_	value	#value, :, :, :
+	m	()D	func_111110_b	getDefaultValue	#getDefaultValue, :, :, getDefault
+	m	()Z	func_111111_c	getShouldWatch	#getShouldWatch, :, isTracked, isTrackable

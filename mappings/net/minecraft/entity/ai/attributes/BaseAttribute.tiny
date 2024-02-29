@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/BaseAttribute	net/minecraft/entity/ai/attributes/BaseAttribute	
+	f	Ljava/lang/String;	field_111115_a	unlocalizedName	#unlocalizedName, translationKey, id, name
+	f	D	field_111113_b	defaultValue	#defaultValue, :, :, :
+	f	Z	field_111114_c	shouldWatch	#shouldWatch, :, tracked, trackable
+	m	(Z)Lnet/minecraft/entity/ai/attributes/BaseAttribute;	func_111112_a	setShouldWatch	#setShouldWatch, :, setTracked, setTrackable
+		p	1	p_111112_1_	shouldWatchIn	#shouldWatchIn, :, tracked, trackable
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	(Ljava/lang/String;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1607_1_	name	#~, ~, ~, name
+		p	2	p_i1607_2_	defaultValue	#~, ~, ~, defaultValue

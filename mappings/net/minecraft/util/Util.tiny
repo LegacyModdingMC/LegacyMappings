@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Util	net/minecraft/util/Util	
+	m	()Lnet/minecraft/util/Util$EnumOS;	func_110647_a	getOSType	#getOSType, :, ~, getOS

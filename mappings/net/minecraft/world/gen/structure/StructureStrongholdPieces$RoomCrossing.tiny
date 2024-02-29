@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$RoomCrossing	net/minecraft/world/gen/structure/StructureStrongholdPieces$RoomCrossing	
+	f	I	field_75013_b	roomType	#roomType, :, ~, type
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_75014_c	strongholdRoomCrossingChestContents	#strongholdRoomCrossingChestContents, :, ~, LOOT_ENTRIES
+		c	Items that could generate in the chest that is located in Stronghold Room Crossing.
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$RoomCrossing;	func_75012_a	findValidPlacement	#findValidPlacement, :, ~, of
+		p	0	p_75012_0_	pieces	#~, ~, ~, pieces
+		p	1	p_75012_1_	random	#~, ~, ~, random
+		p	2	p_75012_2_	x	#~, ~, ~, x
+		p	3	p_75012_3_	y	#~, ~, ~, y
+		p	4	p_75012_4_	z	#~, ~, ~, z
+		p	5	p_75012_5_	facing	#~, ~, ~, facing
+		p	6	p_75012_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2079_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2079_2_	random	#~, ~, ~, random
+		p	3	p_i2079_3_	box	#~, ~, ~, box
+		p	4	p_i2079_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

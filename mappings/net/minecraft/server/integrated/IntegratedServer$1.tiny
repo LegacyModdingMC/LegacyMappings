@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/integrated/IntegratedServer$1	net/minecraft/server/integrated/IntegratedServer$1	
+	f	Lnet/minecraft/server/integrated/IntegratedServer;	field_76974_a	theIntegratedServer	#theIntegratedServer, :, integratedServer, server
+		c	Reference to the IntegratedServer object.
+	m	(Lnet/minecraft/server/integrated/IntegratedServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1315_1_	integratedServer	#~, ~, integratedServer, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/AttributeModifier	net/minecraft/entity/ai/attributes/AttributeModifier	
+	f	D	field_111174_a	amount	#amount, :, :, value
+	f	I	field_111172_b	operation	#operation, :, :, :
+	f	Ljava/lang/String;	field_111173_c	name	#name, :, :, :
+	f	Ljava/util/UUID;	field_111170_d	id	#id, :, :, :
+	f	Z	field_111171_e	isSaved	#isSaved, :, serialized, :
+		c	If false, this modifier is not saved in NBT. Used for "natural" modifiers like speed boost from sprinting
+	m	(Ljava/lang/String;DI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1605_1_	nameIn	#nameIn, :, name, :
+		p	2	p_i1605_2_	amountIn	#amountIn, :, amount, value
+		p	4	p_i1605_4_	operationIn	#operationIn, :, operation, :
+	m	(Ljava/util/UUID;Ljava/lang/String;DI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1606_1_	idIn	#idIn, :, uuid, id
+		p	2	p_i1606_2_	nameIn	#nameIn, :, name, :
+		p	3	p_i1606_3_	amountIn	#amountIn, :, amount, value
+		p	5	p_i1606_5_	operationIn	#operationIn, :, operation, :
+	m	()Ljava/util/UUID;	func_111167_a	getID	#getID, :, getId, :
+	m	(Z)Lnet/minecraft/entity/ai/attributes/AttributeModifier;	func_111168_a	setSaved	#setSaved, :, setSerialized, :
+		c	@see #isSaved
+		p	1	p_111168_1_	saved	#saved, :, serialized, :
+	m	()Ljava/lang/String;	func_111166_b	getName	#getName, :, :, :
+	m	()I	func_111169_c	getOperation	#getOperation, :, :, :
+	m	()D	func_111164_d	getAmount	#getAmount, :, :, get
+	m	()Z	func_111165_e	isSaved	#isSaved, :, isSerialized, :
+		c	@see #isSaved
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, object, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

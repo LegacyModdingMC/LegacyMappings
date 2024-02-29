@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundList	net/minecraft/client/audio/SoundList	
+	f	Ljava/util/List;	field_148577_a	soundList	#soundList, :, sounds, :
+	f	Z	field_148575_b	replaceExisting	#replaceExisting, :, replace, replacable
+		c	if true it will override all the sounds from the resourcepacks loaded before
+	f	Lnet/minecraft/client/audio/SoundCategory;	field_148576_c	category	#category, :, :, :
+	m	()Ljava/util/List;	func_148570_a	getSoundList	#getSoundList, :, getSounds, :
+	m	(Lnet/minecraft/client/audio/SoundCategory;)V	func_148571_a	setSoundCategory	#setSoundCategory, :, setCategory, :
+		p	1	p_148571_1_	soundCat	#soundCat, :, category, :
+	m	(Z)V	func_148572_a	setReplaceExisting	#setReplaceExisting, :, setReplace, setReplacable
+		p	1	p_148572_1_	replacable	#~, ~, replace, replacable
+	m	()Z	func_148574_b	canReplaceExisting	#canReplaceExisting, :, canReplace, isReplacable
+	m	()Lnet/minecraft/client/audio/SoundCategory;	func_148573_c	getSoundCategory	#getSoundCategory, :, getCategory, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

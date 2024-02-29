@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/IRecipe	net/minecraft/item/crafting/IRecipe	
+	m	()I	func_77570_a	getRecipeSize	#getRecipeSize, :, getSize, getInputCount
+		c	Returns the size of the recipe area
+	m	(Lnet/minecraft/inventory/InventoryCrafting;)Lnet/minecraft/item/ItemStack;	func_77572_b	getCraftingResult	#getCraftingResult, :, getResult, apply
+		c	Returns an Item that is the result of this recipe
+		p	1	p_77572_1_	inv	#inv, :, inventory, :
+	m	(Lnet/minecraft/inventory/InventoryCrafting;Lnet/minecraft/world/World;)Z	func_77569_a	matches	#matches, :, :, :
+		c	Used to check if a recipe matches current crafting inventory
+		p	1	p_77569_1_	inv	#inv, :, inventory, :
+		p	2	p_77569_2_	worldIn	#worldIn, :, world, :
+	m	()Lnet/minecraft/item/ItemStack;	func_77571_b	getRecipeOutput	#getRecipeOutput, :, getOutput, getResult
+		c	Get the result of this recipe, usually for display purposes (e.g. recipe book). If your recipe has more than one possible result (e.g. it's dynamic and depends on its inputs), then return an empty stack.

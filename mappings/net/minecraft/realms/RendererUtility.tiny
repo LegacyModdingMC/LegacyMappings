@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RendererUtility	net/minecraft/realms/RendererUtility	
+	m	(Lnet/minecraft/realms/RealmsButton;II)V	render	render	#~, ~, ~, ~
+		p	0	p_render_0_	p_render_0_	#~, ~, ~, ~
+		p	1	p_render_1_	p_render_1_	#~, ~, ~, ~
+		p	2	p_render_2_	p_render_2_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

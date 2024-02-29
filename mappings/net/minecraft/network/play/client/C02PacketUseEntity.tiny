@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C02PacketUseEntity	net/minecraft/network/play/client/C02PacketUseEntity	
+	f	I	field_149567_a	entityId	#entityId, :, :, targetId
+	f	Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	field_149566_b	action	#action, :, ~, action
+	m	(Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;	func_149564_a	getEntityFromWorld	#getEntityFromWorld, :, getEntity, getInteractTarget
+		p	1	p_149564_1_	worldIn	#worldIn, :, world, :
+	m	()Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	func_149565_c	getAction	#getAction, :, ~, getAction
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45251_1_	entity	#entity, :, ~, target
+		p	2	p_i45251_2_	action	#action, :, ~, action
+	m	()V	<init>	<init>	#~, ~, ~, ~

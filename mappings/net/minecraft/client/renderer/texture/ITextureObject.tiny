@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/ITextureObject	net/minecraft/client/renderer/texture/ITextureObject	
+	m	(Lnet/minecraft/client/resources/IResourceManager;)V	func_110551_a	loadTexture	#loadTexture, :, load, :
+		p	1	p_110551_1_	resourceManager	#resourceManager, :, manager, resourceManager
+	m	()I	func_110552_b	getGlTextureId	#getGlTextureId, :, getGlId, :

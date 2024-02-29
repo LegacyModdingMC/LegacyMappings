@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/profiler/PlayerUsageSnooper$1	net/minecraft/profiler/PlayerUsageSnooper$1	
+	f	Lnet/minecraft/profiler/PlayerUsageSnooper;	field_76344_a	snooper	#snooper, :, :, ~
+		c	The PlayerUsageSnooper object.
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1562_1_	snooper	#~, ~, snooper, ~
+	m	()V	run	run	#~, ~, ~, ~

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserListOpsEntry	net/minecraft/server/management/UserListOpsEntry	
+	f	I	field_152645_a	permissionLevel	#permissionLevel, :, :, :
+	m	(Lcom/google/gson/JsonObject;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1150_1_	json	#~, ~, jsonObject, json
+	m	()I	func_152644_a	getPermissionLevel	#getPermissionLevel, :, :, :
+		c	Gets the permission level of the user, as defined in the "level" attribute of the ops.json file
+	m	(Lcom/google/gson/JsonObject;)Lcom/mojang/authlib/GameProfile;	func_152643_b	constructProfile	#constructProfile, :, getProfileFromJson, deserialize
+		p	0	p_152643_0_	json	#~, ~, json, :
+	m	(Lcom/mojang/authlib/GameProfile;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1149_1_	modelSize	#modelSize, :, ~, profile
+		p	2	p_i1149_2_	permissionLevel	#~, ~, ~, permissionLevel

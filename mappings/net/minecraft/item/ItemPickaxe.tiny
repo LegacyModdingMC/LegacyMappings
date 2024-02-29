@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemPickaxe	net/minecraft/item/ItemPickaxe	
+	f	Ljava/util/Set;	field_150915_c	effectiveBlocks	#effectiveBlocks, EFFECTIVE_ON, EFFECTIVE_BLOCKS, :
+	m	(Lnet/minecraft/item/Item$ToolMaterial;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45347_1_	material	#material, :, ~, material
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

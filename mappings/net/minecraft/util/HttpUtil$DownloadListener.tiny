@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/HttpUtil$DownloadListener	net/minecraft/util/HttpUtil$DownloadListener	
+	m	(Ljava/io/File;)V	func_148522_a	onDownloadComplete	#onDownloadComplete, :, ~, apply
+		p	1	p_148522_1_	file	#~, ~, ~, file

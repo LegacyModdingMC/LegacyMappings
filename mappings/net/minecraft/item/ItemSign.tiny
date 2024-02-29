@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSign	net/minecraft/item/ItemSign	
+	m	()V	<init>	<init>	#~, ~, ~, ~

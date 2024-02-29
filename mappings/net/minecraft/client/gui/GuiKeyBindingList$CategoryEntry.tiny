@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiKeyBindingList$CategoryEntry	net/minecraft/client/gui/GuiKeyBindingList$CategoryEntry	
+	f	Lnet/minecraft/client/gui/GuiKeyBindingList;	field_148287_a	controlListWidget	#~, ~, ~, controlListWidget
+	f	Ljava/lang/String;	field_148285_b	labelText	#labelText, :, ~, name
+	f	I	field_148286_c	labelWidth	#labelWidth, :, ~, nameWidth
+	m	(Lnet/minecraft/client/gui/GuiKeyBindingList;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i45028_2_	name	#name, :, ~, name
+		p	1	p_i45028_1_	p_i45028_1_	#~, ~, ~, ~

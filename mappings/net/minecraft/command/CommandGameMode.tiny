@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandGameMode	net/minecraft/command/CommandGameMode	
+	m	()[Ljava/lang/String;	func_71538_c	getListOfPlayerUsernames	#getListOfPlayerUsernames, :, ~, getPlayerNames
+		c	Returns String array containing all player usernames in the server.
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/world/WorldSettings$GameType;	func_71539_b	getGameModeFromCommand	#getGameModeFromCommand, :, ~, parseGameMode
+		c	Gets the Game Mode specified in the command.
+		p	1	p_71539_1_	sender	#sender, :, ~, source
+		p	2	p_71539_2_	gameModeString	#gameModeString, :, ~, s
+	m	()V	<init>	<init>	#~, ~, ~, ~

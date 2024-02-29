@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIAvoidEntity	net/minecraft/entity/ai/EntityAIAvoidEntity	
+	f	Lnet/minecraft/command/IEntitySelector;	field_98218_a	entityFilter	#~, ~, ~, entityFilter
+	f	Lnet/minecraft/entity/EntityCreature;	field_75380_a	theEntity	#theEntity, entity, mob, :
+		c	The entity we are attached to
+	f	D	field_75378_b	farSpeed	#farSpeed, :, slowSpeed, :
+	f	D	field_75379_c	nearSpeed	#nearSpeed, :, fastSpeed, :
+	f	Lnet/minecraft/entity/Entity;	field_75376_d	closestLivingEntity	#closestLivingEntity, :, targetEntity, target
+	f	F	field_75377_e	distanceFromEntity	#distanceFromEntity, :, fleeDistance, distance
+	f	Lnet/minecraft/pathfinding/PathEntity;	field_75374_f	entityPathEntity	#entityPathEntity, path, fleePath, :
+		c	The PathEntity of our entity
+	f	Lnet/minecraft/pathfinding/PathNavigate;	field_75375_g	entityPathNavigate	#entityPathNavigate, navigation, fleeingEntityNavigation, navigation
+		c	The PathNavigate of our entity
+	f	Ljava/lang/Class;	field_75381_h	targetEntityClass	#targetEntityClass, :, ~, targetType
+		c	The class of the entity we should avoid
+	m	(Lnet/minecraft/entity/EntityCreature;Ljava/lang/Class;FDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1616_1_	mob	#~, ~, mob, :
+		p	2	p_i1616_2_	targetType	#~, ~, fleeFromType, targetType
+		p	3	p_i1616_3_	distance	#~, ~, distance, :
+		p	4	p_i1616_4_	slowSpeed	#~, ~, slowSpeed, :
+		p	6	p_i1616_6_	fastSpeed	#~, ~, fastSpeed, :
+	m	(Lnet/minecraft/entity/ai/EntityAIAvoidEntity;)Lnet/minecraft/entity/EntityCreature;	access$000	access$000	#~, ~, ~, getMob
+		p	0	p_access$000_0_	fleeEntityGoal	#~, ~, ~, fleeEntityGoal

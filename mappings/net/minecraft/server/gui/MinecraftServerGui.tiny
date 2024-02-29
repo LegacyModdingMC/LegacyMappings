@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/MinecraftServerGui	net/minecraft/server/gui/MinecraftServerGui	
+	f	Ljava/awt/Font;	field_164249_a	serverGuiFont	#serverGuiFont, SERVER_GUI_FONT, FONT_MONOSPACE, :
+	f	Lorg/apache/logging/log4j/Logger;	field_164248_b	LOGGER	#LOGGER, :, :, :
+	f	Lnet/minecraft/server/dedicated/DedicatedServer;	field_120021_b	server	#server, :, :, :
+	m	(Lnet/minecraft/server/dedicated/DedicatedServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2362_1_	serverIn	#serverIn, :, server, :
+	m	()Ljavax/swing/JComponent;	func_120019_b	getStatsComponent	#getStatsComponent, :, createStatsPanel, :
+		c	Generates new StatsComponent and returns it.
+	m	(Ljavax/swing/JTextArea;Ljavax/swing/JScrollPane;Ljava/lang/String;)V	func_164247_a	appendLine	#appendLine, :, appendToConsole, :
+		p	1	p_164247_1_	textArea	#textArea, :, :, :
+		p	2	p_164247_2_	scrollPane	#scrollPane, :, :, :
+		p	3	p_164247_3_	line	#line, :, ~, logString
+	m	(Lnet/minecraft/server/dedicated/DedicatedServer;)V	func_120016_a	createServerGui	#createServerGui, :, create, :
+		c	Creates the server GUI and sets it visible for the user.
+		p	0	p_120016_0_	serverIn	#serverIn, :, server, :
+	m	(Lnet/minecraft/server/gui/MinecraftServerGui;)Lnet/minecraft/server/dedicated/DedicatedServer;	access$000	access$000	#~, ~, ~, getServerFrom
+		p	0	p_access$000_0_	dedicatedServerGui	#~, ~, ~, dedicatedServerGui
+	m	()Ljavax/swing/JComponent;	func_120020_c	getPlayerListComponent	#getPlayerListComponent, :, createPlaysPanel, :
+		c	Generates new PlayerListComponent and returns it.
+	m	()Ljavax/swing/JComponent;	func_120018_d	getLogComponent	#getLogComponent, :, createLogPanel, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

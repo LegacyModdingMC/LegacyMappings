@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelBox	net/minecraft/client/model/ModelBox	
+	f	F	field_78252_a	posX1	#posX1, :, minX, :
+		c	X vertex coordinate of lower box corner
+	f	F	field_78250_b	posY1	#posY1, :, minY, :
+		c	Y vertex coordinate of lower box corner
+	f	F	field_78251_c	posZ1	#posZ1, :, minZ, :
+		c	Z vertex coordinate of lower box corner
+	f	F	field_78248_d	posX2	#posX2, :, maxX, :
+		c	X vertex coordinate of upper box corner
+	f	F	field_78249_e	posY2	#posY2, :, maxY, :
+		c	Y vertex coordinate of upper box corner
+	f	F	field_78246_f	posZ2	#posZ2, :, maxZ, :
+		c	Z vertex coordinate of upper box corner
+	f	Ljava/lang/String;	field_78247_g	boxName	#boxName, :, name, id
+	f	[Lnet/minecraft/client/model/PositionTextureVertex;	field_78253_h	vertexPositions	#vertexPositions, :, positions, vertices
+		c	The (x,y,z) vertex positions and (u,v) texture coordinates for each of the 8 points on a cube
+	f	[Lnet/minecraft/client/model/TexturedQuad;	field_78254_i	quadList	#quadList, :, quads, faces
+		c	An array of 6 TexturedQuads, one for each face of a cube
+	m	(Lnet/minecraft/client/model/ModelRenderer;IIFFFIIIF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1171_1_	server	#server, :, part, :
+		p	2	p_i1171_2_	cacheFile	#cacheFile, :, u, textureU
+		p	3	p_i1171_3_	textureV	#~, ~, v, textureV
+		p	4	p_i1171_4_	minX	#~, ~, x, minX
+		p	5	p_i1171_5_	minY	#~, ~, y, minY
+		p	6	p_i1171_6_	minZ	#~, ~, z, minZ
+		p	7	p_i1171_7_	sizeX	#~, ~, sizeX, :
+		p	8	p_i1171_8_	sizeY	#~, ~, sizeY, :
+		p	9	p_i1171_9_	sizeZ	#~, ~, sizeZ, :
+		p	10	p_i1171_10_	increase	#~, ~, reduction, increase
+	m	(Lnet/minecraft/client/renderer/Tessellator;F)V	func_78245_a	render	#render, :, ~, compile
+		c	Draw the six sided box defined by this ModelBox
+		p	1	p_78245_1_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	2	p_78245_2_	scale	#~, ~, ~, scale
+	m	(Ljava/lang/String;)Lnet/minecraft/client/model/ModelBox;	func_78244_a	setBoxName	#setBoxName, :, setName, setId
+		p	1	p_78244_1_	name	#name, :, :, id

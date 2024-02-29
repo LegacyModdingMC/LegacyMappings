@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFurnace	net/minecraft/block/BlockFurnace	
+	f	Z	field_149934_M	keepInventory	#keepInventory, :, :, ignoreBlockRemoval
+	f	Lnet/minecraft/util/IIcon;	field_149935_N	iconTop	#iconTop, :, ~, furnaceTopSprite
+	f	Lnet/minecraft/util/IIcon;	field_149936_O	iconFront	#iconFront, :, ~, furnaceFrontSprite
+		c	Front face of furnace either on or off
+	f	Ljava/util/Random;	field_149933_a	random	#~, ~, ~, random
+	f	Z	field_149932_b	isBurning	#isBurning, :, isLit, lit
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45407_1_	isBurning	#isBurning, :, lit, :
+	m	(ZLnet/minecraft/world/World;III)V	func_149931_a	updateFurnaceBlockState	#updateFurnaceBlockState, :, ~, updateLitState
+		c	Update which block the furnace is using depending on whether or not it is burning
+		p	0	p_149931_0_	lit	#~, ~, ~, lit
+		p	1	p_149931_1_	world	#~, ~, ~, world
+		p	2	p_149931_2_	x	#~, ~, ~, x
+		p	3	p_149931_3_	y	#~, ~, ~, y
+		p	4	p_149931_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)V	func_149930_e	updateFacing	#~, ~, ~, updateFacing
+		p	1	p_149930_1_	world	#~, ~, ~, world
+		p	2	p_149930_2_	x	#~, ~, ~, x
+		p	3	p_149930_3_	y	#~, ~, ~, y
+		p	4	p_149930_4_	z	#~, ~, ~, z

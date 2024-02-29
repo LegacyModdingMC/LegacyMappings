@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemBow	net/minecraft/item/ItemBow	
+	f	[Ljava/lang/String;	field_94601_a	bowPullIconNameArray	#bowPullIconNameArray, :, animationFrames, BOW_PULLING_LEVELS
+	f	[Lnet/minecraft/util/IIcon;	field_94600_b	iconArray	#iconArray, :, ~, bowSprites
+	m	(I)Lnet/minecraft/util/IIcon;	func_94599_c	getItemIconForUseDuration	#getItemIconForUseDuration, :, ~, getBowSprite
+		c	used to cycle through icons based on their used duration, i.e. for the bow
+		p	1	p_94599_1_	id	#~, ~, ~, id
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

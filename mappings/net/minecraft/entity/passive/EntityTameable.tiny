@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityTameable	net/minecraft/entity/passive/EntityTameable	
+	f	Lnet/minecraft/entity/ai/EntityAISit;	field_70911_d	aiSit	#aiSit, :, sitGoal, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;)Z	func_142018_a	shouldAttackEntity	#shouldAttackEntity, :, canAttackWithOwner, shouldAttack
+		p	1	p_142018_1_	target	#target, :, :, attackedEntity
+		p	2	p_142018_2_	owner	#owner, :, :, attacker
+	m	(Ljava/lang/String;)V	func_152115_b	setOwnerId	#setOwnerId, :, ~, setOwnerName
+		p	1	p_152115_1_	ownerUuid	#ownerUuid, :, ~, name
+	m	()Z	func_70909_n	isTamed	#isTamed, :, :, :
+	m	()Z	func_70906_o	isSitting	#isSitting, :, :, :
+	m	()Lnet/minecraft/entity/ai/EntityAISit;	func_70907_r	getAISit	#getAISit, :, getSitGoal, :
+		c	Returns the AITask responsible of the sit logic
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_152114_e	isOwner	#isOwner, :, :, ~
+		p	1	p_152114_1_	entityIn	#entityIn, :, entity, ~
+	m	(Z)V	func_70908_e	playTameEffect	#playTameEffect, :, showEmoteParticle, addTamingParticles
+		c	Play the taming effect, will either be hearts or smoke depending on status
+		p	1	p_70908_1_	play	#play, :, positive, success
+	m	(Z)V	func_70903_f	setTamed	#setTamed, :, :, :
+		p	1	p_70903_1_	tamed	#tamed, :, :, :
+	m	(Z)V	func_70904_g	setSitting	#setSitting, :, :, :
+		p	1	p_70904_1_	sitting	#sitting, :, :, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1604_1_	worldIn	#worldIn, :, ~, ~

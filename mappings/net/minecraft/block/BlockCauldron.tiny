@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCauldron	net/minecraft/block/BlockCauldron	
+	f	Lnet/minecraft/util/IIcon;	field_150030_M	iconBottom	#iconBottom, :, ~, spriteBottom
+	f	Lnet/minecraft/util/IIcon;	field_150029_a	iconInner	#iconInner, :, ~, spriteInner
+	f	Lnet/minecraft/util/IIcon;	field_150028_b	iconTop	#iconTop, :, ~, spriteTop
+	m	(Lnet/minecraft/world/World;IIII)V	func_150024_a	setWaterLevel	#setWaterLevel, :, ~, setLevel
+		p	1	p_150024_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150024_2_	x	#x, :, ~, x
+		p	3	p_150024_3_	y	#y, :, ~, y
+		p	4	p_150024_4_	z	#z, :, ~, z
+		p	5	p_150024_5_	level	#level, :, ~, level
+	m	(I)I	func_150027_b	getPowerFromMeta	#getPowerFromMeta, :, ~, getLevel
+		p	0	p_150027_0_	meta	#meta, :, ~, metadata
+	m	(I)F	func_150025_c	getRenderLiquidLevel	#getRenderLiquidLevel, :, ~, getHeightOfLevel
+		p	0	p_150025_0_	meta	#meta, :, ~, level
+	m	(Ljava/lang/String;)Lnet/minecraft/util/IIcon;	func_150026_e	getCauldronIcon	#getCauldronIcon, :, ~, getHorizontalSprite
+		p	0	p_150026_0_	iconName	#iconName, :, ~, sprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

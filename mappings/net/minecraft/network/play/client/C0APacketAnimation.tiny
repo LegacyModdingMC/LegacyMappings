@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C0APacketAnimation	net/minecraft/network/play/client/C0APacketAnimation	
+	f	I	field_149424_a	id	#id, :, ~, entityId
+	f	I	field_149423_b	type	#type, :, ~, type
+	m	()I	func_149421_d	getType	#getType, :, ~, getType
+	m	(Lnet/minecraft/entity/Entity;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45238_1_	entity	#~, ~, ~, entity
+		p	2	p_i45238_2_	type	#~, ~, ~, type
+	m	()V	<init>	<init>	#~, ~, ~, ~

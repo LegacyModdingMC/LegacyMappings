@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemEnchantedBook	net/minecraft/item/ItemEnchantedBook	
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/enchantment/EnchantmentData;)V	func_92115_a	addEnchantment	#addEnchantment, :, :, :
+		c	Adds an stored enchantment to an enchanted book ItemStack
+		p	1	p_92115_1_	stack	#stack, :, itemStack, stack
+		p	2	p_92115_2_	enchantment	#enchantment, :, info, entry
+	m	(Lnet/minecraft/enchantment/Enchantment;Ljava/util/List;)V	func_92113_a	getAll	#getAll, :, getEnchantments, addToCreativeMenu
+		p	1	p_92113_1_	enchantment	#enchantment, :, :, :
+		p	2	p_92113_2_	list	#list, :, :, inventory
+	m	(Lnet/minecraft/enchantment/EnchantmentData;)Lnet/minecraft/item/ItemStack;	func_92111_a	getEnchantedItemStack	#getEnchantedItemStack, :, getAsItemStack, createStack
+		c	Returns the ItemStack of an enchanted version of this item.
+		p	1	p_92111_1_	data	#data, :, info, enchantment
+	m	(Ljava/util/Random;III)Lnet/minecraft/util/WeightedRandomChestContent;	func_92112_a	getRandom	#getRandom, :, getLootTable, createLoot
+		p	1	p_92112_1_	rand	#rand, :, random, :
+		p	2	p_92112_2_	minChance	#minChance, :, min, minItemChance
+		p	3	p_92112_3_	maxChance	#maxChance, :, max, maxItemChance
+		p	4	p_92112_4_	weight	#weight, :, :, :
+	m	(Ljava/util/Random;)Lnet/minecraft/util/WeightedRandomChestContent;	func_92114_b	getRandom	#getRandom, :, getLootTable, createLoot
+		p	1	p_92114_1_	rand	#rand, :, random, :
+	m	(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/nbt/NBTTagList;	func_92110_g	getEnchantments	#getEnchantments, :, getEnchantmentNbt, getStoredEnchantments
+		p	1	p_92110_1_	stack	#stack, :, itemStack, stack
+	m	()V	<init>	<init>	#~, ~, ~, ~

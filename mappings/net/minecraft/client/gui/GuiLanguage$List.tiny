@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiLanguage$List	net/minecraft/client/gui/GuiLanguage$List	
+	f	Lnet/minecraft/client/gui/GuiLanguage;	field_148178_k	languageOptionsScreen	#~, ~, ~, languageOptionsScreen
+	f	Ljava/util/List;	field_148176_l	langCodeList	#langCodeList, :, ~, languages
+		c	A list containing the many different locale language codes.
+	f	Ljava/util/Map;	field_148177_m	languageMap	#languageMap, :, ~, defenitionByLanguage
+		c	The map containing the Locale-Language pairs.
+	m	(Lnet/minecraft/client/gui/GuiLanguage;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1042_1_	p_i1042_1_	#~, ~, ~, ~

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/OpenGlCapsChecker	net/minecraft/client/renderer/OpenGlCapsChecker	
+	m	()Z	func_74371_a	checkARBOcclusion	#checkARBOcclusion, :, supportsOcclusionQuery, glArbOcclusionQuery
+		c	Checks if we support OpenGL occlusion.

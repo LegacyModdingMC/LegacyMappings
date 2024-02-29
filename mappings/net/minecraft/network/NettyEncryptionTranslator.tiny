@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NettyEncryptionTranslator	net/minecraft/network/NettyEncryptionTranslator	
+	f	Ljavax/crypto/Cipher;	field_150507_a	cipher	#cipher, :, :, :
+	f	[B	field_150505_b	inputBuffer	#inputBuffer, :, conversionBuffer, :
+	f	[B	field_150506_c	outputBuffer	#outputBuffer, :, encryptionBuffer, :
+	m	(Lio/netty/buffer/ByteBuf;)[B	func_150502_a	bufToBytes	#bufToBytes, :, toByteArray, :
+		p	1	p_150502_1_	buf	#buf, :, ~, buffer
+	m	(Lio/netty/buffer/ByteBuf;Lio/netty/buffer/ByteBuf;)V	func_150504_a	cipher	#cipher, :, encrypt, :
+		p	1	p_150504_1_	in	#in, :, buffer, bufferIn
+		p	2	p_150504_2_	out	#out, :, ~, bufferOut
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;)Lio/netty/buffer/ByteBuf;	func_150503_a	decipher	#decipher, :, decrypt, :
+		p	1	p_150503_1_	ctx	#ctx, :, context, :
+		p	2	p_150503_2_	buffer	#buffer, :, ~, buffer
+	m	(Ljavax/crypto/Cipher;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45140_1_	cipherIn	#cipherIn, :, ~, cipher

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockWorkbench	net/minecraft/block/BlockWorkbench	
+	f	Lnet/minecraft/util/IIcon;	field_150035_a	spriteSide	#~, ~, ~, spriteSide
+	f	Lnet/minecraft/util/IIcon;	field_150034_b	spriteFront	#~, ~, ~, spriteFront
+	m	()V	<init>	<init>	#~, ~, ~, ~

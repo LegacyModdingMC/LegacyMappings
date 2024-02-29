@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/achievement/GuiStats$StatsMobsList	net/minecraft/client/gui/achievement/GuiStats$StatsMobsList	
+	f	Lnet/minecraft/client/gui/achievement/GuiStats;	field_148223_k	parent	#~, ~, ~, parent
+	f	Ljava/util/List;	field_148222_l	mobs	#mobs, :, ~, entries
+	m	(Lnet/minecraft/client/gui/achievement/GuiStats;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45027_1_	p_i45027_1_	#~, ~, ~, ~

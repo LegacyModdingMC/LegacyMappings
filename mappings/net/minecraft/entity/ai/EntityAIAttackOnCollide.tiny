@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIAttackOnCollide	net/minecraft/entity/ai/EntityAIAttackOnCollide	
+	f	Lnet/minecraft/world/World;	field_75443_a	worldObj	#worldObj, world, :, :
+	f	Lnet/minecraft/entity/EntityCreature;	field_75441_b	attacker	#attacker, :, mob, entity
+	f	I	field_75439_d	attackTick	#attackTick, :, ~, attackCooldown
+		c	An amount of decrementing ticks that allows the entity to attack once the tick reaches 0.
+	f	D	field_75440_e	speedTowardsTarget	#speedTowardsTarget, :, speed, :
+		c	The speed with which the mob will approach the target
+	f	Z	field_75437_f	longMemory	#longMemory, :, pauseWhenMobIdle, :
+		c	When true, the mob will continue chasing its target, even if it can't find a path to them right now.
+	f	Lnet/minecraft/pathfinding/PathEntity;	field_75438_g	entityPathEntity	#entityPathEntity, path, :, :
+		c	The PathEntity of our entity.
+	f	Ljava/lang/Class;	field_75444_h	classTarget	#classTarget, :, targetClass, targetType
+	f	I	field_75445_i	delayCounter	#delayCounter, :, updateCountdownTicks, :
+	f	D	field_151497_i	targetX	#targetX, :, :, :
+	f	D	field_151495_j	targetY	#targetY, :, :, :
+	f	D	field_151496_k	targetZ	#targetZ, :, :, :
+	m	(Lnet/minecraft/entity/EntityCreature;DZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1636_1_	creature	#creature, :, mob, entity
+		p	2	p_i1636_2_	speedIn	#speedIn, :, speed, :
+		p	4	p_i1636_4_	useLongMemory	#useLongMemory, :, pauseWhenMobIdle, :
+	m	(Lnet/minecraft/entity/EntityCreature;Ljava/lang/Class;DZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1635_1_	creature	#creature, :, mob, entity
+		p	2	p_i1635_2_	targetClass	#targetClass, :, :, targetType
+		p	3	p_i1635_3_	speedIn	#speedIn, :, speed, :
+		p	5	p_i1635_5_	useLongMemory	#useLongMemory, :, pauseWhenMobIdle, :

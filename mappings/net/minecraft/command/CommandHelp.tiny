@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandHelp	net/minecraft/command/CommandHelp	
+	m	()Ljava/util/Map;	func_71535_c	getCommands	#getCommands, :, ~, getCommands
+	m	(Lnet/minecraft/command/ICommandSender;)Ljava/util/List;	func_71534_d	getSortedPossibleCommands	#getSortedPossibleCommands, :, ~, getAvailableCommands
+		c	Returns a sorted list of all possible commands for the given ICommandSender.
+		p	1	p_71534_1_	source	#~, ~, ~, source
+	m	()V	<init>	<init>	#~, ~, ~, ~

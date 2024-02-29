@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFalling	net/minecraft/block/BlockFalling	
+	f	Z	field_149832_M	fallInstantly	#fallInstantly, :, instantFall, fallImmediately
+	m	(Lnet/minecraft/world/World;IIII)V	func_149828_a	playSoundWhenFallen	#playSoundWhenFallen, :, ~, onTickFallingBlockEntity
+		p	1	p_149828_1_	world	#~, ~, ~, world
+		p	2	p_149828_2_	x	#~, ~, ~, x
+		p	3	p_149828_3_	y	#~, ~, ~, y
+		p	4	p_149828_4_	z	#~, ~, ~, z
+		p	5	p_149828_5_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/entity/item/EntityFallingBlock;)V	func_149829_a	onStartFalling	#onStartFalling, :, configureFallingBlockEntity, beforeStartFalling
+		p	1	p_149829_1_	fallingEntity	#fallingEntity, :, entity, fallingBlockEntity
+	m	(Lnet/minecraft/world/World;III)Z	func_149831_e	canFallBelow	#canFallBelow, :, ~, canFallThrough
+		p	0	p_149831_0_	world	#~, ~, ~, world
+		p	1	p_149831_1_	x	#~, ~, ~, x
+		p	2	p_149831_2_	y	#~, ~, ~, y
+		p	3	p_149831_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)V	func_149830_m	tryFall	#~, ~, ~, tryFall
+		p	1	p_149830_1_	world	#~, ~, ~, world
+		p	2	p_149830_2_	x	#~, ~, ~, x
+		p	3	p_149830_3_	y	#~, ~, ~, y
+		p	4	p_149830_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45405_1_	materialIn	#materialIn, :, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

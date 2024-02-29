@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S0APacketUseBed	net/minecraft/network/play/server/S0APacketUseBed	
+	f	I	field_149097_a	playerID	#playerID, :, entityId, id
+	f	I	field_149095_b	x	#x, :, :, :
+	f	I	field_149096_c	y	#y, :, :, :
+	f	I	field_149094_d	z	#z, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45210_1_	player	#player, :, :, :
+		p	2	p_i45210_2_	xPos	#xPos, :, x, :
+		p	3	p_i45210_3_	yPos	#yPos, :, y, :
+		p	4	p_i45210_4_	zPos	#zPos, :, z, :
+	m	(Lnet/minecraft/world/World;)Lnet/minecraft/entity/player/EntityPlayer;	func_149091_a	getPlayer	#getPlayer, :, :, :
+		p	1	p_149091_1_	worldIn	#worldIn, :, world, :
+	m	()I	func_149092_c	getX	#getX, :, :, :
+	m	()I	func_149090_d	getY	#getY, :, :, :
+	m	()I	func_149089_e	getZ	#getZ, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

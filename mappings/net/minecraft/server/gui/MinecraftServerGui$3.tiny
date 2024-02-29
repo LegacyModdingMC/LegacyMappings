@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/MinecraftServerGui$3	net/minecraft/server/gui/MinecraftServerGui$3	
+	f	Lnet/minecraft/server/gui/MinecraftServerGui;	field_120032_a	gui	#~, ~, ~, gui
+	m	(Ljava/awt/event/FocusEvent;)V	focusGained	focusGained	#~, ~, ~, ~
+		p	1	p_focusGained_1_	event	#~, ~, ~, event
+	m	(Lnet/minecraft/server/gui/MinecraftServerGui;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1221_1_	worldIn	#worldIn, :, ~, ~

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/network/NetHandlerHandshakeTCP$SwitchEnumConnectionState	net/minecraft/server/network/NetHandlerHandshakeTCP$SwitchEnumConnectionState	
+	f	[I	field_151291_a	VALUES	#VALUES, :, ~, NETWORK_STATE_VALUES
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

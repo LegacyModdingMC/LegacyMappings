@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/FlatGeneratorInfo	net/minecraft/world/gen/FlatGeneratorInfo	
+	f	Ljava/util/List;	field_82655_a	flatLayers	#flatLayers, :, layers, :
+		c	List of layers on this preset.
+	f	Ljava/util/Map;	field_82653_b	worldFeatures	#worldFeatures, :, structures, features
+		c	List of world features enabled on this preset.
+	f	I	field_82654_c	biomeToUse	#biomeToUse, :, biomeId, :
+	m	()I	func_82648_a	getBiome	#getBiome, :, getBiomeId, :
+		c	Return the biome used on this preset.
+	m	(I)V	func_82647_a	setBiome	#setBiome, :, setBiomeId, :
+		c	Set the biome used on this preset.
+		p	1	p_82647_1_	biome	#biome, :, biomeId, :
+	m	(Ljava/lang/String;)Lnet/minecraft/world/gen/FlatGeneratorInfo;	func_82651_a	createFlatGeneratorFromString	#createFlatGeneratorFromString, :, getHelper, of
+		p	0	p_82651_0_	flatGeneratorSettings	#flatGeneratorSettings, :, config, preset
+	m	(Ljava/lang/String;I)Lnet/minecraft/world/gen/FlatLayerInfo;	func_82646_a	parseLayer	#~, ~, ~, parseLayer
+		p	0	p_82646_0_	preset	#~, ~, ~, preset
+		p	1	p_82646_1_	y	#~, ~, ~, y
+	m	()Ljava/util/Map;	func_82644_b	getWorldFeatures	#getWorldFeatures, :, getStructures, getFeatures
+		c	Return the list of world features enabled on this preset.
+	m	(Ljava/lang/String;)Ljava/util/List;	func_82652_b	getLayers	#~, ~, ~, getLayers
+		p	0	p_82652_0_	preset	#~, ~, ~, preset
+	m	()Ljava/util/List;	func_82650_c	getFlatLayers	#getFlatLayers, :, getLayers, :
+		c	Return the list of layers on this preset.
+	m	()V	func_82645_d	updateLayers	#updateLayers, :, updateLayerLevel, processLayers
+	m	()Lnet/minecraft/world/gen/FlatGeneratorInfo;	func_82649_e	getDefaultFlatGenerator	#getDefaultFlatGenerator, :, createDefault, ofDefault
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

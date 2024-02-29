@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/EnumConnectionState$3	net/minecraft/network/EnumConnectionState$3	
+	m	(Ljava/lang/String;II)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1193_3_	id	#~, ~, id, ~
+		p	1	p_i1193_1_	p_i1193_1_	#~, ~, ~, ~
+		p	2	p_i1193_2_	p_i1193_2_	#~, ~, ~, ~

@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/PlayerListComponent	net/minecraft/server/gui/PlayerListComponent	
+	f	Lnet/minecraft/server/MinecraftServer;	field_120015_a	server	#server, :, :, :
+	f	I	field_120014_b	ticks	#ticks, :, tick, :
+	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2366_1_	server	#server, :, ~, server

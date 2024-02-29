@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelWolf	net/minecraft/client/model/ModelWolf	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78185_a	wolfHeadMain	#wolfHeadMain, :, ~, head
+		c	main box for the wolf head
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78183_b	wolfBody	#wolfBody, :, ~, body
+		c	The wolf's body
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78184_c	wolfLeg1	#wolfLeg1, :, ~, backRightLeg
+		c	Wolf'se first leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78181_d	wolfLeg2	#wolfLeg2, :, ~, backLeftLeg
+		c	Wolf's second leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78182_e	wolfLeg3	#wolfLeg3, :, ~, frontRightLeg
+		c	Wolf's third leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78179_f	wolfLeg4	#wolfLeg4, :, ~, frontLeftLeg
+		c	Wolf's fourth leg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78180_g	wolfTail	#wolfTail, :, ~, tail
+		c	The wolf's tail
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78186_h	wolfMane	#wolfMane, :, ~, neck
+		c	The wolf's mane
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,71 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenBigTree	net/minecraft/world/gen/feature/WorldGenBigTree	
+	f	[B	field_76507_a	otherCoordPairs	#otherCoordPairs, :, ~, MINOR_AXES
+		c	Contains three sets of two values that provide complimentary indices for a given 'major' index - 1 and 2 for 0, 0 and 2 for 1, and 0 and 1 for 2.
+	f	Ljava/util/Random;	field_76505_b	rand	#rand, :, ~, random
+		c	random seed for GenBigTree
+	f	Lnet/minecraft/world/World;	field_76506_c	worldObj	#worldObj, :, world, :
+		c	Reference to the World object.
+	f	[I	field_76503_d	basePos	#basePos, :, ~, origin
+		c	The position of the base of the tree.
+	f	I	field_76504_e	heightLimit	#heightLimit, :, maxHeight, height
+		c	Total height of the tree, including the canopy.
+	f	I	field_76501_f	height	#height, :, :, trunkHeight
+		c	Height of just the trunk of the tree.
+	f	D	field_76502_g	heightAttenuation	#heightAttenuation, :, heightModifier, trunkScale
+		c	The portion of the total height of the tree that is taken up by the trunk.
+	f	D	field_76514_h	branchDensity	#branchDensity, :, ~, ~
+	f	D	field_76515_i	branchSlope	#branchSlope, :, branchAngle, branchSlope
+	f	D	field_76512_j	scaleWidth	#scaleWidth, :, leafSizeModifer, branchLengthScale
+	f	D	field_76513_k	leafDensity	#leafDensity, :, leafHeightModifier, branchDensity
+	f	I	field_76510_l	trunkSize	#trunkSize, :, :, trunkWidth
+		c	Currently always 1, can be set to 2 in the class constructor to generate a double-sized tree trunk for big trees.
+	f	I	field_76511_m	heightLimitLimit	#heightLimitLimit, :, heightLimit, maxTrunkHeight
+		c	Sets the limit of the random value used to initialize the height limit.
+	f	I	field_76508_n	leafDistanceLimit	#leafDistanceLimit, :, leafRadius, foliageClusterHeight
+		c	Sets the distance limit for how far away the generator will populate leaves from the base leaf node.
+	f	[[I	field_76509_o	leafNodes	#leafNodes, :, ~, branches
+		c	Contains a list of a points at which to generate groups of leaves.
+	m	()V	func_76489_a	generateLeafNodeList	#generateLeafNodeList, :, addBlockCoords, makeBranches
+		c	Generates a list of leaf nodes for the tree, to be populated by generateLeaves.
+	m	(I)F	func_76490_a	layerSize	#layerSize, :, getLeafSizeAtHeight, getTreeShape
+		c	Gets the rough size of a layer of the tree.
+		p	1	p_76490_1_	y	#y, :, height, :
+	m	(III)V	func_76491_a	generateLeafNode	#generateLeafNode, :, ~, placeFoliageCluster
+		c	Generates the leaves surrounding an individual entry in the leafNodes list.
+		p	1	p_76491_1_	x	#~, ~, ~, x
+		p	2	p_76491_2_	baseY	#~, ~, ~, baseY
+		p	3	p_76491_3_	z	#~, ~, ~, z
+	m	(IIIFBLnet/minecraft/block/Block;)V	func_150529_a	placeCluster	#~, ~, ~, placeCluster
+		c	Place a cluster layer centered at the given coordinates, perpendicular to the\ngiven major axis.
+		p	1	p_150529_1_	x	#~, ~, ~, x
+		p	2	p_150529_2_	y	#~, ~, ~, y
+		p	3	p_150529_3_	z	#~, ~, ~, z
+		p	4	p_150529_4_	shape	#~, ~, ~, shape
+		p	5	p_150529_5_	majorAxis	#~, ~, ~, majorAxis
+		p	6	p_150529_6_	clusterBlock	#~, ~, ~, clusterBlock
+	m	([I[I)I	func_76496_a	checkBlockLine	#checkBlockLine, :, ~, tryBranch
+		c	Checks a line of blocks in the world from the first coordinate to triplet to the second, returning the distance (in blocks) before a non-air, non-leaf block is encountered and/or the end is encountered.
+		p	1	p_76496_1_	from	#~, ~, ~, from
+		p	2	p_76496_2_	to	#~, ~, ~, to
+	m	([I[ILnet/minecraft/block/Block;)V	func_150530_a	placeBranch	#~, ~, ~, placeBranch
+		p	1	p_150530_1_	from	#~, ~, ~, from
+		p	2	p_150530_2_	to	#~, ~, ~, to
+		p	3	p_150530_3_	log	#~, ~, ~, log
+	m	()V	func_76498_b	generateLeaves	#generateLeaves, :, :, placeFoliage
+		c	Generates the leaf portion of the tree as specified by the leafNodes list.
+	m	(I)F	func_76495_b	leafSize	#leafSize, :, getLeafRadius, getClusterShape
+		c	Returns the shape of the cluster at the given layer. The shape controls the\nsize and roundness of the layer.
+		p	1	p_76495_1_	y	#y, :, radius, layer
+	m	()V	func_76499_c	generateTrunk	#generateTrunk, :, :, placeTrunk
+		c	Places the trunk for the big tree that is being generated. Able to generate double-sized trunks by changing a field that is always 1 to 2.
+	m	(I)Z	func_76493_c	leafNodeNeedsBase	#leafNodeNeedsBase, :, moreLogsRequired, shouldPlaceBranch
+		c	Indicates whether or not a leaf node requires additional wood to be added to preserve integrity.
+		p	1	p_76493_1_	height	#~, ~, radius, height
+	m	()V	func_76494_d	generateLeafNodeBases	#generateLeafNodeBases, :, ~, placeBranches
+		c	Generates additional wood blocks to fill out the bases of different leaf nodes that would otherwise degrade.
+	m	()Z	func_76497_e	validTreeLocation	#validTreeLocation, :, canGenerate, canPlace
+		c	Returns a boolean indicating whether or not the current location for the tree, spanning basePos to to the height limit, is valid.
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2008_1_	notify	#notify, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

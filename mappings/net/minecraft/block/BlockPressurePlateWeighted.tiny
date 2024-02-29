@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPressurePlateWeighted	net/minecraft/block/BlockPressurePlateWeighted	
+	f	I	field_150068_a	maxWeight	#maxWeight, :, weight, :
+	m	(Ljava/lang/String;Lnet/minecraft/block/material/Material;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45436_1_	stepSound	#~, ~, ~, stepSound
+		p	2	p_i45436_2_	material	#~, ~, ~, material
+		p	3	p_i45436_3_	weight	#~, ~, ~, weight

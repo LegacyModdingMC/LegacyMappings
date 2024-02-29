@@ -1,0 +1,192 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/EntityRenderer	net/minecraft/client/renderer/EntityRenderer	
+	f	Lnet/minecraft/util/MouseFilter;	field_78541_x	mouseFilterDummy1	#mouseFilterDummy1, :, ~, ~
+		c	Mouse filter dummy 1
+	f	Lnet/minecraft/util/MouseFilter;	field_78540_y	mouseFilterDummy2	#mouseFilterDummy2, :, ~, ~
+		c	Mouse filter dummy 2
+	f	Lnet/minecraft/util/MouseFilter;	field_78538_z	mouseFilterDummy3	#mouseFilterDummy3, :, ~, ~
+		c	Mouse filter dummy 3
+	f	Lnet/minecraft/util/MouseFilter;	field_78489_A	mouseFilterDummy4	#mouseFilterDummy4, :, ~, ~
+		c	Mouse filter dummy 4
+	f	F	field_78490_B	thirdPersonDistance	#thirdPersonDistance, :, :, oldCamPos
+	f	F	field_78491_C	thirdPersonDistanceTemp	#thirdPersonDistanceTemp, thirdPersonDistancePrev, lastThirdPersonDistance, newCamPos
+		c	Third person distance temp
+	f	F	field_78485_D	debugCamYaw	#debugCamYaw, :, ~, oldCamPitch
+	f	F	field_78486_E	prevDebugCamYaw	#prevDebugCamYaw, :, ~, newCamPitch
+	f	F	field_78487_F	debugCamPitch	#debugCamPitch, :, ~, oldCamYaw
+	f	F	field_78488_G	prevDebugCamPitch	#prevDebugCamPitch, :, ~, newCamYaw
+	f	F	field_78496_H	smoothCamYaw	#smoothCamYaw, :, cursorDeltaX, totalMouseDX
+		c	Smooth cam yaw
+	f	F	field_78497_I	smoothCamPitch	#smoothCamPitch, :, cursorDeltaY, totalMouseDY
+		c	Smooth cam pitch
+	f	F	field_78498_J	smoothCamFilterX	#smoothCamFilterX, :, smoothedCursorDeltaX, smoothMouseDX
+		c	Smooth cam filter X
+	f	F	field_78499_K	smoothCamFilterY	#smoothCamFilterY, :, smoothedCursorDeltaY, smoothMouseDY
+		c	Smooth cam filter Y
+	f	F	field_78492_L	smoothCamPartialTicks	#smoothCamPartialTicks, :, lastTickDelta, :
+		c	Smooth cam partial ticks
+	f	F	field_78493_M	debugCamFOV	#debugCamFOV, :, ~, oldFov
+	f	F	field_78494_N	prevDebugCamFOV	#prevDebugCamFOV, :, ~, newFov
+	f	F	field_78495_O	camRoll	#camRoll, :, ~, oldCamRoll
+	f	F	field_78505_P	prevCamRoll	#prevCamRoll, :, ~, newCamRoll
+	f	Lnet/minecraft/client/renderer/texture/DynamicTexture;	field_78513_d	lightmapTexture	#lightmapTexture, :, :, :
+		c	The texture id of the blocklight/skylight texture used for lighting effects
+	f	[I	field_78504_Q	lightmapColors	#lightmapColors, :, lightmapTexturePixels, :
+		c	Colors computed in updateLightmap() and loaded into the lightmap emptyTexture
+	f	Lnet/minecraft/util/ResourceLocation;	field_110922_T	locationLightMap	#locationLightMap, :, lightmapTextureId, lightmapTextureLocation
+	f	F	field_78507_R	fovModifierHand	#fovModifierHand, :, movementFovMultiplier, :
+		c	FOV modifier hand
+	f	F	field_78506_S	fovModifierHandPrev	#fovModifierHandPrev, :, lastMovementFovMultiplier, lastFov
+		c	FOV modifier hand prev
+	f	F	field_78501_T	fovMultiplierTemp	#fovMultiplierTemp, :, ~, fov
+		c	FOV multiplier temp
+	f	F	field_82831_U	bossColorModifier	#bossColorModifier, :, skyDarkness, :
+	f	Z	field_78517_a	anaglyphEnable	#anaglyphEnable, :, anaglyphEnabled, :
+	f	F	field_82832_V	bossColorModifierPrev	#bossColorModifierPrev, :, lastSkyDarkness, :
+	f	Z	field_78500_U	cloudFog	#cloudFog, :, thickFog, thiccFog
+		c	Cloud fog mode
+	f	Lnet/minecraft/client/resources/IResourceManager;	field_147711_ac	resourceManager	#resourceManager, :, :, :
+	f	[Lnet/minecraft/util/ResourceLocation;	field_147712_ad	shaderResourceLocations	#shaderResourceLocations, SHADERS_TEXTURES, SHADERS_LOCATIONS, SHADERS
+	f	I	field_147713_ae	shaderIndex	#shaderIndex, :, forcedShaderIndex, shaderIndex
+	f	D	field_78503_V	cameraZoom	#cameraZoom, :, zoom, :
+	f	D	field_78502_W	cameraYaw	#cameraYaw, :, zoomX, :
+	f	D	field_78509_X	cameraPitch	#cameraPitch, :, zoomY, :
+	f	J	field_78508_Y	prevFrameTime	#prevFrameTime, :, lastWindowFocusedTime, :
+		c	Previous frame time in milliseconds
+	f	J	field_78510_Z	renderEndNanoTime	#renderEndNanoTime, :, lastWorldRenderNanoTime, lastWorldRenderTime
+		c	End time of last render (ns)
+	f	Z	field_78536_aa	lightmapUpdateNeeded	#lightmapUpdateNeeded, :, lightmapDirty, lightMapDirty
+		c	Is set, updateCameraAndRender() calls updateLightmap(); set by updateTorchFlicker()
+	f	Ljava/util/Random;	field_78537_ab	random	#random, :, :, :
+	f	I	field_78534_ac	rainSoundCounter	#rainSoundCounter, :, weatherSoundAttempts, :
+		c	Rain sound counter
+	f	F	field_78535_ad	fogColor2	#fogColor2, :, prevFogColor, newFogGrayScale
+		c	Fog color 2
+	f	F	field_78539_ae	fogColor1	#fogColor1, :, fogColor, oldFogGrayScale
+		c	Fog color 1
+	f	I	field_78515_b	anaglyphField	#anaglyphField, :, anaglyphFilter, :
+		c	Anaglyph field (0=R, 1=GB)
+	f	Lnet/minecraft/client/renderer/ItemRenderer;	field_78516_c	itemRenderer	#itemRenderer, :, firstPersonRenderer, heldItemRenderer
+	f	Lnet/minecraft/client/shader/ShaderGroup;	field_147707_d	theShaderGroup	#theShaderGroup, shaderGroup, shader, shaderEffect
+	f	I	field_147708_e	shaderCount	#shaderCount, SHADER_COUNT, :, SHADER_NONE
+	f	F	field_78514_e	torchFlickerX	#torchFlickerX, :, lightmapFlicker, :
+		c	Torch flicker X
+	f	F	field_78511_f	torchFlickerDX	#torchFlickerDX, :, ~, lightMapRandoms
+		c	Torch flicker DX
+	f	F	field_78512_g	torchFlickerY	#torchFlickerY, :, ~, lightMapFlicker2
+		c	Torch flicker Y
+	f	F	field_78524_h	torchFlickerDY	#torchFlickerDY, :, ~, lightMapRandoms2
+		c	Torch flicker DY
+	f	[F	field_78525_i	rainXCoords	#rainXCoords, :, ~, weatherChunkDistanceNormalizedX
+		c	Rain X coords
+	f	[F	field_78522_j	rainYCoords	#rainYCoords, :, ~, weatherChunkDistanceNormalizedY
+		c	Rain Y coords
+	f	Ljava/nio/FloatBuffer;	field_78521_m	fogColorBuffer	#fogColorBuffer, :, :, :
+		c	Fog color buffer
+	f	F	field_78518_n	fogColorRed	#fogColorRed, :, fogRed, :
+		c	red component of the fog color
+	f	F	field_78519_o	fogColorGreen	#fogColorGreen, :, fogGreen, :
+		c	green component of the fog color
+	f	F	field_78533_p	fogColorBlue	#fogColorBlue, :, fogBlue, :
+		c	blue component of the fog color
+	f	I	field_78532_q	debugViewDirection	#debugViewDirection, :, ~, hasNausea
+		c	Debug view direction (0=OFF, 1=Front, 2=Right, 3=Back, 4=Left, 5=TiltLeft, 6=TiltRight)
+	f	Lorg/apache/logging/log4j/Logger;	field_147710_q	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_110924_q	locationRainPng	#locationRainPng, RAIN_TEXTURES, RAIN_TEXTURE, RAIN_TEXTURE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110923_r	locationSnowPng	#locationSnowPng, SNOW_TEXTURES, SNOW_TEXTURE, SNOW_TEXTURE_LOCATION
+	f	Lnet/minecraft/client/Minecraft;	field_78531_r	mc	#mc, :, client, minecraft
+		c	A reference to the Minecraft object.
+	f	F	field_78530_s	farPlaneDistance	#farPlaneDistance, :, viewDistance, :
+	f	Lnet/minecraft/client/gui/MapItemRenderer;	field_147709_v	theMapItemRenderer	#theMapItemRenderer, mapItemRenderer, mapRenderer, :
+	f	I	field_78529_t	rendererUpdateCount	#rendererUpdateCount, :, ticks, :
+		c	Entity renderer update count
+	f	Lnet/minecraft/entity/Entity;	field_78528_u	pointedEntity	#pointedEntity, :, targetedEntity, targetEntity
+		c	Pointed entity
+	f	Lnet/minecraft/util/MouseFilter;	field_78527_v	mouseFilterXAxis	#mouseFilterXAxis, :, cursorXSmoother, smoothUtilMouseX
+	f	Lnet/minecraft/util/MouseFilter;	field_78526_w	mouseFilterYAxis	#mouseFilterYAxis, :, cursorYSmoother, smoothUtilMouseY
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/resources/IResourceManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45076_1_	mcIn	#mcIn, :, client, minecraft
+		p	2	p_i45076_2_	resourceManagerIn	#resourceManagerIn, :, resourceManager, :
+	m	()Z	func_147702_a	isShaderActive	#isShaderActive, :, areShadersSupported, hasShader
+	m	(D)V	func_78483_a	disableLightmap	#disableLightmap, :, afterWorldRender, disableLightMap
+		c	Disable secondary texture unit used by lightmap
+		p	1	p_78483_1_	tickDelta	#~, ~, tickDelta, :
+	m	(F)V	func_78473_a	getMouseOver	#getMouseOver, :, updateTargetedEntity, pick
+		c	Finds what block or object the mouse is over at the specified partial tick time. Args: partialTickTime
+		p	1	p_78473_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(FFFF)Ljava/nio/FloatBuffer;	func_78469_a	setFogColorBuffer	#setFogColorBuffer, :, updateFogColorBuffer, setFogColor
+		c	Update and return fogColorBuffer with the RGBA values passed as arguments
+		p	1	p_78469_1_	red	#red, :, :, r
+		p	2	p_78469_2_	green	#green, :, :, g
+		p	3	p_78469_3_	blue	#blue, :, :, b
+		p	4	p_78469_4_	alpha	#alpha, :, :, a
+	m	(FI)V	func_78479_a	setupCameraTransform	#setupCameraTransform, :, setupCamera, :
+		c	sets up projection, view effects, camera position/rotation
+		p	1	p_78479_1_	partialTicks	#partialTicks, :, tickDelta, :
+		p	2	p_78479_2_	pass	#pass, :, anaglyphFilter, anaglyphRenderPass
+	m	(FJ)V	func_78471_a	renderWorld	#renderWorld, :, :, :
+		p	1	p_78471_1_	partialTicks	#partialTicks, :, tickDelta, :
+		p	2	p_78471_2_	finishTimeNano	#finishTimeNano, :, limitTime, renderTimeLimit
+	m	(FZ)F	func_78481_a	getFOVModifier	#getFOVModifier, :, getFov, :
+		c	Changes the field of view of the player depending on if they are underwater or not
+		p	1	p_78481_1_	partialTicks	#partialTicks, :, tickDelta, :
+		p	2	p_78481_2_	useFOVSetting	#useFOVSetting, :, changingFov, fovChanged
+	m	(IF)V	func_78468_a	setupFog	#setupFog, :, renderFog, :
+		c	Sets up the fog to be rendered. If the arg passed in is -1 the fog starts at 0 and goes to 80% of far plane distance and is used for sky rendering.
+		p	2	p_78468_2_	partialTicks	#partialTicks, :, tickDelta, :
+		p	1	p_78468_1_	startCoords	#startCoords, :, ~, mode
+	m	(II)V	func_147704_a	updateShaderGroupSize	#updateShaderGroupSize, :, onResized, onResolutionChanged
+		p	1	p_147704_1_	width	#width, :, :, :
+		p	2	p_147704_2_	height	#height, :, :, :
+	m	(Lnet/minecraft/client/renderer/EntityRenderer;)Lnet/minecraft/client/Minecraft;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/renderer/RenderGlobal;F)V	func_82829_a	renderCloudsCheck	#renderCloudsCheck, :, ~, renderClouds
+		c	Render clouds if enabled
+		p	1	p_82829_1_	worldRenderer	#~, ~, ~, worldRenderer
+		p	2	p_82829_2_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/player/EntityPlayer;F)F	func_82830_a	getNightVisionBrightness	#getNightVisionBrightness, :, ~, getNightVisionScale
+		c	Gets the night vision brightness
+		p	1	p_82830_1_	player	#~, ~, ~, player
+		p	2	p_82830_2_	tickDelta	#~, ~, ~, tickDelta
+	m	()V	func_147703_b	deactivateShader	#deactivateShader, :, disableShader, :
+	m	(D)V	func_78463_b	enableLightmap	#enableLightmap, :, beforeWorldRender, enableLightMap
+		c	Enable lightmap in secondary texture unit
+		p	1	p_78463_1_	tickDelta	#~, ~, tickDelta, :
+	m	(F)V	func_78480_b	updateCameraAndRender	#updateCameraAndRender, :, ~, render
+		c	Will update any inputs that effect the camera angle (mouse) and then render the world and GUI
+		p	1	p_78480_1_	tickDelta	#~, ~, ~, tickDelta
+	m	(FI)V	func_78476_b	renderHand	#renderHand, :, :, renderItemInHand
+		c	Render player hand
+		p	1	p_78476_1_	partialTicks	#partialTicks, :, tickDelta, :
+		p	2	p_78476_2_	xOffset	#xOffset, pass, anaglyphOffset, anaglyphFilter
+	m	()V	func_147705_c	activateNextShader	#activateNextShader, :, superSecretSettings, nextShader
+	m	(F)V	func_152430_c	renderStreamIndicator	#renderStreamIndicator, :, :, renderStreamOverlay
+		p	1	p_152430_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	func_78464_a	updateRenderer	#updateRenderer, :, tick, :
+		c	Updates the entity renderer
+	m	()Lnet/minecraft/client/shader/ShaderGroup;	func_147706_e	getShaderGroup	#getShaderGroup, :, getShader, :
+	m	(F)V	func_78474_d	renderRainSnow	#renderRainSnow, :, renderWeather, renderSnowAndRain
+		c	Render rain and snow
+		p	1	p_78474_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(F)V	func_78482_e	hurtCameraEffect	#hurtCameraEffect, :, bobViewWhenHurt, applyHurtCam
+		p	1	p_78482_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	func_78478_c	setupOverlayRendering	#setupOverlayRendering, :, setupHudMatrixMode, setupGuiState
+		c	Setup orthogonal projection for rendering GUI screen overlays
+	m	(F)V	func_78475_f	setupViewBobbing	#setupViewBobbing, applyBobbing, bobView, applyViewBobbing
+		c	Setups all the GL settings for view bobbing. Args: partialTickTime
+		p	1	p_78475_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(F)V	func_78467_g	orientCamera	#orientCamera, :, transformCamera, :
+		c	sets up player's eye (or camera in third person mode)
+		p	1	p_78467_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()Lnet/minecraft/client/gui/MapItemRenderer;	func_147701_i	getMapItemRenderer	#getMapItemRenderer, :, getMapRenderer, :
+	m	(F)V	func_78472_g	updateLightmap	#updateLightmap, :, :, updateLightMap
+		p	1	p_78472_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	func_78477_e	updateFovModifierHand	#updateFovModifierHand, :, updateMovementFovMultiplier, tickFov
+		c	Update FOV modifier hand
+	m	(F)V	func_78466_h	updateFogColor	#updateFogColor, :, updateFog, setupFog
+		c	calculates fog and calls glClearColor
+		p	1	p_78466_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	func_78470_f	updateTorchFlicker	#updateTorchFlicker, :, tickLightmap, tickLightMap
+		c	Recompute a random value that is applied to block color in updateLightmap()
+	m	()V	func_78484_h	addRainParticles	#addRainParticles, :, tickRainSplashing, tickRain
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

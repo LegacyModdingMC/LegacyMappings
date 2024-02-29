@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/shader/Shader	net/minecraft/client/shader/Shader	
+	f	Lnet/minecraft/client/shader/Framebuffer;	field_148052_a	framebufferIn	#framebufferIn, :, input, inTarget
+	f	Lnet/minecraft/client/shader/Framebuffer;	field_148050_b	framebufferOut	#framebufferOut, :, output, outTarget
+	f	Lnet/minecraft/client/shader/ShaderManager;	field_148051_c	manager	#manager, :, program, effect
+	f	Ljava/util/List;	field_148048_d	listAuxFramebuffers	#listAuxFramebuffers, :, samplerValues, auxAssets
+	f	Ljava/util/List;	field_148049_e	listAuxNames	#listAuxNames, :, samplerNames, auxNames
+	f	Ljava/util/List;	field_148046_f	listAuxWidths	#listAuxWidths, :, samplerWidths, auxWidths
+	f	Ljava/util/List;	field_148047_g	listAuxHeights	#listAuxHeights, :, samplerHeights, auxHeights
+	f	Ljavax/vecmath/Matrix4f;	field_148053_h	projectionMatrix	#projectionMatrix, :, ~, shaderOrthoMatrix
+	m	(Lnet/minecraft/client/resources/IResourceManager;Ljava/lang/String;Lnet/minecraft/client/shader/Framebuffer;Lnet/minecraft/client/shader/Framebuffer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45089_1_	resourceManager	#resourceManager, :, :, :
+		p	2	p_i45089_2_	programName	#programName, :, name, :
+		p	3	p_i45089_3_	framebufferInIn	#framebufferInIn, :, input, inTarget
+		p	4	p_i45089_4_	framebufferOutIn	#framebufferOutIn, :, output, outTarget
+	m	(F)V	func_148042_a	loadShader	#loadShader, render, :, process
+		p	1	p_148042_1_	partialTicks	#partialTicks, :, time, tickDelta
+	m	(Ljava/lang/String;Ljava/lang/Object;II)V	func_148041_a	addAuxFramebuffer	#addAuxFramebuffer, :, addAuxTarget, addAuxAsset
+		p	1	p_148041_1_	auxName	#auxName, :, name, :
+		p	2	p_148041_2_	auxFramebufferIn	#auxFramebufferIn, :, target, asset
+		p	3	p_148041_3_	width	#width, :, :, :
+		p	4	p_148041_4_	height	#height, :, :, :
+	m	(Ljavax/vecmath/Matrix4f;)V	func_148045_a	setProjectionMatrix	#setProjectionMatrix, :, ~, setOrthoMatrix
+		p	1	p_148045_1_	projectionMatrixIn	#projectionMatrixIn, :, ~, matrix
+	m	()V	func_148044_b	deleteShader	#deleteShader, :, close, :
+	m	()Lnet/minecraft/client/shader/ShaderManager;	func_148043_c	getShaderManager	#getShaderManager, :, getProgram, getEffect
+	m	()V	func_148040_d	preLoadShader	#preLoadShader, preRender, :, prepareState

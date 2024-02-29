@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/ThreadedFileIOBase	net/minecraft/world/storage/ThreadedFileIOBase	
+	f	Lnet/minecraft/world/storage/ThreadedFileIOBase;	field_75741_a	threadedIOInstance	#threadedIOInstance, INSTANCE, :, :
+		c	Instance of ThreadedFileIOBase
+	f	Ljava/util/List;	field_75739_b	threadedIOQueue	#threadedIOQueue, :, callbacks, :
+	f	J	field_75740_c	writeQueuedCounter	#writeQueuedCounter, :, callbackCount, registered
+	f	J	field_75737_d	savedIOCounter	#savedIOCounter, :, callbacksCompleted, completed
+	f	Z	field_75738_e	isThreadWaiting	#isThreadWaiting, :, waiting, :
+	m	()V	func_75734_a	waitForFinish	#waitForFinish, :, waitUntilComplete, waitUntilFinished
+		c	Causes the current thread to block until all pending IO tasks have been written, and also disables the sleep between IO tasks until that time.
+	m	(Lnet/minecraft/world/storage/IThreadedFileIO;)V	func_75735_a	queueIO	#queueIO, :, registerCallback, :
+		c	threaded io
+		p	1	p_75735_1_	fileIo	#fileIo, :, callback, :
+	m	()V	func_75736_b	processQueue	#processQueue, :, runCallbacks, :
+		c	Process the items that are in the queue
+	m	()V	run	run	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

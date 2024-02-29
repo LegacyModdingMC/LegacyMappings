@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelMinecart	net/minecraft/client/model/ModelMinecart	
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78154_a	sideModels	#sideModels, :, ~, parts
+	m	()V	<init>	<init>	#~, ~, ~, ~

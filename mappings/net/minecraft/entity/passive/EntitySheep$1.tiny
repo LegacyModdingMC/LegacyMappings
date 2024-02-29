@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntitySheep$1	net/minecraft/entity/passive/EntitySheep$1	
+	f	Lnet/minecraft/entity/passive/EntitySheep;	field_90034_a	sheep	#~, ~, sheep, :
+	m	(Lnet/minecraft/entity/passive/EntitySheep;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1690_1_	sheep	#~, ~, sheep, ~

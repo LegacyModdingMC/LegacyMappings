@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCake	net/minecraft/block/BlockCake	
+	f	Lnet/minecraft/util/IIcon;	field_150039_M	iconInner	#iconInner, :, ~, spriteInner
+	f	Lnet/minecraft/util/IIcon;	field_150038_a	iconTop	#iconTop, :, ~, spriteTop
+	f	Lnet/minecraft/util/IIcon;	field_150037_b	iconBottom	#iconBottom, :, ~, spriteBottom
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;)V	func_150036_b	tryEatCake	#~, ~, ~, tryEatCake
+		p	1	p_150036_1_	world	#~, ~, ~, world
+		p	2	p_150036_2_	x	#~, ~, ~, x
+		p	3	p_150036_3_	y	#~, ~, ~, y
+		p	4	p_150036_4_	z	#~, ~, ~, z
+		p	5	p_150036_5_	player	#~, ~, ~, player
+	m	()V	<init>	<init>	#~, ~, ~, ~

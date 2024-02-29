@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/SaveFormatOld	net/minecraft/world/storage/SaveFormatOld	
+	f	Ljava/io/File;	field_75808_a	savesDirectory	#savesDirectory, :, file, dir
+		c	Reference to the File object representing the directory for the world saves
+	f	Lorg/apache/logging/log4j/Logger;	field_151479_b	logger	#logger, LOGGER, lOGGER, LOGGER
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2147_1_	savesDirectoryIn	#savesDirectoryIn, :, file, dir
+	m	([Ljava/io/File;)Z	func_75807_a	deleteFiles	#deleteFiles, :, deleteFilesRecursively, deleteFilesAndDirs
+		c	@args: Takes one argument - the list of files and directories to delete. @desc: Deletes the files and directory listed in the list recursively.
+		p	0	p_75807_0_	files	#files, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

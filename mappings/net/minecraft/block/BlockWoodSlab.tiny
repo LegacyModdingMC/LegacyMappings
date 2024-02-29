@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockWoodSlab	net/minecraft/block/BlockWoodSlab	
+	f	[Ljava/lang/String;	field_150005_b	VARIANTS	#~, ~, ~, VARIANTS
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45437_1_	doubleSlab	#~, ~, ~, doubleSlab
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/LowerStringMap	net/minecraft/server/management/LowerStringMap	
+	f	Ljava/util/Map;	field_76117_a	internalMap	#internalMap, :, delegate, :
+	m	(Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;	put	put	#~, ~, put, :
+		p	1	p_put_1_	p_put_1_	#~, ~, ~, ~
+		p	2	p_put_2_	p_put_2_	#~, ~, ~, ~
+	m	()V	clear	clear	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)Z	containsKey	containsKey	#~, ~, ~, ~
+		p	1	p_containsKey_1_	key	#~, ~, ~, key
+	m	(Ljava/lang/Object;)Z	containsValue	containsValue	#~, ~, ~, ~
+		p	1	p_containsValue_1_	key	#~, ~, ~, key
+	m	()Ljava/util/Set;	entrySet	entrySet	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	get	get	#~, ~, ~, ~
+		p	1	p_get_1_	key	#~, ~, ~, key
+	m	()Z	isEmpty	isEmpty	#~, ~, ~, ~
+	m	()Ljava/util/Set;	keySet	keySet	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;	put	put	#~, ~, ~, ~
+		p	1	p_put_1_	key	#~, ~, ~, key
+		p	2	p_put_2_	value	#~, ~, ~, value
+	m	(Ljava/util/Map;)V	putAll	putAll	#~, ~, ~, ~
+		p	1	p_putAll_1_	map	#~, ~, ~, map
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	remove	remove	#~, ~, ~, ~
+		p	1	p_remove_1_	key	#~, ~, ~, key
+	m	()I	size	size	#~, ~, ~, ~
+	m	()Ljava/util/Collection;	values	values	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

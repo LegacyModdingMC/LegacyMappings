@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerProfileCache$ProfileEntry	net/minecraft/server/management/PlayerProfileCache$ProfileEntry	
+	f	Lnet/minecraft/server/management/PlayerProfileCache;	field_152671_a	field_152671_a	#~, ~, ~, ~
+	f	Lcom/mojang/authlib/GameProfile;	field_152672_b	gameProfile	#gameProfile, :, ~, profile
+		c	The player's GameProfile
+	f	Ljava/util/Date;	field_152673_c	expirationDate	#expirationDate, :, ~, expirationDate
+		c	The date that this entry will expire
+	m	()Lcom/mojang/authlib/GameProfile;	func_152668_a	getGameProfile	#getGameProfile, :, ~, getProfile
+		c	Get the player's GameProfile
+	m	(Lnet/minecraft/server/management/PlayerProfileCache$ProfileEntry;)Ljava/util/Date;	access$200	access$200	#~, ~, ~, ~
+		p	0	p_access$200_0_	p_access$200_0_	#~, ~, ~, ~
+	m	()Ljava/util/Date;	func_152670_b	getExpirationDate	#getExpirationDate, :, ~, getExpirationDate
+		c	Get the date that this entry will expire
+	m	(Lnet/minecraft/server/management/PlayerProfileCache;Lcom/mojang/authlib/GameProfile;Ljava/util/Date;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1165_2_	profile	#~, ~, ~, profile
+		p	3	p_i1165_3_	expirationDate	#~, ~, ~, expirationDate
+		p	1	p_i1165_1_	p_i1165_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/management/PlayerProfileCache;Lcom/mojang/authlib/GameProfile;Ljava/util/Date;Lnet/minecraft/server/management/PlayerProfileCache$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1166_1_	p_i1166_1_	#~, ~, ~, ~
+		p	2	p_i1166_2_	p_i1166_2_	#~, ~, ~, ~
+		p	3	p_i1166_3_	p_i1166_3_	#~, ~, ~, ~
+		p	4	p_i1166_4_	p_i1166_4_	#~, ~, ~, ~

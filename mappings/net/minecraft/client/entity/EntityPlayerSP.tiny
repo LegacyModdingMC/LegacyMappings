@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/entity/EntityPlayerSP	net/minecraft/client/entity/EntityPlayerSP	
+	c	Local client player entity
+	f	I	field_110320_a	horseJumpPowerCounter	#horseJumpPowerCounter, :, ~, horseJumpTimer
+	f	F	field_71164_i	prevRenderArmPitch	#prevRenderArmPitch, :, lastRenderPitch, lastEasedPitch
+	f	F	field_71086_bY	timeInPortal	#timeInPortal, :, :, screenWarpIntensity
+		c	The amount of time an entity has been in a Portal
+	f	F	field_71080_cy	prevTimeInPortal	#prevTimeInPortal, :, lastTimeInPortal, prevScreenWarpDuration
+		c	The amount of time an entity has been in a Portal the previous tick
+	f	F	field_110321_bQ	horseJumpPower	#horseJumpPower, :, ~, horseJumpSize
+	f	Lnet/minecraft/util/MouseFilter;	field_71162_ch	field_71162_ch	#~, ~, ~, ~
+	f	Lnet/minecraft/util/MouseFilter;	field_71160_ci	field_71160_ci	#~, ~, ~, ~
+	f	Lnet/minecraft/util/MouseFilter;	field_71161_cj	field_71161_cj	#~, ~, ~, ~
+	f	Lnet/minecraft/util/MovementInput;	field_71158_b	movementInput	#movementInput, :, input, :
+	f	Lnet/minecraft/client/Minecraft;	field_71159_c	mc	#mc, :, client, minecraft
+	f	I	field_71156_d	sprintToggleTimer	#sprintToggleTimer, :, ~, doubleTapSprintTimer
+		c	Used to tell if the player pressed forward twice. If this is at 0 and it's pressed (And they are allowed to sprint, aka enough food on the ground etc) it sets this to 7. If it's pressed and it's greater than 0 enable sprinting.
+	f	I	field_71157_e	sprintingTicksLeft	#sprintingTicksLeft, :, ticksSinceSprintingChanged, sprintingCooldown
+		c	Ticks left before sprinting is disabled.
+	f	F	field_71154_f	renderArmYaw	#renderArmYaw, :, renderYaw, easedYaw
+	f	F	field_71155_g	renderArmPitch	#renderArmPitch, :, renderPitch, easedPitch
+	f	F	field_71163_h	prevRenderArmYaw	#prevRenderArmYaw, :, lastRenderYaw, lastEasedYaw
+	m	(FII)V	func_71152_a	setXPStats	#setXPStats, :, setExperience, setXp
+		c	Sets the current XP, total XP, and level number.
+		p	1	p_71152_1_	currentXP	#currentXP, :, progress, xpProgress
+		p	2	p_71152_2_	maxXP	#maxXP, :, total, xp
+		p	3	p_71152_3_	level	#level, :, :, xpLevel
+	m	(III)Z	func_71153_f	isBlockTranslucent	#isBlockTranslucent, isBlockNormal, ~, isBlockAtPosFullCube
+		p	1	p_71153_1_	x	#~, ~, ~, x
+		p	2	p_71153_2_	y	#~, ~, ~, y
+		p	3	p_71153_3_	z	#~, ~, ~, z
+	m	()V	func_110318_g	sendHorseJump	#sendHorseJump, :, startRidingJump, jumpWithHorse
+	m	(F)V	func_71150_b	setPlayerSPHealth	#setPlayerSPHealth, :, updateHealth, setPlayerHealth
+		c	Updates health locally.
+		p	1	p_71150_1_	health	#health, :, :, :
+	m	()F	func_71151_f	getFOVMultiplier	#getFOVMultiplier, :, ~, getAdjustedMovementSpeed
+		c	Gets the player's field of view multiplier. (ex. when flying)
+	m	()Z	func_110317_t	isRidingHorse	#isRidingHorse, :, :, isRidingRideableMob
+	m	()F	func_110319_bJ	getHorseJumpPower	#getHorseJumpPower, :, getMountJumpStrength, getRidingJumpProgress
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/world/World;Lnet/minecraft/util/Session;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1238_1_	minecraft	#~, ~, ~, minecraft
+		p	2	p_i1238_2_	world	#~, ~, ~, world
+		p	3	p_i1238_3_	session	#~, ~, ~, session
+		p	4	p_i1238_4_	dimension	#~, ~, ~, dimension

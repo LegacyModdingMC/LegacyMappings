@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/DefaultResourcePack	net/minecraft/client/resources/DefaultResourcePack	
+	f	Ljava/util/Set;	field_110608_a	defaultResourceDomains	#defaultResourceDomains, DEFAULT_RESOURCE_DOMAINS, NAMESPACES, :
+	f	Ljava/util/Map;	field_152781_b	mapAssets	#mapAssets, :, assetsIndex, assets
+	m	(Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1046_1_	assets	#~, ~, assetsIndex, assets
+	m	(Lnet/minecraft/util/ResourceLocation;)Ljava/io/InputStream;	func_152780_c	getInputStreamAssets	#getInputStreamAssets, :, openFile, getAsset
+		p	1	p_152780_1_	location	#location, :, id, location
+	m	(Lnet/minecraft/util/ResourceLocation;)Ljava/io/InputStream;	func_110605_c	getResourceStream	#getResourceStream, :, openClassLoader, openResource
+		p	1	p_110605_1_	location	#location, :, id, location
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

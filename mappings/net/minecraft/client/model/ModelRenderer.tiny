@@ -1,0 +1,87 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelRenderer	net/minecraft/client/model/ModelRenderer	
+	f	F	field_78801_a	textureWidth	#textureWidth, :, :, :
+		c	The size of the texture file's width in pixels.
+	f	F	field_78799_b	textureHeight	#textureHeight, :, :, :
+		c	The size of the texture file's height in pixels.
+	f	F	field_78800_c	rotationPointX	#rotationPointX, :, pivotX, :
+	f	F	field_78797_d	rotationPointY	#rotationPointY, :, pivotY, :
+	f	F	field_78798_e	rotationPointZ	#rotationPointZ, :, pivotZ, :
+	f	F	field_78795_f	rotateAngleX	#rotateAngleX, :, posX, rotationX
+	f	F	field_78796_g	rotateAngleY	#rotateAngleY, :, posY, rotationY
+	f	F	field_78808_h	rotateAngleZ	#rotateAngleZ, :, posZ, rotationZ
+	f	Z	field_78809_i	mirror	#mirror, :, :, flipped
+	f	Z	field_78806_j	showModel	#showModel, :, visible, :
+	f	Z	field_78807_k	isHidden	#isHidden, :, hide, invisible
+		c	Hides the model.
+	f	Ljava/util/List;	field_78804_l	cubeList	#cubeList, :, cuboids, boxes
+	f	Ljava/util/List;	field_78805_m	childModels	#childModels, :, modelList, children
+	f	Ljava/lang/String;	field_78802_n	boxName	#boxName, :, name, id
+	f	F	field_82906_o	offsetX	#offsetX, :, :, translateX
+	f	F	field_82908_p	offsetY	#offsetY, :, :, translateY
+	f	F	field_82907_q	offsetZ	#offsetZ, :, :, translateZ
+	f	I	field_78803_o	textureOffsetX	#textureOffsetX, :, textureOffsetU, textureU
+		c	The X offset into the texture used for displaying this model
+	f	I	field_78813_p	textureOffsetY	#textureOffsetY, :, textureOffsetV, textureV
+		c	The Y offset into the texture used for displaying this model
+	f	Z	field_78812_q	compiled	#compiled, :, compiledList, compiled
+	f	I	field_78811_r	displayList	#displayList, :, glList, renderCallList
+		c	The GL display list rendered by the Tessellator for this model
+	f	Lnet/minecraft/client/model/ModelBase;	field_78810_s	baseModel	#baseModel, :, renderer, model
+	m	(Lnet/minecraft/client/model/ModelBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1173_1_	model	#model, :, renderer, model
+	m	(Lnet/minecraft/client/model/ModelBase;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1174_1_	valueIn	#valueIn, :, renderer, model
+		p	2	p_i1174_2_	json	#json, :, textureOffsetU, textureU
+		p	3	p_i1174_3_	textureV	#~, ~, textureOffsetV, textureV
+	m	(Lnet/minecraft/client/model/ModelBase;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1172_1_	model	#model, :, renderer, model
+		p	2	p_i1172_2_	boxNameIn	#boxNameIn, :, name, id
+	m	(F)V	func_78785_a	render	#render, :, :, :
+		p	1	p_78785_1_	scale	#scale, :, :, :
+	m	(FFF)V	func_78793_a	setRotationPoint	#setRotationPoint, :, setPivot, :
+		p	1	p_78793_1_	rotationPointXIn	#rotationPointXIn, :, x, :
+		p	2	p_78793_2_	rotationPointYIn	#rotationPointYIn, :, y, :
+		p	3	p_78793_3_	rotationPointZIn	#rotationPointZIn, :, z, :
+	m	(FFFIII)Lnet/minecraft/client/model/ModelRenderer;	func_78789_a	addBox	#addBox, :, addCuboid, addBox
+		p	1	p_78789_1_	offX	#offX, :, x, :
+		p	2	p_78789_2_	offY	#offY, :, y, :
+		p	3	p_78789_3_	offZ	#offZ, :, z, :
+		p	4	p_78789_4_	width	#width, :, sizeX, :
+		p	5	p_78789_5_	height	#height, :, sizeY, :
+		p	6	p_78789_6_	depth	#depth, :, sizeZ, :
+	m	(FFFIIIF)V	func_78790_a	addBox	#addBox, :, addCuboid, addBox
+		c	Creates a textured box. Args: originX, originY, originZ, width, height, depth, scaleFactor.
+		p	1	p_78790_1_	offX	#offX, :, x, :
+		p	2	p_78790_2_	offY	#offY, :, y, :
+		p	3	p_78790_3_	offZ	#offZ, :, z, :
+		p	4	p_78790_4_	width	#width, :, sizeX, :
+		p	5	p_78790_5_	height	#height, :, sizeY, :
+		p	6	p_78790_6_	depth	#depth, :, sizeZ, :
+		p	7	p_78790_7_	scaleFactor	#scaleFactor, :, reduction, increase
+	m	(II)Lnet/minecraft/client/model/ModelRenderer;	func_78784_a	setTextureOffset	#setTextureOffset, :, :, setTextureCoords
+		p	1	p_78784_1_	x	#x, :, textureOffsetU, textureU
+		p	2	p_78784_2_	y	#y, :, textureOffsetV, textureV
+	m	(Lnet/minecraft/client/model/ModelRenderer;)V	func_78792_a	addChild	#addChild, :, add, addChild
+		c	Sets the current box's rotation points and rotation angles to another box.
+		p	1	p_78792_1_	renderer	#renderer, :, part, :
+	m	(Ljava/lang/String;FFFIII)Lnet/minecraft/client/model/ModelRenderer;	func_78786_a	addBox	#addBox, :, addCuboid, addBox
+		p	1	p_78786_1_	partName	#partName, :, name, id
+		p	2	p_78786_2_	offX	#offX, :, x, :
+		p	3	p_78786_3_	offY	#offY, :, y, :
+		p	4	p_78786_4_	offZ	#offZ, :, z, :
+		p	5	p_78786_5_	width	#width, :, sizeX, :
+		p	6	p_78786_6_	height	#height, :, sizeY, :
+		p	7	p_78786_7_	depth	#depth, :, sizeZ, :
+	m	(F)V	func_78791_b	renderWithRotation	#renderWithRotation, :, rotateAndRender, renderRotation
+		p	1	p_78791_1_	scale	#scale, :, :, :
+	m	(II)Lnet/minecraft/client/model/ModelRenderer;	func_78787_b	setTextureSize	#setTextureSize, :, :, :
+		c	Returns the model renderer with the new texture parameters.
+		p	1	p_78787_1_	textureWidthIn	#textureWidthIn, :, width, :
+		p	2	p_78787_2_	textureHeightIn	#textureHeightIn, :, height, :
+	m	(F)V	func_78794_c	postRender	#postRender, :, preRender, translate
+		c	Allows the changing of Angles after a box has been rendered
+		p	1	p_78794_1_	scale	#scale, :, :, :
+	m	(F)V	func_78788_d	compileDisplayList	#compileDisplayList, :, compileList, compile
+		c	Compiles a GL display list for this model
+		p	1	p_78788_1_	scale	#scale, :, :, :

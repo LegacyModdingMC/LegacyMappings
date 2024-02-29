@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/TupleIntJsonSerializable	net/minecraft/util/TupleIntJsonSerializable	
+	f	I	field_151192_a	integerValue	#integerValue, :, value, :
+	f	Lnet/minecraft/util/IJsonSerializable;	field_151191_b	jsonSerializableValue	#jsonSerializableValue, :, jsonElementProvider, progress
+	m	()I	func_151189_a	getIntegerValue	#getIntegerValue, :, getValue, :
+		c	Gets the integer value stored in this tuple.
+	m	(I)V	func_151188_a	setIntegerValue	#setIntegerValue, :, setValue, :
+		c	Sets this tuple's integer value to the given value.
+		p	1	p_151188_1_	integerValueIn	#integerValueIn, :, value, :
+	m	(Lnet/minecraft/util/IJsonSerializable;)V	func_151190_a	setJsonSerializableValue	#setJsonSerializableValue, :, setJsonElementProvider, setProgress
+		c	Sets this tuple's JsonSerializable value to the given value.
+		p	1	p_151190_1_	jsonSerializableValueIn	#jsonSerializableValueIn, :, jsonElementProvider, progress
+	m	()Lnet/minecraft/util/IJsonSerializable;	func_151187_b	getJsonSerializableValue	#getJsonSerializableValue, :, getJsonElementProvider, getProgress
+		c	Gets the JsonSerializable value stored in this tuple.
+	m	()V	<init>	<init>	#~, ~, ~, ~

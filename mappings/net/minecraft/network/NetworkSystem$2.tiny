@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkSystem$2	net/minecraft/network/NetworkSystem$2	
+	f	Lnet/minecraft/network/NetworkSystem;	field_151281_a	field_151281_a	#~, ~, ~, ~
+	m	(Lio/netty/channel/Channel;)V	initChannel	initChannel	#~, ~, ~, ~
+		p	1	p_initChannel_1_	channel	#~, ~, ~, channel
+	m	(Lnet/minecraft/network/NetworkSystem;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45289_1_	p_i45289_1_	#~, ~, ~, ~

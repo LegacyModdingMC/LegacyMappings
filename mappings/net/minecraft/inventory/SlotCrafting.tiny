@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/SlotCrafting	net/minecraft/inventory/SlotCrafting	
+	f	Lnet/minecraft/inventory/IInventory;	field_75239_a	craftMatrix	#craftMatrix, :, ~, craftingInventory
+		c	The craft matrix inventory linked to this result slot.
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_75238_b	thePlayer	#thePlayer, player, :, :
+		c	The player that is using the GUI where this slot resides.
+	f	I	field_75237_g	amountCrafted	#amountCrafted, :, amount, removeAmount
+		c	The number of items that have been crafted so far. Gets passed to ItemStack.onCrafting before being reset.
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/inventory/IInventory;Lnet/minecraft/inventory/IInventory;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1823_1_	player	#~, ~, ~, player
+		p	2	p_i1823_2_	craftingInventory	#~, ~, ~, craftingInventory
+		p	3	p_i1823_3_	resultInventory	#~, ~, ~, resultInventory
+		p	4	p_i1823_4_	slot	#~, ~, ~, slot
+		p	5	p_i1823_5_	x	#~, ~, ~, x
+		p	6	p_i1823_6_	y	#~, ~, ~, y

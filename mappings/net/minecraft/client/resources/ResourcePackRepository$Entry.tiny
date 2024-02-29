@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackRepository$Entry	net/minecraft/client/resources/ResourcePackRepository$Entry	
+	f	Lnet/minecraft/client/resources/ResourcePackRepository;	field_110525_a	reResourcePackRepository	#reResourcePackRepository, :, ~, loader
+	f	Ljava/io/File;	field_110523_b	resourcePackFile	#resourcePackFile, :, ~, file
+	f	Lnet/minecraft/client/resources/IResourcePack;	field_110524_c	reResourcePack	#reResourcePack, :, ~, pack
+	f	Lnet/minecraft/client/resources/data/PackMetadataSection;	field_110521_d	rePackMetadataSection	#rePackMetadataSection, :, ~, metadata
+	f	Ljava/awt/image/BufferedImage;	field_110522_e	texturePackIcon	#texturePackIcon, :, ~, icon
+	f	Lnet/minecraft/util/ResourceLocation;	field_110520_f	locationTexturePackIcon	#locationTexturePackIcon, :, ~, iconLocation
+	m	()V	func_110516_a	updateResourcePack	#updateResourcePack, :, ~, load
+	m	(Lnet/minecraft/client/renderer/texture/TextureManager;)V	func_110518_a	bindTexturePackIcon	#bindTexturePackIcon, :, ~, bindIconTexture
+		p	1	p_110518_1_	textureManagerIn	#textureManagerIn, :, ~, manager
+	m	()V	func_110517_b	closeResourcePack	#closeResourcePack, :, ~, close
+	m	()Lnet/minecraft/client/resources/IResourcePack;	func_110514_c	getResourcePack	#getResourcePack, :, ~, get
+	m	()Ljava/lang/String;	func_110515_d	getResourcePackName	#getResourcePackName, :, ~, getName
+	m	()Ljava/lang/String;	func_110519_e	getTexturePackDescription	#getTexturePackDescription, :, ~, getDescription
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, ~, object
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/resources/ResourcePackRepository;Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1295_2_	resourcePackFileIn	#resourcePackFileIn, :, ~, file
+		p	1	p_i1295_1_	p_i1295_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/resources/ResourcePackRepository;Ljava/io/File;Lnet/minecraft/client/resources/ResourcePackRepository$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1296_1_	p_i1296_1_	#~, ~, ~, ~
+		p	2	p_i1296_2_	p_i1296_2_	#~, ~, ~, ~
+		p	3	p_i1296_3_	p_i1296_3_	#~, ~, ~, ~

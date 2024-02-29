@@ -1,0 +1,64 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/INetHandlerPlayServer	net/minecraft/network/play/INetHandlerPlayServer	
+	m	(Lnet/minecraft/network/play/client/C0APacketAnimation;)V	func_147350_a	processAnimation	#processAnimation, :, onHandSwing, handleHandSwing
+		c	Processes the player swinging its held item
+		p	1	p_147350_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C14PacketTabComplete;)V	func_147341_a	processTabComplete	#processTabComplete, :, onRequestCommandCompletions, handleCommandSuggestions
+		c	Retrieves possible tab completions for the requested command string and sends them to the client
+		p	1	p_147341_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C01PacketChatMessage;)V	func_147354_a	processChatMessage	#processChatMessage, :, onChatMessage, handleChatMessage
+		c	Process chat messages (broadcast back to clients) and commands (executes)
+		p	1	p_147354_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C16PacketClientStatus;)V	func_147342_a	processClientStatus	#processClientStatus, :, onClientStatus, handleClientStatus
+		c	Processes the client status updates: respawn attempt from player, opening statistics or achievements, or acquiring 'open inventory' achievement
+		p	1	p_147342_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C15PacketClientSettings;)V	func_147352_a	processClientSettings	#processClientSettings, :, onClientSettings, handleClientSettings
+		c	Updates serverside copy of client settings: language, render distance, chat visibility, chat colours, difficulty, and whether to show the cape
+		p	1	p_147352_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C0FPacketConfirmTransaction;)V	func_147339_a	processConfirmTransaction	#processConfirmTransaction, :, onConfirmTransaction, handleConfirmMenuAction
+		c	Received in response to the server requesting to confirm that the client-side open container matches the servers' after a mismatched container-slot manipulation. It will unlock the player's ability to manipulate the container contents
+		p	1	p_147339_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C11PacketEnchantItem;)V	func_147338_a	processEnchantItem	#processEnchantItem, :, onButtonClick, handleMenuClickButton
+		c	Enchants the item identified by the packet given some convoluted conditions (matching window, which should/shouldn't be in use?)
+		p	1	p_147338_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C0EPacketClickWindow;)V	func_147351_a	processClickWindow	#processClickWindow, :, onClickWindow, handleMenuClickSlot
+		c	Executes a container/inventory slot manipulation as indicated by the packet. Sends the serverside result if they didn't match the indicated result and prevents further manipulation by the player until he confirms that it has the same open container/inventory
+		p	1	p_147351_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C0DPacketCloseWindow;)V	func_147356_a	processCloseWindow	#processCloseWindow, :, onGuiClose, handleCloseMenu
+		c	Processes the client closing windows (container)
+		p	1	p_147356_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C17PacketCustomPayload;)V	func_147349_a	processVanilla250Packet	#processVanilla250Packet, processCustomPayload, onCustomPayload, handleCustomPayload
+		c	Synchronizes serverside and clientside book contents and signing
+		p	1	p_147349_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C02PacketUseEntity;)V	func_147340_a	processUseEntity	#processUseEntity, :, onPlayerInteractEntity, handleInteractEntity
+		c	Processes interactions ((un)leashing, opening command block GUI) and attacks on an entity with players currently equipped item
+		p	1	p_147340_1_	packetIn	#packetIn, :, rpacket, packet
+	m	(Lnet/minecraft/network/play/client/C00PacketKeepAlive;)V	func_147353_a	processKeepAlive	#processKeepAlive, :, onKeepAlive, handleKeepAlive
+		c	Updates a players' ping statistics
+		p	1	p_147353_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C03PacketPlayer;)V	func_147347_a	processPlayer	#processPlayer, :, onPlayerMove, handlePlayerMove
+		c	Processes clients perspective on player positioning and/or orientation
+		p	1	p_147347_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C13PacketPlayerAbilities;)V	func_147348_a	processPlayerAbilities	#processPlayerAbilities, :, onPlayerAbilities, handlePlayerAbilities
+		c	Processes a player starting/stopping flying
+		p	1	p_147348_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C07PacketPlayerDigging;)V	func_147345_a	processPlayerDigging	#processPlayerDigging, :, onPlayerAction, handlePlayerHandAction
+		c	Processes the player initiating/stopping digging on a particular spot, as well as a player dropping items?. (0: initiated, 1: reinitiated, 2? , 3-4 drop item (respectively without or with player control), 5: stopped; x,y,z, side clicked on;)
+		p	1	p_147345_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C0BPacketEntityAction;)V	func_147357_a	processEntityAction	#processEntityAction, :, onClientCommand, handlePlayerMovementAction
+		c	Processes a range of action-types: sneaking, sprinting, waking from sleep, opening the inventory or setting jump height of the horse the player is riding
+		p	1	p_147357_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C0CPacketInput;)V	func_147358_a	processInput	#processInput, :, onPlayerInput, handlePlayerInput
+		c	Processes player movement input. Includes walking, strafing, jumping, sneaking; excludes riding and toggling flying/sprinting
+		p	1	p_147358_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C09PacketHeldItemChange;)V	func_147355_a	processHeldItemChange	#processHeldItemChange, :, onUpdateSelectedSlot, handleSelectSlot
+		c	Updates which quickbar slot is selected
+		p	1	p_147355_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C10PacketCreativeInventoryAction;)V	func_147344_a	processCreativeInventoryAction	#processCreativeInventoryAction, :, onCreativeInventoryAction, handleCreativeMenuSlot
+		c	Update the server with an ItemStack in a slot.
+		p	1	p_147344_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C12PacketUpdateSign;)V	func_147343_a	processUpdateSign	#processUpdateSign, :, onSignUpdate, handleSignUpdate
+		p	1	p_147343_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/play/client/C08PacketPlayerBlockPlacement;)V	func_147346_a	processPlayerBlockPlacement	#processPlayerBlockPlacement, processTryUseItem, onPlayerInteractBlock, handlePlayerUse
+		c	Processes block placement and block activation (anvil, furnace, etc.)
+		p	1	p_147346_1_	packetIn	#packetIn, :, packet, :

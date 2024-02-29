@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldServerMulti	net/minecraft/world/WorldServerMulti	
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/storage/ISaveHandler;Ljava/lang/String;ILnet/minecraft/world/WorldSettings;Lnet/minecraft/world/WorldServer;Lnet/minecraft/profiler/Profiler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45283_1_	server	#~, ~, ~, server
+		p	2	p_i45283_2_	storage	#~, ~, ~, storage
+		p	3	p_i45283_3_	name	#~, ~, ~, name
+		p	4	p_i45283_4_	dimensionId	#~, ~, ~, dimensionId
+		p	5	p_i45283_5_	settings	#~, ~, ~, settings
+		p	6	p_i45283_6_	delegate	#~, ~, ~, delegate
+		p	7	p_i45283_7_	profiler	#~, ~, ~, profiler

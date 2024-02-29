@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SkinManager$3$1	net/minecraft/client/resources/SkinManager$3$1	
+	f	Ljava/util/Map;	field_152803_a	field_152803_a	#~, ~, ~, ~
+	f	Lnet/minecraft/client/resources/SkinManager$3;	field_152804_b	field_152804_b	#~, ~, ~, ~
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/resources/SkinManager$3;Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1036_1_	p_i1036_1_	#~, ~, ~, ~
+		p	2	p_i1036_2_	p_i1036_2_	#~, ~, ~, ~

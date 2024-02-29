@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/Metadata	net/minecraft/client/stream/Metadata	
+	f	Lcom/google/gson/Gson;	field_152811_a	GSON	#~, ~, GSON, :
+	f	Ljava/lang/String;	field_152812_b	name	#name, :, :, :
+	f	Ljava/lang/String;	field_152813_c	description	#description, :, desc, description
+	f	Ljava/util/Map;	field_152814_d	payload	#payload, :, map, payload
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1030_1_	name	#~, ~, name, :
+	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1029_1_	createWorldGuiIn	#createWorldGuiIn, :, name, :
+		p	2	p_i1029_2_	preset	#preset, :, desc, description
+	m	()Ljava/lang/String;	func_152809_a	getDescription	#~, ~, getDescription, :
+	m	(Ljava/lang/String;)V	func_152807_a	setDescription	#~, ~, setDescription, :
+		p	1	p_152807_1_	description	#~, ~, desc, description
+	m	(Ljava/lang/String;Ljava/lang/String;)V	func_152808_a	put	#~, ~, put, :
+		p	1	p_152808_1_	key	#~, ~, key, :
+		p	2	p_152808_2_	value	#~, ~, value, :
+	m	()Ljava/lang/String;	func_152806_b	serialize	#~, ~, toJson, serialize
+	m	()Ljava/lang/String;	func_152810_c	getName	#~, ~, getName, :
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

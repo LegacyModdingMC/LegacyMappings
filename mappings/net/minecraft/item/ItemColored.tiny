@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemColored	net/minecraft/item/ItemColored	
+	f	Lnet/minecraft/block/Block;	field_150944_b	coloredBlock	#coloredBlock, :, :, block
+	f	[Ljava/lang/String;	field_150945_c	subtypeNames	#subtypeNames, :, names, :
+	m	(Lnet/minecraft/block/Block;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45332_1_	block	#block, :, coloredBlock, block
+		p	2	p_i45332_2_	hasSubtypes	#hasSubtypes, :, unbreakable, :
+	m	([Ljava/lang/String;)Lnet/minecraft/item/ItemColored;	func_150943_a	setSubtypeNames	#setSubtypeNames, :, setNamed, setNames
+		p	1	p_150943_1_	names	#names, :, :, :

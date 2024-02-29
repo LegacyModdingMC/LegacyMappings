@@ -1,0 +1,41 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/MapData	net/minecraft/world/storage/MapData	
+	f	I	field_76201_a	xCenter	#xCenter, :, :, centerX
+	f	I	field_76199_b	zCenter	#zCenter, :, :, centerZ
+	f	B	field_76200_c	dimension	#dimension, :, dimensionId, dimension
+	f	B	field_76197_d	scale	#scale, :, :, :
+	f	[B	field_76198_e	colors	#colors, :, :, :
+		c	colours
+	f	Ljava/util/List;	field_76196_g	playersArrayList	#playersArrayList, :, updateTrackers, holders
+		c	Holds a reference to the MapInfo of the players who own a copy of the map
+	f	Ljava/util/Map;	field_76203_h	playersVisibleOnMap	#playersVisibleOnMap, mapDecorations, icons, decorations
+	f	Ljava/util/Map;	field_76202_j	playersHashMap	#playersHashMap, :, updateTrackersByPlayer, holdersByPlayer
+		c	Holds a reference to the players who own a copy of the map and a reference to their MapInfo
+	m	(III)V	func_76194_a	setColumnDirty	#setColumnDirty, :, ~, markDirty
+		c	Marks a vertical range of pixels as being modified so they will be resent to clients. Parameters: X, lowest Y, highest Y
+		p	1	p_76194_1_	index	#~, ~, ~, index
+		p	2	p_76194_2_	minY	#~, ~, ~, minY
+		p	3	p_76194_3_	maxY	#~, ~, ~, maxY
+	m	(ILnet/minecraft/world/World;Ljava/lang/String;DDD)V	func_82567_a	updateDecorations	#updateDecorations, :, ~, addDecoration
+		p	2	p_82567_2_	worldIn	#worldIn, :, world, :
+		p	1	p_82567_1_	type	#type, :, ~, type
+		p	3	p_82567_3_	entityIdentifier	#entityIdentifier, :, ~, id
+		p	4	p_82567_4_	worldX	#worldX, :, ~, x
+		p	6	p_82567_6_	worldZ	#worldZ, :, ~, z
+		p	8	p_82567_8_	rotation	#rotation, :, ~, rotation
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)[B	func_76193_a	getUpdatePacketData	#getUpdatePacketData, :, ~, getUpdateData
+		c	Get byte array of packet data to send to players on map for updating map data
+		p	1	p_76193_1_	stack	#~, ~, itemStack, stack
+		p	2	p_76193_2_	world	#~, ~, world, :
+		p	3	p_76193_3_	player	#~, ~, playerEntity, player
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/world/storage/MapData$MapInfo;	func_82568_a	getMapInfo	#getMapInfo, :, ~, addHolder
+		p	1	p_82568_1_	player	#player, :, playerEntity, player
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;)V	func_76191_a	updateVisiblePlayers	#updateVisiblePlayers, :, update, tickHolder
+		c	Adds the player passed to the list of visible players and checks to see which players are visible
+		p	1	p_76191_1_	player	#player, :, :, :
+		p	2	p_76191_2_	mapStack	#mapStack, :, stack, itemStack
+	m	([B)V	func_76192_a	updateMPMapData	#updateMPMapData, :, ~, update
+		c	Updates the client's map with information from other players in MP
+		p	1	p_76192_1_	data	#~, ~, ~, data
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2140_1_	mapname	#mapname, :, ~, ~

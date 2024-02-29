@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentArrowFire	net/minecraft/enchantment/EnchantmentArrowFire	
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1920_1_	id	#~, ~, ~, id
+		p	2	p_i1920_2_	type	#~, ~, ~, type

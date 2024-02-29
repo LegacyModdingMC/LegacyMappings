@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/PackMetadataSection	net/minecraft/client/resources/data/PackMetadataSection	
+	f	Lnet/minecraft/util/IChatComponent;	field_110464_a	packDescription	#packDescription, :, description, :
+	f	I	field_110463_b	packFormat	#packFormat, :, format, :
+	m	(Lnet/minecraft/util/IChatComponent;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1034_1_	packDescriptionIn	#packDescriptionIn, :, description, :
+		p	2	p_i1034_2_	packFormatIn	#packFormatIn, :, format, :
+	m	()Lnet/minecraft/util/IChatComponent;	func_152805_a	getPackDescription	#getPackDescription, :, getDescription, :
+	m	()I	func_110462_b	getPackFormat	#getPackFormat, :, :, getFormat

@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C02PacketUseEntity$Action	net/minecraft/network/play/client/C02PacketUseEntity$Action	
+	f	Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	INTERACT	INTERACT	#~, ~, INTERACT, :
+	f	Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	ATTACK	ATTACK	#~, ~, ATTACK, :
+	f	[Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	field_151421_c	ACTIONS	#ACTIONS, :, ~, ALL
+	f	I	field_151418_d	id	#id, :, ~, index
+	f	[Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	()[Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	access$000	access$000	#~, ~, ~, ~
+	m	(Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;)I	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/network/play/client/C02PacketUseEntity$Action;	values	values	#~, ~, ~, ~
+	m	(Ljava/lang/String;II)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45250_3_	actionId	#actionId, :, ~, index
+		p	1	p_i45250_1_	p_i45250_1_	#~, ~, ~, ~
+		p	2	p_i45250_2_	p_i45250_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

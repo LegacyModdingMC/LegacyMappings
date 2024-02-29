@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/MinecraftServerGui$4	net/minecraft/server/gui/MinecraftServerGui$4	
+	f	Ljavax/swing/JTextArea;	field_164252_a	consoleTextArea	#~, ~, ~, consoleTextArea
+	f	Ljavax/swing/JScrollPane;	field_164250_b	consoleScrollPane	#~, ~, ~, consoleScrollPane
+	f	Lnet/minecraft/server/gui/MinecraftServerGui;	field_164251_c	gui	#~, ~, ~, gui
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/gui/MinecraftServerGui;Ljavax/swing/JTextArea;Ljavax/swing/JScrollPane;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45281_1_	workDir	#workDir, :, ~, ~
+		p	2	p_i45281_2_	proxy	#proxy, :, ~, ~
+		p	3	p_i45281_3_	p_i45281_3_	#~, ~, ~, ~

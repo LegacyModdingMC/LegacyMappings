@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IIcon	net/minecraft/util/IIcon	
+	m	()I	func_94211_a	getIconWidth	#getIconWidth, :, getWidth, :
+		c	Returns the width of the icon, in pixels.
+	m	(D)F	func_94214_a	getInterpolatedU	#getInterpolatedU, :, getFrameU, getU
+		c	Gets a U coordinate on the icon. 0 returns uMin and 16 returns uMax. Other arguments return in-between values.
+		p	1	p_94214_1_	u	#u, :, ~, delta
+	m	()I	func_94216_b	getIconHeight	#getIconHeight, :, getHeight, :
+		c	Returns the height of the icon, in pixels.
+	m	(D)F	func_94207_b	getInterpolatedV	#getInterpolatedV, :, getFrameV, getV
+		c	Gets a V coordinate on the icon. 0 returns vMin and 16 returns vMax. Other arguments return in-between values.
+		p	1	p_94207_1_	v	#v, :, ~, delta
+	m	()F	func_94209_e	getMinU	#getMinU, :, :, getUMin
+		c	Returns the minimum U coordinate to use when rendering with this icon.
+	m	()F	func_94212_f	getMaxU	#getMaxU, :, :, getUMax
+		c	Returns the maximum U coordinate to use when rendering with this icon.
+	m	()F	func_94206_g	getMinV	#getMinV, :, :, getVMin
+		c	Returns the minimum V coordinate to use when rendering with this icon.
+	m	()F	func_94210_h	getMaxV	#getMaxV, :, :, getVMax
+		c	Returns the maximum V coordinate to use when rendering with this icon.
+	m	()Ljava/lang/String;	func_94215_i	getIconName	#getIconName, :, getName, :

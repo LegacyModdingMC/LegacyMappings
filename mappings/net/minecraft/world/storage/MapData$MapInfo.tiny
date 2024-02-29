@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/MapData$MapInfo	net/minecraft/world/storage/MapData$MapInfo	
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_76211_a	entityplayerObj	#entityplayerObj, player, playerEntity, player
+		c	Reference for EntityPlayer object in MapInfo
+	f	[I	field_76209_b	dirtyMinY	#~, ~, ~, dirtyMinY
+	f	[I	field_76210_c	dirtyMaxY	#~, ~, ~, dirtyMaxY
+	f	I	field_82569_d	step	#step, :, ~, step
+		c	Incremented each time the map attempts to rescan its surroundings. Used to reveal new regions over several seconds instead of all at once.
+	f	Lnet/minecraft/world/storage/MapData;	field_76207_d	mapDataObj	#mapDataObj, :, mapState, mapData
+		c	reference in MapInfo to MapData object
+	f	I	field_76208_e	currentRandomNumber	#currentRandomNumber, :, ~, nextDirtyPixel
+		c	updated by x = mod(x*11,128) +1  x-1 is used to index field_76209_b and field_76210_c
+	f	I	field_76205_f	ticksUntilPlayerLocationMapUpdate	#ticksUntilPlayerLocationMapUpdate, :, ~, cooldown
+	f	[B	field_76206_g	lastPlayerLocationOnMap	#lastPlayerLocationOnMap, :, ~, decorations
+		c	a cache of the result from getPlayersOnMap so that it is not resent when nothing changes
+	f	Z	field_82570_i	dirty	#~, ~, ~, dirty
+	m	(Lnet/minecraft/world/storage/MapData;Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2138_1_	mapState	#~, ~, mapState, ~
+		p	2	p_i2138_2_	player	#player, :, playerEntity, player
+	m	(Lnet/minecraft/item/ItemStack;)[B	func_76204_a	getPlayersOnMap	#getPlayersOnMap, :, ~, getUpdateData
+		c	returns a 1+players*3 array, of x,y, and color . the name of this function may be partially wrong, as there is a second branch to the code here
+		p	1	p_76204_1_	stack	#~, ~, ~, stack

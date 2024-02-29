@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentProtection	net/minecraft/enchantment/EnchantmentProtection	
+	f	[Ljava/lang/String;	field_77354_A	protectionName	#protectionName, :, TYPES, TYPE_NAMES
+		c	Holds the name to be translated of each protection type.
+	f	[I	field_77355_B	baseEnchantability	#baseEnchantability, :, MINIMUM_ENCHANTABILITY, MIN_XP
+		c	Holds the base factor of enchantability needed to be able to use the enchant.
+	f	[I	field_77357_C	levelEnchantability	#levelEnchantability, :, ~, XP_MODIFIER
+		c	Holds how much each level increased the enchantability factor to be able to use this enchant.
+	f	[I	field_77353_D	thresholdEnchantability	#thresholdEnchantability, :, MAXIMUM_ENCHANTABILITY, MAX_XP
+		c	Used on the formula of base enchantability, this is the 'window' factor of values to be able to use thing enchant.
+	f	I	field_77356_a	protectionType	#protectionType, :, protectionTypeId, type
+		c	Defines the type of protection of the enchantment, 0 = all, 1 = fire, 2 = fall (feather fall), 3 = explosion and 4 = projectile.
+	m	(Lnet/minecraft/entity/Entity;D)D	func_92092_a	getBlastDamageReduction	#getBlastDamageReduction, :, ~, modifyExplosionDamage
+		p	0	p_92092_0_	entityLivingBaseIn	#entityLivingBaseIn, :, entity, :
+		p	1	p_92092_1_	damage	#damage, :, ~, damage
+	m	(Lnet/minecraft/entity/Entity;I)I	func_92093_a	getFireTimeForEntity	#getFireTimeForEntity, :, ~, modifyOnFireTimer
+		c	Gets the amount of ticks an entity should be set fire, adjusted for fire protection.
+		p	0	p_92093_0_	entity	#~, ~, entity, :
+		p	1	p_92093_1_	ticks	#~, ~, ~, ticks
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1936_1_	id	#~, ~, ~, id
+		p	2	p_i1936_2_	type	#~, ~, ~, type
+		p	3	p_i1936_3_	protectionType	#~, ~, ~, protectionType
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

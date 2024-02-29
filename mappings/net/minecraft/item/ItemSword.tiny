@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSword	net/minecraft/item/ItemSword	
+	f	F	field_150934_a	attackDamage	#attackDamage, :, attackMultiplier, attackDamage
+	f	Lnet/minecraft/item/Item$ToolMaterial;	field_150933_b	repairMaterial	#repairMaterial, material, ~, material
+	m	()F	func_150931_i	getDamageVsEntity	#getDamageVsEntity, getAttackDamage, :, :
+		c	Returns the amount of damage this item will deal. One heart of damage is equal to 2 damage points.
+	m	()Ljava/lang/String;	func_150932_j	getToolMaterialName	#getToolMaterialName, :, getToolMaterial, :
+		c	Return the name for this tool's material.
+	m	(Lnet/minecraft/item/Item$ToolMaterial;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45356_1_	material	#material, :, ~, material

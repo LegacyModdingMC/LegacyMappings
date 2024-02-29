@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSelectWorld$List	net/minecraft/client/gui/GuiSelectWorld$List	
+	f	Lnet/minecraft/client/gui/GuiSelectWorld;	field_148207_k	parent	#~, ~, ~, parent
+	m	(Lnet/minecraft/client/gui/GuiSelectWorld;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1053_1_	p_i1053_1_	#~, ~, ~, ~

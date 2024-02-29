@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S05PacketSpawnPosition	net/minecraft/network/play/server/S05PacketSpawnPosition	
+	f	I	field_149364_a	x	#~, ~, ~, x
+	f	I	field_149362_b	y	#~, ~, ~, y
+	f	I	field_149363_c	z	#~, ~, ~, z
+	m	()I	func_149360_c	getX	#~, ~, ~, getX
+	m	()I	func_149359_d	getY	#~, ~, ~, getY
+	m	()I	func_149358_e	getZ	#~, ~, ~, getZ
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45229_1_	x	#~, ~, ~, x
+		p	2	p_i45229_2_	y	#~, ~, ~, y
+		p	3	p_i45229_3_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,46 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerProfileCache	net/minecraft/server/management/PlayerProfileCache	
+	f	Ljava/text/SimpleDateFormat;	field_152659_a	dateFormat	#dateFormat, DATE_FORMAT, EXPIRATION_DATE_FORMAT, DATE_FORMAT
+	f	Lcom/google/gson/Gson;	field_152660_b	gson	#gson, :, :, :
+	f	Ljava/util/Map;	field_152661_c	usernameToProfileEntryMap	#usernameToProfileEntryMap, :, byName, profilesByName
+		c	A map between player usernames and {@link ProfileEntry profile entries}
+	f	Ljava/util/Map;	field_152662_d	uuidToProfileEntryMap	#uuidToProfileEntryMap, :, byUuid, profilesByUuid
+		c	A map between {@link UUID UUID's} and {@link ProfileEntry ProfileEntries}
+	f	Ljava/util/LinkedList;	field_152663_e	gameProfiles	#gameProfiles, :, profiles, saveQueue
+		c	A list of all the cached {@link GameProfile GameProfiles}
+	f	Lnet/minecraft/server/MinecraftServer;	field_152664_f	mcServer	#mcServer, :, server, :
+	f	Ljava/io/File;	field_152665_g	usercacheFile	#usercacheFile, :, cacheFile, file
+	f	Ljava/lang/reflect/ParameterizedType;	field_152666_h	TYPE	#TYPE, :, ENTRY_LIST_TYPE, ENTRY_TYPE
+	m	(Lnet/minecraft/server/MinecraftServer;Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1171_1_	server	#server, :, :, :
+		p	2	p_i1171_2_	cacheFile	#cacheFile, :, :, file
+	m	()[Ljava/lang/String;	func_152654_a	getUsernames	#getUsernames, :, getNames, :
+		c	Get an array of the usernames that are cached in this cache
+	m	(I)Ljava/util/List;	func_152656_a	getEntriesWithLimit	#getEntriesWithLimit, :, getLastAccessedEntries, getSaveQueue
+		c	Get the {@link PlayerProfileCache.ProfileEntry entries} of this cache with a given limit
+		p	1	p_152656_1_	limitSize	#limitSize, :, limit, amount
+	m	(Lcom/mojang/authlib/GameProfile;)V	func_152649_a	addEntry	#addEntry, :, add, :
+		c	Add an entry to this cache
+		p	1	p_152649_1_	gameProfile	#gameProfile, :, profile, :
+	m	(Lcom/mojang/authlib/GameProfile;Ljava/util/Date;)V	func_152651_a	addEntry	#addEntry, :, add, :
+		c	Add an entry to this cache
+		p	1	p_152651_1_	gameProfile	#gameProfile, :, profile, :
+		p	2	p_152651_2_	expirationDate	#expirationDate, :, :, :
+	m	(Ljava/lang/String;)Lcom/mojang/authlib/GameProfile;	func_152655_a	getGameProfileForUsername	#getGameProfileForUsername, :, findByName, get
+		c	Get a player's GameProfile given their username. Mojang's server's will be contacted if the entry is not cached locally.
+		p	1	p_152655_1_	username	#username, :, name, :
+	m	(Ljava/util/UUID;)Lcom/mojang/authlib/GameProfile;	func_152652_a	getProfileByUUID	#getProfileByUUID, :, getByUuid, get
+		c	Get a player's {@link GameProfile} given their UUID
+		p	1	p_152652_1_	uuid	#uuid, :, :, :
+	m	(Lnet/minecraft/server/MinecraftServer;Ljava/lang/String;)Lcom/mojang/authlib/GameProfile;	func_152650_a	getGameProfile	#getGameProfile, :, ~, find
+		c	Get a GameProfile given the MinecraftServer and the player's username. \n\n The UUID of the GameProfile will <b>not</b> be null. If the server is offline, a UUID based on the hash of the username will be used.
+		p	0	p_152650_0_	server	#server, :, ~, server
+		p	1	p_152650_1_	username	#username, :, ~, name
+	m	()V	func_152657_b	load	#load, :, :, :
+		c	Load the cached profiles from disk
+	m	(Ljava/util/UUID;)Lnet/minecraft/server/management/PlayerProfileCache$ProfileEntry;	func_152653_b	getByUUID	#getByUUID, :, ~, getEntry
+		c	Get a {@link ProfileEntry} by UUID
+		p	1	p_152653_1_	uuid	#uuid, :, ~, uuid
+	m	()V	func_152658_c	save	#save, :, :, :
+		c	Save the cached profiles to disk
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

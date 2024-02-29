@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiStreamIndicator	net/minecraft/client/gui/GuiStreamIndicator	
+	f	Lnet/minecraft/util/ResourceLocation;	field_152441_a	locationStreamIndicator	#locationStreamIndicator, :, STREAM_INDICATOR, STREAM_INDICATOR_TEXTURE
+	f	Lnet/minecraft/client/Minecraft;	field_152442_b	mc	#mc, :, client, minecraft
+	f	F	field_152443_c	streamAlpha	#streamAlpha, :, streamIndicatorAlpha, ~
+	f	I	field_152444_d	streamAlphaDelta	#streamAlphaDelta, :, streamIndicatorAlphaFade, ~
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1092_1_	playerInv	#playerInv, :, client, minecraft
+	m	()V	func_152439_a	updateStreamAlpha	#updateStreamAlpha, :, tick, ~
+	m	(II)V	func_152437_a	render	#render, :, :, :
+		p	1	p_152437_1_	x	#~, ~, x, ~
+		p	2	p_152437_2_	y	#~, ~, y, ~
+	m	(IIII)V	func_152436_a	render	#render, :, :, ~
+		p	1	p_152436_1_	x	#~, ~, x, ~
+		p	2	p_152436_2_	y	#~, ~, y, ~
+		p	3	p_152436_3_	u	#~, ~, u, ~
+		p	4	p_152436_4_	v	#~, ~, v, ~
+	m	()I	func_152440_b	getPauseTextureStart	#~, ~, getPauseTextureStart, ~
+	m	()I	func_152438_c	getMuteTextureStart	#~, ~, getMuteTextureStart, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

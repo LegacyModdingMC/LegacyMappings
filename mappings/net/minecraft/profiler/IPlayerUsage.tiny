@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/profiler/IPlayerUsage	net/minecraft/profiler/IPlayerUsage	
+	m	()Z	func_70002_Q	isSnooperEnabled	#isSnooperEnabled, :, :, :
+		c	Returns whether snooping is enabled or not.
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)V	func_70000_a	addServerStatsToSnooper	#addServerStatsToSnooper, :, addSnooperInfo, populateSnooper
+		p	1	p_70000_1_	playerSnooper	#playerSnooper, :, snooper, :
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)V	func_70001_b	addServerTypeToSnooper	#addServerTypeToSnooper, :, addSnooper, initSnooper
+		p	1	p_70001_1_	playerSnooper	#playerSnooper, :, snooper, :

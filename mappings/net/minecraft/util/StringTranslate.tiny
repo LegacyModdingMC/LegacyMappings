@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/StringTranslate	net/minecraft/util/StringTranslate	
+	f	Ljava/util/regex/Pattern;	field_111053_a	numericVariablePattern	#numericVariablePattern, NUMERIC_VARIABLE_PATTERN, TOKEN_PATTERN, TRANSLATION_ARG_PATTERN
+		c	Pattern that matches numeric variable placeholders in a resource string, such as "%d", "%3$d", "%.2f"
+	f	Lcom/google/common/base/Splitter;	field_135065_b	equalSignSplitter	#equalSignSplitter, EQUAL_SIGN_SPLITTER, SPLITTER, TRANSLATION_SPLITTER
+		c	A Splitter that splits a string on the first "=".  For example, "a=b=c" would split into ["a", "b=c"].
+	f	Lnet/minecraft/util/StringTranslate;	field_74817_a	instance	#instance, :, INSTANCE, :
+		c	Is the private singleton instance of StringTranslate.
+	f	Ljava/util/Map;	field_74816_c	languageList	#languageList, :, translations, :
+	f	J	field_150511_e	lastUpdateTimeInMilliseconds	#lastUpdateTimeInMilliseconds, :, timeLoaded, loadTimestamp
+		c	The time, in milliseconds since epoch, that this instance was last updated
+	m	()Lnet/minecraft/util/StringTranslate;	func_74808_a	getInstance	#getInstance, :, :, :
+		c	Return the StringTranslate singleton instance
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_74805_b	translateKey	#translateKey, :, translate, :
+		c	Translate a key to current language.
+		p	1	p_74805_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	func_74803_a	translateKeyFormat	#translateKeyFormat, :, translate, :
+		c	Translate a key to current language applying String.format()
+		p	1	p_74803_1_	key	#key, :, :, :
+		p	2	p_74803_2_	format	#format, :, args, :
+	m	(Ljava/util/Map;)V	func_135063_a	replaceWith	#replaceWith, :, load, :
+		c	Replaces all the current instance's translations with the ones that are passed in.
+		p	0	p_135063_0_	translations	#~, ~, map, translations
+	m	(Ljava/lang/String;)Z	func_94520_b	containsTranslateKey	#containsTranslateKey, isKeyTranslated, hasTranslation, :
+		c	Returns true if the passed key is in the translation table.
+		p	1	p_94520_1_	key	#key, :, translation, key
+	m	()J	func_150510_c	getLastUpdateTimeInMilliseconds	#getLastUpdateTimeInMilliseconds, :, getTimeLoaded, getLoadTimestamp
+		c	Gets the time, in milliseconds since epoch, that this instance was last updated
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_135064_c	tryTranslateKey	#tryTranslateKey, :, translateNullSafe, translateKey
+		c	Tries to look up a translation for the given key; spits back the key if no result was found.
+		p	1	p_135064_1_	key	#key, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

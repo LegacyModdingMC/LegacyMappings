@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/ICommandSender	net/minecraft/command/ICommandSender	
+	m	(ILjava/lang/String;)Z	func_70003_b	canCommandSenderUseCommand	#canCommandSenderUseCommand, canUseCommand, :, :
+		c	Returns true if the command sender is allowed to use the given command.
+		p	1	p_70003_1_	permissionLevel	#permissionLevel, permLevel, permissionLevel, :
+		p	2	p_70003_2_	command	#command, commandName, commandLiteral, command
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_145747_a	addChatMessage	#addChatMessage, sendMessage, :, :
+		c	Notifies this sender of some sort of information.  This is for messages intended to display to the user.  Used for typical output (like "you asked for whether or not this game rule is set, so here's your answer"), warnings (like "I fetched this block for you by ID, but I'd like you to know that every time you do this, I die a little inside"), and errors (like "it's not called iron_pixacke, silly").
+		p	1	p_145747_1_	message	#message, component, text, message
+	m	()Lnet/minecraft/world/World;	func_130014_f_	getEntityWorld	#getEntityWorld, :, getWorld, getSourceWorld
+		c	Get the world, if available. <b>{@code null} is not allowed!</b> If you are not an entity in the world, return the overworld
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_82114_b	getPlayerCoordinates	#getPlayerCoordinates, getCommandSenderPosition, ~, getSourceBlockPos
+		c	Return the position for this command sender.

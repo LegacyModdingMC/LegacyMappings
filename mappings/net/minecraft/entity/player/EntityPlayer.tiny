@@ -1,0 +1,290 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/EntityPlayer	net/minecraft/entity/player/EntityPlayer	
+	f	Lnet/minecraft/inventory/InventoryEnderChest;	field_71078_a	theInventoryEnderChest	#theInventoryEnderChest, enderChest, :, enderchest
+	f	I	field_71076_b	sleepTimer	#sleepTimer, :, :, :
+	f	Z	field_71083_bS	sleeping	#sleeping, :, inBed, sleeping
+		c	Boolean value indicating weather a player is sleeping or not
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_71081_bT	playerLocation	#playerLocation, bedLocation, ~, sleepingPos
+		c	the current location of the player
+	f	F	field_71079_bU	renderOffsetX	#renderOffsetX, :, ~, sleepOffsetX
+		c	Offset in the X axis used for rendering. This field is {@linkplain #setRenderOffsetForSleep() used by beds}.
+	f	F	field_71089_bV	renderOffsetZ	#renderOffsetZ, :, ~, sleepOffsetZ
+		c	Offset in the Z axis used for rendering. This field is {@linkplain #setRenderOffsetForSleep() used by beds}.
+	f	Lnet/minecraft/entity/player/PlayerCapabilities;	field_71075_bZ	capabilities	#capabilities, :, abilities, :
+		c	The player's capabilities. (See class PlayerCapabilities)
+	f	I	field_71068_ca	experienceLevel	#experienceLevel, :, :, xpLevel
+		c	The current experience level the player is on.
+	f	I	field_71067_cb	experienceTotal	#experienceTotal, :, totalExperience, xp
+		c	The total amount of experience the player has. This also includes the amount of experience within their Experience Bar.
+	f	F	field_71106_cc	experience	#experience, :, experienceProgress, xpProgress
+		c	The current amount of experience the player has within their Experience Bar.
+	f	F	field_71108_cd	speedOnGround	#speedOnGround, :, ~, speed
+	f	F	field_71102_ce	speedInAir	#speedInAir, :, ~, flyingSpeed
+	f	Lnet/minecraft/entity/projectile/EntityFishHook;	field_71104_cf	fishEntity	#fishEntity, :, fishHook, fishingBobber
+		c	An instance of a fishing rod's hook. If this isn't null, the icon image of the fishing rod is slightly different
+	f	Lnet/minecraft/entity/player/InventoryPlayer;	field_71071_by	inventory	#inventory, :, :, :
+		c	Inventory of the player
+	f	Lnet/minecraft/inventory/Container;	field_71069_bz	inventoryContainer	#inventoryContainer, :, playerScreenHandler, playerMenu
+		c	The Container for the player's inventory (which opens when they press E)
+	f	Lnet/minecraft/inventory/Container;	field_71070_bA	openContainer	#openContainer, :, openScreenHandler, menu
+		c	The Container the player has open.
+	f	Lnet/minecraft/util/FoodStats;	field_71100_bB	foodStats	#foodStats, :, hungerManager, :
+		c	The food object of the player, the general hunger logic.
+	f	I	field_71101_bC	flyToggleTimer	#flyToggleTimer, :, abilityResyncCountdown, pressedJumpTwiceTimer
+		c	Used to tell if the player pressed jump twice. If this is at 0 and it's pressed (And they are allowed to fly, as defined in the player's movementInput) it sets this to 7. If it's pressed and it's greater than 0 enable fly.
+	f	F	field_71107_bF	prevCameraYaw	#prevCameraYaw, :, prevStrideDistance, :
+	f	F	field_71109_bG	cameraYaw	#cameraYaw, :, strideDistance, :
+	f	I	field_71090_bL	xpCooldown	#xpCooldown, :, experiencePickUpDelay, xpCooldown
+		c	Used by EntityPlayer to prevent too many xp orbs from getting absorbed at once.
+	f	D	field_71091_bM	prevChasingPosX	#prevChasingPosX, :, capeX, lastCapeX
+		c	Previous X position of the player's cape
+	f	D	field_71096_bN	prevChasingPosY	#prevChasingPosY, :, capeY, lastCapeY
+		c	Previous Y position of the player's cape
+	f	D	field_71097_bO	prevChasingPosZ	#prevChasingPosZ, :, capeZ, lastCapeZ
+		c	Previous Z position of the player's cape
+	f	D	field_71094_bP	chasingPosX	#chasingPosX, :, prevCapeX, capeX
+		c	Current X position of the player's cape
+	f	D	field_71095_bQ	chasingPosY	#chasingPosY, :, prevCapeY, capeY
+		c	Current Y position of the player's cape
+	f	D	field_71085_bR	chasingPosZ	#chasingPosZ, :, prevCapeZ, capeZ
+		c	Current Z position of the player's cape
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_71077_c	spawnChunk	#spawnChunk, spawnPos, ~, spawnPoint
+		c	holds the spawn chunk of the player
+	f	F	field_71082_cx	renderOffsetY	#renderOffsetY, :, ~, sleepOffsetY
+		c	Offset in the Y axis used for rendering. This field is not written to in vanilla (other than being set to 0 each tick by {@link net.minecraft.client.entity.EntityOtherPlayerMP#onUpdate()}).
+	f	Z	field_82248_d	spawnForced	#spawnForced, :, :, respawnForced
+		c	Whether this player's spawn point is forced, preventing execution of bed checks.
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_71073_d	startMinecartRidingCoordinate	#startMinecartRidingCoordinate, :, ~, minecartTravelStartPos
+		c	Holds the coordinate of the player when enter a minecraft to ride.
+	f	Lnet/minecraft/item/ItemStack;	field_71074_e	itemInUse	#itemInUse, :, useItem, itemInUse
+		c	This is the item that is in use when the player is holding down the useItemButton (e.g., bow, food, sword)
+	f	I	field_71072_f	itemInUseCount	#itemInUseCount, :, itemUseTicks, itemUseTimer
+		c	This field starts off equal to getMaxItemUseDuration and is decremented on each tick
+	f	I	field_82249_h	lastXPSound	#lastXPSound, :, lastPlayedLevelUpSoundTime, lastXpSoundTime
+	f	Lcom/mojang/authlib/GameProfile;	field_146106_i	gameProfile	#gameProfile, :, :, profile
+		c	The player's unique game profile
+	m	(Lnet/minecraft/world/World;Lcom/mojang/authlib/GameProfile;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45324_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i45324_2_	gameProfileIn	#gameProfileIn, :, profile, :
+	m	(F)V	func_71020_j	addExhaustion	#addExhaustion, :, :, addFatigue
+		c	increases exhaustion level by supplied amount
+		p	1	p_71020_1_	exhaustion	#exhaustion, :, :, amount
+	m	(I)V	func_82242_a	addExperienceLevel	#addExperienceLevel, :, incrementXp, addXp
+		c	Add experience levels to this player.
+		p	1	p_82242_1_	levels	#levels, :, xp, levels
+	m	(III)Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	func_71018_a	sleepInBedAt	#sleepInBedAt, :, ~, trySleep
+		c	puts player to sleep on specified bed if possible
+		p	1	p_71018_1_	x	#x, :, ~, x
+		p	2	p_71018_2_	y	#y, :, ~, y
+		p	3	p_71018_3_	z	#z, :, ~, z
+	m	(IIIILnet/minecraft/item/ItemStack;)Z	func_82247_a	canPlayerEdit	#canPlayerEdit, :, ~, canUseItem
+		p	1	p_82247_1_	x	#~, ~, ~, x
+		p	2	p_82247_2_	y	#~, ~, ~, y
+		p	3	p_82247_3_	z	#~, ~, ~, z
+		p	4	p_82247_4_	face	#~, ~, ~, face
+		p	5	p_82247_5_	stack	#~, ~, ~, stack
+	m	(IIILjava/lang/String;)V	func_71002_c	displayGUIEnchantment	#displayGUIEnchantment, :, ~, openEnchantingTableMenu
+		p	1	p_71002_1_	x	#~, ~, ~, x
+		p	2	p_71002_2_	y	#~, ~, ~, y
+		p	3	p_71002_3_	z	#~, ~, ~, z
+		p	4	p_71002_4_	name	#~, ~, ~, name
+	m	(Lnet/minecraft/item/ItemStack;I)V	func_71008_a	setItemInUse	#setItemInUse, :, setUseItem, :
+		c	sets the itemInUse when the use item button is clicked. Args: itemstack, int maxItemUseDuration
+		p	1	p_71008_1_	stack	#stack, :, item, stack
+		p	2	p_71008_2_	duration	#duration, :, ~, maxUseTime
+	m	(Lnet/minecraft/item/ItemStack;Z)Lnet/minecraft/entity/item/EntityItem;	func_71019_a	dropPlayerItemWithRandomChoice	#dropPlayerItemWithRandomChoice, dropItem, :, :
+		c	Args: itemstack, flag
+		p	1	p_71019_1_	itemStackIn	#itemStackIn, :, stack, item
+		p	2	p_71019_2_	unused	#unused, :, ~, unused
+	m	(Lnet/minecraft/item/ItemStack;ZZ)Lnet/minecraft/entity/item/EntityItem;	func_146097_a	dropItem	#dropItem, :, dropStack, dropItem
+		c	Creates and drops the provided item. Depending on the dropAround, it will drop teh item around the player, instead of dropping the item from where the player is pointing at. Likewise, if traceItem is true, the dropped item entity will have the thrower set as the player.\n \n@param dropAround Whether the item is dropped around the player, otherwise dropped in front of the player in the direction the player is pointing at\n@param traceItem Whether to trace the item to this player as the thrower
+		p	1	p_146097_1_	droppedItem	#droppedItem, :, stack, item
+		p	3	p_146097_3_	traceItem	#traceItem, :, incrementStats, thrownByPlayer
+		p	2	p_146097_2_	dropAround	#dropAround, :, ~, velocityFromPlayerDirection
+	m	(Lnet/minecraft/entity/IMerchant;Ljava/lang/String;)V	func_71030_a	displayGUIMerchant	#displayGUIMerchant, :, ~, openTraderMenu
+		p	1	p_71030_1_	trader	#~, ~, ~, trader
+		p	2	p_71030_2_	displayName	#~, ~, ~, displayName
+	m	(Lnet/minecraft/command/server/CommandBlockLogic;)V	func_146095_a	openEditCommandBlock	#openEditCommandBlock, :, openCommandBlockScreen, openCommandBlockMenu
+		p	1	p_146095_1_	cmdBlockLogic	#cmdBlockLogic, :, executor, commandBlock
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/util/ChunkCoordinates;Z)Lnet/minecraft/util/ChunkCoordinates;	func_71056_a	verifyRespawnCoordinates	#verifyRespawnCoordinates, :, ~, loadSpawnPoint
+		c	Ensure that a block enabling respawning exists at the specified coordinates and find an empty space nearby to spawn.
+		p	0	p_71056_0_	world	#~, ~, ~, world
+		p	1	p_71056_1_	pos	#~, ~, ~, pos
+		p	2	p_71056_2_	respawnForced	#~, ~, ~, respawnForced
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_71033_a	setGameType	#setGameType, :, ~, setGameMode
+		c	Sets the player's game mode and sends it to them.
+		p	1	p_71033_1_	gameType	#gameType, :, gamemode, gameMode
+	m	(Lnet/minecraft/block/Block;)Z	func_146099_a	canHarvestBlock	#canHarvestBlock, :, isUsingEffectiveTool, canBreakBlock
+		c	Checks if the player has the ability to harvest a block (checks current inventory item for a tool if necessary)
+		p	1	p_146099_1_	blockToHarvest	#blockToHarvest, :, block, :
+	m	(Lnet/minecraft/block/Block;Z)F	func_146096_a	getCurrentPlayerStrVsBlock	#getCurrentPlayerStrVsBlock, getBreakSpeed, ~, getMiningSpeed
+		c	Returns how strong the player is against the specified block at this moment
+		p	1	p_146096_1_	block	#~, ~, ~, block
+		p	2	p_146096_2_	withEffectiveTool	#~, ~, ~, withEffectiveTool
+	m	(Lnet/minecraft/tileentity/TileEntityBeacon;)V	func_146104_a	openBeaconMenu	#~, ~, ~, openBeaconMenu
+		p	1	p_146104_1_	beacon	#~, ~, ~, beacon
+	m	(Lnet/minecraft/tileentity/TileEntity;)V	func_146100_a	displayGUIEditSign	#displayGUIEditSign, :, ~, openSignEditor
+		c	Displays the GUI for editing a sign. Args: tileEntitySign
+		p	1	p_146100_1_	blockEntity	#~, ~, ~, blockEntity
+	m	(Lnet/minecraft/tileentity/TileEntityBrewingStand;)V	func_146098_a	openBrewingStandMenu	#~, ~, ~, openBrewingStandMenu
+		p	1	p_146098_1_	brewingStand	#~, ~, ~, brewingStand
+	m	(Lnet/minecraft/tileentity/TileEntityDispenser;)V	func_146102_a	openDispenserMenu	#~, ~, ~, openDispenserMenu
+		p	1	p_146102_1_	dispenser	#~, ~, ~, dispenser
+	m	(Lnet/minecraft/tileentity/TileEntityFurnace;)V	func_146101_a	openFurnaceMenu	#~, ~, ~, openFurnaceMenu
+		p	1	p_146101_1_	furnace	#~, ~, ~, furnace
+	m	(Lnet/minecraft/tileentity/TileEntityHopper;)V	func_146093_a	openHopperMenu	#~, ~, ~, openHopperMenu
+		p	1	p_146093_1_	hopper	#~, ~, ~, hopper
+	m	(Lcom/mojang/authlib/GameProfile;)Ljava/util/UUID;	func_146094_a	getUUID	#getUUID, :, getUuidFromProfile, getUuid
+		c	Gets a players UUID given their GameProfie
+		p	0	p_146094_0_	profile	#profile, :, :, :
+	m	(Lnet/minecraft/stats/StatBase;)V	func_71029_a	triggerAchievement	#triggerAchievement, addStat, incrementStat, :
+		c	Will trigger the specified trigger.
+		p	1	p_71029_1_	achievementIn	#achievementIn, stat, :, :
+	m	(Lnet/minecraft/stats/StatBase;I)V	func_71064_a	addStat	#addStat, :, incrementStat, :
+		c	Adds a value to a statistic field.
+		p	1	p_71064_1_	stat	#stat, :, :, :
+		p	2	p_71064_2_	amount	#amount, :, :, :
+	m	(Lnet/minecraft/util/ChunkCoordinates;Z)V	func_71063_a	setSpawnChunk	#setSpawnChunk, :, ~, setSpawnPoint
+		c	Defines a spawn coordinate to player spawn. Used by bed after the player sleep on it.
+		p	1	p_71063_1_	pos	#~, ~, ~, pos
+		p	2	p_71063_2_	respawnForced	#~, ~, ~, respawnForced
+	m	(Lnet/minecraft/inventory/IInventory;)V	func_71007_a	displayGUIChest	#displayGUIChest, :, openInventory, openInventoryMenu
+		c	Displays the GUI for interacting with a chest inventory. Args: chestInventory
+		p	1	p_71007_1_	chestInventory	#chestInventory, :, inventory, :
+	m	(Lnet/minecraft/entity/passive/EntityHorse;Lnet/minecraft/inventory/IInventory;)V	func_110298_a	displayGUIHorse	#displayGUIHorse, :, openHorseInventory, openHorseMenu
+		p	1	p_110298_1_	horse	#horse, :, :, :
+		p	2	p_110298_2_	horseInventory	#horseInventory, :, inventory, :
+	m	(Lnet/minecraft/entity/item/EntityItem;)V	func_71012_a	joinEntityItemWithWorld	#joinEntityItemWithWorld, :, spawnItemEntity, spawnDroppedItem
+		c	Joins the passed in entity item with the world. Args: entityItem
+		p	1	p_71012_1_	itemIn	#itemIn, :, entity, item
+	m	(Lnet/minecraft/entity/item/EntityMinecartHopper;)V	func_96125_a	displayGUIHopperMinecart	#displayGUIHopperMinecart, :, ~, openHopperMinecartMenu
+		p	1	p_96125_1_	hopperMinecart	#~, ~, ~, hopperMinecart
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_96122_a	canAttackPlayer	#canAttackPlayer, :, shouldDamagePlayer, canAttack
+		p	1	p_96122_1_	other	#other, :, player, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Z)V	func_71049_a	clonePlayer	#clonePlayer, :, copyFrom, :
+		c	Copies the values from the given player into this player if boolean par2 is true. Always clones Ender Chest Inventory.
+		p	1	p_71049_1_	oldPlayer	#oldPlayer, :, player, :
+		p	2	p_71049_2_	respawnFromEnd	#respawnFromEnd, :, ~, comesFromTheEnd
+	m	(Z)Lnet/minecraft/entity/item/EntityItem;	func_71040_bB	dropOneItem	#dropOneItem, dropItem, dropSelectedItem, dropItem
+		c	Called when player presses the drop item key
+		p	1	p_71040_1_	dropAll	#dropAll, :, :, wholeStack
+	m	(ZZZ)V	func_70999_a	wakeUpPlayer	#wakeUpPlayer, :, awaken, wakeUp
+		c	Wake up the player if they're sleeping.
+		p	3	p_70999_3_	setSpawn	#setSpawn, :, :, setSpawnPoint
+		p	1	p_70999_1_	immediately	#immediately, :, ~, resetSleepTimer
+		p	2	p_70999_2_	updateWorldFlag	#updateWorldFlag, :, ~, updateAllPlayersSleeping
+	m	(III)V	func_71058_b	displayGUIWorkbench	#displayGUIWorkbench, :, ~, openCraftingTableMenu
+		c	Displays the crafting GUI for a workbench.
+		p	1	p_71058_1_	x	#~, ~, ~, x
+		p	2	p_71058_2_	y	#~, ~, ~, y
+		p	3	p_71058_3_	z	#~, ~, ~, z
+	m	(IZ)V	func_82239_b	setHideCape	#setHideCape, :, ~, setHidesCape
+		p	1	p_82239_1_	value	#~, ~, ~, value
+		p	2	p_82239_2_	hideCape	#~, ~, ~, hideCape
+	m	(Lnet/minecraft/item/ItemStack;)V	func_71048_c	displayGUIBook	#displayGUIBook, :, openBookEditScreen, openEditBookScreen
+		c	Displays the GUI for interacting with a book.
+		p	1	p_71048_1_	bookStack	#bookStack, :, stack, book
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_146105_b	addChatComponentMessage	#addChatComponentMessage, sendStatusMessage, addMessage, :
+		p	1	p_146105_1_	chatComponent	#chatComponent, :, text, message
+	m	(Lnet/minecraft/entity/Entity;)V	func_71009_b	onCriticalHit	#onCriticalHit, :, addCritParticles, :
+		c	Called when the player performs a critical hit on the Entity. Args: entity that was hit critically
+		p	1	p_71009_1_	entityHit	#entityHit, :, target, entity
+	m	()V	func_71034_by	stopUsingItem	#stopUsingItem, :, :, :
+	m	()V	func_71041_bz	clearItemInUse	#clearItemInUse, :, resetUseItem, clearItemInUse
+	m	()Z	func_70632_aY	isBlocking	#isBlocking, :, ~, isSwordBlocking
+	m	()I	func_71037_bA	getScore	#getScore, :, :, :
+	m	()F	func_82243_bO	getArmorVisibility	#getArmorVisibility, :, ~, getArmorEquippedRatio
+		c	When searching for vulnerable players, if a player is invisible, the return value of this is the chance of seeing them anyway.
+	m	()Lnet/minecraft/item/ItemStack;	func_71045_bC	getCurrentEquippedItem	#getCurrentEquippedItem, :, getMainHandStack, :
+		c	Returns the currently being used item by the player.
+	m	()V	func_71028_bD	destroyCurrentEquippedItem	#destroyCurrentEquippedItem, :, removeSelectedSlotItem, clearSelectedSlot
+		c	Destroys the currently equipped item from the player's inventory.
+	m	()V	func_71004_bE	respawnPlayer	#respawnPlayer, :, requestRespawn, tryRespawn
+	m	()Lcom/mojang/authlib/GameProfile;	func_146103_bH	getGameProfile	#getGameProfile, :, :, :
+		c	Returns the GameProfile for this player
+	m	()F	func_71051_bG	getBedOrientationInDegrees	#getBedOrientationInDegrees, :, ~, getRespawnFacingAngle
+		c	Returns the orientation of the bed in degrees.
+	m	()Z	func_71026_bH	isPlayerFullyAsleep	#isPlayerFullyAsleep, :, isSleepingLongEnough, isSleptEnough
+		c	Returns whether or not the player is asleep and the screen has fully faded.
+	m	()I	func_71060_bI	getSleepTimer	#getSleepTimer, :, :, :
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_70997_bJ	getBedLocation	#getBedLocation, :, ~, getSpawnPoint
+		c	Returns the location of the bed the player will respawn at, or null if the player has not slept in a bed.
+	m	()Z	func_82245_bX	isSpawnForced	#isSpawnForced, :, :, isRespawnForced
+	m	()I	func_71050_bK	xpBarCap	#xpBarCap, :, getNextLevelExperience, :
+		c	This method returns the cap amount of experience that the experience bar can hold. With each level, the experience cap on the player's experience bar is raised by 10.
+	m	()Lnet/minecraft/util/FoodStats;	func_71024_bL	getFoodStats	#getFoodStats, :, getHungerManager, :
+		c	Returns the player's FoodStats object.
+	m	()Z	func_70996_bM	shouldHeal	#shouldHeal, :, canFoodHeal, needsHealing
+		c	Checks if the player's health is not full and not zero.
+	m	()Lnet/minecraft/inventory/InventoryEnderChest;	func_71005_bN	getInventoryEnderChest	#getInventoryEnderChest, :, getEnderChestInventory, :
+		c	Returns the InventoryEnderChest of this player.
+	m	()Z	func_82238_cc	getHideCape	#getHideCape, :, ~, hidesCape
+	m	()Lnet/minecraft/scoreboard/Scoreboard;	func_96123_co	getWorldScoreboard	#getWorldScoreboard, :, getScoreboard, :
+	m	()Lnet/minecraft/item/ItemStack;	func_71011_bu	getItemInUse	#getItemInUse, :, getUsedItem, getItemInHand
+		c	returns the ItemStack containing the itemInUse
+	m	()I	func_71052_bv	getItemInUseCount	#getItemInUseCount, :, getItemUseTicks, getItemUseTimer
+		c	Returns the item in use count
+	m	()Z	func_71039_bw	isUsingItem	#isUsingItem, :, :, :
+		c	Checks if the entity is currently using an item (e.g., bow, food, sword) by holding down the useItemButton
+	m	()I	func_71057_bx	getItemInUseDuration	#getItemInUseDuration, :, getRemainingUseTime, getRemainingItemUseDuration
+		c	gets the duration for how long the current itemInUse has been in use
+	m	(I)V	func_85040_s	setScore	#setScore, :, :, :
+		c	Set player's score
+		p	1	p_85040_1_	scoreIn	#scoreIn, :, score, :
+	m	(III)V	func_82244_d	displayGUIAnvil	#displayGUIAnvil, :, ~, openAnvilMenu
+		c	Displays the GUI for interacting with an anvil.
+		p	1	p_82244_1_	x	#~, ~, ~, x
+		p	2	p_82244_2_	y	#~, ~, ~, y
+		p	3	p_82244_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/item/ItemStack;I)V	func_71010_c	updateItemUse	#updateItemUse, :, drink, onConsumeItem
+		c	Plays sounds and makes particles for item in use state
+		p	1	p_71010_1_	itemStackIn	#itemStackIn, :, potion, item
+		p	2	p_71010_2_	particleCount	#~, ~, ~, particleCount
+	m	(Lnet/minecraft/entity/Entity;)V	func_71047_c	onEnchantmentCritical	#onEnchantmentCritical, :, addEnchantedHitParticles, addEnchantedCritParticles
+		p	1	p_71047_1_	entityHit	#entityHit, :, target, entity
+	m	(III)Z	func_82246_f	isCurrentToolAdventureModeExempt	#isCurrentToolAdventureModeExempt, :, ~, canMineBlock
+		c	Returns true if the given block can be mined with the current tool in adventure mode.
+		p	1	p_82246_1_	x	#~, ~, ~, x
+		p	2	p_82246_2_	y	#~, ~, ~, y
+		p	3	p_82246_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/entity/Entity;)V	func_71044_o	collideWithPlayer	#collideWithPlayer, :, collideWithEntity, :
+		p	1	p_71044_1_	entityIn	#entityIn, :, entity, :
+	m	()V	func_71061_d_	resetHeight	#resetHeight, doWaterSplashEffect, ~, setEyeHeight
+		c	sets the players height back to normal after doing things like sleeping and dieing
+	m	(Z)Z	func_71043_e	canEat	#canEat, :, canConsume, canEat
+		p	1	p_71043_1_	ignoreHunger	#ignoreHunger, :, :, :
+	m	()Z	func_71065_l	isInBed	#isInBed, :, ~, isValidSleepingPos
+		c	Checks if the player is currently in a bed
+	m	()V	func_71053_j	closeScreen	#closeScreen, :, closeHandledScreen, closeMenu
+		c	sets current screen to null (used on escape buttons of GUIs); sets current crafting inventory back to the 2x2 square
+	m	(DDD)V	func_71000_j	addMovementStat	#addMovementStat, :, ~, tickNonRidingMovementRelatedStats
+		c	Adds a value to a movement statistic field - like run, walk, swin or climb.
+		p	1	p_71000_1_	x	#~, ~, ~, x
+		p	3	p_71000_3_	y	#~, ~, ~, y
+		p	5	p_71000_5_	z	#~, ~, ~, z
+	m	(DDD)V	func_71015_k	addMountedMovementStat	#addMountedMovementStat, :, ~, tickRidingRelatedStats
+		c	Adds a value to a mounted movement statistic field - by minecart, boat, or pig.
+		p	1	p_71015_1_	x	#~, ~, ~, x
+		p	3	p_71015_3_	y	#~, ~, ~, y
+		p	5	p_71015_5_	z	#~, ~, ~, z
+	m	()V	func_71036_o	onItemUseFinish	#onItemUseFinish, :, useItem, finishUsingItem
+		c	Used for when item use count runs out, ie: eating completed
+	m	()V	func_71016_p	sendPlayerAbilities	#sendPlayerAbilities, :, sendAbilitiesUpdate, syncAbilities
+		c	Sends the player's abilities to the server (if there is one).
+	m	(Lnet/minecraft/entity/Entity;)Z	func_70998_m	interactWith	#interactWith, :, ~, interact
+		p	1	p_70998_1_	targetEntity	#targetEntity, :, ~, target
+	m	(I)Lnet/minecraft/item/ItemStack;	func_82169_q	getCurrentArmor	#getCurrentArmor, :, ~, getArmor
+		p	1	p_82169_1_	slotIn	#slotIn, :, ~, slot
+	m	(Lnet/minecraft/entity/Entity;)V	func_71059_n	attackTargetEntityWithCurrentItem	#attackTargetEntityWithCurrentItem, :, attack, :
+		c	Attacks for the player the targeted entity with the currently equipped item.  The equipped item has hitEntity called on it. Args: targetEntity
+		p	1	p_71059_1_	targetEntity	#targetEntity, :, entity, target
+	m	(I)V	func_85039_t	addScore	#addScore, :, :, addToScore
+		c	Add to player's score
+		p	1	p_85039_1_	scoreIn	#scoreIn, :, score, amount
+	m	(I)Z	func_82241_s	getHideCape	#getHideCape, :, ~, hidesCape
+		p	1	p_82241_1_	value	#~, ~, ~, value
+	m	(I)V	func_71023_q	addExperience	#addExperience, :, :, increaseXp
+		c	Add experience points to player.
+		p	1	p_71023_1_	amount	#amount, :, experience, levels
+	m	(I)V	func_71013_b	removeExperienceLevel	#removeExperienceLevel, :, decrementXp, onEnterBed
+		p	1	p_71013_1_	levels	#levels, :, xp, facing

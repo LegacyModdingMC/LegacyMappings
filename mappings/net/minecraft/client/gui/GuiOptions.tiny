@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiOptions	net/minecraft/client/gui/GuiOptions	
+	f	Ljava/lang/String;	field_146442_a	title	#title, :, :, :
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_146440_f	SCREEN_OPTIONS	#SCREEN_OPTIONS, :, ~, RENDER_OPTIONS
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146441_g	lastScreen	#lastScreen, :, parent, :
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146443_h	game_settings_1	#game_settings_1, settings, options, :
+		c	Reference to the GameSettings object.
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1046_1_	parent	#~, ~, parent, :
+		p	2	p_i1046_2_	options	#~, ~, options, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

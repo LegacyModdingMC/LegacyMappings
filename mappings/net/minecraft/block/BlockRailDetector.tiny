@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRailDetector	net/minecraft/block/BlockRailDetector	
+	f	[Lnet/minecraft/util/IIcon;	field_150055_b	sprites	#~, ~, ~, sprites
+	m	(Lnet/minecraft/world/World;IIII)V	func_150054_a	updateOutputState	#~, ~, ~, updateOutputState
+		p	1	p_150054_1_	world	#~, ~, ~, world
+		p	2	p_150054_2_	x	#~, ~, ~, x
+		p	3	p_150054_3_	y	#~, ~, ~, y
+		p	4	p_150054_4_	z	#~, ~, ~, z
+		p	5	p_150054_5_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

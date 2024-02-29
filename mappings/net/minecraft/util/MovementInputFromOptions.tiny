@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MovementInputFromOptions	net/minecraft/util/MovementInputFromOptions	
+	f	Lnet/minecraft/client/settings/GameSettings;	field_78903_e	gameSettings	#gameSettings, :, options, :
+	m	(Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1237_1_	gameSettingsIn	#gameSettingsIn, :, options, :

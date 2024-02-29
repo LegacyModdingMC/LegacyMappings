@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockTrapDoor	net/minecraft/block/BlockTrapDoor	
+	m	(Lnet/minecraft/world/World;IIIZ)V	func_150120_a	setOpenState	#~, ~, ~, setOpenState
+		p	1	p_150120_1_	world	#~, ~, ~, world
+		p	2	p_150120_2_	x	#~, ~, ~, x
+		p	3	p_150120_3_	y	#~, ~, ~, y
+		p	4	p_150120_4_	z	#~, ~, ~, z
+		p	5	p_150120_5_	open	#~, ~, ~, open
+	m	(Lnet/minecraft/block/Block;)Z	func_150119_a	isValidSupportBlock	#isValidSupportBlock, :, canBePlacedAdjacent, canBePlacedOn
+		p	0	p_150119_0_	blockIn	#blockIn, :, block, :
+	m	(I)V	func_150117_b	updateShape	#~, ~, ~, updateShape
+		p	1	p_150117_1_	metadata	#~, ~, ~, metadata
+	m	(I)Z	func_150118_d	isTrapdoorOpen	#isTrapdoorOpen, :, ~, isOpen
+		c	parameter is metadata
+		p	0	p_150118_0_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45434_1_	materialIn	#materialIn, :, ~, ~

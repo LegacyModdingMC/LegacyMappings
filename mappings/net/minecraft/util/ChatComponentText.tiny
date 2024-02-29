@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatComponentText	net/minecraft/util/ChatComponentText	
+	f	Ljava/lang/String;	field_150267_b	text	#text, :, string, :
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45159_1_	msg	#msg, :, string, :
+	m	()Ljava/lang/String;	func_150265_g	getChatComponentText_TextValue	#getChatComponentText_TextValue, getText, getRawString, :
+		c	Gets the text value of this ChatComponentText.  TODO: what are getUnformattedText and getUnformattedTextForChat missing that made someone decide to create a third equivalent method that only ChatComponentText can implement?
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	p_equals_1_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

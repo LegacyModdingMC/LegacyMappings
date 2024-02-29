@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/IResourcePack	net/minecraft/client/resources/IResourcePack	
+	m	()Ljava/awt/image/BufferedImage;	func_110586_a	getPackImage	#getPackImage, :, getIcon, :
+	m	(Lnet/minecraft/util/ResourceLocation;)Ljava/io/InputStream;	func_110590_a	getInputStream	#getInputStream, :, open, getResource
+		p	1	p_110590_1_	location	#location, :, id, location
+	m	(Lnet/minecraft/client/resources/data/IMetadataSerializer;Ljava/lang/String;)Lnet/minecraft/client/resources/data/IMetadataSection;	func_135058_a	getPackMetadata	#getPackMetadata, :, parseMetadata, getMetadataSection
+		p	1	p_135058_1_	metadataSerializer	#metadataSerializer, :, serializer, metadataSerializers
+		p	2	p_135058_2_	metadataSectionName	#metadataSectionName, :, key, name
+	m	()Ljava/lang/String;	func_130077_b	getPackName	#getPackName, :, getName, :
+	m	(Lnet/minecraft/util/ResourceLocation;)Z	func_110589_b	resourceExists	#resourceExists, :, contains, hasResource
+		p	1	p_110589_1_	location	#location, :, id, location
+	m	()Ljava/util/Set;	func_110587_b	getResourceDomains	#getResourceDomains, :, getNamespaces, :

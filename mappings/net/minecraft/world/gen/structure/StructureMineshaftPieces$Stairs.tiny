@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureMineshaftPieces$Stairs	net/minecraft/world/gen/structure/StructureMineshaftPieces$Stairs	
+	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;	func_74950_a	findValidPlacement	#findValidPlacement, :, ~, findSize
+		c	Trys to find a valid place to put this component.
+		p	0	p_74950_0_	piecesList	#~, ~, ~, piecesList
+		p	1	p_74950_1_	random	#~, ~, ~, random
+		p	2	p_74950_2_	x	#~, ~, ~, x
+		p	3	p_74950_3_	y	#~, ~, ~, y
+		p	4	p_74950_4_	z	#~, ~, ~, z
+		p	5	p_74950_5_	facing	#~, ~, ~, facing
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2038_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2038_2_	random	#~, ~, ~, random
+		p	3	p_i2038_3_	box	#~, ~, ~, box
+		p	4	p_i2038_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

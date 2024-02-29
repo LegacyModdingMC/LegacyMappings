@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsServerAddress	net/minecraft/realms/RealmsServerAddress	
+	f	Ljava/lang/String;	host	host	#~, ~, ~, ~
+	f	I	port	port	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1121_1_	hostIn	#hostIn, :, address, ~
+		p	2	p_i1121_2_	portIn	#portIn, :, port, ~
+	m	()Ljava/lang/String;	getHost	getHost	#~, ~, ~, ~
+	m	()I	getPort	getPort	#~, ~, ~, ~
+	m	(Ljava/lang/String;)[Ljava/lang/String;	lookupSrv	lookupSrv	#~, ~, ~, ~
+		p	0	p_lookupSrv_0_	p_lookupSrv_0_	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)I	parseInt	parseInt	#~, ~, ~, ~
+		p	0	p_parseInt_0_	p_parseInt_0_	#~, ~, ~, ~
+		p	1	p_parseInt_1_	p_parseInt_1_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/realms/RealmsServerAddress;	parseString	parseString	#~, ~, ~, ~
+		p	0	p_parseString_0_	address	#~, ~, address, ~

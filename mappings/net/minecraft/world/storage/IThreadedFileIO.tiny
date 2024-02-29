@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/IThreadedFileIO	net/minecraft/world/storage/IThreadedFileIO	
+	m	()Z	func_75814_c	writeNextIO	#writeNextIO, :, saveNextChunk, run
+		c	Returns a boolean stating if the write was unsuccessful.

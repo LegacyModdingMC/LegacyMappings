@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockEventData	net/minecraft/block/BlockEventData	
+	f	I	field_151348_a	coordX	#coordX, :, ~, x
+	f	I	field_151346_b	coordY	#coordY, :, ~, y
+	f	I	field_151347_c	coordZ	#coordZ, :, ~, z
+	f	Lnet/minecraft/block/Block;	field_151344_d	blockType	#blockType, :, ~, block
+	f	I	field_151345_e	eventID	#eventID, :, type, :
+		c	Different for each blockID
+	f	I	field_151343_f	eventParameter	#eventParameter, :, data, :
+		c	Different for each blockID, eventID
+	m	()I	func_151340_a	getX	#~, ~, ~, getX
+	m	()I	func_151342_b	getY	#~, ~, ~, getY
+	m	()I	func_151341_c	getZ	#~, ~, ~, getZ
+	m	()I	func_151339_d	getEventID	#getEventID, :, getType, :
+		c	Get the Event ID (different for each BlockID)
+	m	()I	func_151338_e	getEventParameter	#getEventParameter, :, getData, :
+		c	Get the Event Parameter (different for each Block,EventID)
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, ~, obj
+	m	()Lnet/minecraft/block/Block;	func_151337_f	getBlock	#getBlock, :, :, :
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(IIILnet/minecraft/block/Block;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45362_1_	x	#~, ~, ~, x
+		p	2	p_i45362_2_	y	#~, ~, ~, y
+		p	3	p_i45362_3_	z	#~, ~, ~, z
+		p	4	p_i45362_4_	block	#~, ~, ~, block
+		p	5	p_i45362_5_	type	#~, ~, ~, type
+		p	6	p_i45362_6_	data	#~, ~, ~, data

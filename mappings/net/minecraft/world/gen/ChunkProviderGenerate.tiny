@@ -1,0 +1,56 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/ChunkProviderGenerate	net/minecraft/world/gen/ChunkProviderGenerate	
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73214_a	noiseGen5	#noiseGen5, :, ~, scaleNoise
+		c	A NoiseGeneratorOctaves used in generating terrain
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73212_b	noiseGen6	#noiseGen6, :, ~, depthNoise
+		c	A NoiseGeneratorOctaves used in generating terrain
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_73213_c	mobSpawnerNoise	#mobSpawnerNoise, :, ~, forestNoise
+	f	[D	field_147427_d	mainNoiseArray	#mainNoiseArray, :, ~, mainNoiseBuffer
+	f	[D	field_147428_e	lowerLimitNoiseArray	#lowerLimitNoiseArray, :, ~, minLimitNoiseBuffer
+	f	[D	field_147425_f	upperLimitNoiseArray	#upperLimitNoiseArray, :, ~, maxLimitNoiseBuffer
+	f	[D	field_147426_g	depthNoiseArray	#depthNoiseArray, :, ~, depthNoiseBuffer
+	f	[[I	field_73219_j	field_73219_j	#~, ~, ~, ~
+	f	Ljava/util/Random;	field_73220_k	rand	#rand, :, random, :
+		c	RNG.
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_147431_j	minLimitPerlinNoise	#~, ~, ~, minLimitPerlinNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_147432_k	maxLimitPerlinNoise	#~, ~, ~, maxLimitPerlinNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorOctaves;	field_147429_l	mainPerlinNoise	#~, ~, ~, mainPerlinNoise
+	f	Lnet/minecraft/world/gen/NoiseGeneratorPerlin;	field_147430_m	surfaceNoise	#~, ~, ~, surfaceNoise
+	f	Lnet/minecraft/world/World;	field_73230_p	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	f	Z	field_73229_q	mapFeaturesEnabled	#mapFeaturesEnabled, :, hasStructures, structures
+		c	are map structures going to be generated (e.g. strongholds)
+	f	Lnet/minecraft/world/WorldType;	field_147435_p	type	#~, ~, type, :
+	f	[D	field_147434_q	heightMap	#~, ~, ~, heightMap
+	f	[F	field_147433_r	parabolicField	#parabolicField, :, ~, biomeWeights
+	f	[D	field_73227_s	stoneNoise	#stoneNoise, :, ~, depthBuffer
+	f	Lnet/minecraft/world/gen/MapGenBase;	field_73226_t	caveGenerator	#caveGenerator, :, caveCarver, cave
+	f	Lnet/minecraft/world/gen/structure/MapGenStronghold;	field_73225_u	strongholdGenerator	#strongholdGenerator, :, :, stronghold
+		c	Holds Stronghold Generator
+	f	Lnet/minecraft/world/gen/structure/MapGenVillage;	field_73224_v	villageGenerator	#villageGenerator, :, village, :
+		c	Holds Village Generator
+	f	Lnet/minecraft/world/gen/structure/MapGenMineshaft;	field_73223_w	mineshaftGenerator	#mineshaftGenerator, :, mineshaft, :
+		c	Holds Mineshaft Generator
+	f	Lnet/minecraft/world/gen/structure/MapGenScatteredFeature;	field_73233_x	scatteredFeatureGenerator	#scatteredFeatureGenerator, :, witchHut, :
+	f	Lnet/minecraft/world/gen/MapGenBase;	field_73232_y	ravineGenerator	#ravineGenerator, :, ravineCarver, ravine
+		c	Holds ravine generator
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_73231_z	biomesForGeneration	#biomesForGeneration, :, biomes, :
+		c	The biomes that are used to generate the chunk
+	m	(III)V	func_147423_a	populateHeightMap	#~, ~, ~, populateHeightMap
+		p	1	p_147423_1_	x	#x, :, ~, x
+		p	2	p_147423_2_	y	#y, :, ~, y
+		p	3	p_147423_3_	z	#z, :, ~, z
+	m	(II[Lnet/minecraft/block/Block;)V	func_147424_a	generate	#~, ~, ~, generate
+		p	1	p_147424_1_	chunkX	#~, ~, ~, chunkX
+		p	2	p_147424_2_	chunkZ	#~, ~, ~, chunkZ
+		p	3	p_147424_3_	blocks	#~, ~, ~, blocks
+	m	(II[Lnet/minecraft/block/Block;[B[Lnet/minecraft/world/biome/BiomeGenBase;)V	func_147422_a	replaceBlocksForBiome	#replaceBlocksForBiome, :, ~, generateBiomes
+		p	1	p_147422_1_	chunkX	#~, ~, ~, chunkX
+		p	2	p_147422_2_	chunkZ	#~, ~, ~, chunkZ
+		p	3	p_147422_3_	blocks	#~, ~, ~, blocks
+		p	4	p_147422_4_	blockMetadata	#~, ~, ~, blockMetadata
+		p	5	p_147422_5_	biomes	#~, ~, ~, biomes
+	m	(Lnet/minecraft/world/World;JZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2006_1_	world	#~, ~, ~, world
+		p	2	p_i2006_2_	seed	#~, ~, ~, seed
+		p	4	p_i2006_4_	structures	#~, ~, ~, structures

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackFileNotFoundException	net/minecraft/client/resources/ResourcePackFileNotFoundException	
+	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1294_1_	resourcePack	#resourcePack, :, packSource, pack
+		p	2	p_i1294_2_	fileName	#fileName, :, resource, :

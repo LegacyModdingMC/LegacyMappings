@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/NoiseGeneratorPerlin	net/minecraft/world/gen/NoiseGeneratorPerlin	
+	f	[Lnet/minecraft/world/gen/NoiseGeneratorSimplex;	field_151603_a	noiseLevels	#noiseLevels, :, samplers, :
+	f	I	field_151602_b	levels	#levels, :, samplersCount, samplerCount
+	m	(Ljava/util/Random;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45470_1_	seed	#seed, :, random, :
+		p	2	p_i45470_2_	levelsIn	#levelsIn, :, samplers, samplerCount
+	m	(DD)D	func_151601_a	getValue	#getValue, :, noise, getNoise
+		p	1	p_151601_1_	x	#~, ~, x, :
+		p	3	p_151601_3_	z	#~, ~, y, z
+	m	([DDDIIDDD)[D	func_151599_a	getRegion	#getRegion, :, ~, getNoise
+		p	1	p_151599_1_	noise	#~, ~, ~, noise
+		p	2	p_151599_2_	x	#~, ~, ~, x
+		p	4	p_151599_4_	z	#~, ~, ~, z
+		p	6	p_151599_6_	sizeX	#~, ~, ~, sizeX
+		p	7	p_151599_7_	sizeZ	#~, ~, ~, sizeZ
+		p	8	p_151599_8_	scaleX	#~, ~, ~, scaleX
+		p	10	p_151599_10_	scaleZ	#~, ~, ~, scaleZ
+		p	12	p_151599_12_	scaleExponent	#~, ~, ~, scaleExponent
+	m	([DDDIIDDDD)[D	func_151600_a	getRegion	#getRegion, :, ~, getNoise
+		p	1	p_151600_1_	noise	#~, ~, ~, noise
+		p	2	p_151600_2_	x	#~, ~, ~, x
+		p	4	p_151600_4_	z	#~, ~, ~, z
+		p	6	p_151600_6_	sizeX	#~, ~, ~, sizeX
+		p	7	p_151600_7_	sizeZ	#~, ~, ~, sizeZ
+		p	8	p_151600_8_	scaleX	#~, ~, ~, scaleX
+		p	10	p_151600_10_	scaleZ	#~, ~, ~, scaleZ
+		p	12	p_151600_12_	scaleExponentX	#~, ~, ~, scaleExponentX
+		p	14	p_151600_14_	scaleExponentZ	#~, ~, ~, scaleExponentZ

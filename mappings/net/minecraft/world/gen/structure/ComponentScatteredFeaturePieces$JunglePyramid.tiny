@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$JunglePyramid	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$JunglePyramid	
+	f	Z	field_74947_h	placedMainChest	#placedMainChest, :, ~, hasMainChest
+	f	Z	field_74948_i	placedHiddenChest	#placedHiddenChest, :, ~, hasHiddenChest
+	f	Z	field_74945_j	placedTrap1	#placedTrap1, :, ~, hasPrimaryTrap
+	f	Z	field_74946_k	placedTrap2	#placedTrap2, :, ~, hasSecondaryTrap
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_74943_l	junglePyramidsChestContents	#junglePyramidsChestContents, :, ~, TREASURE_LOOT_ENTRIES
+		c	List of Chest contents to be generated in the Jungle Pyramid chests.
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_74944_m	junglePyramidsDispenserContents	#junglePyramidsDispenserContents, :, ~, TRAP_LOOT_ENTRIES
+		c	List of Dispenser contents to be generated in the Jungle Pyramid dispensers.
+	f	Lnet/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$JunglePyramid$Stones;	field_74942_n	junglePyramidsRandomScatteredStones	#junglePyramidsRandomScatteredStones, cobblestoneSelector, ~, COBBLESTONE_PICKER
+		c	List of random stones to be generated in the Jungle Pyramid.
+	m	(Ljava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2064_1_	rand	#rand, :, ~, random
+		p	2	p_i2064_2_	x	#x, :, ~, x
+		p	3	p_i2064_3_	z	#z, :, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

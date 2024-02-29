@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/IEntityMultiPart	net/minecraft/entity/IEntityMultiPart	
+	m	()Lnet/minecraft/world/World;	func_82194_d	getWorld	#getWorld, :, getServerWorld, getWorld
+	m	(Lnet/minecraft/entity/boss/EntityDragonPart;Lnet/minecraft/util/DamageSource;F)Z	func_70965_a	attackEntityFromPart	#attackEntityFromPart, :, setAngry, damage
+		p	1	p_70965_1_	dragonPart	#dragonPart, part, multipart, part
+		p	2	p_70965_2_	source	#source, :, :, :
+		p	3	p_70965_3_	damage	#damage, :, angry, amount

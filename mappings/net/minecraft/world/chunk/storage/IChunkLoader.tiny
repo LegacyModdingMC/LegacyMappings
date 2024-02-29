@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/IChunkLoader	net/minecraft/world/chunk/storage/IChunkLoader	
+	m	()V	func_75817_a	chunkTick	#chunkTick, :, ~, tick
+		c	Called every World.tick()
+	m	(Lnet/minecraft/world/World;II)Lnet/minecraft/world/chunk/Chunk;	func_75815_a	loadChunk	#loadChunk, :, :, :
+		c	Loads the specified(XZ) chunk into the specified world.
+		p	1	p_75815_1_	worldIn	#worldIn, :, world, :
+		p	2	p_75815_2_	x	#x, :, :, chunkX
+		p	3	p_75815_3_	z	#z, :, :, chunkZ
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V	func_75816_a	saveChunk	#saveChunk, :, writeChunk, saveChunk
+		p	1	p_75816_1_	worldIn	#worldIn, :, world, :
+		p	2	p_75816_2_	chunkIn	#chunkIn, :, chunk, :
+	m	()V	func_75818_b	saveExtraData	#saveExtraData, flush, save, :
+		c	Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently unused.
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/chunk/Chunk;)V	func_75819_b	saveExtraChunkData	#saveExtraChunkData, :, writeEntities, saveEntities
+		c	Save extra data associated with this Chunk not normally saved during autosave, only during chunk unload.  Currently unused.
+		p	1	p_75819_1_	worldIn	#worldIn, :, world, :
+		p	2	p_75819_2_	chunkIn	#chunkIn, :, chunk, :

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/login/client/C01PacketEncryptionResponse	net/minecraft/network/login/client/C01PacketEncryptionResponse	
+	f	[B	field_149302_a	secretKeyEncrypted	#secretKeyEncrypted, :, encryptedSecretKey, reply
+	f	[B	field_149301_b	verifyTokenEncrypted	#verifyTokenEncrypted, :, encryptedNonce, nonce
+	m	(Ljavax/crypto/SecretKey;Ljava/security/PublicKey;[B)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45271_1_	secretKey	#secretKey, :, encryptedSecretKey, secretKey
+		p	2	p_i45271_2_	publicKey	#publicKey, :, :, :
+		p	3	p_i45271_3_	verifyToken	#verifyToken, :, nonce, :
+	m	(Ljava/security/PrivateKey;)Ljavax/crypto/SecretKey;	func_149300_a	getSecretKey	#getSecretKey, :, decryptSecretKey, getSecretKey
+		p	1	p_149300_1_	key	#key, :, privateKey, :
+	m	(Ljava/security/PrivateKey;)[B	func_149299_b	getVerifyToken	#getVerifyToken, :, decryptNonce, getNonce
+		p	1	p_149299_1_	key	#key, :, privateKey, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

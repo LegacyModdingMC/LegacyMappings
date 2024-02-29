@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Session	net/minecraft/util/Session	
+	f	Ljava/lang/String;	field_74286_b	username	#username, :, :, :
+	f	Ljava/lang/String;	field_148257_b	playerID	#playerID, :, uuid, :
+	f	Ljava/lang/String;	field_148258_c	token	#token, :, accessToken, :
+	f	Lnet/minecraft/util/Session$Type;	field_152429_d	sessionType	#sessionType, :, ~, type
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1098_1_	usernameIn	#usernameIn, :, username, :
+		p	2	p_i1098_2_	playerIDIn	#playerIDIn, :, uuid, :
+		p	3	p_i1098_3_	tokenIn	#tokenIn, :, accessToken, :
+		p	4	p_i1098_4_	sessionTypeIn	#sessionTypeIn, :, accountType, type
+	m	()Ljava/lang/String;	func_111286_b	getSessionID	#getSessionID, :, getSessionId, :
+	m	()Ljava/lang/String;	func_148255_b	getPlayerID	#getPlayerID, :, getUuid, :
+	m	()Ljava/lang/String;	func_111285_a	getUsername	#getUsername, :, :, :
+	m	()Ljava/lang/String;	func_148254_d	getToken	#getToken, :, getAccessToken, :
+	m	()Lcom/mojang/authlib/GameProfile;	func_148256_e	getProfile	#getProfile, :, :, :
+	m	()Lnet/minecraft/util/Session$Type;	func_152428_f	getSessionType	#getSessionType, :, ~, getType
+		c	Returns either 'legacy' or 'mojang' whether the account is migrated or not

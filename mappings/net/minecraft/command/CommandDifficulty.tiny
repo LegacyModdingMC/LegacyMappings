@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandDifficulty	net/minecraft/command/CommandDifficulty	
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/world/EnumDifficulty;	func_147201_h	parseDifficulty	#~, ~, ~, parseDifficulty
+		p	1	p_147201_1_	source	#~, ~, ~, source
+		p	2	p_147201_2_	s	#~, ~, ~, s
+	m	()V	<init>	<init>	#~, ~, ~, ~

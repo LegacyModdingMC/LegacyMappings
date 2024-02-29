@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/IEntitySelector$ArmoredMob	net/minecraft/command/IEntitySelector$ArmoredMob	
+	f	Lnet/minecraft/item/ItemStack;	field_96567_c	armor	#armor, :, stack, :
+	m	(Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1584_1_	armor	#armor, :, stack, :

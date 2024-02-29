@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiBeacon$PowerButton	net/minecraft/client/gui/inventory/GuiBeacon$PowerButton	
+	f	Lnet/minecraft/client/gui/inventory/GuiBeacon;	field_146150_o	beaconScreen	#~, ~, ~, beaconScreen
+	f	I	field_146149_p	effectId	#~, ~, ~, effectId
+	f	I	field_146148_q	tier	#tier, :, ~, effectStrength
+	m	(Lnet/minecraft/client/gui/inventory/GuiBeacon;IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1076_2_	x	#~, ~, ~, x
+		p	3	p_i1076_3_	y	#~, ~, ~, y
+		p	4	p_i1076_4_	id	#~, ~, ~, id
+		p	5	p_i1076_5_	effectId	#~, ~, ~, effectId
+		p	6	p_i1076_6_	effectStrength	#~, ~, ~, effectStrength
+		p	1	p_i1076_1_	p_i1076_1_	#~, ~, ~, ~

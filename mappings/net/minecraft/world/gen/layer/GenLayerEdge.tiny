@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerEdge	net/minecraft/world/gen/layer/GenLayerEdge	
+	f	Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	field_151627_c	mode	#mode, :, ~, mode
+	m	(IIII)[I	func_151626_c	getIntsCoolWarm	#getIntsCoolWarm, :, ~, nextValuesCooldWarm
+		p	1	p_151626_1_	x	#~, ~, ~, x
+		p	2	p_151626_2_	z	#~, ~, ~, z
+		p	3	p_151626_3_	width	#~, ~, ~, width
+		p	4	p_151626_4_	length	#~, ~, ~, length
+	m	(IIII)[I	func_151624_d	getIntsHeatIce	#getIntsHeatIce, :, ~, nextValuesHeatIce
+		p	1	p_151624_1_	x	#~, ~, ~, x
+		p	2	p_151624_2_	z	#~, ~, ~, z
+		p	3	p_151624_3_	width	#~, ~, ~, width
+		p	4	p_151624_4_	length	#~, ~, ~, length
+	m	(IIII)[I	func_151625_e	getIntsSpecial	#getIntsSpecial, :, ~, nextValuesSpecial
+		p	1	p_151625_1_	x	#~, ~, ~, x
+		p	2	p_151625_2_	z	#~, ~, ~, z
+		p	3	p_151625_3_	width	#~, ~, ~, width
+		p	4	p_151625_4_	length	#~, ~, ~, length
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45474_1_	seed	#~, ~, ~, seed
+		p	3	p_i45474_3_	parent	#~, ~, ~, parent
+		p	4	p_i45474_4_	mode	#~, ~, ~, mode

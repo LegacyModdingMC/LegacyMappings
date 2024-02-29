@@ -1,0 +1,71 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityTrackerEntry	net/minecraft/entity/EntityTrackerEntry	
+	f	Lnet/minecraft/entity/Entity;	field_73132_a	myEntity	#myEntity, trackedEntity, :, currentTrackedEntity
+		c	The entity that this EntityTrackerEntry tracks.
+	f	I	field_73130_b	blocksDistanceThreshold	#blocksDistanceThreshold, range, trackingDistance, trackedDistance
+		c	Track distance in blocks
+	f	I	field_73131_c	updateFrequency	#updateFrequency, :, tracingFrequency, trackingFrequency
+		c	check for sync when ticks % updateFrequency==0
+	f	I	field_73128_d	lastScaledXPosition	#lastScaledXPosition, encodedPosX, serializedX, lastX
+		c	The encoded entity X position.
+	f	I	field_73129_e	lastScaledYPosition	#lastScaledYPosition, encodedPosY, serializedY, lastY
+		c	The encoded entity Y position.
+	f	I	field_73126_f	lastScaledZPosition	#lastScaledZPosition, encodedPosZ, serializedZ, lastZ
+		c	The encoded entity Z position.
+	f	I	field_73127_g	lastYaw	#lastYaw, encodedRotationYaw, serializedYaw, lastYaw
+		c	The encoded entity yaw rotation.
+	f	I	field_73139_h	lastPitch	#lastPitch, encodedRotationPitch, serializedPitch, lastPitch
+		c	The encoded entity pitch rotation.
+	f	I	field_73140_i	lastHeadMotion	#lastHeadMotion, :, headRotationYaw, lastHeadPitch
+	f	D	field_73137_j	motionX	#motionX, lastTrackedEntityMotionX, velocityX, :
+	f	D	field_73138_k	motionY	#motionY, lastTrackedEntityMotionY, velocityY, :
+	f	D	field_73135_l	motionZ	#motionZ, :, velocityZ, :
+	f	I	field_73136_m	ticks	#ticks, updateCounter, ~, ticks
+	f	Z	field_73133_n	playerEntitiesUpdated	#playerEntitiesUpdated, :, ~, newPlayerDataUpdated
+	f	Ljava/util/Set;	field_73134_o	trackingPlayers	#trackingPlayers, :, players, listeners
+		c	Holds references to all the players that are currently receiving position updates for this entity.
+	f	Lorg/apache/logging/log4j/Logger;	field_151262_p	logger	#logger, LOGGER, :, :
+	f	D	field_73147_p	posX	#posX, lastTrackedEntityPosX, x, :
+	f	D	field_73146_q	posY	#posY, lastTrackedEntityPosY, y, :
+	f	D	field_73145_r	posZ	#posZ, lastTrackedEntityPosZ, z, :
+	f	Z	field_73144_s	isDataInitialized	#isDataInitialized, updatedPlayerVisibility, ~, isInitialized
+		c	set to true on first sendLocationToClients
+	f	Z	field_73143_t	sendVelocityUpdates	#sendVelocityUpdates, :, trackVelocity, alwaysUpdateVelocity
+	f	I	field_73142_u	ticksSinceLastForcedTeleport	#ticksSinceLastForcedTeleport, :, ~, ticksSinceLastDismount
+		c	every 400 ticks a  full teleport packet is sent, rather than just a "move me +x" command, so that position remains fully synced.
+	f	Lnet/minecraft/entity/Entity;	field_85178_v	rider	#~, ~, ~, rider
+	f	Z	field_73141_v	ridingEntity	#ridingEntity, :, ~, riding
+	m	(Lnet/minecraft/entity/Entity;IIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1525_1_	trackedEntityIn	#trackedEntityIn, :, trackedEntity, entity
+		p	2	p_i1525_2_	trackingDistanceThresholdIn	#trackingDistanceThresholdIn, :, trackedDistance, :
+		p	3	p_i1525_3_	updateFrequencyIn	#updateFrequencyIn, :, tracingFrequency, :
+		p	4	p_i1525_4_	sendVelocityUpdatesIn	#sendVelocityUpdatesIn, :, trackVelocity, alwaysUpdateVelocity
+	m	()V	func_73119_a	informAllAssociatedPlayersOfItemDestruction	#informAllAssociatedPlayersOfItemDestruction, sendDestroyEntityPacketToTrackedPlayers, ~, notifyEntityRemoved
+	m	(Lnet/minecraft/network/Packet;)V	func_151259_a	sendPacketToTrackedPlayers	#sendPacketToTrackedPlayers, :, ~, sendToListeners
+		c	Send the given packet to all players tracking this entity.
+		p	1	p_151259_1_	packetIn	#packetIn, :, ~, packet
+	m	(Ljava/util/List;)V	func_73122_a	sendLocationToAllClients	#sendLocationToAllClients, updatePlayerList, ~, notifyNewLocation
+		c	also sends velocity, rotation, and riding info.
+		p	1	p_73122_1_	players	#players, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_73118_a	removeFromWatchingList	#removeFromWatchingList, removeFromTrackedPlayers, ~, notifyEntityRemoved
+		p	1	p_73118_1_	playerMP	#playerMP, :, ~, player
+	m	()V	func_111190_b	sendMetadataToAllAssociatedPlayers	#sendMetadataToAllAssociatedPlayers, sendMetadata, ~, updateListeners
+		c	Sends the entity metadata (DataWatcher) and attributes to all players tracking this entity, including the entity itself if a player.
+	m	(Lnet/minecraft/network/Packet;)V	func_151261_b	sendToTrackingAndSelf	#sendToTrackingAndSelf, :, ~, sendToListenersAndTrackedEntityIfPlayer
+		p	1	p_151261_1_	packetIn	#packetIn, :, ~, packet
+	m	(Ljava/util/List;)V	func_73125_b	sendEventsToPlayers	#sendEventsToPlayers, updatePlayerEntities, ~, updateListeners
+		p	1	p_73125_1_	players	#players, :, ~, players
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_73117_b	tryStartWachingThis	#tryStartWachingThis, updatePlayerEntity, ~, updateListener
+		c	if the player is more than the distance threshold (typically 64) then the player is removed instead
+		p	1	p_73117_1_	playerMP	#playerMP, :, player, :
+	m	()Lnet/minecraft/network/Packet;	func_151260_c	createSpawnPacket	#createSpawnPacket, :, ~, createAddEntityPacket
+		c	Creates a spawn packet for the entity managed by this entry.
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_73123_c	removePlayerFromTracker	#removePlayerFromTracker, removeTrackedPlayerSymmetric, removeTrackingPlayer, removeListener
+		c	Remove a tracked player from our list and tell the tracked player to destroy us from their world.
+		p	1	p_73123_1_	playerMP	#playerMP, :, player, :
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)Z	func_73121_d	isPlayerWatchingThisChunk	#isPlayerWatchingThisChunk, :, ~, isInViewOfPlayer
+		p	1	p_73121_1_	playerMP	#playerMP, :, player, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, obj, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

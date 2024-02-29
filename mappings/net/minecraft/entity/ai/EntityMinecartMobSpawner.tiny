@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityMinecartMobSpawner	net/minecraft/entity/ai/EntityMinecartMobSpawner	
+	f	Lnet/minecraft/tileentity/MobSpawnerBaseLogic;	field_98040_a	mobSpawnerLogic	#mobSpawnerLogic, :, spawner, :
+		c	Mob spawner logic for this spawner minecart.
+	m	()Lnet/minecraft/tileentity/MobSpawnerBaseLogic;	func_98039_d	getSpawner	#~, ~, getSpawnerBehavior, getSpawner
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1725_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1726_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1726_2_	x	#~, ~, ~, x
+		p	4	p_i1726_4_	y	#~, ~, ~, y
+		p	6	p_i1726_6_	z	#~, ~, ~, z

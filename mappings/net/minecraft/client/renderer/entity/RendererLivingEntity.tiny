@@ -1,0 +1,95 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RendererLivingEntity	net/minecraft/client/renderer/entity/RendererLivingEntity	
+	f	Lorg/apache/logging/log4j/Logger;	field_147923_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_110814_a	RES_ITEM_GLINT	#RES_ITEM_GLINT, :, ~, ENCHANTMENT_GLINT_LOCATION
+	f	Lnet/minecraft/client/model/ModelBase;	field_77045_g	mainModel	#mainModel, :, model, :
+	f	Lnet/minecraft/client/model/ModelBase;	field_77046_h	renderPassModel	#renderPassModel, :, ~, decorationModel
+		c	The model to be used during the render passes.
+	m	(FFF)F	func_77034_a	interpolateRotation	#interpolateRotation, :, ~, getRotatedAngle
+		c	Returns a rotation angle that is inbetween two other rotation angles. par1 and par2 are the angles between which to interpolate, par3 is probably a float between 0.0 and 1.0 that tells us where "between" the two angles we are. Example: par1 = 30, par2 = 50, par3 = 0.5, then return = 40
+		p	1	p_77034_1_	par1	#par1, prevYawOffset, ~, prevAng
+		p	2	p_77034_2_	par2	#par2, yawOffset, ~, ang
+		p	3	p_77034_3_	par3	#par3, partialTicks, ~, tickDelta
+	m	(Lnet/minecraft/client/model/ModelBase;)V	func_77042_a	setRenderPassModel	#setRenderPassModel, :, ~, setDecorationModel
+		c	Sets the model to be used in the current render pass (the first render pass is done after the primary model is rendered) Args: model
+		p	1	p_77042_1_	decorationModel	#~, ~, ~, decorationModel
+	m	(Lnet/minecraft/entity/EntityLivingBase;)F	func_77037_a	getDeathMaxRotation	#getDeathMaxRotation, :, ~, getYawWhileDead
+		p	1	p_77037_1_	entityLivingBaseIn	#entityLivingBaseIn, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;DDD)V	func_77039_a	renderLivingAt	#renderLivingAt, :, ~, applyTranslation
+		c	Sets a simple glTranslate on a LivingEntity.
+		p	1	p_77039_1_	entityLivingBaseIn	#entityLivingBaseIn, :, ~, entity
+		p	2	p_77039_2_	x	#x, :, ~, dx
+		p	4	p_77039_4_	y	#y, :, ~, dy
+		p	6	p_77039_6_	z	#z, :, ~, dz
+	m	(Lnet/minecraft/entity/EntityLivingBase;DDDLjava/lang/String;FD)V	func_96449_a	renderOffsetLivingLabel	#renderOffsetLivingLabel, :, ~, renderNameTag
+		p	1	p_96449_1_	entity	#~, ~, ~, entity
+		p	2	p_96449_2_	dx	#~, ~, ~, dx
+		p	4	p_96449_4_	dy	#~, ~, ~, dy
+		p	6	p_96449_6_	dz	#~, ~, ~, dz
+		p	8	p_96449_8_	name	#~, ~, ~, name
+		p	9	p_96449_9_	unused	#~, ~, ~, unused
+		p	10	p_96449_10_	squaredDistance	#~, ~, ~, squaredDistance
+	m	(Lnet/minecraft/entity/EntityLivingBase;F)V	func_77041_b	preRenderCallback	#preRenderCallback, :, scale, :
+		c	Allows the render to do any OpenGL state modifications necessary before the model is rendered. Args: entityLiving, partialTickTime
+		p	1	p_77041_1_	entitylivingbaseIn	#entitylivingbaseIn, :, entity, :
+		p	2	p_77041_2_	partialTickTime	#partialTickTime, :, tickDelta, scale
+	m	(Lnet/minecraft/entity/EntityLivingBase;FF)I	func_77030_a	getColorMultiplier	#getColorMultiplier, :, ~, getOverlayColor
+		c	Returns an ARGB int color back. Args: entityLiving, lightBrightness, partialTickTime
+		p	1	p_77030_1_	entitylivingbaseIn	#entitylivingbaseIn, :, ~, entity
+		p	2	p_77030_2_	lightBrightness	#lightBrightness, :, ~, f
+		p	3	p_77030_3_	partialTickTime	#partialTickTime, :, ~, timeDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;FFF)V	func_77043_a	rotateCorpse	#rotateCorpse, applyRotations, ~, applyRotation
+		p	1	p_77043_1_	bat	#bat, entityLiving, entity, :
+		p	2	p_77043_2_	ageInTicks	#ageInTicks, :, ~, yaw
+		p	3	p_77043_3_	rotationYaw	#rotationYaw, :, ~, bodyYaw
+		p	4	p_77043_4_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;FFFFFF)V	func_77036_a	renderModel	#renderModel, :, :, renderHand
+		c	Renders the model in RenderLiving
+		p	1	p_77036_1_	entitylivingbaseIn	#entitylivingbaseIn, :, entity, :
+		p	2	p_77036_2_	limbSwing	#limbSwing, :, ~, handSwing
+		p	3	p_77036_3_	limbSwingAmount	#limbSwingAmount, :, ~, handSwingAmount
+		p	4	p_77036_4_	ageInTicks	#ageInTicks, :, ~, age
+		p	5	p_77036_5_	netHeadYaw	#netHeadYaw, :, ~, yaw
+		p	6	p_77036_6_	headPitch	#headPitch, :, ~, pitch
+		p	7	p_77036_7_	scaleFactor	#scaleFactor, :, ~, scale
+	m	(Lnet/minecraft/entity/EntityLivingBase;IF)I	func_77032_a	shouldRenderPass	#shouldRenderPass, :, ~, bindTexture
+		c	Queries whether should render the specified pass or not.
+		p	1	p_77032_1_	entity	#~, ~, ~, entity
+		p	2	p_77032_2_	type	#~, ~, ~, type
+		p	3	p_77032_3_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_110813_b	canRenderName	#canRenderName, :, ~, shouldRenderNameTag
+		c	Test if the entity name must be rendered
+		p	1	p_110813_1_	targetEntity	#targetEntity, :, ~, entity
+	m	(Lnet/minecraft/entity/EntityLivingBase;DDD)V	func_77033_b	passSpecialRender	#passSpecialRender, :, ~, renderNameTag
+		c	Passes the specialRender and renders it
+		p	1	p_77033_1_	entity	#~, ~, ~, entity
+		p	2	p_77033_2_	dx	#~, ~, ~, dx
+		p	4	p_77033_4_	dy	#~, ~, ~, dy
+		p	6	p_77033_6_	dz	#~, ~, ~, dz
+	m	(Lnet/minecraft/entity/EntityLivingBase;F)F	func_77044_a	handleRotationFloat	#handleRotationFloat, :, ~, getEntityAge
+		c	Defines what float the third param in setRotationAngles of ModelBase is
+		p	1	p_77044_1_	livingBase	#livingBase, :, entity, :
+		p	2	p_77044_2_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;IF)I	func_77035_b	inheritRenderPass	#inheritRenderPass, :, ~, bindDecorationTextureCaller
+		p	1	p_77035_1_	entity	#~, ~, ~, entity
+		p	2	p_77035_2_	type	#~, ~, ~, type
+		p	3	p_77035_3_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;F)V	func_77029_c	renderEquippedItems	#renderEquippedItems, :, ~, renderDecoration
+		p	1	p_77029_1_	entity	#~, ~, ~, entity
+		p	2	p_77029_2_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;IF)V	func_82408_c	renderArmorPiece	#~, ~, ~, renderArmorPiece
+		p	1	p_82408_1_	entity	#~, ~, ~, entity
+		p	2	p_82408_2_	piece	#~, ~, ~, piece
+		p	3	p_82408_3_	f	#~, ~, ~, f
+	m	(Lnet/minecraft/entity/EntityLivingBase;F)F	func_77040_d	renderSwingProgress	#renderSwingProgress, getSwingProgress, ~, getHandSwingProgress
+		c	Returns where in the swing animation the living entity is (from 0 to 1).  Args : entity, partialTickTime
+		p	1	p_77040_1_	livingBase	#livingBase, :, ~, entity
+		p	2	p_77040_2_	partialTickTime	#partialTickTime, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/EntityLivingBase;F)V	func_85093_e	renderArrowsStuckInEntity	#renderArrowsStuckInEntity, :, ~, renderStuckArrows
+		c	renders arrows the Entity has been attacked with, attached to it
+		p	1	p_85093_1_	entity	#~, ~, ~, entity
+		p	2	p_85093_2_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1261_1_	model	#~, ~, ~, model
+		p	2	p_i1261_2_	shadowSize	#~, ~, ~, shadowSize
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

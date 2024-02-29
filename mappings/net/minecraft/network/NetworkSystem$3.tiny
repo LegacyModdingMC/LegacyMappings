@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkSystem$3	net/minecraft/network/NetworkSystem$3	
+	f	Lnet/minecraft/network/NetworkManager;	field_151280_a	field_151280_a	#~, ~, ~, ~
+	f	Lnet/minecraft/network/NetworkSystem;	field_151279_b	field_151279_b	#~, ~, ~, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(Lnet/minecraft/network/NetworkSystem;Lnet/minecraft/network/NetworkManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45290_1_	p_i45290_1_	#~, ~, ~, ~
+		p	2	p_i45290_2_	p_i45290_2_	#~, ~, ~, ~

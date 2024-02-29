@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/Locale	net/minecraft/client/resources/Locale	
+	f	Ljava/util/Map;	field_135032_a	properties	#properties, :, translations, :
+	f	Lcom/google/common/base/Splitter;	field_135030_b	splitter	#splitter, SPLITTER, TOKEN_SPLITTER, SPLITTER
+		c	Splits on "="
+	f	Ljava/util/regex/Pattern;	field_135031_c	pattern	#pattern, PATTERN, TOKEN_PATTERN, PATTERN
+	f	Z	field_135029_d	unicode	#unicode, :, rightToLeft, unicode
+	m	()Z	func_135025_a	isUnicode	#isUnicode, :, isRightToLeft, isUnicode
+	m	(Lnet/minecraft/client/resources/IResourceManager;Ljava/util/List;)V	func_135022_a	loadLocaleDataFiles	#loadLocaleDataFiles, :, load, :
+		c	par2 is a list of languages. For each language $L and domain $D, attempts to load the resource $D:lang/$L.lang
+		p	1	p_135022_1_	resourceManager	#resourceManager, :, :, :
+		p	2	p_135022_2_	languageList	#languageList, :, languages, languageCodes
+	m	(Ljava/io/InputStream;)V	func_135021_a	loadLocaleData	#loadLocaleData, :, load, :
+		p	1	p_135021_1_	inputStreamIn	#inputStreamIn, :, stream, is
+	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	func_135023_a	formatMessage	#formatMessage, :, translateAndFormat, translate
+		c	Calls String.format(translateKey(key), params)
+		p	1	p_135023_1_	translateKey	#translateKey, :, key, :
+		p	2	p_135023_2_	parameters	#parameters, :, args, :
+	m	(Ljava/util/List;)V	func_135028_a	loadLocaleData	#loadLocaleData, :, load, :
+		c	par1 is a list of Resources
+		p	1	p_135028_1_	resourcesList	#resourcesList, :, resources, :
+	m	()V	func_135024_b	checkUnicode	#checkUnicode, :, setRightToLeft, checkUnicodeUsage
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_135026_c	translateKeyPrivate	#translateKeyPrivate, :, translate, translateKey
+		c	Returns the translation, or the key itself if the key could not be translated.
+		p	1	p_135026_1_	translateKey	#translateKey, :, key, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

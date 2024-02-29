@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityMoveHelper	net/minecraft/entity/ai/EntityMoveHelper	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75648_a	entity	#entity, :, :, mob
+		c	The EntityLiving that is being moved
+	f	D	field_75646_b	posX	#posX, :, targetX, x
+	f	D	field_75647_c	posY	#posY, :, targetY, y
+	f	D	field_75644_d	posZ	#posZ, :, targetZ, z
+	f	D	field_75645_e	speed	#speed, :, :, :
+		c	The speed at which the entity should move
+	f	Z	field_75643_f	update	#update, :, moving, :
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1614_1_	entitylivingIn	#entitylivingIn, :, entity, mob
+	m	()Z	func_75640_a	isUpdating	#isUpdating, :, isMoving, :
+	m	(DDDD)V	func_75642_a	setMoveTo	#setMoveTo, :, moveTo, update
+		c	Sets the speed and location to move to
+		p	1	p_75642_1_	x	#x, :, :, :
+		p	3	p_75642_3_	y	#y, :, :, :
+		p	5	p_75642_5_	z	#z, :, :, :
+		p	7	p_75642_7_	speedIn	#speedIn, :, speed, :
+	m	(FFF)F	func_75639_a	limitAngle	#limitAngle, :, wrapDegrees, clampAndWrapAngle
+		c	Limits the given angle to a upper and lower limit.
+		p	1	p_75639_1_	sourceAngle	#sourceAngle, :, from, yaw1
+		p	2	p_75639_2_	targetAngle	#targetAngle, :, to, yaw2
+		p	3	p_75639_3_	maximumChange	#maximumChange, :, max, maxOffset
+			c	The maximum offset that is allowed between the yaw1 and yaw2
+	m	()D	func_75638_b	getSpeed	#getSpeed, :, :, :
+	m	()V	func_75641_c	onUpdateMoveHelper	#onUpdateMoveHelper, :, updateMovement, tick

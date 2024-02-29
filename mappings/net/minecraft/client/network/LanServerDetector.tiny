@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/LanServerDetector	net/minecraft/client/network/LanServerDetector	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	field_148551_a	ATOMIC_COUNTER	#ATOMIC_COUNTER, :, THREAD_ID, threadId
+	f	Lorg/apache/logging/log4j/Logger;	field_148550_b	logger	#logger, LOGGER, :, :
+	m	()Ljava/util/concurrent/atomic/AtomicInteger;	access$000	access$000	#~, ~, ~, getThreadId
+	m	()Lorg/apache/logging/log4j/Logger;	access$100	access$100	#~, ~, ~, getLogger
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

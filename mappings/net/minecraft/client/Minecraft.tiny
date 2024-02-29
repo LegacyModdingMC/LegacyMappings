@@ -1,0 +1,283 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft	net/minecraft/client/Minecraft	
+	f	Z	field_71425_J	running	#running, :, :, :
+		c	Set to true to keep the game loop running. Set to false by shutdown() to allow the game loop to exit cleanly.
+	f	Ljava/lang/String;	field_71426_K	debug	#debug, :, fpsDebugString, :
+		c	String that shows the debug information
+	f	J	field_71419_L	debugUpdateTime	#debugUpdateTime, :, time, timeAtLastSecond
+		c	Approximate time (in ms) of last update to debug string
+	f	I	field_71420_M	fpsCounter	#fpsCounter, :, :, :
+		c	holds the current fps
+	f	J	field_71421_N	prevFrameTime	#prevFrameTime, :, debugTime, timeAfterLastTick
+	f	Lorg/apache/logging/log4j/Logger;	field_147123_G	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_110444_H	locationMojangPng	#locationMojangPng, LOCATION_MOJANG_PNG, MOJANG_LOGO_TEXTURE, MOJANG_LOGO_LOCATION
+	f	Ljava/util/List;	field_110445_I	macDisplayModes	#macDisplayModes, MAC_DISPLAY_MODES, DISPLAY_MODES, :
+	f	Ljava/io/File;	field_130070_K	fileResourcepacks	#fileResourcepacks, :, resourcePackDir, resourcePacksDir
+	f	Lcom/google/common/collect/Multimap;	field_152356_J	twitchDetails	#twitchDetails, :, ~, userProperties
+	f	Lnet/minecraft/client/multiplayer/ServerData;	field_71422_O	currentServerData	#currentServerData, :, currentServerEntry, :
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_71446_o	renderEngine	#renderEngine, :, textureManager, :
+		c	The RenderEngine instance used by Minecraft
+	f	Lnet/minecraft/client/Minecraft;	field_71432_P	theMinecraft	#theMinecraft, instance, :, INSTANCE
+		c	Set to 'this' in Minecraft constructor; used by some settings get methods
+	f	Z	field_71431_Q	fullscreen	#fullscreen, :, :, :
+	f	Z	field_71434_R	hasCrashed	#hasCrashed, :, crashed, :
+	f	Lnet/minecraft/crash/CrashReport;	field_71433_S	crashReporter	#crashReporter, :, crashReport, :
+		c	Instance of CrashReport.
+	f	Lnet/minecraft/util/Timer;	field_71428_T	timer	#timer, :, ticker, timer
+	f	Lnet/minecraft/profiler/PlayerUsageSnooper;	field_71427_U	usageSnooper	#usageSnooper, :, snooper, :
+		c	Instance of PlayerUsageSnooper.
+	f	Lnet/minecraft/util/Session;	field_71449_j	session	#session, :, :, :
+	f	Z	field_71445_n	isGamePaused	#isGamePaused, :, paused, :
+	f	I	field_71429_W	leftClickCounter	#leftClickCounter, :, attackCooldown, :
+		c	Mouse left click counter
+	f	I	field_71436_X	tempDisplayWidth	#tempDisplayWidth, :, tempWidth, :
+		c	Display width
+	f	I	field_71435_Y	tempDisplayHeight	#tempDisplayHeight, :, tempHeight, :
+		c	Display height
+	f	Lnet/minecraft/server/integrated/IntegratedServer;	field_71437_Z	theIntegratedServer	#theIntegratedServer, integratedServer, server, :
+		c	Instance of IntegratedServer.
+	f	Ljava/io/File;	field_110446_Y	fileAssets	#fileAssets, :, assetDirectory, assetsDir
+	f	Ljava/lang/String;	field_110447_Z	launchedVersion	#launchedVersion, :, gameVersion, :
+	f	Z	field_142025_a	isRunningOnMac	#isRunningOnMac, IS_RUNNING_ON_MAC, IS_MAC, :
+	f	Lnet/minecraft/client/resources/SkinManager;	field_152350_aA	skinManager	#skinManager, :, skinProvider, ~
+	f	Ljava/util/Queue;	field_152351_aB	scheduledTasks	#scheduledTasks, :, tasks, ~
+	f	Ljava/lang/Thread;	field_152352_aC	mcThread	#mcThread, thread, currentThread, ~
+	f	Ljava/lang/String;	field_71465_an	debugProfilerName	#debugProfilerName, :, openProfilerSection, :
+		c	Profiler currently displayed in the debug screen pie chart
+	f	Ljava/net/Proxy;	field_110453_aa	proxy	#proxy, :, networkProxy, proxy
+	f	Lnet/minecraft/world/storage/ISaveFormat;	field_71469_aa	saveLoader	#saveLoader, :, currentSave, worldStorageSource
+	f	I	field_71470_ab	debugFPS	#debugFPS, :, currentFps, :
+		c	This is set to fpsCounter every debug screen update, and is shown on the debug screen. It's also sent as part of the usage snooping.
+	f	I	field_71467_ac	rightClickDelayTimer	#rightClickDelayTimer, :, blockPlaceDelay, itemUseDelay
+		c	When you place a block, it's set to 6, decremented once per tick, when it's 0, you can place another block.
+	f	Z	field_71468_ad	refreshTexturePacksScheduled	#refreshTexturePacksScheduled, :, ~, reloadTextures
+		c	Checked in Minecraft's while(running) loop, if true it's set to false and the textures refreshed.
+	f	Ljava/lang/String;	field_71475_ae	serverName	#serverName, :, serverAddress, :
+	f	I	field_71477_af	serverPort	#serverPort, :, :, :
+	f	I	field_71457_ai	joinPlayerCounter	#joinPlayerCounter, :, :, :
+		c	Join player counter
+	f	Z	field_147129_ai	jvm64bit	#jvm64bit, :, is64Bit, :
+	f	Z	field_71459_aj	isDemo	#isDemo, :, :, demo
+	f	Lnet/minecraft/network/NetworkManager;	field_71453_ak	myNetworkManager	#myNetworkManager, networkManager, clientConnection, connection
+	f	Z	field_71455_al	integratedServerIsRunning	#integratedServerIsRunning, :, isIntegratedServerRunning, :
+	f	J	field_83002_am	debugCrashKeyPressTime	#debugCrashKeyPressTime, :, f3CTime, :
+		c	Keeps track of how long the debug crash keycombo (F3+C) has been pressed for, in order to crash after 10 seconds.
+	f	Lnet/minecraft/client/resources/IReloadableResourceManager;	field_110451_am	mcResourceManager	#mcResourceManager, resourceManager, :, :
+	f	Lnet/minecraft/client/resources/data/IMetadataSerializer;	field_110452_an	metadataSerializer_	#metadataSerializer_, metadataSerializer, :, resourceMetadataSerializerRegistry
+	f	Ljava/util/List;	field_110449_ao	defaultResourcePacks	#defaultResourcePacks, :, resourcePacks, defaultResourcePacks
+	f	Lnet/minecraft/client/resources/DefaultResourcePack;	field_110450_ap	mcDefaultResourcePack	#mcDefaultResourcePack, defaultResourcePack, :, :
+	f	Lnet/minecraft/client/resources/ResourcePackRepository;	field_110448_aq	mcResourcePackRepository	#mcResourcePackRepository, resourcePackRepository, loader, resourcePacks
+	f	Lnet/minecraft/client/resources/LanguageManager;	field_135017_as	mcLanguageManager	#mcLanguageManager, languageManager, :, :
+	f	Lnet/minecraft/client/stream/IStream;	field_152353_at	stream	#stream, :, twitchStreamProvider, twitchStream
+	f	Lnet/minecraft/client/shader/Framebuffer;	field_147124_at	framebufferMc	#framebufferMc, framebuffer, fbo, renderTarget
+	f	Lnet/minecraft/client/renderer/texture/TextureMap;	field_147128_au	textureMapBlocks	#textureMapBlocks, :, texture, blocksAtlas
+	f	Lnet/minecraft/client/audio/SoundHandler;	field_147127_av	mcSoundHandler	#mcSoundHandler, soundHandler, soundManager, :
+	f	Lnet/minecraft/client/audio/MusicTicker;	field_147126_aw	mcMusicTicker	#mcMusicTicker, musicTicker, musicTracker, musicManager
+	f	Lnet/minecraft/util/ResourceLocation;	field_152354_ay	mojangLogo	#mojangLogo, :, mojang, logoLocation
+	f	Lcom/mojang/authlib/minecraft/MinecraftSessionService;	field_152355_az	sessionService	#sessionService, :, :, ~
+	f	[B	field_71444_a	memoryReserve	#memoryReserve, :, memoryReservedForCrash, MEMORY_RESERVED_FOR_CRASH
+		c	A 10MiB preallocation to ensure the heap is reasonably sized.
+	f	Lnet/minecraft/client/multiplayer/PlayerControllerMP;	field_71442_b	playerController	#playerController, :, interactionManager, :
+	f	I	field_71443_c	displayWidth	#displayWidth, :, width, :
+	f	I	field_71440_d	displayHeight	#displayHeight, :, height, :
+	f	Lnet/minecraft/client/multiplayer/WorldClient;	field_71441_e	theWorld	#theWorld, world, :, :
+	f	Lnet/minecraft/client/renderer/RenderGlobal;	field_71438_f	renderGlobal	#renderGlobal, :, worldRenderer, :
+	f	Lnet/minecraft/client/entity/EntityClientPlayerMP;	field_71439_g	thePlayer	#thePlayer, player, ~, player
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_71451_h	renderViewEntity	#renderViewEntity, :, ~, camera
+		c	The Entity from which the renderer determines the render viewpoint. Currently is always the parent Minecraft class's 'thePlayer' instance. Modification of its location, rotation, or other settings at render time will modify the camera likewise, with the caveat of triggering chunk rebuilds as it moves, making it unsuitable for changing the viewpoint mid-render.
+	f	Lnet/minecraft/entity/Entity;	field_147125_j	pointedEntity	#pointedEntity, :, targetedEntity, targetEntity
+	f	Lnet/minecraft/client/particle/EffectRenderer;	field_71452_i	effectRenderer	#effectRenderer, :, particleManager, :
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_71466_p	fontRenderer	#fontRenderer, :, textRenderer, :
+		c	The font renderer used for displaying and measuring text.
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_71464_q	standardGalacticFontRenderer	#standardGalacticFontRenderer, :, shadowTextRenderer, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_71462_r	currentScreen	#currentScreen, :, :, screen
+		c	The GuiScreen that's being displayed at the moment.
+	f	Lnet/minecraft/client/LoadingScreenRenderer;	field_71461_s	loadingScreen	#loadingScreen, :, loadingScreenRenderer, :
+	f	Lnet/minecraft/client/renderer/EntityRenderer;	field_71460_t	entityRenderer	#entityRenderer, :, gameRenderer, :
+	f	Lnet/minecraft/client/gui/achievement/GuiAchievement;	field_71458_u	guiAchievement	#guiAchievement, :, notification, toast
+		c	Gui achievement
+	f	Lnet/minecraft/client/gui/GuiIngame;	field_71456_v	ingameGUI	#ingameGUI, :, inGameHud, gui
+	f	Z	field_71454_w	skipRenderWorld	#skipRenderWorld, :, skipGameRender, :
+		c	Skip render world
+	f	Lnet/minecraft/util/MovingObjectPosition;	field_71476_x	objectMouseOver	#objectMouseOver, :, result, crosshairTarget
+		c	The ray trace hit that the mouse is over.
+	f	Lnet/minecraft/client/settings/GameSettings;	field_71474_y	gameSettings	#gameSettings, :, options, :
+		c	The game settings that currently hold effect.
+	f	Lnet/minecraft/util/MouseHelper;	field_71417_B	mouseHelper	#mouseHelper, :, mouse, :
+		c	Mouse helper instance.
+	f	Ljava/io/File;	field_71412_D	mcDataDir	#mcDataDir, gameDir, runDirectory, runDir
+	f	Z	field_71415_G	inGameHasFocus	#inGameHasFocus, :, focused, :
+		c	Does the actual gameplay have focus. If so then mouse and keys will effect the player instead of menus.
+	f	J	field_71423_H	systemTime	#systemTime, :, sysTime, :
+	f	Lnet/minecraft/profiler/Profiler;	field_71424_I	mcProfiler	#mcProfiler, profiler, :, :
+		c	The profiler instance
+	m	()Lnet/minecraft/client/Minecraft;	func_71410_x	getMinecraft	#getMinecraft, :, getInstance, :
+		c	Return the singleton Minecraft instance for the game
+	m	()V	func_147106_B	scheduleResourcesRefresh	#scheduleResourcesRefresh, :, ~, onApplyServerResourcePack
+	m	()I	func_71369_N	getGLMaximumTextureSize	#getGLMaximumTextureSize, :, getMaxTextureSize, :
+		c	Used in the usage snooper.
+	m	()Lnet/minecraft/client/multiplayer/ServerData;	func_147104_D	getCurrentServerData	#getCurrentServerData, :, getCurrentServerEntry, :
+	m	()Z	func_71387_A	isIntegratedServerRunning	#isIntegratedServerRunning, :, :, :
+	m	()Z	func_71356_B	isSingleplayer	#isSingleplayer, :, isInSingleplayer, :
+		c	Returns true if there is only one player playing, and the current server is the integrated one.
+	m	()Lnet/minecraft/server/integrated/IntegratedServer;	func_71401_C	getIntegratedServer	#getIntegratedServer, :, getServer, :
+		c	Returns the currently running integrated server
+	m	()V	func_71363_D	stopIntegratedServer	#stopIntegratedServer, :, stopServer, shutdown
+	m	()Lnet/minecraft/profiler/PlayerUsageSnooper;	func_71378_E	getPlayerUsageSnooper	#getPlayerUsageSnooper, :, getSnooper, :
+		c	Returns the PlayerUsageSnooper instance.
+	m	()J	func_71386_F	getSystemTime	#getSystemTime, :, getTime, :
+		c	Gets the system time in milliseconds.
+	m	()Z	func_71372_G	isFullScreen	#isFullScreen, :, isFullscreen, isWindowFocused
+		c	Returns whether we're in full screen or not.
+	m	()Lnet/minecraft/util/Session;	func_110432_I	getSession	#getSession, :, :, :
+	m	()Lcom/google/common/collect/Multimap;	func_152341_N	getTwitchDetails	#getTwitchDetails, :, ~, getUserProperties
+	m	()Ljava/net/Proxy;	func_110437_J	getProxy	#getProxy, :, getNetworkProxy, :
+	m	()Lnet/minecraft/client/renderer/texture/TextureManager;	func_110434_K	getTextureManager	#getTextureManager, :, :, :
+	m	()Lnet/minecraft/client/resources/IResourceManager;	func_110442_L	getResourceManager	#getResourceManager, :, :, :
+	m	()Lnet/minecraft/client/resources/ResourcePackRepository;	func_110438_M	getResourcePackRepository	#getResourcePackRepository, :, getResourcePackLoader, getResourcePacks
+	m	()Lnet/minecraft/client/resources/LanguageManager;	func_135016_M	getLanguageManager	#getLanguageManager, :, :, :
+	m	()Lnet/minecraft/client/renderer/texture/TextureMap;	func_147117_R	getTextureMapBlocks	#getTextureMapBlocks, :, getSpriteAtlasTexture, getBlocksAtlas
+	m	()Z	func_147111_S	isJava64bit	#isJava64bit, :, is64Bit, :
+	m	()Z	func_147113_T	isGamePaused	#isGamePaused, :, isPaused, :
+	m	()Lnet/minecraft/client/audio/SoundHandler;	func_147118_V	getSoundHandler	#getSoundHandler, :, getSoundManager, :
+	m	()Lnet/minecraft/client/audio/MusicTicker$MusicType;	func_147109_W	getAmbientMusicType	#getAmbientMusicType, :, ~, getMusicEnvironment
+	m	()Lnet/minecraft/client/stream/IStream;	func_152346_Z	getTwitchStream	#getTwitchStream, :, getTwitchStreamProvider, getTwitchStream
+	m	()Lnet/minecraft/client/shader/Framebuffer;	func_147110_a	getFramebuffer	#getFramebuffer, :, :, getRenderTarget
+	m	(I)V	func_71354_a	setDimensionAndSpawnPlayer	#setDimensionAndSpawnPlayer, :, setDimensionAndSpawn, teleportToDimension
+		p	1	p_71354_1_	dimension	#dimension, :, :, dimensionId
+	m	(II)V	func_71370_a	resize	#resize, :, onResolutionChanged, :
+		c	Called to resize the current screen.
+		p	1	p_71370_1_	width	#width, :, :, :
+		p	2	p_71370_2_	height	#height, :, :, :
+	m	(IIIIII)V	func_71392_a	scaledTessellator	#scaledTessellator, :, ~, renderMojangLogo
+		c	Loads Tessellator with a scaled resolution
+		p	1	p_71392_1_	width	#width, :, ~, x
+		p	2	p_71392_2_	height	#height, :, ~, y
+		p	3	p_71392_3_	width2	#width2, :, ~, u
+		p	4	p_71392_4_	height2	#height2, :, ~, v
+		p	5	p_71392_5_	stdTextureWidth	#stdTextureWidth, :, ~, width
+		p	6	p_71392_6_	stdTextureHeight	#stdTextureHeight, :, ~, height
+	m	(J)V	func_71366_a	displayDebugInfo	#displayDebugInfo, :, drawProfilerResults, renderProfilerChart
+		c	Parameter appears to be unused\n \n@param elapsedTicksTime The time elapsed for running game tick(s) this iteration; unused in this method
+		p	1	p_71366_1_	elapsedTicksTime	#elapsedTicksTime, :, tickTimeNanos, tickTime
+	m	(Lnet/minecraft/crash/CrashReport;)V	func_71404_a	crashed	#crashed, :, crash, :
+		p	1	p_71404_1_	crash	#crash, :, crashReport, :
+	m	(Lnet/minecraft/client/Minecraft;)Ljava/lang/String;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	func_147108_a	displayGuiScreen	#displayGuiScreen, :, setScreen, openScreen
+		c	Sets the argument GuiScreen as the main (topmost visible) screen.
+		p	1	p_147108_1_	guiScreenIn	#guiScreenIn, :, screen, :
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;)V	func_71403_a	loadWorld	#loadWorld, :, connect, setWorld
+		c	unloads the current world first
+		p	1	p_71403_1_	worldClientIn	#worldClientIn, :, world, :
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;Ljava/lang/String;)V	func_71353_a	loadWorld	#loadWorld, :, connect, setWorld
+		c	par2Str is displayed on the loading screen to the user unloads the current world first
+		p	1	p_71353_1_	worldClientIn	#worldClientIn, :, world, :
+		p	2	p_71353_2_	loadingMessage	#loadingMessage, :, :, title
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_71351_a	setServerData	#setServerData, :, setCurrentServerEntry, :
+		c	Set the current ServerData instance.
+		p	1	p_71351_1_	serverDataIn	#serverDataIn, :, info, serverEntry
+	m	(Ljava/io/InputStream;)Ljava/nio/ByteBuffer;	func_152340_a	readImageToBuffer	#readImageToBuffer, :, readInputStreamAsImage, readImageBuffer
+		p	1	p_152340_1_	imageStream	#imageStream, :, stream, file
+	m	(Ljava/lang/Runnable;)Lcom/google/common/util/concurrent/ListenableFuture;	func_152344_a	addScheduledTask	#addScheduledTask, :, ~, ~
+		p	1	p_152344_1_	runnableToSchedule	#runnableToSchedule, :, ~, ~
+	m	(Ljava/lang/String;I)V	func_71367_a	setServer	#setServer, :, ~, setServerAddressAndPort
+		p	1	p_71367_1_	serverHostname	#serverHostname, :, ~, address
+		p	2	p_71367_2_	serverPort	#serverPort, :, ~, port
+	m	(Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/WorldSettings;)V	func_71371_a	launchIntegratedServer	#launchIntegratedServer, :, startIntegratedServer, startGame
+		c	Arguments: World foldername,  World ingame name, WorldSettings
+		p	1	p_71371_1_	folderName	#folderName, :, worldName, saveName
+		p	2	p_71371_2_	worldName	#worldName, :, levelName, name
+		p	3	p_71371_3_	worldSettingsIn	#worldSettingsIn, :, levelInfo, settings
+	m	(Ljava/util/concurrent/Callable;)Lcom/google/common/util/concurrent/ListenableFuture;	func_152343_a	addScheduledTask	#addScheduledTask, :, execute, ~
+		p	1	p_152343_1_	callableToSchedule	#callableToSchedule, :, task, ~
+	m	(Z)V	func_147115_a	sendClickBlockToController	#sendClickBlockToController, :, handleBlockBreaking, tickBlockMining
+		p	1	p_147115_1_	leftClick	#leftClick, :, breaking, holdingAttack
+	m	()V	func_152348_aa	dispatchKeypresses	#dispatchKeypresses, :, handleKeyInput, handleGuiKeyBindings
+	m	()Z	func_152345_ab	isCallingFromMinecraftThread	#isCallingFromMinecraftThread, :, ~, ~
+	m	()Lcom/mojang/authlib/minecraft/MinecraftSessionService;	func_152347_ac	getSessionService	#getSessionService, :, :, ~
+	m	()Lnet/minecraft/client/resources/SkinManager;	func_152342_ad	getSkinManager	#getSkinManager, :, getSkinProvider, ~
+	m	()Z	func_147122_X	isJvm64bit	#isJvm64bit, :, checkIs64Bit, :
+	m	()V	func_71389_H	startTimerHackThread	#startTimerHackThread, :, initializeTimerHackThread, initTimerHackThread
+	m	()V	func_71384_a	startGame	#startGame, init, initializeGame, init
+		c	Starts the game: initializes the canvas, the title, the settings, etcetera.
+	m	()V	func_110435_P	addDefaultResourcePack	#addDefaultResourcePack, :, ~, addDefaultResourcePacks
+	m	()V	func_110441_Q	updateDisplayMode	#updateDisplayMode, :, :, :
+	m	()V	func_71357_I	loadScreen	#loadScreen, :, ~, renderLoadingScreen
+		c	Displays a new screen.
+	m	()V	func_71411_J	runGameLoop	#runGameLoop, :, :, runGame
+		c	Called repeatedly from run()
+	m	()V	func_147116_af	clickMouse	#clickMouse, :, doAttack, :
+	m	()V	func_147121_ag	rightClickMouse	#rightClickMouse, :, doUse, :
+		c	Called when user clicked he's mouse right button (place)
+	m	()V	func_147119_ah	updateFramebufferSize	#updateFramebufferSize, :, resizeFramebuffer, onResolutionChanged
+	m	()V	func_147112_ai	middleClickMouse	#middleClickMouse, :, doPick, :
+		c	Called when user clicked he's mouse middle button (pick block)
+	m	()Z	func_152349_b	isUnicode	#isUnicode, :, forcesUnicodeFont, isUnicode
+	m	(I)V	func_71383_b	updateDebugProfilerName	#updateDebugProfilerName, :, handleProfilerKeyPress, selectProfilerChartSection
+		c	Update debugProfilerName in response to number keys in debug screen
+		p	1	p_71383_1_	keyCount	#keyCount, :, digit, section
+	m	(Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReport;	func_71396_d	addGraphicsAndWorldToCrashReport	#addGraphicsAndWorldToCrashReport, :, addSystemDetailsToCrashReport, populateCrashReport
+		c	adds core server Info (GL version , Texture pack, isModded, type), and the worldInfo to the crash report
+		p	1	p_71396_1_	theCrash	#theCrash, :, crashReport, report
+	m	(Lnet/minecraft/client/Minecraft;)Lnet/minecraft/client/resources/LanguageManager;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)V	func_71361_d	checkGLError	#checkGLError, :, setGlErrorMessage, logGlError
+		c	Checks for an OpenGL error. If there is one, prints the error ID and error string.
+		p	1	p_71361_1_	message	#message, :, :, :
+	m	()V	func_110436_a	refreshResources	#refreshResources, :, reloadResources, :
+	m	(Lnet/minecraft/crash/CrashReport;)V	func_71377_b	displayCrashReport	#displayCrashReport, :, printCrashReport, :
+		c	Wrapper around displayCrashReportInternal
+		p	1	p_71377_1_	crashReportIn	#crashReportIn, :, crashReport, report
+	m	()Lnet/minecraft/world/storage/ISaveFormat;	func_71359_d	getSaveLoader	#getSaveLoader, :, getCurrentSave, getWorldStorageSource
+		c	Returns the save loader that is currently being used
+	m	()V	func_71405_e	shutdownMinecraftApplet	#shutdownMinecraftApplet, :, stop, :
+		c	Shuts down the minecraft applet by stopping the resource downloads, and clearing up GL stuff; called when the application (or web page) is exited.
+	m	()V	func_99999_d	run	#run, :, :, :
+	m	()V	func_147120_f	resetSize	#resetSize, :, ~, updateWindow
+		c	Called to ensure everything gets drawn right when window size is changed
+	m	()I	func_90020_K	getLimitFramerate	#getLimitFramerate, :, getMaxFramerate, :
+	m	()Z	func_147107_h	isFramerateLimitBelowMax	#isFramerateLimitBelowMax, :, isFramerateValid, :
+	m	()V	func_71398_f	freeMemory	#freeMemory, :, cleanUpAfterCrash, cleanHeap
+		c	Attempts to free as much memory as possible, including leaving the world and running the garbage collector.
+	m	()V	func_71400_g	shutdown	#shutdown, :, scheduleStop, :
+		c	Called when the window is closing. Sets 'running' to false which allows the game loop to exit cleanly.
+	m	()V	func_71381_h	setIngameFocus	#setIngameFocus, :, closeScreen, :
+		c	Will set the focus to ingame if the Minecraft window is the active with focus. Also clears any GUI screen currently displayed
+	m	()V	func_71364_i	setIngameNotInFocus	#setIngameNotInFocus, :, grabMouse, :
+		c	Resets the player keystate, disables the ingame focus, and ungrabs the mouse cursor.
+	m	()V	func_71385_j	displayInGameMenu	#displayInGameMenu, :, openGameMenuScreen, :
+		c	Displays the ingame menu
+	m	()V	func_71352_k	toggleFullscreen	#toggleFullscreen, :, :, :
+		c	Toggles fullscreen mode.
+	m	()V	func_71407_l	runTick	#runTick, :, tick, :
+		c	Runs the current tick.
+	m	()Ljava/lang/String;	func_71393_m	debugInfoRenders	#debugInfoRenders, :, ~, getChunkDebugInfo
+		c	A String of renderGlobal.getDebugInfoRenders
+	m	()Ljava/lang/String;	func_71408_n	getEntityDebug	#getEntityDebug, :, ~, getEntityDebugInfo
+		c	Gets the information in the F3 menu about how many entities are infront/around you
+	m	()Ljava/lang/String;	func_71388_o	getWorldProviderName	#getWorldProviderName, :, ~, getChunkSourceDebugInfo
+		c	Gets the name of the world's current chunk provider
+	m	()Ljava/lang/String;	func_71374_p	debugInfoEntities	#debugInfoEntities, :, ~, getParticleDebugInfo
+		c	A String of how many entities are in the world
+	m	()Z	func_71355_q	isDemo	#isDemo, :, :, :
+		c	Gets whether this is a demo or not.
+	m	()Lnet/minecraft/client/network/NetHandlerPlayClient;	func_147114_u	getNetHandler	#getNetHandler, getConnection, getNetworkHandler, :
+	m	()Z	func_71382_s	isGuiEnabled	#isGuiEnabled, :, isHudEnabled, isHudDisabled
+	m	()Z	func_71375_t	isFancyGraphicsEnabled	#isFancyGraphicsEnabled, :, :, :
+	m	()Z	func_71379_u	isAmbientOcclusionEnabled	#isAmbientOcclusionEnabled, :, :, :
+		c	Returns if ambient occlusion is enabled
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/util/Session;IIZZLjava/io/File;Ljava/io/File;Ljava/io/File;Ljava/net/Proxy;Ljava/lang/String;Lcom/google/common/collect/Multimap;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1103_1_	sessionIn	#sessionIn, :, ~, ~
+		p	2	p_i1103_2_	displayWidth	#displayWidth, :, ~, ~
+		p	3	p_i1103_3_	displayHeight	#displayHeight, :, ~, ~
+		p	4	p_i1103_4_	fullscreen	#fullscreen, :, ~, ~
+		p	5	p_i1103_5_	isDemo	#isDemo, :, ~, ~
+		p	6	p_i1103_6_	dataDir	#dataDir, :, ~, ~
+		p	7	p_i1103_7_	assetsDir	#assetsDir, :, ~, ~
+		p	8	p_i1103_8_	resourcePackDir	#resourcePackDir, :, ~, ~
+		p	9	p_i1103_9_	proxy	#proxy, :, ~, ~
+		p	10	p_i1103_10_	version	#version, :, ~, ~
+		p	11	p_i1103_11_	twitchDetails	#twitchDetails, :, ~, ~
+		p	12	p_i1103_12_	assetsJsonVersion	#assetsJsonVersion, :, ~, ~

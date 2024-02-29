@@ -1,0 +1,61 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/potion/PotionEffect	net/minecraft/potion/PotionEffect	
+	f	I	field_76462_a	potionID	#potionID, :, effectId, effect
+		c	ID value of the potion this effect matches.
+	f	I	field_76460_b	duration	#duration, :, :, :
+		c	The duration of the potion effect
+	f	I	field_76461_c	amplifier	#amplifier, :, :, :
+		c	The amplifier of the potion effect
+	f	Z	field_82723_d	isSplashPotion	#isSplashPotion, :, splash, :
+		c	Whether the potion is a splash potion
+	f	Z	field_82724_e	isAmbient	#isAmbient, :, ambient, :
+		c	Whether the potion effect came from a beacon
+	f	Z	field_100013_f	isPotionDurationMax	#isPotionDurationMax, :, permanent, :
+		c	True if potion effect duration is at maximum, false otherwise.
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1574_1_	id	#id, :, effectId, id
+		p	2	p_i1574_2_	effectDuration	#effectDuration, :, duration, :
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1575_1_	id	#id, :, effectId, id
+		p	2	p_i1575_2_	effectDuration	#effectDuration, :, duration, :
+		p	3	p_i1575_3_	effectAmplifier	#effectAmplifier, :, amplifier, :
+	m	(Lnet/minecraft/potion/PotionEffect;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1577_1_	other	#other, :, instance, :
+	m	()I	func_76456_a	getPotionID	#getPotionID, :, getEffectId, getId
+		c	Retrieve the ID of the potion this effect matches.
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;	func_82719_a	writeCustomPotionEffectToNBT	#writeCustomPotionEffectToNBT, :, toNbt, :
+		c	Write a custom potion effect to a potion item's NBT data.
+		p	1	p_82719_1_	nbt	#nbt, :, :, :
+	m	(Lnet/minecraft/potion/PotionEffect;)V	func_76452_a	combine	#combine, :, setFrom, combine
+		c	merges the input PotionEffect into this one if this.amplifier <= tomerge.amplifier. The duration in the supplied potion effect is assumed to be greater.
+		p	1	p_76452_1_	other	#other, :, instance, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_76455_a	onUpdate	#onUpdate, :, ~, tick
+		p	1	p_76455_1_	entityIn	#entityIn, :, ~, entity
+	m	(Z)V	func_82721_a	setSplashPotion	#setSplashPotion, :, setSplash, :
+		c	Set whether this potion is a splash potion.
+		p	1	p_82721_1_	splashPotion	#splashPotion, :, splash, :
+	m	()I	func_76459_b	getDuration	#getDuration, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/potion/PotionEffect;	func_82722_b	readCustomPotionEffectFromNBT	#readCustomPotionEffectFromNBT, :, fromNbt, :
+		c	Read a custom potion effect from a potion item's NBT data.
+		p	0	p_82722_0_	nbt	#nbt, :, :, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_76457_b	performEffect	#performEffect, :, ~, apply
+		p	1	p_76457_1_	entityIn	#entityIn, :, ~, entity
+	m	(Z)V	func_100012_b	setPotionDurationMax	#setPotionDurationMax, :, setPermanent, :
+		c	Toggle the isPotionDurationMax field.
+		p	1	p_100012_1_	maxDuration	#maxDuration, :, permanent, :
+	m	()I	func_76458_c	getAmplifier	#getAmplifier, :, :, :
+	m	()Z	func_82720_e	getIsAmbient	#getIsAmbient, :, isAmbient, :
+		c	Gets whether this potion effect originated from a beacon
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, ~, object
+	m	()Ljava/lang/String;	func_76453_d	getEffectName	#getEffectName, :, getTranslationKey, getName
+	m	()Z	func_100011_g	getIsPotionDurationMax	#getIsPotionDurationMax, :, isPermanent, :
+		c	Get the value of the isPotionDurationMax field.
+	m	()I	func_76454_e	deincrementDuration	#deincrementDuration, :, updateDuration, tickDuration
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(IIIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1576_1_	id	#~, ~, ~, id
+		p	2	p_i1576_2_	duration	#~, ~, ~, duration
+		p	3	p_i1576_3_	amplifier	#~, ~, ~, amplifier
+		p	4	p_i1576_4_	ambient	#~, ~, ~, ambient

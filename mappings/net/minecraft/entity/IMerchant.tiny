@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/IMerchant	net/minecraft/entity/IMerchant	
+	m	(Lnet/minecraft/village/MerchantRecipe;)V	func_70933_a	useRecipe	#useRecipe, :, trade, :
+		p	1	p_70933_1_	recipe	#recipe, :, offer, :
+	m	(Lnet/minecraft/village/MerchantRecipeList;)V	func_70930_a	setRecipes	#setRecipes, :, setTraderOfferList, setOffers
+		p	1	p_70930_1_	recipeList	#recipeList, :, list, offers
+	m	(Lnet/minecraft/item/ItemStack;)V	func_110297_a_	verifySellingItem	#verifySellingItem, :, ~, updateOffer
+		c	Notifies the merchant of a possible merchantrecipe being fulfilled or not. Usually, this is just a sound byte being played depending if the suggested itemstack is not null.
+		p	1	p_110297_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_70932_a_	setCustomer	#setCustomer, :, setCurrentCustomer, setCustomer
+		p	1	p_70932_1_	player	#player, :, :, :
+	m	()Lnet/minecraft/entity/player/EntityPlayer;	func_70931_l_	getCustomer	#getCustomer, :, getCurrentCustomer, getCustomer
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/village/MerchantRecipeList;	func_70934_b	getRecipes	#getRecipes, :, getOffers, :
+		p	1	p_70934_1_	player	#player, :, :, :

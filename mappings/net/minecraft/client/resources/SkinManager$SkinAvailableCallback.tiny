@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SkinManager$SkinAvailableCallback	net/minecraft/client/resources/SkinManager$SkinAvailableCallback	
+	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/util/ResourceLocation;)V	func_152121_a	onSkinAvailable	#onSkinAvailable, :, ~, ~
+		c	Called when the skinmanager completes downloading part of a skin. May be called twice if the player has both a skin and a cape.\n \n@param skinPart Either Type.SKIN or Type.CAPE
+		p	1	p_152121_1_	skinPart	#skinPart, :, ~, ~
+		p	2	p_152121_2_	skinLoc	#skinLoc, :, ~, ~

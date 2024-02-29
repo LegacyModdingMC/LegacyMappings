@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/ServerAddress	net/minecraft/client/multiplayer/ServerAddress	
+	f	Ljava/lang/String;	field_78866_a	ipAddress	#ipAddress, :, address, :
+	f	I	field_78865_b	serverPort	#serverPort, :, port, :
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1192_1_	address	#address, :, :, :
+		p	2	p_i1192_2_	port	#port, :, :, :
+	m	()Ljava/lang/String;	func_78861_a	getIP	#getIP, :, getAddress, :
+	m	(Ljava/lang/String;)Lnet/minecraft/client/multiplayer/ServerAddress;	func_78860_a	fromString	#fromString, :, parse, :
+		p	0	p_78860_0_	addrString	#addrString, :, address, :
+	m	(Ljava/lang/String;I)I	func_78862_a	parseIntWithDefault	#parseIntWithDefault, getInt, portOrDefault, getPortOrDefault
+		p	0	p_78862_0_	value	#value, :, port, :
+		p	1	p_78862_1_	defaultValue	#defaultValue, :, def, :
+	m	()I	func_78864_b	getPort	#getPort, :, :, :
+	m	(Ljava/lang/String;)[Ljava/lang/String;	func_78863_b	getServerAddress	#getServerAddress, :, resolveSrv, parseAddress
+		c	Returns a server's address and port for the specified hostname, looking up the SRV record if possible
+		p	0	p_78863_0_	address	#~, ~, address, :

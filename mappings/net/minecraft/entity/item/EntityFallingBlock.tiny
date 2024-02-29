@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityFallingBlock	net/minecraft/entity/item/EntityFallingBlock	
+	f	I	field_145814_a	metadata	#metadata, :, ~, metadata
+	f	I	field_145812_b	fallTime	#fallTime, :, timeFalling, time
+	f	Z	field_145813_c	shouldDropItem	#shouldDropItem, :, dropping, :
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_145810_d	tileEntityData	#tileEntityData, :, :, nbt
+	f	Lnet/minecraft/block/Block;	field_145811_e	blockObj	#blockObj, :, ~, block
+	f	Z	field_145808_f	canSetAsBlock	#canSetAsBlock, dontSetBlock, destroyedOnLanding, brokeAnvil
+	f	Z	field_145809_g	hurtEntities	#hurtEntities, :, :, hurtingEntities
+	f	I	field_145815_h	fallHurtMax	#fallHurtMax, :, :, maxFallHurt
+	f	F	field_145816_i	fallHurtAmount	#fallHurtAmount, :, :, :
+	m	(Z)V	func_145806_a	setHurtEntities	#setHurtEntities, :, setHurtingEntities, :
+		p	1	p_145806_1_	hurtingEntities	#~, ~, hurtEntities, hurtingEntities
+	m	()Lnet/minecraft/world/World;	func_145807_e	getWorldObj	#getWorldObj, :, ~, getWorld
+	m	()Lnet/minecraft/block/Block;	func_145805_f	getBlock	#getBlock, :, ~, getBlock
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45318_1_	world	#~, ~, ~, world
+		p	2	p_i45318_2_	x	#~, ~, ~, x
+		p	4	p_i45318_4_	y	#~, ~, ~, y
+		p	6	p_i45318_6_	z	#~, ~, ~, z
+		p	8	p_i45318_8_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45319_1_	world	#~, ~, ~, world
+		p	2	p_i45319_2_	x	#~, ~, ~, x
+		p	4	p_i45319_4_	y	#~, ~, ~, y
+		p	6	p_i45319_6_	z	#~, ~, ~, z
+		p	8	p_i45319_8_	block	#~, ~, ~, block
+		p	9	p_i45319_9_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1706_1_	worldIn	#worldIn, :, ~, ~

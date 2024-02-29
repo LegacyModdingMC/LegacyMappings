@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockHugeMushroom	net/minecraft/block/BlockHugeMushroom	
+	f	[Lnet/minecraft/util/IIcon;	field_149794_M	skinSprites	#~, ~, ~, skinSprites
+	f	Lnet/minecraft/util/IIcon;	field_149795_N	skinStemSprite	#~, ~, ~, skinStemSprite
+	f	Lnet/minecraft/util/IIcon;	field_149796_O	insideSprite	#~, ~, ~, insideSprite
+	f	[Ljava/lang/String;	field_149793_a	SPRITE_NAMES	#~, ~, ~, SPRITE_NAMES
+	f	I	field_149792_b	variant	#~, ~, ~, variant
+		c	The mushroom type (0 = brown, 1 = red)
+	m	(Lnet/minecraft/block/material/Material;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45412_1_	material	#~, ~, ~, material
+		p	2	p_i45412_2_	variant	#~, ~, ~, variant
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

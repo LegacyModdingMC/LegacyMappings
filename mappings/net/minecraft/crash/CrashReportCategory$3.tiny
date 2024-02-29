@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/crash/CrashReportCategory$3	net/minecraft/crash/CrashReportCategory$3	
+	f	I	field_85067_a	blockXCoord	#blockXCoord, :, x, :
+	f	I	field_85065_b	blockYCoord	#blockYCoord, :, y, :
+	f	I	field_85066_c	blockZCoord	#blockZCoord, :, z, :
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1351_1_	x	#~, ~, x, ~
+		p	2	p_i1351_2_	y	#~, ~, y, ~
+		p	3	p_i1351_3_	z	#~, ~, z, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

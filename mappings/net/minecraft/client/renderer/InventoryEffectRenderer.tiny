@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/InventoryEffectRenderer	net/minecraft/client/renderer/InventoryEffectRenderer	
+	f	Z	field_147045_u	hasActivePotionEffects	#hasActivePotionEffects, :, offsetGuiForEffects, hasStatusEffect
+		c	True if there is some potion effect to display
+	m	()V	func_147044_g	drawActivePotionEffects	#drawActivePotionEffects, :, drawStatusEffects, :
+		c	Display the potion effects list
+	m	(Lnet/minecraft/inventory/Container;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1089_1_	inventorySlotsIn	#inventorySlotsIn, :, ~, ~

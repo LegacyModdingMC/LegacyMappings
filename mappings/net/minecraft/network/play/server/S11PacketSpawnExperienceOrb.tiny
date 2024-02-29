@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S11PacketSpawnExperienceOrb	net/minecraft/network/play/server/S11PacketSpawnExperienceOrb	
+	f	I	field_148992_a	entityID	#entityID, :, id, :
+	f	I	field_148990_b	posX	#posX, :, x, :
+	f	I	field_148991_c	posY	#posY, :, y, :
+	f	I	field_148988_d	posZ	#posZ, :, z, :
+	f	I	field_148989_e	xpValue	#xpValue, :, experience, xp
+	m	(Lnet/minecraft/entity/item/EntityXPOrb;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45167_1_	xpOrb	#xpOrb, :, entity, :
+	m	()I	func_148985_c	getEntityID	#getEntityID, :, getId, :
+	m	()I	func_148984_d	getX	#getX, :, :, :
+	m	()I	func_148983_e	getY	#getY, :, :, :
+	m	()I	func_148982_f	getZ	#getZ, :, :, :
+	m	()I	func_148986_g	getXPValue	#getXPValue, :, getExperience, getXp
+	m	()V	<init>	<init>	#~, ~, ~, ~

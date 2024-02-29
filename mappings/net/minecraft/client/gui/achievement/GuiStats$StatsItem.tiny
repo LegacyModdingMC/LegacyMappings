@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/achievement/GuiStats$StatsItem	net/minecraft/client/gui/achievement/GuiStats$StatsItem	
+	f	Lnet/minecraft/client/gui/achievement/GuiStats;	field_148220_k	field_148220_k	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/achievement/GuiStats;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1069_1_	p_i1069_1_	#~, ~, ~, ~

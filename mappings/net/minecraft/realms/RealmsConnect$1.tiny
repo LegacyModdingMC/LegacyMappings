@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsConnect$1	net/minecraft/realms/RealmsConnect$1	
+	f	Ljava/lang/String;	field_154355_a	field_154355_a	#~, ~, ~, ~
+	f	I	field_154356_b	field_154356_b	#~, ~, ~, ~
+	f	Lnet/minecraft/realms/RealmsConnect;	field_154357_c	field_154357_c	#~, ~, ~, ~
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsConnect;Ljava/lang/String;Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1004_1_	p_i1004_1_	#~, ~, ~, ~
+		p	2	p_i1004_2_	p_i1004_2_	#~, ~, ~, ~
+		p	3	p_i1004_3_	p_i1004_3_	#~, ~, ~, ~
+		p	4	p_i1004_4_	p_i1004_4_	#~, ~, ~, ~

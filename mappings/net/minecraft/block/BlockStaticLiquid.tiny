@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStaticLiquid	net/minecraft/block/BlockStaticLiquid	
+	m	(Lnet/minecraft/world/World;III)V	func_149818_n	setNotStationary	#setNotStationary, :, ~, convertToFlowing
+		c	Changes the block ID to that of an updating fluid.
+		p	1	p_149818_1_	world	#~, ~, ~, world
+		p	2	p_149818_2_	x	#~, ~, ~, x
+		p	3	p_149818_3_	y	#~, ~, ~, y
+		p	4	p_149818_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_149817_o	isFlammable	#isFlammable, :, ~, isFlammable
+		c	Checks to see if the block is flammable.
+		p	1	p_149817_1_	world	#~, ~, ~, world
+		p	2	p_149817_2_	x	#~, ~, ~, x
+		p	3	p_149817_3_	y	#~, ~, ~, y
+		p	4	p_149817_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45429_1_	materialIn	#materialIn, :, ~, ~

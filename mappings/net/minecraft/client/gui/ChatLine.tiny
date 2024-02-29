@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ChatLine	net/minecraft/client/gui/ChatLine	
+	f	I	field_74543_a	updateCounterCreated	#updateCounterCreated, :, creationTick, timeOfCreation
+		c	GUI Update Counter value this Line was created at
+	f	Lnet/minecraft/util/IChatComponent;	field_74541_b	lineString	#lineString, :, text, :
+	f	I	field_74542_c	chatLineID	#chatLineID, :, id, :
+		c	int value to refer to existing Chat Lines, can be 0 which means unreferrable
+	m	(ILnet/minecraft/util/IChatComponent;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45000_1_	updateCounterCreatedIn	#updateCounterCreatedIn, :, creationTick, timeOfCreation
+		p	2	p_i45000_2_	lineStringIn	#lineStringIn, :, text, :
+		p	3	p_i45000_3_	chatLineIDIn	#chatLineIDIn, :, id, :
+	m	()Lnet/minecraft/util/IChatComponent;	func_151461_a	getChatComponent	#getChatComponent, :, getText, :
+	m	()I	func_74540_b	getUpdatedCounter	#getUpdatedCounter, :, getCreationTick, getTimeOfCreation
+	m	()I	func_74539_c	getChatLineID	#getChatLineID, :, getId, :

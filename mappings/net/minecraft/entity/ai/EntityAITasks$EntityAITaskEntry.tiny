@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAITasks$EntityAITaskEntry	net/minecraft/entity/ai/EntityAITasks$EntityAITaskEntry	
+	f	Lnet/minecraft/entity/ai/EntityAIBase;	field_75733_a	action	#action, :, ~, goal
+		c	The EntityAIBase object.
+	f	I	field_75731_b	priority	#priority, :, ~, priority
+		c	Priority of the EntityAIBase
+	f	Lnet/minecraft/entity/ai/EntityAITasks;	field_75732_c	tasks	#tasks, :, ~, goalSelector
+		c	The EntityAITasks object of which this is an entry.
+	m	(Lnet/minecraft/entity/ai/EntityAITasks;ILnet/minecraft/entity/ai/EntityAIBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1627_2_	priorityIn	#priorityIn, :, ~, priority
+		p	3	p_i1627_3_	task	#task, :, ~, goal
+		p	1	p_i1627_1_	p_i1627_1_	#~, ~, ~, ~

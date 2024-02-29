@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenBase$TempCategory	net/minecraft/world/biome/BiomeGenBase$TempCategory	
+	f	Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	OCEAN	OCEAN	#~, ~, OCEAN, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	COLD	COLD	#~, ~, COLD, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	MEDIUM	MEDIUM	#~, ~, MEDIUM, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	WARM	WARM	#~, ~, WARM, :
+	f	[Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45372_1_	p_i45372_1_	#~, ~, ~, ~
+		p	2	p_i45372_2_	p_i45372_2_	#~, ~, ~, ~

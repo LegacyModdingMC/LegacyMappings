@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiMultiplayer	net/minecraft/client/gui/GuiMultiplayer	
+	f	Lnet/minecraft/client/network/LanServerDetector$LanServerList;	field_146799_A	lanServerList	#lanServerList, :, ~, lanServerList
+	f	Lnet/minecraft/client/network/LanServerDetector$ThreadLanServerFind;	field_146800_B	lanServerDetector	#lanServerDetector, :, ~, lanServerDetector
+	f	Z	field_146801_C	initialized	#initialized, :, :, :
+	f	Lorg/apache/logging/log4j/Logger;	field_146802_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/network/OldServerPinger;	field_146797_f	oldServerPinger	#oldServerPinger, :, pinger, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146798_g	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/gui/ServerSelectionList;	field_146803_h	serverListSelector	#serverListSelector, :, serverListWidget, :
+	f	Lnet/minecraft/client/multiplayer/ServerList;	field_146804_i	savedServerList	#savedServerList, :, serverList, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146810_r	btnEditServer	#btnEditServer, :, editButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146809_s	btnSelectServer	#btnSelectServer, :, joinButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146808_t	btnDeleteServer	#btnDeleteServer, :, deleteButton, :
+	f	Z	field_146807_u	deletingServer	#deletingServer, :, deleteSelected, deleteServerConfirmationDialogOpen
+	f	Z	field_146806_v	addingServer	#addingServer, :, addSelected, addServerDialogOpen
+	f	Z	field_146805_w	editingServer	#editingServer, :, editSelected, editServerDialogOpen
+	f	Z	field_146813_x	directConnect	#directConnect, :, directSelected, serverOpen
+	f	Ljava/lang/String;	field_146812_y	hoveringText	#hoveringText, :, tooltipText, :
+		c	The text to be displayed when the player's cursor hovers over a server listing.
+	f	Lnet/minecraft/client/multiplayer/ServerData;	field_146811_z	selectedServer	#selectedServer, :, selectedEntry, serverEntry
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1040_1_	parentScreen	#parentScreen, :, screen, parent
+	m	()V	func_146794_g	createButtons	#createButtons, :, initButtons, addButtons
+		c	Button Ids:\n    - 0: Cancel Button\n    - 1: Select Server Button\n    - 2: Delete Server Button\n    - 3: Add Server button\n    - 4: Select Server Directly\n    - 5:\n    - 6:\n    - 7: Edit Server Button\n    - 8: Refresh Server Button
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_146791_a	connectToServer	#connectToServer, :, connect, :
+		p	1	p_146791_1_	server	#server, :, entry, :
+	m	(Ljava/lang/String;)V	func_146793_a	setHoveringText	#setHoveringText, :, setTooltip, :
+		p	1	p_146793_1_	text	#~, ~, text, :
+	m	(I)V	func_146790_a	selectServer	#selectServer, :, selectEntry, moveToServer
+		p	1	p_146790_1_	index	#index, :, :, :
+	m	()V	func_146796_h	connectToSelected	#connectToSelected, :, connect, :
+	m	()Lnet/minecraft/client/network/OldServerPinger;	func_146789_i	getOldServerPinger	#getOldServerPinger, :, getServerListPinger, :
+	m	()Lnet/minecraft/client/multiplayer/ServerList;	func_146795_p	getServerList	#getServerList, :, :, :
+	m	()V	func_146792_q	refreshServerList	#refreshServerList, :, refresh, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

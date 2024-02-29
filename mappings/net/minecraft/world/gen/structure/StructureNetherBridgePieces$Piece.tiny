@@ -1,0 +1,58 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece	net/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece	
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_111019_a	LOOT_ENTRIES	#~, ~, ~, LOOT_ENTRIES
+	m	(Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z	func_74964_a	isAboveGround	#isAboveGround, :, ~, isValidStructureBounds
+		c	Checks if the bounding box's minY is > 10
+		p	0	p_74964_0_	bounds	#~, ~, ~, bounds
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Piece;	func_74959_a	getNextComponent	#getNextComponent, :, ~, generateNextPiece
+		p	1	p_74959_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74959_2_	weights	#~, ~, ~, weights
+		p	3	p_74959_3_	pieces	#~, ~, ~, pieces
+		p	4	p_74959_4_	random	#~, ~, ~, random
+		p	5	p_74959_5_	x	#~, ~, ~, x
+		p	6	p_74959_6_	y	#~, ~, ~, y
+		p	7	p_74959_7_	z	#~, ~, ~, z
+		p	8	p_74959_8_	facing	#~, ~, ~, facing
+		p	9	p_74959_9_	generationDepth	#~, ~, ~, generationDepth
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIIIIZ)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74962_a	getNextComponent	#getNextComponent, :, ~, generateNextPiece
+		c	Finds a random component to tack on to the bridge. Or builds the end.
+		p	1	p_74962_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74962_2_	pieces	#~, ~, ~, pieces
+		p	3	p_74962_3_	random	#~, ~, ~, random
+		p	4	p_74962_4_	x	#~, ~, ~, x
+		p	5	p_74962_5_	y	#~, ~, ~, y
+		p	6	p_74962_6_	z	#~, ~, ~, z
+		p	7	p_74962_7_	facing	#~, ~, ~, facing
+		p	8	p_74962_8_	generationDepth	#~, ~, ~, generationDepth
+		p	9	p_74962_9_	pickCastlePiece	#~, ~, ~, pickCastlePiece
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74963_a	getNextComponentNormal	#getNextComponentNormal, :, ~, generatePieceForward
+		c	Gets the next component in any cardinal direction
+		p	1	p_74963_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74963_2_	pieces	#~, ~, ~, pieces
+		p	3	p_74963_3_	random	#~, ~, ~, random
+		p	4	p_74963_4_	offset	#~, ~, ~, offset
+		p	5	p_74963_5_	yOffset	#~, ~, ~, yOffset
+		p	6	p_74963_6_	pickCastlePiece	#~, ~, ~, pickCastlePiece
+	m	(Ljava/util/List;)I	func_74960_a	getTotalWeight	#getTotalWeight, :, ~, getTotalWeight
+		c	Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
+		p	1	p_74960_1_	pieceWeights	#~, ~, ~, pieceWeights
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74961_b	getNextComponentX	#getNextComponentX, :, ~, generatePieceLeft
+		c	Gets the next component in the +/- X direction
+		p	1	p_74961_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74961_2_	pieces	#~, ~, ~, pieces
+		p	3	p_74961_3_	random	#~, ~, ~, random
+		p	4	p_74961_4_	yOffset	#~, ~, ~, yOffset
+		p	5	p_74961_5_	offset	#~, ~, ~, offset
+		p	6	p_74961_6_	pickCastlePiece	#~, ~, ~, pickCastlePiece
+	m	(Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$Start;Ljava/util/List;Ljava/util/Random;IIZ)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74965_c	getNextComponentZ	#getNextComponentZ, :, ~, generatePieceRight
+		c	Gets the next component in the +/- Z direction
+		p	1	p_74965_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74965_2_	pieces	#~, ~, ~, pieces
+		p	3	p_74965_3_	random	#~, ~, ~, random
+		p	4	p_74965_4_	yOffset	#~, ~, ~, yOffset
+		p	5	p_74965_5_	offset	#~, ~, ~, offset
+		p	6	p_74965_6_	pickCastlePiece	#~, ~, ~, pickCastlePiece
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2054_1_	p_i2054_1_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

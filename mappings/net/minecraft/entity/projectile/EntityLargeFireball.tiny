@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityLargeFireball	net/minecraft/entity/projectile/EntityLargeFireball	
+	f	I	field_92057_e	explosionPower	#explosionPower, :, :, :
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1768_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1768_2_	x	#x, :, ~, x
+		p	4	p_i1768_4_	y	#y, :, ~, y
+		p	6	p_i1768_6_	z	#z, :, ~, z
+		p	8	p_i1768_8_	accelX	#accelX, :, ~, velocityX
+		p	10	p_i1768_10_	accelY	#accelY, :, ~, velocityY
+		p	12	p_i1768_12_	accelZ	#accelZ, :, ~, velocityZ
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1769_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1769_2_	shooter	#shooter, :, ~, owner
+		p	3	p_i1769_3_	accelX	#accelX, :, ~, velocityX
+		p	5	p_i1769_5_	accelY	#accelY, :, ~, velocityY
+		p	7	p_i1769_7_	accelZ	#accelZ, :, ~, velocityZ
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1767_1_	worldIn	#worldIn, :, ~, ~

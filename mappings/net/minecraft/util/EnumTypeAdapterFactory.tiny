@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EnumTypeAdapterFactory	net/minecraft/util/EnumTypeAdapterFactory	
+	m	(Ljava/lang/Object;)Ljava/lang/String;	func_151232_a	getName	#getName, :, getKey, :
+		p	1	p_151232_1_	objectIn	#objectIn, :, o, obj
+	m	(Lnet/minecraft/util/EnumTypeAdapterFactory;Ljava/lang/Object;)Ljava/lang/String;	access$000	access$000	#~, ~, ~, getKey
+		p	0	p_access$000_0_	lowercaseEnumTypeAdapterFactory	#~, ~, ~, lowercaseEnumTypeAdapterFactory
+		p	1	p_access$000_1_	o	#~, ~, ~, o
+	m	(Lcom/google/gson/Gson;Lcom/google/gson/reflect/TypeToken;)Lcom/google/gson/TypeAdapter;	create	create	#~, ~, ~, ~
+		p	1	p_create_1_	gson	#~, ~, gson, :
+		p	2	p_create_2_	token	#~, ~, ~, token
+	m	()V	<init>	<init>	#~, ~, ~, ~

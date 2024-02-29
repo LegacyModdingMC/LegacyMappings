@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSnowball	net/minecraft/client/renderer/entity/RenderSnowball	
+	f	Lnet/minecraft/item/Item;	field_94151_a	itemForRender	#itemForRender, :, ~, item
+	f	I	field_94150_f	metadata	#metadata, :, ~, metadata
+	m	(Lnet/minecraft/client/renderer/Tessellator;Lnet/minecraft/util/IIcon;)V	func_77026_a	renderEntity	#renderEntity, :, ~, renderSprite
+		p	1	p_77026_1_	buffer	#~, ~, ~, buffer
+		p	2	p_77026_2_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/item/Item;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1260_1_	item	#~, ~, ~, item
+	m	(Lnet/minecraft/item/Item;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1259_1_	item	#~, ~, ~, item
+		p	2	p_i1259_2_	metadata	#~, ~, ~, metadata

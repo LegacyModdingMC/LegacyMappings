@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/main/Main$2	net/minecraft/client/main/Main$2	
+	f	Ljava/lang/String;	field_152581_a	username	#~, ~, ~, username
+	f	Ljava/lang/String;	field_152582_b	password	#~, ~, ~, password
+	m	()Ljava/net/PasswordAuthentication;	getPasswordAuthentication	getPasswordAuthentication	#~, ~, ~, ~
+	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1061_1_	p_i1061_1_	#~, ~, ~, ~
+		p	2	p_i1061_2_	p_i1061_2_	#~, ~, ~, ~

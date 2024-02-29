@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkStatistics$PacketStat	net/minecraft/network/NetworkStatistics$PacketStat	
+	f	I	field_152482_a	packetId	#packetId, :, ~, ~
+	f	Lnet/minecraft/network/NetworkStatistics$PacketStatData;	field_152483_b	data	#data, :, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(ILnet/minecraft/network/NetworkStatistics$PacketStatData;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1188_1_	id	#id, :, ~, ~
+		p	2	p_i1188_2_	statData	#statData, :, ~, ~

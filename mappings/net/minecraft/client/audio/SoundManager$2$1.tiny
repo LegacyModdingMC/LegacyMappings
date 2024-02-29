@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundManager$2$1	net/minecraft/client/audio/SoundManager$2$1	
+	f	Lnet/minecraft/client/audio/SoundManager$2;	field_148593_a	handler	#~, ~, ~, handler
+	m	()V	connect	connect	#~, ~, ~, ~
+	m	()Ljava/io/InputStream;	getInputStream	getInputStream	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundManager$2;Ljava/net/URL;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45115_1_	p_i45115_1_	#~, ~, ~, ~
+		p	2	p_i45115_2_	p_i45115_2_	#~, ~, ~, ~

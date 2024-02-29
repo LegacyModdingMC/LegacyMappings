@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S1EPacketRemoveEntityEffect	net/minecraft/network/play/server/S1EPacketRemoveEntityEffect	
+	f	I	field_149079_a	entityId	#entityId, :, :, id
+	f	I	field_149078_b	effectId	#effectId, :, :, effect
+	m	(ILnet/minecraft/potion/PotionEffect;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45212_1_	entityIdIn	#entityIdIn, :, entityId, :
+		p	2	p_i45212_2_	effect	#effect, :, effectInstance, effect
+	m	()I	func_149076_c	getEntityId	#getEntityId, :, getId, :
+	m	()I	func_149075_d	getEffectId	#getEffectId, :, getEffectType, getEffect
+	m	()V	<init>	<init>	#~, ~, ~, ~

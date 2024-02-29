@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/ServerCommand	net/minecraft/command/ServerCommand	
+	f	Ljava/lang/String;	field_73702_a	command	#command, :, :, :
+		c	The command string.
+	f	Lnet/minecraft/command/ICommandSender;	field_73701_b	sender	#sender, :, source, :
+	m	(Ljava/lang/String;Lnet/minecraft/command/ICommandSender;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1491_1_	input	#input, :, command, :
+		p	2	p_i1491_2_	sender	#sender, :, commandSource, source

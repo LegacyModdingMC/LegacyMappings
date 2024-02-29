@@ -1,0 +1,78 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/RegionFile	net/minecraft/world/chunk/storage/RegionFile	
+	f	[B	field_76720_a	emptySector	#emptySector, EMPTY_SECTOR, BYTES, BLOCK_BUFFER
+		c	Unused buffer to store a single 4KB block of memory.
+	f	Ljava/io/File;	field_76718_b	fileName	#fileName, :, file, :
+	f	Ljava/io/RandomAccessFile;	field_76719_c	dataFile	#dataFile, :, fileBuffer, randomAccessFile
+	f	[I	field_76716_d	offsets	#offsets, :, sectorData, chunkBlockInfo
+		c	Contains the 4KB block offset and number of blocks that each chunk occupies. If\na chunk does not store any data, then the array entry contains zero. The format\nof a non-zero entry in the array is as follows:\n<ul>\n    <li>bits[0:7] , the number of blocks that the chunk data occupies</li>\n    <li>bits[8:31], the block offset of the first byte in the chunk data</li>\n</ul>\nThe above is specified in lsb first. This array is also written to the region\nfile starting at byte 0.\n<br><br>\nNote: A block in this context should be understood as 4096 continous bytes in\nthe region file.
+	f	[I	field_76717_e	chunkTimestamps	#chunkTimestamps, :, saveTimes, chunkSaveTimes
+		c	Contains the times for the latest modification to each chunk. This array\nis also written to the region file starting at byte 4096 (block offset 1).
+	f	Ljava/util/ArrayList;	field_76714_f	sectorFree	#sectorFree, :, ~, blockEmptyFlags
+		c	A list containing flags for each of the 4KB blocks in the file indicating whether\nit should be considered empty or occupied. In particular, if a value at index\n{@code blockOffset} is {@code true} then it is empty, and otherwise occupied.
+	f	I	field_76715_g	sizeDelta	#sizeDelta, :, ~, bytesWritten
+		c	McRegion sizeDelta
+	f	J	field_76721_h	lastModified	#lastModified, :, :, lastModifiedTime
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2001_1_	fileNameIn	#fileNameIn, :, file, :
+	m	(II)Ljava/io/DataInputStream;	func_76704_a	getChunkDataInputStream	#getChunkDataInputStream, :, getChunkInputStream, :
+		c	args: x, y - get uncompressed chunk stream from the region file
+		p	1	p_76704_1_	x	#x, :, chunkX, :
+		p	2	p_76704_2_	z	#z, :, chunkZ, :
+	m	(III)V	func_76711_a	setOffset	#setOffset, :, writeSectorData, writeChunkBlockInfo
+		c	args: x, z, offset - sets the chunk's offset in the region file
+		p	1	p_76711_1_	x	#x, :, chunkX, :
+			c	the x-coordinate of the chunk inside the region
+		p	2	p_76711_2_	z	#z, :, chunkZ, :
+			c	the z-coordinate of the chunk inside the region
+		p	3	p_76711_3_	offset	#offset, :, length, blockInfo
+			c	the block info for the specified chunk
+	m	(II[BI)V	func_76706_a	write	#write, :, writeChunk, writeChunkData
+		c	args: x, z, data, length - write chunk data at (x, z) to disk
+		p	1	p_76706_1_	x	#x, :, chunkX, :
+			c	the relative x-coordinate of the chunk inside the region
+		p	2	p_76706_2_	z	#z, :, chunkZ, :
+			c	the relative z-coordinate of the chunk inside the region
+		p	3	p_76706_3_	data	#data, :, ~, data
+			c	the chunk data
+		p	4	p_76706_4_	length	#length, :, ~, size
+			c	the number of bytes in {@code data} that should be written
+	m	(I[BI)V	func_76712_a	write	#write, :, writeChunk, writeChunkData
+		c	args: sectorNumber, data, length - write the chunk data to this RegionFile
+		p	1	p_76712_1_	sectorNumber	#sectorNumber, :, sectorData, blockOffset
+			c	the offset of the first 4KB block where the chunk data\n                   should be written.
+		p	2	p_76712_2_	data	#data, :, :, :
+			c	the chunk data
+		p	3	p_76712_3_	length	#length, :, dataLength, size
+			c	the number of bytes that should be written
+	m	(II)Ljava/io/DataOutputStream;	func_76710_b	getChunkDataOutputStream	#getChunkDataOutputStream, :, getChunkOutputStream, :
+		c	args: x, z - get an output stream used to write chunk data, data is on disk when the returned stream is closed
+		p	1	p_76710_1_	x	#x, :, chunkX, :
+		p	2	p_76710_2_	z	#z, :, chunkZ, :
+	m	(III)V	func_76713_b	setChunkTimestamp	#setChunkTimestamp, :, writeSaveTime, writeChunkSaveTime
+		c	args: x, z, timestamp - sets the chunk's write timestamp
+		p	1	p_76713_1_	x	#x, :, chunkX, :
+			c	the relative x-coordinate of the chunk inside the region
+		p	2	p_76713_2_	z	#z, :, chunkZ, :
+			c	the relative z-coordinate of the chunk inside the region
+		p	3	p_76713_3_	timestamp	#timestamp, :, :, timeSeconds
+			c	the time in seconds since midnight, January 1, 1970 UTC
+	m	()V	func_76708_c	close	#close, :, :, :
+		c	close this RegionFile and prevent further writes
+	m	(II)Z	func_76709_c	isChunkSaved	#isChunkSaved, :, chunkExists, hasChunkData
+		c	args: x, z, - true if chunk has been saved / converted
+		p	1	p_76709_1_	x	#x, :, chunkX, :
+			c	the relative x-coordinate of the chunk inside the region
+		p	2	p_76709_2_	z	#z, :, chunkZ, :
+			c	the relative z-coordinate of the chunk inside the region
+	m	(II)Z	func_76705_d	outOfBounds	#outOfBounds, :, isOutsideRange, isOutsideRegion
+		c	args: x, z - check region bounds
+		p	1	p_76705_1_	x	#x, :, chunkX, :
+		p	2	p_76705_2_	z	#z, :, chunkZ, :
+	m	(II)I	func_76707_e	getOffset	#getOffset, :, getSectorData, getChunkBlockInfo
+		c	args: x, y - get chunk's offset in region file
+		p	1	p_76707_1_	x	#x, :, chunkX, :
+			c	the relative x-coordinate of the chunk inside the region
+		p	2	p_76707_2_	z	#z, :, chunkZ, :
+			c	the relative z-coordinate of the chunk inside the region
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

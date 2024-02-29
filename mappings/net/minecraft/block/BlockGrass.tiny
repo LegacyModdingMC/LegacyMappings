@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockGrass	net/minecraft/block/BlockGrass	
+	f	Lnet/minecraft/util/IIcon;	field_149993_M	sideSnowedSprite	#~, ~, ~, sideSnowedSprite
+	f	Lnet/minecraft/util/IIcon;	field_149994_N	sideOverlaySprite	#~, ~, ~, sideOverlaySprite
+	f	Lorg/apache/logging/log4j/Logger;	field_149992_a	logger	#logger, :, ~, LOGGER
+	f	Lnet/minecraft/util/IIcon;	field_149991_b	topSprite	#~, ~, ~, topSprite
+	m	()Lnet/minecraft/util/IIcon;	func_149990_e	getIconSideOverlay	#getIconSideOverlay, :, ~, getSideOverlaySprite
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

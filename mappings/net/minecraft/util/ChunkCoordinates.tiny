@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChunkCoordinates	net/minecraft/util/ChunkCoordinates	
+	f	I	field_71574_a	posX	#posX, :, x, :
+	f	I	field_71572_b	posY	#posY, :, y, :
+		c	the y coordinate
+	f	I	field_71573_c	posZ	#posZ, :, z, :
+		c	the z coordinate
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1354_1_	x	#x, :, :, :
+		p	2	p_i1354_2_	y	#y, :, :, :
+		p	3	p_i1354_3_	z	#z, :, :, :
+	m	(Lnet/minecraft/util/ChunkCoordinates;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1355_1_	coords	#coords, :, og, pos
+	m	(Lnet/minecraft/util/ChunkCoordinates;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	(III)V	func_71571_b	set	#set, :, setPos, setPosition
+		p	1	p_71571_1_	x	#x, :, :, :
+		p	2	p_71571_2_	y	#y, :, :, :
+		p	3	p_71571_3_	z	#z, :, :, :
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	pos	#~, ~, other, pos
+	m	(III)F	func_71569_e	getDistanceSquared	#getDistanceSquared, :, squaredDistanceTo, :
+		c	Returns the squared distance between this coordinates and the coordinates given as argument.
+		p	1	p_71569_1_	x	#x, :, :, :
+		p	2	p_71569_2_	y	#y, :, :, :
+		p	3	p_71569_3_	z	#z, :, :, :
+	m	(Lnet/minecraft/util/ChunkCoordinates;)F	func_82371_e	getDistanceSquaredToChunkCoordinates	#getDistanceSquaredToChunkCoordinates, :, squaredDistanceTo, :
+		c	Return the squared distance between this coordinates and the ChunkCoordinates given as argument.
+		p	1	p_82371_1_	other	#other, :, pos, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	pos	#~, ~, other, pos
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiHopper	net/minecraft/client/gui/GuiHopper	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147085_u	HOPPER_GUI_TEXTURE	#HOPPER_GUI_TEXTURE, :, TEXTURE, MENU_LOCATION
+		c	The ResourceLocation containing the gui texture for the hopper
+	f	Lnet/minecraft/inventory/IInventory;	field_147084_v	playerInventory	#playerInventory, :, :, :
+		c	The player inventory currently bound to this GUI instance
+	f	Lnet/minecraft/inventory/IInventory;	field_147083_w	hopperInventory	#hopperInventory, :, :, inventory
+		c	The hopper inventory bound to this GUI instance
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/inventory/IInventory;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1092_1_	playerInv	#playerInv, :, playerInventory, :
+		p	2	p_i1092_2_	hopperInv	#hopperInv, :, hopperInventory, inventory
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

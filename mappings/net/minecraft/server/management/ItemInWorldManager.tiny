@@ -1,0 +1,77 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/ItemInWorldManager	net/minecraft/server/management/ItemInWorldManager	
+	f	Lnet/minecraft/world/World;	field_73092_a	theWorld	#theWorld, world, :, :
+		c	The world object that this object is connected to.
+	f	Lnet/minecraft/entity/player/EntityPlayerMP;	field_73090_b	thisPlayerMP	#thisPlayerMP, player, :, :
+		c	The EntityPlayerMP object that this object is connected to.
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_73091_c	gameType	#gameType, :, gameMode, :
+	f	Z	field_73088_d	isDestroyingBlock	#isDestroyingBlock, :, mining, isMiningBlock
+		c	True if the player is destroying a block
+	f	I	field_73089_e	initialDamage	#initialDamage, :, ~, miningStartTime
+	f	I	field_73086_f	partiallyDestroyedBlockX	#partiallyDestroyedBlockX, curBlockX, ~, targetX
+	f	I	field_73087_g	partiallyDestroyedBlockY	#partiallyDestroyedBlockY, curBlockY, ~, targetY
+	f	I	field_73099_h	partiallyDestroyedBlockZ	#partiallyDestroyedBlockZ, curBlockZ, ~, targetZ
+	f	I	field_73100_i	curblockDamage	#curblockDamage, :, tickCounter, ticks
+	f	Z	field_73097_j	receivedFinishDiggingPacket	#receivedFinishDiggingPacket, :, failedToMine, wasMiningBlock
+		c	Set to true when the "finished destroying block" packet is received but the block wasn't fully damaged yet. The block will not be destroyed while this is false.
+	f	I	field_73098_k	posX	#posX, :, ~, prevTargetX
+	f	I	field_73095_l	posY	#posY, :, ~, prevTargetY
+	f	I	field_73096_m	posZ	#posZ, :, ~, prevTargetZ
+	f	I	field_73093_n	initialBlockDamage	#initialBlockDamage, :, ~, prevMiningStartTime
+	f	I	field_73094_o	durabilityRemainingOnBlock	#durabilityRemainingOnBlock, :, ~, prevMiningProgress
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1524_1_	worldIn	#worldIn, :, world, :
+	m	()V	func_73075_a	updateBlockRemoving	#updateBlockRemoving, :, tick, :
+	m	(III)V	func_73082_a	uncheckedTryHarvestBlock	#uncheckedTryHarvestBlock, blockRemoving, ~, finishMiningBlock
+		p	1	p_73082_1_	x	#~, ~, ~, x
+		p	2	p_73082_2_	y	#~, ~, ~, y
+		p	3	p_73082_3_	z	#~, ~, ~, z
+	m	(IIII)V	func_73074_a	onBlockClicked	#onBlockClicked, :, ~, startMiningBlock
+		c	if not creative, it calls destroyBlockInWorldPartially untill the block is broken first. par4 is the specific side. tryHarvestBlock can also be the result of this call
+		p	1	p_73074_1_	x	#~, ~, ~, x
+		p	2	p_73074_2_	y	#~, ~, ~, y
+		p	3	p_73074_3_	z	#~, ~, ~, z
+		p	4	p_73074_4_	face	#~, ~, ~, face
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_73076_a	setGameType	#setGameType, :, setGameMode, :
+		p	1	p_73076_1_	type	#type, :, gameMode, :
+	m	(Lnet/minecraft/world/WorldServer;)V	func_73080_a	setWorld	#setWorld, :, :, :
+		c	Sets the world instance.
+		p	1	p_73080_1_	serverWorld	#serverWorld, :, world, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z	func_73085_a	tryUseItem	#tryUseItem, :, interactItem, useItem
+		c	Attempts to right-click use an item by the given EntityPlayer in the given World
+		p	1	p_73085_1_	player	#player, :, :, :
+		p	2	p_73085_2_	worldIn	#worldIn, :, world, :
+		p	3	p_73085_3_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;IIIIFFF)Z	func_73078_a	activateBlockOrUseItem	#activateBlockOrUseItem, :, ~, useBlock
+		c	Activate the clicked on block, otherwise use the held item. Args: player, world, itemStack, x, y, z, side, xOffset, yOffset, zOffset
+		p	1	p_73078_1_	player	#player, :, ~, player
+		p	2	p_73078_2_	worldIn	#worldIn, :, ~, world
+		p	3	p_73078_3_	stack	#stack, :, ~, stack
+		p	4	p_73078_4_	x	#~, ~, ~, x
+		p	5	p_73078_5_	y	#~, ~, ~, y
+		p	6	p_73078_6_	z	#~, ~, ~, z
+		p	7	p_73078_7_	face	#~, ~, ~, face
+		p	8	p_73078_8_	dx	#~, ~, ~, dx
+		p	9	p_73078_9_	dy	#~, ~, ~, dy
+		p	10	p_73078_10_	dz	#~, ~, ~, dz
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_73081_b	getGameType	#getGameType, :, getGameMode, :
+	m	(III)Z	func_73084_b	tryHarvestBlock	#tryHarvestBlock, :, ~, tryMineBlock
+		c	Attempts to harvest a block at the given coordinate
+		p	1	p_73084_1_	x	#~, ~, ~, x
+		p	2	p_73084_2_	y	#~, ~, ~, y
+		p	3	p_73084_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_73077_b	initializeGameType	#initializeGameType, :, ~, setGameModeIfNotSet
+		c	if the gameType is currently NOT_SET then change it to par1
+		p	1	p_73077_1_	type	#type, :, gameMode, :
+	m	(III)V	func_73073_c	cancelDestroyingBlock	#cancelDestroyingBlock, :, ~, stopMiningBlock
+		c	note: this ignores the pars passed in and continues to destroy the onClickedBlock
+		p	1	p_73073_1_	x	#~, ~, ~, x
+		p	2	p_73073_2_	y	#~, ~, ~, y
+		p	3	p_73073_3_	z	#~, ~, ~, z
+	m	()Z	func_73083_d	isCreative	#isCreative, :, :, :
+		c	Get if we are in creative game mode.
+	m	(III)Z	func_73079_d	removeBlock	#removeBlock, :, ~, mineBlock
+		c	Removes a block and triggers the appropriate events
+		p	1	p_73079_1_	x	#~, ~, ~, x
+		p	2	p_73079_2_	y	#~, ~, ~, y
+		p	3	p_73079_3_	z	#~, ~, ~, z

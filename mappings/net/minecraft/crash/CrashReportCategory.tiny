@@ -1,0 +1,50 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/crash/CrashReportCategory	net/minecraft/crash/CrashReportCategory	
+	f	Lnet/minecraft/crash/CrashReport;	field_85078_a	theCrashReport	#theCrashReport, crashReport, report, :
+	f	Ljava/lang/String;	field_85076_b	name	#name, :, title, :
+	f	Ljava/util/List;	field_85077_c	children	#children, :, elements, entries
+	f	[Ljava/lang/StackTraceElement;	field_85075_d	stackTrace	#stackTrace, :, :, :
+	m	(Lnet/minecraft/crash/CrashReport;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1353_1_	report	#report, :, :, :
+		p	2	p_i1353_2_	name	#name, :, title, :
+	m	()[Ljava/lang/StackTraceElement;	func_147152_a	getStackTrace	#getStackTrace, :, :, :
+	m	(DDD)Ljava/lang/String;	func_85074_a	getCoordinateInfo	#getCoordinateInfo, :, createPositionString, formatPosition
+		p	0	p_85074_0_	x	#x, :, :, :
+		p	2	p_85074_2_	y	#y, :, :, :
+		p	4	p_85074_4_	z	#z, :, :, :
+	m	(I)I	func_85073_a	getPrunedStackTrace	#getPrunedStackTrace, :, initStackTrace, getStackTrace
+		c	Resets our stack trace according to the current trace, pruning the deepest 3 entries.  The parameter indicates how many additional deepest entries to prune.  Returns the number of entries in the resulting pruned stack trace.
+		p	1	p_85073_1_	size	#size, :, ignoredCallCount, :
+	m	(III)Ljava/lang/String;	func_85071_a	getLocationInfo	#getLocationInfo, :, createPositionStringInt, formatPosition
+		c	Returns a string with world information on location.Args:x,y,z
+		p	0	p_85071_0_	x	#~, ~, x, :
+		p	1	p_85071_1_	y	#~, ~, y, :
+		p	2	p_85071_2_	z	#~, ~, z, :
+	m	(Ljava/lang/StackTraceElement;Ljava/lang/StackTraceElement;)Z	func_85069_a	firstTwoElementsOfStackTraceMatch	#firstTwoElementsOfStackTraceMatch, :, ~, validateStackTrace
+		c	Do the deepest two elements of our saved stack trace match the given elements, in order from the deepest?
+		p	1	p_85069_1_	s1	#s1, :, ~, lastIncludedElement
+		p	2	p_85069_2_	s2	#s2, :, ~, firstIgnoredElement
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	func_71507_a	addCrashSection	#addCrashSection, :, add, :
+		c	Adds a Crashreport section with the given name with the given value (convered .toString())
+		p	1	p_71507_1_	sectionName	#sectionName, :, name, key
+		p	2	p_71507_2_	value	#value, :, detail, value
+	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	func_71499_a	addCrashSectionThrowable	#addCrashSectionThrowable, :, add, :
+		c	Adds a Crashreport section with the given name with the given Throwable
+		p	1	p_71499_1_	sectionName	#sectionName, :, name, key
+		p	2	p_71499_2_	throwable	#throwable, :, :, value
+	m	(Ljava/lang/String;Ljava/util/concurrent/Callable;)V	func_71500_a	addCrashSectionCallable	#addCrashSectionCallable, :, add, :
+		c	Adds a Crashreport section with the given name with the value set to the result of the given Callable;
+		p	1	p_71500_1_	sectionName	#sectionName, :, name, key
+		p	2	p_71500_2_	callable	#callable, :, value, :
+	m	(Ljava/lang/StringBuilder;)V	func_85072_a	appendToStringBuilder	#appendToStringBuilder, :, addStackTrace, addDetails
+		p	1	p_85072_1_	builder	#builder, :, stringBuilder, :
+	m	(Lnet/minecraft/crash/CrashReportCategory;IIILnet/minecraft/block/Block;I)V	func_147153_a	addBlockInfo	#addBlockInfo, :, ~, addBlockDetails
+		p	0	p_147153_0_	category	#category, :, ~, category
+		p	1	p_147153_1_	x	#x, :, ~, x
+		p	2	p_147153_2_	y	#y, :, ~, y
+		p	3	p_147153_3_	z	#z, :, ~, z
+		p	4	p_147153_4_	blockIn	#blockIn, :, ~, block
+		p	5	p_147153_5_	meta	#meta, :, ~, metadata
+	m	(I)V	func_85070_b	trimStackTraceEntriesFromBottom	#trimStackTraceEntriesFromBottom, :, trimStackTraceEnd, trimStackTrace
+		c	Removes the given number entries from the bottom of the stack trace.
+		p	1	p_85070_1_	amount	#amount, :, callCount, amount

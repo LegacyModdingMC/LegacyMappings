@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemLeaves	net/minecraft/item/ItemLeaves	
+	f	Lnet/minecraft/block/BlockLeaves;	field_150940_b	leaves	#leaves, :, leavesBlock, block
+	m	(Lnet/minecraft/block/BlockLeaves;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45344_1_	block	#block, :, blockl, block

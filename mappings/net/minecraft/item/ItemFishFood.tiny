@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemFishFood	net/minecraft/item/ItemFishFood	
+	f	Z	field_150907_b	cooked	#cooked, :, :, :
+		c	Indicates whether this fish is "cooked" or not.
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45338_1_	cooked	#cooked, :, :, :

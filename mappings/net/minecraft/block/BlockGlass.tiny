@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockGlass	net/minecraft/block/BlockGlass	
+	m	(Lnet/minecraft/block/material/Material;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45408_1_	materialIn	#materialIn, :, ~, material
+		p	2	p_i45408_2_	ignoreSimilarity	#ignoreSimilarity, :, ~, sideVisible

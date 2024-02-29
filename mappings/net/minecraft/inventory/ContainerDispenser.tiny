@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerDispenser	net/minecraft/inventory/ContainerDispenser	
+	f	Lnet/minecraft/tileentity/TileEntityDispenser;	field_75182_e	tileDispenser	#tileDispenser, tileEntityDispenser, ~, dispenser
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/tileentity/TileEntityDispenser;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1825_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1825_2_	dispenser	#~, ~, ~, dispenser

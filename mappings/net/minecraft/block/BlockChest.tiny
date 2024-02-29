@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockChest	net/minecraft/block/BlockChest	
+	f	I	field_149956_a	chestType	#chestType, :, type, :
+		c	0 : Normal chest, 1 : Trapped chest
+	f	Ljava/util/Random;	field_149955_b	rand	#rand, :, ~, random
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45397_1_	type	#type, :, :, :
+	m	(Lnet/minecraft/world/World;III)V	func_149954_e	initMetadata	#initMetadata, :, ~, updateState
+		c	Actualise metadata (orientation) value from neighbors blocks (another chest ? Opaque block ?)
+		p	1	p_149954_1_	world	#~, ~, ~, world
+		p	2	p_149954_2_	x	#~, ~, ~, x
+		p	3	p_149954_3_	y	#~, ~, ~, y
+		p	4	p_149954_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/inventory/IInventory;	func_149951_m	getInventory	#getInventory, :, ~, getInventory
+		p	1	p_149951_1_	world	#~, ~, ~, world
+		p	2	p_149951_2_	x	#~, ~, ~, x
+		p	3	p_149951_3_	y	#~, ~, ~, y
+		p	4	p_149951_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_149952_n	isDoubleChest	#isDoubleChest, :, ~, isDoubleChest
+		p	1	p_149952_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149952_2_	x	#x, :, ~, x
+		p	3	p_149952_3_	y	#y, :, ~, y
+		p	4	p_149952_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_149953_o	isOcelotSittingOnTop	#isOcelotSittingOnTop, :, ~, isLockedByOcelot
+		p	0	p_149953_0_	world	#~, ~, ~, world
+		p	1	p_149953_1_	x	#~, ~, ~, x
+		p	2	p_149953_2_	y	#~, ~, ~, y
+		p	3	p_149953_3_	z	#~, ~, ~, z

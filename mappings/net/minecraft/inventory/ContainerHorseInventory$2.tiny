@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerHorseInventory$2	net/minecraft/inventory/ContainerHorseInventory$2	
+	f	Lnet/minecraft/entity/passive/EntityHorse;	field_111241_a	theHorse	#theHorse, :, ~, parentEntity
+	f	Lnet/minecraft/inventory/ContainerHorseInventory;	field_111240_b	parent	#~, ~, ~, parent
+	m	(Lnet/minecraft/inventory/ContainerHorseInventory;Lnet/minecraft/inventory/IInventory;IIILnet/minecraft/entity/passive/EntityHorse;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1816_1_	p_i1816_1_	#~, ~, ~, ~
+		p	2	p_i1816_2_	p_i1816_2_	#~, ~, ~, ~
+		p	3	p_i1816_3_	p_i1816_3_	#~, ~, ~, ~
+		p	4	p_i1816_4_	p_i1816_4_	#~, ~, ~, ~
+		p	5	p_i1816_5_	p_i1816_5_	#~, ~, ~, ~
+		p	6	p_i1816_6_	p_i1816_6_	#~, ~, ~, ~

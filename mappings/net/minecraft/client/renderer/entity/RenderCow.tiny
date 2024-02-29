@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderCow	net/minecraft/client/renderer/entity/RenderCow	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110833_a	cowTextures	#cowTextures, COW_TEXTURES, TEXTURE, COW_LOCATION
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1253_1_	p_i1253_1_	#~, ~, ~, ~
+		p	2	p_i1253_2_	p_i1253_2_	#~, ~, ~, ~

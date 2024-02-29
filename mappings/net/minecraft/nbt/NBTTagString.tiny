@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagString	net/minecraft/nbt/NBTTagString	
+	f	Ljava/lang/String;	field_74751_a	data	#data, :, value, :
+		c	The string value for the tag (cannot be empty).
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1389_1_	data	#data, :, value, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	o	#~, ~, o, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

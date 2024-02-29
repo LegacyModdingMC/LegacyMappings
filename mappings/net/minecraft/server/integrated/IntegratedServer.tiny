@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/integrated/IntegratedServer	net/minecraft/server/integrated/IntegratedServer	
+	f	Lorg/apache/logging/log4j/Logger;	field_147148_h	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/Minecraft;	field_71349_l	mc	#mc, :, client, minecraft
+		c	The Minecraft instance.
+	f	Lnet/minecraft/world/WorldSettings;	field_71350_m	theWorldSettings	#theWorldSettings, worldSettings, levelInfo, settings
+	f	Z	field_71348_o	isGamePaused	#isGamePaused, :, paused, :
+	f	Z	field_71346_p	isPublic	#isPublic, :, published, :
+	f	Lnet/minecraft/client/multiplayer/ThreadLanServerPing;	field_71345_q	lanServerPing	#lanServerPing, :, pinger, :
+	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/WorldSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1317_1_	mcIn	#mcIn, :, client, minecraft
+		p	2	p_i1317_2_	folderName	#folderName, :, runDirectory, saveName
+		p	3	p_i1317_3_	worldName	#worldName, :, serverName, name
+		p	4	p_i1317_4_	settings	#settings, :, info, settings
+	m	()Z	func_71344_c	getPublic	#getPublic, :, isPublished, :
+		c	Returns true if this integrated server is open to LAN
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

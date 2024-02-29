@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderBiped	net/minecraft/client/renderer/entity/RenderBiped	
+	f	Lnet/minecraft/client/model/ModelBiped;	field_77071_a	modelBipedMain	#modelBipedMain, :, bipedModel, model
+	f	F	field_77070_b	scale	#scale, :, ~, size
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82423_g	modelArmourChestplate	#modelArmourChestplate, :, ~, model1
+		c	used for rendering armor on mobs, like zombies
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82425_h	model2	#~, ~, ~, model2
+	f	Ljava/util/Map;	field_110859_k	TEXTURE_LOCATIONS	#~, ~, ~, TEXTURE_LOCATIONS
+	f	[Ljava/lang/String;	field_82424_k	bipedArmorFilenamePrefix	#bipedArmorFilenamePrefix, :, ~, MATERIALS
+		c	List of armor texture filenames.
+	m	(Lnet/minecraft/item/ItemArmor;I)Lnet/minecraft/util/ResourceLocation;	func_110857_a	getTextureLocation	#~, ~, ~, getTextureLocation
+		p	0	p_110857_0_	armor	#~, ~, ~, armor
+		p	1	p_110857_1_	layer	#~, ~, ~, layer
+	m	(Lnet/minecraft/item/ItemArmor;ILjava/lang/String;)Lnet/minecraft/util/ResourceLocation;	func_110858_a	getTextureLocation	#~, ~, ~, getTextureLocation
+		p	0	p_110858_0_	armor	#~, ~, ~, armor
+		p	1	p_110858_1_	layer	#~, ~, ~, layer
+		p	2	p_110858_2_	path	#~, ~, ~, path
+	m	(Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/item/ItemStack;)V	func_82420_a	updateHoldingItem	#~, ~, ~, updateHoldingItem
+		p	1	p_82420_1_	entity	#~, ~, ~, entity
+		p	2	p_82420_2_	item	#~, ~, ~, item
+	m	()V	func_82421_b	initModels	#~, ~, ~, initModels
+	m	()V	func_82422_c	transformHeldFull3DItemLayer	#transformHeldFull3DItemLayer, :, ~, glTranslateUp
+	m	(Lnet/minecraft/client/model/ModelBiped;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1257_1_	model	#~, ~, ~, model
+		p	2	p_i1257_2_	shadowSize	#~, ~, ~, shadowSize
+	m	(Lnet/minecraft/client/model/ModelBiped;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1258_1_	model	#~, ~, ~, model
+		p	2	p_i1258_2_	shadowSize	#~, ~, ~, shadowSize
+		p	3	p_i1258_3_	size	#~, ~, ~, size
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

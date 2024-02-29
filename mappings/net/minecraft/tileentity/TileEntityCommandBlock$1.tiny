@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityCommandBlock$1	net/minecraft/tileentity/TileEntityCommandBlock$1	
+	f	Lnet/minecraft/tileentity/TileEntityCommandBlock;	field_145767_a	field_145767_a	#~, ~, ~, ~
+	m	(Lnet/minecraft/tileentity/TileEntityCommandBlock;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45441_1_	p_i45441_1_	#~, ~, ~, ~

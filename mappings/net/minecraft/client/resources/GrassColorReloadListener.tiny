@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/GrassColorReloadListener	net/minecraft/client/resources/GrassColorReloadListener	
+	f	Lnet/minecraft/util/ResourceLocation;	field_130078_a	LOC_GRASS_PNG	#LOC_GRASS_PNG, :, GRASS_COLOR_TEXTURE, GRASS_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

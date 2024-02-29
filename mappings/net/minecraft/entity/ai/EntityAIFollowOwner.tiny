@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIFollowOwner	net/minecraft/entity/ai/EntityAIFollowOwner	
+	f	Lnet/minecraft/world/World;	field_75342_a	theWorld	#theWorld, world, :, :
+	f	F	field_75340_b	maxDist	#maxDist, :, maxDistance, :
+	f	F	field_75341_c	minDist	#minDist, :, minDistance, :
+	f	Lnet/minecraft/entity/passive/EntityTameable;	field_75338_d	thePet	#thePet, tameable, :, pet
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75339_e	theOwner	#theOwner, owner, :, :
+	f	D	field_75336_f	followSpeed	#followSpeed, :, speed, :
+	f	Lnet/minecraft/pathfinding/PathNavigate;	field_75337_g	petPathfinder	#petPathfinder, :, navigation, :
+	f	I	field_75343_h	timeToRecalcPath	#timeToRecalcPath, :, updateCountdownTicks, updateTimer
+	f	Z	field_75344_i	oldWaterCost	#oldWaterCost, :, ~, isInWater
+	m	(Lnet/minecraft/entity/passive/EntityTameable;DFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1625_1_	thePetIn	#thePetIn, tameableIn, tameable, pet
+		p	2	p_i1625_2_	followSpeedIn	#followSpeedIn, :, speed, :
+		p	4	p_i1625_4_	minDistIn	#minDistIn, :, minDistance, :
+		p	5	p_i1625_5_	maxDistIn	#maxDistIn, :, maxDistance, :

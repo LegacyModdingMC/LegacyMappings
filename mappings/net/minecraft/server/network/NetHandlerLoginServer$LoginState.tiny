@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/network/NetHandlerLoginServer$LoginState	net/minecraft/server/network/NetHandlerLoginServer$LoginState	
+	f	Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	HELLO	HELLO	#~, ~, HELLO, :
+	f	Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	KEY	KEY	#~, ~, KEY, :
+	f	Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	AUTHENTICATING	AUTHENTICATING	#~, ~, AUTHENTICATING, :
+	f	Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	READY_TO_ACCEPT	READY_TO_ACCEPT	#~, ~, READY_TO_ACCEPT, :
+	f	Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	ACCEPTED	ACCEPTED	#~, ~, ACCEPTED, :
+	f	[Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45297_1_	p_i45297_1_	#~, ~, ~, ~
+		p	2	p_i45297_2_	p_i45297_2_	#~, ~, ~, ~

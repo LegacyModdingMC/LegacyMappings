@@ -1,0 +1,89 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/Gui	net/minecraft/client/gui/Gui	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110325_k	optionsBackground	#optionsBackground, OPTIONS_BACKGROUND, OPTIONS_BACKGROUND_TEXTURE, BACKGROUND_LOCATION
+		c	The texture used by options for background.
+	f	Lnet/minecraft/util/ResourceLocation;	field_110323_l	statIcons	#statIcons, STAT_ICONS, STATS_ICON_TEXTURE, STATS_ICONS_LOCATION
+		c	The texture of icons used in the stats screen.
+	f	Lnet/minecraft/util/ResourceLocation;	field_110324_m	icons	#icons, ICONS, GUI_ICONS_TEXTURE, ICONS_LOCATION
+		c	The texture of various icons and widgets used for rendering ingame indicators.
+	f	F	field_73735_i	zLevel	#zLevel, :, zOffset, drawOffset
+	m	(IIFFIIFF)V	func_146110_a	drawModalRectWithCustomSizedTexture	#drawModalRectWithCustomSizedTexture, :, drawTexture, :
+		c	Draws a textured rectangle at z = 0. Args: x, y, u, v, width, height, textureWidth, textureHeight
+		p	0	p_146110_0_	x	#x, :, :, :
+		p	1	p_146110_1_	y	#y, :, :, :
+		p	2	p_146110_2_	u	#u, :, :, :
+		p	3	p_146110_3_	v	#v, :, :, :
+		p	4	p_146110_4_	width	#width, :, :, :
+		p	5	p_146110_5_	height	#height, :, :, :
+		p	6	p_146110_6_	textureWidth	#textureWidth, :, :, scaleU
+		p	7	p_146110_7_	textureHeight	#textureHeight, :, :, scaleV
+	m	(IIFFIIIIFF)V	func_152125_a	drawScaledCustomSizeModalRect	#drawScaledCustomSizeModalRect, :, drawTexture, :
+		c	Draws a scaled, textured, tiled modal rect at z = 0. This method isn't used anywhere in vanilla code.
+		p	0	p_152125_0_	x	#x, :, :, :
+		p	1	p_152125_1_	y	#y, :, :, :
+		p	2	p_152125_2_	u	#u, :, :, :
+		p	3	p_152125_3_	v	#v, :, :, :
+		p	4	p_152125_4_	uWidth	#uWidth, :, regionWidth, textureWidth
+		p	5	p_152125_5_	vHeight	#vHeight, :, regionHeight, textureHeight
+		p	6	p_152125_6_	width	#width, :, :, :
+		p	7	p_152125_7_	height	#height, :, :, :
+		p	8	p_152125_8_	tileWidth	#tileWidth, :, textureWidth, scaleU
+		p	9	p_152125_9_	tileHeight	#tileHeight, :, textureHeight, scaleV
+	m	(IIII)V	func_73730_a	drawHorizontalLine	#drawHorizontalLine, :, :, :
+		c	Draw a 1 pixel wide horizontal line. Args: x1, x2, y, color
+		p	1	p_73730_1_	startX	#startX, :, x1, :
+		p	2	p_73730_2_	endX	#endX, :, x2, :
+		p	3	p_73730_3_	y	#y, :, :, :
+		p	4	p_73730_4_	color	#color, :, :, :
+	m	(IIIII)V	func_73734_a	drawRect	#drawRect, :, fill, :
+		c	Draws a solid color rectangle with the specified coordinates and color. Args: x1, y1, x2, y2, color
+		p	0	p_73734_0_	left	#left, :, x1, :
+		p	1	p_73734_1_	top	#top, :, y1, :
+		p	2	p_73734_2_	right	#right, :, x2, :
+		p	3	p_73734_3_	bottom	#bottom, :, y2, :
+		p	4	p_73734_4_	color	#color, :, :, :
+	m	(IIIIII)V	func_73733_a	drawGradientRect	#drawGradientRect, :, fillGradient, :
+		c	Draws a rectangle with a vertical gradient between the specified colors.
+		p	1	p_73733_1_	left	#left, :, x1, :
+		p	2	p_73733_2_	top	#top, :, y1, :
+		p	3	p_73733_3_	right	#right, :, x2, :
+		p	4	p_73733_4_	bottom	#bottom, :, y2, :
+		p	5	p_73733_5_	startColor	#startColor, :, color1, :
+		p	6	p_73733_6_	endColor	#endColor, :, color2, :
+	m	(IILnet/minecraft/util/IIcon;II)V	func_94065_a	drawTexturedModelRectFromIcon	#drawTexturedModelRectFromIcon, :, ~, drawSprite
+		c	Draws a textured rectangle at the stored z-value. Args : x, y, icon, width, height
+		p	1	p_94065_1_	x	#x, :, ~, x
+		p	2	p_94065_2_	y	#y, :, ~, y
+		p	3	p_94065_3_	icon	#icon, :, ~, sprite
+		p	4	p_94065_4_	width	#width, :, ~, width
+		p	5	p_94065_5_	height	#height, :, ~, height
+	m	(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V	func_73732_a	drawCenteredString	#drawCenteredString, :, :, :
+		c	Renders the specified text to the screen, center-aligned.
+		p	1	p_73732_1_	fontRendererIn	#fontRendererIn, :, textRenderer, :
+		p	2	p_73732_2_	text	#text, :, :, :
+		p	3	p_73732_3_	x	#x, :, centerX, x
+		p	4	p_73732_4_	y	#y, :, :, :
+		p	5	p_73732_5_	color	#color, :, :, :
+	m	(IIII)V	func_73728_b	drawVerticalLine	#drawVerticalLine, :, :, :
+		c	Draw a 1 pixel wide vertical line. Args : x, y1, y2, color
+		p	1	p_73728_1_	x	#x, :, :, :
+		p	2	p_73728_2_	startY	#startY, :, y1, :
+		p	3	p_73728_3_	endY	#endY, :, y2, :
+		p	4	p_73728_4_	color	#color, :, :, :
+	m	(IIIIII)V	func_73729_b	drawTexturedModalRect	#drawTexturedModalRect, :, drawTexture, :
+		c	Draws a textured rectangle at the stored z-value. Args: x, y, u, v, width, height
+		p	1	p_73729_1_	x	#x, :, :, :
+		p	2	p_73729_2_	y	#y, :, :, :
+		p	3	p_73729_3_	textureX	#textureX, :, u, :
+		p	4	p_73729_4_	textureY	#textureY, :, v, :
+		p	5	p_73729_5_	width	#width, :, :, :
+		p	6	p_73729_6_	height	#height, :, :, :
+	m	(Lnet/minecraft/client/gui/FontRenderer;Ljava/lang/String;III)V	func_73731_b	drawString	#drawString, :, drawWithShadow, drawString
+		c	Renders the specified text to the screen.
+		p	1	p_73731_1_	fontRendererIn	#fontRendererIn, :, textRenderer, :
+		p	2	p_73731_2_	text	#text, :, :, :
+		p	3	p_73731_3_	x	#x, :, :, :
+		p	4	p_73731_4_	y	#y, :, :, :
+		p	5	p_73731_5_	color	#color, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

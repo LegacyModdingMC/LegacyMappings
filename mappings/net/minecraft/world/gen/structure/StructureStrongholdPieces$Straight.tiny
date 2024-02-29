@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$Straight	net/minecraft/world/gen/structure/StructureStrongholdPieces$Straight	
+	f	Z	field_75019_b	expandsX	#expandsX, :, ~, left
+	f	Z	field_75020_c	expandsZ	#expandsZ, :, ~, right
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Straight;	func_75018_a	findValidPlacement	#findValidPlacement, :, ~, of
+		p	0	p_75018_0_	pieces	#~, ~, ~, pieces
+		p	1	p_75018_1_	random	#~, ~, ~, random
+		p	2	p_75018_2_	x	#~, ~, ~, x
+		p	3	p_75018_3_	y	#~, ~, ~, y
+		p	4	p_75018_4_	z	#~, ~, ~, z
+		p	5	p_75018_5_	facing	#~, ~, ~, facing
+		p	6	p_75018_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2084_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2084_2_	random	#~, ~, ~, random
+		p	3	p_i2084_3_	box	#~, ~, ~, box
+		p	4	p_i2084_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

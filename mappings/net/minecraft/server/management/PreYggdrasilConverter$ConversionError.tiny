@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PreYggdrasilConverter$ConversionError	net/minecraft/server/management/PreYggdrasilConverter$ConversionError	
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1207_1_	message	#message, :, ~, message
+	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1206_1_	message	#message, :, ~, message
+		p	2	p_i1206_2_	cause	#cause, :, ~, t
+	m	(Ljava/lang/String;Ljava/lang/Throwable;Lnet/minecraft/server/management/PreYggdrasilConverter$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1209_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1209_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	3	p_i1209_3_	p_i1209_3_	#~, ~, ~, ~
+	m	(Ljava/lang/String;Lnet/minecraft/server/management/PreYggdrasilConverter$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1208_1_	p_i1208_1_	#~, ~, ~, ~
+		p	2	p_i1208_2_	p_i1208_2_	#~, ~, ~, ~

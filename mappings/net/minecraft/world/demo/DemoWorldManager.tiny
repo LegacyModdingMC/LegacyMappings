@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/demo/DemoWorldManager	net/minecraft/world/demo/DemoWorldManager	
+	f	Z	field_73105_c	displayedIntro	#displayedIntro, :, sentHelp, :
+	f	Z	field_73103_d	demoTimeExpired	#demoTimeExpired, :, demoEnded, :
+	f	I	field_73104_e	demoEndedReminder	#demoEndedReminder, :, reminderTicks, :
+	f	I	field_73102_f	gameModeTicks	#gameModeTicks, :, tick, ticks
+	m	()V	func_73101_e	sendDemoReminder	#sendDemoReminder, :, :, :
+		c	Sends a message to the player reminding them that this is the demo version
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1513_1_	worldIn	#worldIn, :, ~, ~

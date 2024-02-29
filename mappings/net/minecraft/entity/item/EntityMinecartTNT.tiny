@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityMinecartTNT	net/minecraft/entity/item/EntityMinecartTNT	
+	f	I	field_94106_a	minecartTNTFuse	#minecartTNTFuse, :, fuseTicks, :
+	m	(D)V	func_94103_c	explodeCart	#explodeCart, :, explode, :
+		c	Makes the minecart explode.
+		p	1	p_94103_1_	distance	#~, ~, velocity, distance
+	m	()V	func_94105_c	ignite	#ignite, :, prime, :
+		c	Ignites this TNT cart.
+	m	()I	func_94104_d	getFuseTicks	#getFuseTicks, :, :, :
+		c	Gets the remaining fuse time in ticks.
+	m	()Z	func_96096_ay	isIgnited	#isIgnited, :, isPrimed, :
+		c	Returns true if the TNT minecart is ignited.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1727_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1728_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1728_2_	x	#x, :, ~, x
+		p	4	p_i1728_4_	y	#y, :, ~, y
+		p	6	p_i1728_6_	z	#z, :, ~, z

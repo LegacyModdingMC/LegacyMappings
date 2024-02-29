@@ -1,0 +1,105 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/Enchantment	net/minecraft/enchantment/Enchantment	
+	f	Lnet/minecraft/enchantment/Enchantment;	field_151369_A	lure	#lure, LURE, :, :
+	f	I	field_77352_x	effectId	#effectId, :, id, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	field_77351_y	type	#type, :, target, category
+		c	The EnumEnchantmentType given to this Enchantment.
+	f	Ljava/lang/String;	field_77350_z	name	#name, :, translationKey, key
+		c	Used in localisation and stats.
+	f	I	field_77333_a	weight	#weight, rarity, enchantmentType, type
+	f	[Lnet/minecraft/enchantment/Enchantment;	field_77331_b	enchantmentsList	#enchantmentsList, enchantmentsBookList, ALL_ENCHANTMENTS, BY_ID
+	f	[Lnet/minecraft/enchantment/Enchantment;	field_92090_c	enchantmentsBookList	#enchantmentsBookList, :, ~, ALL
+		c	The list of enchantments applicable by the anvil from a book
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77332_c	protection	#protection, :, ~, PROTECTION
+		c	Converts environmental damage to armour damage
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77329_d	fireProtection	#fireProtection, FIRE_PROTECTION, :, :
+		c	Protection against fire
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77330_e	featherFalling	#featherFalling, :, ~, FEATHER_FALLING
+		c	Less fall damage
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77327_f	blastProtection	#blastProtection, :, BLAST_PROTECTION, :
+		c	Protection against explosions
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77328_g	projectileProtection	#projectileProtection, :, ~, PROJECTILE_PROTECTION
+		c	Protection against projectile entities (e.g. arrows)
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77340_h	respiration	#respiration, :, RESPIRATION_, RESPIRATION
+		c	Decreases the rate of air loss underwater; increases time between damage while suffocating
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77341_i	aquaAffinity	#aquaAffinity, :, AQUA_AFFINITY, :
+		c	Increases underwater mining rate
+	f	Lnet/minecraft/enchantment/Enchantment;	field_92091_k	thorns	#thorns, THORNS, :, :
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77338_j	sharpness	#sharpness, :, ~, SHARPNESS
+		c	Extra damage to mobs
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77339_k	smite	#smite, :, ~, SMITE
+		c	Extra damage to zombies, zombie pigmen and skeletons
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77336_l	baneOfArthropods	#baneOfArthropods, :, ~, BANE_OF_ARTHROPODS
+		c	Extra damage to spiders, cave spiders and silverfish
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77337_m	knockback	#knockback, :, KNOCK_BACK, KNOCKBACK
+		c	Knocks mob and players backwards upon hit
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77334_n	fireAspect	#fireAspect, FIRE_ASPECT, :, :
+		c	Lights mobs on fire
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77335_o	looting	#looting, :, LOOTING, :
+		c	Mobs have a chance to drop more loot
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77349_p	efficiency	#efficiency, :, EFFICIENCY, :
+		c	Faster resource gathering while in use
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77348_q	silkTouch	#silkTouch, :, SILK_TOUCH, :
+		c	Blocks mined will drop themselves, even if it should drop something else (e.g. stone will drop stone, not cobblestone)
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77347_r	unbreaking	#unbreaking, :, UNBREAKING, :
+		c	Sometimes, the tool's durability will not be spent when the tool is used
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77346_s	fortune	#fortune, :, FORTUNE, :
+		c	Can multiply the drop rate of items from blocks
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77345_t	power	#power, :, POWER, :
+		c	Power enchantment for bows, add's extra damage to arrows.
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77344_u	punch	#punch, :, PUNCH, :
+		c	Knockback enchantments for bows, the arrows will knockback the target when hit.
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77343_v	flame	#flame, :, FLAME, :
+		c	Flame enchantment for bows. Arrows fired by the bow will be on fire. Any target hit will also set on fire.
+	f	Lnet/minecraft/enchantment/Enchantment;	field_77342_w	infinity	#infinity, :, INIFINITY, INFINITY
+		c	Infinity enchantment for bows. The bow will not consume arrows anymore, but will still required at least one arrow on inventory use the bow.
+	f	Lnet/minecraft/enchantment/Enchantment;	field_151370_z	luckOfTheSea	#luckOfTheSea, LUCK_OF_THE_SEA, :, :
+	m	()Ljava/lang/String;	func_77320_a	getName	#getName, :, getTranslationKey, :
+		c	Return the name of key in translation table of this enchantment.
+	m	(I)I	func_77321_a	getMinEnchantability	#getMinEnchantability, :, getMinimumPower, getMinXpRequirement
+		c	Returns the minimal value of enchantability needed on the enchantment level passed.
+		p	1	p_77321_1_	enchantmentLevel	#enchantmentLevel, :, level, :
+	m	(ILnet/minecraft/util/DamageSource;)I	func_77318_a	calcModifierDamage	#calcModifierDamage, :, getProtectionAmount, getExtraProtection
+		c	Calculates de damage protection of the enchantment based on level and damage source passed.
+		p	1	p_77318_1_	level	#level, :, :, :
+		p	2	p_77318_2_	source	#source, :, :, :
+	m	(ILnet/minecraft/entity/EnumCreatureAttribute;)F	func_152376_a	calcDamageByCreature	#calcDamageByCreature, :, getDamageModifier, getExtraDamage
+		c	Calculates the additional damage that will be dealt by an item with this enchantment. This alternative to calcModifierDamage is sensitive to the targets EnumCreatureAttribute.
+		p	1	p_152376_1_	level	#level, :, index, level
+		p	2	p_152376_2_	creatureType	#creatureType, :, target, mobType
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_92089_a	canApply	#canApply, :, isAcceptableItem, canEnchant
+		c	Determines if this enchantment can be applied to a specific ItemStack.
+		p	1	p_92089_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/enchantment/Enchantment;)Z	func_77326_a	canApplyTogether	#canApplyTogether, :, differs, isCompatible
+		c	Determines if the enchantment passed can be applyied together with this enchantment.
+		p	1	p_77326_1_	ench	#ench, :, other, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/Entity;I)V	func_151368_a	onEntityDamaged	#onEntityDamaged, :, onDamage, applyDamageWildcard
+		c	Called whenever a mob is damaged with an item that has this enchantment on it.
+		p	1	p_151368_1_	user	#user, :, livingEntity, attacker
+		p	2	p_151368_2_	target	#target, :, entity, target
+		p	3	p_151368_3_	level	#level, :, power, level
+	m	()I	func_77325_b	getMaxLevel	#getMaxLevel, :, getMaximumLevel, getMaxLevel
+		c	Returns the maximum level that the enchantment can have.
+	m	(I)I	func_77317_b	getMaxEnchantability	#getMaxEnchantability, :, getMaximumPower, getMaxXpRequirement
+		c	Returns the maximum value of enchantability nedded on the enchantment level passed.
+		p	1	p_77317_1_	enchantmentLevel	#enchantmentLevel, :, level, :
+	m	(Ljava/lang/String;)Lnet/minecraft/enchantment/Enchantment;	func_77322_b	setName	#setName, :, :, setKey
+		c	Sets the enchantment name
+		p	1	p_77322_1_	enchName	#enchName, :, translationKey, key
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/Entity;I)V	func_151367_b	onUserHurt	#onUserHurt, :, onDamaged, applyProtectionWildcard
+		c	Whenever an entity that has this enchantment on one of its associated items is damaged this method will be called.
+		p	1	p_151367_1_	user	#user, :, livingEntity, target
+		p	2	p_151367_2_	attacker	#attacker, :, entity, attacker
+		p	3	p_151367_3_	level	#level, :, power, level
+	m	()I	func_77324_c	getWeight	#getWeight, getRarity, getEnchantmentType, getType
+		c	Retrieves the weight value of an Enchantment. This weight value is used within vanilla to determine how rare an enchantment is.
+	m	(I)Ljava/lang/String;	func_77316_c	getTranslatedName	#getTranslatedName, :, :, getName
+		c	Returns the correct traslated name of the enchantment and the level in roman numbers.
+		p	1	p_77316_1_	level	#level, :, :, :
+	m	()I	func_77319_d	getMinLevel	#getMinLevel, :, getMinimumLevel, getMinLevel
+		c	Returns the minimum level that the enchantment can have.
+	m	(IILnet/minecraft/enchantment/EnumEnchantmentType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1926_1_	id	#~, ~, ~, id
+		p	2	p_i1926_2_	type	#~, ~, ~, type
+		p	3	p_i1926_3_	category	#~, ~, ~, category
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

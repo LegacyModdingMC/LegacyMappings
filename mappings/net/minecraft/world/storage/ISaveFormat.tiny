@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/ISaveFormat	net/minecraft/world/storage/ISaveFormat	
+	m	()Ljava/lang/String;	func_154333_a	getName	#getName, :, getFormat, getName
+		c	Returns the name of the save format.
+	m	(Ljava/lang/String;)Z	func_154334_a	isConvertible	#isConvertible, :, :, :
+		p	1	p_154334_1_	saveName	#saveName, :, worldName, saveName
+	m	(Ljava/lang/String;Ljava/lang/String;)V	func_75806_a	renameWorld	#renameWorld, :, renameLevel, rename
+		c	@args: Takes two arguments - first the name of the directory containing the world and second the new name for that world. @desc: Renames the world by storing the new name in level.dat. It does *not* rename the directory containing the world data.
+		p	1	p_75806_1_	dirName	#dirName, :, name, saveName
+		p	2	p_75806_2_	newName	#newName, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/util/IProgressUpdate;)Z	func_75805_a	convertMapFormat	#convertMapFormat, :, convert, :
+		c	Converts the specified map to the new map format. Args: worldName, loadingScreen
+		p	1	p_75805_1_	filename	#filename, :, worldName, saveName
+		p	2	p_75805_2_	progressCallback	#progressCallback, :, progressListener, listener
+	m	(Ljava/lang/String;Z)Lnet/minecraft/world/storage/ISaveHandler;	func_75804_a	getSaveLoader	#getSaveLoader, :, createSaveHandler, get
+		c	Returns back a loader for the specified save directory
+		p	1	p_75804_1_	saveName	#saveName, :, worldName, saveName
+		p	2	p_75804_2_	storePlayerdata	#storePlayerdata, :, createPlayerDataDir, :
+	m	()Ljava/util/List;	func_75799_b	getSaveList	#getSaveList, :, getLevelList, getAll
+	m	(Ljava/lang/String;)Z	func_75801_b	isOldMapFormat	#isOldMapFormat, :, needsConversion, :
+		c	Checks if the save directory uses the old map format
+		p	1	p_75801_1_	saveName	#saveName, :, worldName, saveName
+	m	(Ljava/lang/String;)Lnet/minecraft/world/storage/WorldInfo;	func_75803_c	getWorldInfo	#getWorldInfo, :, getLevelProperties, getData
+		c	gets the world info
+		p	1	p_75803_1_	saveName	#saveName, :, name, saveName
+	m	()V	func_75800_d	flushCache	#flushCache, :, clearAll, clearIo
+	m	(Ljava/lang/String;)Z	func_154335_d	isNewLevelIdAcceptable	#isNewLevelIdAcceptable, :, isLevelNameValid, canCreate
+		p	1	p_154335_1_	saveName	#saveName, :, name, saveName
+	m	(Ljava/lang/String;)Z	func_75802_e	deleteWorldDirectory	#deleteWorldDirectory, :, deleteLevel, delete
+		c	@args: Takes one argument - the name of the directory of the world to delete. @desc: Delete the world by deleting the associated directory recursively.
+		p	1	p_75802_1_	saveName	#saveName, :, name, saveName
+	m	(Ljava/lang/String;)Z	func_90033_f	canLoadWorld	#canLoadWorld, :, levelExists, exists
+		c	Return whether the given world can be loaded.
+		p	1	p_90033_1_	saveName	#saveName, :, name, saveName

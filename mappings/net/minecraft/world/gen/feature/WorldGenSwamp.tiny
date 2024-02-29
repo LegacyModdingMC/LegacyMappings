@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenSwamp	net/minecraft/world/gen/feature/WorldGenSwamp	
+	m	(Lnet/minecraft/world/World;IIII)V	func_76536_b	generateVines	#generateVines, :, ~, placeVines
+		c	Generates vines at the given position until it hits a block.
+		p	1	p_76536_1_	world	#~, ~, ~, world
+		p	2	p_76536_2_	x	#~, ~, ~, x
+		p	3	p_76536_3_	y	#~, ~, ~, y
+		p	4	p_76536_4_	z	#~, ~, ~, z
+		p	5	p_76536_5_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

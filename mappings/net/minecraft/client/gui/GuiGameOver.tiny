@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiGameOver	net/minecraft/client/gui/GuiGameOver	
+	f	I	field_146347_a	enableButtonsTimer	#enableButtonsTimer, :, ticksSinceDeath, :
+		c	The integer value containing the number of ticks that have passed since the player's death
+	f	Z	field_146346_f	isHardcore	#~, ~, isHardcore, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/AnvilSaveConverter	net/minecraft/world/chunk/storage/AnvilSaveConverter	
+	f	Lorg/apache/logging/log4j/Logger;	field_151480_b	logger	#logger, LOGGER, :, :
+	m	(Ljava/io/File;Ljava/io/File;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V	func_75811_a	convertChunks	#convertChunks, :, convertRegion, convertRegionToAnvil
+		c	copies a 32x32 chunk set from par2File to par1File, via AnvilConverterData
+		p	2	p_75811_2_	src	#~, ~, baseFolder, src
+		p	3	p_75811_3_	biomeSource	#biomeSource, :, :, :
+		p	6	p_75811_6_	progressCallback	#progressCallback, :, progressListener, listener
+		p	1	p_75811_1_	baseFolder	#baseFolder, :, ~, dst
+		p	4	p_75811_4_	startFileIndex	#~, ~, ~, startFileIndex
+		p	5	p_75811_5_	endFileIndex	#~, ~, ~, endFileIndex
+	m	(Ljava/io/File;Ljava/lang/Iterable;Lnet/minecraft/world/biome/WorldChunkManager;IILnet/minecraft/util/IProgressUpdate;)V	func_75813_a	convertFile	#convertFile, :, convertRegions, convertRegionsToAnvil
+		p	2	p_75813_2_	regionFiles	#regionFiles, :, baseFolder, src
+		p	3	p_75813_3_	biomeSource	#~, ~, biomeSource, :
+		p	6	p_75813_6_	progress	#progress, :, progressListener, listener
+		p	1	p_75813_1_	baseFolder	#baseFolder, :, ~, dst
+		p	4	p_75813_4_	startFileIndex	#~, ~, ~, startFileIndex
+		p	5	p_75813_5_	endFileIndex	#~, ~, ~, endFileIndex
+	m	(Ljava/io/File;Ljava/util/Collection;)V	func_75810_a	addRegionFilesToCollection	#addRegionFilesToCollection, :, addRegionFiles, collectRegions
+		c	filters the files in the par1 directory, and adds them to the par2 collections
+		p	1	p_75810_1_	worldDir	#worldDir, :, worldDirectory, dir
+		p	2	p_75810_2_	collection	#collection, :, files, :
+	m	()I	func_75812_c	getSaveVersion	#getSaveVersion, :, getCurrentVersion, getVersion
+	m	(Ljava/lang/String;)V	func_75809_f	createFile	#createFile, :, makeMcrLevelDatBackup, createLevelDatMcrBackup
+		c	par: filename for the level.dat_mcr backup
+		p	1	p_75809_1_	filename	#filename, :, worldName, saveName
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2144_1_	savesDirectoryIn	#savesDirectoryIn, :, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/IProjectile	net/minecraft/entity/IProjectile	
+	m	(DDDFF)V	func_70186_c	setThrowableHeading	#setThrowableHeading, shoot, setVelocity, :
+		c	Similar to setArrowHeading, it's point the throwable entity to a x, y, z direction.
+		p	1	p_70186_1_	x	#x, :, :, velocityX
+		p	3	p_70186_3_	y	#y, :, :, velocityY
+		p	5	p_70186_5_	z	#z, :, :, velocityZ
+		p	7	p_70186_7_	velocity	#velocity, :, speed, min
+		p	8	p_70186_8_	inaccuracy	#inaccuracy, :, divergence, scale

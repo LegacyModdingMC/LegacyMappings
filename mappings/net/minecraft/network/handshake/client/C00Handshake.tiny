@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/handshake/client/C00Handshake	net/minecraft/network/handshake/client/C00Handshake	
+	f	I	field_149600_a	protocolVersion	#protocolVersion, :, :, version
+	f	Ljava/lang/String;	field_149598_b	ip	#ip, :, address, :
+	f	I	field_149599_c	port	#port, :, :, :
+	f	Lnet/minecraft/network/EnumConnectionState;	field_149597_d	requestedState	#requestedState, :, state, username
+	m	(ILjava/lang/String;ILnet/minecraft/network/EnumConnectionState;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45266_1_	version	#version, :, :, :
+		p	2	p_i45266_2_	ip	#ip, :, address, :
+		p	3	p_i45266_3_	port	#port, :, :, :
+		p	4	p_i45266_4_	requestedState	#requestedState, :, state, protocol
+	m	()Lnet/minecraft/network/EnumConnectionState;	func_149594_c	getRequestedState	#getRequestedState, :, getIntendedState, getUsername
+	m	()I	func_149595_d	getProtocolVersion	#getProtocolVersion, :, :, getVersion
+	m	()V	<init>	<init>	#~, ~, ~, ~

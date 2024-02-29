@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/RenderWitherSkull	net/minecraft/client/renderer/tileentity/RenderWitherSkull	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110811_a	invulnerableWitherTextures	#invulnerableWitherTextures, INVULNERABLE_WITHER_TEXTURES, ~, WITHER_INVULNERABLE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110810_f	witherTextures	#witherTextures, WITHER_TEXTURES, ~, WITHER_LOCATION
+	f	Lnet/minecraft/client/model/ModelSkeletonHead;	field_82401_a	skeletonHeadModel	#skeletonHeadModel, :, ~, model
+		c	The Skeleton's head model.
+	m	(FFF)F	func_82400_a	getRenderYaw	#getRenderYaw, :, ~, getYaw
+		p	1	p_82400_1_	prevYaw	#~, ~, ~, prevYaw
+		p	2	p_82400_2_	yaw	#~, ~, ~, yaw
+		p	3	p_82400_3_	tickDelta	#~, ~, ~, tickDelta
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

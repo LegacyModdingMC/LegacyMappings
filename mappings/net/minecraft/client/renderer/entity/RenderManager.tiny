@@ -1,0 +1,82 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderManager	net/minecraft/client/renderer/entity/RenderManager	
+	f	Lnet/minecraft/client/renderer/entity/RenderManager;	field_78727_a	instance	#instance, :, INSTANCE, :
+		c	The static instance of RenderManager.
+	f	D	field_78725_b	renderPosX	#renderPosX, :, CAMERA_X, offsetX
+	f	D	field_78726_c	renderPosY	#renderPosY, :, CAMERA_Y, offsetY
+	f	D	field_78723_d	renderPosZ	#renderPosZ, :, CAMERA_Z, offsetZ
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_78724_e	renderEngine	#renderEngine, :, textureManager, :
+	f	Lnet/minecraft/client/renderer/ItemRenderer;	field_78721_f	itemRenderer	#itemRenderer, :, heldItemRenderer, :
+	f	Lnet/minecraft/world/World;	field_78722_g	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_78734_h	livingPlayer	#livingPlayer, renderViewEntity, ~, camera
+		c	Rendermanager's variable for the player
+	f	Lnet/minecraft/entity/Entity;	field_147941_i	pointedEntity	#pointedEntity, :, ~, targetEntity
+	f	F	field_78735_i	playerViewY	#playerViewY, :, yaw, cameraYaw
+	f	F	field_78732_j	playerViewX	#playerViewX, :, pitch, cameraPitch
+	f	Lnet/minecraft/client/settings/GameSettings;	field_78733_k	options	#options, :, :, :
+		c	Reference to the GameSettings object.
+	f	D	field_78730_l	viewerPosX	#viewerPosX, :, cameraX, :
+	f	D	field_78731_m	viewerPosY	#viewerPosY, :, cameraY, :
+	f	D	field_78728_n	viewerPosZ	#viewerPosZ, :, cameraZ, :
+	f	Z	field_85095_o	debugBoundingBox	#debugBoundingBox, :, renderHitboxes, :
+		c	whether bounding box should be rendered or not
+	f	Ljava/util/Map;	field_78729_o	entityRenderMap	#entityRenderMap, :, renderers, :
+		c	A map of entity classes and the associated renderer.
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_78736_p	fontRenderer	#fontRenderer, textRenderer, :, :
+		c	Renders fonts
+	m	()Lnet/minecraft/client/gui/FontRenderer;	func_78716_a	getFontRenderer	#getFontRenderer, :, getTextRenderer, :
+		c	Returns the font renderer
+	m	(DDD)D	func_78714_a	getDistanceToCamera	#getDistanceToCamera, :, squaredDistanceToCamera, getSquaredDistanceToCamera
+		p	1	p_78714_1_	x	#x, :, :, :
+		p	3	p_78714_3_	y	#y, :, :, :
+		p	5	p_78714_5_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;)V	func_78717_a	set	#set, setWorld, :, :
+		c	World sets this RenderManager's worldObj to the world provided
+		p	1	p_78717_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/Entity;Lnet/minecraft/client/settings/GameSettings;F)V	func_147938_a	cacheActiveRenderInfo	#cacheActiveRenderInfo, :, ~, prepare
+		p	1	p_147938_1_	world	#~, ~, ~, world
+		p	2	p_147938_2_	textureManager	#~, ~, ~, textureManager
+		p	3	p_147938_3_	font	#~, ~, ~, font
+		p	4	p_147938_4_	camera	#~, ~, ~, camera
+		p	5	p_147938_5_	targetEntity	#~, ~, ~, targetEntity
+		p	6	p_147938_6_	options	#~, ~, ~, options
+		p	7	p_147938_7_	tickDelta	#~, ~, ~, tickDelta
+	m	(Ljava/lang/Class;)Lnet/minecraft/client/renderer/entity/Render;	func_78715_a	getEntityClassRenderObject	#getEntityClassRenderObject, :, getRenderer, :
+		p	1	p_78715_1_	entityClass	#entityClass, :, clazz, type
+	m	(Lnet/minecraft/client/renderer/texture/IIconRegister;)V	func_94178_a	updateIcons	#updateIcons, :, ~, loadSprites
+		p	1	p_94178_1_	loader	#~, ~, ~, loader
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/client/renderer/entity/Render;	func_78713_a	getEntityRenderObject	#getEntityRenderObject, :, getRenderer, :
+		p	1	p_78713_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;DDDFF)Z	func_147940_a	renderEntityWithPosYaw	#renderEntityWithPosYaw, :, render, :
+		p	1	p_147940_1_	entityIn	#entityIn, :, ~, entity
+		p	2	p_147940_2_	x	#x, :, ~, dx
+		p	4	p_147940_4_	y	#y, :, ~, dy
+		p	6	p_147940_6_	z	#z, :, ~, dz
+		p	8	p_147940_8_	entityYaw	#entityYaw, :, ~, yaw
+		p	9	p_147940_9_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/Entity;DDDFFZ)Z	func_147939_a	doRenderEntity	#doRenderEntity, :, ~, render
+		p	1	p_147939_1_	entity	#entity, :, ~, entity
+		p	2	p_147939_2_	x	#x, :, ~, dx
+		p	4	p_147939_4_	y	#y, :, ~, dy
+		p	6	p_147939_6_	z	#z, :, ~, dz
+		p	8	p_147939_8_	entityYaw	#entityYaw, :, ~, yaw
+		p	9	p_147939_9_	partialTicks	#partialTicks, :, ~, tickDelta
+		p	10	p_147939_10_	hideDebugBox	#hideDebugBox, :, ~, skipHitbox
+	m	(Lnet/minecraft/entity/Entity;F)Z	func_147937_a	renderEntitySimple	#renderEntitySimple, :, renderEntity, renderSecondPass
+		p	1	p_147937_1_	entityIn	#entityIn, :, ~, entity
+		p	2	p_147937_2_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/entity/Entity;FZ)Z	func_147936_a	renderEntityStatic	#renderEntityStatic, :, ~, render
+		p	1	p_147936_1_	entity	#entity, :, ~, entity
+		p	2	p_147936_2_	partialTicks	#partialTicks, :, ~, tickDelta
+		p	3	p_147936_3_	hideDebugBox	#hideDebugBox, :, ~, skipHitbox
+	m	(Lnet/minecraft/entity/Entity;DDDFF)V	func_85094_b	renderDebugBoundingBox	#renderDebugBoundingBox, :, renderHitbox, :
+		c	Renders the bounding box around an entity when F3+B is pressed
+		p	1	p_85094_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_85094_2_	x	#x, :, ~, dx
+		p	4	p_85094_4_	y	#y, :, ~, dy
+		p	6	p_85094_6_	z	#z, :, ~, dz
+		p	8	p_85094_8_	entityYaw	#entityYaw, :, ~, yaw
+		p	9	p_85094_9_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

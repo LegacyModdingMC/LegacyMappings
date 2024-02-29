@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/ChunkCoordIntPair	net/minecraft/world/ChunkCoordIntPair	
+	f	I	field_77276_a	chunkXPos	#chunkXPos, x, :, :
+		c	The X position of this Chunk Coordinate Pair
+	f	I	field_77275_b	chunkZPos	#chunkZPos, z, :, :
+		c	The Z position of this Chunk Coordinate Pair
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1947_1_	x	#x, :, :, :
+		p	2	p_i1947_2_	z	#z, :, :, :
+	m	()I	func_77273_a	getCenterXPos	#getCenterXPos, getXCenter, getCenterX, getCenterBlockPosX
+	m	(I)Lnet/minecraft/world/ChunkPosition;	func_151349_a	getCenterBlockPos	#~, ~, getCenter, getCenterBlockPos
+		p	1	p_151349_1_	y	#~, ~, y, :
+	m	(II)J	func_77272_a	chunkXZ2Int	#chunkXZ2Int, asLong, getIdFromCoords, toLong
+		c	converts a chunk coordinate pair to an integer (suitable for hashing)
+		p	0	p_77272_0_	x	#x, :, :, :
+		p	1	p_77272_1_	z	#z, :, :, y
+	m	()I	func_77274_b	getCenterZPosition	#getCenterZPosition, getZCenter, getCenterZ, getCenterBlockPosZ
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, obj, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

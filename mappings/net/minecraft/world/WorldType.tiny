@@ -1,0 +1,58 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldType	net/minecraft/world/WorldType	
+	f	[Lnet/minecraft/world/WorldType;	field_77139_a	worldTypes	#worldTypes, WORLD_TYPES, TYPES, BY_ID
+		c	List of world types.
+	f	Lnet/minecraft/world/WorldType;	field_77137_b	DEFAULT	#DEFAULT, :, :, :
+		c	Default world type.
+	f	Lnet/minecraft/world/WorldType;	field_77138_c	FLAT	#FLAT, :, :, :
+		c	Flat world type.
+	f	Lnet/minecraft/world/WorldType;	field_77135_d	LARGE_BIOMES	#LARGE_BIOMES, :, :, :
+		c	Large Biome world Type.
+	f	Lnet/minecraft/world/WorldType;	field_151360_e	AMPLIFIED	#AMPLIFIED, :, :, :
+		c	amplified world type
+	f	Lnet/minecraft/world/WorldType;	field_77136_e	DEFAULT_1_1	#DEFAULT_1_1, :, :, :
+		c	Default (1.1) world type.
+	f	I	field_82748_f	worldTypeId	#worldTypeId, id, :, :
+		c	ID for this world type.
+	f	Ljava/lang/String;	field_77133_f	worldType	#worldType, name, :, key
+		c	'default' or 'flat'
+	f	I	field_77134_g	generatorVersion	#generatorVersion, version, :, :
+		c	The int version of the ChunkProvider that generated this world.
+	f	Z	field_77140_h	canBeCreated	#canBeCreated, :, visible, :
+		c	Whether this world type can be generated. Normally true; set to false for out-of-date generator versions.
+	f	Z	field_77141_i	isWorldTypeVersioned	#isWorldTypeVersioned, versioned, :, :
+		c	Whether this WorldType has a version or not.
+	f	Z	field_151361_l	hasNotificationData	#hasNotificationData, hasInfoNotice, info, :
+	m	(ILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1959_1_	id	#id, :, :, :
+		p	2	p_i1959_2_	name	#name, :, :, key
+	m	(ILjava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1960_1_	id	#id, :, :, :
+		p	2	p_i1960_2_	name	#name, :, :, key
+		p	3	p_i1960_3_	version	#version, :, :, :
+	m	()Ljava/lang/String;	func_77127_a	getWorldTypeName	#getWorldTypeName, getName, :, getKey
+	m	(I)Lnet/minecraft/world/WorldType;	func_77132_a	getWorldTypeForGeneratorVersion	#getWorldTypeForGeneratorVersion, :, getTypeForVersion, :
+		p	1	p_77132_1_	version	#version, :, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/world/WorldType;	func_77130_a	parseWorldType	#parseWorldType, byName, getTypeFromName, byId
+		p	0	p_77130_0_	type	#type, :, name, id
+	m	(Z)Lnet/minecraft/world/WorldType;	func_77124_a	setCanBeCreated	#setCanBeCreated, :, setVisible, :
+		c	Sets canBeCreated to the provided value, and returns this.
+		p	1	p_77124_1_	enable	#enable, :, visible, :
+	m	()Ljava/lang/String;	func_77128_b	getTranslateName	#getTranslateName, getTranslationKey, :, :
+		c	Gets the translation key for the name of this world type.
+	m	()Ljava/lang/String;	func_151359_c	getTranslatedInfo	#getTranslatedInfo, getInfoTranslationKey, :, :
+		c	Gets the translation key for the info text for this world type.
+	m	()I	func_77131_c	getGeneratorVersion	#getGeneratorVersion, getVersion, :, :
+		c	Returns generatorVersion.
+	m	()Z	func_77126_d	getCanBeCreated	#getCanBeCreated, canBeCreated, isVisible, :
+		c	Gets whether this WorldType can be used to generate a new world.
+	m	()Z	func_77125_e	isVersioned	#isVersioned, :, :, :
+		c	Returns true if this world Type has a version associated with it.
+	m	()I	func_82747_f	getWorldTypeID	#getWorldTypeID, getId, :, :
+	m	()Z	func_151357_h	showWorldInfoNotice	#showWorldInfoNotice, hasInfoNotice, hasInfo, :
+		c	returns true if selecting this worldtype from the customize menu should display the generator.[worldtype].info message
+	m	()Lnet/minecraft/world/WorldType;	func_77129_f	setVersioned	#setVersioned, :, :, :
+		c	Flags this world type as having an associated version.
+	m	()Lnet/minecraft/world/WorldType;	func_151358_j	setNotificationData	#setNotificationData, enableInfoNotice, setHasInfo, :
+		c	enables the display of generator.[worldtype].info message on the customize world menu
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureMineshaftPieces	net/minecraft/world/gen/structure/StructureMineshaftPieces	
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_78818_a	mineshaftChestContents	#mineshaftChestContents, :, ~, LOOT_ENTRIES
+		c	List of contents that can generate in Mineshafts.
+	m	()V	func_143048_a	registerStructurePieces	#registerStructurePieces, :, registerPieces, register
+	m	(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	access$000	access$000	#~, ~, ~, syntheticAddPiece
+		p	0	p_access$000_0_	piece	#~, ~, ~, piece
+		p	1	p_access$000_1_	piecesList	#~, ~, ~, piecesList
+		p	2	p_access$000_2_	random	#~, ~, ~, random
+		p	3	p_access$000_3_	x	#~, ~, ~, x
+		p	4	p_access$000_4_	y	#~, ~, ~, y
+		p	5	p_access$000_5_	z	#~, ~, ~, z
+		p	6	p_access$000_6_	facing	#~, ~, ~, facing
+		p	7	p_access$000_7_	type	#~, ~, ~, type
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	func_78815_a	getRandomComponent	#getRandomComponent, :, ~, createPiece
+		p	0	p_78815_0_	pieces	#~, ~, ~, pieces
+		p	1	p_78815_1_	random	#~, ~, ~, random
+		p	2	p_78815_2_	x	#~, ~, ~, x
+		p	3	p_78815_3_	y	#~, ~, ~, y
+		p	4	p_78815_4_	z	#~, ~, ~, z
+		p	5	p_78815_5_	facing	#~, ~, ~, facing
+		p	6	p_78815_6_	generationDepth	#~, ~, ~, generationDepth
+	m	()[Lnet/minecraft/util/WeightedRandomChestContent;	access$100	access$100	#~, ~, ~, getLootChestContent
+	m	(Lnet/minecraft/world/gen/structure/StructureComponent;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	func_78817_b	getNextMineShaftComponent	#getNextMineShaftComponent, :, ~, generateNextPiece
+		p	0	p_78817_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_78817_1_	pieces	#~, ~, ~, pieces
+		p	2	p_78817_2_	random	#~, ~, ~, random
+		p	3	p_78817_3_	x	#~, ~, ~, x
+		p	4	p_78817_4_	y	#~, ~, ~, y
+		p	5	p_78817_5_	z	#~, ~, ~, z
+		p	6	p_78817_6_	facing	#~, ~, ~, facing
+		p	7	p_78817_7_	generationDepth	#~, ~, ~, generationDepth
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

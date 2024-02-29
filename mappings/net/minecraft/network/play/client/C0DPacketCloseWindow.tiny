@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C0DPacketCloseWindow	net/minecraft/network/play/client/C0DPacketCloseWindow	
+	f	I	field_149556_a	windowId	#windowId, :, id, :
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45247_1_	windowId	#windowId, :, id, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

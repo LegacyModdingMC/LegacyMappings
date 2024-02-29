@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/ChunkCache	net/minecraft/world/ChunkCache	
+	f	I	field_72818_a	chunkX	#chunkX, :, minX, chunkX
+	f	I	field_72816_b	chunkZ	#chunkZ, :, minZ, chunkZ
+	f	[[Lnet/minecraft/world/chunk/Chunk;	field_72817_c	chunkArray	#chunkArray, :, chunks, :
+	f	Z	field_72814_d	isEmpty	#isEmpty, empty, :, :
+		c	True if the chunk cache is empty.
+	f	Lnet/minecraft/world/World;	field_72815_e	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	m	(Lnet/minecraft/world/EnumSkyBlock;III)I	func_72810_a	getSkyBlockTypeBrightness	#getSkyBlockTypeBrightness, :, ~, getBrightness
+		c	Brightness for SkyBlock.Sky is clear white and (through color computing it is assumed) DEPENDENT ON DAYTIME. Brightness for SkyBlock.Block is yellowish and independent.
+		p	1	p_72810_1_	type	#~, ~, ~, type
+		p	2	p_72810_2_	x	#~, ~, ~, x
+		p	3	p_72810_3_	y	#~, ~, ~, y
+		p	4	p_72810_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/EnumSkyBlock;III)I	func_72812_b	getSpecialBlockBrightness	#getSpecialBlockBrightness, :, ~, getLight
+		c	is only used on stairs and tilled fields
+		p	1	p_72812_1_	type	#~, ~, ~, type
+		p	2	p_72812_2_	x	#~, ~, ~, x
+		p	3	p_72812_3_	y	#~, ~, ~, y
+		p	4	p_72812_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;IIIIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1964_1_	world	#~, ~, ~, world
+		p	2	p_i1964_2_	minX	#~, ~, ~, minX
+		p	3	p_i1964_3_	minY	#~, ~, ~, minY
+		p	4	p_i1964_4_	minZ	#~, ~, ~, minZ
+		p	5	p_i1964_5_	maxX	#~, ~, ~, maxX
+		p	6	p_i1964_6_	maxY	#~, ~, ~, maxY
+		p	7	p_i1964_7_	maxZ	#~, ~, ~, maxZ
+		p	8	p_i1964_8_	offset	#~, ~, ~, offset

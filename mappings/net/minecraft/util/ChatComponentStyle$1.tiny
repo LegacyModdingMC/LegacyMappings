@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatComponentStyle$1	net/minecraft/util/ChatComponentStyle$1	
+	m	(Lnet/minecraft/util/IChatComponent;)Ljava/util/Iterator;	apply	apply	#~, ~, apply, :
+		p	1	p_apply_1_	p_apply_1_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	apply	apply	#~, ~, ~, ~
+		p	1	p_apply_1_	text	#~, ~, ~, text
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRedstoneOre	net/minecraft/block/BlockRedstoneOre	
+	f	Z	field_150187_a	isOn	#isOn, :, lit, :
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45420_1_	isOn	#isOn, :, lit, :
+	m	(Lnet/minecraft/world/World;III)V	func_150185_e	lightUp	#~, ~, ~, lightUp
+		p	1	p_150185_1_	world	#~, ~, ~, world
+		p	2	p_150185_2_	x	#~, ~, ~, x
+		p	3	p_150185_3_	y	#~, ~, ~, y
+		p	4	p_150185_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)V	func_150186_m	addParticles	#~, ~, ~, addParticles
+		p	1	p_150186_1_	world	#~, ~, ~, world
+		p	2	p_150186_2_	x	#~, ~, ~, x
+		p	3	p_150186_3_	y	#~, ~, ~, y
+		p	4	p_150186_4_	z	#~, ~, ~, z

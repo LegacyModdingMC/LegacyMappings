@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerBeacon	net/minecraft/inventory/ContainerBeacon	
+	f	Lnet/minecraft/tileentity/TileEntityBeacon;	field_82866_e	tileBeacon	#tileBeacon, :, ~, beacon
+	f	Lnet/minecraft/inventory/ContainerBeacon$BeaconSlot;	field_82864_f	beaconSlot	#beaconSlot, :, ~, paymentSlot
+		c	This beacon's slot where you put in Emerald, Diamond, Gold or Iron Ingot.
+	f	I	field_82865_g	levels	#~, ~, ~, levels
+	f	I	field_82867_h	primaryEfect	#~, ~, ~, primaryEfect
+	f	I	field_82868_i	secondaryEffect	#~, ~, ~, secondaryEffect
+	m	()Lnet/minecraft/tileentity/TileEntityBeacon;	func_148327_e	getBeacon	#~, ~, ~, getBeacon
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityBeacon;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1802_1_	player	#~, ~, ~, player
+		p	2	p_i1802_2_	beacon	#~, ~, ~, beacon

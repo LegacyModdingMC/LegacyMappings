@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerBrewingStand$Potion	net/minecraft/inventory/ContainerBrewingStand$Potion	
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_75244_a	player	#player, :, ~, player
+		c	The player that has this container open.
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_75243_a_	canHoldPotion	#canHoldPotion, :, ~, matches
+		c	Returns true if this itemstack can be filled with a potion
+		p	0	p_75243_0_	stack	#stack, :, ~, stack
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/inventory/IInventory;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1804_1_	playerIn	#playerIn, :, ~, player
+		p	2	p_i1804_2_	inventoryIn	#inventoryIn, :, ~, inventory
+		p	3	p_i1804_3_	index	#index, :, ~, slot
+		p	4	p_i1804_4_	xPosition	#xPosition, :, ~, x
+		p	5	p_i1804_5_	yPosition	#yPosition, :, ~, y

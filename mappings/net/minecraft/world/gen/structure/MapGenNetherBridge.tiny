@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenNetherBridge	net/minecraft/world/gen/structure/MapGenNetherBridge	
+	f	Ljava/util/List;	field_75060_e	spawnList	#spawnList, :, monsterSpawns, monsterSpawnEntries
+	m	()Ljava/util/List;	func_75059_a	getSpawnList	#getSpawnList, :, getMonsterSpawns, getMonsterSpawnEntries
+	m	()V	<init>	<init>	#~, ~, ~, ~

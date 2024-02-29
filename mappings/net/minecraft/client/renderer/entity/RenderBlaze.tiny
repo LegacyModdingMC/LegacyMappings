@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderBlaze	net/minecraft/client/renderer/entity/RenderBlaze	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110837_a	blazeTextures	#blazeTextures, BLAZE_TEXTURES, TEXTURE, BLAZE_LOCATION
+	f	I	field_77068_a	handModel	#~, ~, ~, handModel
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

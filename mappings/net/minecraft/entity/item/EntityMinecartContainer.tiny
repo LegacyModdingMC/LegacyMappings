@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityMinecartContainer	net/minecraft/entity/item/EntityMinecartContainer	
+	f	[Lnet/minecraft/item/ItemStack;	field_94113_a	minecartContainerItems	#minecartContainerItems, :, stacks, :
+	f	Z	field_94112_b	dropContentsWhenDead	#dropContentsWhenDead, :, ~, canBeRemoved
+		c	When set to true, the minecart will drop all items when setDead() is called. When false (such as when travelling dimensions) it preserves its contents.
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1717_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1717_2_	x	#x, :, ~, ~
+		p	4	p_i1717_4_	y	#y, :, ~, ~
+		p	6	p_i1717_6_	z	#z, :, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1716_1_	worldIn	#worldIn, :, ~, ~

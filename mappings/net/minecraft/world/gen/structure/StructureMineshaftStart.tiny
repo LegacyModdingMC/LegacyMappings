@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureMineshaftStart	net/minecraft/world/gen/structure/StructureMineshaftStart	
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2039_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i2039_2_	rand	#rand, :, random, :
+		p	3	p_i2039_3_	chunkX	#chunkX, :, :, :
+		p	4	p_i2039_4_	chunkZ	#chunkZ, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

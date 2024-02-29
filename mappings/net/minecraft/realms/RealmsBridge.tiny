@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsBridge	net/minecraft/realms/RealmsBridge	
+	f	Lorg/apache/logging/log4j/Logger;	LOGGER	LOGGER	#~, ~, ~, ~
+	f	Lnet/minecraft/client/gui/GuiScreen;	previousScreen	previousScreen	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	switchToRealms	switchToRealms	#~, ~, ~, ~
+		p	1	p_switchToRealms_1_	parent	#~, ~, parent, ~
+	m	()V	init	init	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

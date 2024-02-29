@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntityMobSpawnerRenderer	net/minecraft/client/renderer/tileentity/TileEntityMobSpawnerRenderer	
+	m	(Lnet/minecraft/tileentity/MobSpawnerBaseLogic;DDDF)V	func_147517_a	renderMob	#renderMob, :, renderEntity, render
+		c	Render the mob inside the mob spawner.
+		p	0	p_147517_0_	mobSpawnerLogic	#mobSpawnerLogic, :, behavior, mobSpawner
+		p	1	p_147517_1_	posX	#posX, :, x, :
+		p	3	p_147517_3_	posY	#posY, :, y, :
+		p	5	p_147517_5_	posZ	#posZ, :, z, :
+		p	7	p_147517_7_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

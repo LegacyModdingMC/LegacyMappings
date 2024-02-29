@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/NetHandlerLoginClient$1	net/minecraft/client/network/NetHandlerLoginClient$1	
+	f	Ljavax/crypto/SecretKey;	field_147495_a	secretKey	#~, ~, ~, secretKey
+	f	Lnet/minecraft/client/network/NetHandlerLoginClient;	field_147494_b	serverConnector	#~, ~, ~, serverConnector
+	m	(Lio/netty/util/concurrent/Future;)V	operationComplete	operationComplete	#~, ~, ~, ~
+		p	1	p_operationComplete_1_	future	#~, ~, ~, future
+	m	(Lnet/minecraft/client/network/NetHandlerLoginClient;Ljavax/crypto/SecretKey;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45058_1_	p_i45058_1_	#~, ~, ~, ~
+		p	2	p_i45058_2_	p_i45058_2_	#~, ~, ~, ~

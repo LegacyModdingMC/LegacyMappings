@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/TextureMap	net/minecraft/client/renderer/texture/TextureMap	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110575_b	locationBlocksTexture	#locationBlocksTexture, LOCATION_BLOCKS_TEXTURE, BLOCK_ATLAS_TEX, BLOCKS_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110576_c	locationItemsTexture	#locationItemsTexture, :, ~, ITEMS_LOCATION
+	f	Lorg/apache/logging/log4j/Logger;	field_147635_d	logger	#logger, LOGGER, :, :
+	f	Ljava/util/List;	field_94258_i	listAnimatedSprites	#listAnimatedSprites, :, animatedSprites, :
+	f	Ljava/util/Map;	field_110574_e	mapRegisteredSprites	#mapRegisteredSprites, :, spritesToLoad, :
+	f	Ljava/util/Map;	field_94252_e	mapUploadedSprites	#mapUploadedSprites, :, sprites, :
+	f	I	field_94255_a	textureType	#textureType, :, ~, type
+		c	0 = terrain.png, 1 = items.png
+	f	Ljava/lang/String;	field_94254_c	basePath	#basePath, :, name, path
+	f	I	field_147636_j	mipmapLevels	#mipmapLevels, :, maxTextureSize, maxMipLevel
+	f	I	field_147637_k	anisotropicFiltering	#anisotropicFiltering, :, ~, anisotropicFiltering
+	f	Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	field_94249_f	missingImage	#missingImage, :, texture, missingTextureSprite
+	m	()I	func_130086_a	getTextureType	#getTextureType, :, ~, getType
+	m	(I)V	func_147633_a	setMipmapLevels	#setMipmapLevels, :, setMaxTextureSize, setMaxMipLevel
+		p	1	p_147633_1_	mipmapLevelsIn	#mipmapLevelsIn, :, size, mipLevel
+	m	(Lnet/minecraft/util/ResourceLocation;I)Lnet/minecraft/util/ResourceLocation;	func_147634_a	completeResourceLocation	#completeResourceLocation, :, ~, getResourceId
+		p	1	p_147634_1_	location	#location, :, ~, textureId
+		p	2	p_147634_2_	mipmaps	#~, ~, ~, mipmaps
+	m	(I)V	func_147632_b	setAnisotropicFiltering	#setAnisotropicFiltering, :, ~, setAnisotropicFiltering
+		p	1	p_147632_1_	anisotropicFiltering	#~, ~, ~, anisotropicFiltering
+	m	(Lnet/minecraft/client/resources/IResourceManager;)V	func_110571_b	loadTextureAtlas	#loadTextureAtlas, :, ~, loadAndStitch
+		p	1	p_110571_1_	resourceManager	#resourceManager, :, manager, resourceManager
+	m	(Ljava/lang/String;)Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	func_110572_b	getAtlasSprite	#getAtlasSprite, :, getSprite, :
+		p	1	p_110572_1_	iconName	#iconName, :, identifier, name
+	m	()V	func_94248_c	updateAnimations	#updateAnimations, :, update, bindAndTick
+	m	()V	func_110569_e	initMissingImage	#initMissingImage, :, ~, loadMissingTexture
+	m	()V	func_110573_f	registerIcons	#registerIcons, :, ~, load
+	m	(ILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1281_1_	type	#~, ~, ~, type
+		p	2	p_i1281_2_	path	#~, ~, ~, path
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

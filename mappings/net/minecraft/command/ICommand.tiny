@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/ICommand	net/minecraft/command/ICommand	
+	m	(Lnet/minecraft/command/ICommandSender;)Z	func_71519_b	canCommandSenderUseCommand	#canCommandSenderUseCommand, :, isAccessible, canUse
+		c	Returns true if the given command sender is allowed to use this command.
+		p	1	p_71519_1_	sender	#sender, :, source, :
+	m	(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)Ljava/util/List;	func_71516_a	addTabCompletionOptions	#addTabCompletionOptions, :, ~, getSuggestions
+		c	Adds the strings available in this command to the given list of tab completion options.
+		p	1	p_71516_1_	sender	#sender, :, source, :
+		p	2	p_71516_2_	args	#args, :, ~, args
+	m	([Ljava/lang/String;I)Z	func_82358_a	isUsernameIndex	#isUsernameIndex, :, isUsernameAtIndex, hasTargetSelectorAt
+		c	Return whether the specified command parameter index is a username parameter.
+		p	1	p_82358_1_	args	#args, :, :, :
+		p	2	p_82358_2_	index	#index, :, :, :
+	m	()Ljava/util/List;	func_71514_a	getCommandAliases	#getCommandAliases, getAliases, :, :
+		c	Get a list of aliases for this command. <b>Never return null!</b>
+	m	(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;)V	func_71515_b	processCommand	#processCommand, :, execute, run
+		c	Callback when the command is invoked
+		p	1	p_71515_1_	sender	#sender, :, source, :
+		p	2	p_71515_2_	args	#args, :, :, :
+	m	()Ljava/lang/String;	func_71517_b	getCommandName	#getCommandName, getName, getCommandName, getName
+		c	Gets the name of the command
+	m	(Lnet/minecraft/command/ICommandSender;)Ljava/lang/String;	func_71518_a	getCommandUsage	#getCommandUsage, getUsage, getUsageTranslationKey, getUsage
+		c	Gets the usage string for the command.
+		p	1	p_71518_1_	sender	#sender, :, source, :

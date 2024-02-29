@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemAxe	net/minecraft/item/ItemAxe	
+	f	Ljava/util/Set;	field_150917_c	EFFECTIVE_ON	#EFFECTIVE_ON, :, EFFECTIVE_BLOCKS, :
+		c	The items that are broken more efficiently with an axe
+	m	(Lnet/minecraft/item/Item$ToolMaterial;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45327_1_	material	#material, :, ~, material
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

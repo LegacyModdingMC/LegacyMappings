@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/ServerStatusResponse$PlayerCountData	net/minecraft/network/ServerStatusResponse$PlayerCountData	
+	f	I	field_151336_a	maxPlayers	#maxPlayers, :, ~, max
+	f	I	field_151334_b	onlinePlayerCount	#onlinePlayerCount, :, ~, online
+	f	[Lcom/mojang/authlib/GameProfile;	field_151335_c	players	#players, :, ~, profiles
+	m	()I	func_151332_a	getMaxPlayers	#getMaxPlayers, :, ~, getMax
+	m	([Lcom/mojang/authlib/GameProfile;)V	func_151330_a	setPlayers	#setPlayers, :, ~, set
+		p	1	p_151330_1_	playersIn	#playersIn, :, ~, profiles
+	m	()I	func_151333_b	getOnlinePlayerCount	#getOnlinePlayerCount, :, ~, getOnline
+	m	()[Lcom/mojang/authlib/GameProfile;	func_151331_c	getPlayers	#getPlayers, :, ~, get
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45274_1_	maxOnlinePlayers	#maxOnlinePlayers, :, ~, max
+		p	2	p_i45274_2_	onlinePlayers	#onlinePlayers, :, ~, online

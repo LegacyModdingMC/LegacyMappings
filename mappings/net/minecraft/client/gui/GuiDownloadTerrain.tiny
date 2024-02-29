@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiDownloadTerrain	net/minecraft/client/gui/GuiDownloadTerrain	
+	f	Lnet/minecraft/client/network/NetHandlerPlayClient;	field_146594_a	netHandlerPlayClient	#netHandlerPlayClient, connection, networkHandler, :
+	f	I	field_146593_f	progress	#progress, :, ticks, :
+	m	(Lnet/minecraft/client/network/NetHandlerPlayClient;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45023_1_	netHandler	#netHandler, :, handler, networkHandler

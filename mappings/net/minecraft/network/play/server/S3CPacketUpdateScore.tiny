@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S3CPacketUpdateScore	net/minecraft/network/play/server/S3CPacketUpdateScore	
+	f	Ljava/lang/String;	field_149329_a	name	#name, :, playerName, owner
+	f	Ljava/lang/String;	field_149327_b	objective	#objective, :, objectiveName, objective
+	f	I	field_149328_c	value	#value, :, score, :
+	f	I	field_149326_d	action	#action, :, ~, action
+		c	The type of score update.\n<br>0: set score\n<br>1: remove score
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45228_1_	nameIn	#nameIn, :, playerName, owner
+	m	()Ljava/lang/String;	func_149324_c	getPlayerName	#getPlayerName, :, :, getOwner
+	m	()Ljava/lang/String;	func_149321_d	getObjectiveName	#getObjectiveName, :, :, getObjective
+	m	()I	func_149323_e	getScoreValue	#getScoreValue, :, getScore, :
+	m	()I	func_149322_f	getAction	#~, ~, ~, getAction
+	m	(Lnet/minecraft/scoreboard/Score;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45227_1_	score	#~, ~, ~, score
+		p	2	p_i45227_2_	action	#~, ~, ~, action
+	m	()V	<init>	<init>	#~, ~, ~, ~

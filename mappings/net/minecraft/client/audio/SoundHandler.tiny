@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundHandler	net/minecraft/client/audio/SoundHandler	
+	f	Lnet/minecraft/client/audio/SoundPoolEntry;	field_147700_a	missing_sound	#missing_sound, MISSING_SOUND, :, :
+	f	Lorg/apache/logging/log4j/Logger;	field_147698_b	logger	#logger, LOGGER, :, :
+	f	Lcom/google/gson/Gson;	field_147699_c	GSON	#GSON, :, :, :
+	f	Ljava/lang/reflect/ParameterizedType;	field_147696_d	TYPE	#TYPE, :, :, :
+	f	Lnet/minecraft/client/audio/SoundRegistry;	field_147697_e	sndRegistry	#sndRegistry, soundRegistry, loadedSounds, registry
+	f	Lnet/minecraft/client/audio/SoundManager;	field_147694_f	sndManager	#sndManager, :, soundSystem, engine
+	f	Lnet/minecraft/client/resources/IResourceManager;	field_147695_g	mcResourceManager	#mcResourceManager, resourceManager, :, :
+	m	(Lnet/minecraft/client/resources/IResourceManager;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45122_1_	manager	#manager, :, resourceManager, :
+		p	2	p_i45122_2_	gameSettingsIn	#gameSettingsIn, :, options, :
+	m	(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/audio/SoundEventAccessorComposite;	func_147680_a	getSound	#getSound, :, get, :
+		p	1	p_147680_1_	location	#location, :, id, location
+	m	(Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/audio/SoundList;)V	func_147693_a	loadSoundResource	#loadSoundResource, :, register, :
+		p	1	p_147693_1_	location	#location, :, id, location
+		p	2	p_147693_2_	sounds	#sounds, :, entry, sounds
+	m	(Lnet/minecraft/client/audio/ISound;)V	func_147682_a	playSound	#playSound, :, play, :
+		c	Play a sound
+		p	1	p_147682_1_	sound	#sound, :, :, :
+	m	(Lnet/minecraft/client/audio/ISound;I)V	func_147681_a	playDelayedSound	#playDelayedSound, :, play, :
+		c	Plays the sound in n ticks
+		p	1	p_147681_1_	sound	#sound, :, :, :
+		p	2	p_147681_2_	delay	#delay, :, :, :
+	m	(Lnet/minecraft/client/audio/SoundHandler;)Lnet/minecraft/client/audio/SoundRegistry;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundCategory;F)V	func_147684_a	setSoundLevel	#setSoundLevel, :, updateSoundVolume, setVolume
+		p	1	p_147684_1_	category	#category, :, :, :
+		p	2	p_147684_2_	volume	#volume, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;F)V	func_147691_a	setListener	#setListener, :, updateListenerPosition, updateListener
+		p	1	p_147691_1_	player	#player, :, :, :
+		p	2	p_147691_2_	tickDelta	#~, ~, tickDelta, :
+	m	([Lnet/minecraft/client/audio/SoundCategory;)Lnet/minecraft/client/audio/SoundEventAccessorComposite;	func_147686_a	getRandomSoundFromCategories	#getRandomSoundFromCategories, :, getSoundSet, getRandom
+		c	Returns a random sound from one or more categories
+		p	1	p_147686_1_	categories	#categories, :, :, :
+	m	()V	func_147689_b	pauseSounds	#pauseSounds, :, pauseAll, pause
+	m	(Lnet/minecraft/client/audio/ISound;)V	func_147683_b	stopSound	#stopSound, :, stop, :
+		p	1	p_147683_1_	soundIn	#soundIn, :, instance, sound
+	m	()V	func_147690_c	stopSounds	#stopSounds, :, stopAll, stop
+	m	(Lnet/minecraft/client/audio/ISound;)Z	func_147692_c	isSoundPlaying	#isSoundPlaying, :, isPlaying, :
+		p	1	p_147692_1_	sound	#sound, :, instance, sound
+	m	()V	func_147685_d	unloadSounds	#unloadSounds, :, close, :
+	m	()V	func_147687_e	resumeSounds	#resumeSounds, :, resumeAll, resume
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsAnvilLevelStorageSource	net/minecraft/realms/RealmsAnvilLevelStorageSource	
+	f	Lnet/minecraft/world/storage/ISaveFormat;	levelStorageSource	levelStorageSource	#~, ~, ~, ~
+	m	()V	clearAll	clearAll	#~, ~, ~, ~
+	m	(Ljava/lang/String;Lnet/minecraft/util/IProgressUpdate;)Z	convertLevel	convertLevel	#~, ~, ~, ~
+		p	1	p_convertLevel_1_	worldName	#~, ~, worldName, ~
+		p	2	p_convertLevel_2_	progressListener	#~, ~, progressListener, ~
+	m	(Ljava/lang/String;)Z	deleteLevel	deleteLevel	#~, ~, ~, ~
+		p	1	p_deleteLevel_1_	name	#~, ~, name, ~
+	m	()Ljava/util/List;	getLevelList	getLevelList	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getName	getName	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Z	isConvertible	isConvertible	#~, ~, ~, ~
+		p	1	p_isConvertible_1_	worldName	#~, ~, worldName, ~
+	m	(Ljava/lang/String;)Z	isNewLevelIdAcceptable	isNewLevelIdAcceptable	#~, ~, ~, ~
+		p	1	p_isNewLevelIdAcceptable_1_	name	#~, ~, name, ~
+	m	(Ljava/lang/String;)Z	levelExists	levelExists	#~, ~, ~, ~
+		p	1	p_levelExists_1_	name	#~, ~, name, ~
+	m	(Ljava/lang/String;Ljava/lang/String;)V	renameLevel	renameLevel	#~, ~, ~, ~
+		p	1	p_renameLevel_1_	oldName	#~, ~, oldName, ~
+		p	2	p_renameLevel_2_	newName	#~, ~, newName, ~
+	m	(Ljava/lang/String;)Z	requiresConversion	requiresConversion	#~, ~, ~, ~
+		p	1	p_requiresConversion_1_	worldName	#~, ~, worldName, ~
+	m	(Lnet/minecraft/world/storage/ISaveFormat;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1106_1_	levelStorageSourceIn	#levelStorageSourceIn, :, ~, ~

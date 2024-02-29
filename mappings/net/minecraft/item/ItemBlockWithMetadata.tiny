@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemBlockWithMetadata	net/minecraft/item/ItemBlockWithMetadata	
+	f	Lnet/minecraft/block/Block;	field_150950_b	spriteProvider	#~, ~, blockItem, spriteProvider
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45326_1_	block	#~, ~, ~, block
+		p	2	p_i45326_2_	spriteProvider	#~, ~, ~, spriteProvider

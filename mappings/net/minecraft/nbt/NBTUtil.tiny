@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTUtil	net/minecraft/nbt/NBTUtil	
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lcom/mojang/authlib/GameProfile;	func_152459_a	readGameProfileFromNBT	#readGameProfileFromNBT, :, toGameProfile, ~
+		c	Reads and returns a GameProfile that has been saved to the passed in NBTTagCompound
+		p	0	p_152459_0_	compound	#compound, :, nbt, ~
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Lcom/mojang/authlib/GameProfile;)V	func_152460_a	writeGameProfileToNBT	#writeGameProfileToNBT, :, ~, ~
+		c	Writes the passed in GameProfile to the passed in NBTTagCompound
+		p	0	p_152460_0_	compound	#compound, :, ~, ~
+		p	1	p_152460_1_	profile	#profile, :, ~, ~

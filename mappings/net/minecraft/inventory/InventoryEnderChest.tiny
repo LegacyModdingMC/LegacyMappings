@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/InventoryEnderChest	net/minecraft/inventory/InventoryEnderChest	
+	f	Lnet/minecraft/tileentity/TileEntityEnderChest;	field_70488_a	associatedChest	#associatedChest, :, blockEntity, enderChest
+	m	(Lnet/minecraft/tileentity/TileEntityEnderChest;)V	func_146031_a	setChestTileEntity	#setChestTileEntity, :, setBlockEntity, setCurrentBlockEntity
+		p	1	p_146031_1_	chestTileEntity	#chestTileEntity, :, blockEntity, enderChest
+	m	(Lnet/minecraft/nbt/NBTTagList;)V	func_70486_a	loadInventoryFromNBT	#loadInventoryFromNBT, :, readNbtList, readNbt
+		p	1	p_70486_1_	list	#~, ~, nbtList, list
+	m	()Lnet/minecraft/nbt/NBTTagList;	func_70487_g	saveInventoryToNBT	#saveInventoryToNBT, :, toNbtList, toNbt
+	m	()V	<init>	<init>	#~, ~, ~, ~

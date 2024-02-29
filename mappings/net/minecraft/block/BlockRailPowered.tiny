@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRailPowered	net/minecraft/block/BlockRailPowered	
+	f	Lnet/minecraft/util/IIcon;	field_150059_b	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/world/World;IIIIZI)Z	func_150058_a	isPoweredByConnectedRails	#~, ~, ~, isPoweredByConnectedRails
+		p	1	p_150058_1_	world	#~, ~, ~, world
+		p	2	p_150058_2_	x	#~, ~, ~, x
+		p	3	p_150058_3_	y	#~, ~, ~, y
+		p	4	p_150058_4_	z	#~, ~, ~, z
+		p	5	p_150058_5_	metadata	#~, ~, ~, metadata
+		p	6	p_150058_6_	forward	#~, ~, ~, forward
+		p	7	p_150058_7_	depth	#~, ~, ~, depth
+	m	(Lnet/minecraft/world/World;IIIZII)Z	func_150057_a	isPoweredByRail	#~, ~, ~, isPoweredByRail
+		p	1	p_150057_1_	world	#~, ~, ~, world
+		p	2	p_150057_2_	x	#~, ~, ~, x
+		p	3	p_150057_3_	y	#~, ~, ~, y
+		p	4	p_150057_4_	z	#~, ~, ~, z
+		p	5	p_150057_5_	forward	#~, ~, ~, forward
+		p	6	p_150057_6_	depth	#~, ~, ~, depth
+		p	7	p_150057_7_	shape	#~, ~, ~, shape
+	m	()V	<init>	<init>	#~, ~, ~, ~

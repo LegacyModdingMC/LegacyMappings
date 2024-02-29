@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIOcelotAttack	net/minecraft/entity/ai/EntityAIOcelotAttack	
+	f	Lnet/minecraft/world/World;	field_75411_a	theWorld	#theWorld, world, :, :
+	f	Lnet/minecraft/entity/EntityLiving;	field_75409_b	theEntity	#theEntity, entity, :, mob
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75410_c	theVictim	#theVictim, target, :, :
+	f	I	field_75408_d	attackCountdown	#attackCountdown, :, cooldown, :
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1641_1_	theEntityIn	#theEntityIn, :, entity, mob

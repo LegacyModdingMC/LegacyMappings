@@ -1,0 +1,74 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemFishFood$FishType	net/minecraft/item/ItemFishFood$FishType	
+	f	Lnet/minecraft/item/ItemFishFood$FishType;	COD	COD	#~, ~, COD, :
+	f	Lnet/minecraft/item/ItemFishFood$FishType;	SALMON	SALMON	#~, ~, SALMON, :
+	f	Lnet/minecraft/item/ItemFishFood$FishType;	CLOWNFISH	CLOWNFISH	#~, ~, CLOWNFISH, :
+	f	Lnet/minecraft/item/ItemFishFood$FishType;	PUFFERFISH	PUFFERFISH	#~, ~, PUFFERFISH, :
+	f	Ljava/util/Map;	field_150983_e	itemDamageToFishTypeMap	#itemDamageToFishTypeMap, META_LOOKUP, TYPES, BY_ID
+		c	Maps an item damage value for an ItemStack to the corresponding FishType value.
+	f	I	field_150980_f	itemDamage	#itemDamage, meta, :, id
+		c	The item damage value on an ItemStack that represents this fish type
+	f	Ljava/lang/String;	field_150981_g	unlocalizedNamePart	#unlocalizedNamePart, translationKey, name, key
+		c	The value that this fish type uses to replace "XYZ" in: "fish.XYZ.raw" / "fish.XYZ.cooked" for the unlocalized name and "fish_XYZ_raw" / "fish_XYZ_cooked" for the icon string.
+	f	Lnet/minecraft/util/IIcon;	field_150993_h	uncookedIcon	#uncookedIcon, :, ~, spriteForRaw
+		c	The icon for the uncooked version of this fish.
+	f	Lnet/minecraft/util/IIcon;	field_150994_i	cookedIcon	#cookedIcon, :, ~, spriteForCooked
+		c	The icon for the cooked version of this fish.
+	f	I	field_150991_j	uncookedHealAmount	#uncookedHealAmount, :, ~, hungerPointsForRaw
+		c	The amount that eating the uncooked version of this fish should heal the player.
+	f	F	field_150992_k	uncookedSaturationModifier	#uncookedSaturationModifier, :, ~, saturationForRaw
+		c	The saturation modifier to apply to the heal amount when the player eats the uncooked version of this fish.
+	f	I	field_150989_l	cookedHealAmount	#cookedHealAmount, :, ~, hungerPointsForCooked
+		c	The amount that eating the cooked version of this fish should heal the player.
+	f	F	field_150990_m	cookedSaturationModifier	#cookedSaturationModifier, :, ~, saturationForCooked
+		c	The saturation modifier to apply to the heal amount when the player eats the cooked version of this fish.
+	f	Z	field_150987_n	cookable	#cookable, :, ~, canBeCooked
+		c	Indicates whether this type of fish has "raw" and "cooked" variants
+	f	[Lnet/minecraft/item/ItemFishFood$FishType;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;IILjava/lang/String;IF)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45337_3_	meta	#meta, :, :, id
+		p	4	p_i45337_4_	unlocalizedName	#unlocalizedName, :, name, key
+		p	5	p_i45337_5_	uncookedHeal	#uncookedHeal, :, ~, hungerPoints
+		p	6	p_i45337_6_	uncookedSaturation	#uncookedSaturation, :, ~, saturation
+		p	1	p_i45337_1_	p_i45337_1_	#~, ~, ~, ~
+		p	2	p_i45337_2_	p_i45337_2_	#~, ~, ~, ~
+	m	(Ljava/lang/String;IILjava/lang/String;IFIF)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45336_3_	meta	#meta, :, :, id
+		p	4	p_i45336_4_	unlocalizedName	#unlocalizedName, :, name, key
+		p	5	p_i45336_5_	uncookedHeal	#uncookedHeal, :, ~, hungerPointsForRaw
+		p	6	p_i45336_6_	uncookedSaturation	#uncookedSaturation, :, ~, saturationForRaw
+		p	7	p_i45336_7_	cookedHeal	#cookedHeal, :, ~, hungerPointsForCooked
+		p	8	p_i45336_8_	cookedSaturation	#cookedSaturation, :, ~, saturationForCooked
+		p	1	p_i45336_1_	p_i45336_1_	#~, ~, ~, ~
+		p	2	p_i45336_2_	p_i45336_2_	#~, ~, ~, ~
+	m	()I	func_150976_a	getItemDamage	#getItemDamage, getMetadata, getMeta, getId
+		c	Gets the item damage value on an ItemStack that represents this fish type
+	m	(I)Lnet/minecraft/item/ItemFishFood$FishType;	func_150974_a	getFishTypeForItemDamage	#getFishTypeForItemDamage, byMetadata, get, byId
+		c	Gets the corresponding FishType value for the given item damage value of an ItemStack, defaulting to COD for unrecognized damage values.
+		p	0	p_150974_0_	meta	#meta, :, :, id
+	m	(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemFishFood$FishType;	func_150978_a	getFishTypeForItemStack	#getFishTypeForItemStack, byItemStack, get, byItem
+		c	Gets the FishType that corresponds to the given ItemStack, defaulting to COD if the given ItemStack does not actually contain a fish.
+		p	0	p_150978_0_	stack	#stack, :, itemStack, stack
+	m	(Lnet/minecraft/client/renderer/texture/IIconRegister;)V	func_150968_a	registerIcon	#registerIcon, :, ~, loadSprites
+		c	Registers the icon for this fish type in the given IIconRegister.
+		p	1	p_150968_1_	loader	#~, ~, ~, loader
+	m	()Ljava/lang/String;	func_150972_b	getUnlocalizedNamePart	#getUnlocalizedNamePart, getTranslationKey, getName, getKey
+		c	Gets the value that this fish type uses to replace "XYZ" in: "fish.XYZ.raw" / "fish.XYZ.cooked" for the unlocalized name and "fish_XYZ_raw" / "fish_XYZ_cooked" for the icon string.
+	m	()I	func_150975_c	getUncookedHealAmount	#getUncookedHealAmount, :, ~, getHungerPointsForRaw
+		c	Gets the amount that eating the uncooked version of this fish should heal the player.
+	m	()F	func_150967_d	getUncookedSaturationModifier	#getUncookedSaturationModifier, :, ~, getSaturationForRaw
+		c	Gets the saturation modifier to apply to the heal amount when the player eats the uncooked version of this fish.
+	m	()I	func_150970_e	getCookedHealAmount	#getCookedHealAmount, :, ~, getHungerPointsForCooked
+		c	Gets the amount that eating the cooked version of this fish should heal the player.
+	m	()F	func_150977_f	getCookedSaturationModifier	#getCookedSaturationModifier, :, ~, getSaturationForCooked
+		c	Gets the saturation modifier to apply to the heal amount when the player eats the cooked version of this fish.
+	m	()Lnet/minecraft/util/IIcon;	func_150971_g	getUncookedIcon	#getUncookedIcon, :, ~, getSpriteForRaw
+		c	Gets the icon for the uncooked version of this fish.
+	m	()Lnet/minecraft/util/IIcon;	func_150979_h	getCookedIcon	#getCookedIcon, :, ~, getSpriteForCooked
+		c	Gets the icon for the cooked version of this fish.
+	m	()Z	func_150973_i	getCookable	#getCookable, canCook, ~, canBeCooked
+		c	Gets a value indicating whether this type of fish has "raw" and "cooked" variants.
+	m	(Ljava/lang/String;)Lnet/minecraft/item/ItemFishFood$FishType;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/item/ItemFishFood$FishType;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

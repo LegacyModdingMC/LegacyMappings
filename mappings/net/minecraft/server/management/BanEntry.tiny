@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/BanEntry	net/minecraft/server/management/BanEntry	
+	f	Ljava/text/SimpleDateFormat;	field_73698_a	dateFormat	#dateFormat, DATE_FORMAT, :, :
+	f	Ljava/util/Date;	field_73694_d	banStartDate	#banStartDate, :, creationDate, startDate
+	f	Ljava/lang/String;	field_73695_e	bannedBy	#bannedBy, :, source, :
+	f	Ljava/util/Date;	field_73692_f	banEndDate	#banEndDate, :, expiryDate, expirationDate
+	f	Ljava/lang/String;	field_73693_g	reason	#reason, :, :, :
+	m	(Ljava/lang/Object;Ljava/util/Date;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1173_1_	model	#model, :, object, user
+		p	2	p_i1173_2_	startDate	#~, ~, creationDate, startDate
+		p	3	p_i1173_3_	source	#~, ~, source, :
+		p	4	p_i1173_4_	expirationDate	#~, ~, expiryDate, expirationDate
+		p	5	p_i1173_5_	reason	#~, ~, reason, :
+	m	()Ljava/util/Date;	func_73680_d	getBanEndDate	#getBanEndDate, :, getExpiryDate, getExpirationDate
+	m	()Ljava/lang/String;	func_73686_f	getBanReason	#getBanReason, :, getReason, :
+	m	(Ljava/lang/Object;Lcom/google/gson/JsonObject;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1174_1_	valueIn	#valueIn, :, ~, ~
+		p	2	p_i1174_2_	json	#json, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

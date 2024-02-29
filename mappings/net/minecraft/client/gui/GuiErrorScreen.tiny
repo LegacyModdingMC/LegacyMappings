@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiErrorScreen	net/minecraft/client/gui/GuiErrorScreen	
+	f	Ljava/lang/String;	field_146313_a	title	#title, :, :, :
+	f	Ljava/lang/String;	field_146312_f	message	#message, :, :, description
+	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1034_1_	packDescriptionIn	#packDescriptionIn, :, title, :
+		p	2	p_i1034_2_	packFormatIn	#packFormatIn, :, message, description

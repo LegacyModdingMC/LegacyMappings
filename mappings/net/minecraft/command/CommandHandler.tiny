@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandHandler	net/minecraft/command/CommandHandler	
+	f	Lorg/apache/logging/log4j/Logger;	field_147175_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Map;	field_71562_a	commandMap	#commandMap, :, :, commandsByName
+		c	Map of Strings to the ICommand objects they represent
+	f	Ljava/util/Set;	field_71561_b	commandSet	#commandSet, :, commands, :
+		c	The set of ICommand objects currently loaded.
+	m	(Lnet/minecraft/command/ICommand;)Lnet/minecraft/command/ICommand;	func_71560_a	registerCommand	#registerCommand, :, :, register
+		c	adds the command and any aliases it has to the internal map of available commands
+		p	1	p_71560_1_	command	#command, :, ~, command
+	m	(Lnet/minecraft/command/ICommand;[Ljava/lang/String;)I	func_82370_a	getUsernameIndex	#getUsernameIndex, :, ~, getIndexOfTargetSelector
+		c	Return a command's first parameter index containing a valid username.
+		p	1	p_82370_1_	command	#command, :, :, :
+		p	2	p_82370_2_	args	#args, :, :, :
+	m	([Ljava/lang/String;)[Ljava/lang/String;	func_71559_a	dropFirstString	#dropFirstString, :, ~, getCommandArgs
+		c	creates a new array and sets elements 0..n-2 to be 0..n-1 of the input (n elements)
+		p	0	p_71559_0_	input	#input, :, ~, args
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

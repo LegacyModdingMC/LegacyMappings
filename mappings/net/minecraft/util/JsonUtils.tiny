@@ -1,0 +1,101 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/JsonUtils	net/minecraft/util/JsonUtils	
+	m	(Lcom/google/gson/JsonElement;)Z	func_151211_a	jsonElementTypeIsString	#jsonElementTypeIsString, isString, :, :
+		c	Is the given JsonElement a string?
+		p	0	p_151211_0_	json	#json, :, element, :
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/String;)Ljava/lang/String;	func_151206_a	getJsonElementStringValue	#getJsonElementStringValue, getString, asString, :
+		c	Gets the string value of the given JsonElement.  Expects the second parameter to be the name of the element's field if an error message needs to be thrown.
+		p	0	p_151206_0_	json	#json, :, element, :
+		p	1	p_151206_1_	memberName	#memberName, :, name, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Z	func_151205_a	jsonObjectFieldTypeIsString	#jsonObjectFieldTypeIsString, isString, hasString, :
+		c	Does the given JsonObject contain a string field with the given name?
+		p	0	p_151205_0_	json	#json, :, object, json
+		p	1	p_151205_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;F)F	func_151221_a	getJsonObjectFloatFieldValueOrDefault	#getJsonObjectFloatFieldValueOrDefault, getFloat, :, getFloatOrDefault
+		c	Gets the float value of the field on the JsonObject with the given name, or the given default value if the field is missing.
+		p	0	p_151221_0_	json	#json, :, object, json
+		p	1	p_151221_1_	memberName	#memberName, :, element, key
+		p	2	p_151221_2_	fallback	#fallback, :, defaultFloat, defaultValue
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;I)I	func_151208_a	getJsonObjectIntegerFieldValueOrDefault	#getJsonObjectIntegerFieldValueOrDefault, getInt, :, getIntegerOrDefault
+		c	Gets the integer value of the field on the JsonObject with the given name, or the given default value if the field is missing.
+		p	0	p_151208_0_	json	#json, :, object, json
+		p	1	p_151208_1_	memberName	#memberName, :, element, key
+		p	2	p_151208_2_	fallback	#fallback, :, defaultInt, defaultValue
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;Lcom/google/gson/JsonArray;)Lcom/google/gson/JsonArray;	func_151213_a	getJsonObjectJsonArrayFieldOrDefault	#getJsonObjectJsonArrayFieldOrDefault, getJsonArray, getArray, getJsonArrayOrDefault
+		c	Gets the JsonArray field on the JsonObject with the given name, or the given default value if the field is missing.
+		p	0	p_151213_0_	json	#json, :, object, json
+		p	1	p_151213_1_	memberName	#memberName, :, name, key
+		p	2	p_151213_2_	fallback	#fallback, :, defaultArray, defaultValue
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonObject;	func_151218_a	getJsonObjectFieldOrDefault	#getJsonObjectFieldOrDefault, getJsonObject, getObject, getJsonObjectOrDefault
+		c	Gets the JsonObject field on the JsonObject with the given name, or the given default value if the field is missing.
+		p	0	p_151218_0_	json	#json, :, object, json
+		p	1	p_151218_1_	memberName	#memberName, :, element, key
+		p	2	p_151218_2_	fallback	#fallback, :, defaultObject, defaultValue
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	func_151219_a	getJsonObjectStringFieldValueOrDefault	#getJsonObjectStringFieldValueOrDefault, getString, :, getStringOrDefault
+		c	Gets the string value of the field on the JsonObject with the given name, or the given default value if the field is missing.
+		p	0	p_151219_0_	json	#json, :, object, json
+		p	1	p_151219_1_	memberName	#memberName, :, element, key
+		p	2	p_151219_2_	fallback	#fallback, :, defaultStr, defaultValue
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;Z)Z	func_151209_a	getJsonObjectBooleanFieldValueOrDefault	#getJsonObjectBooleanFieldValueOrDefault, getBoolean, :, getBooleanOrDefault
+		c	Gets the boolean value of the field on the JsonObject with the given name, or the given default value if the field is missing.
+		p	0	p_151209_0_	json	#json, :, object, json
+		p	1	p_151209_1_	memberName	#memberName, :, element, key
+		p	2	p_151209_2_	fallback	#fallback, :, defaultBoolean, defaultValue
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/String;)Z	func_151216_b	getJsonElementBooleanValue	#getJsonElementBooleanValue, getBoolean, asBoolean, :
+		c	Gets the boolean value of the given JsonElement.  Expects the second parameter to be the name of the element's field if an error message needs to be thrown.
+		p	0	p_151216_0_	json	#json, :, element, :
+		p	1	p_151216_1_	memberName	#memberName, :, name, key
+	m	(Lcom/google/gson/JsonElement;)Ljava/lang/String;	func_151222_d	getJsonElementTypeDescription	#getJsonElementTypeDescription, toString, getType, :
+		c	Gets a human-readable description of the given JsonElement's type.  For example: "a number (4)"
+		p	0	p_151222_0_	json	#json, :, element, :
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/String;)F	func_151220_d	getJsonElementFloatValue	#getJsonElementFloatValue, getFloat, asFloat, :
+		c	Gets the float value of the given JsonElement.  Expects the second parameter to be the name of the element's field if an error message needs to be thrown.
+		p	0	p_151220_0_	json	#json, :, element, :
+		p	1	p_151220_1_	memberName	#memberName, :, name, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Z	func_151202_d	jsonObjectFieldTypeIsArray	#jsonObjectFieldTypeIsArray, isJsonArray, hasArray, hasJsonArray
+		c	Does the given JsonObject contain an array field with the given name?
+		p	0	p_151202_0_	json	#json, :, object, json
+		p	1	p_151202_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/String;)I	func_151215_f	getJsonElementIntegerValue	#getJsonElementIntegerValue, getInt, asInt, asInteger
+		c	Gets the integer value of the given JsonElement.  Expects the second parameter to be the name of the element's field if an error message needs to be thrown.
+		p	0	p_151215_0_	json	#json, :, element, :
+		p	1	p_151215_1_	memberName	#memberName, :, name, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Z	func_151201_f	jsonObjectFieldTypeIsPrimitive	#jsonObjectFieldTypeIsPrimitive, isJsonPrimitive, hasPrimitive, hasJsonPrimitive
+		c	Does the given JsonObject contain a field with the given name whose type is primitive (String, Java primitive, or Java primitive wrapper)?
+		p	0	p_151201_0_	json	#json, :, object, json
+		p	1	p_151201_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Z	func_151204_g	jsonObjectHasNamedField	#jsonObjectHasNamedField, hasField, hasElement, :
+		c	Does the given JsonObject contain a field with the given name?
+		p	0	p_151204_0_	json	#json, :, object, json
+		p	1	p_151204_1_	memberName	#memberName, :, lement, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String;	func_151200_h	getJsonObjectStringFieldValue	#getJsonObjectStringFieldValue, getString, :, :
+		c	Gets the string value of the field on the JsonObject with the given name.
+		p	0	p_151200_0_	json	#json, :, object, json
+		p	1	p_151200_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Z	func_151212_i	getJsonObjectBooleanFieldValue	#getJsonObjectBooleanFieldValue, getBoolean, :, :
+		c	Gets the boolean value of the field on the JsonObject with the given name.
+		p	0	p_151212_0_	json	#json, :, object, json
+		p	1	p_151212_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)F	func_151217_k	getJsonObjectFloatFieldValue	#getJsonObjectFloatFieldValue, getFloat, :, :
+		c	Gets the float value of the field on the JsonObject with the given name.
+		p	0	p_151217_0_	json	#json, :, object, json
+		p	1	p_151217_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/String;)Lcom/google/gson/JsonObject;	func_151210_l	getJsonElementAsJsonObject	#getJsonElementAsJsonObject, getJsonObject, asObject, asJsonObject
+		c	Gets the given JsonElement as a JsonObject.  Expects the second parameter to be the name of the element's field if an error message needs to be thrown.
+		p	0	p_151210_0_	json	#json, :, element, :
+		p	1	p_151210_1_	memberName	#memberName, :, name, key
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/String;)Lcom/google/gson/JsonArray;	func_151207_m	getJsonElementAsJsonArray	#getJsonElementAsJsonArray, getJsonArray, asArray, asJsonArray
+		c	Gets the given JsonElement as a JsonArray.  Expects the second parameter to be the name of the element's field if an error message needs to be thrown.
+		p	0	p_151207_0_	json	#json, :, element, :
+		p	1	p_151207_1_	memberName	#memberName, :, name, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)I	func_151203_m	getJsonObjectIntegerFieldValue	#getJsonObjectIntegerFieldValue, getInt, :, getInteger
+		c	Gets the integer value of the field on the JsonObject with the given name.
+		p	0	p_151203_0_	json	#json, :, object, json
+		p	1	p_151203_1_	memberName	#memberName, :, element, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject;	func_152754_s	getJsonObject	#getJsonObject, :, getObject, getJsonObject
+		p	0	p_152754_0_	base	#base, json, object, json
+		p	1	p_152754_1_	key	#key, memberName, element, key
+	m	(Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonArray;	func_151214_t	getJsonObjectJsonArrayField	#getJsonObjectJsonArrayField, getJsonArray, getArray, getJsonArray
+		c	Gets the JsonArray field on the JsonObject with the given name.
+		p	0	p_151214_0_	json	#json, :, object, json
+		p	1	p_151214_1_	memberName	#memberName, :, element, key

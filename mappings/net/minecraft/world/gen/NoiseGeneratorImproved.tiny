@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/NoiseGeneratorImproved	net/minecraft/world/gen/NoiseGeneratorImproved	
+	f	D	field_76315_a	xCoord	#xCoord, :, ~, x
+	f	D	field_76313_b	yCoord	#yCoord, :, ~, y
+	f	D	field_76314_c	zCoord	#zCoord, :, ~, z
+	f	[I	field_76312_d	permutations	#permutations, :, ~, permutations
+		c	An int[512], where the first 256 elements are the numbers 0..255, in random shuffled order,\nand the second half of the array is identical to the first half, apparently for convenience in wrapping lookups.\n \nEffectively a shuffled 0..255 that wraps once.
+	f	[D	field_152381_e	GRAD_X	#GRAD_X, :, ~, ~
+	f	[D	field_152382_f	GRAD_Y	#GRAD_Y, :, ~, ~
+	f	[D	field_152383_g	GRAD_Z	#GRAD_Z, :, ~, ~
+	f	[D	field_152384_h	GRAD_2X	#GRAD_2X, :, ~, ~
+	f	[D	field_152385_i	GRAD_2Z	#GRAD_2Z, :, ~, ~
+	m	(IDD)D	func_76309_a	grad2	#grad2, :, ~, gradient
+		p	1	p_76309_1_	hash	#~, ~, ~, hash
+		p	2	p_76309_2_	x	#~, ~, ~, x
+		p	4	p_76309_4_	z	#~, ~, ~, z
+	m	(IDDD)D	func_76310_a	grad	#grad, :, ~, gradient
+		p	1	p_76310_1_	hash	#~, ~, ~, hash
+		p	2	p_76310_2_	x	#~, ~, ~, x
+		p	4	p_76310_4_	y	#~, ~, ~, y
+		p	6	p_76310_6_	z	#~, ~, ~, z
+	m	([DDDDIIIDDDD)V	func_76308_a	populateNoiseArray	#populateNoiseArray, :, ~, getNoise
+		c	pars: noiseArray , xOffset , yOffset , zOffset , xSize , ySize , zSize , xScale, yScale , zScale , noiseScale.  noiseArray should be xSize*ySize*zSize in size
+		p	1	p_76308_1_	noiseArray	#noiseArray, :, ~, noise
+		p	2	p_76308_2_	xOffset	#xOffset, :, ~, x
+		p	4	p_76308_4_	yOffset	#yOffset, :, ~, y
+		p	6	p_76308_6_	zOffset	#zOffset, :, ~, z
+		p	8	p_76308_8_	xSize	#xSize, :, ~, sizeX
+		p	9	p_76308_9_	ySize	#ySize, :, ~, sizeY
+		p	10	p_76308_10_	zSize	#zSize, :, ~, sizeZ
+		p	11	p_76308_11_	xScale	#xScale, :, ~, scaleX
+		p	13	p_76308_13_	yScale	#yScale, :, ~, scaleY
+		p	15	p_76308_15_	zScale	#zScale, :, ~, scaleZ
+		p	17	p_76308_17_	noiseScale	#noiseScale, :, ~, scaleExponent
+	m	(DDD)D	func_76311_b	lerp	#lerp, :, ~, lerp
+		p	1	p_76311_1_	delta	#~, ~, ~, delta
+		p	3	p_76311_3_	min	#~, ~, ~, min
+		p	5	p_76311_5_	max	#~, ~, ~, max
+	m	(Ljava/util/Random;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45469_1_	random	#~, ~, ~, random
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

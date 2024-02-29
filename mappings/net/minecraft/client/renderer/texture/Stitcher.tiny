@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/Stitcher	net/minecraft/client/renderer/texture/Stitcher	
+	f	I	field_147971_a	mipmapLevelStitcher	#mipmapLevelStitcher, :, mipLevel, :
+	f	Ljava/util/Set;	field_94319_a	setStitchHolders	#setStitchHolders, :, holders, textures
+	f	Ljava/util/List;	field_94317_b	stitchSlots	#stitchSlots, :, slots, :
+	f	I	field_94318_c	currentWidth	#currentWidth, :, width, :
+	f	I	field_94315_d	currentHeight	#currentHeight, :, height, :
+	f	I	field_94316_e	maxWidth	#maxWidth, :, :, :
+	f	I	field_94313_f	maxHeight	#maxHeight, :, :, :
+	f	Z	field_94314_g	forcePowerOf2	#forcePowerOf2, :, powerOf2, updateSize
+	f	I	field_94323_h	maxTileDimension	#maxTileDimension, :, maxSize, holderSize
+		c	Max size (width or height) of a single tile
+	m	(IIZII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45095_1_	maxTextureWidth	#maxTextureWidth, :, maxWidth, :
+		p	2	p_i45095_2_	maxTextureHeight	#maxTextureHeight, :, maxHeight, :
+		p	3	p_i45095_3_	updateSize	#~, ~, powerOf2, updateSize
+		p	4	p_i45095_4_	holderSize	#~, ~, maxSize, holderSize
+		p	5	p_i45095_5_	mipmapLevel	#mipmapLevel, :, mipLevel, :
+	m	()I	func_110935_a	getCurrentWidth	#getCurrentWidth, :, getWidth, :
+	m	(II)I	access$000	access$000	#~, ~, ~, sizeCalculationsSynthetic
+		p	0	p_access$000_0_	size	#~, ~, ~, size
+		p	1	p_access$000_1_	maxSize	#~, ~, ~, maxSize
+	m	(Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)Z	func_94310_b	allocateSlot	#allocateSlot, :, ~, addAndStitch
+		c	Attempts to find space for specified tile
+		p	1	p_94310_1_	holder	#~, ~, ~, holder
+	m	(Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;)V	func_110934_a	addSprite	#addSprite, :, add, addSprite
+		p	1	p_110934_1_	textureAtlas	#textureAtlas, :, sprite, :
+	m	()I	func_110936_b	getCurrentHeight	#getCurrentHeight, :, getHeight, :
+	m	(II)I	func_147969_b	getMipmapDimension	#getMipmapDimension, :, applyMipLevel, smallestFittingMinTexel
+		p	0	p_147969_0_	size	#~, ~, size, :
+		p	1	p_147969_1_	mipLevel	#~, ~, mipLevel, :
+	m	(Lnet/minecraft/client/renderer/texture/Stitcher$Holder;)Z	func_94311_c	expandAndAllocateSlot	#expandAndAllocateSlot, :, ~, stitch
+		c	Expand stitched texture in order to make space for specified tile
+		p	1	p_94311_1_	holder	#~, ~, ~, holder
+	m	()V	func_94305_f	doStitch	#doStitch, :, stitch, :
+	m	()Ljava/util/List;	func_94309_g	getStichSlots	#getStichSlots, :, getStitchedSprites, collectSprites

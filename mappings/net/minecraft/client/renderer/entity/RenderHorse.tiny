@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderHorse	net/minecraft/client/renderer/entity/RenderHorse	
+	f	Ljava/util/Map;	field_110852_a	LAYERED_LOCATION_CACHE	#LAYERED_LOCATION_CACHE, :, MODEL_IDENTIFIERS, ARMORED_TEXTURES
+	f	Lnet/minecraft/util/ResourceLocation;	field_110850_f	whiteHorseTextures	#whiteHorseTextures, :, WHITE_HORSE, WHITE_HORSE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110851_g	muleTextures	#muleTextures, :, MULE, MULE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110855_h	donkeyTextures	#donkeyTextures, :, DONKEY, DONKEY_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110854_k	zombieHorseTextures	#zombieHorseTextures, :, ZOMBIE_HORSE, ZOMBIE_HORSE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110853_l	skeletonHorseTextures	#skeletonHorseTextures, :, SKELETON_HORSE, SKELETON_HORSE_LOCATION
+	m	(Lnet/minecraft/entity/passive/EntityHorse;)Lnet/minecraft/util/ResourceLocation;	func_110848_b	getArmoredTextureLocation	#~, ~, ~, getArmoredTextureLocation
+		p	1	p_110848_1_	horse	#horse, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1256_1_	p_i1256_1_	#~, ~, ~, ~
+		p	2	p_i1256_2_	p_i1256_2_	#~, ~, ~, ~

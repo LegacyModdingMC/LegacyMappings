@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/ILocation	net/minecraft/dispenser/ILocation	
+	m	()Lnet/minecraft/world/World;	func_82618_k	getWorld	#getWorld, :, :, :

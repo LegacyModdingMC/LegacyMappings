@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserListWhitelist	net/minecraft/server/management/UserListWhitelist	
+	m	(Lcom/mojang/authlib/GameProfile;)Z	func_152705_a	isWhitelisted	#isWhitelisted, :, isAllowed, isWhitelisted
+		c	Returns true if the profile is in the whitelist.
+		p	1	p_152705_1_	profile	#profile, :, :, :
+	m	(Ljava/lang/String;)Lcom/mojang/authlib/GameProfile;	func_152706_a	getBannedProfile	#getBannedProfile, getByName, getProfile, :
+		c	Gets the GameProfile for the UserListBanEntry with the specified username, if present
+		p	1	p_152706_1_	name	#name, profileName, value, name
+	m	(Lcom/mojang/authlib/GameProfile;)Ljava/lang/String;	func_152704_b	getKey	#~, ~, toString, getKey
+		p	1	p_152704_1_	p_152704_1_	#~, ~, ~, ~
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1132_1_	p_i1132_1_	#~, ~, ~, ~

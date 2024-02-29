@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenGlowStone2	net/minecraft/world/gen/feature/WorldGenGlowStone2	
+	m	()V	<init>	<init>	#~, ~, ~, ~

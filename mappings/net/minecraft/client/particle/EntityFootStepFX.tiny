@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityFootStepFX	net/minecraft/client/particle/EntityFootStepFX	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110126_a	FOOTPRINT_TEXTURE	#FOOTPRINT_TEXTURE, :, FOOTPRINT, FOOTPRINT_LOCATION
+	f	I	field_70576_a	footstepAge	#footstepAge, :, :, age
+	f	I	field_70578_aq	footstepMaxAge	#footstepMaxAge, :, :, maxAge
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_70577_ar	currentFootSteps	#currentFootSteps, :, manager, textureManager
+	m	(Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1210_1_	currentFootStepsIn	#currentFootStepsIn, :, manager, textureManager
+		p	2	p_i1210_2_	worldIn	#worldIn, :, world, :
+		p	3	p_i1210_3_	xCoordIn	#xCoordIn, :, x, :
+		p	5	p_i1210_5_	yCoordIn	#yCoordIn, :, y, :
+		p	7	p_i1210_7_	zCoordIn	#zCoordIn, :, z, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

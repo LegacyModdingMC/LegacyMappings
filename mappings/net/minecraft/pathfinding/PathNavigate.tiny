@@ -1,0 +1,117 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/pathfinding/PathNavigate	net/minecraft/pathfinding/PathNavigate	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75515_a	theEntity	#theEntity, entity, mob, :
+	f	Lnet/minecraft/world/World;	field_75513_b	worldObj	#worldObj, world, :, :
+	f	Lnet/minecraft/pathfinding/PathEntity;	field_75514_c	currentPath	#currentPath, :, :, path
+		c	The PathEntity being followed.
+	f	D	field_75511_d	speed	#speed, :, :, :
+	f	Lnet/minecraft/entity/ai/attributes/IAttributeInstance;	field_75512_e	pathSearchRange	#pathSearchRange, :, followRange, :
+		c	The number of blocks (extra) +/- in each axis that get pulled out as cache for the pathfinder's search space
+	f	Z	field_75509_f	noSunPathfind	#noSunPathfind, avoidSun, ~, avoidSunlight
+		c	If blocks exposed to the sun must be avoided
+	f	I	field_75510_g	totalTicks	#totalTicks, :, tickCount, ticks
+		c	Time, in number of ticks, following the current path
+	f	I	field_75520_h	ticksAtLastPos	#ticksAtLastPos, :, pathStartTime, lastStuckCheckTime
+		c	The time when the last position check was done (to detect successful movement)
+	f	Lnet/minecraft/util/Vec3;	field_75521_i	lastPosCheck	#lastPosCheck, :, pathStartPos, lastStuckCheckPos
+		c	Coordinates of the entity's position last time a check was done (part of monitoring getting 'stuck')
+	f	Z	field_75518_j	canPassOpenWoodenDoors	#canPassOpenWoodenDoors, :, ~, canWalkThroughDoors
+		c	Specifically, if a wooden door block is even considered to be passable by the pathfinder
+	f	Z	field_75519_k	canPassClosedWoodenDoors	#canPassClosedWoodenDoors, :, ~, canOpenDoors
+		c	If door blocks are considered passable even when closed
+	f	Z	field_75516_l	avoidsWater	#avoidsWater, :, ~, canFloat
+		c	If water blocks are avoided (at least by the pathfinder)
+	f	Z	field_75517_m	canSwim	#canSwim, :, ~, canSwim
+		c	If the entity can swim. Swimming AI enables this and the pathfinder will also cause the entity to swim straight upwards when underwater
+	m	(Lnet/minecraft/entity/EntityLiving;Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1671_1_	entitylivingIn	#entitylivingIn, entityIn, mob, :
+		p	2	p_i1671_2_	worldIn	#worldIn, :, world, :
+	m	()Z	func_75486_a	getAvoidsWater	#getAvoidsWater, :, ~, canFloat
+	m	(D)V	func_75489_a	setSpeed	#setSpeed, :, :, :
+		c	Sets the speed
+		p	1	p_75489_1_	speedIn	#speedIn, :, speed, :
+	m	(DDD)Lnet/minecraft/pathfinding/PathEntity;	func_75488_a	getPathToXYZ	#getPathToXYZ, :, findPathTo, findPath
+		c	Returns the path to the given coordinates
+		p	1	p_75488_1_	x	#x, :, :, :
+		p	3	p_75488_3_	y	#y, :, :, :
+		p	5	p_75488_5_	z	#z, :, :, :
+	m	(DDDD)Z	func_75492_a	tryMoveToXYZ	#tryMoveToXYZ, :, startMovingTo, moveTo
+		c	Try to find and set a path to XYZ. Returns true if successful.
+		p	1	p_75492_1_	x	#x, :, :, :
+		p	3	p_75492_3_	y	#y, :, :, :
+		p	5	p_75492_5_	z	#z, :, :, :
+		p	7	p_75492_7_	speedIn	#speedIn, :, speed, :
+	m	(IIIIIILnet/minecraft/util/Vec3;DD)Z	func_75483_a	isSafeToStandAt	#isSafeToStandAt, :, ~, canWalkOn
+		c	Returns true when an entity could stand at a position, including solid blocks under the entire entity. Args: xOffset, yOffset, zOffset, entityXSize, entityYSize, entityZSize, originPosition, vecX, vecZ
+		p	1	p_75483_1_	x	#~, ~, ~, x
+		p	2	p_75483_2_	y	#~, ~, ~, y
+		p	3	p_75483_3_	z	#~, ~, ~, z
+		p	4	p_75483_4_	width	#~, ~, ~, width
+		p	5	p_75483_5_	height	#~, ~, ~, height
+		p	6	p_75483_6_	depth	#~, ~, ~, depth
+		p	7	p_75483_7_	pos	#~, ~, ~, pos
+		p	8	p_75483_8_	distanceX	#~, ~, ~, distanceX
+		p	10	p_75483_10_	distanceZ	#~, ~, ~, distanceZ
+	m	(Lnet/minecraft/pathfinding/PathEntity;D)Z	func_75484_a	setPath	#setPath, :, startMovingAlong, moveAlong
+		c	sets the active path data if path is 100% unique compared to old path, checks to adjust path for sun avoiding ents and stores end coords
+		p	1	p_75484_1_	pathentityIn	#pathentityIn, :, path, :
+		p	2	p_75484_2_	speedIn	#speedIn, :, speed, :
+	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;III)Z	func_75493_a	isDirectPathBetweenPoints	#isDirectPathBetweenPoints, :, canPathDirectlyThrough, canMoveDirectly
+		c	Returns true when an entity of specified size could safely walk in a straight line between the two points. Args: pos1, pos2, entityXSize, entityYSize, entityZSize
+		p	1	p_75493_1_	posVec31	#posVec31, :, origin, from
+		p	2	p_75493_2_	posVec32	#posVec32, :, target, to
+		p	3	p_75493_3_	sizeX	#sizeX, :, :, width
+		p	4	p_75493_4_	sizeY	#sizeY, :, :, height
+		p	5	p_75493_5_	sizeZ	#sizeZ, :, :, depth
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/pathfinding/PathEntity;	func_75494_a	getPathToEntityLiving	#getPathToEntityLiving, :, findPathTo, findPath
+		c	Returns the path to the given EntityLiving
+		p	1	p_75494_1_	entityIn	#entityIn, :, entity, target
+	m	(Lnet/minecraft/entity/Entity;D)Z	func_75497_a	tryMoveToEntityLiving	#tryMoveToEntityLiving, :, startMovingTo, moveTo
+		c	Try to find and set a path to EntityLiving. Returns true if successful.
+		p	1	p_75497_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_75497_2_	speedIn	#speedIn, :, speed, :
+	m	(Z)V	func_75491_a	setAvoidsWater	#setAvoidsWater, :, ~, setCanFloat
+		p	1	p_75491_1_	canFloat	#~, ~, ~, canFloat
+	m	(IIIIIILnet/minecraft/util/Vec3;DD)Z	func_75496_b	isPositionClear	#isPositionClear, :, ~, canWalkAbove
+		c	Returns true if an entity does not collide with any solid blocks at the position. Args: xOffset, yOffset, zOffset, entityXSize, entityYSize, entityZSize, originPosition, vecX, vecZ
+		p	1	p_75496_1_	x	#~, ~, ~, x
+		p	2	p_75496_2_	y	#~, ~, ~, y
+		p	3	p_75496_3_	z	#~, ~, ~, z
+		p	4	p_75496_4_	width	#~, ~, ~, width
+		p	5	p_75496_5_	height	#~, ~, ~, height
+		p	6	p_75496_6_	depth	#~, ~, ~, depth
+		p	7	p_75496_7_	pos	#~, ~, ~, pos
+		p	8	p_75496_8_	distanceX	#~, ~, ~, distanceX
+		p	10	p_75496_10_	distanceZ	#~, ~, ~, distanceZ
+	m	(Z)V	func_75498_b	setBreakDoors	#setBreakDoors, :, ~, setCanOpenDoors
+		p	1	p_75498_1_	canOpenDoors	#~, ~, ~, canOpenDoors
+	m	()Z	func_75507_c	getCanBreakDoors	#getCanBreakDoors, :, ~, canOpenDoors
+		c	Returns true if the entity can break doors, false otherwise
+	m	(Z)V	func_75490_c	setEnterDoors	#setEnterDoors, :, ~, setCanWalkThroughDoors
+		c	Sets if the entity can enter open doors
+		p	1	p_75490_1_	canWalkThroughDoors	#~, ~, ~, canWalkThroughDoors
+	m	()F	func_111269_d	getPathSearchRange	#getPathSearchRange, :, getFollowRange, :
+		c	Gets the maximum distance that the path finding will search in.
+	m	(Z)V	func_75504_d	setAvoidSun	#setAvoidSun, :, ~, setAvoidSunlight
+		c	Sets if the path should avoid sunlight
+		p	1	p_75504_1_	avoidSunLight	#~, ~, ~, avoidSunLight
+	m	()Lnet/minecraft/pathfinding/PathEntity;	func_75505_d	getPath	#getPath, :, getCurrentPath, getPath
+		c	gets the actively used PathEntity
+	m	(Z)V	func_75495_e	setCanSwim	#setCanSwim, :, ~, setCanSwim
+		c	Sets if the entity can swim
+		p	1	p_75495_1_	canSwim	#~, ~, ~, canSwim
+	m	()V	func_75501_e	onUpdateNavigation	#onUpdateNavigation, :, tick, :
+	m	()Z	func_75500_f	noPath	#noPath, :, isIdle, isDone
+		c	If null path or reached the end
+	m	()V	func_75499_g	clearPathEntity	#clearPathEntity, clearPath, stop, :
+		c	sets active PathEntity to null
+	m	()V	func_75508_h	pathFollow	#pathFollow, :, continueFollowingPath, updatePath
+	m	()Lnet/minecraft/util/Vec3;	func_75502_i	getEntityPosition	#getEntityPosition, :, getPos, getTempPos
+	m	()I	func_75503_j	getPathableYPos	#getPathableYPos, :, ~, getSurfaceY
+		c	Gets the safe pathing Y position for the entity depending on if it can path swim or not
+	m	()Z	func_75485_k	canNavigate	#canNavigate, :, isAtValidPosition, canUpdatePath
+		c	If on ground or swimming and can swim
+	m	()Z	func_75506_l	isInLiquid	#isInLiquid, :, :, :
+		c	Returns true if the entity is in water or lava, false otherwise
+	m	()V	func_75487_m	removeSunnyPath	#removeSunnyPath, :, adjustPath, trimPath
+		c	Trims path data from the end to the first sun covered block

@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIMoveTowardsTarget	net/minecraft/entity/ai/EntityAIMoveTowardsTarget	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75431_a	theEntity	#theEntity, creature, mob, entity
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75429_b	targetEntity	#targetEntity, :, target, targetEntity
+	f	D	field_75430_c	movePosX	#movePosX, :, x, targetX
+	f	D	field_75427_d	movePosY	#movePosY, :, y, targetY
+	f	D	field_75428_e	movePosZ	#movePosZ, :, z, targetZ
+	f	D	field_75425_f	speed	#speed, :, :, :
+	f	F	field_75426_g	maxTargetDistance	#maxTargetDistance, :, maxDistance, :
+		c	If the distance to the target entity is further than this, this AI task will not run.
+	m	(Lnet/minecraft/entity/EntityCreature;DF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1640_1_	creature	#creature, :, mob, entity
+		p	2	p_i1640_2_	speedIn	#speedIn, :, speed, :
+		p	4	p_i1640_4_	targetMaxDistance	#targetMaxDistance, :, maxDistance, ~

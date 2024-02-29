@@ -1,0 +1,66 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces	net/minecraft/world/gen/structure/StructureVillagePieces	
+	m	()V	func_143016_a	registerVillagePieces	#registerVillagePieces, :, registerPieces, register
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Lnet/minecraft/world/gen/structure/StructureVillagePieces$PieceWeight;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Village;	func_75083_a	createPiece	#~, ~, ~, createPiece
+		p	0	p_75083_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_75083_1_	weight	#~, ~, ~, weight
+		p	2	p_75083_2_	pieces	#~, ~, ~, pieces
+		p	3	p_75083_3_	random	#~, ~, ~, random
+		p	4	p_75083_4_	x	#~, ~, ~, x
+		p	5	p_75083_5_	y	#~, ~, ~, y
+		p	6	p_75083_6_	z	#~, ~, ~, z
+		p	7	p_75083_7_	facing	#~, ~, ~, facing
+		p	8	p_75083_8_	generationDepth	#~, ~, ~, generationDepth
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	access$000	access$000	#~, ~, ~, selectNextPiece
+		p	0	p_access$000_0_	villageStart	#~, ~, ~, villageStart
+		p	1	p_access$000_1_	piecesList	#~, ~, ~, piecesList
+		p	2	p_access$000_2_	random	#~, ~, ~, random
+		p	3	p_access$000_3_	x	#~, ~, ~, x
+		p	4	p_access$000_4_	y	#~, ~, ~, y
+		p	5	p_access$000_5_	z	#~, ~, ~, z
+		p	6	p_access$000_6_	direction	#~, ~, ~, direction
+		p	7	p_access$000_7_	type	#~, ~, ~, type
+	m	(Ljava/util/List;)I	func_75079_a	updatePieceWeight	#updatePieceWeight, :, getTotalWeight, :
+		c	Will return the total weight of the given piece weights if more pieces can still be generated, or -1.
+		p	0	p_75079_0_	weights	#~, ~, pieces, weights
+	m	(Ljava/util/Random;I)Ljava/util/List;	func_75084_a	getStructureVillageWeightedPieceList	#getStructureVillageWeightedPieceList, :, getPieceData, getPieceChance
+		p	0	p_75084_0_	random	#random, :, :, rand
+		p	1	p_75084_1_	size	#size, :, :, weight
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	access$100	access$100	#~, ~, ~, syntheticAddRoad
+		p	0	p_access$100_0_	villageStart	#~, ~, ~, villageStart
+		p	1	p_access$100_1_	piecesList	#~, ~, ~, piecesList
+		p	2	p_access$100_2_	random	#~, ~, ~, random
+		p	3	p_access$100_3_	x	#~, ~, ~, x
+		p	4	p_access$100_4_	y	#~, ~, ~, y
+		p	5	p_access$100_5_	z	#~, ~, ~, z
+		p	6	p_access$100_6_	direction	#~, ~, ~, direction
+		p	7	p_access$100_7_	type	#~, ~, ~, type
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Village;	func_75081_c	getNextVillageComponent	#getNextVillageComponent, :, ~, generateNextPiece
+		c	attempts to find a next Village Component to be spawned
+		p	0	p_75081_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_75081_1_	pieces	#~, ~, ~, pieces
+		p	2	p_75081_2_	random	#~, ~, ~, random
+		p	3	p_75081_3_	x	#~, ~, ~, x
+		p	4	p_75081_4_	y	#~, ~, ~, y
+		p	5	p_75081_5_	z	#~, ~, ~, z
+		p	6	p_75081_6_	facing	#~, ~, ~, facing
+		p	7	p_75081_7_	generationDepth	#~, ~, ~, generationDepth
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	func_75077_d	getNextVillageStructureComponent	#getNextVillageStructureComponent, :, ~, tryGenerateNextPiece
+		c	attempts to find a next Structure Component to be spawned, private Village function
+		p	0	p_75077_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_75077_1_	pieces	#~, ~, ~, pieces
+		p	2	p_75077_2_	random	#~, ~, ~, random
+		p	3	p_75077_3_	x	#~, ~, ~, x
+		p	4	p_75077_4_	y	#~, ~, ~, y
+		p	5	p_75077_5_	z	#~, ~, ~, z
+		p	6	p_75077_6_	facing	#~, ~, ~, facing
+		p	7	p_75077_7_	generationDepth	#~, ~, ~, generationDepth
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	func_75080_e	getNextComponentVillagePath	#getNextComponentVillagePath, :, ~, generateRoadPiece
+		p	0	p_75080_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_75080_1_	pieces	#~, ~, ~, pieces
+		p	2	p_75080_2_	random	#~, ~, ~, random
+		p	3	p_75080_3_	x	#~, ~, ~, x
+		p	4	p_75080_4_	y	#~, ~, ~, y
+		p	5	p_75080_5_	z	#~, ~, ~, z
+		p	6	p_75080_6_	facing	#~, ~, ~, facing
+		p	7	p_75080_7_	generationDepth	#~, ~, ~, generationDepth

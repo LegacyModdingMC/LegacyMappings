@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/network/NetHandlerHandshakeTCP	net/minecraft/server/network/NetHandlerHandshakeTCP	
+	f	Lnet/minecraft/server/MinecraftServer;	field_147387_a	server	#server, :, :, :
+	f	Lnet/minecraft/network/NetworkManager;	field_147386_b	networkManager	#networkManager, :, connection, :
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/NetworkManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45295_1_	serverIn	#serverIn, :, server, :
+		p	2	p_i45295_2_	netManager	#netManager, :, connection, :

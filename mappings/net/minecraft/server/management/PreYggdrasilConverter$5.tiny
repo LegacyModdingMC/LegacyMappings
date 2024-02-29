@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PreYggdrasilConverter$5	net/minecraft/server/management/PreYggdrasilConverter$5	
+	f	Lnet/minecraft/server/MinecraftServer;	field_152741_a	field_152741_a	#~, ~, ~, ~
+	f	Ljava/util/List;	field_152742_b	field_152742_b	#~, ~, ~, ~
+	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed	onProfileLookupFailed	#~, ~, ~, ~
+		p	1	p_onProfileLookupFailed_1_	p_onProfileLookupFailed_1_	#~, ~, ~, ~
+		p	2	p_onProfileLookupFailed_2_	p_onProfileLookupFailed_2_	#~, ~, ~, ~
+	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded	onProfileLookupSucceeded	#~, ~, ~, ~
+		p	1	p_onProfileLookupSucceeded_1_	p_onProfileLookupSucceeded_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/MinecraftServer;Ljava/util/List;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1154_1_	height	#height, :, ~, ~
+		p	2	p_i1154_2_	scale	#scale, :, ~, ~

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerPlayer	net/minecraft/inventory/ContainerPlayer	
+	f	Lnet/minecraft/inventory/InventoryCrafting;	field_75181_e	craftMatrix	#craftMatrix, :, craftingInventory, :
+		c	The crafting matrix inventory.
+	f	Lnet/minecraft/inventory/IInventory;	field_75179_f	craftResult	#craftResult, :, craftingResultInventory, resultInventory
+	f	Z	field_75180_g	isLocalWorld	#isLocalWorld, :, onServer, isServer
+		c	Determines if inventory manipulation should be handled.
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_82862_h	thePlayer	#thePlayer, player, owner, player
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;ZLnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1819_1_	playerInventory	#playerInventory, :, inventory, playerInventory
+		p	2	p_i1819_2_	localWorld	#localWorld, :, onServer, isServer
+		p	3	p_i1819_3_	player	#player, playerIn, owner, player

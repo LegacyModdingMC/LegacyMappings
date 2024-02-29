@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPistonMoving	net/minecraft/block/BlockPistonMoving	
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;FI)Lnet/minecraft/util/AxisAlignedBB;	func_149964_a	getCollisionShape	#~, ~, ~, getCollisionShape
+		p	1	p_149964_1_	world	#~, ~, ~, world
+		p	2	p_149964_2_	x	#~, ~, ~, x
+		p	3	p_149964_3_	y	#~, ~, ~, y
+		p	4	p_149964_4_	z	#~, ~, ~, z
+		p	5	p_149964_5_	movedBlock	#~, ~, ~, movedBlock
+		p	6	p_149964_6_	progress	#~, ~, ~, progress
+		p	7	p_149964_7_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/block/Block;IIZZ)Lnet/minecraft/tileentity/TileEntity;	func_149962_a	getTileEntity	#getTileEntity, :, ~, createMovingBlockEntity
+		p	0	p_149962_0_	movedBlock	#~, ~, ~, movedBlock
+		p	1	p_149962_1_	movedMetadata	#~, ~, ~, movedMetadata
+		p	2	p_149962_2_	facing	#~, ~, ~, facing
+		p	3	p_149962_3_	extending	#~, ~, ~, extending
+		p	4	p_149962_4_	source	#~, ~, ~, source
+	m	(Lnet/minecraft/world/IBlockAccess;III)Lnet/minecraft/tileentity/TileEntityPiston;	func_149963_e	getMovingBlockEntity	#~, ~, ~, getMovingBlockEntity
+		p	1	p_149963_1_	world	#~, ~, ~, world
+		p	2	p_149963_2_	x	#~, ~, ~, x
+		p	3	p_149963_3_	y	#~, ~, ~, y
+		p	4	p_149963_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

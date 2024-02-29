@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C09PacketHeldItemChange	net/minecraft/network/play/client/C09PacketHeldItemChange	
+	f	I	field_149615_a	slotId	#slotId, :, selectedSlot, slot
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45262_1_	slotId	#slotId, :, slot, :
+	m	()I	func_149614_c	getSlotId	#getSlotId, :, getSelectedSlot, getSlot
+	m	()V	<init>	<init>	#~, ~, ~, ~

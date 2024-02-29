@@ -1,0 +1,50 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/PlayerSelector	net/minecraft/command/PlayerSelector	
+	f	Ljava/util/regex/Pattern;	field_82389_a	tokenPattern	#tokenPattern, TOKEN_PATTERN, ~, TARGET_SELECTOR_PATTERN
+		c	This matches the at-tokens introduced for command blocks, including their arguments, if any.
+	f	Ljava/util/regex/Pattern;	field_82387_b	intListPattern	#intListPattern, INT_LIST_PATTERN, ~, VALUE_PATTERN
+		c	This matches things like "-1,,4", and is used for getting x,y,z,range from the token's argument list.
+	f	Ljava/util/regex/Pattern;	field_82388_c	keyValueListPattern	#keyValueListPattern, KEY_VALUE_LIST_PATTERN, ~, ARG_PATTERN
+		c	This matches things like "rm=4,c=2" and is used for handling named token arguments.
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;	func_82386_a	matchOnePlayer	#matchOnePlayer, :, selectPlayer, selectFirstPlayer
+		c	Returns the one player that matches the given at-token.  Returns null if more than one player matches.
+		p	0	p_82386_0_	sender	#sender, :, :, source
+		p	1	p_82386_1_	token	#token, :, ~, s
+	m	(Ljava/lang/String;)Z	func_82377_a	matchesMultiplePlayers	#matchesMultiplePlayers, :, ~, matchesMultiple
+		c	Returns whether the given pattern can match more than one player.
+		p	0	p_82377_0_	selectorStr	#selectorStr, :, ~, s
+	m	(Ljava/lang/String;Ljava/lang/String;)Z	func_82383_a	hasTheseArguments	#hasTheseArguments, :, ~, matchesRawTarget
+		c	Returns whether the given token (parameter 1) has exactly the given arguments (parameter 2).
+		p	0	p_82383_0_	s	#~, ~, ~, s
+		p	1	p_82383_1_	rawTarget	#~, ~, ~, rawTarget
+	m	(Ljava/util/Map;)Ljava/util/Map;	func_96560_a	getScoreMap	#getScoreMap, :, ~, parseScoreboardScores
+		p	0	p_96560_0_	params	#params, :, ~, args
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/util/IChatComponent;	func_150869_b	matchEntitiesToChatComponent	#matchEntitiesToChatComponent, matchEntitiesToTextComponent, ~, getSelectionAsText
+		p	0	p_150869_0_	sender	#sender, :, source, :
+		p	1	p_150869_1_	token	#token, :, ~, s
+	m	(Ljava/lang/String;)Z	func_82378_b	hasArguments	#hasArguments, isSelector, ~, isValid
+		c	Returns whether the given token has any arguments set.
+		p	0	p_82378_0_	selectorStr	#selectorStr, :, args, s
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)[Lnet/minecraft/entity/player/EntityPlayerMP;	func_82380_c	matchPlayers	#matchPlayers, :, selectPlayers, select
+		c	Returns an array of all players matched by the given at-token.
+		p	0	p_82380_0_	source	#~, ~, source, :
+		p	1	p_82380_1_	s	#~, ~, ~, s
+	m	(Ljava/lang/String;)I	func_82384_c	getDefaultMinimumRange	#getDefaultMinimumRange, :, ~, getMinRotation
+		c	Gets the default minimum range (argument rm).
+		p	0	p_82384_0_	s	#~, ~, ~, s
+	m	(Ljava/lang/String;)I	func_82379_d	getDefaultMaximumRange	#getDefaultMaximumRange, :, ~, getMaxRotation
+		c	Gets the default maximum range (argument r).
+		p	0	p_82379_0_	s	#~, ~, ~, s
+	m	(Ljava/lang/String;)I	func_82376_e	getDefaultMaximumLevel	#getDefaultMaximumLevel, :, ~, getMaxXp
+		c	Gets the default maximum experience level (argument l)
+		p	0	p_82376_0_	s	#~, ~, ~, s
+	m	(Ljava/lang/String;)I	func_82375_f	getDefaultMinimumLevel	#getDefaultMinimumLevel, :, ~, getMinXp
+		c	Gets the default minimum experience level (argument lm)
+		p	0	p_82375_0_	s	#~, ~, ~, s
+	m	(Ljava/lang/String;)I	func_82382_g	getDefaultCount	#getDefaultCount, :, ~, getTargetCount
+		c	Gets the default number of players to return (argument c, 0 for infinite)
+		p	0	p_82382_0_	rawTarget	#~, ~, ~, rawTarget
+	m	(Ljava/lang/String;)Ljava/util/Map;	func_82381_h	getArgumentMap	#getArgumentMap, :, ~, parseArgs
+		c	Parses the given argument string, turning it into a HashMap&lt;String, String&gt; of name-&gt;value.
+		p	0	p_82381_0_	argumentString	#argumentString, :, ~, s
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

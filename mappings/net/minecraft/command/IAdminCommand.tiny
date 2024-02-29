@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/IAdminCommand	net/minecraft/command/IAdminCommand	
+	m	(Lnet/minecraft/command/ICommandSender;Lnet/minecraft/command/ICommand;ILjava/lang/String;[Ljava/lang/Object;)V	func_152372_a	notifyOperators	#notifyOperators, notifyListener, run, sendSuccess
+		c	Send an informative message to the server operators
+		p	1	p_152372_1_	sender	#sender, :, :, ~
+		p	2	p_152372_2_	command	#command, :, :, ~
+		p	3	p_152372_3_	flags	#flags, :, permissionLevel, ~
+		p	4	p_152372_4_	msgFormat	#msgFormat, translationKey, label, ~
+		p	5	p_152372_5_	msgParams	#msgParams, translationArgs, args, ~

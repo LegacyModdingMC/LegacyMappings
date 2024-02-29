@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EnumFacing	net/minecraft/util/EnumFacing	
+	f	Lnet/minecraft/util/EnumFacing;	DOWN	DOWN	#~, ~, DOWN, :
+	f	Lnet/minecraft/util/EnumFacing;	UP	UP	#~, ~, UP, :
+	f	Lnet/minecraft/util/EnumFacing;	NORTH	NORTH	#~, ~, NORTH, :
+	f	Lnet/minecraft/util/EnumFacing;	SOUTH	SOUTH	#~, ~, SOUTH, :
+	f	Lnet/minecraft/util/EnumFacing;	EAST	EAST	#~, ~, EAST, :
+	f	Lnet/minecraft/util/EnumFacing;	WEST	WEST	#~, ~, WEST, :
+	f	I	field_82603_g	order_a	#order_a, :, id, :
+		c	Face order for D-U-N-S-E-W.
+	f	I	field_82613_h	order_b	#order_b, :, opposite, :
+		c	Face order for U-D-S-N-W-E.
+	f	I	field_82614_i	frontOffsetX	#frontOffsetX, :, offsetX, :
+	f	I	field_82611_j	frontOffsetY	#frontOffsetY, :, offsetY, :
+	f	I	field_82612_k	frontOffsetZ	#frontOffsetZ, :, offsetZ, :
+	f	[Lnet/minecraft/util/EnumFacing;	field_82609_l	faceList	#faceList, VALUES, ALL, :
+		c	List of all values in EnumFacing. Order is D-U-N-S-E-W.
+	f	[Lnet/minecraft/util/EnumFacing;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;IIIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1367_3_	id	#~, ~, id, :
+		p	4	p_i1367_4_	opposite	#~, ~, opposite, :
+		p	5	p_i1367_5_	offsetX	#~, ~, offsetX, :
+		p	6	p_i1367_6_	offsetY	#~, ~, offsetY, :
+		p	7	p_i1367_7_	offsetZ	#~, ~, offsetZ, :
+		p	1	p_i1367_1_	p_i1367_1_	#~, ~, ~, ~
+		p	2	p_i1367_2_	p_i1367_2_	#~, ~, ~, ~
+	m	(I)Lnet/minecraft/util/EnumFacing;	func_82600_a	getFront	#getFront, byIndex, getById, byId
+		c	Returns the facing that represents the block in front of it.
+		p	0	p_82600_0_	index	#index, :, id, :
+	m	()I	func_82601_c	getFrontOffsetX	#getFrontOffsetX, getXOffset, getOffsetX, :
+		c	Returns a offset that addresses the block in front of this facing.
+	m	()I	func_96559_d	getFrontOffsetY	#getFrontOffsetY, getYOffset, getOffsetY, :
+		c	Gets the offset in the y direction to the block in front of this facing.
+	m	()I	func_82599_e	getFrontOffsetZ	#getFrontOffsetZ, getZOffset, getOffsetZ, :
+		c	Returns a offset that addresses the block in front of this facing.
+	m	(Ljava/lang/String;)Lnet/minecraft/util/EnumFacing;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/util/EnumFacing;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

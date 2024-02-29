@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRail	net/minecraft/block/BlockRail	
+	f	Lnet/minecraft/util/IIcon;	field_150056_b	turnedSprite	#~, ~, ~, turnedSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

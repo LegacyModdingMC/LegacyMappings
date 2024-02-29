@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderFallingBlock	net/minecraft/client/renderer/entity/RenderFallingBlock	
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147920_a	blockRenderer	#~, ~, ~, blockRenderer
+	m	()V	<init>	<init>	#~, ~, ~, ~

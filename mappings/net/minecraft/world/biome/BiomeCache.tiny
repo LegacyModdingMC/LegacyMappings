@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeCache	net/minecraft/world/biome/BiomeCache	
+	f	Lnet/minecraft/world/biome/WorldChunkManager;	field_76844_a	chunkManager	#chunkManager, provider, biomeSource, source
+		c	Reference to the WorldChunkManager
+	f	J	field_76842_b	lastCleanupTime	#lastCleanupTime, :, ~, timeOfLastCleanUp
+		c	The last time this BiomeCache was cleaned, in milliseconds.
+	f	Lnet/minecraft/util/LongHashMap;	field_76843_c	cacheMap	#cacheMap, :, ~, entriesByChunkPos
+		c	The map of keys to BiomeCacheBlocks. Keys are based on the chunk x, z coordinates as (x | z << 32).
+	f	Ljava/util/List;	field_76841_d	cache	#cache, :, slots, entries
+		c	The list of cached BiomeCacheBlocks
+	m	()V	func_76838_a	cleanupCache	#cleanupCache, :, ~, tick
+		c	Removes BiomeCacheBlocks from this cache that haven't been accessed in at least 30 seconds.
+	m	(II)Lnet/minecraft/world/biome/BiomeCache$Block;	func_76840_a	getBiomeCacheBlock	#getBiomeCacheBlock, getEntry, ~, getEntry
+		c	Returns a biome cache block at location specified.
+		p	1	p_76840_1_	x	#x, :, ~, x
+		p	2	p_76840_2_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/biome/BiomeCache;)Lnet/minecraft/world/biome/WorldChunkManager;	access$000	access$000	#~, ~, ~, getBiomeSource
+		p	0	p_access$000_0_	cache	#~, ~, ~, cache
+	m	(II)Lnet/minecraft/world/biome/BiomeGenBase;	func_76837_b	getBiomeGenAt	#getBiomeGenAt, :, ~, getBiome
+		c	Returns the BiomeGenBase related to the x, z position from the cache.
+		p	1	p_76837_1_	x	#~, ~, ~, x
+		p	2	p_76837_2_	z	#~, ~, ~, z
+	m	(II)[Lnet/minecraft/world/biome/BiomeGenBase;	func_76839_e	getCachedBiomes	#getCachedBiomes, :, ~, getBiomesInChunk
+		c	Returns the array of cached biome types in the BiomeCacheBlock at the given location.
+		p	1	p_76839_1_	x	#x, :, ~, x
+		p	2	p_76839_2_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/biome/WorldChunkManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1973_1_	chunkManagerIn	#chunkManagerIn, provider, ~, source

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundManager$2	net/minecraft/client/audio/SoundManager$2	
+	f	Lnet/minecraft/util/ResourceLocation;	field_148592_a	id	#~, ~, ~, id
+	m	(Ljava/net/URL;)Ljava/net/URLConnection;	openConnection	openConnection	#~, ~, ~, ~
+		p	1	p_openConnection_1_	url	#~, ~, ~, url
+	m	(Lnet/minecraft/util/ResourceLocation;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45116_1_	p_i45116_1_	#~, ~, ~, ~

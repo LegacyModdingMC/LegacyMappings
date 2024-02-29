@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiWinGame	net/minecraft/client/gui/GuiWinGame	
+	f	Lorg/apache/logging/log4j/Logger;	field_146580_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_146576_f	MINECRAFT_LOGO	#MINECRAFT_LOGO, :, MINECRAFT_TEXTURE, TITLE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_146577_g	VIGNETTE_TEXTURE	#VIGNETTE_TEXTURE, :, :, VIGNETTE_LOCATION
+	f	I	field_146581_h	time	#time, :, totalTicks, ticksOpen
+	f	Ljava/util/List;	field_146582_i	lines	#lines, :, credits, creditTextLines
+	f	I	field_146579_r	totalScrollLength	#totalScrollLength, :, creditsHeight, :
+	f	F	field_146578_s	scrollSpeed	#scrollSpeed, :, speed, :
+	m	()V	func_146574_g	sendRespawnPacket	#sendRespawnPacket, :, close, respawn
+	m	(IIF)V	func_146575_b	drawWinGameScreen	#drawWinGameScreen, :, renderBackground, :
+		p	1	p_146575_1_	mouseX	#~, ~, mouseX, :
+		p	2	p_146575_2_	mouseY	#~, ~, mouseY, :
+		p	3	p_146575_3_	tickDelta	#~, ~, tickDelta, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

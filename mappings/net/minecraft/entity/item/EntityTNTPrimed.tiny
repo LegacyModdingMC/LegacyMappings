@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityTNTPrimed	net/minecraft/entity/item/EntityTNTPrimed	
+	f	I	field_70516_a	fuse	#fuse, :, fuseTimer, :
+		c	How long the fuse is
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_94084_b	tntPlacedBy	#tntPlacedBy, :, igniter, :
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1730_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1730_2_	x	#x, :, :, :
+		p	4	p_i1730_4_	y	#y, :, :, :
+		p	6	p_i1730_6_	z	#z, :, :, :
+		p	8	p_i1730_8_	igniter	#igniter, :, :, :
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_94083_c	getTntPlacedBy	#getTntPlacedBy, :, getIgniter, :
+		c	returns null or the entityliving it was placed or ignited by
+	m	()V	func_70515_d	explode	#explode, :, :, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1729_1_	worldIn	#worldIn, :, ~, ~

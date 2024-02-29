@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerChest	net/minecraft/inventory/ContainerChest	
+	f	Lnet/minecraft/inventory/IInventory;	field_75155_e	lowerChestInventory	#lowerChestInventory, :, inventory, chest
+		c	On the server, this may be a {@link net.minecraft.tileentity.TileEntityChest} (corresponding to a single chest block) or an {@link net.minecraft.inventory.InventoryLargeChest} (corresponding to a large chest); chests larger than 2 chest blocks are represented by several nested InventoryLargeChests. See {@link net.minecraft.block.BlockChest#getContainer()} for more information. On the client, this is an InventoryBasic.
+	f	I	field_75154_f	numRows	#numRows, :, hieght, rows
+	m	()Lnet/minecraft/inventory/IInventory;	func_85151_d	getLowerChestInventory	#getLowerChestInventory, :, getInventory, getChest
+		c	Return this chest container's lower chest inventory.
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/inventory/IInventory;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1806_1_	chest	#~, ~, ~, chest
+		p	2	p_i1806_2_	playerInventory	#~, ~, ~, playerInventory

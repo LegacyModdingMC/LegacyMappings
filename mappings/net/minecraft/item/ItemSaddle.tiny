@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSaddle	net/minecraft/item/ItemSaddle	
+	m	()V	<init>	<init>	#~, ~, ~, ~

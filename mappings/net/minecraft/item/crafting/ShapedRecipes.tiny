@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/ShapedRecipes	net/minecraft/item/crafting/ShapedRecipes	
+	f	I	field_77576_b	recipeWidth	#recipeWidth, :, width, :
+		c	How many horizontal slots this recipe is wide.
+	f	I	field_77577_c	recipeHeight	#recipeHeight, :, height, :
+		c	How many vertical slots this recipe uses.
+	f	[Lnet/minecraft/item/ItemStack;	field_77574_d	recipeItems	#recipeItems, :, ingredients, :
+		c	Is a array of ItemStack that composes the recipe.
+	f	Lnet/minecraft/item/ItemStack;	field_77575_e	recipeOutput	#recipeOutput, :, result, :
+		c	Is the ItemStack that you get when craft the recipe.
+	f	Z	field_92101_f	copyIngredientNBT	#copyIngredientNBT, :, copyIngredientsNbt, copyNbt
+	m	(II[Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1917_1_	width	#width, :, :, :
+		p	2	p_i1917_2_	height	#height, :, :, :
+		p	3	p_i1917_3_	ingredientsIn	#ingredientsIn, :, ingredients, inputs
+		p	4	p_i1917_4_	output	#output, :, result, :
+	m	(Lnet/minecraft/inventory/InventoryCrafting;IIZ)Z	func_77573_a	checkMatch	#checkMatch, :, ~, matches
+		c	Checks if the region of a crafting inventory is match for the recipe.
+		p	1	p_77573_1_	craftingInventory	#craftingInventory, :, inventory, :
+		p	2	p_77573_2_	horizontalOffset	#~, ~, width, horizontalOffset
+		p	3	p_77573_3_	verticalOffset	#~, ~, height, verticalOffset
+		p	4	p_77573_4_	horizontal	#~, ~, ~, horizontal
+	m	()Lnet/minecraft/item/crafting/ShapedRecipes;	func_92100_c	setCopyNbt	#~, ~, ~, setCopyNbt

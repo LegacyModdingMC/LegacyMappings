@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/ISound	net/minecraft/client/audio/ISound	
+	m	()Lnet/minecraft/util/ResourceLocation;	func_147650_b	getPositionedSoundLocation	#getPositionedSoundLocation, getSoundLocation, getIdentifier, getLocation
+	m	()Z	func_147657_c	canRepeat	#canRepeat, :, isRepeatable, isLooping
+	m	()I	func_147652_d	getRepeatDelay	#getRepeatDelay, :, :, getPeriod
+	m	()F	func_147653_e	getVolume	#getVolume, :, :, :
+	m	()F	func_147655_f	getPitch	#getPitch, :, :, :
+	m	()F	func_147649_g	getXPosF	#getXPosF, :, getX, :
+	m	()F	func_147654_h	getYPosF	#getYPosF, :, getY, :
+	m	()F	func_147651_i	getZPosF	#getZPosF, :, getZ, :
+	m	()Lnet/minecraft/client/audio/ISound$AttenuationType;	func_147656_j	getAttenuationType	#getAttenuationType, :, ~, getAttenuationType

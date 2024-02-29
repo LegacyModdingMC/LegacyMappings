@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityHorse$GroupData	net/minecraft/entity/passive/EntityHorse$GroupData	
+	f	I	field_111107_a	horseType	#horseType, :, ~, type
+	f	I	field_111106_b	horseVariant	#horseVariant, :, ~, variant
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1684_1_	type	#type, :, ~, type
+		p	2	p_i1684_2_	variant	#variant, :, ~, variant

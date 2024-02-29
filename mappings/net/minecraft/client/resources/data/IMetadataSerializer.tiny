@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/IMetadataSerializer	net/minecraft/client/resources/data/IMetadataSerializer	
+	f	Lnet/minecraft/util/IRegistry;	field_110508_a	metadataSectionSerializerRegistry	#metadataSectionSerializerRegistry, :, REGISTRY, registry
+	f	Lcom/google/gson/GsonBuilder;	field_110506_b	gsonBuilder	#gsonBuilder, :, GSON_BUILDER, gsonBuilder
+	f	Lcom/google/gson/Gson;	field_110507_c	gson	#gson, :, :, :
+		c	Cached Gson instance. Set to null when more sections are registered, and then re-created from the builder.
+	m	()Lcom/google/gson/Gson;	func_110505_a	getGson	#getGson, :, :, :
+		c	Returns a Gson instance with type adapters registered for metadata sections.
+	m	(Lnet/minecraft/client/resources/data/IMetadataSectionSerializer;Ljava/lang/Class;)V	func_110504_a	registerMetadataSectionType	#registerMetadataSectionType, :, register, :
+		p	1	p_110504_1_	metadataSectionSerializer	#metadataSectionSerializer, :, serializer, :
+		p	2	p_110504_2_	clazz	#clazz, :, classType, metadataType
+	m	(Ljava/lang/String;Lcom/google/gson/JsonObject;)Lnet/minecraft/client/resources/data/IMetadataSection;	func_110503_a	parseMetadataSection	#parseMetadataSection, :, fromJson, readMetadata
+		p	1	p_110503_1_	sectionName	#sectionName, :, name, :
+		p	2	p_110503_2_	json	#json, :, jsonObject, json
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureComponent$BlockSelector	net/minecraft/world/gen/structure/StructureComponent$BlockSelector	
+	f	Lnet/minecraft/block/Block;	field_151562_a	blockstate	#blockstate, :, ~, block
+	f	I	field_75065_b	selectedBlockMetaData	#selectedBlockMetaData, :, ~, metadata
+	m	()Lnet/minecraft/block/Block;	func_151561_a	getBlock	#~, ~, ~, getBlock
+	m	(Ljava/util/Random;IIIZ)V	func_75062_a	selectBlocks	#selectBlocks, :, ~, pick
+		c	picks Block Ids and Metadata (Silverfish)
+		p	1	p_75062_1_	rand	#rand, :, ~, randomm
+		p	2	p_75062_2_	x	#x, :, ~, x
+		p	3	p_75062_3_	y	#y, :, ~, y
+		p	4	p_75062_4_	z	#z, :, ~, z
+		p	5	p_75062_5_	wall	#wall, :, ~, isNonAir
+	m	()I	func_75064_b	getSelectedBlockMetaData	#getSelectedBlockMetaData, :, ~, getMetadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

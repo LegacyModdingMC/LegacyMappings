@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStoneBrick	net/minecraft/block/BlockStoneBrick	
+	f	[Lnet/minecraft/util/IIcon;	field_150143_M	sprites	#~, ~, ~, sprites
+	f	[Ljava/lang/String;	field_150142_a	VARIANTS	#~, ~, ~, VARIANTS
+	f	[Ljava/lang/String;	field_150141_b	SPRITE_NAMES	#~, ~, ~, SPRITE_NAMES
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

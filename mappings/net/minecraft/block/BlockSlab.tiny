@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSlab	net/minecraft/block/BlockSlab	
+	f	Z	field_150004_a	isFullBlock	#isFullBlock, :, ~, doubleSlab
+	m	(Lnet/minecraft/block/Block;)Z	func_150003_a	isSlab	#isSlab, :, :, isSingleSlab
+		p	0	p_150003_0_	blockIn	#blockIn, :, block, :
+	m	(I)Ljava/lang/String;	func_150002_b	getFullSlabName	#getFullSlabName, getTranslationKey, getVariantTranslationKey, getName
+		c	Returns the slab block name with the type associated with it
+		p	1	p_150002_1_	meta	#meta, :, slabType, variant
+	m	(ZLnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45410_1_	doubleSlab	#~, ~, ~, doubleSlab
+		p	2	p_i45410_2_	material	#~, ~, ~, material

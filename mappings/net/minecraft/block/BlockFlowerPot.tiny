@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFlowerPot	net/minecraft/block/BlockFlowerPot	
+	m	(Lnet/minecraft/block/Block;I)Z	func_149928_a	canNotContain	#canNotContain, canContain, isPottable, isPottablePlant
+		p	1	p_149928_1_	blockIn	#blockIn, :, block, :
+		p	2	p_149928_2_	meta	#meta, :, grassType, metadata
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/tileentity/TileEntityFlowerPot;	func_149929_e	getFlowerPotBlockEntity	#~, ~, ~, getFlowerPotBlockEntity
+		p	1	p_149929_1_	world	#~, ~, ~, world
+		p	2	p_149929_2_	x	#~, ~, ~, x
+		p	3	p_149929_3_	y	#~, ~, ~, y
+		p	4	p_149929_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

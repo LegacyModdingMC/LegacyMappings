@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/login/client/C00PacketLoginStart	net/minecraft/network/login/client/C00PacketLoginStart	
+	f	Lcom/mojang/authlib/GameProfile;	field_149305_a	profile	#profile, :, :, :
+	m	(Lcom/mojang/authlib/GameProfile;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45270_1_	profileIn	#profileIn, :, profile, :
+	m	()Lcom/mojang/authlib/GameProfile;	func_149304_c	getProfile	#getProfile, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

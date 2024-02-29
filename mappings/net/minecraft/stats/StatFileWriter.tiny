@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatFileWriter	net/minecraft/stats/StatFileWriter	
+	f	Ljava/util/Map;	field_150875_a	statsData	#statsData, :, stats, counters
+	m	(Lnet/minecraft/stats/Achievement;)Z	func_77443_a	hasAchievementUnlocked	#hasAchievementUnlocked, :, hasAchievement, :
+		c	Returns true if the achievement has been unlocked.
+		p	1	p_77443_1_	achievementIn	#achievementIn, :, achievement, :
+	m	(Lnet/minecraft/stats/StatBase;)I	func_77444_a	writeStat	#writeStat, readStat, getStatLevel, get
+		c	Reads the given stat and returns its value as an int.
+		p	1	p_77444_1_	stat	#stat, :, :, :
+	m	(Lnet/minecraft/stats/StatBase;Lnet/minecraft/util/IJsonSerializable;)Lnet/minecraft/util/IJsonSerializable;	func_150872_a	setProgress	#setProgress, :, setStat, setProgress
+		p	1	p_150872_1_	stat	#~, ~, stat, :
+		p	2	p_150872_2_	progress	#~, ~, provider, progress
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/stats/StatBase;I)V	func_150873_a	unlockAchievement	#unlockAchievement, :, setStatLevel, set
+		c	Triggers the logging of an achievement and attempts to announce to server
+		p	1	p_150873_1_	playerIn	#playerIn, :, player, :
+		p	2	p_150873_2_	statIn	#statIn, :, stat, :
+		p	3	p_150873_3_	value	#~, ~, amount, value
+	m	(Lnet/minecraft/stats/Achievement;)Z	func_77442_b	canUnlockAchievement	#canUnlockAchievement, :, hasParentAchievement, :
+		c	Returns true if the parent has been unlocked, or there is no parent
+		p	1	p_77442_1_	achievementIn	#achievementIn, :, achievement, :
+	m	(Lnet/minecraft/stats/StatBase;)Lnet/minecraft/util/IJsonSerializable;	func_150870_b	getProgress	#getProgress, :, getStat, getProgress
+		p	1	p_150870_1_	stat	#~, ~, stat, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/stats/StatBase;I)V	func_150871_b	increaseStat	#increaseStat, :, addStatLevel, increment
+		p	1	p_150871_1_	player	#player, :, :, :
+		p	2	p_150871_2_	stat	#stat, :, :, :
+		p	3	p_150871_3_	amount	#amount, :, :, :
+	m	(Lnet/minecraft/stats/Achievement;)I	func_150874_c	countRequirementsUntilAvailable	#countRequirementsUntilAvailable, :, getAchievementDepth, get
+		p	1	p_150874_1_	achievementIn	#achievementIn, :, achievement, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

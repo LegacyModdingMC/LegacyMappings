@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundList$SoundEntry	net/minecraft/client/audio/SoundList$SoundEntry	
+	f	Ljava/lang/String;	field_148569_a	name	#name, :, ~, name
+	f	F	field_148567_b	volume	#volume, :, ~, volume
+	f	F	field_148568_c	pitch	#pitch, :, ~, pitch
+	f	I	field_148565_d	weight	#weight, :, ~, weight
+	f	Lnet/minecraft/client/audio/SoundList$SoundEntry$Type;	field_148566_e	type	#type, :, ~, type
+	f	Z	field_148564_f	streaming	#streaming, :, ~, stream
+	m	()Ljava/lang/String;	func_148556_a	getSoundEntryName	#getSoundEntryName, :, ~, getName
+	m	(F)V	func_148553_a	setSoundEntryVolume	#setSoundEntryVolume, :, ~, setVolume
+		p	1	p_148553_1_	volumeIn	#volumeIn, :, ~, volume
+	m	(I)V	func_148554_a	setSoundEntryWeight	#setSoundEntryWeight, :, ~, setWeight
+		p	1	p_148554_1_	weightIn	#weightIn, :, ~, weight
+	m	(Lnet/minecraft/client/audio/SoundList$SoundEntry$Type;)V	func_148562_a	setSoundEntryType	#setSoundEntryType, :, ~, setType
+		p	1	p_148562_1_	typeIn	#typeIn, :, ~, type
+	m	(Ljava/lang/String;)V	func_148561_a	setSoundEntryName	#setSoundEntryName, :, ~, setName
+		p	1	p_148561_1_	nameIn	#nameIn, :, ~, name
+	m	(Z)V	func_148557_a	setStreaming	#setStreaming, :, ~, setStream
+		p	1	p_148557_1_	isStreaming	#isStreaming, :, ~, stream
+	m	()F	func_148558_b	getSoundEntryVolume	#getSoundEntryVolume, :, ~, getVolume
+	m	(F)V	func_148559_b	setSoundEntryPitch	#setSoundEntryPitch, :, ~, setPitch
+		p	1	p_148559_1_	pitchIn	#pitchIn, :, ~, pitch
+	m	()F	func_148560_c	getSoundEntryPitch	#getSoundEntryPitch, :, ~, getPitch
+	m	()I	func_148555_d	getSoundEntryWeight	#getSoundEntryWeight, :, ~, getWeight
+	m	()Lnet/minecraft/client/audio/SoundList$SoundEntry$Type;	func_148563_e	getSoundEntryType	#getSoundEntryType, :, ~, getType
+	m	()Z	func_148552_f	isStreaming	#isStreaming, :, ~, isStream
+	m	()V	<init>	<init>	#~, ~, ~, ~

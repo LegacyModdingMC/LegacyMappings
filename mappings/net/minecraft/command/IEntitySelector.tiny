@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/IEntitySelector	net/minecraft/command/IEntitySelector	
+	f	Lnet/minecraft/command/IEntitySelector;	field_94557_a	selectAnything	#selectAnything, IS_ALIVE, VALID_ENTITY, ALIVE
+	f	Lnet/minecraft/command/IEntitySelector;	field_152785_b	IS_STANDALONE	#IS_STANDALONE, :, ~, NOT_RIDING
+		c	Selects only entities which are neither ridden by anything nor ride on anything
+	f	Lnet/minecraft/command/IEntitySelector;	field_96566_b	selectInventories	#selectInventories, HAS_INVENTORY, VALID_INVENTORIES, INVENTORY
+	m	(Lnet/minecraft/entity/Entity;)Z	func_82704_a	isEntityApplicable	#isEntityApplicable, :, test, apply
+		c	Return whether the specified entity is applicable to this filter.
+		p	1	p_82704_1_	entity	#~, ~, entity, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

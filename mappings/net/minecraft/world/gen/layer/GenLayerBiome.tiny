@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerBiome	net/minecraft/world/gen/layer/GenLayerBiome	
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_151623_c	warmBiomes	#warmBiomes, :, :, :
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_151621_d	mediumBiomes	#mediumBiomes, :, ~, temperateBiomes
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_151622_e	coldBiomes	#coldBiomes, :, ~, coolBiomes
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_151620_f	iceBiomes	#iceBiomes, :, coolBiomes, snowyBiomes
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;Lnet/minecraft/world/WorldType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2122_1_	seed	#~, ~, ~, seed
+		p	3	p_i2122_3_	parent	#~, ~, ~, parent
+		p	4	p_i2122_4_	generatorType	#~, ~, ~, generatorType

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/AnimationFrame	net/minecraft/client/resources/data/AnimationFrame	
+	f	I	field_110499_a	frameIndex	#frameIndex, :, index, :
+	f	I	field_110498_b	frameTime	#frameTime, :, time, :
+	m	()Z	func_110495_a	hasNoTime	#hasNoTime, :, usesDefaultFrameTime, :
+	m	()I	func_110497_b	getFrameTime	#getFrameTime, :, getTime, :
+	m	()I	func_110496_c	getFrameIndex	#getFrameIndex, :, getIndex, :
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1307_1_	frameIndexIn	#frameIndexIn, :, ~, index
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1308_1_	frameIndexIn	#frameIndexIn, :, ~, index
+		p	2	p_i1308_2_	frameTimeIn	#frameTimeIn, :, ~, time

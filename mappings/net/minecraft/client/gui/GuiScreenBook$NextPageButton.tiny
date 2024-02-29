@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenBook$NextPageButton	net/minecraft/client/gui/GuiScreenBook$NextPageButton	
+	f	Z	field_146151_o	isForward	#isForward, :, ~, clickable
+	m	(IIIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1079_1_	onlineScreenIn	#onlineScreenIn, :, ~, id
+		p	2	p_i1079_2_	x	#~, ~, ~, x
+		p	3	p_i1079_3_	y	#~, ~, ~, y
+		p	4	p_i1079_4_	clickable	#~, ~, ~, clickable

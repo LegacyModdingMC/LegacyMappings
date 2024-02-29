@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetHandlerPlayServer$2	net/minecraft/network/NetHandlerPlayServer$2	
+	f	Lnet/minecraft/network/Packet;	field_151287_a	packet	#~, ~, packet, :
+	f	Lnet/minecraft/network/NetHandlerPlayServer;	field_151286_b	networkHandler	#~, ~, ~, networkHandler
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(Lnet/minecraft/network/NetHandlerPlayServer;Lnet/minecraft/network/Packet;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45294_1_	p_i45294_1_	#~, ~, ~, ~
+		p	2	p_i45294_2_	p_i45294_2_	#~, ~, ~, ~

@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/TextureMetadataSectionSerializer	net/minecraft/client/resources/data/TextureMetadataSectionSerializer	
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/client/resources/data/TextureMetadataSection;	deserialize	deserialize	#~, ~, deserialize, :
+		p	1	p_deserialize_1_	p_deserialize_1_	#~, ~, ~, ~
+		p	2	p_deserialize_2_	p_deserialize_2_	#~, ~, ~, ~
+		p	3	p_deserialize_3_	p_deserialize_3_	#~, ~, ~, ~
+	m	(Lcom/google/gson/JsonElement;Ljava/lang/reflect/Type;Lcom/google/gson/JsonDeserializationContext;)Ljava/lang/Object;	deserialize	deserialize	#~, ~, ~, ~
+		p	1	p_deserialize_1_	jsonElement	#~, ~, ~, jsonElement
+		p	2	p_deserialize_2_	type	#~, ~, ~, type
+		p	3	p_deserialize_3_	jsonDeserializationContext	#~, ~, ~, jsonDeserializationContext
+	m	()V	<init>	<init>	#~, ~, ~, ~

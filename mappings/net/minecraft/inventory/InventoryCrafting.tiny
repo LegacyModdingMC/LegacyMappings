@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/InventoryCrafting	net/minecraft/inventory/InventoryCrafting	
+	f	[Lnet/minecraft/item/ItemStack;	field_70466_a	stackList	#stackList, :, stacks, :
+		c	List of the stacks in the crafting matrix.
+	f	I	field_70464_b	inventoryWidth	#inventoryWidth, :, width, :
+		c	the width of the crafting inventory
+	f	Lnet/minecraft/inventory/Container;	field_70465_c	eventHandler	#eventHandler, :, screenHandler, menu
+		c	Class containing the callbacks for the events on_GUIClosed and on_CraftMaxtrixChanged.
+	m	(Lnet/minecraft/inventory/Container;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1807_1_	eventHandlerIn	#eventHandlerIn, :, handler, menu
+		p	2	p_i1807_2_	width	#width, :, :, :
+		p	3	p_i1807_3_	height	#height, :, :, :
+	m	(II)Lnet/minecraft/item/ItemStack;	func_70463_b	getStackInRowAndColumn	#getStackInRowAndColumn, :, getStackAt, getStack
+		c	Returns the itemstack in the slot specified (Top left is 0, 0). Args: row, column
+		p	1	p_70463_1_	row	#row, :, width, column
+		p	2	p_70463_2_	column	#column, :, height, row

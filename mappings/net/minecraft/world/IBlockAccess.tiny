@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/IBlockAccess	net/minecraft/world/IBlockAccess	
+	m	()I	func_72800_K	getHeight	#getHeight, :, getMaxBuildHeight, getHeight
+		c	Returns current world height.
+	m	()Z	func_72806_N	extendedLevelsInChunkCache	#extendedLevelsInChunkCache, isEmpty, :, :
+		c	set by !chunk.getAreLevelsEmpty
+	m	(II)Lnet/minecraft/world/biome/BiomeGenBase;	func_72807_a	getBiomeGenForCoords	#getBiomeGenForCoords, :, getBiome, :
+		c	Gets the biome for a given set of x/z coordinates
+		p	1	p_72807_1_	x	#x, :, :, :
+		p	2	p_72807_2_	z	#z, :, :, :
+	m	(III)Lnet/minecraft/block/Block;	func_147439_a	getBlock	#getBlock, :, :, :
+		p	1	p_147439_1_	x	#~, ~, x, :
+		p	2	p_147439_2_	y	#~, ~, y, :
+		p	3	p_147439_3_	z	#~, ~, z, :
+	m	(III)Z	func_147437_c	isAirBlock	#isAirBlock, :, isAir, :
+		c	Returns true if the block at the specified coordinates is empty
+		p	1	p_147437_1_	x	#x, :, :, :
+		p	2	p_147437_2_	y	#y, :, :, :
+		p	3	p_147437_3_	z	#z, :, :, :
+	m	(IIII)I	func_72802_i	getLightBrightnessForSkyBlocks	#getLightBrightnessForSkyBlocks, :, getLightmapCoordinates, getLightColor
+		c	Any Light rendered on a 1.8 Block goes through here
+		p	1	p_72802_1_	x	#~, ~, x, :
+		p	2	p_72802_2_	y	#~, ~, y, :
+		p	3	p_72802_3_	z	#~, ~, z, :
+		p	4	p_72802_4_	blockLight	#~, ~, min, blockLight
+	m	(III)I	func_72805_g	getBlockMetadata	#getBlockMetadata, :, getBlockData, getBlockMetadata
+		c	Returns the block metadata at coords x,y,z
+		p	1	p_72805_1_	x	#~, ~, x, :
+		p	2	p_72805_2_	y	#~, ~, y, :
+		p	3	p_72805_3_	z	#~, ~, z, :
+	m	(IIII)I	func_72879_k	isBlockProvidingPowerTo	#isBlockProvidingPowerTo, :, getStrongRedstonePower, getDirectSignal
+		c	Is this block powering in the specified direction Args: x, y, z, direction
+		p	1	p_72879_1_	x	#x, :, :, :
+		p	2	p_72879_2_	y	#y, :, :, :
+		p	3	p_72879_3_	z	#z, :, :, :
+		p	4	p_72879_4_	directionIn	#directionIn, :, direction, dir
+	m	(III)Lnet/minecraft/tileentity/TileEntity;	func_147438_o	getTileEntity	#getTileEntity, :, getBlockEntity, :
+		p	1	p_147438_1_	x	#x, :, :, :
+		p	2	p_147438_2_	y	#y, :, :, :
+		p	3	p_147438_3_	z	#z, :, :, :

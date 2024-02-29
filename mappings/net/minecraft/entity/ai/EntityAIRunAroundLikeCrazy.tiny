@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIRunAroundLikeCrazy	net/minecraft/entity/ai/EntityAIRunAroundLikeCrazy	
+	f	Lnet/minecraft/entity/passive/EntityHorse;	field_111180_a	horseHost	#horseHost, :, horse, :
+	f	D	field_111178_b	speed	#speed, :, :, :
+	f	D	field_111179_c	targetX	#targetX, :, :, :
+	f	D	field_111176_d	targetY	#targetY, :, :, :
+	f	D	field_111177_e	targetZ	#targetZ, :, :, :
+	m	(Lnet/minecraft/entity/passive/EntityHorse;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1653_1_	horse	#horse, :, :, :
+		p	2	p_i1653_2_	speedIn	#speedIn, :, speed, :

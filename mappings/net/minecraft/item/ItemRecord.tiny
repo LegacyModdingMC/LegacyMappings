@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemRecord	net/minecraft/item/ItemRecord	
+	f	Ljava/lang/String;	field_150929_a	recordName	#recordName, :, recordType, :
+		c	The name of the record.
+	f	Ljava/util/Map;	field_150928_b	RECORDS	#RECORDS, :, records, RECORD_TYPES
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45350_1_	name	#name, :, recordType, :
+	m	(Ljava/lang/String;)Lnet/minecraft/item/ItemRecord;	func_150926_b	getRecord	#getRecord, :, getByName, :
+		c	Return the record item corresponding to the given name.
+		p	0	p_150926_0_	name	#name, :, :, :
+	m	()Ljava/lang/String;	func_150927_i	getRecordNameLocal	#getRecordNameLocal, :, getDescription, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

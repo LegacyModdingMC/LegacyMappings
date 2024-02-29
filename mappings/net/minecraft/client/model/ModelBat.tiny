@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelBat	net/minecraft/client/model/ModelBat	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82895_a	batHead	#batHead, :, head, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82893_b	batBody	#batBody, :, body, :
+		c	The body box of the bat model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82894_c	batRightWing	#batRightWing, :, rightWing, :
+		c	The inner right wing box of the bat model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82891_d	batLeftWing	#batLeftWing, :, leftWing, :
+		c	The inner left wing box of the bat model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82892_e	batOuterRightWing	#batOuterRightWing, :, rightWingTip, :
+		c	The outer right wing box of the bat model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_82890_f	batOuterLeftWing	#batOuterLeftWing, :, leftWingTip, :
+		c	The outer left wing box of the bat model.
+	m	()I	func_82889_a	getBatSize	#getBatSize, :, ~, maxHands
+		c	not actually sure this is size, is not used as of now, but the model would be recreated if the value changed and it seems a good match for a bats size
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EntityDamageSourceIndirect	net/minecraft/util/EntityDamageSourceIndirect	
+	f	Lnet/minecraft/entity/Entity;	field_76387_p	indirectEntity	#indirectEntity, :, attacker, projectile
+		c	The entity who created the direct source, e.g. the shooter of an arrow
+	m	(Ljava/lang/String;Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1568_1_	damageTypeIn	#damageTypeIn, :, name, :
+		p	2	p_i1568_2_	source	#source, :, projectile, entity
+		p	3	p_i1568_3_	indirectEntityIn	#indirectEntityIn, :, attacker, projectile

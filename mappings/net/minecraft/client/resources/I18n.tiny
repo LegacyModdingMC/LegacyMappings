@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/I18n	net/minecraft/client/resources/I18n	
+	f	Lnet/minecraft/client/resources/Locale;	field_135054_a	i18nLocale	#i18nLocale, :, storage, translations
+	m	(Lnet/minecraft/client/resources/Locale;)V	func_135051_a	setLocale	#setLocale, :, setTranslationStorage, setTranslations
+		p	0	p_135051_0_	i18nLocaleIn	#i18nLocaleIn, :, storage, translations
+	m	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;	func_135052_a	format	#format, :, translate, :
+		c	format(a, b) is equivalent to String.format(translate(a), b). Args: translationKey, params...
+		p	0	p_135052_0_	translateKey	#translateKey, :, key, :
+		p	1	p_135052_1_	parameters	#parameters, :, args, :

@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentDamage	net/minecraft/enchantment/EnchantmentDamage	
+	f	[Ljava/lang/String;	field_77359_A	protectionName	#protectionName, DAMAGE_NAMES, TYPE_NAMES, TARGET_NAMES
+		c	Holds the name to be translated of each protection type.
+	f	[I	field_77360_B	baseEnchantability	#baseEnchantability, MIN_COST, ~, MIN_XP
+		c	Holds the base factor of enchantability needed to be able to use the enchant.
+	f	[I	field_77362_C	levelEnchantability	#levelEnchantability, LEVEL_COST, ~, XP_MODIFIER
+		c	Holds how much each level increased the enchantability factor to be able to use this enchant.
+	f	[I	field_77358_D	thresholdEnchantability	#thresholdEnchantability, LEVEL_COST_SPAN, ~, MAX_XP
+		c	Used on the formula of base enchantability, this is the 'window' factor of values to be able to use thing enchant.
+	f	I	field_77361_a	damageType	#damageType, :, typeIndex, target
+		c	Defines the type of damage of the enchantment, 0 = all, 1 = undead, 3 = arthropods
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1923_1_	id	#~, ~, ~, id
+		p	2	p_i1923_2_	type	#~, ~, ~, type
+		p	3	p_i1923_3_	target	#~, ~, ~, target
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/AbstractTexture	net/minecraft/client/renderer/texture/AbstractTexture	
+	f	I	field_110553_a	glTextureId	#glTextureId, :, glId, :
+	m	()V	func_147631_c	deleteGlTexture	#deleteGlTexture, :, clearGlId, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

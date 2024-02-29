@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/init/Bootstrap	net/minecraft/init/Bootstrap	
+	f	Z	field_151355_a	alreadyRegistered	#alreadyRegistered, :, initialized, :
+		c	Whether the blocks, items, etc have already been registered
+	m	()V	func_151353_a	registerDispenserBehaviors	#registerDispenserBehaviors, :, setupDispenserBehavior, registerDispenseBehaviors
+	m	()V	func_151354_b	register	#register, :, initialize, init
+		c	Registers blocks, items, stats, etc.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

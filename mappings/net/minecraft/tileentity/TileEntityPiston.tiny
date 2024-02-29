@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityPiston	net/minecraft/tileentity/TileEntityPiston	
+	f	Lnet/minecraft/block/Block;	field_145869_a	storedBlock	#storedBlock, :, ~, movedBlock
+	f	I	field_145876_i	storedMetadata	#storedMetadata, :, ~, movedMetadata
+	f	I	field_145874_j	storedOrientation	#storedOrientation, :, ~, facing
+		c	the side the front of the piston is on
+	f	Z	field_145875_k	extending	#extending, :, :, :
+		c	if this piston is extending or not
+	f	Z	field_145872_l	shouldHeadBeRendered	#shouldHeadBeRendered, :, source, :
+	f	F	field_145873_m	progress	#progress, :, :, :
+	f	F	field_145870_n	lastProgress	#lastProgress, :, :, :
+		c	the progress in (de)extending
+	f	Ljava/util/List;	field_145871_o	pushedObjects	#pushedObjects, :, affectedEntities, movedEntities
+	m	()Lnet/minecraft/block/Block;	func_145861_a	getStoredBlockID	#getStoredBlockID, :, ~, getMovedBlock
+	m	(F)F	func_145860_a	getProgress	#getProgress, :, getAmountExtended, getProgress
+		c	Get interpolated progress value (between lastProgress and progress) given the fractional time between ticks as an argument
+		p	1	p_145860_1_	ticks	#ticks, :, progress, tickDelta
+	m	(FF)V	func_145863_a	launchWithSlimeBlock	#launchWithSlimeBlock, :, pushEntities, moveEntities
+		p	1	p_145863_1_	progress	#~, ~, progress, :
+		p	2	p_145863_2_	amount	#~, ~, distance, amount
+	m	()Z	func_145868_b	isExtending	#isExtending, :, :, :
+		c	Returns true if a piston is extending
+	m	(F)F	func_145865_b	getRenderOffsetX	#~, ~, ~, getRenderOffsetX
+		p	1	p_145865_1_	tickDelta	#~, ~, ~, tickDelta
+	m	()I	func_145864_c	getPistonOrientation	#getPistonOrientation, :, ~, getFacing
+	m	(F)F	func_145862_c	getRenderOffsetY	#~, ~, ~, getRenderOffsetY
+		p	1	p_145862_1_	tickDelta	#~, ~, ~, tickDelta
+	m	()Z	func_145867_d	shouldPistonHeadBeRendered	#shouldPistonHeadBeRendered, :, isSource, :
+	m	(F)F	func_145859_d	getRenderOffsetZ	#~, ~, ~, getRenderOffsetZ
+		p	1	p_145859_1_	tickDelta	#~, ~, ~, tickDelta
+	m	()V	func_145866_f	clearPistonTileEntity	#clearPistonTileEntity, :, finish, :
+		c	removes a piston's tile entity (and if the piston is moving, stops it)
+	m	(Lnet/minecraft/block/Block;IIZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45444_1_	movedBlock	#~, ~, ~, movedBlock
+		p	2	p_i45444_2_	movedMetadata	#~, ~, ~, movedMetadata
+		p	3	p_i45444_3_	facing	#~, ~, ~, facing
+		p	4	p_i45444_4_	extending	#~, ~, ~, extending
+		p	5	p_i45444_5_	source	#~, ~, ~, source
+	m	()V	<init>	<init>	#~, ~, ~, ~

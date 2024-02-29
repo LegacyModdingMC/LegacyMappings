@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRotatedPillar	net/minecraft/block/BlockRotatedPillar	
+	f	Lnet/minecraft/util/IIcon;	field_150164_N	topSprite	#~, ~, ~, topSprite
+	m	(I)Lnet/minecraft/util/IIcon;	func_150163_b	getSideIcon	#getSideIcon, :, ~, getSideSprite
+		p	1	p_150163_1_	axis	#~, ~, ~, axis
+	m	(I)Lnet/minecraft/util/IIcon;	func_150161_d	getTopIcon	#getTopIcon, :, ~, getTopSprite
+		p	1	p_150161_1_	axis	#~, ~, ~, axis
+	m	(I)I	func_150162_k	getAxis	#~, ~, ~, getAxis
+		p	1	p_150162_1_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45425_1_	materialIn	#materialIn, :, ~, ~

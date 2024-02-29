@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/event/ClickEvent	net/minecraft/event/ClickEvent	
+	f	Lnet/minecraft/event/ClickEvent$Action;	field_150671_a	action	#action, :, :, :
+	f	Ljava/lang/String;	field_150670_b	value	#value, :, :, :
+	m	(Lnet/minecraft/event/ClickEvent$Action;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45156_1_	theAction	#theAction, :, action, :
+		p	2	p_i45156_2_	theValue	#theValue, :, value, :
+	m	()Lnet/minecraft/event/ClickEvent$Action;	func_150669_a	getAction	#getAction, :, :, :
+		c	Gets the action to perform when this event is raised.
+	m	()Ljava/lang/String;	func_150668_b	getValue	#getValue, :, :, :
+		c	Gets the value to perform the action on when this event is raised.  For example, if the action is "open URL", this would be the URL to open.
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, object, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDaylightDetector	net/minecraft/block/BlockDaylightDetector	
+	f	[Lnet/minecraft/util/IIcon;	field_149958_a	sprites	#~, ~, ~, sprites
+	m	(Lnet/minecraft/world/World;III)V	func_149957_e	updateOutputState	#~, ~, ~, updateOutputState
+		p	1	p_149957_1_	world	#~, ~, ~, world
+		p	2	p_149957_2_	x	#~, ~, ~, x
+		p	3	p_149957_3_	y	#~, ~, ~, y
+		p	4	p_149957_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

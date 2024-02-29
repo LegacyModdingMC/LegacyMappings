@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S25PacketBlockBreakAnim	net/minecraft/network/play/server/S25PacketBlockBreakAnim	
+	f	I	field_148852_a	breakerId	#breakerId, :, entityId, id
+	f	I	field_148850_b	x	#~, ~, x, :
+	f	I	field_148851_c	y	#~, ~, y, :
+	f	I	field_148848_d	z	#~, ~, z, :
+	f	I	field_148849_e	progress	#progress, :, :, :
+	m	(IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45174_1_	id	#~, ~, entityId, id
+		p	2	p_i45174_2_	x	#~, ~, x, :
+		p	3	p_i45174_3_	y	#~, ~, y, :
+		p	4	p_i45174_4_	z	#~, ~, z, :
+		p	5	p_i45174_5_	progress	#~, ~, progress, :
+	m	()I	func_148845_c	getBreakerId	#getBreakerId, :, getEntityId, getPlayerId
+	m	()I	func_148844_d	getX	#~, ~, getX, :
+	m	()I	func_148843_e	getY	#~, ~, getY, :
+	m	()I	func_148842_f	getZ	#~, ~, getZ, :
+	m	()I	func_148846_g	getProgress	#getProgress, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

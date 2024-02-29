@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MouseHelper	net/minecraft/util/MouseHelper	
+	f	I	field_74377_a	deltaX	#deltaX, :, x, dx
+		c	Mouse delta X this frame
+	f	I	field_74375_b	deltaY	#deltaY, :, y, dy
+		c	Mouse delta Y this frame
+	m	()V	func_74372_a	grabMouseCursor	#grabMouseCursor, :, lockMouse, lock
+		c	Grabs the mouse cursor it doesn't move and isn't seen.
+	m	()V	func_74373_b	ungrabMouseCursor	#ungrabMouseCursor, :, grabMouse, unlock
+		c	Ungrabs the mouse cursor so it can be moved and set it to the center of the screen
+	m	()V	func_74374_c	mouseXYChange	#mouseXYChange, :, updateMouse, tick
+	m	()V	<init>	<init>	#~, ~, ~, ~

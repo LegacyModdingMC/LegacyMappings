@@ -1,0 +1,53 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces	net/minecraft/world/gen/structure/StructureStrongholdPieces	
+	f	I	field_75207_a	totalWeight	#totalWeight, :, TOTAL_WEIGHT, totalWeight
+	f	[Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$PieceWeight;	field_75205_b	pieceWeightArray	#pieceWeightArray, PIECE_WEIGHTS, ~, PIECE_WEIGHTS
+	f	Ljava/util/List;	field_75206_c	structurePieceList	#structurePieceList, :, POSSIBLE_PIECES, currentWeights
+	f	Ljava/lang/Class;	field_75203_d	strongComponentType	#strongComponentType, :, ACTIVE_PIECE_TYPE, forcedPiece
+	f	Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stones;	field_75204_e	strongholdStones	#strongholdStones, STRONGHOLD_STONES, ~, STONE_BRICK_PICKER
+	m	()V	func_143046_a	registerStrongholdPieces	#registerStrongholdPieces, :, registerPieces, register
+	m	(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	access$000	access$000	#~, ~, ~, selectNextPiece
+		p	0	p_access$000_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_access$000_1_	piecesList	#~, ~, ~, piecesList
+		p	2	p_access$000_2_	random	#~, ~, ~, random
+		p	3	p_access$000_3_	x	#~, ~, ~, x
+		p	4	p_access$000_4_	y	#~, ~, ~, y
+		p	5	p_access$000_5_	z	#~, ~, ~, z
+		p	6	p_access$000_6_	direction	#~, ~, ~, direction
+		p	7	p_access$000_7_	type	#~, ~, ~, type
+	m	(Ljava/lang/Class;)Ljava/lang/Class;	access$102	access$102	#~, ~, ~, setType
+		p	0	p_access$102_0_	type	#~, ~, ~, type
+	m	(Ljava/lang/Class;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;	func_75200_a	getStrongholdComponentFromWeightedPiece	#getStrongholdComponentFromWeightedPiece, :, ~, createPiece
+		c	translates the PieceWeight class to the Component class
+		p	0	p_75200_0_	type	#~, ~, ~, type
+		p	1	p_75200_1_	pieces	#~, ~, ~, pieces
+		p	2	p_75200_2_	random	#~, ~, ~, random
+		p	3	p_75200_3_	x	#~, ~, ~, x
+		p	4	p_75200_4_	y	#~, ~, ~, y
+		p	5	p_75200_5_	z	#~, ~, ~, z
+		p	6	p_75200_6_	facing	#~, ~, ~, facing
+		p	7	p_75200_7_	generationDepth	#~, ~, ~, generationDepth
+	m	()V	func_75198_a	prepareStructurePieces	#prepareStructurePieces, :, init, resetWeights
+		c	sets up Arrays with the Structure pieces and their weights
+	m	(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold;	func_75201_b	getNextComponent	#getNextComponent, :, ~, generateNextPiece
+		p	0	p_75201_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_75201_1_	pieces	#~, ~, ~, pieces
+		p	2	p_75201_2_	random	#~, ~, ~, random
+		p	3	p_75201_3_	x	#~, ~, ~, x
+		p	4	p_75201_4_	y	#~, ~, ~, y
+		p	5	p_75201_5_	z	#~, ~, ~, z
+		p	6	p_75201_6_	facing	#~, ~, ~, facing
+		p	7	p_75201_7_	generationDepth	#~, ~, ~, generationDepth
+	m	()Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stones;	access$200	access$200	#~, ~, ~, getStoneBrickRandomizer
+	m	(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureComponent;	func_75196_c	getNextValidComponent	#getNextValidComponent, :, ~, tryGenerateNextPiece
+		p	0	p_75196_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_75196_1_	pieces	#~, ~, ~, pieces
+		p	2	p_75196_2_	random	#~, ~, ~, random
+		p	3	p_75196_3_	x	#~, ~, ~, x
+		p	4	p_75196_4_	y	#~, ~, ~, y
+		p	5	p_75196_5_	z	#~, ~, ~, z
+		p	6	p_75196_6_	facing	#~, ~, ~, facing
+		p	7	p_75196_7_	generationDepth	#~, ~, ~, generationDepth
+	m	()Z	func_75202_c	canAddStructurePieces	#canAddStructurePieces, :, checkRemainingPieces, findTotalWeight
+		c	Returns whether any more pieces can be generated.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

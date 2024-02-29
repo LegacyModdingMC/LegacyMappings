@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/FlatLayerInfo	net/minecraft/world/gen/FlatLayerInfo	
+	f	Lnet/minecraft/block/Block;	field_151537_a	block	#~, ~, ~, block
+	f	I	field_82664_a	layerCount	#layerCount, :, thickness, size
+		c	Amount of layers for this set of layers.
+	f	I	field_82663_c	layerFillBlockMeta	#layerFillBlockMeta, :, ~, metadata
+		c	Block metadata used on this set of laeyrs.
+	f	I	field_82661_d	layerMinimumY	#layerMinimumY, :, ~, y
+	m	(ILnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45467_1_	size	#~, ~, thickness, size
+		p	2	p_i45467_2_	layerMaterialIn	#layerMaterialIn, :, block, :
+	m	()I	func_82657_a	getLayerCount	#getLayerCount, :, getThickness, getSize
+		c	Return the amount of layers for this set of layers.
+	m	()Lnet/minecraft/block/Block;	func_151536_b	getLayerMaterialBlock	#getLayerMaterialBlock, :, getBlock, :
+	m	()I	func_82658_c	getFillBlockMeta	#getFillBlockMeta, :, getBlockData, getBlockMetadata
+		c	Return the block metadata used on this set of layers.
+	m	(I)V	func_82660_d	setMinY	#setMinY, :, setLayerLevel, setY
+		c	Set the minimum Y coordinate for this layer.
+		p	1	p_82660_1_	minY	#minY, :, ~, y
+	m	()I	func_82656_d	getMinY	#getMinY, :, ~, getY
+		c	Return the minimum Y coordinate for this layer, set during generation.
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(ILnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45468_1_	size	#~, ~, ~, size
+		p	2	p_i45468_2_	block	#~, ~, ~, block
+		p	3	p_i45468_3_	metadata	#~, ~, ~, metadata

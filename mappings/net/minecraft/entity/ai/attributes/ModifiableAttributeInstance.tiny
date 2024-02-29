@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/ModifiableAttributeInstance	net/minecraft/entity/ai/attributes/ModifiableAttributeInstance	
+	f	Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;	field_111138_a	attributeMap	#attributeMap, :, ~, container
+		c	The BaseAttributeMap this attributeInstance can be found in
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_111136_b	genericAttribute	#genericAttribute, :, ~, attribute
+		c	The Attribute this is an instance of
+	f	Ljava/util/Map;	field_111137_c	mapByOperation	#mapByOperation, :, ~, modifiersByOperation
+	f	Ljava/util/Map;	field_111134_d	mapByName	#mapByName, :, modifiersByName, :
+	f	Ljava/util/Map;	field_111135_e	mapByUUID	#mapByUUID, :, modifiersByUuid, modifiersById
+	f	D	field_111132_f	baseValue	#baseValue, :, :, base
+	f	Z	field_111133_g	needsUpdate	#needsUpdate, :, needsRefresh, dirty
+	f	D	field_111139_h	cachedValue	#cachedValue, :, :, value
+	m	(I)Ljava/util/Collection;	func_111130_a	getModifiersByOperation	#getModifiersByOperation, :, ~, getModifiers
+		p	1	p_111130_1_	operation	#operation, :, ~, operation
+	m	()V	func_111131_f	flagForUpdate	#flagForUpdate, :, invalidateCache, markDirty
+	m	()D	func_111129_g	computeValue	#computeValue, :, :, :
+	m	(Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;Lnet/minecraft/entity/ai/attributes/IAttribute;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1608_1_	attributeMapIn	#attributeMapIn, :, ~, container
+		p	2	p_i1608_2_	genericAttributeIn	#genericAttributeIn, :, ~, attribute

@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/GameRules$Value	net/minecraft/world/GameRules$Value	
+	f	Ljava/lang/String;	field_82762_a	valueString	#valueString, :, ~, value
+	f	Z	field_82760_b	valueBoolean	#valueBoolean, :, ~, booleanValue
+	f	I	field_82761_c	valueInteger	#valueInteger, :, ~, intValue
+	f	D	field_82759_d	valueDouble	#valueDouble, :, ~, doubleValue
+	m	()Ljava/lang/String;	func_82756_a	getGameRuleStringValue	#getGameRuleStringValue, getString, ~, get
+		c	Gets the GameRule's value as String.
+	m	(Ljava/lang/String;)V	func_82757_a	setValue	#setValue, :, ~, set
+		c	Set this game rule value.
+		p	1	p_82757_1_	value	#value, :, ~, value
+	m	()Z	func_82758_b	getGameRuleBooleanValue	#getGameRuleBooleanValue, getBoolean, ~, getBoolean
+		c	Gets the GameRule's value as boolean.
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1949_1_	value	#~, ~, ~, value

@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/BaseAttributeMap	net/minecraft/entity/ai/attributes/BaseAttributeMap	
+	f	Ljava/util/Map;	field_111154_a	attributes	#attributes, :, instancesByKey, byType
+	f	Ljava/util/Map;	field_111153_b	attributesByName	#attributesByName, :, instancesById, byName
+	m	()Ljava/util/Collection;	func_111146_a	getAllAttributes	#getAllAttributes, :, values, getAll
+	m	(Lcom/google/common/collect/Multimap;)V	func_111148_a	removeAttributeModifiers	#removeAttributeModifiers, :, removeAll, removeModifiers
+		p	1	p_111148_1_	modifiers	#modifiers, :, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;	func_111152_a	getAttributeInstanceByName	#getAttributeInstanceByName, :, get, :
+		p	1	p_111152_1_	attributeName	#attributeName, :, name, :
+	m	(Lnet/minecraft/entity/ai/attributes/IAttribute;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;	func_111151_a	getAttributeInstance	#getAttributeInstance, :, get, :
+		p	1	p_111151_1_	attribute	#attribute, :, :, :
+	m	(Lnet/minecraft/entity/ai/attributes/ModifiableAttributeInstance;)V	func_111149_a	addAttributeInstance	#addAttributeInstance, :, ~, track
+		p	1	p_111149_1_	instance	#~, ~, ~, instance
+	m	(Lcom/google/common/collect/Multimap;)V	func_111147_b	applyAttributeModifiers	#applyAttributeModifiers, :, replaceAll, addModifiers
+		p	1	p_111147_1_	modifiers	#modifiers, :, :, :
+	m	(Lnet/minecraft/entity/ai/attributes/IAttribute;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;	func_111150_b	registerAttribute	#registerAttribute, :, register, :
+		c	Registers an attribute with this AttributeMap, returns a modifiable AttributeInstance associated with this map
+		p	1	p_111150_1_	attribute	#attribute, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

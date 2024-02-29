@@ -1,0 +1,246 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/Chunk	net/minecraft/world/chunk/Chunk	
+	f	Z	field_76640_a	isLit	#isLit, :, ~, hasSkyLight
+		c	Determines if the chunk is lit or not at a light value greater than 0.
+	f	[I	field_76638_b	precipitationHeightMap	#precipitationHeightMap, :, surfaceCache, precipitationHeight
+		c	A map, similar to heightMap, that tracks how far down precipitation can fall.
+	f	[Z	field_76639_c	updateSkylightColumns	#updateSkylightColumns, :, ~, needsLightUpdate
+		c	Which columns need their skylightMaps updated.
+	f	Z	field_76636_d	isChunkLoaded	#isChunkLoaded, loaded, :, :
+		c	Whether or not this Chunk is currently loaded into the World
+	f	Lnet/minecraft/world/World;	field_76637_e	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	f	[I	field_76634_f	heightMap	#heightMap, :, heightmap, heightMap
+		c	The y-coordinate of the highest non-air block for each column in this chunk.
+	f	I	field_76635_g	xPosition	#xPosition, x, chunkX, :
+		c	The x coordinate of the chunk.
+	f	I	field_76647_h	zPosition	#zPosition, z, chunkZ, :
+		c	The z coordinate of the chunk.
+	f	Ljava/util/Map;	field_150816_i	chunkTileEntityMap	#chunkTileEntityMap, tileEntities, blockEntities, :
+		c	A Map of ChunkPositions to TileEntities in this chunk
+	f	[Ljava/util/List;	field_76645_j	entityLists	#entityLists, :, entities, :
+		c	Array of Lists containing the entities in this Chunk. Each List represents a 16 block subchunk.
+	f	Z	field_76646_k	isTerrainPopulated	#isTerrainPopulated, :, terrainPopulated, :
+		c	Boolean value indicating if the terrain is populated.
+	f	Z	field_150814_l	isLightPopulated	#isLightPopulated, :, lightPopulated, :
+	f	Z	field_150815_m	chunkTicked	#chunkTicked, ticked, blockEntitiesPopulated, hasTicked
+		c	True if this chunk has ticked at least once.
+	f	Z	field_76643_l	isModified	#isModified, dirty, modified, dirty
+		c	Set to true if the chunk has been modified and needs to be updated internally.
+	f	Z	field_76644_m	hasEntities	#hasEntities, :, containsEntities, hasEntities
+		c	Whether this Chunk has any Entities and thus requires saving on every tick
+	f	J	field_76641_n	lastSaveTime	#lastSaveTime, :, :, :
+		c	The time according to World.worldTime when this chunk was last saved
+	f	Z	field_76642_o	sendUpdates	#sendUpdates, :, ~, full
+		c	Updates to this chunk will not be sent to clients if this is false. This field is set to true the first time the chunk is sent to a client, and never set to false.
+	f	I	field_82912_p	heightMapMinimum	#heightMapMinimum, :, minimumHeightmap, lowestHeight
+		c	Lowest value in the heightmap.
+	f	J	field_111204_q	inhabitedTime	#inhabitedTime, :, :, :
+		c	the cumulative number of ticks players have been in this chunk
+	f	Lorg/apache/logging/log4j/Logger;	field_150817_t	logger	#logger, LOGGER, :, :
+	f	[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;	field_76652_q	storageArrays	#storageArrays, :, chunkSections, sections
+		c	Used to store block IDs, block MSBs, Sky-light maps, Block-light maps, and metadata. Each entry corresponds to a logical segment of 16x16x16 blocks, stacked vertically.
+	f	[B	field_76651_r	blockBiomeArray	#blockBiomeArray, :, biomeArray, biomes
+		c	Contains a 16x16 mapping on the X/Z plane of the biome ID to which each colum belongs.
+	f	Z	field_76650_s	isGapLightingUpdated	#isGapLightingUpdated, :, ~, recheckGap
+	f	I	field_76649_t	queuedLightChecks	#queuedLightChecks, :, ~, queuedLightChecks
+		c	Contains the current round-robin relight check index, and is implied as the relight check location as well.
+	m	(Lnet/minecraft/world/World;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1995_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1995_2_	x	#x, :, chunkX, :
+		p	3	p_i1995_3_	z	#z, :, chunkZ, :
+	m	()V	func_76590_a	generateHeightMap	#generateHeightMap, :, generateHeightmap, populateHeightmap
+		c	Generates the height map for a chunk from scratch
+	m	(I)V	func_150801_a	checkBorderLight	#~, ~, ~, checkBorderLight
+		c	Check the light around the border of a chunk.\n    - side = 0 : south\n    - side = 1 : west\n    - side = 2 : north\n    - side = 3 : east
+		p	1	p_150801_1_	side	#~, ~, ~, side
+	m	(II)Z	func_76600_a	isAtLocation	#isAtLocation, :, isChunkEqual, isAt
+		c	Checks whether the chunk is at the X/Z location specified
+		p	1	p_76600_1_	x	#x, :, chunkX, :
+		p	2	p_76600_2_	z	#z, :, chunkZ, :
+	m	(III)Lnet/minecraft/block/Block;	func_150810_a	getBlock	#getBlock, getBlock0, getBlock, getBlockAt
+		c	Returns the block corresponding to the given coordinates inside a chunk.
+		p	1	p_150810_1_	x	#x, :, :, localX
+		p	2	p_150810_2_	y	#y, :, :, :
+		p	3	p_150810_3_	z	#z, :, :, localZ
+	m	(IIII)Z	func_76589_b	setBlockMetadata	#setBlockMetadata, :, ~, setBlockMetadataAt
+		c	Set the metadata of a block in the chunk
+		p	1	p_76589_1_	localX	#~, ~, ~, localX
+		p	2	p_76589_2_	y	#~, ~, ~, y
+		p	3	p_76589_3_	localZ	#~, ~, ~, localZ
+		p	4	p_76589_4_	metadata	#~, ~, ~, metadata
+	m	(IIILnet/minecraft/block/Block;I)Z	func_150807_a	setBlockIDWithMetadata	#setBlockIDWithMetadata, :, ~, setBlockWithMetadataAt
+		p	1	p_150807_1_	localX	#~, ~, ~, localX
+		p	2	p_150807_2_	y	#~, ~, ~, y
+		p	3	p_150807_3_	localZ	#~, ~, ~, localZ
+		p	4	p_150807_4_	block	#~, ~, ~, block
+		p	5	p_150807_5_	metadata	#~, ~, ~, metadata
+	m	(IIILnet/minecraft/tileentity/TileEntity;)V	func_150812_a	setBlockTileEntityInChunk	#setBlockTileEntityInChunk, :, addBlockEntity, setBlockEntityAt
+		p	1	p_150812_1_	localX	#~, ~, x, localX
+		p	2	p_150812_2_	y	#~, ~, y, :
+		p	3	p_150812_3_	localZ	#~, ~, z, localZ
+		p	4	p_150812_4_	blockEntity	#~, ~, be, blockEntity
+	m	(IILnet/minecraft/world/biome/WorldChunkManager;)Lnet/minecraft/world/biome/BiomeGenBase;	func_76591_a	getBiomeGenForWorldCoords	#getBiomeGenForWorldCoords, :, getBiome, getBiomeAt
+		c	This method retrieves the biome at a set of coordinates
+		p	1	p_76591_1_	localX	#~, ~, x, localX
+		p	2	p_76591_2_	localZ	#~, ~, z, localZ
+		p	3	p_76591_3_	source	#~, ~, biomeSource, source
+	m	(J)Ljava/util/Random;	func_76617_a	getRandomWithSeed	#getRandomWithSeed, :, getRandom, getRandomForSlime
+		p	1	p_76617_1_	seed	#seed, :, :, :
+	m	(Lnet/minecraft/world/EnumSkyBlock;III)I	func_76614_a	getSavedLightValue	#getSavedLightValue, :, ~, getLightAt
+		c	Gets the amount of light saved in this block (doesn't adjust for daylight)
+		p	1	p_76614_1_	type	#~, ~, ~, type
+		p	2	p_76614_2_	localX	#~, ~, ~, localX
+		p	3	p_76614_3_	y	#~, ~, ~, y
+		p	4	p_76614_4_	localZ	#~, ~, ~, localZ
+	m	(Lnet/minecraft/world/EnumSkyBlock;IIII)V	func_76633_a	setLightValue	#setLightValue, :, ~, setLightAt
+		c	Sets the light value at the coordinate. If enumskyblock is set to sky it sets it in the skylightmap and if its a block then into the blocklightmap. Args enumSkyBlock, x, y, z, lightValue
+		p	1	p_76633_1_	type	#~, ~, ~, type
+		p	2	p_76633_2_	localX	#~, ~, ~, localX
+		p	3	p_76633_3_	y	#~, ~, ~, y
+		p	4	p_76633_4_	localZ	#~, ~, ~, localZ
+		p	5	p_76633_5_	light	#~, ~, ~, light
+	m	(Lnet/minecraft/tileentity/TileEntity;)V	func_150813_a	addTileEntity	#addTileEntity, :, addBlockEntity, :
+		p	1	p_150813_1_	tileEntityIn	#tileEntityIn, :, be, blockEntity
+	m	(Lnet/minecraft/world/chunk/IChunkProvider;Lnet/minecraft/world/chunk/IChunkProvider;II)V	func_76624_a	populateChunk	#populateChunk, :, decorateChunk, populate
+		p	1	p_76624_1_	source	#~, ~, provider1, source
+		p	2	p_76624_2_	generator	#~, ~, provider2, generator
+		p	3	p_76624_3_	x	#x, :, chunkX, :
+		p	4	p_76624_4_	z	#z, :, chunkZ, :
+	m	(Ljava/lang/Class;Lnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/command/IEntitySelector;)V	func_76618_a	getEntitiesOfTypeWithinAAAB	#getEntitiesOfTypeWithinAAAB, :, getEntitiesInBox, getEntities
+		c	Gets all entities that can be assigned to the specified class. Args: entityClass, aabb, listToFill
+		p	1	p_76618_1_	type	#~, ~, entityClass, type
+		p	2	p_76618_2_	bounds	#~, ~, box, bounds
+		p	3	p_76618_3_	entities	#~, ~, outList, entities
+		p	4	p_76618_4_	filter	#~, ~, predicate, filter
+	m	(Lnet/minecraft/entity/Entity;)V	func_76612_a	addEntity	#addEntity, :, :, :
+		c	Adds an entity to the chunk. Args: entity
+		p	1	p_76612_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;I)V	func_76608_a	removeEntityAtIndex	#removeEntityAtIndex, :, removeEntity, :
+		c	Removes entity at the specified index from the entity array.
+		p	1	p_76608_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_76608_2_	index	#index, :, :, chunkY
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/command/IEntitySelector;)V	func_76588_a	getEntitiesWithinAABBForEntity	#getEntitiesWithinAABBForEntity, :, getEntitiesInBox, getEntities
+		c	Fills the given list of all entities that intersect within the given bounding box that aren't the passed entity Args: entity, aabb, listToFill
+		p	1	p_76588_1_	exclude	#~, ~, except, exclude
+		p	2	p_76588_2_	bounds	#~, ~, box, bounds
+		p	3	p_76588_3_	entities	#~, ~, outList, entities
+		p	4	p_76588_4_	filter	#~, ~, predicate, filter
+	m	(Z)Z	func_76601_a	needsSaving	#needsSaving, :, shouldSave, :
+		c	Returns true if this Chunk needs to be saved
+		p	1	p_76601_1_	saveEntities	#~, ~, ~, saveEntities
+	m	([B)V	func_76616_a	setBiomeArray	#setBiomeArray, :, :, setBiomes
+		c	Accepts a 256-entry array that contains a 16x16 mapping on the X/Z plane of block positions in this Chunk to biome IDs.
+		p	1	p_76616_1_	biomeArray	#biomeArray, :, :, biomes
+	m	([BIIZ)V	func_76607_a	fillChunk	#fillChunk, :, ~, update
+		c	Initialise this chunk with new binary data
+		p	1	p_76607_1_	data	#~, ~, ~, data
+		p	2	p_76607_2_	sections	#~, ~, ~, sections
+		p	3	p_76607_3_	sectionsWithBlockIdsUpper	#~, ~, ~, sectionsWithBlockIdsUpper
+		p	4	p_76607_4_	full	#~, ~, ~, full
+	m	([Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;)V	func_76602_a	setStorageArrays	#setStorageArrays, :, setLevelChunkSections, setSections
+		p	1	p_76602_1_	newStorageArrays	#newStorageArrays, :, chunkSections, sections
+	m	()V	func_76603_b	generateSkylightMap	#generateSkylightMap, :, calculateSkyLight, populateSkylight
+		c	Generates the initial skylight map for the chunk upon generation or load.
+	m	(II)I	func_76611_b	getHeightValue	#getHeightValue, :, getHighestBlockY, getHeight
+		c	Returns the value in the height map at this x, z coordinate in the chunk
+		p	1	p_76611_1_	x	#x, :, :, localX
+		p	2	p_76611_2_	z	#z, :, :, localZ
+	m	(III)I	func_150808_b	getBlockLightOpacity	#getBlockLightOpacity, :, getBlockOpacity, getOpacityAt
+		p	1	p_150808_1_	x	#x, :, :, localX
+		p	2	p_150808_2_	y	#y, :, :, :
+		p	3	p_150808_3_	z	#z, :, :, localZ
+	m	(IIII)I	func_76629_c	getBlockLightValue	#getBlockLightValue, :, ~, getLightAt
+		c	Gets the amount of light on a block taking into account sunlight
+		p	1	p_76629_1_	localX	#~, ~, ~, localX
+		p	2	p_76629_2_	y	#~, ~, ~, y
+		p	3	p_76629_3_	localZ	#~, ~, ~, localZ
+		p	4	p_76629_4_	ambientDarkness	#~, ~, ~, ambientDarkness
+	m	(Lnet/minecraft/entity/Entity;)V	func_76622_b	removeEntity	#removeEntity, :, :, :
+		c	removes entity using its y chunk coordinate as its index
+		p	1	p_76622_1_	entityIn	#entityIn, :, entity, :
+	m	(Z)V	func_150804_b	onTick	#onTick, :, populateBlockEntities, tick
+		p	1	p_150804_1_	skipRecheckGaps	#skipRecheckGaps, :, runningBehind, skipRecheckGaps
+	m	()V	func_76631_c	onChunkLoad	#onChunkLoad, onLoad, loadToWorld, load
+		c	Called when this Chunk is loaded by the ChunkProvider
+	m	(II)Z	func_76606_c	getAreLevelsEmpty	#getAreLevelsEmpty, isEmptyBetween, areSectionsEmptyBetween, isEmpty
+		c	Returns whether the ExtendedBlockStorages containing levels (in blocks) from arg 1 to arg 2 are fully empty (true) or not (false).
+		p	1	p_76606_1_	startY	#startY, :, :, minY
+		p	2	p_76606_2_	endY	#endY, :, :, maxY
+	m	(III)I	func_76628_c	getBlockMetadata	#getBlockMetadata, :, getBlockData, getBlockMetadataAt
+		c	Return the metadata corresponding to the given coordinates inside a chunk.
+		p	1	p_76628_1_	x	#x, :, :, localX
+		p	2	p_76628_2_	y	#y, :, :, :
+		p	3	p_76628_3_	z	#z, :, :, localZ
+	m	(IIII)V	func_76609_d	updateSkylightNeighborHeight	#updateSkylightNeighborHeight, :, ~, checkSkylight
+		p	1	p_76609_1_	x	#x, :, :, :
+		p	2	p_76609_2_	z	#z, :, :, :
+		p	3	p_76609_3_	startY	#startY, :, ~, minY
+		p	4	p_76609_4_	endY	#endY, :, ~, maxY
+	m	(Z)V	func_150803_c	recheckGaps	#recheckGaps, :, ~, recheckGaps
+		p	1	p_150803_1_	onlyOne	#onlyOne, :, isClient, checkOne
+	m	()V	func_76623_d	onChunkUnload	#onChunkUnload, onUnload, unloadFromWorld, unload
+		c	Called when this Chunk is unloaded by the ChunkProvider
+	m	(II)I	func_76626_d	getPrecipitationHeight	#getPrecipitationHeight, :, getSurfaceY, getPrecipitationHeightAt
+		c	Gets the height to which rain/snow will fall. Calculates it if not already stored.
+		p	1	p_76626_1_	localX	#~, ~, x, localX
+		p	2	p_76626_2_	localZ	#~, ~, z, localZ
+	m	(III)Z	func_76619_d	canBlockSeeTheSky	#canBlockSeeTheSky, :, isAboveHighestBlock, hasSkyAccessAt
+		c	Returns whether is not a block above this one blocking sight to the sky (done via checking against the heightmap)
+		p	1	p_76619_1_	localX	#~, ~, x, localX
+		p	2	p_76619_2_	y	#~, ~, y, :
+		p	3	p_76619_3_	localZ	#~, ~, z, localZ
+	m	()V	func_76630_e	setChunkModified	#setChunkModified, markDirty, setModified, markDirty
+		c	Sets the isModified flag for this Chunk
+	m	(II)V	func_76595_e	propagateSkylightOcclusion	#propagateSkylightOcclusion, :, ~, queueLightUpdate
+		c	Propagates a given sky-visible block's light value downward and upward to neighboring blocks as necessary.
+		p	1	p_76595_1_	x	#x, :, :, localX
+		p	2	p_76595_2_	z	#z, :, :, localZ
+	m	(III)Lnet/minecraft/tileentity/TileEntity;	func_150806_e	getBlockTileEntityInChunk	#getBlockTileEntityInChunk, :, getBlockEntity, getBlockEntityAt
+		p	1	p_150806_1_	localX	#~, ~, x, localX
+		p	2	p_150806_2_	y	#~, ~, y, :
+		p	3	p_150806_3_	localZ	#~, ~, z, localZ
+	m	(II)Z	func_150811_f	checkLight	#checkLight, :, updateLight, checkLightAt
+		p	1	p_150811_1_	x	#x, :, :, localX
+		p	2	p_150811_2_	z	#z, :, :, localZ
+	m	(III)V	func_150805_f	removeTileEntity	#removeTileEntity, :, removeBlockEntity, removeBlockEntityAt
+		p	1	p_150805_1_	localX	#~, ~, x, localX
+		p	2	p_150805_2_	y	#~, ~, y, :
+		p	3	p_150805_3_	localZ	#~, ~, z, localZ
+	m	()Z	func_76621_g	isEmpty	#isEmpty, :, :, :
+	m	(III)V	func_76599_g	checkSkylightNeighborHeight	#checkSkylightNeighborHeight, :, ~, checkSkylight
+		c	Checks the height of a block next to a sky-visible block and schedules a lighting update as necessary.
+		p	1	p_76599_1_	x	#x, :, :, :
+		p	2	p_76599_2_	z	#z, :, :, :
+		p	3	p_76599_3_	maxValue	#maxValue, :, ~, maxY
+	m	()I	func_76625_h	getTopFilledSegment	#getTopFilledSegment, :, getHighestNonEmptySectionYOffset, getHighestSectionOffset
+		c	Returns the topmost ExtendedBlockStorage instance for this Chunk that actually contains a block.
+	m	(III)V	func_76615_h	relightBlock	#relightBlock, :, ~, resetLightAt
+		c	Initiates the recalculation of both the block-light and sky-light for a given block inside a chunk.
+		p	1	p_76615_1_	x	#x, :, :, localX
+		p	3	p_76615_3_	z	#z, :, :, localZ
+		p	2	p_76615_2_	y	#y, :, ~, y
+	m	()[Lnet/minecraft/world/chunk/storage/ExtendedBlockStorage;	func_76587_i	getBlockStorageArray	#getBlockStorageArray, :, getBlockStorage, getSections
+		c	Returns the ExtendedBlockStorage array for this Chunk.
+	m	()Z	func_150802_k	isPopulated	#isPopulated, :, :, :
+	m	()Lnet/minecraft/world/ChunkCoordIntPair;	func_76632_l	getChunkCoordIntPair	#getChunkCoordIntPair, getPos, getChunkPos, getPos
+		c	Gets a ChunkCoordIntPair representing the Chunk's position.
+	m	()[B	func_76605_m	getBiomeArray	#getBiomeArray, :, :, getBiomes
+		c	Returns an array containing a 16x16 mapping on the X/Z of block positions in this Chunk to biome IDs.
+	m	()V	func_76613_n	resetRelightChecks	#resetRelightChecks, :, ~, clearLightChecks
+		c	Resets the relight check index to 0 for this Chunk.
+	m	()V	func_76594_o	enqueueRelightChecks	#enqueueRelightChecks, :, ~, checkLight
+		c	Called once-per-chunk-per-tick, and advances the round-robin relight check index per-storage-block by up to 8 blocks at a time. In a worst-case scenario, can potentially take up to 1.6 seconds, calculated via (4096/(8*16))/20, to re-check all blocks in a chunk, which could explain both lagging light updates in certain cases as well as Nether relight
+	m	()V	func_150809_p	checkLight	#checkLight, :, populate, populateLight
+	m	(Lnet/minecraft/world/World;[Lnet/minecraft/block/Block;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45446_1_	world	#~, ~, ~, world
+		p	2	p_i45446_2_	blocks	#~, ~, ~, blocks
+		p	3	p_i45446_3_	chunkX	#~, ~, ~, chunkX
+		p	4	p_i45446_4_	chunkZ	#~, ~, ~, chunkZ
+	m	(Lnet/minecraft/world/World;[Lnet/minecraft/block/Block;[BII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45447_1_	world	#~, ~, ~, world
+		p	2	p_i45447_2_	blocks	#~, ~, ~, blocks
+		p	3	p_i45447_3_	blockMetadata	#~, ~, ~, blockMetadata
+		p	4	p_i45447_4_	chunkX	#~, ~, ~, chunkX
+		p	5	p_i45447_5_	chunkZ	#~, ~, ~, chunkZ
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

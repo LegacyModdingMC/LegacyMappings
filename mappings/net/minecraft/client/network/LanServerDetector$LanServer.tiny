@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/LanServerDetector$LanServer	net/minecraft/client/network/LanServerDetector$LanServer	
+	f	Ljava/lang/String;	field_77492_a	lanServerMotd	#lanServerMotd, :, name, motd
+	f	Ljava/lang/String;	field_77490_b	lanServerIpPort	#lanServerIpPort, :, address, port
+	f	J	field_77491_c	timeLastSeen	#timeLastSeen, :, time, lastTickTime
+		c	Last time this LanServer was seen.
+	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1319_1_	motd	#motd, :, name, motd
+		p	2	p_i1319_2_	address	#address, :, :, port
+	m	()Ljava/lang/String;	func_77487_a	getServerMotd	#getServerMotd, :, getName, getMotd
+	m	()Ljava/lang/String;	func_77488_b	getServerIpPort	#getServerIpPort, :, getAddress, getPort
+	m	()V	func_77489_c	updateLastSeen	#updateLastSeen, :, updateTime, tick
+		c	Updates the time this LanServer was last seen.

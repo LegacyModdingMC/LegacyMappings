@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserListBans	net/minecraft/server/management/UserListBans	
+	m	(Lcom/mojang/authlib/GameProfile;)Z	func_152702_a	isBanned	#isBanned, :, contains, isBanned
+		p	1	p_152702_1_	profile	#profile, :, :, :
+	m	(Ljava/lang/String;)Lcom/mojang/authlib/GameProfile;	func_152703_a	isUsernameBanned	#isUsernameBanned, getBannedProfile, getBannedPlayer, getProfile
+		c	Get a {@link GameProfile} that is a member of this list by its user name. Returns {@code null} if no entry was found.
+		p	1	p_152703_1_	username	#username, :, playerName, name
+	m	(Lcom/mojang/authlib/GameProfile;)Ljava/lang/String;	func_152701_b	getProfileId	#getProfileId, :, toString, getKey
+		p	1	p_152701_1_	profile	#profile, :, ~, ~
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1138_1_	bansFile	#bansFile, :, ~, ~

@@ -1,0 +1,184 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/WorldInfo	net/minecraft/world/storage/WorldInfo	
+	f	J	field_76100_a	randomSeed	#randomSeed, :, seed, :
+		c	Holds the seed of the currently world.
+	f	Lnet/minecraft/world/WorldType;	field_76098_b	terrainType	#terrainType, :, levelGeneratorType, generatorType
+	f	Ljava/lang/String;	field_82576_c	generatorOptions	#generatorOptions, :, :, :
+	f	I	field_76099_c	spawnX	#spawnX, :, :, :
+		c	The spawn zone position X coordinate.
+	f	I	field_76096_d	spawnY	#spawnY, :, :, :
+		c	The spawn zone position Y coordinate.
+	f	I	field_76097_e	spawnZ	#spawnZ, :, :, :
+		c	The spawn zone position Z coordinate.
+	f	J	field_82575_g	totalTime	#totalTime, :, time, :
+		c	Total time for this world.
+	f	J	field_76094_f	worldTime	#worldTime, :, timeOfDay, :
+		c	The current world time in ticks, ranging from 0 to 23999.
+	f	J	field_76095_g	lastTimePlayed	#lastTimePlayed, :, lastPlayed, :
+		c	The last time the player was in this world.
+	f	J	field_76107_h	sizeOnDisk	#sizeOnDisk, :, :, :
+		c	The size of entire save of current world on the disk, isn't exactly.
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_76108_i	playerTag	#playerTag, :, playerNbt, playerData
+	f	I	field_76105_j	dimension	#dimension, :, :, :
+	f	Ljava/lang/String;	field_76106_k	levelName	#levelName, :, :, name
+		c	The name of the save defined at world creation.
+	f	I	field_76103_l	saveVersion	#saveVersion, :, version, :
+		c	Introduced in beta 1.3, is the save version for future control.
+	f	Z	field_76104_m	raining	#raining, :, :, :
+		c	True if it's raining, false otherwise.
+	f	I	field_76101_n	rainTime	#rainTime, :, :, :
+		c	Number of ticks until next rain.
+	f	Z	field_76102_o	thundering	#thundering, :, :, :
+		c	Is thunderbolts failing now?
+	f	I	field_76114_p	thunderTime	#thunderTime, :, :, thundertime
+		c	Number of ticks untils next thunderbolt.
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_76113_q	theGameType	#theGameType, gameType, gameMode, defaultGameMode
+		c	The Game Type.
+	f	Z	field_76112_r	mapFeaturesEnabled	#mapFeaturesEnabled, :, structures, allowStructures
+		c	Whether the map features (e.g. strongholds) generation is enabled or disabled.
+	f	Z	field_76111_s	hardcore	#hardcore, :, :, :
+		c	Hardcore mode flag
+	f	Z	field_76110_t	allowCommands	#allowCommands, :, :, :
+	f	Z	field_76109_u	initialized	#initialized, :, :, :
+	f	Lnet/minecraft/world/GameRules;	field_82577_x	theGameRules	#theGameRules, gameRules, :, gamerules
+	m	(Lnet/minecraft/world/WorldSettings;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2158_1_	settings	#settings, :, info, settings
+		p	2	p_i2158_2_	name	#name, :, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2159_1_	worldInformation	#worldInformation, :, copy, data
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2157_1_	nbt	#nbt, :, worldNbt, nbt
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_76066_a	getNBTTagCompound	#getNBTTagCompound, :, toNbt, :
+		c	Gets the NBTTagCompound for the worldInfo
+	m	(I)V	func_76058_a	setSpawnX	#setSpawnX, :, :, :
+		c	Set the x spawn position to the passed in value
+		p	1	p_76058_1_	x	#x, :, spawnX, x
+	m	(III)V	func_76081_a	setSpawnPosition	#setSpawnPosition, :, setSpawnPos, setSpawnPoint
+		c	Sets the spawn zone position. Args: x, y, z
+		p	1	p_76081_1_	x	#~, ~, spawnX, x
+		p	2	p_76081_2_	y	#~, ~, spawnY, y
+		p	3	p_76081_3_	z	#~, ~, spawnZ, z
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_76060_a	setGameType	#setGameType, :, getGameMode, setDefaultGamemode
+		c	Sets the GameType.
+		p	1	p_76060_1_	type	#type, :, gameMode, :
+	m	(Lnet/minecraft/world/WorldType;)V	func_76085_a	setTerrainType	#setTerrainType, :, setLevelGeneratorType, setGeneratorType
+		p	1	p_76085_1_	type	#type, :, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Lnet/minecraft/world/WorldType;	access$000	access$000	#~, ~, ~, getGeneratorType
+		p	0	p_access$000_0_	properties	#~, ~, ~, properties
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;	func_76082_a	cloneNBTCompound	#cloneNBTCompound, :, toNbt, :
+		c	Creates a new NBTTagCompound for the world, with the given NBTTag as the "Player"
+		p	1	p_76082_1_	nbt	#nbt, :, :, playerData
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/nbt/NBTTagCompound;)V	func_76064_a	updateTagCompound	#updateTagCompound, :, putNbt, writeNbt
+		p	1	p_76064_1_	nbt	#nbt, :, worldNbt, nbt
+		p	2	p_76064_2_	playerNbt	#playerNbt, :, playerData, :
+	m	(Ljava/lang/String;)V	func_76062_a	setWorldName	#setWorldName, :, setLevelName, setName
+		p	1	p_76062_1_	worldName	#worldName, :, name, :
+	m	(Lnet/minecraft/crash/CrashReportCategory;)V	func_85118_a	addToCrashReport	#addToCrashReport, :, :, populateCrashReport
+		c	Adds this WorldInfo instance to the crash report.
+		p	1	p_85118_1_	category	#category, :, section, category
+	m	(Z)V	func_76069_a	setThundering	#setThundering, :, :, :
+		c	Sets whether it is thundering or not.
+		p	1	p_76069_1_	thunderingIn	#thunderingIn, :, thundering, :
+	m	()J	func_76063_b	getSeed	#getSeed, :, :, :
+		c	Returns the seed of current world.
+	m	(I)V	func_76056_b	setSpawnY	#setSpawnY, :, :, :
+		c	Sets the y spawn position
+		p	1	p_76056_1_	y	#y, :, spawnY, y
+	m	(J)V	func_82572_b	incrementTotalWorldTime	#incrementTotalWorldTime, setWorldTotalTime, setTime, :
+		p	1	p_82572_1_	time	#time, :, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Z	access$100	access$100	#~, ~, ~, getStructures
+		p	0	p_access$100_0_	properties	#~, ~, ~, properties
+	m	(Z)V	func_76084_b	setRaining	#setRaining, :, :, :
+		c	Sets whether it is raining or not.
+		p	1	p_76084_1_	isRaining	#isRaining, :, raining, :
+	m	()I	func_76079_c	getSpawnX	#getSpawnX, :, :, :
+		c	Returns the x spawn position
+	m	(I)V	func_76087_c	setSpawnZ	#setSpawnZ, :, :, :
+		c	Set the z spawn position to the passed in value
+		p	1	p_76087_1_	z	#z, :, spawnZ, z
+	m	(J)V	func_76068_b	setWorldTime	#setWorldTime, :, setDayTime, setTimeOfDay
+		c	Set current world time
+		p	1	p_76068_1_	time	#time, :, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Ljava/lang/String;	access$200	access$200	#~, ~, ~, getGeneratorOptions
+		p	0	p_access$200_0_	properties	#~, ~, ~, properties
+	m	()I	func_76075_d	getSpawnY	#getSpawnY, :, :, :
+		c	Return the Y axis spawning point of the player.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$300	access$300	#~, ~, ~, getSpawnX
+		p	0	p_access$300_0_	properties	#~, ~, ~, properties
+	m	(Z)V	func_76091_d	setServerInitialized	#setServerInitialized, :, setInitialized, :
+		c	Sets the initialization status of the World.
+		p	1	p_76091_1_	initializedIn	#initializedIn, :, initialized, :
+	m	()I	func_76074_e	getSpawnZ	#getSpawnZ, :, :, :
+		c	Returns the z spawn position
+	m	(I)V	func_76078_e	setSaveVersion	#setSaveVersion, :, setVersion, :
+		c	Sets the save version of the world
+		p	1	p_76078_1_	version	#version, :, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$400	access$400	#~, ~, ~, getSpawnY
+		p	0	p_access$400_0_	properties	#~, ~, ~, properties
+	m	()J	func_82573_f	getWorldTotalTime	#getWorldTotalTime, :, getTime, :
+	m	(I)V	func_76090_f	setThunderTime	#setThunderTime, :, :, :
+		c	Defines the number of ticks until next thunderbolt.
+		p	1	p_76090_1_	time	#time, :, :, thunderTime
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$500	access$500	#~, ~, ~, getSpawnZ
+		p	0	p_access$500_0_	properties	#~, ~, ~, properties
+	m	()J	func_76073_f	getWorldTime	#getWorldTime, :, getTimeOfDay, :
+		c	Get current world time
+	m	(I)V	func_76080_g	setRainTime	#setRainTime, :, :, :
+		c	Sets the number of ticks until rain.
+		p	1	p_76080_1_	time	#time, :, rainTime, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)J	access$600	access$600	#~, ~, ~, getTime
+		p	0	p_access$600_0_	properties	#~, ~, ~, properties
+	m	()J	func_76092_g	getSizeOnDisk	#getSizeOnDisk, :, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)J	access$700	access$700	#~, ~, ~, getTimeOfDay
+		p	0	p_access$700_0_	properties	#~, ~, ~, properties
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_76072_h	getPlayerNBTTagCompound	#getPlayerNBTTagCompound, :, getNbt, getPlayerData
+		c	Returns the player's NBTTagCompound to be loaded
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$800	access$800	#~, ~, ~, getDimensionId
+		p	0	p_access$800_0_	properties	#~, ~, ~, properties
+	m	()I	func_76076_i	getVanillaDimension	#getVanillaDimension, getDimension, ~, getDimensionId
+		c	Returns vanilla MC dimension (-1,0,1). For custom dimension compatibility, always prefer WorldProvider.dimensionID accessed from World.provider.dimensionID
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$900	access$900	#~, ~, ~, getVersion
+		p	0	p_access$900_0_	properties	#~, ~, ~, properties
+	m	()Ljava/lang/String;	func_76065_j	getWorldName	#getWorldName, :, getLevelName, getName
+		c	Get current world name
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$1000	access$1000	#~, ~, ~, getRainTime
+		p	0	p_access$1000_0_	properties	#~, ~, ~, properties
+	m	()I	func_76088_k	getSaveVersion	#getSaveVersion, :, getVersion, :
+		c	Returns the save version of this world
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Z	access$1100	access$1100	#~, ~, ~, getRaining
+		p	0	p_access$1100_0_	properties	#~, ~, ~, properties
+	m	()J	func_76057_l	getLastTimePlayed	#getLastTimePlayed, :, getLastPlayed, :
+		c	Return the last time the player was in this world.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)I	access$1200	access$1200	#~, ~, ~, getThunderTime
+		p	0	p_access$1200_0_	properties	#~, ~, ~, properties
+	m	()Z	func_76061_m	isThundering	#isThundering, :, :, :
+		c	Returns true if it is thundering, false otherwise.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Z	access$1300	access$1300	#~, ~, ~, getThundering
+		p	0	p_access$1300_0_	properties	#~, ~, ~, properties
+	m	()I	func_76071_n	getThunderTime	#getThunderTime, :, :, :
+		c	Returns the number of ticks until next thunderbolt.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Lnet/minecraft/world/WorldSettings$GameType;	access$1400	access$1400	#~, ~, ~, getDefaultGameMode
+		p	0	p_access$1400_0_	properties	#~, ~, ~, properties
+	m	()Z	func_76059_o	isRaining	#isRaining, :, :, :
+		c	Returns true if it is raining, false otherwise.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Z	access$1500	access$1500	#~, ~, ~, getHardcore
+		p	0	p_access$1500_0_	properties	#~, ~, ~, properties
+	m	()I	func_76083_p	getRainTime	#getRainTime, :, :, :
+		c	Return the number of ticks until rain.
+	m	(Lnet/minecraft/world/storage/WorldInfo;)Z	access$1600	access$1600	#~, ~, ~, getAllowCommands
+		p	0	p_access$1600_0_	properties	#~, ~, ~, properties
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_76077_q	getGameType	#getGameType, :, getGamemode, getDefaultGamemode
+		c	Gets the GameType.
+	m	()Z	func_76089_r	isMapFeaturesEnabled	#isMapFeaturesEnabled, :, hasStructures, allowStructures
+		c	Get whether the map features (e.g. strongholds) generation is enabled or disabled.
+	m	()Z	func_76093_s	isHardcoreModeEnabled	#isHardcoreModeEnabled, :, isHardcore, :
+		c	Returns true if hardcore mode is enabled, otherwise false
+	m	()Lnet/minecraft/world/WorldType;	func_76067_t	getTerrainType	#getTerrainType, :, getGeneratorType, :
+	m	()Z	func_76086_u	areCommandsAllowed	#areCommandsAllowed, :, areCheatsEnabled, allowCommands
+		c	Returns true if commands are allowed on this World.
+	m	()Z	func_76070_v	isInitialized	#isInitialized, :, :, :
+		c	Returns true if the World is initialized.
+	m	()Lnet/minecraft/world/GameRules;	func_82574_x	getGameRulesInstance	#getGameRulesInstance, :, getGamerules, :
+		c	Gets the GameRules class Instance.
+	m	()Ljava/lang/String;	func_82571_y	getGeneratorOptions	#getGeneratorOptions, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

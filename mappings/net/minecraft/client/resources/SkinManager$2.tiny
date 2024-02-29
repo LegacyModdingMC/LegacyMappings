@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SkinManager$2	net/minecraft/client/resources/SkinManager$2	
+	f	Lnet/minecraft/client/renderer/IImageBuffer;	field_152635_a	field_152635_a	#~, ~, ~, ~
+	f	Lnet/minecraft/client/resources/SkinManager$SkinAvailableCallback;	field_152636_b	field_152636_b	#~, ~, ~, ~
+	f	Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;	field_152637_c	field_152637_c	#~, ~, ~, ~
+	f	Lnet/minecraft/util/ResourceLocation;	field_152638_d	field_152638_d	#~, ~, ~, ~
+	f	Lnet/minecraft/client/resources/SkinManager;	field_152639_e	field_152639_e	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/resources/SkinManager;Lnet/minecraft/client/renderer/IImageBuffer;Lnet/minecraft/client/resources/SkinManager$SkinAvailableCallback;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/util/ResourceLocation;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1040_1_	parentScreen	#parentScreen, :, ~, ~
+		p	2	p_i1040_2_	p_i1040_2_	#~, ~, ~, ~
+		p	3	p_i1040_3_	p_i1040_3_	#~, ~, ~, ~
+		p	4	p_i1040_4_	p_i1040_4_	#~, ~, ~, ~
+		p	5	p_i1040_5_	p_i1040_5_	#~, ~, ~, ~

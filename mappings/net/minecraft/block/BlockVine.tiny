@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockVine	net/minecraft/block/BlockVine	
+	m	(Lnet/minecraft/block/Block;)Z	func_150093_a	canPlaceOn	#canPlaceOn, :, :, canGrowOn
+		p	1	p_150093_1_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/world/World;III)Z	func_150094_e	hasConnections	#~, ~, ~, hasConnections
+		p	1	p_150094_1_	world	#~, ~, ~, world
+		p	2	p_150094_2_	x	#~, ~, ~, x
+		p	3	p_150094_3_	y	#~, ~, ~, y
+		p	4	p_150094_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

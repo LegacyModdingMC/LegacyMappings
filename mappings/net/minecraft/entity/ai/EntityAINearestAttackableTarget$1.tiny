@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAINearestAttackableTarget$1	net/minecraft/entity/ai/EntityAINearestAttackableTarget$1	
+	f	Lnet/minecraft/command/IEntitySelector;	field_111103_c	filter	#~, ~, predicate, filter
+	f	Lnet/minecraft/entity/ai/EntityAINearestAttackableTarget;	field_111102_d	targetGoal	#~, ~, followGoal, targetGoal
+	m	(Lnet/minecraft/entity/ai/EntityAINearestAttackableTarget;Lnet/minecraft/command/IEntitySelector;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1661_1_	followGoal	#~, ~, followGoal, ~
+		p	2	p_i1661_2_	predicate	#~, ~, predicate, ~

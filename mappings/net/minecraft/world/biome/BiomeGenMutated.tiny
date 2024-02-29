@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenMutated	net/minecraft/world/biome/BiomeGenMutated	
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150611_aD	baseBiome	#baseBiome, :, original, :
+	m	(ILnet/minecraft/world/biome/BiomeGenBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45381_1_	id	#id, :, :, :
+		p	2	p_i45381_2_	biome	#biome, :, original, :

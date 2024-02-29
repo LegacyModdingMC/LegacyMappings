@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/login/server/S00PacketDisconnect	net/minecraft/network/login/server/S00PacketDisconnect	
+	f	Lnet/minecraft/util/IChatComponent;	field_149605_a	reason	#reason, :, :, :
+	m	(Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45269_1_	reasonIn	#reasonIn, :, reason, :
+	m	()Lnet/minecraft/util/IChatComponent;	func_149603_c	getReason	#getReason, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

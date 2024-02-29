@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/IBehaviorDispenseItem	net/minecraft/dispenser/IBehaviorDispenseItem	
+	f	Lnet/minecraft/dispenser/IBehaviorDispenseItem;	field_82483_a	itemDispenseBehaviorProvider	#itemDispenseBehaviorProvider, DEFAULT_BEHAVIOR, INSTANCE, NONE
+	m	(Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;	func_82482_a	dispense	#dispense, :, :, :
+		c	Dispenses the specified ItemStack from a dispenser.
+		p	1	p_82482_1_	source	#source, :, pointer, source
+		p	2	p_82482_2_	stack	#stack, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

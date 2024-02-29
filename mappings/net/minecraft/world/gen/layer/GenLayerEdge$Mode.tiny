@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerEdge$Mode	net/minecraft/world/gen/layer/GenLayerEdge$Mode	
+	f	Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	COOL_WARM	COOL_WARM	#~, ~, COOL_WARM, :
+	f	Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	HEAT_ICE	HEAT_ICE	#~, ~, HEAT_ICE, :
+	f	Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	SPECIAL	SPECIAL	#~, ~, SPECIAL, :
+	f	[Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/world/gen/layer/GenLayerEdge$Mode;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45473_1_	p_i45473_1_	#~, ~, ~, ~
+		p	2	p_i45473_2_	p_i45473_2_	#~, ~, ~, ~

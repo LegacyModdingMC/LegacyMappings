@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/InventoryBasic	net/minecraft/inventory/InventoryBasic	
+	f	Ljava/lang/String;	field_70483_a	inventoryTitle	#inventoryTitle, :, name, :
+	f	I	field_70481_b	slotsCount	#slotsCount, :, size, :
+	f	[Lnet/minecraft/item/ItemStack;	field_70482_c	inventoryContents	#inventoryContents, :, inventory, stacks
+	f	Ljava/util/List;	field_70480_d	changeListeners	#changeListeners, :, listeners, :
+		c	Listeners notified when any item in this inventory is changed.
+	f	Z	field_94051_e	hasCustomName	#hasCustomName, :, :, :
+	m	(Ljava/lang/String;ZI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1561_1_	title	#title, :, name, :
+		p	2	p_i1561_2_	customName	#customName, :, hasCustomName, :
+		p	3	p_i1561_3_	slotCount	#slotCount, :, size, :
+	m	(Ljava/lang/String;)V	func_110133_a	setCustomName	#setCustomName, :, setName, setCustomName
+		c	Sets the name of this inventory. This is displayed to the client on opening.
+		p	1	p_110133_1_	inventoryTitleIn	#inventoryTitleIn, :, name, :
+	m	(Lnet/minecraft/inventory/IInvBasic;)V	func_110134_a	addInventoryChangeListener	#addInventoryChangeListener, :, addListener, :
+		c	Add a listener that will be notified when any item in this inventory is modified.\n \n@param listener the listener to add
+		p	1	p_110134_1_	listener	#listener, :, :, :
+	m	(Lnet/minecraft/inventory/IInvBasic;)V	func_110132_b	removeInventoryChangeListener	#removeInventoryChangeListener, :, removeListener, :
+		c	removes the specified IInvBasic from receiving further change notices\n \n@param listener the listener to remove
+		p	1	p_110132_1_	listener	#listener, :, :, :

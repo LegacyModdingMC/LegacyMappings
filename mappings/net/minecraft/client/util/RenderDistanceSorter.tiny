@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/util/RenderDistanceSorter	net/minecraft/client/util/RenderDistanceSorter	
+	f	I	field_152632_a	offsetX	#~, ~, ~, offsetX
+	f	I	field_152633_b	offsetZ	#~, ~, ~, offsetZ
+	m	(Lnet/minecraft/client/renderer/RenderList;Lnet/minecraft/client/renderer/RenderList;)I	compare	compare	#~, ~, compare, :
+		p	1	p_compare_1_	p_compare_1_	#~, ~, ~, ~
+		p	2	p_compare_2_	p_compare_2_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	#~, ~, ~, ~
+		p	1	p_compare_1_	storage1	#~, ~, ~, storage1
+		p	2	p_compare_2_	storage2	#~, ~, ~, storage2
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1051_1_	offsetX	#~, ~, ~, offsetX
+		p	2	p_i1051_2_	offsetZ	#~, ~, ~, offsetZ

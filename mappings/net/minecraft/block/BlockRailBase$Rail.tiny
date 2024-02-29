@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRailBase$Rail	net/minecraft/block/BlockRailBase$Rail	
+	f	Lnet/minecraft/block/BlockRailBase;	field_150662_a	field_150662_a	#~, ~, ~, ~
+	f	Lnet/minecraft/world/World;	field_150660_b	world	#world, :, ~, world
+	f	I	field_150661_c	x	#~, ~, ~, x
+	f	I	field_150658_d	y	#~, ~, ~, y
+	f	I	field_150659_e	z	#~, ~, ~, z
+	f	Z	field_150656_f	isPowered	#isPowered, :, ~, alwaysStraight
+	f	Ljava/util/List;	field_150657_g	connectedRails	#connectedRails, :, ~, connections
+	m	()I	func_150650_a	countAdjacentRails	#countAdjacentRails, :, ~, countConnections
+		c	Counts the number of rails adjacent to this rail.
+	m	(I)V	func_150648_a	updateConnections	#~, ~, ~, updateConnections
+		p	1	p_150648_1_	metadata	#~, ~, ~, metadata
+	m	(III)Z	func_150646_a	isRailBlockAt	#isRailBlockAt, :, ~, shouldConnectTo
+		c	Rail Logic wrapper for BlockRailBase's isRailBlockAt.
+		p	1	p_150646_1_	x	#~, ~, ~, x
+		p	2	p_150646_2_	y	#~, ~, ~, y
+		p	3	p_150646_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/ChunkPosition;)Lnet/minecraft/block/BlockRailBase$Rail;	func_150654_a	getNeighborRail	#~, ~, ~, getNeighborRail
+		p	1	p_150654_1_	pos	#~, ~, ~, pos
+	m	(Lnet/minecraft/block/BlockRailBase$Rail;)Z	func_150653_a	isConnectedToRail	#isConnectedToRail, :, ~, isConnected
+		p	1	p_150653_1_	rail	#rail, :, ~, rail
+	m	(ZZ)V	func_150655_a	updateState	#~, ~, ~, updateState
+		p	1	p_150655_1_	powered	#~, ~, ~, powered
+		p	2	p_150655_2_	force	#~, ~, ~, force
+	m	()V	func_150651_b	removeSoftConnections	#removeSoftConnections, :, ~, cleanUpConnections
+	m	(III)Z	func_150652_b	isConnected	#~, ~, ~, isConnected
+		p	1	p_150652_1_	x	#~, ~, ~, x
+		p	2	p_150652_2_	y	#~, ~, ~, y
+		p	3	p_150652_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockRailBase$Rail;)Z	func_150649_b	canConnectTo	#canConnectTo, :, ~, canConnect
+		p	1	p_150649_1_	rail	#rail, :, ~, rail
+	m	(III)Z	func_150647_c	hasNeighborRail	#~, ~, ~, hasNeighborRail
+		p	1	p_150647_1_	x	#~, ~, ~, x
+		p	2	p_150647_2_	y	#~, ~, ~, y
+		p	3	p_150647_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockRailBase$Rail;)V	func_150645_c	connectTo	#connectTo, :, ~, addConnection
+		p	1	p_150645_1_	rail	#rail, :, ~, rail
+	m	(Lnet/minecraft/block/BlockRailBase;Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i45388_2_	world	#~, ~, ~, world
+		p	3	p_i45388_3_	x	#~, ~, ~, x
+		p	4	p_i45388_4_	y	#~, ~, ~, y
+		p	5	p_i45388_5_	z	#~, ~, ~, z
+		p	1	p_i45388_1_	p_i45388_1_	#~, ~, ~, ~

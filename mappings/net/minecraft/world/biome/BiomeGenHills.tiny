@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenHills	net/minecraft/world/biome/BiomeGenHills	
+	f	Lnet/minecraft/world/gen/feature/WorldGenerator;	field_82915_S	theWorldGenerator	#theWorldGenerator, silverfishSpawner, ~, monsterEggVein
+	f	Lnet/minecraft/world/gen/feature/WorldGenTaiga2;	field_150634_aD	spruceGenerator	#spruceGenerator, :, ~, spruceTree
+	f	I	field_150635_aE	normalVariant	#~, ~, ~, normalVariant
+	f	I	field_150636_aF	moreTreesVariant	#~, ~, ~, moreTreesVariant
+	f	I	field_150637_aG	mutatedVariant	#~, ~, ~, mutatedVariant
+	f	I	field_150638_aH	type	#type, :, ~, variant
+	m	(IZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45373_1_	id	#id, :, :, :
+		p	2	p_i45373_2_	moreTrees	#~, ~, ~, moreTrees
+	m	(Lnet/minecraft/world/biome/BiomeGenBase;)Lnet/minecraft/world/biome/BiomeGenHills;	func_150633_b	mutateHills	#mutateHills, :, ~, mutate
+		c	this creates a mutation specific to Hills biomes
+		p	1	p_150633_1_	original	#~, ~, ~, original

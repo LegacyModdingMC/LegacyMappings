@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/shader/ShaderLoader	net/minecraft/client/shader/ShaderLoader	
+	f	Lnet/minecraft/client/shader/ShaderLoader$ShaderType;	field_148061_a	shaderType	#shaderType, :, ~, type
+	f	Ljava/lang/String;	field_148059_b	shaderFilename	#shaderFilename, :, name, :
+	f	I	field_148060_c	shader	#shader, :, shaderRef, id
+	f	I	field_148058_d	shaderAttachCount	#shaderAttachCount, :, refCount, references
+	m	()Ljava/lang/String;	func_148055_a	getShaderFilename	#getShaderFilename, :, getName, :
+	m	(Lnet/minecraft/client/shader/ShaderManager;)V	func_148056_a	attachShader	#attachShader, :, :, attachToEffect
+		p	1	p_148056_1_	manager	#manager, :, program, effect
+	m	(Lnet/minecraft/client/resources/IResourceManager;Lnet/minecraft/client/shader/ShaderLoader$ShaderType;Ljava/lang/String;)Lnet/minecraft/client/shader/ShaderLoader;	func_148057_a	loadShader	#loadShader, :, ~, compileShader
+		p	0	p_148057_0_	resourceManager	#resourceManager, :, ~, resourceManager
+		p	1	p_148057_1_	type	#type, :, ~, type
+		p	2	p_148057_2_	filename	#filename, :, ~, name
+	m	(Lnet/minecraft/client/shader/ShaderManager;)V	func_148054_b	deleteShader	#deleteShader, :, :, close
+		p	1	p_148054_1_	manager	#manager, :, program, effect
+	m	(Lnet/minecraft/client/shader/ShaderLoader$ShaderType;ILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45091_1_	type	#type, :, ~, type
+		p	2	p_i45091_2_	shaderId	#shaderId, :, ~, id
+		p	3	p_i45091_3_	filename	#filename, :, ~, name

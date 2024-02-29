@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityPotion	net/minecraft/entity/projectile/EntityPotion	
+	f	Lnet/minecraft/item/ItemStack;	field_70197_d	potionDamage	#potionDamage, :, stack, :
+		c	The damage value of the thrown potion that this EntityPotion represents.
+	m	(Lnet/minecraft/world/World;DDDI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1791_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1791_2_	x	#x, :, :, :
+		p	4	p_i1791_4_	y	#y, :, :, :
+		p	6	p_i1791_6_	z	#z, :, :, ~
+		p	8	p_i1791_8_	id	#~, ~, id, ~
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1792_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1792_2_	x	#x, :, :, :
+		p	4	p_i1792_4_	y	#y, :, :, :
+		p	6	p_i1792_6_	z	#z, :, :, ~
+		p	8	p_i1792_8_	potionDamageIn	#potionDamageIn, :, stack, ~
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1789_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1789_2_	throwerIn	#throwerIn, :, entity, thrower
+		p	3	p_i1789_3_	meta	#meta, :, id, metadata
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1790_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1790_2_	throwerIn	#throwerIn, :, entity, thrower
+		p	3	p_i1790_3_	potionDamageIn	#potionDamageIn, :, stack, :
+	m	(I)V	func_82340_a	setPotionDamage	#setPotionDamage, :, setPotionValue, :
+		c	Sets the PotionEffect by the given id of the potion effect.
+		p	1	p_82340_1_	potionId	#potionId, :, ~, damage
+	m	()I	func_70196_i	getPotionDamage	#getPotionDamage, :, ~, getMetadata
+		c	Returns the damage value of the thrown potion that this EntityPotion represents.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1788_1_	worldIn	#worldIn, :, ~, world

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerHills	net/minecraft/world/gen/layer/GenLayerHills	
+	f	Lorg/apache/logging/log4j/Logger;	field_151629_c	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/world/gen/layer/GenLayer;	field_151628_d	riverLayer	#riverLayer, :, ~, riverLayer
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;Lnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45479_1_	seed	#~, ~, ~, seed
+		p	3	p_i45479_3_	parent	#~, ~, ~, parent
+		p	4	p_i45479_4_	riverLayer	#~, ~, ~, riverLayer
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

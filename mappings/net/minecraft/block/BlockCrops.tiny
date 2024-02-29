@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCrops	net/minecraft/block/BlockCrops	
+	f	[Lnet/minecraft/util/IIcon;	field_149867_a	icons	#icons, :, ~, blockSprite
+	m	()Lnet/minecraft/item/Item;	func_149865_P	getCrop	#getCrop, :, getHarvestItem, getPlantItem
+	m	()Lnet/minecraft/item/Item;	func_149866_i	getSeed	#getSeed, :, getSeedItem, :
+	m	(Lnet/minecraft/world/World;III)V	func_149863_m	fertilize	#fertilize, :, ~, grow
+		p	1	p_149863_1_	world	#~, ~, ~, world
+		p	2	p_149863_2_	x	#~, ~, ~, x
+		p	3	p_149863_3_	y	#~, ~, ~, y
+		p	4	p_149863_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)F	func_149864_n	getMoisture	#~, ~, ~, getMoisture
+		p	1	p_149864_1_	world	#~, ~, ~, world
+		p	2	p_149864_2_	x	#~, ~, ~, x
+		p	3	p_149864_3_	y	#~, ~, ~, y
+		p	4	p_149864_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/BroadcastController$BroadcastState	net/minecraft/client/stream/BroadcastController$BroadcastState	
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Uninitialized	Uninitialized	#~, ~, UNINITIALIZED, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Initialized	Initialized	#~, ~, INITIALIZED, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Authenticating	Authenticating	#~, ~, AUTHENTICATING, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Authenticated	Authenticated	#~, ~, AUTHENTICATED, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	LoggingIn	LoggingIn	#~, ~, LOGGING_IN, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	LoggedIn	LoggedIn	#~, ~, LOGGED_IN, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	FindingIngestServer	FindingIngestServer	#~, ~, FINDING_INGEST_SERVER, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	ReceivedIngestServers	ReceivedIngestServers	#~, ~, RECEIVED_INGEST_SERVERS, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	ReadyToBroadcast	ReadyToBroadcast	#~, ~, READY_TO_BROADCAST, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Starting	Starting	#~, ~, STARTING, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Broadcasting	Broadcasting	#~, ~, BROADCASTING, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Stopping	Stopping	#~, ~, STOPPING, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	Paused	Paused	#~, ~, PAUSED, :
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	IngestTesting	IngestTesting	#~, ~, INGEST_TESTING, :
+	f	[Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1025_1_	p_i1025_1_	#~, ~, ~, ~
+		p	2	p_i1025_2_	p_i1025_2_	#~, ~, ~, ~

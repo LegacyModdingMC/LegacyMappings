@@ -1,0 +1,55 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/LongHashMap	net/minecraft/util/LongHashMap	
+	f	[Lnet/minecraft/util/LongHashMap$Entry;	field_76169_a	hashArray	#hashArray, :, ~, nodes
+		c	the array of all elements in the hash
+	f	I	field_76167_b	numHashElements	#numHashElements, :, usedEntriesCount, size
+		c	the number of elements in the hash array
+	f	I	field_76168_c	capacity	#capacity, :, growthLimit, threshold
+		c	the maximum amount of elements in the hash (probably 3/4 the size due to meh hashing function)
+	f	F	field_76165_d	percentUseable	#percentUseable, :, growthFactor, loadFactor
+		c	percent of the hasharray that can be used without hash colliding probably
+	f	I	field_76166_e	modCount	#modCount, :, size, modCount
+		c	count of times elements have been added/removed
+	m	()I	func_76162_a	getNumHashElements	#getNumHashElements, :, getUsedEntriesCount, size
+	m	(I)I	func_76157_a	hash	#hash, :, :, :
+		c	the hash function
+		p	0	p_76157_0_	integer	#integer, :, i, key
+	m	(II)I	func_76158_a	getHashIndex	#getHashIndex, :, getEntryIndex, index
+		c	gets the index in the hash given the array length and the hashed key
+		p	0	p_76158_0_	hash	#~, ~, ~, hash
+		p	1	p_76158_1_	cap	#~, ~, ~, cap
+	m	(IJLjava/lang/Object;I)V	func_76156_a	createKey	#createKey, :, insert, insertNode
+		c	creates the key in the hash table
+		p	1	p_76156_1_	hash	#~, ~, hash, :
+		p	2	p_76156_2_	key	#~, ~, key, :
+		p	4	p_76156_4_	value	#~, ~, value, :
+		p	5	p_76156_5_	index	#~, ~, index, :
+	m	(J)Ljava/lang/Object;	func_76164_a	getValueByKey	#getValueByKey, :, get, :
+		c	get the value from the map given the key
+		p	1	p_76164_1_	key	#~, ~, key, :
+	m	(JLjava/lang/Object;)V	func_76163_a	add	#add, :, set, put
+		c	Add a key-value pair.
+		p	1	p_76163_1_	key	#~, ~, key, :
+		p	3	p_76163_3_	value	#~, ~, value, :
+	m	([Lnet/minecraft/util/LongHashMap$Entry;)V	func_76154_a	copyHashTableTo	#copyHashTableTo, :, ~, addAll
+		c	copies the hash table to the specified array
+		p	1	p_76154_1_	nodes	#~, ~, ~, nodes
+	m	(I)V	func_76153_b	resizeTable	#resizeTable, :, expand, resize
+		c	resizes the table
+		p	1	p_76153_1_	cap	#~, ~, newSize, cap
+	m	(J)Z	func_76161_b	containsItem	#containsItem, :, contains, :
+		p	1	p_76161_1_	key	#~, ~, key, :
+	m	(J)Lnet/minecraft/util/LongHashMap$Entry;	func_76160_c	getEntry	#getEntry, :, ~, getNode
+		p	1	p_76160_1_	key	#~, ~, ~, key
+	m	(J)Ljava/lang/Object;	func_76159_d	remove	#remove, :, :, :
+		c	calls the removeKey method and returns removed object
+		p	1	p_76159_1_	key	#~, ~, key, :
+	m	(J)Lnet/minecraft/util/LongHashMap$Entry;	func_76152_e	removeKey	#removeKey, :, ~, removeNode
+		c	removes the key from the hash linked list
+		p	1	p_76152_1_	key	#~, ~, ~, key
+	m	(J)I	access$000	access$000	#~, ~, ~, getKey
+		p	0	p_access$000_0_	value	#~, ~, ~, value
+	m	(J)I	func_76155_g	getHashedKey	#getHashedKey, :, hash, :
+		c	returns the hashed key given the original key
+		p	0	p_76155_0_	originalKey	#originalKey, :, l, key
+	m	()V	<init>	<init>	#~, ~, ~, ~

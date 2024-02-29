@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/HttpUtil	net/minecraft/util/HttpUtil	
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	field_151228_a	downloadThreadsStarted	#downloadThreadsStarted, DOWNLOAD_THREADS_STARTED, ids, downloadThreadCounter
+		c	The number of download threads that we have started so far.
+	f	Lorg/apache/logging/log4j/Logger;	field_151227_b	logger	#logger, LOGGER, :, :
+	m	()I	func_76181_a	getSuitableLanPort	#getSuitableLanPort, :, getFreePort, getLocalPort
+	m	(Ljava/io/File;Ljava/lang/String;Lnet/minecraft/util/HttpUtil$DownloadListener;Ljava/util/Map;ILnet/minecraft/util/IProgressUpdate;Ljava/net/Proxy;)V	func_151223_a	downloadResourcePack	#downloadResourcePack, :, ~, downloadServerPack
+		p	0	p_151223_0_	packFile	#packFile, :, ~, file
+		p	1	p_151223_1_	packName	#packName, :, ~, url
+		p	2	p_151223_2_	completionListener	#completionListener, :, ~, resourcePack
+		p	3	p_151223_3_	requestData	#requestData, :, ~, hashMap
+		p	4	p_151223_4_	maxSize	#maxSize, :, ~, maxFileSize
+		p	5	p_151223_5_	loadingScreen	#loadingScreen, :, ~, progressListener
+		p	6	p_151223_6_	proxy	#proxy, :, ~, proxy
+	m	(Ljava/net/URL;)Ljava/lang/String;	func_152755_a	get	#get, :, :, getUrlContents
+		c	Send a GET request to the given URL.
+		p	0	p_152755_0_	url	#url, :, :, :
+	m	(Ljava/net/URL;Ljava/lang/String;Z)Ljava/lang/String;	func_151225_a	post	#post, :, :, postTo
+		c	Sends a POST to the given URL\n \n@param content Formatted POST args (key=value&key2=value2&etc=etc) Should be encoded properly or an error may occur.
+		p	0	p_151225_0_	url	#url, :, :, :
+		p	1	p_151225_1_	content	#content, :, data, contentLength
+		p	2	p_151225_2_	skipLoggingErrors	#skipLoggingErrors, :, silent, quietly
+	m	(Ljava/net/URL;Ljava/util/Map;Z)Ljava/lang/String;	func_151226_a	postMap	#postMap, :, post, postTo
+		c	Sends a POST to the given URL using the map as the POST args
+		p	0	p_151226_0_	url	#url, :, :, :
+		p	1	p_151226_1_	data	#data, :, :, hasmap
+		p	2	p_151226_2_	skipLoggingErrors	#skipLoggingErrors, :, silent, quietly
+	m	(Ljava/util/Map;)Ljava/lang/String;	func_76179_a	buildPostString	#buildPostString, :, urlEncode, buildString
+		c	Builds an encoded HTTP POST content string from a string map
+		p	0	p_76179_0_	data	#data, :, :, :
+	m	()Lorg/apache/logging/log4j/Logger;	access$000	access$000	#~, ~, getLogger, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

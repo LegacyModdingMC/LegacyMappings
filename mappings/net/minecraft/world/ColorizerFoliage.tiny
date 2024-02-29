@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/ColorizerFoliage	net/minecraft/world/ColorizerFoliage	
+	f	[I	field_77471_a	foliageBuffer	#foliageBuffer, :, colorMap, colors
+		c	Color buffer for foliage
+	m	()I	func_77466_a	getFoliageColorPine	#getFoliageColorPine, :, getSpruceColor, :
+		c	Gets the foliage color for pine type (metadata 1) trees
+	m	(DD)I	func_77470_a	getFoliageColor	#getFoliageColor, :, getColor, get
+		c	Gets foliage color from temperature and humidity. Args: temperature, humidity
+		p	0	p_77470_0_	temperature	#temperature, :, :, :
+		p	2	p_77470_2_	humidity	#humidity, :, :, :
+	m	([I)V	func_77467_a	setFoliageBiomeColorizer	#setFoliageBiomeColorizer, :, setColorMap, set
+		p	0	p_77467_0_	foliageBufferIn	#foliageBufferIn, :, pixels, colors
+	m	()I	func_77469_b	getFoliageColorBirch	#getFoliageColorBirch, :, getBirchColor, :
+		c	Gets the foliage color for birch type (metadata 2) trees
+	m	()I	func_77468_c	getFoliageColorBasic	#getFoliageColorBasic, :, getDefaultColor, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

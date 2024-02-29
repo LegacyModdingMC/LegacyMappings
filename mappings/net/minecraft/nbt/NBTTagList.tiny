@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagList	net/minecraft/nbt/NBTTagList	
+	f	Ljava/util/List;	field_74747_a	tagList	#tagList, :, value, elements
+		c	The array list containing the tags encapsulated in this list.
+	f	B	field_74746_b	tagType	#tagType, :, type, :
+		c	The type byte for the tags in the list - they must all be of the same type.
+	m	(I)Lnet/minecraft/nbt/NBTBase;	func_74744_a	removeTag	#removeTag, :, remove, :
+		c	Removes a tag at the given index.
+		p	1	p_74744_1_	i	#i, :, id, index
+	m	(ILnet/minecraft/nbt/NBTBase;)V	func_150304_a	setTag	#setTag, set, :, :
+		c	Set the given index to the given tag
+		p	1	p_150304_1_	i	#i, idx, id, index
+		p	2	p_150304_2_	nbt	#nbt, :, :, element
+	m	(Lnet/minecraft/nbt/NBTBase;)V	func_74742_a	appendTag	#appendTag, :, add, :
+		c	Adds the provided tag to the end of the list. There is no check to verify this tag is of the same type as any previous tag.
+		p	1	p_74742_1_	nbt	#nbt, :, :, element
+	m	(I)Lnet/minecraft/nbt/NBTTagCompound;	func_150305_b	getCompoundTagAt	#getCompoundTagAt, :, getCompound, :
+		c	Retrieves the NBTTagCompound at the specified index in the list
+		p	1	p_150305_1_	i	#i, :, index, :
+	m	()I	func_74745_c	tagCount	#tagCount, :, size, :
+		c	Returns the number of tags in the list.
+	m	(I)[I	func_150306_c	getIntArrayAt	#getIntArrayAt, :, getIntArray, :
+		p	1	p_150306_1_	i	#i, :, index, :
+	m	()I	func_150303_d	getTagType	#getTagType, :, getElementType, :
+	m	(I)D	func_150309_d	getDoubleAt	#getDoubleAt, :, getDouble, :
+		p	1	p_150309_1_	i	#i, :, index, :
+	m	(I)F	func_150308_e	getFloatAt	#getFloatAt, :, getFloat, :
+		p	1	p_150308_1_	i	#i, :, index, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, o, obj
+	m	(I)Ljava/lang/String;	func_150307_f	getStringTagAt	#getStringTagAt, :, getString, :
+		c	Retrieves the tag String value at the specified index in the list
+		p	1	p_150307_1_	i	#i, :, index, :
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

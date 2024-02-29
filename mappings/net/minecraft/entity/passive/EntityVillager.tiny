@@ -1,0 +1,70 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityVillager	net/minecraft/entity/passive/EntityVillager	
+	f	F	field_82191_bN	tradeOfferSize	#~, ~, ~, tradeOfferSize
+		c	sqrt of (tradeOfferSize divided by 5) used to lower the chance to unlock more trades
+	f	Ljava/util/Map;	field_70958_bB	villagersSellingList	#villagersSellingList, :, ~, BUY_OFFER_MAP
+		c	Selling list of Villagers items.
+	f	Ljava/util/Map;	field_70960_bC	blacksmithSellingList	#blacksmithSellingList, :, ~, SELL_OFFER_MAP
+		c	Selling list of Blacksmith items.
+	f	Lnet/minecraft/village/Village;	field_70954_d	villageObj	#villageObj, village, ~, village
+	f	I	field_70955_e	randomTickDivider	#randomTickDivider, :, ~, updateVillageCooldown
+	f	Z	field_70952_f	isMating	#isMating, :, ~, mating
+	f	Z	field_70953_g	isPlaying	#isPlaying, :, ~, inCaravan
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_70962_h	buyingPlayer	#buyingPlayer, :, customer, :
+		c	This villager's current customer.
+	f	Lnet/minecraft/village/MerchantRecipeList;	field_70963_i	buyingList	#buyingList, :, offers, traderOffers
+		c	Initialises the MerchantRecipeList.java
+	f	I	field_70961_j	timeUntilReset	#timeUntilReset, :, ~, levelUpCountdown
+	f	Z	field_70959_by	needsInitilization	#needsInitilization, :, ~, levelUp
+		c	addDefaultEquipmentAndRecipies is called if this is true
+	f	I	field_70956_bz	wealth	#wealth, :, riches, :
+	f	Ljava/lang/String;	field_82189_bL	lastBuyingPlayer	#lastBuyingPlayer, :, ~, tradingPlayer
+		c	Last player to trade with this villager, used for aggressivity.
+	f	Z	field_82190_bM	isLookingForHome	#isLookingForHome, :, ~, convertedZombie
+		c	This field will be set to true when a villager gets created by the means of converting a zombie.\nIn next mobTick() it will be set to false and awards all the players in the village with a reputation bonus.
+	m	(Lnet/minecraft/world/World;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1748_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1748_2_	professionId	#professionId, :, profession, :
+	m	(Lnet/minecraft/item/Item;Ljava/util/Random;)Lnet/minecraft/item/ItemStack;	func_146088_a	getItemStack	#~, ~, ~, getItemStack
+		p	0	p_146088_0_	item	#~, ~, ~, item
+		p	1	p_146088_1_	random	#~, ~, ~, random
+	m	(Lnet/minecraft/village/MerchantRecipeList;Lnet/minecraft/item/Item;Ljava/util/Random;F)V	func_146091_a	makeBuyTradeOffer	#~, ~, ~, makeBuyTradeOffer
+		p	0	p_146091_0_	traderOfferList	#~, ~, ~, traderOfferList
+		p	1	p_146091_1_	item	#~, ~, ~, item
+		p	2	p_146091_2_	random	#~, ~, ~, random
+		p	3	p_146091_3_	chance	#~, ~, ~, chance
+	m	(Lnet/minecraft/item/Item;Ljava/util/Random;)I	func_146092_b	getBuyItemAmount	#~, ~, ~, getBuyItemAmount
+		p	0	p_146092_0_	item	#~, ~, ~, item
+		p	1	p_146092_1_	random	#~, ~, ~, random
+	m	(Lnet/minecraft/village/MerchantRecipeList;Lnet/minecraft/item/Item;Ljava/util/Random;F)V	func_146089_b	makeSellTradeOffer	#~, ~, ~, makeSellTradeOffer
+		p	0	p_146089_0_	traderOfferList	#~, ~, ~, traderOfferList
+		p	1	p_146089_1_	item	#~, ~, ~, item
+		p	2	p_146089_2_	random	#~, ~, ~, random
+		p	3	p_146089_3_	chance	#~, ~, ~, chance
+	m	(Ljava/lang/String;)V	func_70942_a	generateRandomParticles	#generateRandomParticles, :, ~, addParticles
+		c	par1 is the particleName
+		p	1	p_70942_1_	type	#~, ~, ~, type
+	m	()I	func_70946_n	getProfession	#getProfession, :, profession, getProfession
+	m	(Lnet/minecraft/item/Item;Ljava/util/Random;)I	func_146090_c	getSellItemAmount	#~, ~, ~, getSellItemAmount
+		p	0	p_146090_0_	item	#~, ~, ~, item
+		p	1	p_146090_1_	random	#~, ~, ~, random
+	m	()Z	func_70941_o	isMating	#isMating, :, ~, getMating
+	m	()Z	func_70945_p	isPlaying	#isPlaying, :, ~, getInCaravan
+	m	()Z	func_70940_q	isTrading	#isTrading, :, hasCustomer, :
+	m	()V	func_82187_q	setLookingForHome	#setLookingForHome, :, ~, setConvertedZombie
+	m	(Z)V	func_70947_e	setMating	#setMating, :, ~, setMating
+		p	1	p_70947_1_	mating	#mating, :, ~, value
+	m	(Z)V	func_70939_f	setPlaying	#setPlaying, :, ~, setInCaravan
+		p	1	p_70939_1_	playing	#playing, :, ~, value
+	m	(F)F	func_82188_j	adjustProbability	#adjustProbability, :, ~, getChanceToCreateTrade
+		c	Adjusts the probability of obtaining a given recipe being offered by a villager
+		p	1	p_82188_1_	baseChance	#~, ~, ~, baseChance
+	m	(I)V	func_70938_b	setProfession	#setProfession, :, :, :
+		p	1	p_70938_1_	professionId	#professionId, :, professon, profession
+	m	(I)V	func_70950_c	addDefaultEquipmentAndRecipies	#addDefaultEquipmentAndRecipies, :, ~, addTradeOffers
+		c	based on the villagers profession add items, equipment, and recipies adds par1 random items to the list of things that the villager wants to buy. (at most 1 of each wanted type is added)
+		p	1	p_70950_1_	i	#~, ~, ~, i
+			c	Unused param, it is always 1
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1747_1_	worldIn	#worldIn, :, ~, world
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

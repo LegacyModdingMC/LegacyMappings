@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAICreeperSwell	net/minecraft/entity/ai/EntityAICreeperSwell	
+	f	Lnet/minecraft/entity/monster/EntityCreeper;	field_75269_a	swellingCreeper	#swellingCreeper, :, creeper, :
+		c	The creeper that is swelling.
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75268_b	creeperAttackTarget	#creeperAttackTarget, :, target, :
+		c	The creeper's attack target. This is used for the changing of the creeper's state.
+	m	(Lnet/minecraft/entity/monster/EntityCreeper;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1655_1_	entitycreeperIn	#entitycreeperIn, :, creeper, :

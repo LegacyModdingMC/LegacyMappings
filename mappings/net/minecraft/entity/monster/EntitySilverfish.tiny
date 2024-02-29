@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntitySilverfish	net/minecraft/entity/monster/EntitySilverfish	
+	f	I	field_70843_d	allySummonCooldown	#allySummonCooldown, :, ~, delay
+		c	A cooldown before this entity will search for another Silverfish to join them in battle.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1740_1_	worldIn	#worldIn, :, ~, world

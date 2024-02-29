@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C03PacketPlayer$C05PacketPlayerLook	net/minecraft/network/play/client/C03PacketPlayer$C05PacketPlayerLook	
+	m	(FFZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45255_1_	playerYaw	#playerYaw, :, yaw, :
+		p	2	p_i45255_2_	playerPitch	#playerPitch, :, pitch, :
+		p	3	p_i45255_3_	isOnGround	#isOnGround, :, onGround, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

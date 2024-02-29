@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/integrated/IntegratedPlayerList	net/minecraft/server/integrated/IntegratedPlayerList	
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_72416_e	hostPlayerData	#hostPlayerData, :, userData, playerData
+		c	Holds the NBT data for the host player's save file, so this can be written to level.dat.
+	m	(Lnet/minecraft/server/integrated/IntegratedServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1314_1_	server	#server, :, :, :

@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/TexturedQuad	net/minecraft/client/model/TexturedQuad	
+	f	[Lnet/minecraft/client/model/PositionTextureVertex;	field_78239_a	vertexPositions	#vertexPositions, :, positions, vertices
+	f	I	field_78237_b	nVertices	#nVertices, :, size, vertexCount
+	f	Z	field_78238_c	invertNormal	#invertNormal, :, ~, flipNormal
+	m	([Lnet/minecraft/client/model/PositionTextureVertex;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1152_1_	saveFile	#saveFile, :, positions, vertices
+	m	([Lnet/minecraft/client/model/PositionTextureVertex;IIIIFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1153_1_	vertices	#vertices, :, positions, vertices
+		p	2	p_i1153_2_	texcoordU1	#texcoordU1, :, u1, maxX
+		p	3	p_i1153_3_	texcoordV1	#texcoordV1, :, v1, minY
+		p	4	p_i1153_4_	texcoordU2	#texcoordU2, :, u2, minX
+		p	5	p_i1153_5_	texcoordV2	#texcoordV2, :, v2, maxY
+		p	6	p_i1153_6_	textureWidth	#textureWidth, :, :, :
+		p	7	p_i1153_7_	textureHeight	#textureHeight, :, :, :
+	m	()V	func_78235_a	flipFace	#flipFace, :, mirror, flip
+	m	(Lnet/minecraft/client/renderer/Tessellator;F)V	func_78236_a	draw	#draw, :, ~, compile
+		p	1	p_78236_1_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	2	p_78236_2_	scale	#~, ~, ~, scale

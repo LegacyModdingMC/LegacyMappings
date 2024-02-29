@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemMap	net/minecraft/item/ItemMap	
+	m	(ILnet/minecraft/world/World;)Lnet/minecraft/world/storage/MapData;	func_150912_a	loadMapData	#loadMapData, :, getMapState, getMapData
+		p	0	p_150912_0_	mapId	#mapId, :, i, id
+		p	1	p_150912_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;)Lnet/minecraft/world/storage/MapData;	func_77873_a	getMapData	#getMapData, :, getMapState, getSavedMapData
+		p	1	p_77873_1_	stack	#stack, :, itemStack, stack
+		p	2	p_77873_2_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;Lnet/minecraft/world/storage/MapData;)V	func_77872_a	updateMapData	#updateMapData, :, updateColors, update
+		p	1	p_77872_1_	worldIn	#worldIn, :, world, :
+		p	2	p_77872_2_	viewer	#viewer, :, entity, :
+		p	3	p_77872_3_	data	#data, :, state, data
+	m	()V	<init>	<init>	#~, ~, ~, ~

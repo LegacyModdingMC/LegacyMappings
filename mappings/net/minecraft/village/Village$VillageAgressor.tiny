@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/Village$VillageAgressor	net/minecraft/village/Village$VillageAgressor	
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75592_a	agressor	#agressor, :, ~, attacker
+	f	I	field_75590_b	agressionTime	#agressionTime, :, ~, ticks
+	f	Lnet/minecraft/village/Village;	field_75591_c	villageObj	#villageObj, :, ~, village
+	m	(Lnet/minecraft/village/Village;Lnet/minecraft/entity/EntityLivingBase;I)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1674_2_	agressorIn	#agressorIn, :, ~, attacker
+		p	3	p_i1674_3_	agressionTimeIn	#agressionTimeIn, :, ~, ticks
+		p	1	p_i1674_1_	p_i1674_1_	#~, ~, ~, ~

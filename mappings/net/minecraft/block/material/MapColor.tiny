@@ -1,0 +1,52 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/material/MapColor	net/minecraft/block/material/MapColor	
+	f	Lnet/minecraft/block/material/MapColor;	field_151649_A	blueColor	#blueColor, BLUE, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151650_B	brownColor	#brownColor, BROWN, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151651_C	greenColor	#greenColor, GREEN, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151645_D	redColor	#redColor, RED, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151646_E	blackColor	#blackColor, BLACK, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151647_F	goldColor	#goldColor, GOLD, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151648_G	diamondColor	#diamondColor, DIAMOND, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151652_H	lapisColor	#lapisColor, LAPIS, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151653_I	emeraldColor	#emeraldColor, EMERALD, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151654_J	obsidianColor	#obsidianColor, OBSIDIAN, SPRUCE, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151655_K	netherrackColor	#netherrackColor, NETHERRACK, NETHER, :
+	f	I	field_76291_p	colorValue	#colorValue, :, color, :
+		c	Holds the color in RGB value that will be rendered on maps.
+	f	I	field_76290_q	colorIndex	#colorIndex, :, id, :
+		c	Holds the index of the color used on map.
+	f	[Lnet/minecraft/block/material/MapColor;	field_76281_a	mapColorArray	#mapColorArray, COLORS, :, BY_ID
+		c	Holds all the 16 colors used on maps, very similar of a pallete system.
+	f	Lnet/minecraft/block/material/MapColor;	field_151660_b	airColor	#airColor, AIR, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151661_c	grassColor	#grassColor, GRASS, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151658_d	sandColor	#sandColor, SAND, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151659_e	clothColor	#clothColor, CLOTH, WEB, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151656_f	tntColor	#tntColor, TNT, LAVA, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151657_g	iceColor	#iceColor, ICE, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151668_h	ironColor	#ironColor, IRON, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151669_i	foliageColor	#foliageColor, FOLIAGE, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151666_j	snowColor	#snowColor, SNOW, WHITE, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151667_k	clayColor	#clayColor, CLAY, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151664_l	dirtColor	#dirtColor, DIRT, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151665_m	stoneColor	#stoneColor, STONE, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151662_n	waterColor	#waterColor, WATER, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151663_o	woodColor	#woodColor, WOOD, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151677_p	quartzColor	#quartzColor, QUARTZ, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151676_q	adobeColor	#adobeColor, ADOBE, ORANGE, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151675_r	magentaColor	#magentaColor, MAGENTA, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151674_s	lightBlueColor	#lightBlueColor, LIGHT_BLUE, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151673_t	yellowColor	#yellowColor, YELLOW, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151672_u	limeColor	#limeColor, LIME, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151671_v	pinkColor	#pinkColor, PINK, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151670_w	grayColor	#grayColor, GRAY, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151680_x	silverColor	#silverColor, SILVER, LIGHT_GRAY, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151679_y	cyanColor	#cyanColor, CYAN, :, :
+	f	Lnet/minecraft/block/material/MapColor;	field_151678_z	purpleColor	#purpleColor, PURPLE, :, :
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2117_1_	index	#index, :, id, :
+		p	2	p_i2117_2_	color	#color, :, :, :
+	m	(I)Lnet/minecraft/block/material/MapColor;	func_151644_a	getMapColorForBlockColored	#getMapColorForBlockColored, :, ~, forDyeColor
+		p	0	p_151644_0_	id	#~, ~, ~, id
+	m	(I)I	func_151643_b	getMapColor	#getMapColor, :, getRenderColor, getColor
+		p	1	p_151643_1_	index	#index, :, shade, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

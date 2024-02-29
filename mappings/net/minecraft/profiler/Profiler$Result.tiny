@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/profiler/Profiler$Result	net/minecraft/profiler/Profiler$Result	
+	f	D	field_76332_a	usePercentage	#usePercentage, :, ~, percentageOfParent
+	f	D	field_76330_b	totalUsePercentage	#totalUsePercentage, :, ~, percentageOfTotal
+	f	Ljava/lang/String;	field_76331_c	profilerName	#profilerName, :, ~, location
+	m	()I	func_76329_a	getColor	#getColor, :, ~, hashCode
+		c	Return a color to display the profiler, generated from the hash code of the profiler's name
+	m	(Lnet/minecraft/profiler/Profiler$Result;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	result	#~, ~, ~, result
+	m	(Ljava/lang/String;DD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1554_1_	profilerName	#profilerName, :, ~, location
+		p	2	p_i1554_2_	usePercentage	#usePercentage, :, ~, percentageOfParent
+		p	4	p_i1554_4_	totalUsePercentage	#totalUsePercentage, :, ~, percentageOfTotal

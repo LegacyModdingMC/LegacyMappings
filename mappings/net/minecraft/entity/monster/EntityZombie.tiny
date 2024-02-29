@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityZombie	net/minecraft/entity/monster/EntityZombie	
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_110186_bp	reinforcementChance	#reinforcementChance, SPAWN_REINFORCEMENTS_CHANCE, REINFORCEMENTS_ATTRIBUTE, :
+		c	The attribute which determines the chance that this mob will spawn reinforcements
+	f	Ljava/util/UUID;	field_110187_bq	babySpeedBoostUUID	#babySpeedBoostUUID, BABY_SPEED_BOOST_ID, BABY_SPEED_ID, :
+	f	Lnet/minecraft/entity/ai/attributes/AttributeModifier;	field_110188_br	babySpeedBoostModifier	#babySpeedBoostModifier, BABY_SPEED_BOOST, BABY_SPEED_BOOST_MODIFIER, :
+	f	Lnet/minecraft/entity/ai/EntityAIBreakDoor;	field_146075_bs	breakDoor	#breakDoor, :, breakDoorsGoal, breakDoorGoal
+	f	I	field_82234_d	conversionTime	#conversionTime, :, ticksUntilConversion, :
+		c	Ticker used to determine the time remaining for this zombie to convert into a villager when cured.
+	f	Z	field_146076_bu	isBreakDoorsTaskSet	#isBreakDoorsTaskSet, :, canBreakDoors, :
+	f	F	field_146074_bv	zombieWidth	#zombieWidth, :, boundWidth, zombieWidth
+		c	The width of the entity
+	f	F	field_146073_bw	zombieHeight	#zombieHeight, :, boundHeight, zombieHeight
+		c	The height of the the entity.
+	m	(F)V	func_146069_a	multiplySize	#multiplySize, :, increaseBounds, setDimensions
+		c	Multiplies the height and width by the provided float.
+		p	1	p_146069_1_	size	#size, :, multi, scale
+	m	(I)V	func_82228_a	startConversion	#startConversion, :, setConversionTime, :
+		c	Starts converting this zombie into a villager. The zombie converts into a villager after the specified time in ticks.
+		p	1	p_82228_1_	ticks	#ticks, :, :, time
+	m	(Z)V	func_146070_a	setBreakDoorsAItask	#setBreakDoorsAItask, :, setCanBreakDoors, :
+		c	Sets or removes EntityAIBreakDoor task
+		p	1	p_146070_1_	par1	#par1, enabled, canBreakDoors, :
+	m	()Z	func_146072_bX	isBreakDoorsTaskSet	#isBreakDoorsTaskSet, :, canBreakDoors, :
+	m	()Z	func_82231_m	isVillager	#isVillager, :, :, :
+		c	Return whether this zombie is a villager.
+	m	()Z	func_82230_o	isConverting	#isConverting, :, getConversionType, isConverting
+		c	Returns whether this zombie is in the process of converting to a villager
+	m	()V	func_82232_p	convertToVillager	#convertToVillager, :, convertInWater, convertToVillager
+		c	Convert this zombie into a villager.
+	m	()I	func_82233_q	getConversionTimeBoost	#getConversionTimeBoost, :, ~, getTicksUntilConversionDecrement
+		c	Return the amount of time decremented from conversionTime every tick.
+	m	(Z)V	func_82227_f	setChild	#setChild, :, setBaby, :
+		c	Set whether this zombie is a child.
+		p	1	p_82227_1_	childZombie	#childZombie, :, baby, isBaby
+	m	(Z)V	func_82229_g	setVillager	#setVillager, :, :, setType
+		c	Set whether this zombie is a villager.
+		p	1	p_82229_1_	villager	#villager, :, ~, isVillager
+	m	(Z)V	func_146071_k	setChildSize	#setChildSize, :, changeType, setDimensions
+		c	sets the size of the entity to be half of its current size if true.
+		p	1	p_146071_1_	isChild	#isChild, :, isBaby, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1745_1_	worldIn	#worldIn, :, ~, world
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

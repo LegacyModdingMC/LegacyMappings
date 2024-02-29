@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/util/JsonBlendingMode	net/minecraft/client/util/JsonBlendingMode	
+	f	Lnet/minecraft/client/util/JsonBlendingMode;	field_148118_a	lastApplied	#lastApplied, :, activeBlendState, lastApplied
+	f	I	field_148116_b	srcColorFactor	#srcColorFactor, :, srcRgb, srcColorFactor
+	f	I	field_148117_c	srcAlphaFactor	#srcAlphaFactor, :, srcAlpha, srcAlphaFactor
+	f	I	field_148114_d	destColorFactor	#destColorFactor, :, dstRgb, dstColorFactor
+	f	I	field_148115_e	destAlphaFactor	#destAlphaFactor, :, dstAlpha, dstAlphaFactor
+	f	I	field_148112_f	blendFunction	#blendFunction, :, func, blendFunc
+	f	Z	field_148113_g	separateBlend	#separateBlend, :, :, :
+	f	Z	field_148119_h	opaque	#opaque, :, blendDisabled, opaque
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45085_1_	srcFactor	#srcFactor, :, srcRgb, srcColorFactor
+		p	2	p_i45085_2_	dstFactor	#dstFactor, :, dstRgb, dstColorFactor
+		p	3	p_i45085_3_	blendFunctionIn	#blendFunctionIn, :, func, blendFunc
+	m	(IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45086_1_	srcColorFactorIn	#srcColorFactorIn, :, srcRgb, srcColorFactor
+		p	2	p_i45086_2_	destColorFactorIn	#destColorFactorIn, :, dstRgb, dstColorFactor
+		p	3	p_i45086_3_	srcAlphaFactorIn	#srcAlphaFactorIn, :, srcAlpha, srcAlphaFactor
+		p	4	p_i45086_4_	destAlphaFactorIn	#destAlphaFactorIn, :, dstAlpha, dstAlphaFactor
+		p	5	p_i45086_5_	blendFunctionIn	#blendFunctionIn, :, func, blendFunc
+	m	(ZZIIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45084_1_	separateBlendIn	#separateBlendIn, :, separateBlend, :
+		p	2	p_i45084_2_	opaqueIn	#opaqueIn, :, blendDisabled, opaque
+		p	3	p_i45084_3_	srcColorFactorIn	#srcColorFactorIn, :, srcRgb, srcColorFactor
+		p	4	p_i45084_4_	destColorFactorIn	#destColorFactorIn, :, dstRgb, dstColorFactor
+		p	5	p_i45084_5_	srcAlphaFactorIn	#srcAlphaFactorIn, :, srcAlpha, srcAlphaFactor
+		p	6	p_i45084_6_	destAlphaFactorIn	#destAlphaFactorIn, :, dstAlpha, dstAlphaFactor
+		p	7	p_i45084_7_	blendFunctionIn	#blendFunctionIn, :, func, blendFunc
+	m	()V	func_148109_a	apply	#apply, :, enable, apply
+	m	(Lcom/google/gson/JsonObject;)Lnet/minecraft/client/util/JsonBlendingMode;	func_148110_a	parseBlendNode	#parseBlendNode, :, deserializeBlendState, fromJson
+		p	0	p_148110_0_	json	#json, :, :, :
+	m	(Ljava/lang/String;)I	func_148108_a	stringToBlendFunction	#stringToBlendFunction, :, getFuncFromString, stringToBlendFunc
+		c	Converts a blend function name to an id, returning add (32774) if not recognized.
+		p	0	p_148108_0_	funcName	#funcName, :, string, s
+	m	()Z	func_148111_b	isOpaque	#isOpaque, :, isBlendDisabled, isOpaque
+	m	(Ljava/lang/String;)I	func_148107_b	stringToBlendFactor	#stringToBlendFactor, :, getComponentFromString, stringToBlendFactor
+		p	0	p_148107_0_	factorName	#factorName, :, string, s
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, object, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureMineshaftPieces$Corridor	net/minecraft/world/gen/structure/StructureMineshaftPieces$Corridor	
+	f	Z	field_74958_a	hasRails	#hasRails, :, ~, hasRails
+	f	Z	field_74956_b	hasSpiders	#hasSpiders, :, ~, hasCobwebs
+	f	Z	field_74957_c	spawnerPlaced	#spawnerPlaced, :, ~, hasSpiderSpawner
+	f	I	field_74955_d	sectionCount	#sectionCount, :, ~, sections
+		c	A count of the different sections of this mine. The space between ceiling supports.
+	m	(Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;	func_74954_a	findValidPlacement	#findValidPlacement, :, ~, findSize
+		p	0	p_74954_0_	pieces	#~, ~, ~, pieces
+		p	1	p_74954_1_	random	#~, ~, ~, random
+		p	2	p_74954_2_	x	#~, ~, ~, x
+		p	3	p_74954_3_	y	#~, ~, ~, y
+		p	4	p_74954_4_	z	#~, ~, ~, z
+		p	5	p_74954_5_	facing	#~, ~, ~, facing
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2035_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2035_2_	random	#~, ~, ~, random
+		p	3	p_i2035_3_	box	#~, ~, ~, box
+		p	4	p_i2035_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,296 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/MinecraftServer	net/minecraft/server/MinecraftServer	
+	f	Z	field_71323_z	canSpawnNPCs	#canSpawnNPCs, :, spawnNpcs, :
+	f	Z	field_71284_A	pvpEnabled	#pvpEnabled, :, :, :
+		c	Indicates whether PvP is active on the server or not.
+	f	Z	field_71285_B	allowFlight	#allowFlight, :, flightEnabled, :
+		c	Determines if flight is allowed or not.
+	f	Ljava/lang/String;	field_71286_C	motd	#motd, :, :, :
+		c	The server MOTD string.
+	f	I	field_71280_D	buildLimit	#buildLimit, :, worldHeight, :
+		c	Maximum build height.
+	f	I	field_143008_E	maxPlayerIdleMinutes	#maxPlayerIdleMinutes, :, playerIdleTimeout, :
+	f	Ljava/security/KeyPair;	field_71292_I	serverKeyPair	#serverKeyPair, :, keyPair, :
+	f	Ljava/lang/String;	field_71293_J	serverOwner	#serverOwner, :, userName, username
+		c	Username of the server owner (for integrated servers)
+	f	Ljava/lang/String;	field_71294_K	folderName	#folderName, :, levelName, worldSaveName
+	f	Ljava/lang/String;	field_71287_L	worldName	#worldName, :, displayName, worldName
+	f	Z	field_71288_M	isDemo	#isDemo, :, demo, :
+	f	Z	field_71289_N	enableBonusChest	#enableBonusChest, :, forceWorldUpgrade, bonusChestEnabled
+	f	Z	field_71290_O	worldIsBeingDeleted	#worldIsBeingDeleted, :, shouldResetWorld, stopping
+		c	If true, there is no need to save chunks or stop the server, because that is already being done.
+	f	Ljava/lang/String;	field_147141_M	serverTexturePack	#serverTexturePack, resourcePackUrl, :, :
+		c	The texture pack for the server
+	f	Z	field_71296_Q	serverIsRunning	#serverIsRunning, :, loading, :
+	f	J	field_71299_R	timeOfLastWarning	#timeOfLastWarning, :, lastWarnTime, :
+		c	Set when warned for "Can't keep up", which triggers again after 15 seconds.
+	f	Ljava/lang/String;	field_71298_S	userMessage	#userMessage, :, serverOperation, loadingStage
+	f	Z	field_71295_T	startProfiling	#startProfiling, :, profiling, :
+	f	Z	field_104057_T	isGamemodeForced	#isGamemodeForced, :, forceGameMode, :
+	f	Lcom/mojang/authlib/yggdrasil/YggdrasilAuthenticationService;	field_152364_T	authService	#authService, :, :, :
+	f	Lcom/mojang/authlib/minecraft/MinecraftSessionService;	field_147143_S	sessionService	#sessionService, :, :, :
+	f	J	field_147142_T	nanoTimeSinceStatusRefresh	#nanoTimeSinceStatusRefresh, :, lastPlayerSampleUpdate, :
+	f	Lcom/mojang/authlib/GameProfileRepository;	field_152365_W	profileRepo	#profileRepo, :, gameProfileRepo, gameProfileRepository
+	f	Lnet/minecraft/server/management/PlayerProfileCache;	field_152366_X	profileCache	#profileCache, :, userCache, gameProfileCache
+	f	Ljava/io/File;	field_152367_a	USER_CACHE_FILE	#USER_CACHE_FILE, :, :, :
+	f	Lnet/minecraft/profiler/Profiler;	field_71304_b	theProfiler	#theProfiler, profiler, :, :
+	f	[Lnet/minecraft/world/WorldServer;	field_71305_c	worldServers	#worldServers, worlds, :, :
+		c	The server world instances.
+	f	Ljava/net/Proxy;	field_110456_c	serverProxy	#serverProxy, :, proxy, :
+	f	Ljava/lang/String;	field_71302_d	currentTask	#currentTask, :, progressType, :
+		c	The task the server is currently working on(and will output on outputPercentRemaining).
+	f	I	field_71303_e	percentDone	#percentDone, :, progress, :
+		c	The percentage of the current task finished so far.
+	f	[J	field_71311_j	tickTimeArray	#tickTimeArray, :, lastTickLengths, averageTickTimes
+	f	[[J	field_71312_k	timeOfLastDimensionTick	#timeOfLastDimensionTick, :, ~, worldTickTimes
+		c	Stats are [dimension][tick%100] system.nanoTime is stored.
+	f	Lorg/apache/logging/log4j/Logger;	field_147145_h	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/server/MinecraftServer;	field_71309_l	mcServer	#mcServer, :, instance, :
+		c	Instance of Minecraft Server.
+	f	Lnet/minecraft/world/storage/ISaveFormat;	field_71310_m	anvilConverterForAnvilFile	#anvilConverterForAnvilFile, :, saveStorage, worldStorageSource
+	f	Lnet/minecraft/profiler/PlayerUsageSnooper;	field_71307_n	usageSnooper	#usageSnooper, :, snooper, :
+		c	The PlayerUsageSnooper instance.
+	f	Ljava/io/File;	field_71308_o	anvilFile	#anvilFile, :, gameDir, gameDirectory
+	f	Ljava/util/List;	field_71322_p	tickables	#tickables, :, :, :
+		c	Collection of objects to update every tick. Type: List<IUpdatePlayerListBox>
+	f	Lnet/minecraft/command/ICommandManager;	field_71321_q	commandManager	#commandManager, :, provider, commandHandler
+	f	Lnet/minecraft/network/NetworkSystem;	field_147144_o	networkSystem	#networkSystem, :, networkIo, connection
+	f	Lnet/minecraft/network/ServerStatusResponse;	field_147147_p	statusResponse	#statusResponse, :, serverMetadata, status
+	f	Ljava/util/Random;	field_147146_q	random	#random, :, :, :
+	f	Ljava/lang/String;	field_71320_r	hostname	#hostname, :, serverIp, :
+		c	The server's hostname.
+	f	I	field_71319_s	serverPort	#serverPort, :, :, :
+		c	The server's port.
+	f	Lnet/minecraft/server/management/ServerConfigurationManager;	field_71318_t	serverConfigManager	#serverConfigManager, playerList, playerManager, :
+		c	The ServerConfigurationManager instance.
+	f	Z	field_71317_u	serverRunning	#serverRunning, :, running, :
+		c	Indicates whether the server is running or not. Set to false to initiate a shutdown.
+	f	Z	field_71316_v	serverStopped	#serverStopped, :, stopped, :
+		c	Indicates to other classes that the server is safely stopped.
+	f	I	field_71315_w	tickCounter	#tickCounter, :, ticks, :
+		c	Incremented every tick.
+	f	Z	field_71325_x	onlineMode	#onlineMode, :, :, :
+		c	True if the server is in online mode.
+	f	Z	field_71324_y	canSpawnAnimals	#canSpawnAnimals, :, spawnAnimals, :
+		c	True if the server has animals turned on.
+	m	()Ljava/lang/String;	func_71274_v	getMotd	#getMotd, :, :, :
+		c	Returns the server message of the day
+	m	()Ljava/lang/String;	func_71249_w	getMinecraftVersion	#getMinecraftVersion, :, getVersion, getGameVersion
+		c	Returns the server's Minecraft version as string.
+	m	()I	func_71233_x	getCurrentPlayerCount	#getCurrentPlayerCount, :, :, getPlayerCount
+		c	Returns the number of players currently on the server.
+	m	()I	func_71275_y	getMaxPlayers	#getMaxPlayers, :, getMaxPlayerCount, :
+		c	Returns the maximum number of players allowed on the server.
+	m	()[Ljava/lang/String;	func_71213_z	getAllUsernames	#getAllUsernames, getOnlinePlayerNames, getPlayerNames, :
+		c	Returns an array of the usernames of all the connected players.
+	m	()[Lcom/mojang/authlib/GameProfile;	func_152357_F	getGameProfiles	#getGameProfiles, getOnlinePlayerProfiles, getProfiles, getGameProfiles
+		c	Returns an array of the GameProfiles of all the connected players
+	m	()Ljava/lang/String;	func_71258_A	getPlugins	#getPlugins, :, ~, getPlugins
+		c	Used by RCon's Query in the form of "MajorServerMod 1.2.3: MyPlugin 1.3; AnotherPlugin 2.1; AndSoForth 1.0".
+	m	()Z	func_71239_B	isDebuggingEnabled	#isDebuggingEnabled, :, :, :
+		c	Returns true if debugging is enabled, false otherwise.
+	m	()Lnet/minecraft/server/MinecraftServer;	func_71276_C	getServer	#getServer, :, :, getInstance
+		c	Gets mcServer.
+	m	()Lnet/minecraft/command/ICommandManager;	func_71187_D	getCommandManager	#getCommandManager, :, :, getCommandHandler
+	m	()Ljava/security/KeyPair;	func_71250_E	getKeyPair	#getKeyPair, :, :, :
+		c	Gets KeyPair instanced in MinecraftServer.
+	m	()I	func_71215_F	getServerPort	#getServerPort, :, :, :
+		c	Gets serverPort.
+	m	()Ljava/lang/String;	func_71214_G	getServerOwner	#getServerOwner, :, getUserName, getUsername
+		c	Returns the username of the server owner (for integrated servers)
+	m	()Z	func_71264_H	isSinglePlayer	#isSinglePlayer, :, :, isSingleplayer
+	m	()Ljava/lang/String;	func_71270_I	getFolderName	#getFolderName, :, getLevelName, getWorldSaveName
+	m	()Ljava/lang/String;	func_71221_J	getWorldName	#getWorldName, :, getServerName, getWorldName
+	m	()Z	func_71193_K	allowSpawnMonsters	#allowSpawnMonsters, :, isMonsterSpawningEnabled, :
+	m	()Z	func_71242_L	isDemo	#isDemo, :, :, :
+		c	Gets whether this is a demo or not.
+	m	()Lnet/minecraft/world/storage/ISaveFormat;	func_71254_M	getActiveAnvilConverter	#getActiveAnvilConverter, :, getSaveStorage, getWorldStorageSource
+	m	()V	func_71272_O	deleteWorldAndStopServer	#deleteWorldAndStopServer, :, ~, deleteWorldAndStop
+		c	WARNING : directly calls  getActiveAnvilConverter().deleteWorldDirectory(theWorldServer[0].getSaveHandler().getWorldDirectoryName());
+	m	()Ljava/lang/String;	func_147133_T	getTexturePack	#getTexturePack, getResourcePackUrl, :, :
+	m	()Z	func_71262_S	isDedicatedServer	#isDedicatedServer, :, isDedicated, :
+	m	()Z	func_71266_T	isServerInOnlineMode	#isServerInOnlineMode, :, isOnlineMode, :
+	m	()Z	func_71268_U	getCanSpawnAnimals	#getCanSpawnAnimals, :, shouldSpawnAnimals, :
+	m	(I)Lnet/minecraft/world/WorldServer;	func_71218_a	worldServerForDimension	#worldServerForDimension, getWorld, :, :
+		c	Gets the worldServer by the given dimension.
+		p	1	p_71218_1_	dimension	#dimension, :, id, dimension
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Ljava/util/List;	func_71248_a	getPossibleCompletions	#getPossibleCompletions, :, ~, getCommandSuggestions
+		c	If par2Str begins with /, then it searches for commands, otherwise it returns players.
+		p	1	p_71248_1_	sender	#sender, :, ~, source
+		p	2	p_71248_2_	input	#input, :, ~, command
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;)Z	func_96290_a	isBlockProtected	#isBlockProtected, :, ~, isSpawnProtected
+		c	Returns true if a player does not have permission to edit the block at the given coordinates.
+		p	1	p_96290_1_	inWorld	#inWorld, :, ~, world
+		p	2	p_96290_2_	x	#x, :, ~, x
+		p	3	p_96290_3_	y	#y, :, ~, y
+		p	4	p_96290_4_	z	#z, :, ~, z
+		p	5	p_96290_5_	player	#player, :, ~, player
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_71235_a	setGameType	#setGameType, :, ~, setDefaultGameMode
+		c	Sets the game type for all worlds.
+		p	1	p_71235_1_	gameMode	#gameMode, :, ~, gamemode
+	m	(Lnet/minecraft/world/WorldSettings$GameType;Z)Ljava/lang/String;	func_71206_a	shareToLAN	#shareToLAN, :, ~, publish
+		c	On dedicated does nothing. On integrated, sets commandsAllowedForAll, gameType and allows external connections.
+		p	1	p_71206_1_	type	#type, :, ~, defaultGameMode
+		p	2	p_71206_2_	allowCheats	#allowCheats, :, ~, allowCommands
+	m	(Lnet/minecraft/crash/CrashReport;)V	func_71228_a	finalTick	#finalTick, :, setCrashReport, onServerCrashed
+		c	Called on exit from the main run() loop.
+		p	1	p_71228_1_	report	#report, :, :, :
+	m	(Ljava/lang/String;)V	func_71237_c	convertMapIfNeeded	#convertMapIfNeeded, :, upgradeWorld, convertWorld
+		p	1	p_71237_1_	worldNameIn	#worldNameIn, :, name, saveName
+	m	(Ljava/lang/String;Ljava/lang/String;JLnet/minecraft/world/WorldType;Ljava/lang/String;)V	func_71247_a	loadAllWorlds	#loadAllWorlds, :, setupWorld, loadWorld
+		p	1	p_71247_1_	saveName	#saveName, :, world, saveName
+		p	2	p_71247_2_	worldNameIn	#worldNameIn, :, worldName, name
+		p	3	p_71247_3_	seed	#seed, :, :, :
+		p	5	p_71247_5_	type	#type, :, generatorType, :
+		p	6	p_71247_6_	worldNameIn2	#worldNameIn2, generatorOptions, :, :
+	m	(Ljava/security/KeyPair;)V	func_71253_a	setKeyPair	#setKeyPair, :, :, :
+		p	1	p_71253_1_	keyPair	#keyPair, :, :, :
+	m	(Lnet/minecraft/network/ServerStatusResponse;)V	func_147138_a	addFaviconToStatusResponse	#addFaviconToStatusResponse, :, setServerMeta, setStatus
+		p	1	p_147138_1_	response	#response, :, metdata, status
+	m	(Lnet/minecraft/server/gui/IUpdatePlayerListBox;)V	func_82010_a	registerTickable	#registerTickable, :, addTickable, :
+		p	1	p_82010_1_	tickable	#tickable, :, :, :
+	m	(Lnet/minecraft/server/MinecraftServer;)Lnet/minecraft/server/management/ServerConfigurationManager;	access$100	access$100	#~, ~, ~, getPlayerManager
+		p	0	p_access$100_0_	server	#~, ~, ~, server
+	m	(Lnet/minecraft/server/management/ServerConfigurationManager;)V	func_152361_a	setConfigManager	#setConfigManager, :, setPlayerManager, :
+		p	1	p_152361_1_	configManager	#configManager, :, playerManager, :
+	m	(Lnet/minecraft/world/EnumDifficulty;)V	func_147139_a	setDifficultyForAllWorlds	#setDifficultyForAllWorlds, :, setDifficulty, :
+		p	1	p_147139_1_	difficulty	#difficulty, :, :, :
+	m	(Z)V	func_71267_a	saveAllWorlds	#saveAllWorlds, :, saveWorlds, :
+		c	par1 indicates if a log message should be output.
+		p	1	p_71267_1_	dontLog	#dontLog, isSilent, silent, :
+	m	()Lorg/apache/logging/log4j/Logger;	access$000	access$000	#~, ~, ~, getLogger
+	m	(Ljava/lang/String;I)V	func_71216_a_	outputPercentRemaining	#outputPercentRemaining, :, logProgress, :
+		c	Used to display a percent remaining given text and the percentage.
+		p	1	p_71216_1_	message	#message, :, progressType, :
+		p	2	p_71216_2_	percent	#percent, :, worldProgress, progress
+	m	()Z	func_71220_V	getCanSpawnNPCs	#getCanSpawnNPCs, :, shouldSpawnNpcs, :
+	m	()Z	func_71219_W	isPVPEnabled	#isPVPEnabled, :, isPvpEnabled, :
+	m	()Z	func_71231_X	isFlightAllowed	#isFlightAllowed, :, isFlightEnabled, :
+	m	()Z	func_82356_Z	isCommandBlockEnabled	#isCommandBlockEnabled, :, areCommandBlocksEnabled, :
+		c	Return whether command blocks are enabled.
+	m	()Ljava/lang/String;	func_71273_Y	getMOTD	#getMOTD, :, getServerMotd, :
+	m	()I	func_71207_Z	getBuildLimit	#getBuildLimit, :, getWorldHeight, :
+	m	()Z	func_71241_aa	isServerStopped	#isServerStopped, :, isStopped, hasStopped
+	m	()Lnet/minecraft/server/management/ServerConfigurationManager;	func_71203_ab	getConfigurationManager	#getConfigurationManager, :, getPlayerManager, :
+	m	()Lnet/minecraft/network/NetworkSystem;	func_147137_ag	getNetworkSystem	#getNetworkSystem, :, getNetworkIo, getConnection
+	m	()Z	func_71200_ad	serverIsInRunLoop	#serverIsInRunLoop, :, isLoading, :
+	m	()Z	func_71279_ae	getGuiEnabled	#getGuiEnabled, :, hasGui, :
+	m	()I	func_71259_af	getTickCounter	#getTickCounter, :, getTicks, :
+	m	()V	func_71223_ag	enableProfiling	#enableProfiling, :, enableProfiler, enableProfiling
+	m	()Lnet/minecraft/profiler/PlayerUsageSnooper;	func_80003_ah	getPlayerUsageSnooper	#getPlayerUsageSnooper, :, getSnooper, :
+	m	()I	func_82357_ak	getSpawnProtectionSize	#getSpawnProtectionSize, :, getSpawnProtectionRadius, :
+		c	Return the spawn protection area's size.
+	m	()Z	func_104056_am	getForceGamemode	#getForceGamemode, :, shouldForceGameMode, :
+		c	Get the forceGamemode field (whether joining players will be put in their old gamemode or the default one)
+	m	()Ljava/net/Proxy;	func_110454_ao	getServerProxy	#getServerProxy, :, getProxy, :
+	m	()J	func_130071_aq	getSystemTimeMillis	#getSystemTimeMillis, getCurrentTimeMillis, getTimeMillis, :
+		c	returns the difference, measured in milliseconds, between the current system time and midnight, January 1, 1970 UTC.
+	m	()I	func_143007_ar	getMaxPlayerIdleMinutes	#getMaxPlayerIdleMinutes, :, getPlayerIdleTimeout, :
+	m	()Z	func_147136_ar	isAnnouncingPlayerAchievements	#isAnnouncingPlayerAchievements, :, shouldAnnouncePlayerAchievements, :
+	m	()Lcom/mojang/authlib/minecraft/MinecraftSessionService;	func_147130_as	getMinecraftSessionService	#getMinecraftSessionService, :, getSessionService, :
+	m	()Lcom/mojang/authlib/GameProfileRepository;	func_152359_aw	getGameProfileRepository	#getGameProfileRepository, :, getGameProfileRepo, getGameProfileRepository
+	m	()Lnet/minecraft/server/management/PlayerProfileCache;	func_152358_ax	getPlayerProfileCache	#getPlayerProfileCache, :, getUserCache, getGameProfileCache
+	m	()Lnet/minecraft/network/ServerStatusResponse;	func_147134_at	getServerStatusResponse	#getServerStatusResponse, :, getServerMetadata, getStatus
+	m	()V	func_147132_au	refreshStatusNextTick	#refreshStatusNextTick, :, forcePlayerSampleUpdate, :
+	m	(I)V	func_71208_b	setServerPort	#setServerPort, :, :, :
+		p	1	p_71208_1_	port	#port, :, serverPort, :
+	m	(Lnet/minecraft/crash/CrashReport;)Lnet/minecraft/crash/CrashReport;	func_71230_b	addServerInfoToCrashReport	#addServerInfoToCrashReport, :, populateCrashReport, :
+		c	Adds the server info, including from theWorldServer, to the crash report.
+		p	1	p_71230_1_	report	#report, :, :, :
+	m	(Ljava/lang/String;)V	func_71192_d	setUserMessage	#setUserMessage, :, setServerOperation, setLoadingStage
+		c	Typically "menu.convertingLevel", "menu.loadingLevel" or others.
+		p	1	p_71192_1_	message	#message, :, operation, stage
+	m	(Z)V	func_71204_b	setDemo	#setDemo, :, :, :
+		c	Sets whether this is a demo or not.
+		p	1	p_71204_1_	demo	#demo, :, :, :
+	m	(I)V	func_71191_d	setBuildLimit	#setBuildLimit, :, setWorldHeight, :
+		p	1	p_71191_1_	maxBuildHeight	#maxBuildHeight, :, worldHeight, :
+	m	(Ljava/lang/String;)V	func_71189_e	setHostname	#setHostname, :, setServerIp, :
+		p	1	p_71189_1_	host	#host, :, serverIp, :
+	m	(Z)V	func_71194_c	canCreateBonusChest	#canCreateBonusChest, :, setForceWorldUpgrade, enableBonusChest
+		p	1	p_71194_1_	enable	#enable, :, forceWorldUpgrade, bonusChestEnabled
+	m	(I)V	func_143006_e	setPlayerIdleTimeout	#setPlayerIdleTimeout, :, :, :
+		p	1	p_143006_1_	idleTimeout	#idleTimeout, :, playerIdleTimeout, :
+	m	(Ljava/lang/String;)Ljava/io/File;	func_71209_f	getFile	#getFile, :, :, :
+		c	Returns a File object from the specified string.
+		p	1	p_71209_1_	fileName	#fileName, :, name, path
+	m	(Z)V	func_71229_d	setOnlineMode	#setOnlineMode, :, :, :
+		p	1	p_71229_1_	online	#online, :, onlineMode, :
+	m	()Z	func_71197_b	startServer	#startServer, init, setupServer, init
+		c	Initialises the server and starts it.
+	m	(Ljava/lang/String;)V	func_71244_g	logInfo	#logInfo, :, info, :
+		c	Logs the message with a level of INFO.
+		p	1	p_71244_1_	msg	#msg, :, message, :
+	m	(Z)V	func_71251_e	setCanSpawnAnimals	#setCanSpawnAnimals, :, setSpawnAnimals, :
+		p	1	p_71251_1_	spawnAnimals	#spawnAnimals, :, :, :
+	m	()Ljava/lang/String;	func_71195_b_	getUserMessage	#getUserMessage, :, getServerOperation, getLoadingStage
+	m	(Ljava/lang/String;)V	func_71236_h	logWarning	#logWarning, :, warn, :
+		c	Logs the message with a level of WARN.
+		p	1	p_71236_1_	msg	#msg, :, message, :
+	m	(Z)V	func_71257_f	setCanSpawnNPCs	#setCanSpawnNPCs, :, setSpawnNpcs, :
+		p	1	p_71257_1_	spawnNpcs	#spawnNpcs, :, :, :
+	m	()V	func_71222_d	initialWorldChunkLoad	#initialWorldChunkLoad, :, prepareWorlds, :
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_71252_i	handleRConCommand	#handleRConCommand, :, ~, runRconCommand
+		c	Handle a command received by an RCon instance
+		p	1	p_71252_1_	command	#command, :, ~, command
+	m	(Z)V	func_71188_g	setAllowPvp	#setAllowPvp, :, setPvpEnabled, :
+		p	1	p_71188_1_	allowPvp	#allowPvp, :, pvpEnabled, :
+	m	()Ljava/lang/String;	getServerModName	getServerModName	#~, ~, ~, ~
+	m	()Z	func_71225_e	canStructuresSpawn	#canStructuresSpawn, :, shouldGenerateStructures, :
+	m	(Ljava/lang/String;)V	func_71201_j	logSevere	#logSevere, :, logError, error
+		c	Logs the error message with a level of SEVERE.
+		p	1	p_71201_1_	msg	#msg, :, message, :
+	m	(Z)V	func_71245_h	setAllowFlight	#setAllowFlight, :, setFlightEnabled, :
+		p	1	p_71245_1_	allow	#allow, :, flightEnabled, :
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_71265_f	getGameType	#getGameType, :, ~, getDefaultGameMode
+	m	(Ljava/lang/String;)V	func_71198_k	logDebug	#logDebug, :, log, :
+		c	If isDebuggingEnabled(), logs the message with a level of INFO.
+		p	1	p_71198_1_	msg	#msg, :, message, :
+	m	(Z)V	func_104055_i	setForceGamemode	#setForceGamemode, :, setForceGameMode, :
+		c	Set the forceGamemode field (whether joining players will be put in their old gamemode or the default one)
+		p	1	p_104055_1_	force	#force, :, forceGameMode, :
+	m	()Lnet/minecraft/world/EnumDifficulty;	func_147135_j	getDifficulty	#getDifficulty, :, getDefaultDifficulty, :
+		c	Get the server's difficulty
+	m	(Ljava/lang/String;)V	func_71224_l	setServerOwner	#setServerOwner, :, setUserName, setUsername
+		c	Sets the username of the owner of this server (in the case of an integrated server)
+		p	1	p_71224_1_	owner	#owner, :, userName, username
+	m	()Z	func_71199_h	isHardcore	#isHardcore, :, :, :
+		c	Defaults to false.
+	m	(Ljava/lang/String;)V	func_71261_m	setFolderName	#setFolderName, :, setLevelName, setWorldSaveName
+		p	1	p_71261_1_	name	#name, :, levelName, worldSaveName
+	m	()I	func_110455_j	getOpPermissionLevel	#getOpPermissionLevel, :, :, :
+	m	(Ljava/lang/String;)V	func_71246_n	setWorldName	#setWorldName, :, setServerName, setWorldName
+		p	1	p_71246_1_	worldNameIn	#worldNameIn, :, serverName, worldName
+	m	()Z	func_152363_m	broadcastRconToOps	#~, ~, shouldBroadcastRconToOps, broadcastRconToOps
+	m	(Ljava/lang/String;)V	func_155759_m	setServerResourcePack	#setServerResourcePack, :, ~, setResourcePack
+		p	1	p_155759_1_	resourcePackUrl	#resourcePackUrl, :, ~, url
+	m	([Ljava/lang/String;)V	main	main	#~, ~, ~, ~
+		p	0	p_main_0_	args	#~, ~, args, :
+	m	()V	func_71243_i	clearCurrentTask	#clearCurrentTask, :, save, clearProgress
+		c	Set current task to null and set its percentage to 0.
+	m	(Ljava/lang/String;)V	func_71205_p	setMOTD	#setMOTD, :, setMotd, :
+		p	1	p_71205_1_	motdIn	#motdIn, :, motd, :
+	m	()V	func_71260_j	stopServer	#stopServer, :, :, stop
+		c	Saves all necessary data as preparation for stopping the server.
+	m	()Ljava/lang/String;	func_71211_k	getServerHostname	#getServerHostname, :, getServerIp, :
+		c	"getHostname" is already taken, but both return the hostname.
+	m	()Z	func_71278_l	isServerRunning	#isServerRunning, :, isRunning, :
+	m	()V	func_71263_m	initiateShutdown	#initiateShutdown, :, stopRunning, scheduleStop
+		c	Sets the serverRunning variable to false, in order to get the server to shut down.
+	m	()V	run	run	#~, ~, ~, ~
+	m	()Ljava/io/File;	func_71238_n	getDataDirectory	#getDataDirectory, :, getRunDirectory, getRunDir
+	m	()V	func_71240_o	systemExitNow	#systemExitNow, :, exit, :
+		c	Directly calls System.exit(0), instantly killing the program.
+	m	()V	func_71217_p	tick	#tick, :, setupWorld, tick
+		c	Main function called by run() every loop.
+	m	()V	func_71190_q	updateTimeLightAndEntities	#updateTimeLightAndEntities, :, tick, tickWorlds
+	m	()Z	func_71255_r	getAllowNether	#getAllowNether, :, isNetherAllowed, :
+	m	()V	func_71256_s	startServerThread	#startServerThread, :, :, start
+	m	()Ljava/lang/String;	func_71277_t	getHostname	#getHostname, :, getIp, :
+		c	Returns the server's hostname.
+	m	()I	func_71234_u	getPort	#getPort, :, :, :
+		c	Never used, but "getServerPort" is already taken.
+	m	(Ljava/io/File;Ljava/net/Proxy;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45281_1_	workDir	#workDir, :, ~, gameDir
+		p	2	p_i45281_2_	proxy	#proxy, :, ~, proxy
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiVideoSettings	net/minecraft/client/gui/GuiVideoSettings	
+	f	Ljava/lang/String;	field_146500_a	screenTitle	#screenTitle, :, title, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146498_f	parentGuiScreen	#parentGuiScreen, :, parent, :
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146499_g	guiGameSettings	#guiGameSettings, :, options, :
+	f	Lnet/minecraft/client/gui/GuiListExtended;	field_146501_h	optionsRowList	#optionsRowList, :, list, listWidget
+	f	[Lnet/minecraft/client/settings/GameSettings$Options;	field_146502_i	videoOptions	#videoOptions, VIDEO_OPTIONS, ~, VIDEO_OPTIONS
+		c	An array of all of GameSettings.Options's video options.
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1062_1_	parentScreenIn	#parentScreenIn, :, parent, :
+		p	2	p_i1062_2_	gameSettingsIn	#gameSettingsIn, :, options, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

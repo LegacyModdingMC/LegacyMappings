@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/MovingSoundMinecart	net/minecraft/client/audio/MovingSoundMinecart	
+	f	Lnet/minecraft/entity/item/EntityMinecart;	field_147670_k	minecart	#minecart, :, :, :
+	f	F	field_147669_l	distance	#distance, :, ~, pitch
+	m	(Lnet/minecraft/entity/item/EntityMinecart;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45105_1_	minecartIn	#minecartIn, :, minecart, :

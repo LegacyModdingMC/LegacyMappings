@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/ServerList	net/minecraft/client/multiplayer/ServerList	
+	f	Lorg/apache/logging/log4j/Logger;	field_147415_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/Minecraft;	field_78859_a	mc	#mc, :, client, minecraft
+		c	The Minecraft instance.
+	f	Ljava/util/List;	field_78858_b	servers	#servers, :, :, entries
+		c	List of ServerData instances.
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1194_1_	mcIn	#mcIn, :, client, minecraft
+	m	()V	func_78853_a	loadServerList	#loadServerList, :, loadFile, load
+		c	Loads a list of servers from servers.dat, by running ServerData.getServerDataFromNBTCompound on each NBT compound found in the "servers" tag list.
+	m	(I)Lnet/minecraft/client/multiplayer/ServerData;	func_78850_a	getServerData	#getServerData, :, get, :
+		c	Gets the ServerData instance stored for the given index in the list.
+		p	1	p_78850_1_	index	#index, :, :, :
+	m	(II)V	func_78857_a	swapServers	#swapServers, :, swapEntries, swap
+		c	Takes two list indexes, and swaps their order around.
+		p	1	p_78857_1_	pos1	#pos1, :, index1, :
+		p	2	p_78857_2_	pos2	#pos2, :, index2, :
+	m	(ILnet/minecraft/client/multiplayer/ServerData;)V	func_147413_a	set	#set, :, :, :
+		p	1	p_147413_1_	index	#index, :, :, :
+		p	2	p_147413_2_	server	#server, :, info, entry
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_78849_a	addServerData	#addServerData, :, add, :
+		c	Adds the given ServerData instance to the list.
+		p	1	p_78849_1_	server	#server, :, info, entry
+	m	()V	func_78855_b	saveServerList	#saveServerList, :, saveFile, save
+		c	Runs getNBTCompound on each ServerData instance, puts everything into a "servers" NBT list and writes it to servers.dat.
+	m	(I)V	func_78851_b	removeServerData	#removeServerData, :, remove, :
+		c	Removes the ServerData instance stored for the given index in the list.
+		p	1	p_78851_1_	index	#index, :, :, :
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_147414_b	saveSingleServer	#saveSingleServer, :, updateServerListEntry, update
+		c	Update the given server entry in the {@code servers.dat} file.
+		p	0	p_147414_0_	server	#server, :, e, entry
+	m	()I	func_78856_c	countServers	#countServers, :, size, :
+		c	Counts the number of ServerData instances in the list.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

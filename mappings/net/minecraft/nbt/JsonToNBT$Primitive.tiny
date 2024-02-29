@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/JsonToNBT$Primitive	net/minecraft/nbt/JsonToNBT$Primitive	
+	f	Ljava/lang/String;	field_150493_b	jsonValue	#jsonValue, :, value, rawValue
+		c	The value to be parsed into a tag.
+	m	(Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45139_1_	jsonIn	#jsonIn, :, key, :
+		p	2	p_i45139_2_	valueIn	#valueIn, :, value, rawValue

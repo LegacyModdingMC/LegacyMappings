@@ -1,0 +1,626 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/Block	net/minecraft/block/Block	
+	c	The Block class provides useful methods and fields for creation of Blocks.\nAll blocks extend the Block class.\nThe Block class also registers all the blocks.
+	f	Z	field_149758_A	isBlockContainer	#isBlockContainer, hasTileEntity, blockEntity, hasBlockEntity
+		c	true if the Block contains a Tile Entity
+	f	D	field_149759_B	minX	#minX, :, boundingBoxMinX, minX
+		c	Stores the Minimum value on the X axis for the voxel shape
+	f	D	field_149760_C	minY	#minY, :, boundingBoxMinY, minY
+		c	Stores the Minimum value on the Y axis for the voxel shape
+	f	D	field_149754_D	minZ	#minZ, :, boundingBoxMinZ, minZ
+		c	Stores the Minimum value on the Z axis for the voxel shape
+	f	D	field_149755_E	maxX	#maxX, :, boundingBoxMaxX, maxX
+		c	Stores the Maximum value on the X axis for the voxel shape
+	f	D	field_149756_F	maxY	#maxY, :, boundingBoxMaxY, maxY
+		c	Stores the Maximum value on the Y axis for the voxel shape
+	f	D	field_149757_G	maxZ	#maxZ, :, boundingBoxMaxZ, maxZ
+		c	Stores the Maximum value on the Z axis for the voxel shape
+	f	Lnet/minecraft/block/Block$SoundType;	field_149762_H	stepSound	#stepSound, blockSoundType, soundGroup, sound
+		c	Sound of stepping on the block
+	f	F	field_149763_I	blockParticleGravity	#blockParticleGravity, :, particleGravity, gravity
+		c	Stores the current block's particles' gravity
+	f	Lnet/minecraft/block/material/Material;	field_149764_J	blockMaterial	#blockMaterial, material, :, :
+		c	Block material definition.
+	f	F	field_149765_K	slipperiness	#slipperiness, :, :, :
+		c	Determines how much velocity is maintained while moving on top of this block
+	f	Lnet/minecraft/util/IIcon;	field_149761_L	blockIcon	#blockIcon, :, side, sprite
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_149772_a	displayOnCreativeTab	#displayOnCreativeTab, :, itemGroup, creativeModeTab
+	f	Ljava/lang/String;	field_149770_b	unlocalizedName	#unlocalizedName, translationKey, :, key
+		c	Stores the block's translation key
+	f	Lnet/minecraft/util/RegistryNamespaced;	field_149771_c	blockRegistry	#blockRegistry, REGISTRY, :, :
+	f	Ljava/lang/String;	field_149768_d	textureName	#textureName, :, ~, spriteName
+	f	Lnet/minecraft/block/Block$SoundType;	field_149769_e	soundTypeStone	#soundTypeStone, :, UNKNOWN_SOUND_GROUP, ORE_SOUND
+	f	Lnet/minecraft/block/Block$SoundType;	field_149766_f	soundTypeWood	#soundTypeWood, :, WOOD_SOUND_GROUP, WOOD_SOUND
+		c	the wood sound type
+	f	Lnet/minecraft/block/Block$SoundType;	field_149767_g	soundTypeGravel	#soundTypeGravel, :, ~, GRAVEL_SOUND
+		c	the gravel sound type
+	f	Lnet/minecraft/block/Block$SoundType;	field_149779_h	soundTypeGrass	#soundTypeGrass, :, GRASS_SOUND_GROUP, GRASS_SOUND
+	f	Lnet/minecraft/block/Block$SoundType;	field_149780_i	soundTypePiston	#soundTypePiston, :, STONE_SOUND_GROUP, STONE_SOUND
+		c	The piston step sound
+	f	Lnet/minecraft/block/Block$SoundType;	field_149777_j	soundTypeMetal	#soundTypeMetal, :, ~, RAIL_SOUND
+		c	The metal sound type
+	f	Lnet/minecraft/block/Block$SoundType;	field_149778_k	soundTypeGlass	#soundTypeGlass, :, ~, GLASS_SOUND
+		c	Glass footsteps
+	f	Lnet/minecraft/block/Block$SoundType;	field_149775_l	soundTypeCloth	#soundTypeCloth, :, ~, CLOTH_SOUND
+		c	Sound for cloth and carpets
+	f	Lnet/minecraft/block/Block$SoundType;	field_149776_m	soundTypeSand	#soundTypeSand, :, ~, SAND_SOUND
+	f	Lnet/minecraft/block/Block$SoundType;	field_149773_n	soundTypeSnow	#soundTypeSnow, :, ~, SNOW_SOUND
+	f	Lnet/minecraft/block/Block$SoundType;	field_149774_o	soundTypeLadder	#soundTypeLadder, :, ~, LADDER_SOUND
+		c	The ladder sound type
+	f	Lnet/minecraft/block/Block$SoundType;	field_149788_p	soundTypeAnvil	#soundTypeAnvil, :, ~, ANVIL_SOUND
+		c	The anvil sound type
+	f	Z	field_149787_q	opaque	#opaque, fullBlock, :, opaqueCube
+		c	Specifies whether the current block is a full block
+	f	I	field_149786_r	lightOpacity	#lightOpacity, :, opacity, :
+		c	How much light is subtracted for going through this block
+	f	Z	field_149785_s	canBlockGrass	#canBlockGrass, translucent, transluscent, isTranslucent
+		c	Specifies whether the current block is transluscent
+	f	I	field_149784_t	lightValue	#lightValue, :, lightLevel, :
+		c	Amount of light emitted
+	f	Z	field_149783_u	useNeighborBrightness	#useNeighborBrightness, :, useNeighbourLight, useNeighborLight
+		c	Flag if block should use the brightest neighbor light value as its own
+	f	F	field_149782_v	blockHardness	#blockHardness, :, hardness, miningSpeed
+		c	Indicates how many hits it takes to break a block.
+	f	F	field_149781_w	blockResistance	#blockResistance, :, blastResistance, resistance
+		c	Indicates the block's resistance to explosions.
+	f	Z	field_149791_x	blockConstructorCalled	#blockConstructorCalled, :, ~, ~
+	f	Z	field_149790_y	enableStats	#enableStats, :, stats, :
+		c	If this field is true, the block is counted for statistics (mined or placed)
+	f	Z	field_149789_z	needsRandomTick	#needsRandomTick, :, randomTicks, ticksRandomly
+		c	Flags whether or not this block is of a type that needs random ticking. Ref-counted by ExtendedBlockStorage in order to broadly cull a chunk from the random chunk update list for efficiency's sake.
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		c	Overloaded Block constructor that calls the other with the default material color
+		p	1	p_i45394_1_	materialIn	#materialIn, :, material, :
+			c	The block's material
+	m	()D	func_149669_A	getBlockBoundsMaxY	#getBlockBoundsMaxY, :, getMaxY, :
+		c	returns the block bounderies maxY value
+	m	()D	func_149706_B	getBlockBoundsMinZ	#getBlockBoundsMinZ, :, getMinZ, :
+		c	returns the block bounderies minZ value
+	m	()D	func_149693_C	getBlockBoundsMaxZ	#getBlockBoundsMaxZ, :, getMaxZ, :
+		c	returns the block bounderies maxZ value
+	m	()I	func_149635_D	getBlockColor	#getBlockColor, :, getColor, :
+	m	()Z	func_149700_E	canSilkHarvest	#canSilkHarvest, :, requiresSilkTouch, hasSilkTouchDrops
+		c	Return true if a player with Silk Touch can harvest this block directly, and not its normal drops.
+	m	()Ljava/lang/String;	func_149732_F	getLocalizedName	#getLocalizedName, :, getTranslatedName, getName
+		c	Gets the localized name of this block. Used for the statistics page.
+	m	()Z	func_149652_G	getEnableStats	#getEnableStats, :, hasStats, :
+		c	Return the state of blocks statistics flags - if the block is counted for mined and placed.
+	m	()Lnet/minecraft/block/Block;	func_149649_H	disableStats	#disableStats, :, :, :
+		c	Disable statistics for the block, the block will not count for mined or placed.
+	m	()F	func_149685_I	getAmbientOcclusionLightValue	#getAmbientOcclusionLightValue, :, getAmbientOcclusionLightLevel, getAmbientOcclusionLight
+		c	Returns the default ambient occlusion value based on block opacity
+	m	()Lnet/minecraft/creativetab/CreativeTabs;	func_149708_J	getCreativeTabToDisplayOn	#getCreativeTabToDisplayOn, getCreativeTab, getItemGroup, getCreativeModeTab
+		c	Returns the CreativeTab to display the given block on.
+	m	()Z	func_149648_K	isFlowerPot	#isFlowerPot, :, :, hasPickItemMetadata
+		c	Returns true only if block is flowerPot
+	m	()Z	func_149698_L	requiresUpdates	#requiresUpdates, :, doImmediateUpdates, acceptsImmediateTicks
+		c	Returns whether this block accepts ticks when the world is executing them\nimmediately (i.e. without scheduling them first).
+	m	()Z	func_149740_M	hasComparatorInputOverride	#hasComparatorInputOverride, :, hasComparatorOutput, isAnalogSignalSource
+		c	If this returns true, then comparators facing away from this block will use the value from getComparatorInputOverride instead of the actual redstone signal strength.
+	m	()Ljava/lang/String;	func_149641_N	getTextureName	#getTextureName, :, :, getSpriteName
+	m	()Ljava/lang/String;	func_149702_O	getItemIconName	#getItemIconName, :, ~, getItemSpriteName
+		c	Gets the icon name of the ItemBlock corresponding to this block. Used by hoppers.
+	m	()Ljava/lang/String;	func_149739_a	getUnlocalizedName	#getUnlocalizedName, getTranslationKey, :, :
+		c	Returns the unlocalized name of the block with "tile." appended to the front.
+	m	(F)Lnet/minecraft/block/Block;	func_149715_a	setLightLevel	#setLightLevel, :, :, :
+		c	Sets the light value that the block emits. Returns resulting block instance for constructing convenience. Args: level
+		p	1	p_149715_1_	value	#value, :, lightLevel, :
+			c	The block's luminescence
+	m	(FFFFFF)V	func_149676_a	setBlockBounds	#setBlockBounds, :, setBoundingBox, setShape
+		c	Sets the bounds of the block.  minX, minY, minZ, maxX, maxY, maxZ
+		p	1	p_149676_1_	minX	#minX, :, :, :
+			c	Minimum X value
+		p	2	p_149676_2_	minY	#minY, :, :, :
+			c	Minimum Y value
+		p	3	p_149676_3_	minZ	#minZ, :, :, :
+			c	Minimum Z value
+		p	4	p_149676_4_	maxX	#maxX, :, :, :
+			c	Maximum X value
+		p	5	p_149676_5_	maxY	#maxY, :, :, :
+			c	Maximum Y value
+		p	6	p_149676_6_	maxZ	#maxZ, :, :, :
+			c	Maximum Z value
+	m	(I)I	func_149692_a	damageDropped	#damageDropped, :, ~, getDropItemMetadata
+		c	Determines the damage on the item the block drops. Used in cloth and wood.
+		p	1	p_149692_1_	meta	#meta, :, ~, metadata
+	m	(II)Lnet/minecraft/util/IIcon;	func_149691_a	getIcon	#getIcon, :, getTexture, getSprite
+		c	Gets the block's texture. Args: side, meta
+		p	1	p_149691_1_	side	#side, :, :, face
+		p	2	p_149691_2_	meta	#meta, :, blockData, metadata
+	m	(ILjava/util/Random;)I	func_149679_a	quantityDroppedWithBonus	#quantityDroppedWithBonus, :, getBonusDrops, getDropCount
+		c	Returns the usual quantity dropped by the block plus a bonus of 1 to 'i' (inclusive).
+		p	1	p_149679_1_	maxBonus	#maxBonus, fortune, id, fortuneLevel
+			c	Id
+		p	2	p_149679_2_	random	#random, :, rand, random
+			c	Random object
+	m	(ILjava/util/Random;I)Lnet/minecraft/item/Item;	func_149650_a	getItemDropped	#getItemDropped, :, ~, getDropItem
+		p	1	p_149650_1_	meta	#meta, :, ~, metadata
+		p	2	p_149650_2_	random	#random, :, ~, random
+		p	3	p_149650_3_	fortune	#fortune, :, ~, fortuneLevel
+	m	(IZ)Z	func_149678_a	canCollideCheck	#canCollideCheck, canStopRayTrace, ~, hasCollision
+		c	Returns whether this block is collideable based on the arguments passed in \n@param par1 block metaData \n@param par2 whether the player right-clicked while holding a boat
+		p	1	p_149678_1_	meta	#meta, :, ~, metadata
+		p	2	p_149678_2_	includeLiquid	#includeLiquid, :, ~, allowLiquids
+	m	(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/block/Block;	func_149647_a	setCreativeTab	#setCreativeTab, :, setItemGroup, setCreativeModeTab
+		c	Sets this block's creative inventory tab.\n\n<p>\nNOTE: this method should only be used during the block's creation before it is registered.
+		p	1	p_149647_1_	tab	#tab, :, group, tab
+			c	The itemgroup that the block must be added to
+	m	(Lnet/minecraft/item/Item;)Lnet/minecraft/block/Block;	func_149634_a	getBlockFromItem	#getBlockFromItem, :, :, byItem
+		c	Returns a block by converting a blockitem to a block\n@return The block
+		p	0	p_149634_0_	itemIn	#itemIn, :, item, :
+			c	The item that must be converted to a block
+	m	(Lnet/minecraft/item/Item;Lnet/minecraft/creativetab/CreativeTabs;Ljava/util/List;)V	func_149666_a	getSubBlocks	#getSubBlocks, :, appendItemStacks, addToCreativeMenu
+		c	returns a list of blocks with the same ID, but different meta (eg: wood returns 4 blocks)
+		p	1	p_149666_1_	itemIn	#itemIn, :, item, :
+			c	The Item that must be added
+		p	2	p_149666_2_	tab	#tab, items, group, tab
+			c	The ItemGroup that the item must be added to
+		p	3	p_149666_3_	list	#list, :, stacks, inventory
+			c	The list of currently added ItemStacks to the ItemGroup
+	m	(Lnet/minecraft/world/Explosion;)Z	func_149659_a	canDropFromExplosion	#canDropFromExplosion, :, shouldDropItemsOnExplosion, :
+		c	Return whether this block can drop from an explosion.
+		p	1	p_149659_1_	explosionIn	#explosionIn, :, explosion, :
+			c	The explosion that caused the block to break
+	m	(Lnet/minecraft/world/World;)I	func_149738_a	tickRate	#tickRate, :, getTickRate, :
+		c	How many world ticks before ticking
+		p	1	p_149738_1_	worldIn	#worldIn, :, world, :
+			c	The world that the block is placed in
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;	func_149668_a	getCollisionBoundingBoxFromPool	#getCollisionBoundingBoxFromPool, :, getBoundingBox, getCollisionShape
+		c	Returns a bounding box from the pool of bounding boxes (this means this box can change after the pool has been cleared to be reused)
+		p	1	p_149668_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149668_2_	x	#x, :, :, :
+		p	3	p_149668_3_	y	#y, :, :, :
+		p	4	p_149668_4_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;IIIIFFFI)I	func_149660_a	onBlockPlaced	#onBlockPlaced, :, ~, getPlacementMetadata
+		c	Called when a block is placed using its ItemBlock. Args: World, X, Y, Z, side, hitX, hitY, hitZ, block metadata
+		p	1	p_149660_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149660_2_	x	#x, :, ~, x
+		p	3	p_149660_3_	y	#y, :, ~, y
+		p	4	p_149660_4_	z	#z, :, ~, z
+		p	5	p_149660_5_	side	#side, :, ~, dir
+		p	6	p_149660_6_	subX	#subX, :, ~, dx
+		p	7	p_149660_7_	subY	#subY, :, ~, dy
+		p	8	p_149660_8_	subZ	#subZ, :, ~, dz
+		p	9	p_149660_9_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/World;IIIIFI)V	func_149690_a	dropBlockAsItemWithChance	#dropBlockAsItemWithChance, :, ~, dropItems
+		c	Drops the block items with a specified chance of dropping the specified items
+		p	1	p_149690_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149690_2_	x	#x, :, ~, x
+		p	3	p_149690_3_	y	#y, :, ~, y
+		p	4	p_149690_4_	z	#z, :, ~, z
+		p	5	p_149690_5_	meta	#meta, :, ~, metadata
+		p	6	p_149690_6_	chance	#chance, :, ~, luck
+		p	7	p_149690_7_	fortune	#fortune, :, ~, fortuneLevel
+	m	(Lnet/minecraft/world/World;IIIII)Z	func_149696_a	onBlockEventReceived	#onBlockEventReceived, :, ~, doEvent
+		c	Performs a block event. Block events are queued on the server, and executed once per\ntick. Successful block events are synced with clients that are within range. Block events\nare most notably used by pistons to handle extension and retraction, but note blocks\nalso use them to play sounds.\n\n@return whether the block event was successful.
+		p	1	p_149696_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149696_2_	x	#x, :, ~, x
+		p	3	p_149696_3_	y	#y, :, ~, y
+		p	4	p_149696_4_	z	#z, :, ~, z
+		p	5	p_149696_5_	eventId	#eventId, :, ~, type
+		p	6	p_149696_6_	eventData	#eventData, :, ~, data
+	m	(Lnet/minecraft/world/World;IIIILnet/minecraft/item/ItemStack;)Z	func_149705_a	canReplace	#canReplace, :, ~, canPlace
+		p	1	p_149705_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149705_2_	x	#x, :, ~, x
+		p	3	p_149705_3_	y	#y, :, ~, y
+		p	4	p_149705_4_	z	#z, :, ~, z
+		p	5	p_149705_5_	side	#side, :, ~, face
+		p	6	p_149705_6_	itemIn	#itemIn, :, ~, stack
+	m	(Lnet/minecraft/world/World;IIIILnet/minecraft/entity/player/EntityPlayer;)V	func_149681_a	onBlockHarvested	#onBlockHarvested, :, ~, beforeMinedByPlayer
+		c	Called when the block is attempted to be harvested
+		p	1	p_149681_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149681_2_	x	#x, :, ~, x
+		p	3	p_149681_3_	y	#y, :, ~, y
+		p	4	p_149681_4_	z	#z, :, ~, z
+		p	5	p_149681_5_	meta	#meta, :, ~, metadata
+		p	6	p_149681_6_	player	#player, :, ~, player
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/item/ItemStack;)V	func_149642_a	dropBlockAsItem	#dropBlockAsItem, :, ~, dropItems
+		c	Spawns EntityItem in the world for the given ItemStack if the world is not remote.
+		p	1	p_149642_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149642_2_	x	#x, :, ~, x
+		p	3	p_149642_3_	y	#y, :, ~, y
+		p	4	p_149642_4_	z	#z, :, ~, z
+		p	5	p_149642_5_	itemIn	#itemIn, :, ~, stack
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/world/Explosion;)V	func_149723_a	onBlockDestroyedByExplosion	#onBlockDestroyedByExplosion, :, ~, onExploded
+		c	Called upon the block being destroyed by an explosion
+		p	1	p_149723_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149723_2_	x	#x, :, ~, x
+		p	3	p_149723_3_	y	#y, :, ~, y
+		p	4	p_149723_4_	z	#z, :, ~, z
+		p	5	p_149723_5_	explosionIn	#explosionIn, :, ~, explosion
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;)V	func_149695_a	onNeighborBlockChange	#onNeighborBlockChange, :, onNeighborUpdate, neighborChanged
+		c	Lets the block know when one of its neighbor changes. Doesn't know which neighbor changed (coordinates passed are their own) Args: x, y, z, neighbor Block
+		p	1	p_149695_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149695_2_	x	#x, :, :, :
+		p	3	p_149695_3_	y	#y, :, :, :
+		p	4	p_149695_4_	z	#z, :, :, :
+		p	5	p_149695_5_	neighbor	#neighbor, :, block, neighborBlock
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;I)V	func_149749_a	breakBlock	#breakBlock, :, ~, onRemoved
+		p	1	p_149749_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149749_2_	x	#x, :, ~, x
+		p	3	p_149749_3_	y	#y, :, ~, y
+		p	4	p_149749_4_	z	#z, :, ~, z
+		p	5	p_149749_5_	blockBroken	#blockBroken, :, ~, block
+		p	6	p_149749_6_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/util/AxisAlignedBB;Ljava/util/List;Lnet/minecraft/entity/Entity;)V	func_149743_a	addCollisionBoxesToList	#addCollisionBoxesToList, :, ~, addCollisions
+		c	Adds all intersecting collision boxes to a list. (Be sure to only add boxes to the list if they intersect the mask.) Parameters: World, X, Y, Z, mask, list, colliding entity
+		p	1	p_149743_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149743_2_	x	#x, :, :, :
+		p	3	p_149743_3_	y	#y, :, :, :
+		p	4	p_149743_4_	z	#z, :, :, :
+		p	5	p_149743_5_	mask	#mask, :, ~, shape
+		p	6	p_149743_6_	list	#list, :, ~, collisions
+		p	7	p_149743_7_	collider	#collider, :, ~, entity
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;	func_149731_a	collisionRayTrace	#collisionRayTrace, :, ~, rayTrace
+		c	Ray traces through the blocks collision from start vector to end vector returning a ray trace hit. Args: world, x, y, z, startVec, endVec
+		p	1	p_149731_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149731_2_	x	#x, :, ~, x
+		p	3	p_149731_3_	y	#y, :, ~, y
+		p	4	p_149731_4_	z	#z, :, ~, z
+		p	5	p_149731_5_	startVec	#startVec, :, ~, start
+		p	6	p_149731_6_	endVec	#endVec, :, ~, end
+	m	(Lnet/minecraft/world/World;IIILjava/util/Random;)V	func_149674_a	updateTick	#updateTick, :, onTick, tick
+		c	Ticks the block if it's been scheduled
+		p	1	p_149674_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149674_2_	x	#x, :, :, :
+		p	3	p_149674_3_	y	#y, :, :, :
+		p	4	p_149674_4_	z	#z, :, :, :
+		p	5	p_149674_5_	random	#random, :, :, :
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/Entity;)V	func_149670_a	onEntityCollidedWithBlock	#onEntityCollidedWithBlock, :, onEntityCollision, :
+		c	Triggered whenever an entity collides with this block (enters into the block). Args: world, x, y, z, entity
+		p	1	p_149670_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149670_2_	x	#x, :, :, :
+		p	3	p_149670_3_	y	#y, :, :, :
+		p	4	p_149670_4_	z	#z, :, :, :
+		p	5	p_149670_5_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/Entity;F)V	func_149746_a	onFallenUpon	#onFallenUpon, :, ~, onFallenOn
+		c	Block's chance to react to an entity falling on it.
+		p	1	p_149746_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149746_2_	x	#x, :, ~, x
+		p	3	p_149746_3_	y	#y, :, ~, y
+		p	4	p_149746_4_	z	#z, :, ~, z
+		p	5	p_149746_5_	entityIn	#entityIn, :, ~, entity
+		p	6	p_149746_6_	fallDistance	#fallDistance, :, ~, fallDistance
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/Entity;Lnet/minecraft/util/Vec3;)V	func_149640_a	velocityToAddToEntity	#velocityToAddToEntity, modifyEntityVelocity, ~, applyMaterialDrag
+		c	Can add to the passed in vector for a movement vector to be applied to the entity. Args: x, y, z, entity, vec3d
+		p	1	p_149640_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149640_2_	x	#x, :, ~, x
+		p	3	p_149640_3_	y	#y, :, ~, y
+		p	4	p_149640_4_	z	#z, :, ~, z
+		p	5	p_149640_5_	entityIn	#entityIn, :, ~, entity
+		p	6	p_149640_6_	velocity	#velocity, :, ~, velocity
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/item/ItemStack;)V	func_149689_a	onBlockPlacedBy	#onBlockPlacedBy, :, onBreak, onPlaced
+		c	Called when the block is placed in the world.
+		p	1	p_149689_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149689_2_	x	#x, :, :, :
+		p	3	p_149689_3_	y	#y, :, :, :
+		p	4	p_149689_4_	z	#z, :, :, :
+		p	5	p_149689_5_	placer	#placer, :, entity, :
+		p	6	p_149689_6_	itemIn	#itemIn, :, item, stack
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;)V	func_149699_a	onBlockClicked	#onBlockClicked, :, ~, startMining
+		c	Called when a player hits the block. Args: world, x, y, z, player
+		p	1	p_149699_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149699_2_	x	#x, :, ~, x
+		p	3	p_149699_3_	y	#y, :, ~, y
+		p	4	p_149699_4_	z	#z, :, ~, z
+		p	5	p_149699_5_	player	#player, :, ~, player
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/player/EntityPlayer;IFFF)Z	func_149727_a	onBlockActivated	#onBlockActivated, :, onActivated, use
+		c	Called upon block activation (right click on the block.)
+		p	1	p_149727_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149727_2_	x	#x, :, :, :
+		p	3	p_149727_3_	y	#y, :, :, :
+		p	4	p_149727_4_	z	#z, :, :, :
+		p	5	p_149727_5_	player	#player, :, :, :
+		p	6	p_149727_6_	side	#side, :, ~, face
+		p	7	p_149727_7_	subX	#subX, :, ~, dx
+		p	8	p_149727_8_	subY	#subY, :, ~, dy
+		p	9	p_149727_9_	subZ	#subZ, :, ~, dz
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;IIII)V	func_149636_a	harvestBlock	#harvestBlock, :, ~, afterMinedByPlayer
+		c	Called when the player destroys a block with an item that can harvest it. (i, j, k) are the coordinates of the block and l is the block's subtype/damage.
+		p	1	p_149636_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149636_2_	player	#player, :, playerEntity, player
+		p	3	p_149636_3_	x	#x, :, ~, x
+		p	4	p_149636_4_	y	#y, :, ~, y
+		p	5	p_149636_5_	z	#z, :, ~, z
+		p	6	p_149636_6_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;III)V	func_149719_a	setBlockBoundsBasedOnState	#setBlockBoundsBasedOnState, :, onRender, updateShape
+		c	Updates the blocks bounds based on its current state. Args: world, x, y, z
+		p	1	p_149719_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149719_2_	x	#x, :, :, :
+		p	3	p_149719_3_	y	#y, :, :, :
+		p	4	p_149719_4_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/IBlockAccess;IIII)Z	func_149646_a	shouldSideBeRendered	#shouldSideBeRendered, :, shouldRenderSide, shouldRenderFace
+		c	Returns true if the given side of this block type should be rendered, if the adjacent block is at the given coordinates.  Args: blockAccess, x, y, z, side
+		p	1	p_149646_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149646_2_	x	#x, :, :, :
+		p	3	p_149646_3_	y	#y, :, :, :
+		p	4	p_149646_4_	z	#z, :, :, :
+		p	5	p_149646_5_	side	#side, :, blockData, face
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/block/Block;)Z	func_149680_a	isEqualTo	#isEqualTo, :, areBlocksEqual, areEqual
+		c	Returns whether two blocks are equal.\n@return Whether two blocks are equal
+		p	0	p_149680_0_	blockIn	#blockIn, :, one, block1
+		p	1	p_149680_1_	other	#other, :, two, block2
+	m	(Lnet/minecraft/block/Block$SoundType;)Lnet/minecraft/block/Block;	func_149672_a	setStepSound	#setStepSound, setSoundType, setBlockSoundGroup, setSound
+		c	Sets the footstep sound for the block. Returns the object for convenience in constructing.
+		p	1	p_149672_1_	sound	#sound, :, blockSoundGroup, sound
+	m	(Lnet/minecraft/util/Vec3;)Z	func_149654_a	isVecInsideYZBounds	#isVecInsideYZBounds, :, isVecWithinYZBounds, isWithinPlaneYZ
+		c	Checks if a vector is within the Y and Z bounds of the block.
+		p	1	p_149654_1_	point	#point, :, other, vec
+	m	(Ljava/util/Random;)I	func_149745_a	quantityDropped	#quantityDropped, :, getDropCount, getBaseDropCount
+		c	Returns the quantity of items to drop on block destruction.
+		p	1	p_149745_1_	random	#random, :, rand, random
+			c	Random object
+	m	(Lnet/minecraft/client/renderer/texture/IIconRegister;)V	func_149651_a	registerBlockIcons	#registerBlockIcons, registerIcons, registerTextures, loadSprites
+		p	1	p_149651_1_	reg	#reg, :, registry, loader
+	m	(Lnet/minecraft/entity/Entity;)F	func_149638_a	getExplosionResistance	#getExplosionResistance, :, getBlastResistance, :
+		c	Returns how much this block can resist explosions from the passed in entity.
+		p	1	p_149638_1_	exploder	#exploder, :, entity, :
+			c	The entity that blast resistance must be calculated for
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;III)F	func_149737_a	getPlayerRelativeBlockHardness	#getPlayerRelativeBlockHardness, :, ~, getMiningSpeed
+		c	Gets the hardness of block at the given coordinates in the given world, relative to the ability of the given EntityPlayer.
+		p	1	p_149737_1_	player	#player, :, ~, player
+		p	2	p_149737_2_	worldIn	#worldIn, :, ~, world
+		p	3	p_149737_3_	x	#x, :, ~, x
+		p	4	p_149737_4_	y	#y, :, ~, y
+		p	5	p_149737_5_	z	#z, :, ~, z
+	m	(Z)Lnet/minecraft/block/Block;	func_149675_a	setTickRandomly	#setTickRandomly, :, :, setTicksRandomly
+		c	Sets whether this block type will receive random update ticks
+		p	1	p_149675_1_	shouldTick	#shouldTick, :, tickRandomly, ticksRandomly
+			c	Whether the current block should have random ticks
+	m	()I	func_149645_b	getRenderType	#getRenderType, :, getBlockType, getRenderType
+		c	The type of render function that is called for this block
+	m	(F)Lnet/minecraft/block/Block;	func_149752_b	setResistance	#setResistance, :, :, :
+		c	Sets the the blocks resistance to explosions. Returns the object for convenience in constructing.
+		p	1	p_149752_1_	resistance	#resistance, :, :, :
+			c	The block's resistance
+	m	(II)Lnet/minecraft/util/IIcon;	func_149735_b	getItemIcon	#getItemIcon, :, ~, getSpriteForColor
+		p	1	p_149735_1_	side	#side, :, ~, face
+		p	2	p_149735_2_	meta	#meta, :, ~, color
+	m	(Lnet/minecraft/world/World;III)V	func_149726_b	onBlockAdded	#onBlockAdded, :, breakNaturally, onAdded
+		c	Called whenever the block is added into the world. Args: world, x, y, z
+		p	1	p_149726_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149726_2_	x	#x, :, :, :
+		p	3	p_149726_3_	y	#y, :, :, :
+		p	4	p_149726_4_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;IIII)V	func_149664_b	onBlockDestroyedByPlayer	#onBlockDestroyedByPlayer, :, onDestroyed, onBroken
+		c	Called right before the block is destroyed by a player.  Args: world, x, y, z, metaData
+		p	1	p_149664_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149664_2_	x	#x, :, :, :
+		p	3	p_149664_3_	y	#y, :, :, :
+		p	4	p_149664_4_	z	#z, :, :, :
+		p	5	p_149664_5_	meta	#meta, :, blockData, metadata
+	m	(Lnet/minecraft/world/World;IIIII)V	func_149697_b	dropBlockAsItem	#dropBlockAsItem, :, canStayPlaced, dropItems
+		c	Drops the specified block items
+		p	1	p_149697_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149697_2_	x	#x, :, ~, x
+		p	3	p_149697_3_	y	#y, :, ~, y
+		p	4	p_149697_4_	z	#z, :, ~, z
+		p	5	p_149697_5_	meta	#meta, :, ~, metadata
+		p	6	p_149697_6_	fortune	#fortune, :, ~, fortuneLevel
+	m	(Lnet/minecraft/world/World;IIILjava/util/Random;)V	func_149734_b	randomDisplayTick	#randomDisplayTick, :, spawnParticles, randomDisplayTick
+		c	A randomly called display update to be able to add particles or other items for display
+		p	1	p_149734_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149734_2_	x	#x, :, :, :
+		p	3	p_149734_3_	y	#y, :, :, :
+		p	4	p_149734_4_	z	#z, :, :, :
+		p	5	p_149734_5_	random	#random, :, :, :
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/Entity;)V	func_149724_b	onEntityWalking	#onEntityWalking, :, ~, onSteppedOn
+		c	Called whenever an entity is walking on top of this block. Args: world, x, y, z, entity
+		p	1	p_149724_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149724_2_	x	#x, :, ~, x
+		p	3	p_149724_3_	y	#y, :, ~, y
+		p	4	p_149724_4_	z	#z, :, ~, z
+		p	5	p_149724_5_	entityIn	#entityIn, :, ~, entity
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_149655_b	getBlocksMovement	#getBlocksMovement, isPassable, ~, canWalkThrough
+		p	1	p_149655_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149655_2_	x	#x, :, ~, x
+		p	3	p_149655_3_	y	#y, :, ~, y
+		p	4	p_149655_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;IIII)I	func_149709_b	isProvidingWeakPower	#isProvidingWeakPower, :, getWeakRedstonePower, getSignal
+		c	Returns the redstone signal this block is emitting in the given direction.\nThis roughly equates to what is colloquially known as 'soft' or 'weak' power.\n\n<p>\nNOTE: directions in redstone signal related methods are backwards, so blocks should\ncheck for the signal emitted in the direction <i>opposite</i> of the one given.
+		p	1	p_149709_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149709_2_	x	#x, :, :, :
+		p	3	p_149709_3_	y	#y, :, :, :
+		p	4	p_149709_4_	z	#z, :, :, :
+		p	5	p_149709_5_	side	#side, :, direction, dir
+	m	(Lnet/minecraft/block/Block;)I	func_149682_b	getIdFromBlock	#getIdFromBlock, :, getIdByBlock, getId
+		c	Returns a certain block's id\n@return Block id
+		p	0	p_149682_0_	blockIn	#blockIn, :, block, :
+			c	The block for which the id is returned
+	m	(Lnet/minecraft/util/Vec3;)Z	func_149687_b	isVecInsideXZBounds	#isVecInsideXZBounds, :, isVecWithinXZBounds, isWithinPlaneXZ
+		c	Checks if a vector is within the X and Z bounds of the block.
+		p	1	p_149687_1_	point	#point, :, other, vec
+	m	(Ljava/lang/String;)Lnet/minecraft/block/Block;	func_149684_b	getBlockFromName	#getBlockFromName, :, get, byKey
+		c	Returns a block from it's name\n@return The block
+		p	0	p_149684_0_	name	#name, :, id, key
+			c	The block's name
+	m	()Z	func_149662_c	isOpaqueCube	#isOpaqueCube, :, hasTransparency, isOpaqueCube
+		c	Is this block (a) opaque and (b) a full 1m cube?  This determines whether or not to render the shared face of two adjacent blocks and also whether the player can attach torches, redstone wire, etc to this block.
+	m	(F)Lnet/minecraft/block/Block;	func_149711_c	setHardness	#setHardness, :, setStrength, :
+		c	Sets how many hits it takes to break a block.
+		p	1	p_149711_1_	hardness	#hardness, :, strength, :
+			c	The block's strength
+	m	(Lnet/minecraft/world/World;III)Z	func_149742_c	canPlaceBlockAt	#canPlaceBlockAt, :, :, canSurvive
+		c	Checks to see if its valid to put this block at the specified coordinates. Args: world, x, y, z
+		p	1	p_149742_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149742_2_	x	#x, :, :, :
+		p	3	p_149742_3_	y	#y, :, :, :
+		p	4	p_149742_4_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;IIII)V	func_149657_c	dropXpOnBlockBreak	#dropXpOnBlockBreak, :, ~, dropXp
+		c	called by spawner, ore, redstoneOre blocks
+		p	1	p_149657_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149657_2_	x	#x, :, ~, x
+		p	3	p_149657_3_	y	#y, :, ~, y
+		p	4	p_149657_4_	z	#z, :, ~, z
+		p	5	p_149657_5_	amount	#amount, :, ~, size
+	m	(Lnet/minecraft/world/IBlockAccess;III)I	func_149677_c	getMixedBrightnessForBlock	#getMixedBrightnessForBlock, :, getLight, getLightColor
+		c	How bright to render this block based on the light its receiving. Args: iBlockAccess, x, y, z
+		p	1	p_149677_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149677_2_	x	#x, :, ~, x
+		p	3	p_149677_3_	y	#y, :, ~, y
+		p	4	p_149677_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;IIII)I	func_149748_c	isProvidingStrongPower	#isProvidingStrongPower, :, getStrongRedstonePower, getDirectSignal
+		c	Returns the direct redstone signal this block is emitting in the given direction.\nThis roughly equates to what is colloquially known as 'hard' or 'strong' power.\n\n<p>\nNOTE: directions in redstone signal related methods are backwards, so blocks should\ncheck for the signal emitted in the direction <i>opposite</i> of the one given.
+		p	1	p_149748_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149748_2_	x	#x, :, :, :
+		p	3	p_149748_3_	y	#y, :, :, :
+		p	4	p_149748_4_	z	#z, :, :, :
+		p	5	p_149748_5_	side	#side, :, direction, dir
+	m	(Lnet/minecraft/block/Block;)Z	func_149667_c	isAssociatedBlock	#isAssociatedBlock, :, isEqualTo, is
+		c	Returns whether the current block and another block are equal\n@return Whether the current block and the other block are equal
+		p	1	p_149667_1_	other	#other, :, block, :
+			c	The other block
+	m	(Lnet/minecraft/util/Vec3;)Z	func_149661_c	isVecInsideXYBounds	#isVecInsideXYBounds, :, isVecWithinXYBounds, isWithinPlaneXY
+		c	Checks if a vector is within the X and Y bounds of the block.
+		p	1	p_149661_1_	point	#point, :, other, vec
+	m	(Ljava/lang/String;)Lnet/minecraft/block/Block;	func_149663_c	setBlockName	#setBlockName, setTranslationKey, :, setKey
+		c	Sets the mod-specific block name
+		p	1	p_149663_1_	name	#name, key, :, :
+			c	The Translation key
+	m	()Z	func_149686_d	renderAsNormalBlock	#renderAsNormalBlock, isFullCube, renderAsNormalBlock, isFullCube
+		c	If this block doesn't render as an ordinary block it will return False (examples: signs, buttons, stairs, etc)
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/item/Item;	func_149694_d	getItem	#getItem, :, ~, getPickItem
+		c	Gets an item for the block being called on. Args: world, x, y, z
+		p	1	p_149694_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149694_2_	x	#x, :, ~, x
+		p	3	p_149694_3_	y	#y, :, ~, y
+		p	4	p_149694_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;IIII)Z	func_149707_d	canPlaceBlockOnSide	#canPlaceBlockOnSide, :, ~, canPlace
+		c	checks to see if you can place this block can be placed on that side of a block: BlockLever overrides
+		p	1	p_149707_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149707_2_	x	#x, :, ~, x
+		p	3	p_149707_3_	y	#y, :, ~, y
+		p	4	p_149707_4_	z	#z, :, ~, z
+		p	5	p_149707_5_	side	#side, :, ~, face
+	m	(Lnet/minecraft/world/IBlockAccess;III)I	func_149720_d	colorMultiplier	#colorMultiplier, :, getTint, getColor
+		c	Returns a integer with hex for 0xrrggbb with this color multiplied against the blocks color. Note only called when first determining what to render.
+		p	1	p_149720_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149720_2_	x	#x, :, ~, x
+		p	3	p_149720_3_	y	#y, :, ~, y
+		p	4	p_149720_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;IIII)Z	func_149747_d	isBlockSolid	#isBlockSolid, :, ~, isFaceSolid
+		c	Returns true if the given side of this block type should be rendered (if it's solid or not), if the adjacent block is at the given coordinates. Args: blockAccess, x, y, z, side
+		p	1	p_149747_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149747_2_	x	#x, :, ~, x
+		p	3	p_149747_3_	y	#y, :, ~, y
+		p	4	p_149747_4_	z	#z, :, ~, z
+		p	5	p_149747_5_	side	#side, :, ~, face
+	m	(Ljava/lang/String;)Lnet/minecraft/block/Block;	func_149658_d	setBlockTextureName	#setBlockTextureName, setTextureName, ~, setSpriteName
+		p	1	p_149658_1_	textureName	#textureName, :, ~, spriteName
+	m	(I)Lnet/minecraft/block/Block;	func_149729_e	getBlockById	#getBlockById, :, getById, byId
+		c	Returns a certain block from its id\n@return The Block
+		p	0	p_149729_0_	id	#id, :, :, :
+			c	The id for which the Block is returned
+	m	(Lnet/minecraft/world/World;IIII)V	func_149714_e	onPostBlockPlaced	#onPostBlockPlaced, :, ~, onPlaced
+		c	Called after a block is placed
+		p	1	p_149714_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149714_2_	x	#x, :, ~, x
+		p	3	p_149714_3_	y	#y, :, ~, y
+		p	4	p_149714_4_	z	#z, :, ~, z
+		p	5	p_149714_5_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;IIII)Lnet/minecraft/util/IIcon;	func_149673_e	getIcon	#getIcon, :, ~, getSprite
+		p	1	p_149673_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149673_2_	x	#x, :, ~, x
+		p	3	p_149673_3_	y	#y, :, ~, y
+		p	4	p_149673_4_	z	#z, :, ~, z
+		p	5	p_149673_5_	side	#side, :, ~, face
+	m	()Z	func_149744_f	canProvidePower	#canProvidePower, :, emitsRedstonePower, isSignalSource
+		c	Can this block provide power. Only wire currently seems to have this change based on its state.
+	m	(I)Lnet/minecraft/block/material/MapColor;	func_149728_f	getMapColor	#getMapColor, :, ~, getMapColor
+		p	1	p_149728_1_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/World;III)F	func_149712_f	getBlockHardness	#getBlockHardness, :, ~, getMiningSpeed
+		c	Returns the block hardness at a location. Args: world, x, y, z
+		p	1	p_149712_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149712_2_	x	#x, :, ~, x
+		p	3	p_149712_3_	y	#y, :, ~, y
+		p	4	p_149712_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;IIII)V	func_149725_f	onBlockPreDestroy	#onBlockPreDestroy, :, ~, beforeRemoved
+		c	Called on server worlds only when the block is about to be replaced by a different block or the same block with a different metadata value. Args: world, x, y, z, old metadata
+		p	1	p_149725_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149725_2_	x	#x, :, ~, x
+		p	3	p_149725_3_	y	#y, :, ~, y
+		p	4	p_149725_4_	z	#z, :, ~, z
+		p	5	p_149725_5_	meta	#meta, :, ~, metadata
+	m	()V	func_149683_g	setBlockBoundsForItemRender	#setBlockBoundsForItemRender, :, setBlockItemBounds, resetShape
+		c	Sets the block's bounds for rendering it as an item
+	m	(I)Lnet/minecraft/block/Block;	func_149713_g	setLightOpacity	#setLightOpacity, :, setOpacity, :
+		c	Sets how much light is blocked going through this block. Returns the object for convenience in constructing.
+		p	1	p_149713_1_	opacity	#opacity, :, :, :
+			c	The block's light opacity
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/util/AxisAlignedBB;	func_149633_g	getSelectedBoundingBoxFromPool	#getSelectedBoundingBoxFromPool, :, getRenderBoundingBox, getOutlineShape
+		c	Returns the bounding box of the wired rectangular prism to render.
+		p	1	p_149633_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149633_2_	x	#x, :, :, :
+		p	3	p_149633_3_	y	#y, :, :, :
+		p	4	p_149633_4_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;IIII)I	func_149736_g	getComparatorInputOverride	#getComparatorInputOverride, :, ~, getAnalogSignal
+		c	If hasComparatorInputOverride returns true, the return value from this is used instead of the redstone signal strength when this block inputs to a comparator.
+		p	1	p_149736_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149736_2_	x	#x, :, ~, x
+		p	3	p_149736_3_	y	#y, :, ~, y
+		p	4	p_149736_4_	z	#z, :, ~, z
+		p	5	p_149736_5_	side	#side, :, ~, metadata
+	m	()I	func_149656_h	getMobilityFlag	#getMobilityFlag, getPushReaction, getPistonInteractionType, getPistonMoveBehavior
+		c	Returns the mobility information of the block, 0 = free, 1 = can't push but can move over, 2 = total immobility and stop pistons
+	m	(I)Lnet/minecraft/util/IIcon;	func_149733_h	getBlockTextureFromSide	#getBlockTextureFromSide, :, getSideTexture, getSprite
+		c	Returns the block texture based on the side being looked at.  Args: side
+		p	1	p_149733_1_	side	#side, :, :, face
+	m	(I)I	func_149741_i	getRenderColor	#getRenderColor, :, ~, getColor
+		c	Returns the color this block should be rendered. Used by leaves.
+		p	1	p_149741_1_	meta	#meta, :, ~, metadata
+	m	()Z	func_149730_j	isFullBlock	#isFullBlock, :, :, isOpaque
+		c	@return true if the state occupies all of its 1x1x1 cube
+	m	(I)Lnet/minecraft/item/ItemStack;	func_149644_j	createStackedBlock	#createStackedBlock, :, ~, getSilkTouchDrop
+		c	Returns an item stack containing a single instance of the current block type. 'i' is the block's subtype/damage and is ignored for blocks which do not support subtypes. Blocks which cannot be harvested should return null.
+		p	1	p_149644_1_	meta	#meta, :, ~, metadata
+	m	(Lnet/minecraft/world/World;III)Z	func_149718_j	canBlockStay	#canBlockStay, :, canStayPlaced, isSupported
+		c	Can this block stay at this position.  Similar to canPlaceBlockAt except gets checked often with plants.
+		p	1	p_149718_1_	worldIn	#worldIn, :, world, :
+		p	2	p_149718_2_	x	#x, :, :, :
+		p	3	p_149718_3_	y	#y, :, :, :
+		p	4	p_149718_4_	z	#z, :, :, :
+	m	()I	func_149717_k	getLightOpacity	#getLightOpacity, :, getOpacity, :
+		c	Get how much light is subtracted for going through this block\n@deprecated prefer calling {@link IBlockState#getLightOpacity()}
+	m	(Lnet/minecraft/world/World;III)I	func_149643_k	getDamageValue	#getDamageValue, :, ~, getPickItemMetadata
+		c	Get the block's damage value (for use with pick block).
+		p	1	p_149643_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149643_2_	x	#x, :, ~, x
+		p	3	p_149643_3_	y	#y, :, ~, y
+		p	4	p_149643_4_	z	#z, :, ~, z
+	m	()Z	func_149751_l	getCanBlockGrass	#getCanBlockGrass, isTranslucent, isTransluscent, isTranslucent
+		c	Used in the renderer to apply ambient occlusion
+	m	(Lnet/minecraft/world/World;III)V	func_149639_l	fillWithRain	#fillWithRain, :, ~, randomPrecipitationTick
+		c	currently only used by BlockCauldron to incrament meta-data during rain
+		p	1	p_149639_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149639_2_	x	#x, :, ~, x
+		p	3	p_149639_3_	y	#y, :, ~, y
+		p	4	p_149639_4_	z	#z, :, ~, z
+	m	()I	func_149750_m	getLightValue	#getLightValue, :, getLightLevel, :
+		c	Gets the light value of the specified block coords. Args: x, y, z
+	m	()Z	func_149710_n	getUseNeighborBrightness	#getUseNeighborBrightness, :, usesNeighbourLight, usesNeighborLight
+		c	Should block use the brightest neighbor light value as its own
+	m	()Lnet/minecraft/block/material/Material;	func_149688_o	getMaterial	#getMaterial, :, :, :
+		c	Get a material of block
+	m	()V	func_149671_p	registerBlocks	#registerBlocks, :, setup, init
+		c	Registers all blocks.
+	m	()Z	func_149637_q	isBlockNormalCube	#isBlockNormalCube, :, isNormalBlock, blocksAmbientLight
+		c	Indicate if a material is a normal solid opaque cube
+	m	()Z	func_149721_r	isNormalCube	#isNormalCube, :, isFullCube, isConductor
+		c	Used for nearly all game logic (non-rendering) purposes. Use Forge-provided isNormalCube(IBlockAccess, BlockPos) instead.
+	m	()Lnet/minecraft/block/Block;	func_149722_s	setBlockUnbreakable	#setBlockUnbreakable, :, setUnbreakable, :
+		c	This method will set the hardness of the block to -1, making it indestructible
+	m	()Z	func_149653_t	getTickRandomly	#getTickRandomly, :, ticksRandomly, :
+		c	Returns whether or not this block is of a type that needs random ticking. Called for ref-counting purposes by ExtendedBlockStorage in order to broadly cull a chunk from the random chunk update list for efficiency's sake.
+	m	()Z	func_149716_u	hasTileEntity	#hasTileEntity, :, hasBlockEntity, :
+		c	Returns whether this block has a block entity associated with it.
+	m	()Z	func_149703_v	isCollidable	#isCollidable, :, hasCollision, :
+		c	Returns if this block is collidable (only used by Fire). Args: x, y, z
+	m	()I	func_149701_w	getRenderBlockPass	#getRenderBlockPass, :, ~, getRenderLayer
+		c	Returns which pass should this block be rendered on. 0 for solids and 1 for alpha
+	m	()D	func_149704_x	getBlockBoundsMinX	#getBlockBoundsMinX, :, getMinX, :
+		c	returns the block bounderies minX value
+	m	()D	func_149753_y	getBlockBoundsMaxX	#getBlockBoundsMaxX, :, getMaxX, :
+		c	returns the block bounderies maxX value
+	m	()D	func_149665_z	getBlockBoundsMinY	#getBlockBoundsMinY, :, getMinY, :
+		c	returns the block bounderies minY value
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

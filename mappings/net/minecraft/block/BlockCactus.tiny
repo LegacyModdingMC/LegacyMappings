@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCactus	net/minecraft/block/BlockCactus	
+	f	Lnet/minecraft/util/IIcon;	field_150041_a	iconTop	#iconTop, :, ~, spriteTop
+	f	Lnet/minecraft/util/IIcon;	field_150040_b	iconBottom	#iconBottom, :, ~, spriteBottom
+	m	()V	<init>	<init>	#~, ~, ~, ~

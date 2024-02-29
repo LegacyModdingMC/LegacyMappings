@@ -1,0 +1,124 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/Container	net/minecraft/inventory/Container	
+	f	S	field_75150_e	transactionID	#transactionID, :, actionId, nextActionNetworkId
+	f	Ljava/util/List;	field_75153_a	inventoryItemStacks	#inventoryItemStacks, :, trackedStacks, stacks
+		c	the list of all items(stacks) for the corresponding slot
+	f	Ljava/util/List;	field_75151_b	inventorySlots	#inventorySlots, :, slots, :
+		c	the list of all slots in the inventory
+	f	I	field_75152_c	windowId	#windowId, :, syncId, networkId
+	f	Ljava/util/List;	field_75149_d	crafters	#crafters, listeners, :, :
+		c	list of all people that need to be notified when this craftinventory changes
+	f	I	field_94535_f	dragMode	#dragMode, :, quickCraftStage, clickDragMode
+		c	The current drag mode (0 : evenly split, 1 : one item by slot, 2 : not used ?)
+	f	I	field_94536_g	dragEvent	#dragEvent, :, quickCraftButton, clickDragStage
+		c	The current drag event (0 : start, 1 : add slot : 2 : end)
+	f	Ljava/util/Set;	field_94537_h	dragSlots	#dragSlots, :, quickCraftSlots, clickDragSlots
+		c	The list of slots where the itemstack holds will be distributed
+	f	Ljava/util/Set;	field_75148_f	playerList	#playerList, :, restrictedPlayers, :
+	m	()Ljava/util/List;	func_75138_a	getInventory	#getInventory, :, getStacks, :
+		c	returns a list if itemStacks, for each slot.
+	m	(I)Lnet/minecraft/inventory/Slot;	func_75139_a	getSlot	#getSlot, :, :, :
+		p	1	p_75139_1_	slotId	#slotId, :, index, id
+	m	(IIILnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;	func_75144_a	slotClick	#slotClick, :, onSlotClick, onClickSlot
+		c	Handles slot click. Args : slotId, clickedButton, mode (0 = basic click, 1 = shift click, 2 = Hotbar, 3 = pickBlock, 4 = Drop, 5 = ?, 6 = Double click), player\n \n@param slotId Will be either the slot id in the current Container or -999 if dragging\n@param mode 0 for basic click, 1 for shift-click, 2 for hotbar, 3 for pickBlock, 4 for drop, 5 for item distribution drag, 6 for double click
+		p	1	p_75144_1_	slotId	#slotId, :, :, id
+		p	2	p_75144_2_	clickedButton	#clickedButton, :, clickData, :
+		p	3	p_75144_3_	mode	#mode, :, actionType, action
+		p	4	p_75144_4_	player	#player, playerIn, player, :
+	m	(IIZLnet/minecraft/entity/player/EntityPlayer;)V	func_75133_b	retrySlotClick	#retrySlotClick, :, onSlotClick, quickMoveStack
+		c	Retries slotClick() in case of failure
+		p	1	p_75133_1_	slotId	#slotId, :, :, id
+		p	2	p_75133_2_	clickedButton	#clickedButton, :, clickData, :
+		p	4	p_75133_4_	playerIn	#playerIn, :, player, :
+		p	3	p_75133_3_	mode	#mode, :, ~, ~
+	m	(ILnet/minecraft/item/ItemStack;)V	func_75141_a	putStackInSlot	#putStackInSlot, :, setStackInSlot, setStack
+		c	args: slotID, itemStack to put in slot
+		p	1	p_75141_1_	slotID	#slotID, :, slot, id
+		p	2	p_75141_2_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/inventory/ICrafting;)V	func_75132_a	addCraftingToCrafters	#addCraftingToCrafters, addListener, :, :
+		p	1	p_75132_1_	listener	#listener, :, :, :
+	m	(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;	func_75146_a	addSlotToContainer	#addSlotToContainer, :, addSlot, :
+		c	the slot is assumed empty
+		p	1	p_75146_1_	slotIn	#slotIn, :, slot, invSlot
+	m	(Lnet/minecraft/inventory/Slot;Lnet/minecraft/item/ItemStack;Z)Z	func_94527_a	canAddItemToSlot	#canAddItemToSlot, :, canInsertItemIntoSlot, canClickDragInto
+		c	Checks if it's possible to add the given itemstack to the given slot.\n \n@param stackSizeMatters Will check if adding items to the slot will stack larger than the max stack size
+		p	0	p_94527_0_	slotIn	#slotIn, :, slot, invSlot
+		p	1	p_94527_1_	stack	#stack, :, :, :
+		p	2	p_94527_2_	stackSizeMatters	#stackSizeMatters, :, ~, stackable
+	m	(Lnet/minecraft/item/ItemStack;IIZ)Z	func_75135_a	mergeItemStack	#mergeItemStack, :, insertItem, moveStack
+		c	merges provided ItemStack with the first avaliable one in the container/player inventory
+		p	1	p_75135_1_	stack	#stack, :, :, :
+		p	2	p_75135_2_	startIndex	#startIndex, :, :, startId
+		p	3	p_75135_3_	endIndex	#endIndex, :, :, endId
+		p	4	p_75135_4_	reverseDirection	#reverseDirection, :, fromLast, reverse
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/inventory/Slot;)Z	func_94530_a	canMergeSlot	#canMergeSlot, :, canInsertIntoSlot, canRemoveForPickupAll
+		c	Called to determine if the current slot is valid for the stack merging (double-click) code. The stack passed in is null for the initial slot that was double-clicked.
+		p	1	p_94530_1_	stack	#stack, :, :, :
+		p	2	p_94530_2_	slotIn	#slotIn, :, slot, invSlot
+	m	(Ljava/util/Set;ILnet/minecraft/item/ItemStack;I)V	func_94525_a	computeStackSize	#computeStackSize, :, calculateStackSize, updateClickDragStackSize
+		c	Compute the new stack size, Returns the stack with the new size. Args : dragSlots, dragMode, dragStack, slotStackSize
+		p	0	p_94525_0_	dragSlotsIn	#dragSlotsIn, :, slots, :
+		p	1	p_94525_1_	dragModeIn	#dragModeIn, :, rmode, clickDragMode
+		p	2	p_94525_2_	stack	#stack, :, :, :
+		p	3	p_94525_3_	slotStackSize	#slotStackSize, :, stackSize, :
+	m	(Lnet/minecraft/inventory/IInventory;)V	func_75130_a	onCraftMatrixChanged	#onCraftMatrixChanged, :, onContentChanged, :
+		c	Callback for when the crafting matrix is changed.
+		p	1	p_75130_1_	inventoryIn	#inventoryIn, :, inventory, :
+	m	(Lnet/minecraft/inventory/IInventory;I)Lnet/minecraft/inventory/Slot;	func_75147_a	getSlotFromInventory	#getSlotFromInventory, :, getSlot, :
+		p	1	p_75147_1_	inv	#inv, :, inventory, :
+		p	2	p_75147_2_	slotIn	#slotIn, :, index, slot
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;)S	func_75136_a	getNextTransactionID	#getNextTransactionID, :, getNextActionId, getNextActionNetworkId
+		c	Gets a unique transaction ID. Parameter is unused.
+		p	1	p_75136_1_	invPlayer	#invPlayer, :, playerInventory, inventory
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_75145_c	canInteractWith	#canInteractWith, :, canUse, isValid
+		c	Determines whether supplied player can use this container
+		p	1	p_75145_1_	player	#player, playerIn, player, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;I)Z	func_75140_a	enchantItem	#enchantItem, :, onButtonClick, :
+		c	enchants the item on the table using the specified slot; also deducts XP from player
+		p	1	p_75140_1_	player	#player, playerIn, player, :
+		p	2	p_75140_2_	id	#id, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Z)V	func_75128_a	setPlayerIsPresent	#setPlayerIsPresent, setCanCraft, setPlayerRestriction, setSynced
+		c	adds or removes the player from the container based on par2
+		p	1	p_75128_1_	player	#player, :, :, :
+		p	2	p_75128_2_	canCraft	#canCraft, :, unrestricted, synced
+	m	([Lnet/minecraft/item/ItemStack;)V	func_75131_a	putStacksInSlots	#putStacksInSlots, :, updateSlotStacks, setStacks
+		c	places itemstacks in first x slots, x being aitemstack.lenght
+		p	1	p_75131_1_	stack	#stack, :, stacks, :
+	m	()V	func_75142_b	detectAndSendChanges	#detectAndSendChanges, :, sendContentUpdates, updateListeners
+		c	Looks for changes made in the container, sends them to every listener.
+	m	(I)I	func_94529_b	extractDragMode	#extractDragMode, :, unpackQuickCraftStage, unpackClickDragMode
+		c	Extracts the drag mode. Args : eventButton. Return (0 : evenly split, 1 : one item by slot, 2 : not used ?)
+		p	0	p_94529_0_	eventButton	#eventButton, :, clickData, :
+	m	(II)V	func_75137_b	updateProgressBar	#updateProgressBar, :, setProperty, setData
+		p	1	p_75137_1_	id	#id, :, :, :
+		p	2	p_75137_2_	data	#data, :, value, :
+	m	(Lnet/minecraft/inventory/ICrafting;)V	func_82847_b	removeCraftingFromCrafters	#removeCraftingFromCrafters, removeListener, :, :
+		c	Remove this crafting listener from the listener list.
+		p	1	p_82847_1_	listeners	#listeners, listener, :, :
+	m	(Lnet/minecraft/inventory/Slot;)Z	func_94531_b	canDragIntoSlot	#canDragIntoSlot, :, canInsertIntoSlot, canClickDragInto
+		c	Returns true if the player can "drag-spilt" items into this slot,. returns true by default. Called to check if the slot can be added to a list of Slots to split the held ItemStack across.
+		p	1	p_94531_1_	slotIn	#slotIn, :, slot, invSlot
+	m	(Lnet/minecraft/inventory/IInventory;)I	func_94526_b	calcRedstoneFromInventory	#calcRedstoneFromInventory, :, calculateComparatorOutput, getAnalogSignal
+		p	0	p_94526_0_	inv	#inv, :, inventory, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_75134_a	onContainerClosed	#onContainerClosed, :, close, :
+		c	Called when the container is closed.
+		p	1	p_75134_1_	playerIn	#playerIn, :, player, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;I)Lnet/minecraft/item/ItemStack;	func_82846_b	transferStackInSlot	#transferStackInSlot, :, transferSlot, quickMoveStack
+		c	Called when a player shift-clicks on a slot. You must override this or you will crash when someone does that.
+		p	1	p_82846_1_	player	#player, playerIn, player, :
+		p	2	p_82846_2_	index	#index, :, invSlot, id
+	m	(I)I	func_94532_c	getDragEvent	#getDragEvent, :, unpackButtonId, unpackClickDragStage
+		c	Args : clickedButton, Returns (0 : start drag, 1 : add slot, 2 : end drag)
+		p	0	p_94532_0_	clickedButton	#clickedButton, :, clickData, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_75129_b	isPlayerNotUsingContainer	#isPlayerNotUsingContainer, getCanCraft, isNotRestricted, isSynced
+		c	NotUsing because adding a player twice is an error
+		p	1	p_75129_1_	player	#player, :, :, :
+	m	()V	func_94533_d	resetDrag	#resetDrag, :, endQuickCraft, dropClickDragging
+		c	Reset the drag fields
+	m	(I)Z	func_94528_d	isValidDragMode	#isValidDragMode, :, ~, isValidClickDragMode
+		c	Args : dragMode. Returns true if dragMode = 0 (evenly split) or = 1 (one item by slot)
+		p	0	p_94528_0_	clickDragMode	#~, ~, ~, clickDragMode
+	m	(II)I	func_94534_d	getQuickcraftMask	#getQuickcraftMask, :, packClickData, :
+		p	0	p_94534_0_	clickDragStage	#~, ~, buttonId, clickDragStage
+		p	1	p_94534_1_	clickDragMode	#~, ~, quickCraftStage, clickDragMode
+	m	()V	<init>	<init>	#~, ~, ~, ~

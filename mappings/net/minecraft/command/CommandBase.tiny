@@ -1,0 +1,119 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandBase	net/minecraft/command/CommandBase	
+	f	Lnet/minecraft/command/IAdminCommand;	field_71533_a	theAdmin	#theAdmin, commandListener, commandProvider, listener
+	m	()I	func_82362_a	getRequiredPermissionLevel	#getRequiredPermissionLevel, :, getPermissionLevel, getRequiredPermissionLevel
+		c	Return the required permission level for this command.
+	m	(Lnet/minecraft/command/ICommand;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/command/ICommandSender;DLjava/lang/String;)D	func_110666_a	clamp_coord	#clamp_coord, :, ~, parseCoordinate
+		p	0	p_110666_0_	sender	#sender, :, ~, source
+		p	1	p_110666_1_	c	#~, ~, ~, c
+		p	3	p_110666_3_	s	#~, ~, ~, s
+	m	(Lnet/minecraft/command/ICommandSender;DLjava/lang/String;II)D	func_110665_a	clamp_double	#clamp_double, :, ~, parseCoordinate
+		p	0	p_110665_0_	sender	#sender, :, ~, source
+		p	1	p_110665_1_	c	#~, ~, ~, c
+		p	3	p_110665_3_	s	#~, ~, ~, s
+		p	4	p_110665_4_	min	#min, :, ~, min
+		p	5	p_110665_5_	max	#max, :, ~, max
+	m	(Lnet/minecraft/command/ICommandSender;Lnet/minecraft/command/ICommand;ILjava/lang/String;[Ljava/lang/Object;)V	func_152374_a	notifyOperators	#notifyOperators, notifyCommandListener, run, sendSuccess
+		p	0	p_152374_0_	sender	#sender, :, source, ~
+		p	1	p_152374_1_	command	#command, :, :, ~
+		p	2	p_152374_2_	flags	#flags, :, permissionLevel, ~
+		p	3	p_152374_3_	msgFormat	#msgFormat, translationKey, label, ~
+		p	4	p_152374_4_	msgParams	#msgParams, translationArgs, args, ~
+	m	(Lnet/minecraft/command/ICommandSender;Lnet/minecraft/command/ICommand;Ljava/lang/String;[Ljava/lang/Object;)V	func_152373_a	notifyOperators	#notifyOperators, notifyCommandListener, run, sendSuccess
+		p	0	p_152373_0_	sender	#sender, :, source, ~
+		p	1	p_152373_1_	command	#command, :, :, ~
+		p	2	p_152373_2_	msgFormat	#msgFormat, translationKey, label, ~
+		p	3	p_152373_3_	msgParams	#msgParams, translationArgs, args, ~
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)I	func_71526_a	parseInt	#parseInt, :, getInt, parseInt
+		c	Parses an int from the given string.
+		p	0	p_71526_0_	sender	#sender, :, source, :
+		p	1	p_71526_1_	str	#str, :, value, s
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;D)D	func_110664_a	parseDoubleWithMin	#parseDoubleWithMin, parseDouble, ~, parseDouble
+		c	Parses a double from the given string.  Throws if the string could not be parsed as a double, or if it's less than the given minimum value.
+		p	0	p_110664_0_	sender	#sender, :, source, :
+		p	1	p_110664_1_	str	#str, :, value, s
+		p	2	p_110664_2_	min	#min, :, :, :
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;DD)D	func_110661_a	parseDoubleBounded	#parseDoubleBounded, parseDouble, getClampedDouble, parseDouble
+		c	Parses a double from the given string.  Throws if the string could not be parsed as a double, or if it's not between the given min and max values.
+		p	0	p_110661_0_	sender	#sender, :, source, :
+		p	1	p_110661_1_	str	#str, :, value, s
+		p	2	p_110661_2_	min	#min, :, :, :
+		p	4	p_110661_4_	max	#max, :, :, :
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;I)I	func_71528_a	parseIntWithMin	#parseIntWithMin, :, ~, parseInt
+		c	Parses an int from the given sring with a specified minimum.
+		p	0	p_71528_0_	sender	#sender, :, source, :
+		p	1	p_71528_1_	str	#str, :, value, s
+		p	2	p_71528_2_	min	#min, :, :, :
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;II)I	func_71532_a	parseIntBounded	#parseIntBounded, :, getClampedInt, parseInt
+		c	Parses an int from the given string within a specified bound.
+		p	0	p_71532_0_	sender	#sender, :, source, :
+		p	1	p_71532_1_	str	#str, :, value, s
+		p	2	p_71532_2_	min	#min, :, :, :
+		p	3	p_71532_3_	max	#max, :, :, :
+	m	(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;I)Lnet/minecraft/util/IChatComponent;	func_147178_a	getChatComponentFromNthArg	#getChatComponentFromNthArg, :, ~, parseText
+		p	0	p_147178_0_	sender	#sender, :, source, :
+		p	1	p_147178_1_	args	#args, :, ~, args
+		p	2	p_147178_2_	index	#index, :, ~, startIndex
+	m	(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;IZ)Lnet/minecraft/util/IChatComponent;	func_147176_a	getChatComponentFromNthArg	#getChatComponentFromNthArg, :, ~, parseText
+		p	0	p_147176_0_	sender	#sender, :, source, :
+		p	1	p_147176_1_	args	#args, :, ~, args
+		p	2	p_147176_2_	index	#index, :, ~, startIndex
+		p	3	p_147176_3_	parseEntityNames	#~, ~, ~, parseEntityNames
+	m	(Ljava/lang/String;Ljava/lang/String;)Z	func_71523_a	doesStringStartWith	#doesStringStartWith, :, ~, doesStringStartWith
+		c	Returns true if the given substring is exactly equal to the start of the given string (case insensitive).
+		p	0	p_71523_0_	original	#original, :, ~, region
+		p	1	p_71523_1_	region	#region, :, ~, s
+	m	(Ljava/util/Collection;)Ljava/lang/String;	func_96333_a	joinNiceStringFromCollection	#joinNiceStringFromCollection, :, concat, listArgs
+		c	Creates a linguistic series joining together the elements of the given collection.  Examples: 1) {} --> "",  2) {"Steve"} --> "Steve",  3) {"Steve", "Phil"} --> "Steve and Phil",  4) {"Steve", "Phil", "Mark"} --> "Steve, Phil and Mark"
+		p	0	p_96333_0_	strings	#strings, :, :, args
+	m	(Lnet/minecraft/command/IAdminCommand;)V	func_71529_a	setAdminCommander	#setAdminCommander, setCommandListener, setCommandProvider, setListener
+		c	Sets the static IAdminCommander.
+		p	0	p_71529_0_	command	#command, listener, provider, listener
+	m	([Lnet/minecraft/util/IChatComponent;)Lnet/minecraft/util/IChatComponent;	func_147177_a	joinNiceString	#joinNiceString, :, ~, listText
+		c	Creates a linguistic series joining the input chat components.  Examples: 1) {} --> "",  2) {"Steve"} --> "Steve",  3) {"Steve", "Phil"} --> "Steve and Phil",  4) {"Steve", "Phil", "Mark"} --> "Steve, Phil and Mark"
+		p	0	p_147177_0_	components	#components, :, ~, text
+	m	([Ljava/lang/Object;)Ljava/lang/String;	func_71527_a	joinNiceString	#joinNiceString, :, concat, listArgs
+		c	Creates a linguistic series joining the input objects together.  Examples: 1) {} --> "",  2) {"Steve"} --> "Steve",  3) {"Steve", "Phil"} --> "Steve and Phil",  4) {"Steve", "Phil", "Mark"} --> "Steve, Phil and Mark"
+		p	0	p_71527_0_	elements	#elements, :, args, :
+	m	([Ljava/lang/String;Ljava/lang/Iterable;)Ljava/util/List;	func_71531_a	getListOfStringsFromIterableMatchingLastWord	#getListOfStringsFromIterableMatchingLastWord, :, ~, suggestMatching
+		c	Returns a List of strings (chosen from the given string iterable) which the last word in the given string array is a beginning-match for. (Tab completion).
+		p	0	p_71531_0_	args	#args, :, ~, args
+		p	1	p_71531_1_	possibilities	#possibilities, :, ~, suggestions
+	m	([Ljava/lang/String;[Ljava/lang/String;)Ljava/util/List;	func_71530_a	getListOfStringsMatchingLastWord	#getListOfStringsMatchingLastWord, :, ~, suggestMatching
+		c	Returns a List of strings (chosen from the given strings) which the last word in the given string array is a beginning-match for. (Tab completion).
+		p	0	p_71530_0_	args	#args, :, ~, args
+		p	1	p_71530_1_	possibilities	#possibilities, :, ~, suggestions
+	m	(Lnet/minecraft/command/ICommandSender;)Lnet/minecraft/entity/player/EntityPlayerMP;	func_71521_c	getCommandSenderAsPlayer	#getCommandSenderAsPlayer, :, getAsPlayer, asPlayer
+		c	Returns the given ICommandSender as a EntityPlayer or throw an exception.
+		p	0	p_71521_0_	sender	#sender, :, source, :
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)D	func_82363_b	parseDouble	#parseDouble, :, getDouble, parseDouble
+		c	Parses a double from the given string or throws an exception if it's not a double.
+		p	0	p_82363_0_	sender	#sender, :, source, :
+		p	1	p_82363_1_	str	#str, :, value, s
+	m	(Lnet/minecraft/command/ICommandSender;[Ljava/lang/String;I)Ljava/lang/String;	func_82360_a	getStringFromNthArg	#getStringFromNthArg, :, ~, parseString
+		p	0	p_82360_0_	sender	#sender, :, ~, source
+		p	1	p_82360_1_	args	#args, :, ~, args
+		p	2	p_82360_2_	index	#index, :, ~, startIndex
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Z	func_110662_c	parseBoolean	#parseBoolean, :, getBoolean, parseBoolean
+		c	Parses a boolean value from the given string.  Throws if the string does not contain a boolean value.  Accepted values are (case-sensitive): "true", "false", "0", "1".
+		p	0	p_110662_0_	sender	#sender, :, source, :
+		p	1	p_110662_1_	str	#str, :, value, s
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	command	#~, ~, command, :
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayerMP;	func_82359_c	getPlayer	#getPlayer, :, :, parsePlayer
+		p	0	p_82359_0_	sender	#sender, :, source, :
+		p	1	p_82359_1_	username	#username, :, name, s
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Ljava/lang/String;	func_96332_d	getPlayerName	#getPlayerName, :, ~, parsePlayerName
+		p	0	p_96332_0_	sender	#sender, :, source, :
+		p	1	p_96332_1_	query	#query, :, name, s
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/item/Item;	func_147179_f	getItemByText	#getItemByText, :, getItem, parseItem
+		c	Gets the Item specified by the given text string.  First checks the item registry, then tries by parsing the string as an integer ID (deprecated).  Warns the sender if we matched by parsing the ID.  Throws if the item wasn't found.  Returns the item if it was found.
+		p	0	p_147179_0_	sender	#sender, :, source, :
+		p	1	p_147179_1_	id	#id, :, identifier, s
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Lnet/minecraft/block/Block;	func_147180_g	getBlockByText	#getBlockByText, :, getBlock, parseBlock
+		c	Gets the Block specified by the given text string.  First checks the block registry, then tries by parsing the string as an integer ID (deprecated).  Warns the sender if we matched by parsing the ID.  Throws if the block wasn't found.  Returns the block if it was found.
+		p	0	p_147180_0_	sender	#sender, :, source, :
+		p	1	p_147180_1_	id	#id, :, identifier, s
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityBeacon	net/minecraft/tileentity/TileEntityBeacon	
+	f	[[Lnet/minecraft/potion/Potion;	field_146009_a	effectsList	#effectsList, EFFECTS_LIST, EFFECTS, :
+		c	List of effects that Beacon can apply
+	f	J	field_146016_i	beamRenderCounter	#beamRenderCounter, :, lastBeamRenderTime, :
+	f	F	field_146014_j	beamRenderScale	#beamRenderScale, :, beamSpeed, beamAngle
+	f	Z	field_146015_k	isComplete	#isComplete, :, hasValidBase, active
+	f	I	field_146012_l	levels	#levels, :, :, :
+		c	Level of this beacon's pyramid.
+	f	I	field_146013_m	primaryEffect	#primaryEffect, :, primary, primaryEffect
+		c	Primary potion effect given by this beacon.
+	f	I	field_146010_n	secondaryEffect	#secondaryEffect, :, secondary, secondaryEffect
+		c	Secondary potion effect given by this beacon.
+	f	Lnet/minecraft/item/ItemStack;	field_146011_o	payment	#payment, :, priceStack, inventory
+		c	Item given to this beacon as payment.
+	f	Ljava/lang/String;	field_146008_p	customName	#customName, :, :, :
+		c	Currently unused; see https://bugs.mojang.com/browse/MC-124395
+	m	(Ljava/lang/String;)V	func_145999_a	setName	#setName, :, setCustomName, :
+		p	1	p_145999_1_	name	#name, :, customName, name
+	m	(I)V	func_146005_c	setLevels	#~, ~, ~, setLevels
+		p	1	p_146005_1_	levels	#~, ~, ~, levels
+	m	(I)V	func_146001_d	setPrimaryEffect	#setPrimaryEffect, :, ~, setPrimaryEffect
+		p	1	p_146001_1_	id	#~, ~, ~, id
+	m	(I)V	func_146004_e	setSecondaryEffect	#setSecondaryEffect, :, ~, setSecondaryEffect
+		p	1	p_146004_1_	id	#~, ~, ~, id
+	m	()F	func_146002_i	shouldBeamRender	#shouldBeamRender, :, getBeamSpeed, getBeamAngle
+	m	()I	func_146007_j	getPrimaryEffect	#getPrimaryEffect, :, ~, getPrimaryEffect
+		c	Return the primary potion effect given by this beacon.
+	m	()I	func_146006_k	getSecondaryEffect	#getSecondaryEffect, :, ~, getSecondaryEffect
+		c	Return the secondary potion effect given by this beacon.
+	m	()I	func_145998_l	getLevels	#getLevels, :, ~, getLevels
+		c	Return the levels of this beacon's pyramid.
+	m	()V	func_146000_x	addEffectsToPlayers	#addEffectsToPlayers, :, addPlayerEffects, spreadEffects
+	m	()V	func_146003_y	updateSegmentColors	#updateSegmentColors, :, updateBeam, updateLevels
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

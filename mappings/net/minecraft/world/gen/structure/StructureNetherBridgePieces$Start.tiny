@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureNetherBridgePieces$Start	net/minecraft/world/gen/structure/StructureNetherBridgePieces$Start	
+	f	Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight;	field_74970_a	theNetherBridgePieceWeight	#theNetherBridgePieceWeight, lastPlaced, ~, previous
+		c	Instance of StructureNetherBridgePieceWeight.
+	f	Ljava/util/List;	field_74968_b	primaryWeights	#primaryWeights, :, ~, bridgePieces
+		c	Contains the list of valid piece weights for the set of nether bridge structure pieces.
+	f	Ljava/util/List;	field_74969_c	secondaryWeights	#secondaryWeights, :, ~, castlePieces
+		c	Contains the list of valid piece weights for the secondary set of nether bridge structure pieces.
+	f	Ljava/util/ArrayList;	field_74967_d	pendingChildren	#pendingChildren, :, ~, children
+	m	(Ljava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2059_1_	p_i2059_1_	#~, ~, ~, ~
+		p	2	p_i2059_2_	p_i2059_2_	#~, ~, ~, ~
+		p	3	p_i2059_3_	p_i2059_3_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/shader/ShaderLinkHelper	net/minecraft/client/shader/ShaderLinkHelper	
+	f	Lorg/apache/logging/log4j/Logger;	field_148080_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/shader/ShaderLinkHelper;	field_148079_b	staticShaderLinkHelper	#staticShaderLinkHelper, :, instance, :
+	m	()V	func_148076_a	setNewStaticShaderLinkHelper	#setNewStaticShaderLinkHelper, :, newInstance, createInstance
+	m	(Lnet/minecraft/client/shader/ShaderManager;)V	func_148077_a	deleteShader	#deleteShader, :, destroyProgram, releaseProgram
+		p	1	p_148077_1_	manager	#manager, :, program, effect
+	m	()Lnet/minecraft/client/shader/ShaderLinkHelper;	func_148074_b	getStaticShaderLinkHelper	#getStaticShaderLinkHelper, :, getInstance, :
+	m	(Lnet/minecraft/client/shader/ShaderManager;)V	func_148075_b	linkProgram	#linkProgram, :, attachProgram, linkProgram
+		p	1	p_148075_1_	manager	#manager, :, program, effect
+	m	()I	func_148078_c	createProgram	#createProgram, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

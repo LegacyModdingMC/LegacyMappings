@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/IEntityOwnable	net/minecraft/entity/IEntityOwnable	
+	m	()Ljava/lang/String;	func_152113_b	getOwnerId	#getOwnerId, :, :, getOwnerName
+	m	()Lnet/minecraft/entity/Entity;	func_70902_q	getOwner	#getOwner, :, :, :

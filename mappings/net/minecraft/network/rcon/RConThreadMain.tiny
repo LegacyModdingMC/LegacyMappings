@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/rcon/RConThreadMain	net/minecraft/network/rcon/RConThreadMain	
+	f	I	field_72647_g	rconPort	#rconPort, :, port, :
+		c	Port RCon is running on
+	f	I	field_72651_h	serverPort	#serverPort, :, defaultPort, serverPort
+		c	Port the server is running on
+	f	Ljava/lang/String;	field_72652_i	hostname	#hostname, :, :, :
+		c	Hostname RCon is running on
+	f	Ljava/net/ServerSocket;	field_72649_j	serverSocket	#serverSocket, :, listener, :
+		c	The RCon ServerSocket.
+	f	Ljava/lang/String;	field_72650_k	rconPassword	#rconPassword, :, password, :
+		c	The RCon password
+	f	Ljava/util/Map;	field_72648_l	clientThreads	#clientThreads, :, clients, clientBySocket
+		c	A map of client addresses to their running Threads
+	m	(Lnet/minecraft/network/rcon/IServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1538_1_	server	#~, ~, server, :
+	m	()V	func_72646_f	initClientThreadList	#initClientThreadList, :, cleanClientList, initMap
+	m	()V	func_72645_g	cleanClientThreadsMap	#cleanClientThreadsMap, :, removeStoppedClients, :
+		c	Cleans up the clientThreads map by removing client Threads that are not running
+	m	()V	run	run	#~, ~, ~, ~

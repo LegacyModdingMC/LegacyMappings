@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$SwitchMovingObjectType	net/minecraft/client/Minecraft$SwitchMovingObjectType	
+	f	[I	field_152390_a	field_152390_a	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

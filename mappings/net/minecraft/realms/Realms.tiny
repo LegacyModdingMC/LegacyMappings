@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/Realms	net/minecraft/realms/Realms	
+	m	()I	adventureId	adventureId	#~, ~, ~, ~
+	m	()I	creativeId	creativeId	#~, ~, ~, ~
+	m	()J	currentTimeMillis	currentTimeMillis	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getGameDirectoryPath	getGameDirectoryPath	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getName	getName	#~, ~, ~, ~
+	m	()Ljava/net/Proxy;	getProxy	getProxy	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getSessionId	getSessionId	#~, ~, ~, ~
+	m	()Z	isTouchScreen	isTouchScreen	#~, ~, ~, ~
+	m	()Ljava/lang/String;	sessionId	sessionId	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsScreen;)V	setScreen	setScreen	#~, ~, ~, ~
+		p	0	p_setScreen_0_	realmsScreen	#~, ~, realmsScreen, ~
+	m	()I	survivalId	survivalId	#~, ~, ~, ~
+	m	()Ljava/lang/String;	userName	userName	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Ljava/lang/String;	uuidToName	uuidToName	#~, ~, ~, ~
+		p	0	p_uuidToName_0_	uuid	#~, ~, uuid, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

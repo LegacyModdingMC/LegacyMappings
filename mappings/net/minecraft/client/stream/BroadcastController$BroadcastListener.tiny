@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/BroadcastController$BroadcastListener	net/minecraft/client/stream/BroadcastController$BroadcastListener	
+	m	()V	func_152895_a	func_152895_a	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/stream/BroadcastController$BroadcastState;)V	func_152891_a	func_152891_a	#~, ~, ~, ~
+		p	1	p_152891_1_	p_152891_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	func_152897_a	func_152897_a	#~, ~, ~, ~
+		p	1	p_152897_1_	p_152897_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/AuthToken;)V	func_152900_a	func_152900_a	#~, ~, ~, ~
+		p	1	p_152900_1_	p_152900_1_	#~, ~, ~, ~
+		p	2	p_152900_2_	p_152900_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;[Ltv/twitch/broadcast/GameInfo;)V	func_152898_a	func_152898_a	#~, ~, ~, ~
+		p	1	p_152898_1_	p_152898_1_	#~, ~, ~, ~
+		p	2	p_152898_2_	p_152898_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/broadcast/IngestList;)V	func_152896_a	func_152896_a	#~, ~, ~, ~
+		p	1	p_152896_1_	p_152896_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/broadcast/StreamInfo;)V	func_152894_a	func_152894_a	#~, ~, ~, ~
+		p	1	p_152894_1_	p_152894_1_	#~, ~, ~, ~
+	m	()V	func_152899_b	func_152899_b	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	func_152893_b	func_152893_b	#~, ~, ~, ~
+		p	1	p_152893_1_	p_152893_1_	#~, ~, ~, ~
+	m	()V	func_152901_c	func_152901_c	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	func_152892_c	func_152892_c	#~, ~, ~, ~
+		p	1	p_152892_1_	p_152892_1_	#~, ~, ~, ~

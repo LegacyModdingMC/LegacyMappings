@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S3EPacketTeams	net/minecraft/network/play/server/S3EPacketTeams	
+	f	Ljava/lang/String;	field_149320_a	name	#name, :, teamName, name
+	f	Ljava/lang/String;	field_149318_b	displayName	#displayName, :, :, :
+	f	Ljava/lang/String;	field_149319_c	prefix	#prefix, :, playerPrefix, prefix
+	f	Ljava/lang/String;	field_149316_d	suffix	#suffix, :, nameTagVisibilityRule, suffix
+	f	Ljava/util/Collection;	field_149317_e	players	#players, :, playerList, members
+	f	I	field_149314_f	action	#action, :, mode, action
+	f	I	field_149315_g	friendlyFlags	#friendlyFlags, :, flags, :
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45225_1_	teamIn	#teamIn, :, team, :
+		p	2	p_i45225_2_	actionIn	#actionIn, :, mode, action
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;Ljava/util/Collection;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45226_1_	teamIn	#teamIn, :, team, :
+		p	3	p_i45226_3_	actionIn	#actionIn, :, mode, action
+		p	2	p_i45226_2_	playersIn	#playersIn, :, ~, members
+	m	()Ljava/lang/String;	func_149312_c	getName	#getName, :, getTeamName, getName
+	m	()Ljava/lang/String;	func_149306_d	getDisplayName	#getDisplayName, :, :, :
+	m	()Ljava/lang/String;	func_149311_e	getPrefix	#getPrefix, :, getPlayerPrefix, getPrefix
+	m	()Ljava/lang/String;	func_149309_f	getSuffix	#getSuffix, :, getNameTagVisibilityRule, getSuffix
+	m	()Ljava/util/Collection;	func_149310_g	getPlayers	#getPlayers, :, getPlayerList, getMembers
+	m	()I	func_149307_h	getAction	#getAction, :, getMode, getAction
+	m	()I	func_149308_i	getFriendlyFlags	#getFriendlyFlags, :, getFlags, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

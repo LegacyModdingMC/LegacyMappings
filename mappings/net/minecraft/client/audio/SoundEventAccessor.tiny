@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundEventAccessor	net/minecraft/client/audio/SoundEventAccessor	
+	f	Lnet/minecraft/client/audio/SoundPoolEntry;	field_148739_a	entry	#entry, :, sound, :
+	f	I	field_148738_b	weight	#weight, :, :, :
+	m	(Lnet/minecraft/client/audio/SoundPoolEntry;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45123_1_	entry	#entry, :, sound, :
+		p	2	p_i45123_2_	weight	#weight, :, :, :

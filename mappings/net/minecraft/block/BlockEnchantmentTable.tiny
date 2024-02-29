@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockEnchantmentTable	net/minecraft/block/BlockEnchantmentTable	
+	f	Lnet/minecraft/util/IIcon;	field_149950_a	topSprite	#~, ~, ~, topSprite
+	f	Lnet/minecraft/util/IIcon;	field_149949_b	bottomSprite	#~, ~, ~, bottomSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

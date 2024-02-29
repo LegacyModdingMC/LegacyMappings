@@ -1,0 +1,70 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldProvider	net/minecraft/world/WorldProvider	
+	f	[F	field_111203_a	moonPhaseFactors	#moonPhaseFactors, MOON_PHASE_FACTORS, MOON_PHASE_TO_SIZE, :
+	f	Lnet/minecraft/world/World;	field_76579_a	worldObj	#worldObj, world, :, :
+		c	world object being used
+	f	Lnet/minecraft/world/WorldType;	field_76577_b	terrainType	#terrainType, :, generatorType, :
+	f	Ljava/lang/String;	field_82913_c	generatorSettings	#generatorSettings, :, generatorOptions, :
+	f	Lnet/minecraft/world/biome/WorldChunkManager;	field_76578_c	worldChunkMgr	#worldChunkMgr, biomeProvider, biomeSource, :
+		c	World chunk manager being used to generate chunks
+	f	Z	field_76575_d	isHellWorld	#isHellWorld, doesWaterVaporize, waterVaporizes, yeetsWater
+		c	States whether the Hell world provider is used(true) or if the normal world provider is used(false)
+	f	Z	field_76576_e	hasNoSky	#hasNoSky, nether, isNether, isDark
+		c	A boolean that tells if a world does not have a sky. Used in calculating weather and skylight
+	f	[F	field_76573_f	lightBrightnessTable	#lightBrightnessTable, :, lightLevelToBrightness, brightnessTable
+		c	Light to brightness conversion table
+	f	I	field_76574_g	dimensionId	#dimensionId, :, dimensionType, id
+		c	The id for the dimension (ex. -1: Nether, 0: Overworld, 1: The End)
+	f	[F	field_76580_h	colorsSunriseSunset	#colorsSunriseSunset, :, backgroundColor, :
+		c	Array for sunrise/sunset colors (RGBA)
+	m	()V	func_76556_a	generateLightBrightnessTable	#generateLightBrightnessTable, :, initializeLightLevelToBrightness, initBrightnessTable
+		c	Creates the light to brightness table
+	m	(FF)[F	func_76560_a	calcSunriseSunsetColors	#calcSunriseSunsetColors, :, getBackgroundColor, :
+		c	Returns array with sunrise/sunset colors
+		p	1	p_76560_1_	celestialAngle	#celestialAngle, :, skyAngle, timeOfDay
+		p	2	p_76560_2_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(I)Lnet/minecraft/world/WorldProvider;	func_76570_a	getProviderForDimension	#getProviderForDimension, :, getById, fromId
+		p	0	p_76570_0_	dimension	#dimension, :, id, :
+	m	(II)Z	func_76566_a	canCoordinateBeSpawn	#canCoordinateBeSpawn, :, isSpawnableBlock, isValidSpawnPoint
+		c	Will check if the x, z position specified is alright to be set as the map spawn point
+		p	1	p_76566_1_	x	#x, :, :, :
+		p	2	p_76566_2_	z	#z, :, :, :
+	m	(J)I	func_76559_b	getMoonPhase	#getMoonPhase, :, :, :
+		p	1	p_76559_1_	worldTime	#worldTime, :, time, :
+	m	(JF)F	func_76563_a	calculateCelestialAngle	#calculateCelestialAngle, :, getSkyAngle, getTimeOfDay
+		c	Calculates the angle of sun and moon in the sky relative to a specified time (usually worldTime)
+		p	1	p_76563_1_	worldTime	#worldTime, :, timeOfDay, time
+		p	3	p_76563_3_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(Lnet/minecraft/world/World;)V	func_76558_a	registerWorld	#registerWorld, setWorld, copyFromWorls, init
+		c	associate an existing world with a World provider, and setup its lightbrightness table
+		p	1	p_76558_1_	worldIn	#worldIn, :, world, :
+	m	()V	func_76572_b	registerWorldChunkManager	#registerWorldChunkManager, init, :, initBiomeSource
+		c	creates a new world chunk manager for WorldProvider
+	m	(FF)Lnet/minecraft/util/Vec3;	func_76562_b	getFogColor	#getFogColor, :, :, :
+		c	Return Vec3D with biome specific fog color
+		p	1	p_76562_1_	timeOfDay	#~, ~, skyAngle, timeOfDay
+		p	2	p_76562_2_	tickDelta	#~, ~, tickDelta, :
+	m	(II)Z	func_76568_b	doesXZShowFog	#doesXZShowFog, :, isFogThick, :
+		c	Returns true if the given X,Z coordinate should show environmental fog.
+		p	1	p_76568_1_	x	#x, :, :, :
+		p	2	p_76568_2_	z	#z, :, :, :
+	m	()Lnet/minecraft/world/chunk/IChunkProvider;	func_76555_c	createChunkGenerator	#createChunkGenerator, :, :, :
+		c	Returns a new chunk provider which generates chunks for this world
+	m	()Z	func_76569_d	isSurfaceWorld	#isSurfaceWorld, :, canPlayersSleep, isOverworld
+		c	Returns 'true' if in the "main surface world", but 'false' if in the Nether or End dimensions.
+	m	()Z	func_76567_e	canRespawnHere	#canRespawnHere, :, containsWorldSpawn, hasWorldSpawn
+		c	True if the player can respawn in this dimension (true = overworld, false = nether).
+	m	()F	func_76571_f	getCloudHeight	#getCloudHeight, :, :, :
+		c	the y level at which clouds are rendered.
+	m	()Z	func_76561_g	isSkyColored	#isSkyColored, :, hasGround, :
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_76554_h	getEntrancePortalLocation	#getEntrancePortalLocation, :, getWorldSpawn, getForcedSpawnPoint
+		c	Gets the hard-coded portal location to use when entering this dimension.
+	m	()I	func_76557_i	getAverageGroundLevel	#getAverageGroundLevel, :, getAverageYLevel, getMinSpawnY
+	m	()Z	func_76564_j	getWorldHasVoidParticles	#getWorldHasVoidParticles, :, hasVoidFog, hasFog
+		c	returns true if this dimension is supposed to display void particles and pull in the far plane based on the user's Y offset.
+	m	()D	func_76565_k	getVoidFogYFactor	#getVoidFogYFactor, :, ~, getFogSize
+		c	Returns a double value representing the Y value relative to the top of the map at which void fog is at its maximum. The default factor of 0.03125 relative to 256, for example, means the void fog will be at its maximum at (256*0.03125), or 8.
+	m	()Ljava/lang/String;	func_80007_l	getDimensionName	#getDimensionName, :, getName, :
+		c	Returns the dimension's name, e.g. "The End", "Nether", or "Overworld".
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

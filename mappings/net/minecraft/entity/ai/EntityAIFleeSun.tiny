@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIFleeSun	net/minecraft/entity/ai/EntityAIFleeSun	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75372_a	theCreature	#theCreature, creature, mob, entity
+	f	D	field_75370_b	shelterX	#shelterX, :, targetX, :
+	f	D	field_75371_c	shelterY	#shelterY, :, targetY, :
+	f	D	field_75368_d	shelterZ	#shelterZ, :, targetZ, :
+	f	D	field_75369_e	movementSpeed	#movementSpeed, :, speed, :
+	f	Lnet/minecraft/world/World;	field_75367_f	theWorld	#theWorld, world, :, :
+	m	(Lnet/minecraft/entity/EntityCreature;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1623_1_	theCreatureIn	#theCreatureIn, :, mob, entity
+		p	2	p_i1623_2_	movementSpeedIn	#movementSpeedIn, :, speed, :
+	m	()Lnet/minecraft/util/Vec3;	func_75366_f	findPossibleShelter	#findPossibleShelter, :, locateShadedPos, getShadedLocationPos

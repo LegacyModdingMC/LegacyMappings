@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/PositionTextureVertex	net/minecraft/client/model/PositionTextureVertex	
+	c	Encapsulates a position vector and the texture's u and v coordinates.
+	f	Lnet/minecraft/util/Vec3;	field_78243_a	vector3D	#vector3D, :, position, pos
+	f	F	field_78241_b	texturePositionX	#texturePositionX, :, u, :
+		c	The texture's u value.
+	f	F	field_78242_c	texturePositionY	#texturePositionY, :, v, :
+		c	The texture's v value.
+	m	(FFFFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1158_1_	x	#~, ~, x, :
+		p	2	p_i1158_2_	y	#~, ~, y, :
+		p	3	p_i1158_3_	z	#~, ~, z, :
+		p	4	p_i1158_4_	u	#~, ~, u, :
+		p	5	p_i1158_5_	v	#~, ~, v, :
+	m	(Lnet/minecraft/util/Vec3;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1160_1_	vector3DIn	#vector3DIn, :, position, pos
+		p	2	p_i1160_2_	texturePositionXIn	#texturePositionXIn, :, u, :
+		p	3	p_i1160_3_	texturePositionYIn	#texturePositionYIn, :, v, :
+	m	(Lnet/minecraft/client/model/PositionTextureVertex;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1159_1_	valueIn	#valueIn, :, position, pos
+		p	2	p_i1159_2_	startDate	#startDate, :, u, :
+		p	3	p_i1159_3_	banner	#banner, :, v, :
+	m	(FF)Lnet/minecraft/client/model/PositionTextureVertex;	func_78240_a	setTexturePosition	#setTexturePosition, :, withUv, withTextureCoords
+		p	1	p_78240_1_	u	#~, ~, u, :
+		p	2	p_78240_2_	v	#~, ~, v, :

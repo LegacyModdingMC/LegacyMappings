@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S12PacketEntityVelocity	net/minecraft/network/play/server/S12PacketEntityVelocity	
+	f	I	field_149417_a	entityID	#entityID, :, id, :
+	f	I	field_149415_b	motionX	#motionX, :, velocityX, :
+	f	I	field_149416_c	motionY	#motionY, :, velocityY, :
+	f	I	field_149414_d	motionZ	#motionZ, :, velocityZ, :
+	m	(IDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45220_1_	entityIDIn	#entityIDIn, :, id, :
+		p	2	p_i45220_2_	motionXIn	#motionXIn, :, velocityX, :
+		p	4	p_i45220_4_	motionYIn	#motionYIn, :, velocityY, :
+		p	6	p_i45220_6_	motionZIn	#motionZIn, :, velocityZ, :
+	m	(Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45219_1_	entityIn	#entityIn, :, entity, :
+	m	()I	func_149412_c	getEntityID	#getEntityID, :, getId, :
+	m	()I	func_149411_d	getMotionX	#getMotionX, :, getVelocityX, :
+	m	()I	func_149410_e	getMotionY	#getMotionY, :, getVelocityY, :
+	m	()I	func_149409_f	getMotionZ	#getMotionZ, :, getVelocityZ, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

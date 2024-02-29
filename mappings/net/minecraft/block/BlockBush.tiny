@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockBush	net/minecraft/block/BlockBush	
+	m	(Lnet/minecraft/block/Block;)Z	func_149854_a	canPlaceBlockOn	#canPlaceBlockOn, :, canPlantOnTop, canPlantOn
+		c	is the block grass, dirt or farmland
+		p	1	p_149854_1_	ground	#ground, :, block, :
+	m	(Lnet/minecraft/world/World;III)V	func_149855_e	checkAndDropBlock	#checkAndDropBlock, :, ~, canSurviveOrBreak
+		c	checks if the block can stay, if not drop as item
+		p	1	p_149855_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_149855_2_	x	#x, :, ~, x
+		p	3	p_149855_3_	y	#y, :, ~, y
+		p	4	p_149855_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45395_1_	materialIn	#materialIn, :, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

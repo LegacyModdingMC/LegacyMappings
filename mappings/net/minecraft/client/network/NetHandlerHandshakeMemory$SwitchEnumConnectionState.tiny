@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/NetHandlerHandshakeMemory$SwitchEnumConnectionState	net/minecraft/client/network/NetHandlerHandshakeMemory$SwitchEnumConnectionState	
+	f	[I	field_151263_a	ALL	#~, ~, ~, ALL
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

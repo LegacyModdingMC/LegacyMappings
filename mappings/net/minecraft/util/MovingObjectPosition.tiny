@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MovingObjectPosition	net/minecraft/util/MovingObjectPosition	
+	f	Lnet/minecraft/util/MovingObjectPosition$MovingObjectType;	field_72313_a	typeOfHit	#typeOfHit, :, ~, type
+		c	What type of ray trace hit was this? 0 = block, 1 = entity
+	f	I	field_72311_b	blockX	#blockX, :, x, :
+		c	x coordinate of the block ray traced against
+	f	I	field_72312_c	blockY	#blockY, :, y, :
+		c	y coordinate of the block ray traced against
+	f	I	field_72309_d	blockZ	#blockZ, :, z, :
+		c	z coordinate of the block ray traced against
+	f	I	field_72310_e	sideHit	#sideHit, :, side, face
+		c	Which side was hit. If its -1 then it went the full length of the ray trace. Bottom = 0, Top = 1, East = 2, West = 3, North = 4, South = 5.
+	f	Lnet/minecraft/util/Vec3;	field_72307_f	hitVec	#hitVec, :, pos, offset
+		c	The vector position of the hit
+	f	Lnet/minecraft/entity/Entity;	field_72308_g	entityHit	#entityHit, :, entity, :
+		c	The hit entity
+	m	(IIIILnet/minecraft/util/Vec3;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2303_1_	x	#~, ~, x, :
+		p	2	p_i2303_2_	y	#~, ~, y, :
+		p	3	p_i2303_3_	z	#~, ~, z, :
+		p	4	p_i2303_4_	face	#~, ~, side, face
+		p	5	p_i2303_5_	offset	#~, ~, vec, offset
+	m	(IIIILnet/minecraft/util/Vec3;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45481_1_	x	#~, ~, x, :
+		p	2	p_i45481_2_	y	#~, ~, y, :
+		p	3	p_i45481_3_	z	#~, ~, z, :
+		p	5	p_i45481_5_	offset	#~, ~, vec, offset
+		p	4	p_i45481_4_	face	#~, ~, ~, face
+		p	6	p_i45481_6_	insideBlock	#~, ~, ~, insideBlock
+	m	(Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2304_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/util/Vec3;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45482_1_	entityHitIn	#entityHitIn, :, entity, :
+		p	2	p_i45482_2_	hitVecIn	#hitVecIn, :, pos, offset
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

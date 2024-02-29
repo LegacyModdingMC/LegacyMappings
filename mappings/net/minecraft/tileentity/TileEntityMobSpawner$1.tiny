@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityMobSpawner$1	net/minecraft/tileentity/TileEntityMobSpawner$1	
+	f	Lnet/minecraft/tileentity/TileEntityMobSpawner;	field_150825_a	anonMobSpawner	#~, ~, mobSpawner, anonMobSpawner
+	m	(Lnet/minecraft/tileentity/TileEntityMobSpawner;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2292_1_	mobSpawner	#~, ~, mobSpawner, ~

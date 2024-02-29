@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderMooshroom	net/minecraft/client/renderer/entity/RenderMooshroom	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110880_a	mooshroomTextures	#mooshroomTextures, MOOSHROOM_TEXTURES, MOOSHROOM_TEX, MOOSHROOM_LOCATION
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1263_1_	p_i1263_1_	#~, ~, ~, ~
+		p	2	p_i1263_2_	p_i1263_2_	#~, ~, ~, ~

@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenSand	net/minecraft/world/gen/feature/WorldGenSand	
+	f	Lnet/minecraft/block/Block;	field_150517_a	block	#block, :, :, :
+	f	I	field_76539_b	radius	#radius, :, :, size
+		c	The maximum radius used when generating a patch of blocks.
+	m	(Lnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45462_1_	block	#~, ~, block, :
+		p	2	p_i45462_2_	size	#~, ~, radius, size

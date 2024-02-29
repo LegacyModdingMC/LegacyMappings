@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntityBeaconRenderer	net/minecraft/client/renderer/tileentity/TileEntityBeaconRenderer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147523_b	beaconBeam	#beaconBeam, TEXTURE_BEACON_BEAM, BEAM_TEXTURE, BEACON_BEAM_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

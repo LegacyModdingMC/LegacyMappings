@@ -1,0 +1,100 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/Scoreboard	net/minecraft/scoreboard/Scoreboard	
+	f	Ljava/util/Map;	field_96545_a	scoreObjectives	#scoreObjectives, :, objectives, objectivesByName
+		c	Map of objective names to ScoreObjective objects.
+	f	Ljava/util/Map;	field_96543_b	scoreObjectiveCriterias	#scoreObjectiveCriterias, :, objectivesByCriterion, :
+		c	Map of IScoreObjectiveCriteria objects to ScoreObjective objects.
+	f	Ljava/util/Map;	field_96544_c	entitiesScoreObjectives	#entitiesScoreObjectives, :, playerObjectives, scores
+		c	Map of entities name to ScoreObjective objects.
+	f	[Lnet/minecraft/scoreboard/ScoreObjective;	field_96541_d	objectiveDisplaySlots	#objectiveDisplaySlots, :, objectivesArray, displayObjectives
+		c	Index 0 is tab menu, 1 is sidebar, and 2 is below name
+	f	Ljava/util/Map;	field_96542_e	teams	#teams, :, :, teamsByName
+		c	Map of teamnames to ScorePlayerTeam instances
+	f	Ljava/util/Map;	field_96540_f	teamMemberships	#teamMemberships, :, teamsByPlayer, teamsByMember
+		c	Map of usernames to ScorePlayerTeam objects.
+	m	(I)Lnet/minecraft/scoreboard/ScoreObjective;	func_96539_a	getObjectiveInDisplaySlot	#getObjectiveInDisplaySlot, :, getObjectiveForSlot, getDisplayObjective
+		c	0 is tab menu, 1 is sidebar, 2 is below name
+		p	1	p_96539_1_	slotIn	#slotIn, :, ~, slot
+	m	(ILnet/minecraft/scoreboard/ScoreObjective;)V	func_96530_a	setObjectiveInDisplaySlot	#setObjectiveInDisplaySlot, :, setObjectiveSlot, setDisplayObjective
+		c	0 is tab menu, 1 is sidebar, 2 is below name
+		p	1	p_96530_1_	objectiveSlot	#objectiveSlot, :, slot, :
+		p	2	p_96530_2_	objective	#objective, :, :, :
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)V	func_96522_a	onScoreObjectiveAdded	#onScoreObjectiveAdded, :, updateObjective, onObjectiveCreated
+		c	Called when a score objective is added
+		p	1	p_96522_1_	scoreObjectiveIn	#scoreObjectiveIn, :, objective, :
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;)V	func_96523_a	broadcastTeamCreated	#broadcastTeamCreated, :, updateScoreboardTeamAndPlayers, onTeamAdded
+		c	This packet will notify the players that this team is created, and that will register it on the client
+		p	1	p_96523_1_	playerTeam	#playerTeam, :, team, :
+	m	(Lnet/minecraft/scoreboard/Score;)V	func_96536_a	onScoreUpdated	#onScoreUpdated, :, updateScore, onScoreUpdated
+		p	1	p_96536_1_	scoreIn	#scoreIn, :, score, :
+	m	(Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;)Ljava/util/Collection;	func_96520_a	getObjectivesFromCriteria	#getObjectivesFromCriteria, :, getObjective, getObjectives
+		c	Returns all the objectives for the given criteria
+		p	1	p_96520_1_	criteria	#criteria, :, ~, criterion
+	m	(Ljava/lang/String;)V	func_96516_a	broadcastScoreUpdate	#broadcastScoreUpdate, :, updatePlayerScore, onScoresRemoved
+		p	1	p_96516_1_	scoreName	#scoreName, :, playerName, owner
+	m	(Ljava/lang/String;Lnet/minecraft/scoreboard/ScoreObjective;)Lnet/minecraft/scoreboard/Score;	func_96529_a	getValueFromObjective	#getValueFromObjective, getOrCreateScore, getPlayerScore, getScore
+		c	Returns the value of the given objective for the given entity name
+		p	1	p_96529_1_	name	#name, username, player, owner
+		p	2	p_96529_2_	objective	#objective, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/scoreboard/ScorePlayerTeam;)V	func_96512_b	removePlayerFromTeam	#removePlayerFromTeam, :, :, removeMemberFromTeam
+		c	Removes the given username from the given ScorePlayerTeam. If the player is not on the team then an IllegalStateException is thrown.
+		p	1	p_96512_1_	username	#username, :, playerName, member
+		p	2	p_96512_2_	playerTeam	#playerTeam, :, team, :
+	m	(Ljava/lang/String;Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;)Lnet/minecraft/scoreboard/ScoreObjective;	func_96535_a	addScoreObjective	#addScoreObjective, :, ~, createObjective
+		c	Create and returns the score objective for the given name and ScoreCriteria
+		p	1	p_96535_1_	name	#name, :, ~, name
+		p	2	p_96535_2_	criteria	#criteria, :, ~, criterion
+	m	(Ljava/lang/String;Ljava/lang/String;)Z	func_151392_a	addPlayerToTeam	#addPlayerToTeam, :, :, addMemberToTeam
+		c	Adds a player to the given team
+		p	1	p_151392_1_	player	#player, :, ~, member
+		p	2	p_151392_2_	newTeam	#newTeam, :, ~, teamName
+	m	(I)Ljava/lang/String;	func_96517_b	getObjectiveDisplaySlot	#getObjectiveDisplaySlot, :, getDisplaySlotName, getDisplayLocation
+		c	Returns 'list' for 0, 'sidebar' for 1, 'belowName for 2, otherwise null.
+		p	0	p_96517_0_	id	#id, :, slotId, slot
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)V	func_96532_b	onObjectiveDisplayNameChanged	#onObjectiveDisplayNameChanged, :, updateExistingObjective, onObjectiveUpdated
+		p	1	p_96532_1_	objective	#objective, :, :, :
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;)V	func_96538_b	broadcastTeamRemoved	#broadcastTeamRemoved, broadcastTeamInfoUpdate, updateScoreboardTeam, onTeamUpdated
+		c	This packet will notify the players that this team is removed
+		p	1	p_96538_1_	playerTeam	#playerTeam, :, team, :
+	m	(Ljava/lang/String;)Lnet/minecraft/scoreboard/ScoreObjective;	func_96518_b	getObjective	#getObjective, :, getNullableObjective, getObjective
+		c	Returns a ScoreObjective for the objective name
+		p	1	p_96518_1_	name	#name, :, :, :
+	m	()Ljava/util/Collection;	func_96514_c	getScoreObjectives	#getScoreObjectives, :, getObjectives, :
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)V	func_96533_c	onScoreObjectiveRemoved	#onScoreObjectiveRemoved, :, updateRemovedObjective, onObjectiveRemoved
+		p	1	p_96533_1_	objective	#objective, :, :, :
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;)V	func_96513_c	broadcastTeamRemove	#broadcastTeamRemove, :, updateRemovedTeam, onTeamRemoved
+		p	1	p_96513_1_	playerTeam	#playerTeam, :, team, :
+	m	(Ljava/lang/String;)V	func_96515_c	removeScores	#~, ~, ~, removeScores
+		p	1	p_96515_1_	owner	#~, ~, ~, owner
+	m	()Ljava/util/Collection;	func_96526_d	getObjectiveNames	#getObjectiveNames, :, getKnownPlayers, getScoreOwners
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;)V	func_96511_d	removeTeam	#removeTeam, :, :, :
+		c	Removes the team from the scoreboard, updates all player memberships and broadcasts the deletion to all players
+		p	1	p_96511_1_	playerTeam	#playerTeam, :, ~, team
+	m	(Ljava/lang/String;)Ljava/util/Map;	func_96510_d	getObjectivesForEntity	#getObjectivesForEntity, :, getPlayerObjectives, getScores
+		c	Returns all the objectives for the given entity
+		p	1	p_96510_1_	name	#name, :, ~, owner
+	m	()Ljava/util/Collection;	func_96528_e	getScores	#getScores, :, ~, getScores
+	m	(Ljava/lang/String;)Lnet/minecraft/scoreboard/ScorePlayerTeam;	func_96508_e	getTeam	#getTeam, :, :, :
+		c	Retrieve the ScorePlayerTeam instance identified by the passed team name
+		p	1	p_96508_1_	teamName	#teamName, :, ~, name
+	m	()Ljava/util/Collection;	func_96531_f	getTeamNames	#getTeamNames, :, :, :
+		c	Retrieve all registered ScorePlayerTeam names
+	m	(Ljava/lang/String;)Lnet/minecraft/scoreboard/ScorePlayerTeam;	func_96527_f	createTeam	#createTeam, :, addTeam, :
+		c	Verifies that the given name doesn't already refer to an existing team, creates it otherwise and broadcasts the addition to all players
+		p	1	p_96527_1_	name	#name, :, ~, name
+	m	()Ljava/util/Collection;	func_96525_g	getTeams	#getTeams, :, :, :
+		c	Retrieve all registered ScorePlayerTeam instances
+	m	(Ljava/lang/String;)Z	func_96524_g	removePlayerFromTeams	#removePlayerFromTeams, :, clearPlayerTeam, removeMemberFromTeam
+		p	1	p_96524_1_	playerName	#playerName, :, ~, member
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)Ljava/util/Collection;	func_96534_i	getSortedScores	#getSortedScores, :, getAllPlayerScores, getScores
+		c	Returns an array of Score objects, sorting by Score.getScorePoints()
+		p	1	p_96534_1_	objective	#objective, :, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/scoreboard/ScorePlayerTeam;	func_96509_i	getPlayersTeam	#getPlayersTeam, :, getPlayerTeam, getTeamOfMember
+		c	Gets the ScorePlayerTeam object for the given username.
+		p	1	p_96509_1_	username	#username, :, ~, playerName
+	m	(Ljava/lang/String;)I	func_96537_j	getObjectiveDisplaySlotNumber	#getObjectiveDisplaySlotNumber, :, getDisplaySlotId, getDisplaySlot
+		c	Returns 0 for (case-insensitive) 'list', 1 for 'sidebar', 2 for 'belowName', otherwise -1.
+		p	0	p_96537_0_	name	#name, :, slotName, location
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)V	func_96519_k	removeObjective	#removeObjective, :, :, :
+		p	1	p_96519_1_	objective	#objective, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

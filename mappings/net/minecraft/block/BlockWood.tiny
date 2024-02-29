@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockWood	net/minecraft/block/BlockWood	
+	f	[Ljava/lang/String;	field_150096_a	VARIANTS	#~, ~, ~, VARIANTS
+	f	[Lnet/minecraft/util/IIcon;	field_150095_b	sprites	#~, ~, ~, sprites
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

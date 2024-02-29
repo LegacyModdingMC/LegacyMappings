@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/BanList	net/minecraft/server/management/BanList	
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1490_1_	bansFile	#bansFile, :, file, ~
+	m	(Ljava/net/SocketAddress;)Z	func_152708_a	isBanned	#isBanned, :, :, :
+		p	1	p_152708_1_	address	#address, :, ip, address
+	m	(Ljava/net/SocketAddress;)Lnet/minecraft/server/management/IPBanEntry;	func_152709_b	getBanEntry	#getBanEntry, :, get, :
+		p	1	p_152709_1_	address	#address, :, :, :
+	m	(Ljava/net/SocketAddress;)Ljava/lang/String;	func_152707_c	addressToString	#addressToString, :, stringifyAddress, getIp
+		p	1	p_152707_1_	address	#address, :, :, :

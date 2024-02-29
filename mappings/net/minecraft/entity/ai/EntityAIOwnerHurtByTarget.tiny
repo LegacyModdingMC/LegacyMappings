@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIOwnerHurtByTarget	net/minecraft/entity/ai/EntityAIOwnerHurtByTarget	
+	f	Lnet/minecraft/entity/passive/EntityTameable;	field_75316_a	theDefendingTameable	#theDefendingTameable, tameable, :, pet
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75315_b	theOwnerAttacker	#theOwnerAttacker, attacker, :, targetEntity
+	f	I	field_142051_e	timestamp	#timestamp, :, lastAttackedTime, lasAttackTime
+	m	(Lnet/minecraft/entity/passive/EntityTameable;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1667_1_	theDefendingTameableIn	#theDefendingTameableIn, :, tameable, pet

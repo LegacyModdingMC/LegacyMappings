@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenNetherBridge$Start	net/minecraft/world/gen/structure/MapGenNetherBridge$Start	
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2040_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i2040_2_	random	#random, :, ~, random
+		p	3	p_i2040_3_	chunkX	#chunkX, :, ~, chunkX
+		p	4	p_i2040_4_	chunkZ	#chunkZ, :, ~, chunkZ
+	m	()V	<init>	<init>	#~, ~, ~, ~

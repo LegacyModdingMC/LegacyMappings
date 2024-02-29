@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S3DPacketDisplayScoreboard	net/minecraft/network/play/server/S3DPacketDisplayScoreboard	
+	f	I	field_149374_a	position	#position, :, slot, :
+	f	Ljava/lang/String;	field_149373_b	scoreName	#scoreName, :, name, objective
+	m	(ILnet/minecraft/scoreboard/ScoreObjective;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45216_1_	positionIn	#positionIn, :, slot, :
+		p	2	p_i45216_2_	scoreIn	#scoreIn, :, objective, :
+	m	()I	func_149371_c	getPosition	#getPosition, :, getSlot, :
+	m	()Ljava/lang/String;	func_149370_d	getName	#getName, :, :, getObjective
+	m	()V	<init>	<init>	#~, ~, ~, ~

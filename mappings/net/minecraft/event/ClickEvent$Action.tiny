@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/event/ClickEvent$Action	net/minecraft/event/ClickEvent$Action	
+	f	Lnet/minecraft/event/ClickEvent$Action;	OPEN_URL	OPEN_URL	#~, ~, OPEN_URL, :
+	f	Lnet/minecraft/event/ClickEvent$Action;	OPEN_FILE	OPEN_FILE	#~, ~, OPEN_FILE, :
+	f	Lnet/minecraft/event/ClickEvent$Action;	RUN_COMMAND	RUN_COMMAND	#~, ~, RUN_COMMAND, :
+	f	Lnet/minecraft/event/ClickEvent$Action;	TWITCH_USER_INFO	TWITCH_USER_INFO	#~, ~, TWITCH_USER_INFO, :
+	f	Lnet/minecraft/event/ClickEvent$Action;	SUGGEST_COMMAND	SUGGEST_COMMAND	#~, ~, SUGGEST_COMMAND, :
+	f	Ljava/util/Map;	field_150679_e	nameMapping	#nameMapping, NAME_MAPPING, NAME_TO_ACTION, BY_KEY
+	f	Z	field_150676_f	allowedInChat	#allowedInChat, :, userDefinable, allowFromRemoteSource
+	f	Ljava/lang/String;	field_150677_g	canonicalName	#canonicalName, :, name, key
+		c	The canonical name used to refer to this action.
+	f	[Lnet/minecraft/event/ClickEvent$Action;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;ILjava/lang/String;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45155_3_	canonicalNameIn	#canonicalNameIn, :, name, key
+		p	4	p_i45155_4_	allowedInChatIn	#allowedInChatIn, :, userDefinable, allowFromRemoteSource
+		p	1	p_i45155_1_	p_i45155_1_	#~, ~, ~, ~
+		p	2	p_i45155_2_	p_i45155_2_	#~, ~, ~, ~
+	m	()Z	func_150674_a	shouldAllowInChat	#shouldAllowInChat, :, isUserDefinable, allowFromRemoteSource
+		c	Indicates whether this event can be run from chat text.
+	m	(Ljava/lang/String;)Lnet/minecraft/event/ClickEvent$Action;	func_150672_a	getValueByCanonicalName	#getValueByCanonicalName, :, byName, byKey
+		c	Gets a value by its canonical name.
+		p	0	p_150672_0_	canonicalNameIn	#canonicalNameIn, :, name, key
+	m	()Ljava/lang/String;	func_150673_b	getCanonicalName	#getCanonicalName, :, getName, getKey
+		c	Gets the canonical name for this action (e.g., "run_command")
+	m	(Ljava/lang/String;)Lnet/minecraft/event/ClickEvent$Action;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/event/ClickEvent$Action;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

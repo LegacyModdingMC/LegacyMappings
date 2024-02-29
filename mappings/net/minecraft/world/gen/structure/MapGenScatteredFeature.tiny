@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenScatteredFeature	net/minecraft/world/gen/structure/MapGenScatteredFeature	
+	f	Ljava/util/List;	field_75061_e	biomelist	#biomelist, BIOMELIST, BIOMES, VALID_BIOMES
+	f	Ljava/util/List;	field_82668_f	scatteredFeatureSpawnList	#scatteredFeatureSpawnList, monsters, monsterSpawns, spawnEntries
+		c	contains possible spawns for scattered features
+	f	I	field_82669_g	maxDistanceBetweenScatteredFeatures	#maxDistanceBetweenScatteredFeatures, :, distance, :
+		c	the maximum distance between scattered features
+	f	I	field_82670_h	minDistanceBetweenScatteredFeatures	#minDistanceBetweenScatteredFeatures, :, ~, minDistance
+		c	the minimum distance between scattered features
+	m	(Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2061_1_	options	#~, ~, map, options
+	m	(III)Z	func_143030_a	isWitchHut	#~, ~, ~, isWitchHut
+		p	1	p_143030_1_	x	#~, ~, ~, x
+		p	2	p_143030_2_	y	#~, ~, ~, y
+		p	3	p_143030_3_	z	#~, ~, ~, z
+	m	()Ljava/util/List;	func_82667_a	getScatteredFeatureSpawnList	#getScatteredFeatureSpawnList, getMonsters, getMonsterSpawns, getSpawnEntries
+		c	returns possible spawns for scattered features
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

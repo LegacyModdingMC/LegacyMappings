@@ -1,0 +1,48 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetHandlerPlayServer	net/minecraft/network/NetHandlerPlayServer	
+	f	Lnet/minecraft/network/NetworkManager;	field_147371_a	netManager	#netManager, :, connection, :
+	f	Lnet/minecraft/entity/player/EntityPlayerMP;	field_147369_b	playerEntity	#playerEntity, player, :, :
+	f	Lorg/apache/logging/log4j/Logger;	field_147370_c	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/server/MinecraftServer;	field_147367_d	serverController	#serverController, server, :, :
+	f	I	field_147368_e	networkTickCount	#networkTickCount, :, lastTickMovePacketsCount, ticks
+	f	I	field_147365_f	floatingTickCount	#floatingTickCount, :, ~, floatingTime
+		c	Used to keep track of how the player is floating while gamerules should prevent that. Surpassing 80 ticks means kick
+	f	Z	field_147366_g	moved	#~, ~, ~, moved
+	f	I	field_147378_h	keepAliveId	#keepAliveId, :, ~, savedKeepAliveTime
+	f	J	field_147379_i	lastPingTime	#lastPingTime, :, lastKeepAliveTime, keepAliveTime
+	f	Ljava/util/Random;	field_147376_j	random	#~, ~, ~, random
+	f	J	field_147377_k	lastSentPingPacket	#lastSentPingPacket, :, keepAliveId, lastKeepAliveUpdateTime
+	f	I	field_147374_l	chatSpamThresholdCount	#chatSpamThresholdCount, :, messageCooldown, :
+		c	Incremented by 20 each time a user sends a chat message, decreased by one every tick. Non-ops kicked when over 200
+	f	I	field_147375_m	itemDropThreshold	#itemDropThreshold, :, creativeItemDropThreshold, dropItemCooldown
+	f	Lnet/minecraft/util/IntHashMap;	field_147372_n	pendingTransactions	#pendingTransactions, :, transactions, :
+	f	D	field_147373_o	lastPosX	#lastPosX, :, requestedTeleportPosX, teleportTargetX
+		c	The last known x position for this connection.
+	f	D	field_147382_p	lastPosY	#lastPosY, :, requestedTeleportPosY, teleportTargetY
+		c	The last known y position for this connection.
+	f	D	field_147381_q	lastPosZ	#lastPosZ, :, requestedTeleportPosZ, teleportTargetZ
+		c	The last known z position for this connection.
+	f	Z	field_147380_r	hasMoved	#hasMoved, :, ~, teleported
+		c	is true when the player has moved since his last movement packet
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/NetworkManager;Lnet/minecraft/entity/player/EntityPlayerMP;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1530_1_	server	#server, :, :, :
+		p	2	p_i1530_2_	networkManagerIn	#networkManagerIn, :, connection, :
+		p	3	p_i1530_3_	player	#player, playerIn, player, :
+	m	(DDDFF)V	func_147364_a	setPlayerLocation	#setPlayerLocation, :, requestTeleport, teleport
+		c	Moves the player to the specified destination and rotation
+		p	1	p_147364_1_	x	#x, :, :, :
+		p	3	p_147364_3_	y	#y, :, :, :
+		p	5	p_147364_5_	z	#z, :, :, :
+		p	7	p_147364_7_	yaw	#yaw, :, :, :
+		p	8	p_147364_8_	pitch	#pitch, :, :, :
+	m	(Lnet/minecraft/network/Packet;)V	func_147359_a	sendPacket	#sendPacket, :, :, :
+		p	1	p_147359_1_	packetIn	#packetIn, :, ~, packet
+	m	()Lnet/minecraft/network/NetworkManager;	func_147362_b	getNetworkManager	#getNetworkManager, :, getConnection, :
+	m	(Ljava/lang/String;)V	func_147360_c	kickPlayerFromServer	#kickPlayerFromServer, disconnect, :, :
+		c	Kick a player from the server with a reason
+		p	1	p_147360_1_	reason	#reason, :, :, :
+	m	()J	func_147363_d	currentTimeMillis	#currentTimeMillis, :, ~, getTimeMillis
+	m	(Ljava/lang/String;)V	func_147361_d	handleSlashCommand	#handleSlashCommand, :, executeCommand, runCommand
+		c	Handle commands that start with a /
+		p	1	p_147361_1_	command	#command, :, ~, command
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

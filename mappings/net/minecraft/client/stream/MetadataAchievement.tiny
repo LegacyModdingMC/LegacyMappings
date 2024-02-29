@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/MetadataAchievement	net/minecraft/client/stream/MetadataAchievement	
+	m	(Lnet/minecraft/stats/Achievement;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1032_1_	stat	#~, ~, achievement, stat

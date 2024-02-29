@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTBase	net/minecraft/nbt/NBTBase	
+	f	[Ljava/lang/String;	field_82578_b	NBTTypes	#NBTTypes, NBT_TYPES, TYPES, TYPE_NAMES
+	m	()B	func_74732_a	getId	#getId, :, getType, :
+		c	Gets the type byte for the tag.
+	m	(B)Lnet/minecraft/nbt/NBTBase;	func_150284_a	createNewByType	#createNewByType, create, createFromType, create
+		c	Creates a new NBTBase object that corresponds with the passed in id.
+		p	0	p_150284_0_	id	#id, :, :, type
+	m	(Ljava/io/DataInput;ILnet/minecraft/nbt/NBTSizeTracker;)V	func_152446_a	read	#read, :, :, :
+		p	1	p_152446_1_	input	#input, :, :, ~
+		p	2	p_152446_2_	depth	#depth, :, :, ~
+		p	3	p_152446_3_	sizeTracker	#sizeTracker, :, tracker, ~
+	m	(Ljava/io/DataOutput;)V	func_74734_a	write	#write, :, :, :
+		c	Write the actual data contents of the tag, implemented in NBT extension classes
+		p	1	p_74734_1_	output	#output, :, :, :
+	m	()Ljava/lang/String;	func_150285_a_	getString	#getString, :, asString, :
+	m	()Lnet/minecraft/nbt/NBTBase;	func_74737_b	copy	#copy, :, :, :
+		c	Creates a clone of the tag.
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, other, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

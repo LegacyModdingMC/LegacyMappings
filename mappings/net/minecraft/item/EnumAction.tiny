@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/EnumAction	net/minecraft/item/EnumAction	
+	c	
+	f	Lnet/minecraft/item/EnumAction;	none	none	#~, ~, NONE, :
+	f	Lnet/minecraft/item/EnumAction;	eat	eat	#~, ~, EAT, :
+	f	Lnet/minecraft/item/EnumAction;	drink	drink	#~, ~, DRINK, :
+	f	Lnet/minecraft/item/EnumAction;	block	block	#~, ~, BLOCK, :
+	f	Lnet/minecraft/item/EnumAction;	bow	bow	#~, ~, BOW, :
+	f	[Lnet/minecraft/item/EnumAction;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/item/EnumAction;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/item/EnumAction;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1910_1_	p_i1910_1_	#~, ~, ~, ~
+		p	2	p_i1910_2_	p_i1910_2_	#~, ~, ~, ~

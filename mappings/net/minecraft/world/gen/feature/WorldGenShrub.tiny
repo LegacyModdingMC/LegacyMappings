@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenShrub	net/minecraft/world/gen/feature/WorldGenShrub	
+	f	I	field_150528_a	leavesMetadata	#leavesMetadata, :, ~, leavesVariant
+	f	I	field_150527_b	woodMetadata	#woodMetadata, :, ~, logVariant
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2015_1_	logVariant	#~, ~, ~, logVariant
+		p	2	p_i2015_2_	leavesVariant	#~, ~, ~, leavesVariant

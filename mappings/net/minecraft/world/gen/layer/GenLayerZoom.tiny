@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerZoom	net/minecraft/world/gen/layer/GenLayerZoom	
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;I)Lnet/minecraft/world/gen/layer/GenLayer;	func_75915_a	magnify	#magnify, :, ~, zoom
+		c	Magnify a layer. Parms are seed adjustment, layer, number of times to magnify
+		p	0	p_75915_0_	seed	#~, ~, ~, seed
+		p	2	p_75915_2_	layer	#~, ~, ~, layer
+		p	3	p_75915_3_	magnification	#~, ~, ~, magnification
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2134_1_	seed	#~, ~, ~, seed
+		p	3	p_i2134_3_	parent	#~, ~, ~, parent

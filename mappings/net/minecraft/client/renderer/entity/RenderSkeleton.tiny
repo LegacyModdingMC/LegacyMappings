@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSkeleton	net/minecraft/client/renderer/entity/RenderSkeleton	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110862_k	skeletonTextures	#skeletonTextures, SKELETON_TEXTURES, SKELETON_TEXTURE, SKELETON_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110861_l	witherSkeletonTextures	#witherSkeletonTextures, WITHER_SKELETON_TEXTURES, WITHER_SKELETON_TEX, WITHER_SKELETON_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

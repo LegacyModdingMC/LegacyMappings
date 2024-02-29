@@ -1,0 +1,71 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityHopper	net/minecraft/tileentity/TileEntityHopper	
+	f	[Lnet/minecraft/item/ItemStack;	field_145900_a	inventory	#inventory, :, items, inventory
+	f	Ljava/lang/String;	field_145902_i	customName	#customName, :, :, :
+	f	I	field_145901_j	transferCooldown	#transferCooldown, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z	func_145894_a	canCombine	#canCombine, :, canMergeItems, :
+		p	0	p_145894_0_	stack1	#stack1, :, first, stack1
+		p	1	p_145894_1_	stack2	#stack2, :, second, stack2
+	m	(Lnet/minecraft/world/World;DDD)Lnet/minecraft/entity/item/EntityItem;	func_145897_a	getItems	#~, ~, ~, getItems
+		p	0	p_145897_0_	world	#~, ~, ~, world
+		p	1	p_145897_1_	x	#~, ~, ~, x
+		p	3	p_145897_3_	y	#~, ~, ~, y
+		p	5	p_145897_5_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/tileentity/IHopper;)Z	func_145891_a	captureDroppedItems	#captureDroppedItems, pullItems, extract, pullItems
+		c	Pull dropped {@link net.minecraft.entity.item.EntityItem EntityItem}s from the world above the hopper and items from any inventory attached to this hopper into the hopper's inventory.\n\n@param hopper the hopper in question\n@return whether any items were successfully added to the hopper
+		p	0	p_145891_0_	hopper	#hopper, :, provider, hopper
+	m	(Lnet/minecraft/tileentity/IHopper;Lnet/minecraft/inventory/IInventory;II)Z	func_145892_a	pullItems	#~, ~, ~, pullItems
+		p	0	p_145892_0_	hopper	#~, ~, ~, hopper
+		p	1	p_145892_1_	inventory	#~, ~, ~, inventory
+		p	2	p_145892_2_	slot	#~, ~, ~, slot
+		p	3	p_145892_3_	side	#~, ~, ~, side
+	m	(Ljava/lang/String;)V	func_145886_a	setCustomName	#setCustomName, :, :, :
+		p	1	p_145886_1_	customNameIn	#customNameIn, :, customName, name
+	m	(Lnet/minecraft/inventory/IInventory;I)Z	func_152102_a	isFullInventory	#~, ~, ~, isFullInventory
+		p	1	p_152102_1_	p_152102_1_	#~, ~, ~, ~
+		p	2	p_152102_2_	p_152102_2_	#~, ~, ~, ~
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/item/ItemStack;	func_145889_a	pushItems	#~, ~, ~, pushItems
+		p	0	p_145889_0_	inventory	#~, ~, ~, inventory
+		p	1	p_145889_1_	stack	#~, ~, ~, stack
+		p	2	p_145889_2_	side	#~, ~, ~, side
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/item/ItemStack;II)Z	func_145885_a	canPushItems	#~, ~, ~, canPushItems
+		p	0	p_145885_0_	inventory	#~, ~, ~, inventory
+		p	1	p_145885_1_	stack	#~, ~, ~, stack
+		p	2	p_145885_2_	slot	#~, ~, ~, slot
+		p	3	p_145885_3_	side	#~, ~, ~, side
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/entity/item/EntityItem;)Z	func_145898_a	putDropInInventoryAllSlots	#putDropInInventoryAllSlots, :, extract, pickUpItems
+		c	Attempts to place the passed EntityItem's stack into the inventory using as many slots as possible. Returns false if the stackSize of the drop was not depleted.
+		p	0	p_145898_0_	source	#source, :, inventory, :
+		p	1	p_145898_1_	itemIn	#itemIn, destination, itemEntity, items
+	m	(Lnet/minecraft/world/World;DDD)Lnet/minecraft/inventory/IInventory;	func_145893_b	getInventoryAtPosition	#getInventoryAtPosition, :, getInventoryAt, :
+		c	Returns the IInventory (if applicable) of the TileEntity at the specified position
+		p	0	p_145893_0_	worldIn	#worldIn, :, world, :
+		p	1	p_145893_1_	x	#x, :, :, :
+		p	3	p_145893_3_	y	#y, :, :, :
+		p	5	p_145893_5_	z	#z, :, :, :
+	m	(Lnet/minecraft/tileentity/IHopper;)Lnet/minecraft/inventory/IInventory;	func_145884_b	getHopperInventory	#getHopperInventory, getSourceInventory, getInputInventory, getInventoryAbove
+		c	Returns the IInventory for the specified hopper
+		p	0	p_145884_0_	hopper	#hopper, :, provider, hopper
+	m	(Lnet/minecraft/inventory/IInventory;I)Z	func_152103_b	isEmptyInventory	#~, ~, ~, isEmptyInventory
+		p	0	p_152103_0_	p_152103_0_	#~, ~, ~, ~
+		p	1	p_152103_1_	p_152103_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/item/ItemStack;II)Z	func_145890_b	canPullItems	#~, ~, ~, canPullItems
+		p	0	p_145890_0_	inventory	#~, ~, ~, inventory
+		p	1	p_145890_1_	stack	#~, ~, ~, stack
+		p	2	p_145890_2_	slot	#~, ~, ~, slot
+		p	3	p_145890_3_	face	#~, ~, ~, face
+	m	(I)V	func_145896_c	setTransferCooldown	#setTransferCooldown, :, setCooldown, :
+		p	1	p_145896_1_	ticks	#ticks, :, cooldown, :
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/item/ItemStack;II)Lnet/minecraft/item/ItemStack;	func_145899_c	pushItems	#~, ~, ~, pushItems
+		p	0	p_145899_0_	inventory	#~, ~, ~, inventory
+		p	1	p_145899_1_	stack	#~, ~, ~, stack
+		p	2	p_145899_2_	slot	#~, ~, ~, slot
+		p	3	p_145899_3_	side	#~, ~, ~, side
+	m	()Z	func_145887_i	updateHopper	#updateHopper, :, insertAndExtract, transferItems
+	m	()Z	func_145888_j	isOnTransferCooldown	#isOnTransferCooldown, :, needsCooldown, isOnCooldown
+	m	()Z	func_152104_k	isEmpty	#isEmpty, isInventoryEmpty, isHopperEmpty, isInventoryEmpty
+	m	()Z	func_152105_l	isFull	#isFull, :, :, :
+	m	()Z	func_145883_k	transferItemsOut	#transferItemsOut, :, insert, pushItems
+	m	()Lnet/minecraft/inventory/IInventory;	func_145895_l	getInventoryForHopperTransfer	#getInventoryForHopperTransfer, :, getOutputInventory, getTargetInventory
+		c	Returns the IInventory that this hopper is pointing into
+	m	()V	<init>	<init>	#~, ~, ~, ~

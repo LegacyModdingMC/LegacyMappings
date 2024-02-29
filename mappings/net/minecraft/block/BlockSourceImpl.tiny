@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSourceImpl	net/minecraft/block/BlockSourceImpl	
+	f	Lnet/minecraft/world/World;	field_82627_a	worldObj	#worldObj, world, :, :
+	f	I	field_82625_b	xPos	#xPos, :, x, :
+	f	I	field_82626_c	yPos	#yPos, :, y, :
+	f	I	field_82624_d	zPos	#zPos, :, z, :
+	m	(Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1365_1_	world	#~, ~, world, :
+		p	2	p_i1365_2_	x	#~, ~, x, :
+		p	3	p_i1365_3_	y	#~, ~, y, :
+		p	4	p_i1365_4_	z	#~, ~, z, :

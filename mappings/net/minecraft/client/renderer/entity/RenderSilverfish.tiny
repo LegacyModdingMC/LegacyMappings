@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSilverfish	net/minecraft/client/renderer/entity/RenderSilverfish	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110882_a	silverfishTextures	#silverfishTextures, SILVERFISH_TEXTURES, SILVERFISH_TEX, SILVERFISH_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

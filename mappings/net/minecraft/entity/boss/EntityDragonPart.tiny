@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/boss/EntityDragonPart	net/minecraft/entity/boss/EntityDragonPart	
+	f	Lnet/minecraft/entity/IEntityMultiPart;	field_70259_a	entityDragonObj	#entityDragonObj, parent, owner, dragon
+		c	The dragon entity this dragon part belongs to
+	f	Ljava/lang/String;	field_146032_b	partName	#partName, :, name, :
+	m	(Lnet/minecraft/entity/IEntityMultiPart;Ljava/lang/String;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1697_1_	parent	#parent, :, owner, dragon
+		p	2	p_i1697_2_	partName	#partName, :, name, :
+		p	3	p_i1697_3_	base	#base, width, :, :
+		p	4	p_i1697_4_	sizeHeight	#sizeHeight, height, :, :

@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/IPBanEntry	net/minecraft/server/management/IPBanEntry	
+	m	(Lcom/google/gson/JsonObject;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1160_1_	vector3DIn	#vector3DIn, :, object, json
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1158_1_	ip	#~, ~, ip, :
+	m	(Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;Ljava/util/Date;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1159_1_	valueIn	#valueIn, :, ip, :
+		p	2	p_i1159_2_	startDate	#startDate, :, date, startDate
+		p	3	p_i1159_3_	banner	#banner, :, source, :
+		p	4	p_i1159_4_	endDate	#endDate, :, expiryDate, expirationDate
+		p	5	p_i1159_5_	banReason	#banReason, :, reason, :
+	m	(Lcom/google/gson/JsonObject;)Ljava/lang/String;	func_152647_b	getIPFromJson	#getIPFromJson, :, getIpFromJson, deserialize
+		p	0	p_152647_0_	json	#json, :, :, :

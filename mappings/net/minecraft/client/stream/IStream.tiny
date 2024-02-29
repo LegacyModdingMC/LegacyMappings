@@ -1,0 +1,40 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/IStream	net/minecraft/client/stream/IStream	
+	m	()I	func_152920_A	getViewerCount	#~, ~, getViewerCount, ~
+	m	()Z	func_152927_B	isChannelNameSet	#~, ~, isChannelNameSet, ~
+	m	()Ljava/lang/String;	func_152921_C	getCurrentChannelName	#~, ~, getCurrentChannelName, ~
+	m	()Z	func_152928_D	isRunning	#~, ~, isRunning, ~
+	m	()Ltv/twitch/ErrorCode;	func_152912_E	getErrorCode	#~, ~, getErrorCode, ~
+	m	()Z	func_152913_F	isLoggedIn	#~, ~, isLoggedIn, ~
+	m	()Z	func_152929_G	isMuted	#~, ~, isMuted, ~
+	m	()Lnet/minecraft/client/stream/IStream$AuthFailureReason;	func_152918_H	getErrorReason	#~, ~, ~, getErrorReason
+	m	(Lnet/minecraft/client/stream/Metadata;J)V	func_152911_a	sendActionMetadata	#~, ~, ~, sendActionMetadata
+		p	1	p_152911_1_	metadata	#~, ~, streamData, metadata
+		p	2	p_152911_2_	time	#~, ~, ~, time
+	m	(Ljava/lang/String;)Ltv/twitch/chat/ChatUserInfo;	func_152926_a	getUserInfo	#~, ~, getUserInfo, ~
+		p	1	p_152926_1_	username	#~, ~, username, ~
+	m	(Z)V	func_152910_a	muteMicrophone	#muteMicrophone, :, toggleMic, ~
+		c	mutes or unmutes the microphone based on the boolean parameter passed into the method
+		p	1	p_152910_1_	micEnabled	#~, ~, micEnabled, ~
+	m	(Ljava/lang/String;)V	func_152917_b	sendChatMessage	#~, ~, sendChatMessage, ~
+		p	1	p_152917_1_	chatMessage	#~, ~, chatMessage, ~
+	m	()V	func_152923_i	shutdownStream	#shutdownStream, :, stop, shutdown
+		c	Shuts down a steam
+	m	()V	func_152935_j	update	#~, ~, update, :
+	m	()V	func_152922_k	submit	#~, ~, submit, :
+	m	()Z	func_152936_l	isLoggedIn	#~, ~, isLoginSuccessful, isLoggedIn
+	m	()Z	func_152924_m	isReadyToBroadcast	#isReadyToBroadcast, :, isReady, isReadyToBroadcast
+	m	()Z	func_152934_n	isBroadcasting	#isBroadcasting, :, isLive, isBroadcasting
+	m	()Z	func_152919_o	isPaused	#isPaused, :, :, :
+	m	()V	func_152931_p	requestCommercial	#requestCommercial, :, :, runCommercial
+	m	()V	func_152916_q	pause	#pause, :, pauseBroadcast, pause
+		c	pauses a stream
+	m	()V	func_152933_r	unpause	#unpause, :, resumeBroadcast, resume
+		c	unpauses a stream
+	m	()V	func_152915_s	updateStreamVolume	#updateStreamVolume, :, setStreamVolume, ~
+	m	()V	func_152930_t	start	#~, ~, initializeStreamProperties, start
+	m	()V	func_152914_u	stopBroadcasting	#stopBroadcasting, :, stopStream, stop
+	m	()[Ltv/twitch/broadcast/IngestServer;	func_152925_v	getServers	#~, ~, getIngestServers, getServers
+	m	()V	func_152909_x	startIngestTesting	#~, ~, setStreamListener, startIngestTesting
+	m	()Lnet/minecraft/client/stream/IngestServerTester;	func_152932_y	getTwitchStream	#~, ~, getTwitchStream, ~
+	m	()Z	func_152908_z	isIngestTesting	#~, ~, isTesting, isIngestTesting

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/RecipeFireworks	net/minecraft/item/crafting/RecipeFireworks	
+	f	Lnet/minecraft/item/ItemStack;	field_92102_a	resultItem	#resultItem, :, ingredient, result
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IntHashMap$Entry	net/minecraft/util/IntHashMap$Entry	
+	f	I	field_76035_a	hashEntry	#hashEntry, :, ~, key
+		c	The hash code of this entry
+	f	Ljava/lang/Object;	field_76033_b	valueEntry	#valueEntry, :, ~, value
+		c	The object stored in this entry
+	f	Lnet/minecraft/util/IntHashMap$Entry;	field_76034_c	nextEntry	#nextEntry, :, ~, next
+		c	The next entry in this slot
+	f	I	field_76032_d	slotHash	#slotHash, :, ~, hash
+		c	The id of the hash slot computed from the hash
+	m	()I	func_76031_a	getHash	#getHash, :, ~, getKey
+		c	Returns the hash code for this entry
+	m	()Ljava/lang/Object;	func_76030_b	getValue	#getValue, :, ~, getValue
+		c	Returns the object stored in this entry
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, ~, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(IILjava/lang/Object;Lnet/minecraft/util/IntHashMap$Entry;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1552_1_	hash	#~, ~, ~, hash
+		p	2	p_i1552_2_	key	#~, ~, ~, key
+		p	3	p_i1552_3_	value	#~, ~, ~, value
+		p	4	p_i1552_4_	next	#~, ~, ~, next

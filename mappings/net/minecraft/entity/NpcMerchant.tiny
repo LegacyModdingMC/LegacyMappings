@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/NpcMerchant	net/minecraft/entity/NpcMerchant	
+	f	Lnet/minecraft/inventory/InventoryMerchant;	field_70937_a	theMerchantInventory	#theMerchantInventory, merchantInventory, inventory, traderInventory
+		c	Instance of Merchants Inventory.
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_70935_b	customer	#customer, :, player, :
+		c	This merchant's current player customer.
+	f	Lnet/minecraft/village/MerchantRecipeList;	field_70936_c	recipeList	#recipeList, :, list, offers
+		c	The MerchantRecipeList instance.
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1746_1_	player	#~, ~, ~, player

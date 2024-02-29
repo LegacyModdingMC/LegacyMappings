@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/EnumRarity	net/minecraft/item/EnumRarity	
+	f	Lnet/minecraft/item/EnumRarity;	common	common	#~, ~, COMMON, :
+	f	Lnet/minecraft/item/EnumRarity;	uncommon	uncommon	#~, ~, UNCOMMON, :
+	f	Lnet/minecraft/item/EnumRarity;	rare	rare	#~, ~, RARE, :
+	f	Lnet/minecraft/item/EnumRarity;	epic	epic	#~, ~, EPIC, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	field_77937_e	rarityColor	#rarityColor, color, formatting, :
+		c	A decimal representation of the hex color codes of a the color assigned to this rarity type. (13 becomes d as in \\247d which is light purple)
+	f	Ljava/lang/String;	field_77934_f	rarityName	#rarityName, :, name, :
+		c	Rarity name.
+	f	[Lnet/minecraft/item/EnumRarity;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;ILnet/minecraft/util/EnumChatFormatting;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45349_3_	color	#color, :, formatting, :
+		p	4	p_i45349_4_	name	#name, :, :, :
+		p	1	p_i45349_1_	p_i45349_1_	#~, ~, ~, ~
+		p	2	p_i45349_2_	p_i45349_2_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/item/EnumRarity;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/item/EnumRarity;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

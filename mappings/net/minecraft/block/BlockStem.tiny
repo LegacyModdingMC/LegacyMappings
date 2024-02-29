@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStem	net/minecraft/block/BlockStem	
+	f	Lnet/minecraft/block/Block;	field_149877_a	crop	#crop, :, mainBlock, plant
+	f	Lnet/minecraft/util/IIcon;	field_149876_b	connectedSprite	#~, ~, ~, connectedSprite
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45430_1_	crop	#crop, :, mainBlock, plant
+	m	(Lnet/minecraft/world/IBlockAccess;III)I	func_149873_e	getState	#getState, :, ~, getConnectDirection
+		c	Returns the current state of the stem. Returns -1 if the stem is not fully grown, or a value between 0 and 3 based on the direction the stem is facing.
+		p	1	p_149873_1_	world	#~, ~, ~, world
+		p	2	p_149873_2_	x	#~, ~, ~, x
+		p	3	p_149873_3_	y	#~, ~, ~, y
+		p	4	p_149873_4_	z	#~, ~, ~, z
+	m	()Lnet/minecraft/util/IIcon;	func_149872_i	getStemIcon	#getStemIcon, :, ~, getConnectedSprite
+	m	(Lnet/minecraft/world/World;III)V	func_149874_m	fertilizeStem	#fertilizeStem, :, ~, grow
+		p	1	p_149874_1_	world	#~, ~, ~, world
+		p	2	p_149874_2_	x	#~, ~, ~, x
+		p	3	p_149874_3_	y	#~, ~, ~, y
+		p	4	p_149874_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)F	func_149875_n	getGrowthChance	#~, ~, ~, getGrowthChance
+		p	1	p_149875_1_	world	#~, ~, ~, world
+		p	2	p_149875_2_	x	#~, ~, ~, x
+		p	3	p_149875_3_	y	#~, ~, ~, y
+		p	4	p_149875_4_	z	#~, ~, ~, z

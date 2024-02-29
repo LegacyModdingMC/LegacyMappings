@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/RegionFile$ChunkBuffer	net/minecraft/world/chunk/storage/RegionFile$ChunkBuffer	
+	f	Lnet/minecraft/world/chunk/storage/RegionFile;	field_76724_a	regionFile	#regionFile, :, ~, regionFile
+	f	I	field_76722_b	chunkX	#chunkX, :, ~, chunkX
+	f	I	field_76723_c	chunkZ	#chunkZ, :, ~, chunkZ
+	m	()V	close	close	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/chunk/storage/RegionFile;II)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i2000_2_	x	#x, :, ~, chunkX
+		p	3	p_i2000_3_	z	#z, :, ~, chunkZ
+		p	1	p_i2000_1_	p_i2000_1_	#~, ~, ~, ~

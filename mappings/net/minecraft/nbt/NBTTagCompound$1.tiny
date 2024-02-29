@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagCompound$1	net/minecraft/nbt/NBTTagCompound$1	
+	f	Ljava/lang/String;	field_82585_a	key	#~, ~, found, key
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_82584_b	theNBTTagCompound	#theNBTTagCompound, :, nbt, compound
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1373_1_	nbt	#~, ~, nbt, ~
+		p	2	p_i1373_2_	found	#~, ~, found, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

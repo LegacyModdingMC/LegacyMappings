@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/ServerEula	net/minecraft/server/ServerEula	
+	f	Lorg/apache/logging/log4j/Logger;	field_154349_a	LOG	#LOG, :, LOGGER, ~
+	f	Ljava/io/File;	field_154350_b	eulaFile	#eulaFile, :, :, ~
+	f	Z	field_154351_c	acceptedEULA	#acceptedEULA, :, eulaAgreedTo, ~
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1227_1_	worldIn	#worldIn, :, eulaFile, ~
+	m	()Z	func_154346_a	hasAcceptedEULA	#hasAcceptedEULA, :, isEulaAgreedTo, ~
+	m	(Ljava/io/File;)Z	func_154347_a	loadEULAFile	#loadEULAFile, :, checkEulaAgreement, ~
+		p	1	p_154347_1_	inFile	#inFile, :, eulaFile, ~
+	m	()V	func_154348_b	createEULAFile	#createEULAFile, :, createEulaFile, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

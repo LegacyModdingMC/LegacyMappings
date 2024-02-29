@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/FoliageColorReloadListener	net/minecraft/client/resources/FoliageColorReloadListener	
+	f	Lnet/minecraft/util/ResourceLocation;	field_130079_a	LOC_FOLIAGE_PNG	#LOC_FOLIAGE_PNG, :, FOLIAGE_TEXTURE, FOLIAGE_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

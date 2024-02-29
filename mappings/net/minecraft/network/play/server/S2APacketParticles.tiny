@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S2APacketParticles	net/minecraft/network/play/server/S2APacketParticles	
+	f	Ljava/lang/String;	field_149236_a	type	#~, ~, ~, type
+	f	F	field_149234_b	xCoord	#xCoord, :, x, :
+	f	F	field_149235_c	yCoord	#yCoord, :, y, :
+	f	F	field_149232_d	zCoord	#zCoord, :, z, :
+	f	F	field_149233_e	xOffset	#xOffset, :, offsetX, velocityX
+	f	F	field_149230_f	yOffset	#yOffset, :, offsetY, velocityY
+	f	F	field_149231_g	zOffset	#zOffset, :, offsetZ, velocityZ
+	f	F	field_149237_h	particleSpeed	#particleSpeed, :, speed, velocityScale
+	f	I	field_149238_i	particleCount	#particleCount, :, count, :
+	m	()Ljava/lang/String;	func_149228_c	getType	#~, ~, ~, getType
+	m	()D	func_149220_d	getXCoordinate	#getXCoordinate, :, getX, :
+		c	Gets the x coordinate to spawn the particle.
+	m	()D	func_149226_e	getYCoordinate	#getYCoordinate, :, getY, :
+		c	Gets the y coordinate to spawn the particle.
+	m	()D	func_149225_f	getZCoordinate	#getZCoordinate, :, getZ, :
+		c	Gets the z coordinate to spawn the particle.
+	m	()F	func_149221_g	getXOffset	#getXOffset, :, getOffsetX, getVelocityX
+		c	Gets the x coordinate offset for the particle. The particle may use the offset for particle spread.
+	m	()F	func_149224_h	getYOffset	#getYOffset, :, getOffsetY, getVelocityY
+		c	Gets the y coordinate offset for the particle. The particle may use the offset for particle spread.
+	m	()F	func_149223_i	getZOffset	#getZOffset, :, getOffsetZ, getVelocityZ
+		c	Gets the z coordinate offset for the particle. The particle may use the offset for particle spread.
+	m	()F	func_149227_j	getParticleSpeed	#getParticleSpeed, :, getSpeed, getVelocityScale
+		c	Gets the speed of the particle animation (used in client side rendering).
+	m	()I	func_149222_k	getParticleCount	#getParticleCount, :, getCount, :
+		c	Gets the amount of particles to spawn
+	m	(Ljava/lang/String;FFFFFFFI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45199_1_	type	#~, ~, ~, type
+		p	2	p_i45199_2_	x	#~, ~, ~, x
+		p	3	p_i45199_3_	y	#~, ~, ~, y
+		p	4	p_i45199_4_	z	#~, ~, ~, z
+		p	5	p_i45199_5_	velocityX	#~, ~, ~, velocityX
+		p	6	p_i45199_6_	velocityY	#~, ~, ~, velocityY
+		p	7	p_i45199_7_	velocityZ	#~, ~, ~, velocityZ
+		p	8	p_i45199_8_	velocityScale	#~, ~, ~, velocityScale
+		p	9	p_i45199_9_	count	#~, ~, ~, count
+	m	()V	<init>	<init>	#~, ~, ~, ~

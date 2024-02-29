@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenHellLava	net/minecraft/world/gen/feature/WorldGenHellLava	
+	f	Lnet/minecraft/block/Block;	field_150553_a	block	#block, :, :, liquid
+	f	Z	field_94524_b	insideRock	#insideRock, :, denySurfaceSpawn, canBeExposedToAir
+	m	(Lnet/minecraft/block/Block;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45453_1_	blockIn	#blockIn, :, block, liquid
+		p	2	p_i45453_2_	insideRockIn	#insideRockIn, :, denySurfaceSpawn, canBeExposedToAir

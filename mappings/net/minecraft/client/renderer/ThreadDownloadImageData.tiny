@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/ThreadDownloadImageData	net/minecraft/client/renderer/ThreadDownloadImageData	
+	f	Lorg/apache/logging/log4j/Logger;	field_147644_c	logger	#logger, LOGGER, ~, LOGGER
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	field_147643_d	threadDownloadCounter	#threadDownloadCounter, TEXTURE_DOWNLOADER_THREAD_ID, ~, threadIdCounter
+	f	Ljava/io/File;	field_152434_e	cacheFile	#cacheFile, :, ~, ~
+	f	Ljava/lang/String;	field_110562_b	imageUrl	#imageUrl, :, ~, url
+	f	Lnet/minecraft/client/renderer/IImageBuffer;	field_110563_c	imageBuffer	#imageBuffer, :, ~, processor
+	f	Ljava/awt/image/BufferedImage;	field_110560_d	bufferedImage	#bufferedImage, :, ~, image
+	f	Ljava/lang/Thread;	field_110561_e	imageThread	#imageThread, :, ~, downloader
+	f	Z	field_110559_g	textureUploaded	#textureUploaded, :, ~, uploaded
+	m	()V	func_152433_a	loadTextureFromServer	#loadTextureFromServer, :, ~, ~
+	m	(Lnet/minecraft/client/renderer/ThreadDownloadImageData;)Ljava/lang/String;	access$000	access$000	#~, ~, ~, getUrl
+		p	0	p_access$000_0_	texture	#~, ~, ~, texture
+	m	(Ljava/awt/image/BufferedImage;)V	func_147641_a	setBufferedImage	#setBufferedImage, :, ~, setImage
+		p	1	p_147641_1_	bufferedImageIn	#bufferedImageIn, :, ~, image
+	m	(Lnet/minecraft/client/renderer/ThreadDownloadImageData;)Ljava/io/File;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/renderer/ThreadDownloadImageData;)Lnet/minecraft/client/renderer/IImageBuffer;	access$300	access$300	#~, ~, ~, getSkinProvider
+		p	0	p_access$300_0_	texture	#~, ~, ~, texture
+	m	()Lorg/apache/logging/log4j/Logger;	access$200	access$200	#~, ~, ~, getLogger
+	m	()V	func_147640_e	checkTextureUploaded	#checkTextureUploaded, :, ~, upload
+	m	(Ljava/io/File;Ljava/lang/String;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/IImageBuffer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1049_1_	cacheFileIn	#cacheFileIn, :, ~, ~
+		p	2	p_i1049_2_	imageUrlIn	#imageUrlIn, :, ~, ~
+		p	3	p_i1049_3_	textureResourceLocation	#textureResourceLocation, :, ~, ~
+		p	4	p_i1049_4_	imageBufferIn	#imageBufferIn, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

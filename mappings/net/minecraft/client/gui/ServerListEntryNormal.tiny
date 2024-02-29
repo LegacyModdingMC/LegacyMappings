@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ServerListEntryNormal	net/minecraft/client/gui/ServerListEntryNormal	
+	f	Lorg/apache/logging/log4j/Logger;	field_148304_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/concurrent/ThreadPoolExecutor;	field_148302_b	EXECUTOR	#EXECUTOR, :, SERVER_PINGER_THREAD_POOL, EXECUTOR
+	f	Lnet/minecraft/client/gui/GuiMultiplayer;	field_148303_c	owner	#owner, :, parent, screen
+	f	Lnet/minecraft/client/Minecraft;	field_148300_d	mc	#mc, :, client, minecraft
+	f	Lnet/minecraft/client/multiplayer/ServerData;	field_148301_e	server	#server, :, serverInfo, entry
+	f	J	field_148298_f	lastClickTime	#lastClickTime, :, time, lastClickTime
+	f	Ljava/lang/String;	field_148299_g	lastIconB64	#lastIconB64, :, iconUri, icon
+	f	Lnet/minecraft/client/renderer/texture/DynamicTexture;	field_148305_h	icon	#icon, :, :, iconTexture
+	f	Lnet/minecraft/util/ResourceLocation;	field_148306_i	serverIcon	#serverIcon, :, iconTextureId, iconIdentifier
+	m	(Lnet/minecraft/client/gui/GuiMultiplayer;Lnet/minecraft/client/multiplayer/ServerData;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45048_1_	ownerIn	#ownerIn, :, parent, screen
+		p	2	p_i45048_2_	serverIn	#serverIn, :, serverInfo, entry
+	m	()Lnet/minecraft/client/multiplayer/ServerData;	func_148296_a	getServerData	#getServerData, :, getServer, fetchServer
+	m	(Lnet/minecraft/client/gui/ServerListEntryNormal;)Lnet/minecraft/client/multiplayer/ServerData;	access$000	access$000	#~, ~, ~, getServerListEntryWidgetServerData
+		p	0	p_access$000_0_	serverListEntryWidget	#~, ~, ~, serverListEntryWidget
+	m	()V	func_148297_b	prepareServerIcon	#prepareServerIcon, :, checkServerIcon, loadServerIcon
+	m	(Lnet/minecraft/client/gui/ServerListEntryNormal;)Lnet/minecraft/client/gui/GuiMultiplayer;	access$100	access$100	#~, ~, ~, getServerListEntryWidgetScreen
+		p	0	p_access$100_0_	serverListEntryWidget	#~, ~, ~, serverListEntryWidget
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

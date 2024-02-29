@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityBoat	net/minecraft/entity/item/EntityBoat	
+	f	Z	field_70279_a	isBoatEmpty	#isBoatEmpty, :, ~, empty
+		c	true if no player in boat
+	f	D	field_70280_j	velocityY	#velocityY, :, ~, boatVelocityY
+	f	D	field_70278_an	velocityZ	#velocityZ, :, ~, boatVelocityZ
+	f	D	field_70276_b	speedMultiplier	#speedMultiplier, :, ~, speedBoost
+	f	I	field_70277_c	boatPosRotationIncrements	#boatPosRotationIncrements, :, ~, velocity
+	f	D	field_70274_d	boatX	#boatX, :, ~, boatX
+	f	D	field_70275_e	boatY	#boatY, :, ~, boatY
+	f	D	field_70272_f	boatZ	#boatZ, :, ~, boatZ
+	f	D	field_70273_g	boatYaw	#boatYaw, lerpYaw, boatYaw, :
+	f	D	field_70281_h	boatPitch	#boatPitch, lerpX, boatX, boatPitch
+	f	D	field_70282_i	velocityX	#velocityX, :, ~, boatVelocityX
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1705_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1705_2_	x	#x, :, :, :
+		p	4	p_i1705_4_	y	#y, :, :, :
+		p	6	p_i1705_6_	z	#z, :, :, :
+	m	(F)V	func_70266_a	setDamageTaken	#setDamageTaken, :, setDamageWobbleStrength, setDamage
+		c	Sets the damage taken from the last hit.
+		p	1	p_70266_1_	damageTaken	#damageTaken, :, wobbleStrength, damage
+	m	(I)V	func_70265_b	setTimeSinceHit	#setTimeSinceHit, :, setBubbleWobbleTicks, setBreakingWindow
+		c	Sets the time to count down from since the last time entity was hit.
+		p	1	p_70265_1_	timeSinceHit	#timeSinceHit, :, wobbleTicks, value
+	m	(Z)V	func_70270_d	setIsBoatEmpty	#setIsBoatEmpty, :, ~, setEmpty
+		c	true if no player in boat
+		p	1	p_70270_1_	empty	#~, ~, ~, empty
+	m	(I)V	func_70269_c	setForwardDirection	#setForwardDirection, :, setDamageWobbleSide, setAnitmationSide
+		c	Sets the forward direction of the entity.
+		p	1	p_70269_1_	forwardDirection	#forwardDirection, :, side, value
+	m	()F	func_70271_g	getDamageTaken	#getDamageTaken, :, getDamageWobbleStrength, getDamage
+		c	Gets the damage taken from the last hit.
+	m	()I	func_70268_h	getTimeSinceHit	#getTimeSinceHit, :, getBubbleWobbleTicks, getBreakingWindow
+		c	Gets the time since the last hit.
+	m	()I	func_70267_i	getForwardDirection	#getForwardDirection, :, getDamageWobbleSide, getAnimationSide
+		c	Gets the forward direction of the entity.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1704_1_	worldIn	#worldIn, :, ~, ~

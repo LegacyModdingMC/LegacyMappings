@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityLargeExplodeFX	net/minecraft/client/particle/EntityLargeExplodeFX	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110127_a	EXPLOSION_TEXTURE	#EXPLOSION_TEXTURE, :, EXPLOSION, EXPLOSION_LOCATION
+	f	I	field_70581_a	life	#life, :, ~, age
+	f	I	field_70584_aq	lifeTime	#lifeTime, :, ~, maxAge
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_70583_ar	theRenderEngine	#theRenderEngine, textureManager, :, :
+		c	The Rendering Engine.
+	f	F	field_70582_as	size	#size, :, ~, scaleFactor
+	m	(Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1213_1_	renderEngine	#renderEngine, textureManagerIn, manager, textureManager
+		p	2	p_i1213_2_	worldIn	#worldIn, :, world, :
+		p	3	p_i1213_3_	xCoordIn	#xCoordIn, :, x, :
+		p	5	p_i1213_5_	yCoordIn	#yCoordIn, :, y, :
+		p	7	p_i1213_7_	zCoordIn	#zCoordIn, :, z, :
+		p	9	p_i1213_9_	velocityX	#~, ~, velocityX, :
+		p	11	p_i1213_11_	velocityY	#~, ~, velocityY, :
+		p	13	p_i1213_13_	velocityZ	#~, ~, velocityZ, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

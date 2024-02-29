@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/ChunkProviderFlat	net/minecraft/world/gen/ChunkProviderFlat	
+	f	Lnet/minecraft/world/World;	field_73163_a	worldObj	#worldObj, world, :, :
+	f	Ljava/util/Random;	field_73161_b	random	#random, :, :, :
+	f	[Lnet/minecraft/block/Block;	field_82700_c	cachedBlockIDs	#cachedBlockIDs, :, ~, blocks
+	f	[B	field_82698_d	cachedBlockMetadata	#cachedBlockMetadata, :, ~, blockMetadata
+	f	Lnet/minecraft/world/gen/FlatGeneratorInfo;	field_82699_e	flatWorldGenInfo	#flatWorldGenInfo, :, ~, settings
+	f	Ljava/util/List;	field_82696_f	structureGenerators	#structureGenerators, :, ~, structures
+	f	Z	field_82697_g	hasDecoration	#hasDecoration, :, ~, hasDecoration
+	f	Z	field_82702_h	hasDungeons	#hasDungeons, :, ~, hasDungeons
+	f	Lnet/minecraft/world/gen/feature/WorldGenLakes;	field_82703_i	waterLakeGenerator	#waterLakeGenerator, :, ~, waterLake
+	f	Lnet/minecraft/world/gen/feature/WorldGenLakes;	field_82701_j	lavaLakeGenerator	#lavaLakeGenerator, :, ~, lavaLake
+	m	(Lnet/minecraft/world/World;JZLjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2004_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i2004_2_	seed	#seed, :, ~, seed
+		p	4	p_i2004_4_	generateStructures	#generateStructures, :, ~, structures
+		p	5	p_i2004_5_	flatGeneratorSettings	#flatGeneratorSettings, :, ~, preset

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SkinManager$1	net/minecraft/client/resources/SkinManager$1	
+	f	Lnet/minecraft/client/resources/SkinManager;	field_152787_a	field_152787_a	#~, ~, ~, ~
+	m	(Lcom/mojang/authlib/GameProfile;)Ljava/util/Map;	func_152786_a	load	#~, ~, load, :
+		p	1	p_152786_1_	p_152786_1_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	load	load	#~, ~, ~, ~
+		p	1	p_load_1_	p_load_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/resources/SkinManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1042_1_	p_i1042_1_	#~, ~, ~, ~

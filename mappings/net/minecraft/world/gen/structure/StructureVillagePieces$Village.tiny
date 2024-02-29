@@ -1,0 +1,47 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$Village	net/minecraft/world/gen/structure/StructureVillagePieces$Village	
+	f	I	field_74896_a	villagersSpawned	#villagersSpawned, :, ~, villageCount
+		c	The number of villagers that have been spawned in this component.
+	f	Z	field_143014_b	isDesertVillage	#isDesertVillage, :, ~, desert
+	f	I	field_143015_k	averageGroundLvl	#averageGroundLvl, :, ~, hpos
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;IIII)V	func_74893_a	spawnVillagers	#spawnVillagers, :, ~, spawnVillagers
+		c	Spawns a number of villagers in this component. Parameters: world, component bounding box, x offset, y offset, z offset, number of villagers
+		p	1	p_74893_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_74893_2_	structurebb	#structurebb, :, ~, bounds
+		p	3	p_74893_3_	x	#x, :, ~, x
+		p	4	p_74893_4_	y	#y, :, ~, y
+		p	5	p_74893_5_	z	#z, :, ~, z
+		p	6	p_74893_6_	count	#count, :, ~, max
+	m	(Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z	func_74895_a	canVillageGoDeeper	#canVillageGoDeeper, :, ~, isValidStructureBounds
+		p	0	p_74895_0_	structurebb	#structurebb, :, ~, bounds
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74891_a	getNextComponentNN	#getNextComponentNN, :, ~, generatePieceLeft
+		c	Gets the next village component, with the bounding box shifted -1 in the X and Z direction.
+		p	1	p_74891_1_	start	#start, :, ~, startPiece
+		p	2	p_74891_2_	structureComponents	#structureComponents, :, ~, pieces
+		p	3	p_74891_3_	rand	#rand, :, ~, random
+		p	4	p_74891_4_	yOffset	#~, ~, ~, yOffset
+		p	5	p_74891_5_	offset	#~, ~, ~, offset
+	m	(I)I	func_74888_b	getVillagerType	#getVillagerType, :, ~, getVillagerType
+		c	Returns the villager type to spawn in this component, based on the number of villagers already spawned.
+		p	1	p_74888_1_	index	#~, ~, ~, index
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;)I	func_74889_b	getAverageGroundLevel	#getAverageGroundLevel, :, ~, updateHeight
+		c	Discover the y coordinate that will serve as the ground level of the supplied BoundingBox. (A median of all the levels in the BB's horizontal rectangle).
+		p	1	p_74889_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_74889_2_	structurebb	#structurebb, :, ~, bounds
+	m	(Lnet/minecraft/block/Block;I)Lnet/minecraft/block/Block;	func_151558_b	updateBlock	#~, ~, ~, updateBlock
+		p	1	p_151558_1_	block	#~, ~, ~, block
+		p	2	p_151558_2_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74894_b	getNextComponentPP	#getNextComponentPP, :, ~, generatePieceRight
+		c	Gets the next village component, with the bounding box shifted +1 in the X and Z direction.
+		p	1	p_74894_1_	start	#start, :, ~, startPiece
+		p	2	p_74894_2_	structureComponents	#structureComponents, :, ~, pieces
+		p	3	p_74894_3_	rand	#rand, :, ~, random
+		p	4	p_74894_4_	yOffset	#~, ~, ~, yOffset
+		p	5	p_74894_5_	offset	#~, ~, ~, offset
+	m	(Lnet/minecraft/block/Block;I)I	func_151557_c	updateBlockMetadata	#~, ~, ~, updateBlockMetadata
+		p	1	p_151557_1_	block	#~, ~, ~, block
+		p	2	p_151557_2_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2107_1_	start	#start, :, ~, startPiece
+		p	2	p_i2107_2_	type	#type, :, ~, generationDepth
+	m	()V	<init>	<init>	#~, ~, ~, ~

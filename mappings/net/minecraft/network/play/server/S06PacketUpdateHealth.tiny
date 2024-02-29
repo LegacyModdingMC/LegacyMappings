@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S06PacketUpdateHealth	net/minecraft/network/play/server/S06PacketUpdateHealth	
+	f	F	field_149336_a	health	#health, :, barProgress, health
+	f	I	field_149334_b	foodLevel	#foodLevel, :, xpLevel, hunger
+	f	F	field_149335_c	saturationLevel	#saturationLevel, :, saturation, :
+	m	(FIF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45223_1_	healthIn	#healthIn, :, barProgress, health
+		p	2	p_i45223_2_	foodLevelIn	#foodLevelIn, :, xpLevel, hunger
+		p	3	p_i45223_3_	saturationIn	#saturationIn, :, saturation, :
+	m	()F	func_149332_c	getHealth	#getHealth, :, :, :
+	m	()I	func_149330_d	getFoodLevel	#getFoodLevel, :, getFood, getHunger
+	m	()F	func_149331_e	getSaturationLevel	#getSaturationLevel, :, getSaturation, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

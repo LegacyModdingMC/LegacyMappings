@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/WorldClient$1	net/minecraft/client/multiplayer/WorldClient$1	
+	f	Lnet/minecraft/client/multiplayer/WorldClient;	field_78833_a	theWorldClient	#theWorldClient, :, world, ~
+		c	Reference to the WorldClient object.
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1186_1_	world	#~, ~, world, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

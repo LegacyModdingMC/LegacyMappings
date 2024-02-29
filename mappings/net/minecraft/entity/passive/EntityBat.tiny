@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityBat	net/minecraft/entity/passive/EntityBat	
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_82237_a	spawnPosition	#spawnPosition, :, ~, hangPos
+		c	Coordinates of where the bat spawned.
+	m	(Z)V	func_82236_f	setIsBatHanging	#setIsBatHanging, :, setRoosting, :
+		p	1	p_82236_1_	isHanging	#isHanging, :, ~, roosting
+	m	()Z	func_82235_h	getIsBatHanging	#getIsBatHanging, :, isRoosting, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1680_1_	worldIn	#worldIn, :, ~, world

@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnumEnchantmentType	net/minecraft/enchantment/EnumEnchantmentType	
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	all	all	#~, ~, ALL, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	armor	armor	#~, ~, ARMOR, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	armor_feet	armor_feet	#~, ~, ARMOR_FEET, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	armor_legs	armor_legs	#~, ~, ARMOR_LEGS, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	armor_torso	armor_torso	#~, ~, ARMOR_TORSO, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	armor_head	armor_head	#~, ~, ARMOR_HEAD, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	weapon	weapon	#~, ~, WEAPON, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	digger	digger	#~, ~, DIGGER, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	fishing_rod	fishing_rod	#~, ~, FISHING_ROD, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	breakable	breakable	#~, ~, BREAKABLE, :
+	f	Lnet/minecraft/enchantment/EnumEnchantmentType;	bow	bow	#~, ~, BOW, :
+	f	[Lnet/minecraft/enchantment/EnumEnchantmentType;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Lnet/minecraft/item/Item;)Z	func_77557_a	canEnchantItem	#canEnchantItem, :, isCompatible, canEnchant
+		c	Return true if the item passed can be enchanted by a enchantment of this type.
+		p	1	p_77557_1_	itemIn	#itemIn, :, item, :
+	m	(Ljava/lang/String;)Lnet/minecraft/enchantment/EnumEnchantmentType;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/enchantment/EnumEnchantmentType;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1927_1_	p_i1927_1_	#~, ~, ~, ~
+		p	2	p_i1927_2_	p_i1927_2_	#~, ~, ~, ~

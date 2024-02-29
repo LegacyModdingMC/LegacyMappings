@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandGive	net/minecraft/command/CommandGive	
+	m	()[Ljava/lang/String;	func_71536_c	getPlayers	#getPlayers, :, ~, getPlayerNames
+	m	()V	<init>	<init>	#~, ~, ~, ~

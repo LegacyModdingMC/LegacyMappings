@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemArmor$ArmorMaterial	net/minecraft/item/ItemArmor$ArmorMaterial	
+	f	Lnet/minecraft/item/ItemArmor$ArmorMaterial;	CLOTH	CLOTH	#~, ~, CLOTH, :
+	f	Lnet/minecraft/item/ItemArmor$ArmorMaterial;	CHAIN	CHAIN	#~, ~, CHAIN, :
+	f	Lnet/minecraft/item/ItemArmor$ArmorMaterial;	IRON	IRON	#~, ~, IRON, :
+	f	Lnet/minecraft/item/ItemArmor$ArmorMaterial;	GOLD	GOLD	#~, ~, GOLD, :
+	f	Lnet/minecraft/item/ItemArmor$ArmorMaterial;	DIAMOND	DIAMOND	#~, ~, DIAMOND, :
+	f	I	field_78048_f	maxDamageFactor	#maxDamageFactor, :, ~, durability
+		c	Holds the maximum damage factor (each piece multiply this by it's own value) of the material, this is the item damage (how much can absorb before breaks)
+	f	[I	field_78049_g	damageReductionAmountArray	#damageReductionAmountArray, :, ~, protection
+		c	Holds the damage reduction (each 1 points is half a shield on gui) of each piece of armor (helmet, plate, legs and boots)
+	f	I	field_78055_h	enchantability	#enchantability, :, ~, enchantability
+		c	Return the enchantability factor of the material
+	f	[Lnet/minecraft/item/ItemArmor$ArmorMaterial;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	()I	func_78045_a	getEnchantability	#getEnchantability, :, ~, getEnchantability
+		c	Return the enchantability factor of the material.
+	m	(I)I	func_78046_a	getDurability	#getDurability, :, ~, getDurability
+		c	Returns the durability for a armor slot of for this type.
+		p	1	p_78046_1_	armorType	#armorType, :, ~, slot
+	m	()Lnet/minecraft/item/Item;	func_151685_b	getBaseItemForRepair	#getBaseItemForRepair, getRepairItem, ~, getRepairIngredient
+		c	Get a main crafting component of this Armor Material (example is Items.iron_ingot)
+	m	(I)I	func_78044_b	getDamageReductionAmount	#getDamageReductionAmount, :, ~, getProtection
+		c	Return the damage reduction (each 1 point is a half a shield on gui) of the piece index passed (0 = helmet, 1 = plate, 2 = legs and 3 = boots)
+		p	1	p_78044_1_	armorType	#armorType, :, ~, slot
+	m	(Ljava/lang/String;)Lnet/minecraft/item/ItemArmor$ArmorMaterial;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/item/ItemArmor$ArmorMaterial;	values	values	#~, ~, ~, ~
+	m	(Ljava/lang/String;II[II)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1827_3_	durability	#~, ~, ~, durability
+		p	4	p_i1827_4_	protection	#~, ~, ~, protection
+		p	5	p_i1827_5_	enchantability	#~, ~, ~, enchantability
+		p	1	p_i1827_1_	p_i1827_1_	#~, ~, ~, ~
+		p	2	p_i1827_2_	p_i1827_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/PositionedSoundRecord	net/minecraft/client/audio/PositionedSoundRecord	
+	m	(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/audio/PositionedSoundRecord;	func_147673_a	createPositionedSoundRecord	#createPositionedSoundRecord, create, ~, of
+		p	0	p_147673_0_	soundResource	#soundResource, :, ~, id
+	m	(Lnet/minecraft/util/ResourceLocation;F)Lnet/minecraft/client/audio/PositionedSoundRecord;	func_147674_a	createPositionedSoundRecord	#createPositionedSoundRecord, create, master, of
+		p	0	p_147674_0_	soundResource	#soundResource, :, ~, id
+		p	1	p_147674_1_	pitch	#pitch, :, ~, pitch
+	m	(Lnet/minecraft/util/ResourceLocation;FFF)Lnet/minecraft/client/audio/PositionedSoundRecord;	func_147675_a	createRecordSoundAtPosition	#createRecordSoundAtPosition, create, ~, of
+		p	0	p_147675_0_	soundResource	#soundResource, :, ~, id
+		p	1	p_147675_1_	xPosition	#xPosition, :, ~, x
+		p	2	p_147675_2_	yPosition	#yPosition, :, ~, y
+		p	3	p_147675_3_	zPosition	#zPosition, :, ~, z
+	m	(Lnet/minecraft/util/ResourceLocation;FFFFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45107_1_	soundResource	#soundResource, :, ~, id
+		p	2	p_i45107_2_	volume	#volume, :, ~, volume
+		p	3	p_i45107_3_	pitch	#pitch, :, ~, pitch
+		p	4	p_i45107_4_	xPosition	#xPosition, :, ~, x
+		p	5	p_i45107_5_	yPosition	#yPosition, :, ~, y
+		p	6	p_i45107_6_	zPosition	#zPosition, :, ~, z
+	m	(Lnet/minecraft/util/ResourceLocation;FFZILnet/minecraft/client/audio/ISound$AttenuationType;FFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45108_1_	soundResource	#soundResource, :, ~, id
+		p	2	p_i45108_2_	volume	#volume, :, ~, volume
+		p	3	p_i45108_3_	pitch	#pitch, :, ~, pitch
+		p	4	p_i45108_4_	repeat	#repeat, :, ~, repeat
+		p	5	p_i45108_5_	repeatDelay	#repeatDelay, :, ~, period
+		p	6	p_i45108_6_	attenuationType	#attenuationType, :, ~, attenuation
+		p	7	p_i45108_7_	xPosition	#xPosition, :, ~, x
+		p	8	p_i45108_8_	yPosition	#yPosition, :, ~, y
+		p	9	p_i45108_9_	zPosition	#zPosition, :, ~, z

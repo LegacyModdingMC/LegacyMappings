@@ -1,0 +1,62 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/rcon/RConThreadQuery	net/minecraft/network/rcon/RConThreadQuery	
+	f	J	field_72629_g	lastAuthCheckTime	#lastAuthCheckTime, :, lastQueryTime, :
+		c	The time of the last client auth check
+	f	I	field_72636_h	queryPort	#queryPort, :, :, :
+		c	The RCon query port
+	f	I	field_72637_i	serverPort	#serverPort, :, port, :
+		c	Port the server is running on
+	f	I	field_72634_j	maxPlayers	#maxPlayers, :, maxPlayerCount, :
+		c	The maximum number of players allowed on the server
+	f	Ljava/lang/String;	field_72635_k	serverMotd	#serverMotd, :, motd, :
+		c	The current server message of the day
+	f	Ljava/lang/String;	field_72632_l	worldName	#worldName, :, levelName, :
+		c	The name of the currently loaded world
+	f	Ljava/net/DatagramSocket;	field_72633_m	querySocket	#querySocket, :, socket, :
+		c	The remote socket querying the server
+	f	[B	field_72630_n	buffer	#buffer, :, packetBuffer, :
+		c	A buffer for incoming DatagramPackets
+	f	Ljava/net/DatagramPacket;	field_72631_o	incomingPacket	#incomingPacket, :, currentPacket, :
+		c	Storage for incoming DatagramPackets
+	f	Ljava/util/Map;	field_72644_p	idents	#idents, :, ~, map
+	f	Ljava/lang/String;	field_72643_q	queryHostname	#queryHostname, :, ip, :
+		c	The hostname of this query server
+	f	Ljava/lang/String;	field_72642_r	serverHostname	#serverHostname, :, hostname, :
+		c	The hostname of the running server
+	f	Ljava/util/Map;	field_72641_s	queryClients	#queryClients, :, queries, queryByPacket
+		c	A map of SocketAddress objects to RConThreadQueryAuth objects
+	f	J	field_72640_t	time	#time, :, creationTime, :
+		c	The time that this RConThreadQuery was constructed, from (new Date()).getTime()
+	f	Lnet/minecraft/network/rcon/RConOutputStream;	field_72639_u	output	#output, :, dataStreamHelper, :
+		c	The RConQuery output stream
+	f	J	field_72638_v	lastQueryResponseTime	#lastQueryResponseTime, :, lastResponseTime, :
+		c	The time of the last query response sent
+	m	(Lnet/minecraft/network/rcon/IServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1536_1_	server	#~, ~, server, :
+	m	(Ljava/lang/Exception;)V	func_72623_a	stopWithException	#stopWithException, :, handleIoException, :
+		c	Stops the query server and reports the given Exception
+		p	1	p_72623_1_	exception	#exception, :, e, :
+	m	(Ljava/net/DatagramPacket;)Z	func_72621_a	parseIncomingPacket	#parseIncomingPacket, :, handle, :
+		c	Parses an incoming DatagramPacket, returning true if the packet was valid
+		p	1	p_72621_1_	requestPacket	#requestPacket, :, packet, :
+	m	(Ljava/net/SocketAddress;)[B	func_72625_a	getRequestID	#getRequestID, :, getMessageBytes, :
+		c	Returns the request ID provided by the authorized client
+		p	1	p_72625_1_	address	#address, :, ~, socketAddress
+	m	([BLjava/net/DatagramPacket;)V	func_72620_a	sendResponsePacket	#sendResponsePacket, :, reply, :
+		c	Sends a byte array as a DatagramPacket response to the client who sent the given DatagramPacket
+		p	1	p_72620_1_	data	#data, :, buf, :
+		p	2	p_72620_2_	requestPacket	#requestPacket, :, packet, :
+	m	(Ljava/net/DatagramPacket;)[B	func_72624_b	createQueryResponse	#createQueryResponse, :, createRulesReply, :
+		c	Creates a query response as a byte array for the specified query DatagramPacket
+		p	1	p_72624_1_	requestPacket	#requestPacket, :, packet, :
+	m	(Ljava/net/DatagramPacket;)Ljava/lang/Boolean;	func_72627_c	verifyClientAuth	#verifyClientAuth, :, isValidQuery, :
+		c	Returns true if the client has a valid auth, otherwise false
+		p	1	p_72627_1_	requestPacket	#requestPacket, :, ~, datagramPacket
+	m	(Ljava/net/DatagramPacket;)V	func_72622_d	sendAuthChallenge	#sendAuthChallenge, :, createQuery, :
+		c	Sends an auth challenge DatagramPacket to the client and adds the client to the queryClients map
+		p	1	p_72622_1_	requestPacket	#requestPacket, :, ~, datagramPacket
+	m	()V	func_72628_f	cleanQueryClientsMap	#cleanQueryClientsMap, :, cleanUp, :
+		c	Removes all clients whose auth is no longer valid
+	m	()Z	func_72626_g	initQuerySystem	#initQuerySystem, :, initialize, :
+		c	Initializes the query system by binding it to a port
+	m	()V	run	run	#~, ~, ~, ~

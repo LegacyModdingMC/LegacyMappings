@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/init/Bootstrap$14	net/minecraft/init/Bootstrap$14	
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/RecipesMapExtending	net/minecraft/item/crafting/RecipesMapExtending	
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStainedGlassPane	net/minecraft/block/BlockStainedGlassPane	
+	f	[Lnet/minecraft/util/IIcon;	field_150106_a	SIDE_SPRITES	#~, ~, ~, SIDE_SPRITES
+	f	[Lnet/minecraft/util/IIcon;	field_150105_b	TOP_SPRITES	#~, ~, ~, TOP_SPRITES
+	m	(I)Lnet/minecraft/util/IIcon;	func_150104_b	getTopSprite	#~, ~, ~, getTopSprite
+		p	1	p_150104_1_	color	#~, ~, ~, color
+	m	(I)I	func_150103_c	getDyeColor	#~, ~, ~, getDyeColor
+		p	0	p_150103_0_	id	#~, ~, ~, id
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

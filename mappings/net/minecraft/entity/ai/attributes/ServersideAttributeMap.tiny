@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/ServersideAttributeMap	net/minecraft/entity/ai/attributes/ServersideAttributeMap	
+	f	Ljava/util/Map;	field_111163_c	descriptionToAttributeInstanceMap	#descriptionToAttributeInstanceMap, instancesByName, :, byName
+	f	Ljava/util/Set;	field_111162_d	attributeInstanceSet	#attributeInstanceSet, dirtyInstances, trackedAttributes, tracked
+	m	()Ljava/util/Set;	func_111161_b	getAttributeInstanceSet	#getAttributeInstanceSet, getDirtyInstances, getTrackedAttributes, getTracked
+	m	()Ljava/util/Collection;	func_111160_c	getWatchedAttributes	#getWatchedAttributes, :, buildTrackedAttributesCollection, getTrackable
+	m	()V	<init>	<init>	#~, ~, ~, ~

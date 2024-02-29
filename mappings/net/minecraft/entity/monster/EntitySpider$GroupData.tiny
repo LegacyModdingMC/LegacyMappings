@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntitySpider$GroupData	net/minecraft/entity/monster/EntitySpider$GroupData	
+	f	I	field_111105_a	potionEffectId	#potionEffectId, :, ~, effect
+	m	(Ljava/util/Random;)V	func_111104_a	setRandomEffect	#setRandomEffect, :, ~, setEffect
+		p	1	p_111104_1_	rand	#rand, :, ~, random
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenForest	net/minecraft/world/gen/feature/WorldGenForest	
+	f	Z	field_150531_a	useExtraRandomHeight	#useExtraRandomHeight, :, generateTall, tall
+	m	(ZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45449_1_	notify	#notify, :, emitNeighborBlockUpdates, notifyNeighbors
+		p	2	p_i45449_2_	useExtraRandomHeightIn	#useExtraRandomHeightIn, :, generateTall, tall

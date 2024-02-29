@@ -1,0 +1,49 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityPainting$EnumArt	net/minecraft/entity/item/EntityPainting$EnumArt	
+	f	I	field_75728_z	maxArtTitleLength	#maxArtTitleLength, :, MAX_MOTIVE_LENGTH, SKULL_AND_ROSES_LENGTH
+		c	Holds the maximum length of paintings art title.
+	f	Ljava/lang/String;	field_75702_A	title	#title, :, motive, name
+		c	Painting Title.
+	f	I	field_75703_B	sizeX	#sizeX, :, offsetX, width
+	f	I	field_75704_C	sizeY	#sizeY, :, offsetY, height
+	f	I	field_75699_D	offsetX	#offsetX, :, width, widthOffset
+	f	I	field_75700_E	offsetY	#offsetY, :, height, heightOffset
+	f	[Lnet/minecraft/entity/item/EntityPainting$EnumArt;	$VALUES	$VALUES	#~, ~, ~, ~
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Kebab	Kebab	#~, ~, KEBAB, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Aztec	Aztec	#~, ~, AZTEC, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Alban	Alban	#~, ~, ALBAN, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Aztec2	Aztec2	#~, ~, AZTEC2, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Bomb	Bomb	#~, ~, BOMB, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Plant	Plant	#~, ~, PLANT, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Wasteland	Wasteland	#~, ~, WASTELAND, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Pool	Pool	#~, ~, POOL, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Courbet	Courbet	#~, ~, COURBET, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Sea	Sea	#~, ~, SEA, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Sunset	Sunset	#~, ~, SUNSET, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Creebet	Creebet	#~, ~, CREEBET, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Wanderer	Wanderer	#~, ~, WANDERER, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Graham	Graham	#~, ~, GRAHAM, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Match	Match	#~, ~, MATCH, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Bust	Bust	#~, ~, BUST, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Stage	Stage	#~, ~, STAGE, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Void	Void	#~, ~, VOID, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	SkullAndRoses	SkullAndRoses	#~, ~, SKULL_AND_ROSES, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Wither	Wither	#~, ~, WITHER, WTIHER
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Fighters	Fighters	#~, ~, FIGHTERS, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Pointer	Pointer	#~, ~, POINTER, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Pigscene	Pigscene	#~, ~, PIGSCENE, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	BurningSkull	BurningSkull	#~, ~, BURNING_SKULL, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	Skeleton	Skeleton	#~, ~, SKELETON, :
+	f	Lnet/minecraft/entity/item/EntityPainting$EnumArt;	DonkeyKong	DonkeyKong	#~, ~, DONKEY_KONG, :
+	m	(Ljava/lang/String;ILjava/lang/String;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1598_3_	titleIn	#titleIn, :, name, :
+		p	4	p_i1598_4_	width	#width, :, offsetX, width
+		p	5	p_i1598_5_	height	#height, :, offsetY, height
+		p	6	p_i1598_6_	textureU	#textureU, :, width, widthOffset
+		p	7	p_i1598_7_	textureV	#textureV, :, height, heightOffset
+		p	1	p_i1598_1_	p_i1598_1_	#~, ~, ~, ~
+		p	2	p_i1598_2_	p_i1598_2_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/item/EntityPainting$EnumArt;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/entity/item/EntityPainting$EnumArt;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

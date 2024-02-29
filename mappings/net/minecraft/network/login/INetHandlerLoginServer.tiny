@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/login/INetHandlerLoginServer	net/minecraft/network/login/INetHandlerLoginServer	
+	m	(Lnet/minecraft/network/login/client/C00PacketLoginStart;)V	func_147316_a	processLoginStart	#processLoginStart, :, onHello, handleHello
+		p	1	p_147316_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/login/client/C01PacketEncryptionResponse;)V	func_147315_a	processEncryptionResponse	#processEncryptionResponse, :, onKey, handleKey
+		p	1	p_147315_1_	packetIn	#packetIn, :, packet, :

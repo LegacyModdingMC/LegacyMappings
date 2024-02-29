@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPumpkin	net/minecraft/block/BlockPumpkin	
+	f	Lnet/minecraft/util/IIcon;	field_149986_M	faceSprite	#~, ~, ~, faceSprite
+	f	Z	field_149985_a	lit	#~, ~, ~, lit
+	f	Lnet/minecraft/util/IIcon;	field_149984_b	topSprite	#~, ~, ~, topSprite
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45419_1_	lit	#~, ~, ~, lit

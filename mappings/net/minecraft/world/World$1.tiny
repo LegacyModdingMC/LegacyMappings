@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/World$1	net/minecraft/world/World$1	
+	f	I	field_151302_a	x	#~, ~, ~, x
+	f	I	field_151301_b	z	#~, ~, ~, z
+	f	Lnet/minecraft/world/World;	field_77485_a	theWorld	#theWorld, :, ~, world
+		c	Reference to the World object.
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45365_1_	p_i45365_1_	#~, ~, ~, ~
+		p	2	p_i45365_2_	p_i45365_2_	#~, ~, ~, ~
+		p	3	p_i45365_3_	p_i45365_3_	#~, ~, ~, ~

@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EnumCreatureType	net/minecraft/entity/EnumCreatureType	
+	f	Lnet/minecraft/entity/EnumCreatureType;	monster	monster	#~, ~, MONSTER, :
+	f	Lnet/minecraft/entity/EnumCreatureType;	creature	creature	#~, ~, CREATURE, :
+	f	Lnet/minecraft/entity/EnumCreatureType;	ambient	ambient	#~, ~, AMBIENT, :
+	f	Lnet/minecraft/entity/EnumCreatureType;	waterCreature	waterCreature	#~, ~, WATER_CREATURE, :
+	f	Ljava/lang/Class;	field_75605_d	creatureClass	#creatureClass, :, clazz, type
+		c	The root class of creatures associated with this EnumCreatureType (IMobs for aggressive creatures, EntityAnimals for friendly ones)
+	f	I	field_75606_e	maxNumberOfCreature	#maxNumberOfCreature, :, spawnCap, cap
+	f	Lnet/minecraft/block/material/Material;	field_75603_f	creatureMaterial	#creatureMaterial, :, material, spawnableMaterial
+	f	Z	field_75604_g	isPeacefulCreature	#isPeacefulCreature, :, hostile, peaceful
+		c	A flag indicating whether this creature type is peaceful.
+	f	Z	field_82707_i	isAnimal	#isAnimal, :, breedable, rare
+		c	Whether this creature type is an animal.
+	f	[Lnet/minecraft/entity/EnumCreatureType;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;ILjava/lang/Class;ILnet/minecraft/block/material/Material;ZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1596_3_	creatureClassIn	#creatureClassIn, :, clazz, type
+		p	4	p_i1596_4_	maxNumberOfCreatureIn	#maxNumberOfCreatureIn, :, cap, :
+		p	5	p_i1596_5_	creatureMaterialIn	#creatureMaterialIn, :, material, spawnableMaterial
+		p	6	p_i1596_6_	isPeacefulCreatureIn	#isPeacefulCreatureIn, :, hostile, peaceful
+		p	7	p_i1596_7_	isAnimalIn	#isAnimalIn, :, breedable, rare
+		p	1	p_i1596_1_	p_i1596_1_	#~, ~, ~, ~
+		p	2	p_i1596_2_	p_i1596_2_	#~, ~, ~, ~
+	m	()Ljava/lang/Class;	func_75598_a	getCreatureClass	#getCreatureClass, :, getCategoryClass, getType
+	m	()I	func_75601_b	getMaxNumberOfCreature	#getMaxNumberOfCreature, :, getSpawnCap, getCap
+	m	()Lnet/minecraft/block/material/Material;	func_75600_c	getCreatureMaterial	#getCreatureMaterial, :, getMaterial, getSpawnableMaterial
+	m	()Z	func_75599_d	getPeacefulCreature	#getPeacefulCreature, :, isHostile, isPeaceful
+		c	Gets whether or not this creature type is peaceful.
+	m	()Z	func_82705_e	getAnimal	#getAnimal, :, isBreedable, isRare
+		c	Return whether this creature type is an animal.
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/EnumCreatureType;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/entity/EnumCreatureType;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

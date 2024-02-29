@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/settings/GameSettings$SwitchOptions	net/minecraft/client/settings/GameSettings$SwitchOptions	
+	f	[I	field_151477_a	optionIds	#optionIds, :, ~, ALL
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

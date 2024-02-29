@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiCreateFlatWorld	net/minecraft/client/gui/GuiCreateFlatWorld	
+	f	Lnet/minecraft/client/renderer/entity/RenderItem;	field_146392_a	itemRenderer	#~, ~, ~, itemRenderer
+	f	Lnet/minecraft/client/gui/GuiCreateWorld;	field_146385_f	createWorldGui	#createWorldGui, :, parent, :
+	f	Lnet/minecraft/world/gen/FlatGeneratorInfo;	field_146387_g	theFlatGeneratorInfo	#theFlatGeneratorInfo, generatorInfo, helper, generator
+	f	Ljava/lang/String;	field_146393_h	flatWorldTitle	#flatWorldTitle, :, title, :
+		c	The title given to the flat world currently in creation
+	f	Ljava/lang/String;	field_146394_i	materialText	#materialText, :, tileText, blockText
+		c	The text used to identify the material for a layer
+	f	Ljava/lang/String;	field_146391_r	heightText	#heightText, :, :, :
+		c	The text used to identify the height of a layer
+	f	Lnet/minecraft/client/gui/GuiCreateFlatWorld$Details;	field_146390_s	createFlatWorldListSlotGui	#createFlatWorldListSlotGui, :, ~, layers
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146389_t	addLayerButton	#addLayerButton, :, addLayer, :
+		c	The (unused and permenantly hidden) add layer button
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146388_u	editLayerButton	#editLayerButton, :, editLayer, :
+		c	The (unused and permenantly hidden) edit layer button
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146386_v	removeLayerButton	#removeLayerButton, :, removeLayer, :
+		c	The remove layer button
+	m	(Lnet/minecraft/client/gui/GuiCreateWorld;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1029_1_	createWorldGuiIn	#createWorldGuiIn, :, parent, :
+		p	2	p_i1029_2_	preset	#preset, :, generatorOptions, :
+	m	()Ljava/lang/String;	func_146384_e	getPreset	#getPreset, :, getConfigString, getGeneratorOptions
+		c	Gets the superflat preset in the text format described on the Superflat article on the Minecraft Wiki
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)F	access$100	access$100	#~, ~, ~, getZOffset1
+		p	0	p_access$100_0_	customizeFlatLevelScreen	#~, ~, ~, customizeFlatLevelScreen
+	m	(Ljava/lang/String;)V	func_146383_a	setPreset	#setPreset, :, setConfigHelper, setGeneratorOptions
+		c	Sets the superflat preset. Invalid or null values will result in the default superflat preset being used.
+		p	1	p_146383_1_	preset	#preset, :, config, options
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)F	access$200	access$200	#~, ~, ~, getZOffset2
+		p	0	p_access$200_0_	customizeFlatLevelScreen	#~, ~, ~, customizeFlatLevelScreen
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)F	access$300	access$300	#~, ~, ~, getZOffset3
+		p	0	p_access$300_0_	customizeFlatLevelScreen	#~, ~, ~, customizeFlatLevelScreen
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)F	access$400	access$400	#~, ~, ~, getZOffset4
+		p	0	p_access$400_0_	customizeFlatLevelScreen	#~, ~, ~, customizeFlatLevelScreen
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)Lnet/minecraft/world/gen/FlatGeneratorInfo;	access$500	access$500	#~, ~, ~, getHelper
+		p	0	p_access$500_0_	customizeFlatLevelScreen	#~, ~, ~, customizeFlatLevelScreen
+	m	()V	func_146375_g	onLayersChanged	#onLayersChanged, :, updateButtons, setActive
+		c	Would update whether or not the edit and remove buttons are enabled, but is currently disabled and always disables the buttons (which are invisible anyways)
+	m	()Lnet/minecraft/client/renderer/entity/RenderItem;	access$000	access$000	#~, ~, ~, getItemRenderer
+	m	()Z	func_146382_i	hasSelectedLayer	#hasSelectedLayer, :, hasLayerSelected, isActive
+		c	Returns whether there is a valid layer selection
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

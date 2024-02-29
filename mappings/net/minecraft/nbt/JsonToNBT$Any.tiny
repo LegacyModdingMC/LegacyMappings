@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/JsonToNBT$Any	net/minecraft/nbt/JsonToNBT$Any	
+	f	Ljava/lang/String;	field_150490_a	json	#json, :, key, :
+	m	()Lnet/minecraft/nbt/NBTBase;	func_150489_a	parse	#parse, :, :, getValue
+		c	Parses the JSON string contained in this object.\n@return an {@link NBTBase} which can be safely cast to the type represented by this class.
+	m	()V	<init>	<init>	#~, ~, ~, ~

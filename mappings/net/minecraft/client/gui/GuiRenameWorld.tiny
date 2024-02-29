@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiRenameWorld	net/minecraft/client/gui/GuiRenameWorld	
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146585_a	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146583_f	searchField	#~, ~, searchField, :
+	f	Ljava/lang/String;	field_146584_g	saveName	#saveName, :, levelName, worldName
+	m	(Lnet/minecraft/client/gui/GuiScreen;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1050_1_	parent	#~, ~, parent, :
+		p	2	p_i1050_2_	resourceManagerIn	#resourceManagerIn, :, levelName, worldName

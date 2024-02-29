@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/CombatTracker	net/minecraft/util/CombatTracker	
+	f	Ljava/util/List;	field_94556_a	combatEntries	#combatEntries, :, recentDamage, damageHistory
+		c	The CombatEntry objects that we've tracked so far.
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_94554_b	fighter	#fighter, :, entity, :
+		c	The entity tracked.
+	f	I	field_94555_c	lastDamageTime	#lastDamageTime, :, ageOnLastDamage, :
+	f	I	field_152775_d	combatStartTime	#combatStartTime, :, ageOnLastAttacked, ~
+	f	I	field_152776_e	combatEndTime	#combatEndTime, :, ageOnLastUpdate, ~
+	f	Z	field_94552_d	inCombat	#inCombat, :, recentlyAttacked, :
+	f	Z	field_94553_e	takingDamage	#takingDamage, :, hasDamage, :
+	f	Ljava/lang/String;	field_94551_f	fallSuffix	#fallSuffix, :, fallDeathSuffix, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1565_1_	fighterIn	#fighterIn, :, entity, :
+	m	()V	func_94545_a	calculateFallSuffix	#calculateFallSuffix, :, setFallDeathSuffix, :
+	m	(Lnet/minecraft/util/CombatEntry;)Ljava/lang/String;	func_94548_b	getFallSuffix	#getFallSuffix, :, getFallDeathSuffix, :
+		p	1	p_94548_1_	entry	#entry, :, damageRecord, :
+	m	(Lnet/minecraft/util/DamageSource;FF)V	func_94547_a	trackDamage	#trackDamage, :, onDamage, :
+		c	Adds an entry for the combat tracker
+		p	1	p_94547_1_	damageSrc	#damageSrc, :, damageSource, :
+		p	2	p_94547_2_	healthIn	#healthIn, :, originalHealth, :
+		p	3	p_94547_3_	damageAmount	#damageAmount, :, ~, damage
+	m	()Lnet/minecraft/util/IChatComponent;	func_151521_b	getDeathMessage	#getDeathMessage, :, :, :
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_94550_c	getBestAttacker	#getBestAttacker, :, getLastAttacker, :
+	m	()V	func_94549_h	reset	#reset, :, update, clearDamageHistory
+		c	Resets this trackers list of combat entries
+	m	()Lnet/minecraft/util/CombatEntry;	func_94544_f	getBestCombatEntry	#getBestCombatEntry, :, getBiggestFall, :
+	m	()V	func_94542_g	resetFallSuffix	#resetFallSuffix, :, clearFallDeathSuffix, :

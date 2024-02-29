@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerProfileCache$1	net/minecraft/server/management/PlayerProfileCache$1	
+	f	[Lcom/mojang/authlib/GameProfile;	field_152667_a	field_152667_a	#~, ~, ~, ~
+	m	(Lcom/mojang/authlib/GameProfile;Ljava/lang/Exception;)V	onProfileLookupFailed	onProfileLookupFailed	#~, ~, ~, ~
+		p	1	p_onProfileLookupFailed_1_	profile	#~, ~, ~, profile
+		p	2	p_onProfileLookupFailed_2_	exception	#~, ~, ~, exception
+	m	(Lcom/mojang/authlib/GameProfile;)V	onProfileLookupSucceeded	onProfileLookupSucceeded	#~, ~, ~, ~
+		p	1	p_onProfileLookupSucceeded_1_	profile	#~, ~, ~, profile
+	m	([Lcom/mojang/authlib/GameProfile;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1169_1_	p_i1169_1_	#~, ~, ~, ~

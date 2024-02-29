@@ -1,0 +1,135 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagCompound	net/minecraft/nbt/NBTTagCompound	
+	f	Lorg/apache/logging/log4j/Logger;	field_150301_b	logger	#logger, :, LOGGER, :
+	f	Ljava/util/Map;	field_74784_a	tagMap	#tagMap, :, data, elements
+		c	The key-value pairs for the tag. Each key is a UTF string, each value is a tag.
+	m	(BLjava/lang/String;Ljava/io/DataInput;ILnet/minecraft/nbt/NBTSizeTracker;)Lnet/minecraft/nbt/NBTBase;	func_152449_a	readNBT	#readNBT, :, readNbt, createElement
+		p	0	p_152449_0_	id	#id, :, type, ~
+		p	1	p_152449_1_	key	#key, :, name, ~
+		p	2	p_152449_2_	input	#input, :, :, ~
+		p	3	p_152449_3_	depth	#depth, :, :, ~
+		p	4	p_152449_4_	sizeTracker	#sizeTracker, :, tracker, ~
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Ljava/util/Map;	access$000	access$000	#~, ~, ~, getTags
+		p	0	p_access$000_0_	tag	#~, ~, ~, tag
+	m	(Ljava/io/DataInput;Lnet/minecraft/nbt/NBTSizeTracker;)B	func_152447_a	readType	#readType, :, readByte, :
+		p	0	p_152447_0_	input	#input, :, :, ~
+		p	1	p_152447_1_	sizeTracker	#sizeTracker, :, tracker, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/nbt/NBTBase;	func_74781_a	getTag	#getTag, :, get, :
+		c	gets a generic tag with the specified name
+		p	1	p_74781_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;B)V	func_74774_a	setByte	#setByte, :, putByte, :
+		c	Stores a new NBTTagByte with the given byte value into the map with the given string key.
+		p	1	p_74774_1_	key	#key, :, :, :
+		p	2	p_74774_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;D)V	func_74780_a	setDouble	#setDouble, :, putDouble, :
+		c	Stores a new NBTTagDouble with the given double value into the map with the given string key.
+		p	1	p_74780_1_	key	#key, :, :, :
+		p	2	p_74780_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;F)V	func_74776_a	setFloat	#setFloat, :, putFloat, :
+		c	Stores a new NBTTagFloat with the given float value into the map with the given string key.
+		p	1	p_74776_1_	key	#key, :, :, :
+		p	2	p_74776_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;I)V	func_74768_a	setInteger	#setInteger, :, putInt, :
+		c	Stores a new NBTTagInt with the given integer value into the map with the given string key.
+		p	1	p_74768_1_	key	#key, :, :, :
+		p	2	p_74768_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;ILjava/lang/ClassCastException;)Lnet/minecraft/crash/CrashReport;	func_82581_a	createCrashReport	#createCrashReport, :, addDetailsToCrashReport, createCrashReport
+		c	Create a crash report which indicates a NBT read error.
+		p	1	p_82581_1_	key	#key, :, :, :
+		p	2	p_82581_2_	expectedType	#expectedType, :, id, expectedType
+		p	3	p_82581_3_	ex	#ex, :, :, exception
+	m	(Ljava/lang/String;J)V	func_74772_a	setLong	#setLong, :, putLong, :
+		c	Stores a new NBTTagLong with the given long value into the map with the given string key.
+		p	1	p_74772_1_	key	#key, :, :, :
+		p	2	p_74772_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V	func_74782_a	setTag	#setTag, :, put, :
+		c	Stores the given tag into the map with the given string key. This is mostly used to store tag lists.
+		p	1	p_74782_1_	key	#key, :, :, :
+		p	2	p_74782_2_	value	#value, :, nbt, element
+	m	(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;Ljava/io/DataOutput;)V	func_150298_a	writeEntry	#writeEntry, :, write, writeElement
+		p	0	p_150298_0_	name	#name, :, key, :
+		p	1	p_150298_1_	data	#data, :, nbt, element
+		p	2	p_150298_2_	output	#output, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/String;)V	func_74778_a	setString	#setString, :, putString, :
+		c	Stores a new NBTTagString with the given string value into the map with the given string key.
+		p	1	p_74778_1_	key	#key, :, :, :
+		p	2	p_74778_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;S)V	func_74777_a	setShort	#setShort, :, putShort, :
+		c	Stores a new NBTTagShort with the given short value into the map with the given string key.
+		p	1	p_74777_1_	key	#key, :, :, :
+		p	2	p_74777_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;Z)V	func_74757_a	setBoolean	#setBoolean, :, putBoolean, :
+		c	Stores the given boolean value as a NBTTagByte, storing 1 for true and 0 for false, using the given string key.
+		p	1	p_74757_1_	key	#key, :, :, :
+		p	2	p_74757_2_	value	#value, :, bool, value
+	m	(Ljava/lang/String;[B)V	func_74773_a	setByteArray	#setByteArray, :, putByteArray, :
+		c	Stores a new NBTTagByteArray with the given array as data into the map with the given string key.
+		p	1	p_74773_1_	key	#key, :, :, :
+		p	2	p_74773_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;[I)V	func_74783_a	setIntArray	#setIntArray, :, putIntArray, :
+		c	Stores a new NBTTagIntArray with the given array as data into the map with the given string key.
+		p	1	p_74783_1_	key	#key, :, :, :
+		p	2	p_74783_2_	value	#value, :, :, :
+	m	(Ljava/io/DataInput;Lnet/minecraft/nbt/NBTSizeTracker;)Ljava/lang/String;	func_152448_b	readKey	#readKey, :, readString, :
+		p	0	p_152448_0_	input	#input, :, :, ~
+		p	1	p_152448_1_	sizeTracker	#sizeTracker, :, tracker, ~
+	m	(Ljava/lang/String;)B	func_150299_b	getTagId	#getTagId, :, getType, :
+		c	Gets the ID byte for the given tag key
+		p	1	p_150299_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;I)Z	func_150297_b	hasKey	#hasKey, :, contains, :
+		c	Returns whether the given string has been previously stored as a key in this tag compound as a particular type, denoted by a parameter in the form of an ordinal. If the provided ordinal is 99, this method will match tag types representing numbers.
+		p	1	p_150297_1_	key	#key, :, :, :
+		p	2	p_150297_2_	type	#type, :, :, :
+	m	()Ljava/util/Set;	func_150296_c	getKeySet	#getKeySet, :, getKeys, :
+		c	Gets a set with the names of the keys in the tag compound.
+	m	(Ljava/lang/String;)Z	func_74764_b	hasKey	#hasKey, :, contains, :
+		c	Returns whether the given string has been previously stored as a key in the map.
+		p	1	p_74764_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;I)Lnet/minecraft/nbt/NBTTagList;	func_150295_c	getTagList	#getTagList, :, getList, :
+		c	Gets the NBTTagList object with the given name. Args: name, NBTBase type
+		p	1	p_150295_1_	key	#key, :, :, :
+		p	2	p_150295_2_	type	#type, :, :, :
+	m	()Z	func_82582_d	hasNoTags	#hasNoTags, isEmpty, :, :
+		c	Return whether this compound has no tags.
+	m	(Ljava/lang/String;)B	func_74771_c	getByte	#getByte, :, :, :
+		c	Retrieves a byte value using the specified key, or 0 if no such key was stored.
+		p	1	p_74771_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)S	func_74765_d	getShort	#getShort, :, :, :
+		c	Retrieves a short value using the specified key, or 0 if no such key was stored.
+		p	1	p_74765_1_	key	#key, :, :, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	o	#~, ~, o, ~
+	m	(Ljava/lang/String;)I	func_74762_e	getInteger	#getInteger, :, getInt, :
+		c	Retrieves an integer value using the specified key, or 0 if no such key was stored.
+		p	1	p_74762_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)J	func_74763_f	getLong	#getLong, :, :, :
+		c	Retrieves a long value using the specified key, or 0 if no such key was stored.
+		p	1	p_74763_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)F	func_74760_g	getFloat	#getFloat, :, :, :
+		c	Retrieves a float value using the specified key, or 0 if no such key was stored.
+		p	1	p_74760_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)D	func_74769_h	getDouble	#getDouble, :, :, :
+		c	Retrieves a double value using the specified key, or 0 if no such key was stored.
+		p	1	p_74769_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_74779_i	getString	#getString, :, :, :
+		c	Retrieves a string value using the specified key, or an empty string if no such key was stored.
+		p	1	p_74779_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)[B	func_74770_j	getByteArray	#getByteArray, :, :, :
+		c	Retrieves a byte array using the specified key, or a zero-length array if no such key was stored.
+		p	1	p_74770_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)[I	func_74759_k	getIntArray	#getIntArray, :, :, :
+		c	Retrieves an int array using the specified key, or a zero-length array if no such key was stored.
+		p	1	p_74759_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/nbt/NBTTagCompound;	func_74775_l	getCompoundTag	#getCompoundTag, :, getCompound, :
+		c	Retrieves a NBTTagCompound subtag matching the specified key, or a new empty NBTTagCompound if no such key was stored.
+		p	1	p_74775_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)Z	func_74767_n	getBoolean	#getBoolean, :, :, :
+		c	Retrieves a boolean value using the specified key, or false if no such key was stored. This uses the getByte method.
+		p	1	p_74767_1_	key	#key, :, :, :
+	m	(Ljava/lang/String;)V	func_82580_o	removeTag	#removeTag, :, remove, :
+		c	Remove the specified tag.
+		p	1	p_82580_1_	key	#key, :, :, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

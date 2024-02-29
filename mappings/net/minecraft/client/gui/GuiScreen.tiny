@@ -1,0 +1,106 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreen	net/minecraft/client/gui/GuiScreen	
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146290_a	selectedButton	#selectedButton, :, prevClickedButton, lastClickedButton
+		c	The button that was just pressed.
+	f	I	field_146287_f	eventButton	#eventButton, :, pressedMouseButton, lastButton
+	f	J	field_146288_g	lastMouseEvent	#lastMouseEvent, :, lastClicked, lastUpdateTime
+	f	I	field_146298_h	touchValue	#touchValue, :, touchHeld, multiTouch
+		c	Incremented when the game is in touchscreen mode and the screen is tapped, decremented if the screen isn't tapped. Does not appear to be used.
+	f	Lnet/minecraft/client/renderer/entity/RenderItem;	field_146296_j	itemRender	#itemRender, :, itemRenderer, :
+		c	Holds a instance of RenderItem, used to draw the achievement icons on screen (is based on ItemStack)
+	f	Lnet/minecraft/client/Minecraft;	field_146297_k	mc	#mc, :, client, minecraft
+		c	Reference to the Minecraft object.
+	f	I	field_146294_l	width	#width, :, :, :
+		c	The width of the screen object.
+	f	I	field_146295_m	height	#height, :, :, :
+		c	The height of the screen object.
+	f	Ljava/util/List;	field_146292_n	buttonList	#buttonList, :, buttons, :
+		c	A list of all the buttons in this container.
+	f	Ljava/util/List;	field_146293_o	labelList	#labelList, :, labels, :
+		c	A list of all the labels in this container.
+	f	Z	field_146291_p	allowUserInput	#allowUserInput, :, passEvents, :
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_146289_q	fontRendererObj	#fontRendererObj, fontRenderer, textRenderer, :
+		c	The FontRenderer used by GuiScreen
+	m	(CI)V	func_73869_a	keyTyped	#keyTyped, :, keyPressed, :
+		c	Fired when a key is typed. This is the equivalent of KeyListener.keyTyped(KeyEvent e).
+		p	1	p_73869_1_	typedChar	#typedChar, :, id, chr
+		p	2	p_73869_2_	keyCode	#keyCode, :, code, key
+	m	(IIF)V	func_73863_a	drawScreen	#drawScreen, :, render, :
+		c	Draws the screen and all the components in it.
+		p	1	p_73863_1_	mouseX	#mouseX, :, :, :
+		p	2	p_73863_2_	mouseY	#mouseY, :, :, :
+		p	3	p_73863_3_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(III)V	func_73864_a	mouseClicked	#mouseClicked, :, :, :
+		c	Called when the mouse is clicked.
+		p	1	p_73864_1_	mouseX	#mouseX, :, :, :
+		p	2	p_73864_2_	mouseY	#mouseY, :, :, :
+		p	3	p_73864_3_	mouseButton	#mouseButton, :, button, mouseButton
+	m	(IIIJ)V	func_146273_a	mouseClickMove	#mouseClickMove, :, mouseDragged, :
+		c	Called when a mouse button is pressed and the mouse is moved around. Parameters are : mouseX, mouseY, lastButtonClicked & timeSinceMouseClick.
+		p	1	p_146273_1_	mouseX	#mouseX, :, :, :
+		p	2	p_146273_2_	mouseY	#mouseY, :, :, mouesY
+		p	3	p_146273_3_	clickedMouseButton	#clickedMouseButton, :, button, mouseButton
+		p	4	p_146273_4_	timeSinceLastClick	#timeSinceLastClick, :, mouseLastClicked, duration
+	m	(Lnet/minecraft/item/ItemStack;II)V	func_146285_a	renderToolTip	#renderToolTip, :, renderTooltip, :
+		p	1	p_146285_1_	itemIn	#itemIn, stack, :, :
+		p	2	p_146285_2_	x	#x, :, :, mouseX
+		p	3	p_146285_3_	y	#y, :, :, mouseY
+	m	(Lnet/minecraft/client/Minecraft;II)V	func_146280_a	setWorldAndResolution	#setWorldAndResolution, :, init, :
+		c	Causes the screen to lay out its subcomponents again. This is the equivalent of the Java call Container.validate()
+		p	1	p_146280_1_	mc	#mc, :, client, minecraft
+		p	2	p_146280_2_	width	#width, :, :, :
+		p	3	p_146280_3_	height	#height, :, :, :
+	m	(Lnet/minecraft/client/gui/GuiButton;)V	func_146284_a	actionPerformed	#actionPerformed, :, buttonClicked, :
+		c	Called by the controls from the buttonList when activated. (Mouse pressed for buttons)
+		p	1	p_146284_1_	button	#button, :, :, :
+	m	(Ljava/lang/String;II)V	func_146279_a	drawCreativeTabHoveringText	#drawCreativeTabHoveringText, drawHoveringText, renderTooltip, :
+		c	Draws the text when mouse is over creative inventory tab. Params: current creative tab to be checked, current mouse x position, current mouse y position.
+		p	1	p_146279_1_	tabName	#tabName, text, :, :
+		p	2	p_146279_2_	mouseX	#mouseX, x, :, mouseX
+		p	3	p_146279_3_	mouseY	#mouseY, y, :, mouseY
+	m	(Ljava/util/List;II)V	func_146283_a	drawHoveringText	#drawHoveringText, :, renderTooltip, :
+		c	Draws a List of strings as a tooltip. Every entry is drawn on a seperate line.
+		p	1	p_146283_1_	textLines	#textLines, :, text, :
+		p	2	p_146283_2_	x	#x, :, :, mouseX
+		p	3	p_146283_3_	y	#y, :, :, mouseY
+	m	(ZI)V	func_73878_a	confirmClicked	#confirmClicked, :, confirmResult, :
+		p	1	p_73878_1_	result	#result, :, ~, result
+		p	2	p_73878_2_	id	#id, :, ~, id
+	m	()V	func_73866_w_	initGui	#initGui, :, init, :
+		c	Adds the buttons (and other controls) to the screen in question.
+	m	(III)V	func_146286_b	mouseMovedOrUp	#mouseMovedOrUp, mouseReleased, :, :
+		c	Called when the mouse is moved or a mouse button is released.  Signature: (mouseX, mouseY, which) which==-1 is mouseMove, which==0 or which==1 is mouseUp
+		p	1	p_146286_1_	mouseX	#mouseX, :, :, :
+		p	2	p_146286_2_	mouseY	#mouseY, :, :, :
+		p	3	p_146286_3_	state	#state, :, button, mouseButton
+	m	()V	func_146276_q_	drawDefaultBackground	#drawDefaultBackground, :, renderBackground, :
+		c	Draws either a gradient over the background screen (when it exists) or a flat gradient over background.png
+	m	(I)V	func_146278_c	drawBackground	#drawBackground, :, renderDirtBackground, drawBackgroundTexture
+		c	Draws the background (i is always 0 as of 1.2.2)
+		p	1	p_146278_1_	tint	#tint, :, alpha, offset
+	m	(I)V	func_146270_b	drawWorldBackground	#drawWorldBackground, :, renderBackground, :
+		c	Draws either a gradient over the background world (if there is a world), or a dirt screen if there is no world.\n \nThis method should usually be called before doing any other rendering; otherwise weird results will occur if there is no world, and the world will not be tinted if there is.\n \nDo not call after having already done other rendering, as it will draw over it.\n \n@param tint Used to offset vertical position for the texture in options_background.png, if there is no world (i.e. if {@link #func_146278_c} is called). In vanilla, this is always 0.
+		p	1	p_146270_1_	tint	#tint, :, alpha, offset
+	m	()Z	func_73868_f	doesGuiPauseGame	#doesGuiPauseGame, :, shouldPauseGame, :
+		c	Returns true if this GUI should pause the game when it is displayed in single-player
+	m	()V	func_73876_c	updateScreen	#updateScreen, :, tick, :
+		c	Called from the main game loop to update the screen.
+	m	(Ljava/lang/String;)V	func_146275_d	setClipboardString	#setClipboardString, :, setClipboard, :
+		c	Stores the given string in the system clipboard
+		p	0	p_146275_0_	copyText	#copyText, :, string, text
+	m	()V	func_146274_d	handleMouseInput	#handleMouseInput, :, handleMouse, :
+		c	Handles mouse input.
+	m	()V	func_146282_l	handleKeyboardInput	#handleKeyboardInput, :, handleKeyboard, :
+		c	Handles keyboard input.
+	m	()V	func_146281_b	onGuiClosed	#onGuiClosed, :, removed, :
+		c	Called when the screen is unloaded. Used to disable keyboard repeat events
+	m	()Ljava/lang/String;	func_146277_j	getClipboardString	#getClipboardString, :, getClipboard, :
+		c	Returns a string stored in the system clipboard.
+	m	()V	func_146269_k	handleInput	#handleInput, :, :, handleInputs
+		c	Delegates mouse and keyboard input.
+	m	()Z	func_146271_m	isCtrlKeyDown	#isCtrlKeyDown, :, hasControlDown, isControlDown
+		c	Returns true if either windows ctrl key is down or if either mac meta key is down
+	m	()Z	func_146272_n	isShiftKeyDown	#isShiftKeyDown, :, hasShiftDown, isShiftDown
+		c	Returns true if either shift key is down
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenDemo	net/minecraft/client/gui/GuiScreenDemo	
+	f	Lorg/apache/logging/log4j/Logger;	field_146349_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_146348_f	DEMO_BACKGROUND_LOCATION	#DEMO_BACKGROUND_LOCATION, :, BACKGROUND_TEXTURE, BACKGROUND_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

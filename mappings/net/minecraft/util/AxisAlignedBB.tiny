@@ -1,0 +1,102 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/AxisAlignedBB	net/minecraft/util/AxisAlignedBB	
+	f	D	field_72340_a	minX	#minX, :, :, :
+		c	The minimum X coordinate of this bounding box. Guaranteed to always be less than or equal to {@link #maxX}.
+	f	D	field_72338_b	minY	#minY, :, :, :
+		c	The minimum Y coordinate of this bounding box. Guaranteed to always be less than or equal to {@link #maxY}.
+	f	D	field_72339_c	minZ	#minZ, :, :, :
+		c	The minimum Y coordinate of this bounding box. Guaranteed to always be less than or equal to {@link #maxZ}.
+	f	D	field_72336_d	maxX	#maxX, :, :, :
+		c	The maximum X coordinate of this bounding box. Guaranteed to always be greater than or equal to {@link #minX}.
+	f	D	field_72337_e	maxY	#maxY, :, :, :
+		c	The maximum Y coordinate of this bounding box. Guaranteed to always be greater than or equal to {@link #minY}.
+	f	D	field_72334_f	maxZ	#maxZ, :, :, :
+		c	The maximum Z coordinate of this bounding box. Guaranteed to always be greater than or equal to {@link #minZ}.
+	m	(DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2300_1_	x1	#x1, :, minX, :
+		p	3	p_i2300_3_	y1	#y1, :, minY, :
+		p	5	p_i2300_5_	z1	#z1, :, minZ, :
+		p	7	p_i2300_7_	x2	#x2, :, maxX, :
+		p	9	p_i2300_9_	y2	#y2, :, maxY, :
+		p	11	p_i2300_11_	z2	#z2, :, maxZ, :
+	m	()D	func_72320_b	getAverageEdgeLength	#getAverageEdgeLength, :, getAverage, getAverageSideLength
+		c	Returns the average length of the edges of the bounding box.
+	m	(DDD)Lnet/minecraft/util/AxisAlignedBB;	func_72321_a	addCoord	#addCoord, expand, stretch, grow
+		c	Adds the coordinates to the bounding box extending it if the point lies outside the current ranges. Args: x, y, z
+		p	1	p_72321_1_	x	#x, :, :, dx
+		p	3	p_72321_3_	y	#y, :, :, dy
+		p	5	p_72321_5_	z	#z, :, :, dz
+	m	(DDDDDD)Lnet/minecraft/util/AxisAlignedBB;	func_72330_a	getBoundingBox	#getBoundingBox, :, of, :
+		c	Returns a bounding box with the specified bounds. Args: minX, minY, minZ, maxX, maxY, maxZ
+		p	0	p_72330_0_	x1	#x1, :, minX, :
+		p	2	p_72330_2_	y1	#y1, :, minY, :
+		p	4	p_72330_4_	z1	#z1, :, minZ, :
+		p	6	p_72330_6_	x2	#x2, :, maxX, :
+		p	8	p_72330_8_	y2	#y2, :, maxY, :
+		p	10	p_72330_10_	z2	#z2, :, maxZ, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Lnet/minecraft/util/AxisAlignedBB;	func_111270_a	union	#union, :, :, :
+		p	1	p_111270_1_	other	#other, :, box, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;D)D	func_72316_a	calculateXOffset	#calculateXOffset, :, ~, intersectX
+		c	if instance and the argument bounding boxes overlap in the Y and Z dimensions, calculate the offset between them in the X dimension.  return var2 if the bounding boxes do not overlap or if var2 is closer to 0 then the calculated offset.  Otherwise return the calculated offset.
+		p	1	p_72316_1_	other	#other, :, box, :
+		p	2	p_72316_2_	offsetX	#offsetX, :, ~, limit
+	m	(Lnet/minecraft/util/Vec3;)Z	func_72318_a	isVecInside	#isVecInside, contains, :, :
+		c	Returns if the supplied Vec3D is completely inside the bounding box
+		p	1	p_72318_1_	vec	#vec, :, :, :
+	m	(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/MovingObjectPosition;	func_72327_a	calculateIntercept	#calculateIntercept, :, ~, clip
+		p	1	p_72327_1_	vecA	#vecA, :, vec1, from
+		p	2	p_72327_2_	vecB	#vecB, :, vec2, to
+	m	()Lnet/minecraft/util/AxisAlignedBB;	func_72329_c	copy	#copy, :, ~, copy
+		c	Returns a copy of the bounding box.
+	m	(DDD)Lnet/minecraft/util/AxisAlignedBB;	func_72314_b	expand	#expand, grow, expand, :
+		c	Returns a bounding box expanded by the specified vector (if negative numbers are given it will shrink). Args: x, y, z
+		p	1	p_72314_1_	x	#x, :, :, dx
+		p	3	p_72314_3_	y	#y, :, :, dy
+		p	5	p_72314_5_	z	#z, :, :, dz
+	m	(DDDDDD)Lnet/minecraft/util/AxisAlignedBB;	func_72324_b	setBounds	#setBounds, :, set, :
+		c	Sets the bounds of the bounding box. Args: minX, minY, minZ, maxX, maxY, maxZ
+		p	1	p_72324_1_	x1	#x1, :, minX, :
+		p	3	p_72324_3_	y1	#y1, :, minY, :
+		p	5	p_72324_5_	z1	#z1, :, minZ, :
+		p	7	p_72324_7_	x2	#x2, :, maxX, :
+		p	9	p_72324_9_	y2	#y2, :, maxY, :
+		p	11	p_72324_11_	z2	#z2, :, maxZ, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_72326_a	intersectsWith	#intersectsWith, intersects, :, :
+		c	Returns whether the given bounding box intersects with this one. Args: axisAlignedBB
+		p	1	p_72326_1_	other	#other, :, box, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;D)D	func_72323_b	calculateYOffset	#calculateYOffset, :, ~, intersectY
+		c	if instance and the argument bounding boxes overlap in the X and Z dimensions, calculate the offset between them in the Y dimension.  return var2 if the bounding boxes do not overlap or if var2 is closer to 0 then the calculated offset.  Otherwise return the calculated offset.
+		p	1	p_72323_1_	other	#other, :, box, :
+		p	2	p_72323_2_	offsetY	#offsetY, :, ~, limit
+	m	(Lnet/minecraft/util/Vec3;)Z	func_72333_b	isVecInYZ	#isVecInYZ, :, ~, containsYZ
+		c	Checks if the specified vector is within the YZ dimensions of the bounding box. Args: Vec3D
+		p	1	p_72333_1_	vec	#vec, :, vec3d, vec
+	m	(DDD)Lnet/minecraft/util/AxisAlignedBB;	func_72325_c	getOffsetBoundingBox	#getOffsetBoundingBox, :, ~, move
+		c	Returns a bounding box offseted by the specified vector (if negative numbers are given it will shrink). Args: x, y, z
+		p	1	p_72325_1_	x	#x, :, ~, dx
+		p	3	p_72325_3_	y	#y, :, ~, dy
+		p	5	p_72325_5_	z	#z, :, ~, dz
+	m	(Lnet/minecraft/util/AxisAlignedBB;D)D	func_72322_c	calculateZOffset	#calculateZOffset, :, ~, intersectZ
+		c	if instance and the argument bounding boxes overlap in the Y and X dimensions, calculate the offset between them in the Z dimension.  return var2 if the bounding boxes do not overlap or if var2 is closer to 0 then the calculated offset.  Otherwise return the calculated offset.
+		p	1	p_72322_1_	other	#other, :, box, :
+		p	2	p_72322_2_	offsetZ	#offsetZ, :, ~, limit
+	m	(Lnet/minecraft/util/Vec3;)Z	func_72315_c	isVecInXZ	#isVecInXZ, :, ~, containsXZ
+		c	Checks if the specified vector is within the XZ dimensions of the bounding box. Args: Vec3D
+		p	1	p_72315_1_	vec	#vec, :, vec3d, vec
+	m	(DDD)Lnet/minecraft/util/AxisAlignedBB;	func_72317_d	offset	#offset, :, :, setMoved
+		c	Offsets the current bounding box by the specified coordinates. Args: x, y, z
+		p	1	p_72317_1_	x	#x, :, :, dx
+		p	3	p_72317_3_	y	#y, :, :, dy
+		p	5	p_72317_5_	z	#z, :, :, dz
+	m	(Lnet/minecraft/util/AxisAlignedBB;)V	func_72328_c	setBB	#setBB, :, copyFrom, set
+		c	Sets the bounding box to the same bounds as the bounding box passed in. Args: axisAlignedBB
+		p	1	p_72328_1_	other	#other, :, box, :
+	m	(Lnet/minecraft/util/Vec3;)Z	func_72319_d	isVecInXY	#isVecInXY, :, ~, containsXY
+		c	Checks if the specified vector is within the XY dimensions of the bounding box. Args: Vec3D
+		p	1	p_72319_1_	vec	#vec, :, vec3d, vec
+	m	(DDD)Lnet/minecraft/util/AxisAlignedBB;	func_72331_e	contract	#contract, :, increment, contract
+		c	Returns a bounding box that is inset by the specified amounts
+		p	1	p_72331_1_	x	#x, :, :, dx
+		p	3	p_72331_3_	y	#y, :, :, dy
+		p	5	p_72331_5_	z	#z, :, :, dz
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

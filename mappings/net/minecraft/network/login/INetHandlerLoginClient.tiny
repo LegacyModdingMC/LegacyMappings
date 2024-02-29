@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/login/INetHandlerLoginClient	net/minecraft/network/login/INetHandlerLoginClient	
+	m	(Lnet/minecraft/network/login/server/S02PacketLoginSuccess;)V	func_147390_a	handleLoginSuccess	#handleLoginSuccess, :, onLoginSuccess, handleLoginSuccess
+		p	1	p_147390_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/login/server/S01PacketEncryptionRequest;)V	func_147389_a	handleEncryptionRequest	#handleEncryptionRequest, :, onHello, handleHello
+		p	1	p_147389_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/login/server/S00PacketDisconnect;)V	func_147388_a	handleDisconnect	#handleDisconnect, :, onDisconnect, handleLoginFail
+		p	1	p_147388_1_	packetIn	#packetIn, :, packet, :

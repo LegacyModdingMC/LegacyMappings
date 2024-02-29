@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/TextureMetadataSection	net/minecraft/client/resources/data/TextureMetadataSection	
+	f	Z	field_110482_a	textureBlur	#textureBlur, :, ~, blur
+	f	Z	field_110481_b	textureClamp	#textureClamp, :, ~, clamp
+	f	Ljava/util/List;	field_148536_c	listMipmaps	#listMipmaps, :, ~, mipmaps
+	m	()Z	func_110479_a	getTextureBlur	#getTextureBlur, :, ~, hasBlur
+	m	()Z	func_110480_b	getTextureClamp	#getTextureClamp, :, ~, isClamped
+	m	()Ljava/util/List;	func_148535_c	getListMipmaps	#getListMipmaps, :, ~, getMipmaps
+	m	(ZZLjava/util/List;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45102_1_	blur	#~, ~, ~, blur
+		p	2	p_i45102_2_	clamp	#~, ~, ~, clamp
+		p	3	p_i45102_3_	mipmaps	#~, ~, ~, mipmaps

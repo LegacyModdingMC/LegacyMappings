@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityChest	net/minecraft/tileentity/TileEntityChest	
+	f	Z	field_145984_a	adjacentChestChecked	#adjacentChestChecked, :, neighborChestsChecked, isDoubleChest
+		c	Determines if the check for adjacent chests has taken place.
+	f	Lnet/minecraft/tileentity/TileEntityChest;	field_145992_i	adjacentChestZNeg	#adjacentChestZNeg, :, neighborChestNorth, northNeighbor
+		c	Contains the chest tile located adjacent to this one (if any)
+	f	Lnet/minecraft/tileentity/TileEntityChest;	field_145990_j	adjacentChestXPos	#adjacentChestXPos, :, neighborChestEast, eastNeighbor
+		c	Contains the chest tile located adjacent to this one (if any)
+	f	Lnet/minecraft/tileentity/TileEntityChest;	field_145991_k	adjacentChestXNeg	#adjacentChestXNeg, :, neighborChestWest, westNeighbor
+		c	Contains the chest tile located adjacent to this one (if any)
+	f	Lnet/minecraft/tileentity/TileEntityChest;	field_145988_l	adjacentChestZPos	#adjacentChestZPos, :, neighborChestSouth, southNeighbor
+		c	Contains the chest tile located adjacent to this one (if any)
+	f	F	field_145989_m	lidAngle	#lidAngle, :, animationAngle, animationProgress
+		c	The current angle of the lid (between 0 and 1)
+	f	F	field_145986_n	prevLidAngle	#prevLidAngle, :, animationAnglePrev, lastAnimationProgress
+		c	The angle of the lid last tick
+	f	I	field_145987_o	numPlayersUsing	#numPlayersUsing, :, viewerCount, :
+		c	The number of players currently using this chest
+	f	[Lnet/minecraft/item/ItemStack;	field_145985_p	chestContents	#chestContents, :, inventoryStacks, inventory
+	f	I	field_145983_q	ticksSinceSync	#ticksSinceSync, :, ticksOpen, ticks
+		c	Server sync counter (once per 20 ticks)
+	f	I	field_145982_r	cachedChestType	#cachedChestType, :, type, chestType
+	f	Ljava/lang/String;	field_145981_s	customName	#customName, :, translationKey, customName
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2350_1_	chestType	#chestType, :, type, :
+	m	(III)Z	func_145977_a	isSameTypeChestAt	#isSameTypeChestAt, :, ~, isChestOfSameType
+		c	Test if the block is a chest, with the same type (normal, trapped, ...)
+		p	1	p_145977_1_	x	#~, ~, ~, x
+		p	2	p_145977_2_	y	#~, ~, ~, y
+		p	3	p_145977_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/tileentity/TileEntityChest;I)V	func_145978_a	combineWithNeighbor	#~, ~, ~, combineWithNeighbor
+		p	1	p_145978_1_	neighborChest	#~, ~, ~, neighborChest
+		p	2	p_145978_2_	dir	#~, ~, ~, dir
+	m	(Ljava/lang/String;)V	func_145976_a	setCustomName	#setCustomName, :, setTranslationKeyName, setCustomName
+		p	1	p_145976_1_	name	#name, :, :, :
+	m	()V	func_145979_i	checkForAdjacentChests	#checkForAdjacentChests, :, checkNeighborChests, updateShape
+		c	Performs the check for adjacent chests to determine if this chest is double or not.
+	m	()I	func_145980_j	getChestType	#getChestType, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

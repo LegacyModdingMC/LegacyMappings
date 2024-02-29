@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/RegistrySimple	net/minecraft/util/RegistrySimple	
+	f	Lorg/apache/logging/log4j/Logger;	field_148743_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Map;	field_82596_a	registryObjects	#registryObjects, :, map, entries
+		c	Objects registered on this registry.
+	m	()Ljava/util/Map;	func_148740_a	createUnderlyingMap	#createUnderlyingMap, :, createMap, :
+		c	Creates the Map we will use to map keys to their registered values.
+	m	()Ljava/util/Set;	func_148742_b	getKeys	#getKeys, :, keySet, :
+		c	Gets all the keys recognized by this registry.
+	m	(Ljava/lang/Object;)Z	func_148741_d	containsKey	#containsKey, :, :, :
+		c	Does this registry contain an entry for the given key?
+		p	1	p_148741_1_	key	#key, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/network/NetHandlerLoginServer	net/minecraft/server/network/NetHandlerLoginServer	
+	f	Lnet/minecraft/network/NetworkManager;	field_147333_a	networkManager	#networkManager, :, connection, :
+	f	Ljava/util/concurrent/atomic/AtomicInteger;	field_147331_b	AUTHENTICATOR_THREAD_ID	#AUTHENTICATOR_THREAD_ID, :, authenticatorThreadId, :
+	f	Lorg/apache/logging/log4j/Logger;	field_147332_c	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Random;	field_147329_d	RANDOM	#RANDOM, :, :, :
+	f	[B	field_147330_e	verifyToken	#verifyToken, :, nonce, :
+	f	Lnet/minecraft/server/MinecraftServer;	field_147327_f	server	#server, :, :, :
+	f	Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	field_147328_g	currentLoginState	#currentLoginState, :, ~, stage
+	f	I	field_147336_h	connectionTimer	#connectionTimer, :, loginTicks, ticks
+		c	How long has player been trying to login into the server.
+	f	Lcom/mojang/authlib/GameProfile;	field_147337_i	loginGameProfile	#loginGameProfile, :, profile, :
+	f	Ljava/lang/String;	field_147334_j	serverId	#serverId, :, ~, key
+	f	Ljavax/crypto/SecretKey;	field_147335_k	secretKey	#secretKey, :, :, :
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/network/NetworkManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45298_1_	serverIn	#serverIn, :, server, :
+		p	2	p_i45298_2_	networkManagerIn	#networkManagerIn, :, connection, :
+	m	(Lcom/mojang/authlib/GameProfile;)Lcom/mojang/authlib/GameProfile;	func_152506_a	getOfflineProfile	#getOfflineProfile, :, toOfflineProfile, ~
+		p	1	p_152506_1_	original	#original, :, profile, ~
+	m	(Ljava/lang/String;)V	func_147322_a	closeConnection	#closeConnection, :, disconnect, :
+		p	1	p_147322_1_	reason	#reason, :, ~, reason
+	m	(Lnet/minecraft/server/network/NetHandlerLoginServer;)Lcom/mojang/authlib/GameProfile;	access$000	access$000	#~, ~, ~, getProfile
+		p	0	p_access$000_0_	serverLoginNetworkHandler	#~, ~, ~, serverLoginNetworkHandler
+	m	(Lnet/minecraft/server/network/NetHandlerLoginServer;Lcom/mojang/authlib/GameProfile;)Lcom/mojang/authlib/GameProfile;	access$002	access$002	#~, ~, ~, setProfile
+		p	0	p_access$002_0_	serverLoginNetworkHandler	#~, ~, ~, serverLoginNetworkHandler
+		p	1	p_access$002_1_	gameProfile	#~, ~, ~, gameProfile
+	m	(Lnet/minecraft/server/network/NetHandlerLoginServer;Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;)Lnet/minecraft/server/network/NetHandlerLoginServer$LoginState;	access$502	access$502	#~, ~, ~, setServerState
+		p	0	p_access$502_0_	serverLoginNetworkHandler	#~, ~, ~, serverLoginNetworkHandler
+		p	1	p_access$502_1_	state	#~, ~, ~, state
+	m	(Lnet/minecraft/server/network/NetHandlerLoginServer;)Ljava/lang/String;	access$100	access$100	#~, ~, ~, getServerId
+		p	0	p_access$100_0_	serverLoginNetworkHandler	#~, ~, ~, serverLoginNetworkHandler
+	m	()V	func_147326_c	tryAcceptPlayer	#tryAcceptPlayer, :, acceptPlayer, acceptLogin
+	m	(Lnet/minecraft/server/network/NetHandlerLoginServer;)Lnet/minecraft/server/MinecraftServer;	access$200	access$200	#~, ~, ~, getServer
+		p	0	p_access$200_0_	serverLoginNetworkHandler	#~, ~, ~, serverLoginNetworkHandler
+	m	()Ljava/lang/String;	func_147317_d	getConnectionInfo	#getConnectionInfo, :, :, :
+	m	(Lnet/minecraft/server/network/NetHandlerLoginServer;)Ljavax/crypto/SecretKey;	access$300	access$300	#~, ~, ~, getSecretKey
+		p	0	p_access$300_0_	serverLoginNetworkHandler	#~, ~, ~, serverLoginNetworkHandler
+	m	()Lorg/apache/logging/log4j/Logger;	access$400	access$400	#~, ~, ~, getLogger
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,37 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStairs	net/minecraft/block/BlockStairs	
+	f	I	field_150151_M	modelState	#modelState, :, ~, type
+	f	Z	field_150152_N	hasRaytraced	#hasRaytraced, :, isRayTraced, isCorner
+	f	I	field_150153_O	rayTracePass	#rayTracePass, :, :, stairType
+	f	[[I	field_150150_a	ROTATIONS	#~, ~, ignoredCornersByDirection, ROTATIONS
+		c	Represents an array of corners that are ignored when performing a ray trace of a\nstraight stairs block.\n<p>\nThe numbers stored in the inner arrays refer to the following corners that will\nbe ignored:\n<ul>\n<li>0 - Lower-North-West</li>\n<li>1 - Lower-North-East</li>\n<li>2 - Lower-South-West</li>\n<li>3 - Lower-South-East</li>\n<li>4 - Upper-North-West</li>\n<li>5 - Upper-North-East</li>\n<li>6 - Upper-South-West</li>\n<li>7 - Upper-South-East</li>\n</ul>
+	f	Lnet/minecraft/block/Block;	field_150149_b	modelBlock	#modelBlock, :, block, baseBlock
+	m	(Lnet/minecraft/block/Block;)Z	func_150148_a	isBlockStairs	#isBlockStairs, :, isStairs, isStair
+		c	Checks if a block is stairs
+		p	0	p_150148_0_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/world/IBlockAccess;III)V	func_150147_e	setBaseBounds	#setBaseBounds, :, ~, setBaseShapeForCollisions
+		c	Sets the bounding box for the base of the stairs
+		p	1	p_150147_1_	world	#~, ~, ~, world
+		p	2	p_150147_2_	x	#~, ~, ~, x
+		p	3	p_150147_3_	y	#~, ~, ~, y
+		p	4	p_150147_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_150145_f	isInnerStair	#~, ~, ~, isInnerStair
+		p	1	p_150145_1_	world	#~, ~, ~, world
+		p	2	p_150145_2_	x	#~, ~, ~, x
+		p	3	p_150145_3_	y	#~, ~, ~, y
+		p	4	p_150145_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;IIII)Z	func_150146_f	isStairSameHalfSameFacing	#~, ~, ~, isStairSameHalfSameFacing
+		p	1	p_150146_1_	world	#~, ~, ~, world
+		p	2	p_150146_2_	x	#~, ~, ~, x
+		p	3	p_150146_3_	y	#~, ~, ~, y
+		p	4	p_150146_4_	z	#~, ~, ~, z
+		p	5	p_150146_5_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_150144_g	setStepShapeForCollisions	#~, ~, ~, setStepShapeForCollisions
+		p	1	p_150144_1_	world	#~, ~, ~, world
+		p	2	p_150144_2_	x	#~, ~, ~, x
+		p	3	p_150144_3_	y	#~, ~, ~, y
+		p	4	p_150144_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45428_1_	block	#~, ~, ~, block
+		p	2	p_i45428_2_	type	#~, ~, ~, type
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

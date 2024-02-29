@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/IProgressMeter	net/minecraft/client/gui/IProgressMeter	
+	f	[Ljava/lang/String;	field_146510_b_	lanSearchStates	#lanSearchStates, LOADING_STRINGS, PROGRESS_BAR_STAGES, :
+	m	()V	func_146509_g	doneLoading	#doneLoading, :, onStatsReady, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

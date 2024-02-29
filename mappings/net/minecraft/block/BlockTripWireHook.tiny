@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockTripWireHook	net/minecraft/block/BlockTripWireHook	
+	m	(Lnet/minecraft/world/World;IIII)V	func_150134_a	updateNeighbors	#~, ~, ~, updateNeighbors
+		p	1	p_150134_1_	world	#~, ~, ~, world
+		p	2	p_150134_2_	x	#~, ~, ~, x
+		p	3	p_150134_3_	y	#~, ~, ~, y
+		p	4	p_150134_4_	z	#~, ~, ~, z
+		p	5	p_150134_5_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/world/World;IIIZIZII)V	func_150136_a	updateState	#~, ~, ~, updateState
+		p	1	p_150136_1_	world	#~, ~, ~, world
+		p	2	p_150136_2_	x	#~, ~, ~, x
+		p	3	p_150136_3_	y	#~, ~, ~, y
+		p	4	p_150136_4_	z	#~, ~, ~, z
+		p	5	p_150136_5_	removed	#~, ~, ~, removed
+		p	6	p_150136_6_	metadata	#~, ~, ~, metadata
+		p	7	p_150136_7_	updateNeighbors	#~, ~, ~, updateNeighbors
+		p	8	p_150136_8_	distanceToTripwire	#~, ~, ~, distanceToTripwire
+		p	9	p_150136_9_	tripwireMetadata	#~, ~, ~, tripwireMetadata
+	m	(Lnet/minecraft/world/World;IIIZZZZ)V	func_150135_a	playClickSound	#~, ~, ~, playClickSound
+		p	1	p_150135_1_	world	#~, ~, ~, world
+		p	2	p_150135_2_	x	#~, ~, ~, x
+		p	3	p_150135_3_	y	#~, ~, ~, y
+		p	4	p_150135_4_	z	#~, ~, ~, z
+		p	5	p_150135_5_	attached	#~, ~, ~, attached
+		p	6	p_150135_6_	turnedOn	#~, ~, ~, turnedOn
+		p	7	p_150135_7_	removed	#~, ~, ~, removed
+		p	8	p_150135_8_	turnedOff	#~, ~, ~, turnedOff
+	m	(Lnet/minecraft/world/World;III)Z	func_150137_e	canSurviveOrBreak	#~, ~, ~, canSurviveOrBreak
+		p	1	p_150137_1_	world	#~, ~, ~, world
+		p	2	p_150137_2_	x	#~, ~, ~, x
+		p	3	p_150137_3_	y	#~, ~, ~, y
+		p	4	p_150137_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

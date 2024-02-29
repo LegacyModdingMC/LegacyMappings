@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldManager	net/minecraft/world/WorldManager	
+	f	Lnet/minecraft/server/MinecraftServer;	field_72783_a	mcServer	#mcServer, server, :, :
+		c	Reference to the MinecraftServer object.
+	f	Lnet/minecraft/world/WorldServer;	field_72782_b	theWorldServer	#theWorldServer, world, :, :
+		c	The WorldServer object.
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/WorldServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1517_1_	mcServerIn	#mcServerIn, :, server, :
+		p	2	p_i1517_2_	worldServerIn	#worldServerIn, :, world, :

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S36PacketSignEditorOpen	net/minecraft/network/play/server/S36PacketSignEditorOpen	
+	f	I	field_149133_a	x	#~, ~, ~, x
+	f	I	field_149131_b	y	#~, ~, ~, y
+	f	I	field_149132_c	z	#~, ~, ~, z
+	m	()I	func_149129_c	getX	#~, ~, ~, getX
+	m	()I	func_149128_d	getY	#~, ~, ~, getY
+	m	()I	func_149127_e	getZ	#~, ~, ~, getZ
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45207_1_	x	#~, ~, ~, x
+		p	2	p_i45207_2_	y	#~, ~, ~, y
+		p	3	p_i45207_3_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

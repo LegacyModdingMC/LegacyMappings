@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRedstoneRepeater	net/minecraft/block/BlockRedstoneRepeater	
+	f	[I	field_149974_M	repeaterState	#repeaterState, :, ~, DELAY_SETTINGS
+		c	The states in which the redstone repeater blocks can be.
+	f	[D	field_149973_b	repeaterTorchOffset	#repeaterTorchOffset, :, ~, RANDOM_DISPLAY
+		c	The offsets for the two torches in redstone repeater blocks.
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45424_1_	powered	#powered, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

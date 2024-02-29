@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/RenderEnderCrystal	net/minecraft/client/renderer/tileentity/RenderEnderCrystal	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110787_a	enderCrystalTextures	#enderCrystalTextures, ENDER_CRYSTAL_TEXTURES, TEXTURE, ENDER_CRYSTAL_LOCATION
+	f	Lnet/minecraft/client/model/ModelBase;	field_76995_b	modelEnderCrystal	#modelEnderCrystal, :, model, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

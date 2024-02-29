@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S2FPacketSetSlot	net/minecraft/network/play/server/S2FPacketSetSlot	
+	f	I	field_149179_a	windowId	#windowId, :, syncId, menuId
+	f	I	field_149177_b	slot	#slot, :, :, slotId
+	f	Lnet/minecraft/item/ItemStack;	field_149178_c	item	#item, :, stack, :
+	m	(IILnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45188_1_	windowIdIn	#windowIdIn, :, syncId, menuId
+		p	2	p_i45188_2_	slotIn	#slotIn, :, slot, slotId
+		p	3	p_i45188_3_	itemIn	#itemIn, :, stack, :
+	m	()I	func_149175_c	getWindowId	#getWindowId, :, getSyncId, getMenuId
+	m	()I	func_149173_d	getSlot	#getSlot, :, :, getSlotId
+	m	()Lnet/minecraft/item/ItemStack;	func_149174_e	getStack	#getStack, :, getItemStack, getStack
+	m	()V	<init>	<init>	#~, ~, ~, ~

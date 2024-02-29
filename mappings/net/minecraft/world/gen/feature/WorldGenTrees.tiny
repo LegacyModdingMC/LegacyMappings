@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenTrees	net/minecraft/world/gen/feature/WorldGenTrees	
+	f	I	field_76533_a	minTreeHeight	#minTreeHeight, :, baseHeight, :
+		c	The minimum height of a generated tree.
+	f	Z	field_76531_b	vinesGrow	#vinesGrow, :, generateFeatures, placeVines
+		c	True if this tree should grow Vines.
+	f	I	field_76532_c	metaWood	#metaWood, :, ~, logVariant
+		c	The metadata value of the wood to use in tree generation.
+	f	I	field_76530_d	metaLeaves	#metaLeaves, :, ~, leavesVariant
+		c	The metadata value of the leaves to use in tree generation.
+	m	(Lnet/minecraft/world/World;IIII)V	func_76529_b	growVines	#growVines, :, ~, placeVines
+		c	Grows vines downward from the given block for a given length. Args: World, x, starty, z, vine-length
+		p	1	p_76529_1_	world	#~, ~, ~, world
+		p	2	p_76529_2_	x	#~, ~, ~, x
+		p	3	p_76529_3_	y	#~, ~, ~, y
+		p	4	p_76529_4_	z	#~, ~, ~, z
+		p	5	p_76529_5_	metadata	#~, ~, ~, metadata
+	m	(ZIIIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2028_1_	notifyNeighbors	#~, ~, ~, notifyNeighbors
+		p	2	p_i2028_2_	baseHeight	#~, ~, ~, baseHeight
+		p	3	p_i2028_3_	logVariant	#~, ~, ~, logVariant
+		p	4	p_i2028_4_	leavesVariant	#~, ~, ~, leavesVariant
+		p	5	p_i2028_5_	placeVines	#~, ~, ~, placeVines
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2027_1_	p_i2027_1_	#~, ~, ~, ~

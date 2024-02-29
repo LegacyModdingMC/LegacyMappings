@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/boss/EntityWither$1	net/minecraft/entity/boss/EntityWither$1	
+	m	()V	<init>	<init>	#~, ~, ~, ~

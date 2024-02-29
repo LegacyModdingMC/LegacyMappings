@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerRemoveTooMuchOcean	net/minecraft/world/gen/layer/GenLayerRemoveTooMuchOcean	
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45480_1_	seed	#~, ~, ~, seed
+		p	3	p_i45480_3_	parent	#~, ~, ~, parent

@@ -1,0 +1,72 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Vec3	net/minecraft/util/Vec3	
+	f	D	field_72450_a	xCoord	#xCoord, x, :, :
+		c	X coordinate of Vec3D
+	f	D	field_72448_b	yCoord	#yCoord, y, :, :
+		c	Y coordinate of Vec3D
+	f	D	field_72449_c	zCoord	#zCoord, z, :, :
+		c	Z coordinate of Vec3D
+	m	(DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1108_1_	x	#x, :, :, ~
+		p	3	p_i1108_3_	y	#y, :, :, ~
+		p	5	p_i1108_5_	z	#z, :, :, ~
+	m	()Lnet/minecraft/util/Vec3;	func_72432_b	normalize	#normalize, :, :, :
+		c	Normalizes the vector to a length of 1 (except if it is the zero vector)
+	m	(DDD)Lnet/minecraft/util/Vec3;	func_72443_a	createVectorHelper	#createVectorHelper, :, of, :
+		c	Static method for creating a new Vec3D given the three x,y,z values. This is only called from the other static method which creates and places it in the list.
+		p	0	p_72443_0_	x	#x, :, :, :
+		p	2	p_72443_2_	y	#y, :, :, :
+		p	4	p_72443_4_	z	#z, :, :, :
+	m	(F)V	func_72440_a	rotateAroundX	#rotateAroundX, :, ~, rotateX
+		c	Rotates the vector around the x axis by the specified angle.
+		p	1	p_72440_1_	angle	#angle, :, ~, angle
+	m	(Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;	func_72444_a	subtract	#subtract, subtractReverse, reverseSubtract, subtractFrom
+		c	Returns a new vector with the result of the specified vector minus this.
+		p	1	p_72444_1_	vec	#vec, :, :, :
+	m	()D	func_72433_c	lengthVector	#lengthVector, length, :, :
+		c	Returns the length of the vector.
+	m	(DDD)Lnet/minecraft/util/Vec3;	func_72439_b	setComponents	#setComponents, :, set, subtract
+		c	Sets the x,y,z components of the vector as specified.
+		p	1	p_72439_1_	x	#x, :, :, :
+		p	3	p_72439_3_	y	#y, :, :, :
+		p	5	p_72439_5_	z	#z, :, :, :
+	m	(F)V	func_72442_b	rotateAroundY	#rotateAroundY, :, ~, rotateY
+		c	Rotates the vector around the y axis by the specified angle.
+		p	1	p_72442_1_	angle	#angle, :, ~, angle
+	m	(Lnet/minecraft/util/Vec3;)D	func_72430_b	dotProduct	#dotProduct, :, :, dot
+		p	1	p_72430_1_	vec	#vec, :, :, :
+	m	(Lnet/minecraft/util/Vec3;D)Lnet/minecraft/util/Vec3;	func_72429_b	getIntermediateWithXValue	#getIntermediateWithXValue, :, lerpForX, intermediateWithX
+		c	Returns a new vector with x value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+		p	1	p_72429_1_	vec	#vec, :, other, vec
+		p	2	p_72429_2_	x	#x, :, :, :
+	m	(DDD)Lnet/minecraft/util/Vec3;	func_72441_c	addVector	#addVector, add, :, :
+		c	Adds the specified x,y,z vector components to this vector and returns the resulting vector. Does not change this vector.
+		p	1	p_72441_1_	x	#x, :, :, :
+		p	3	p_72441_3_	y	#y, :, :, :
+		p	5	p_72441_5_	z	#z, :, :, :
+	m	(F)V	func_72446_c	rotateAroundZ	#rotateAroundZ, :, ~, rotateZ
+		c	Rotates the vector around the z axis by the specified angle.
+		p	1	p_72446_1_	angle	#angle, :, ~, angle
+	m	(Lnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;	func_72431_c	crossProduct	#crossProduct, :, :, cross
+		c	Returns a new vector with the result of this vector x the specified vector.
+		p	1	p_72431_1_	vec	#vec, :, :, :
+	m	(Lnet/minecraft/util/Vec3;D)Lnet/minecraft/util/Vec3;	func_72435_c	getIntermediateWithYValue	#getIntermediateWithYValue, :, lerpForY, intermediateWithY
+		c	Returns a new vector with y value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+		p	1	p_72435_1_	vec	#vec, :, other, vec
+		p	2	p_72435_2_	y	#y, :, :, :
+	m	(DDD)D	func_72445_d	squareDistanceTo	#squareDistanceTo, :, squaredDistanceTo, :
+		c	The square of the Euclidean distance between this and the vector of x,y,z components passed in.
+		p	1	p_72445_1_	x	#x, :, :, :
+		p	3	p_72445_3_	y	#y, :, :, :
+		p	5	p_72445_5_	z	#z, :, :, :
+	m	(Lnet/minecraft/util/Vec3;)D	func_72438_d	distanceTo	#distanceTo, :, :, :
+		c	Euclidean distance between this and the specified vector, returned as double.
+		p	1	p_72438_1_	vec	#vec, :, :, :
+	m	(Lnet/minecraft/util/Vec3;D)Lnet/minecraft/util/Vec3;	func_72434_d	getIntermediateWithZValue	#getIntermediateWithZValue, :, lerpForZ, intermediateWithZ
+		c	Returns a new vector with z value equal to the second parameter, along the line between this vector and the passed in vector, or null if not possible.
+		p	1	p_72434_1_	vec	#vec, :, other, vec
+		p	2	p_72434_2_	z	#z, :, :, :
+	m	(Lnet/minecraft/util/Vec3;)D	func_72436_e	squareDistanceTo	#squareDistanceTo, :, squaredDistanceTo, :
+		c	The square of the Euclidean distance between this and the specified vector.
+		p	1	p_72436_1_	vec	#vec, :, :, :
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

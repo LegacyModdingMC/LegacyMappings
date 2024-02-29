@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCompressedPowered	net/minecraft/block/BlockCompressedPowered	
+	m	(Lnet/minecraft/block/material/MapColor;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45416_1_	p_i45416_1_	#~, ~, ~, ~

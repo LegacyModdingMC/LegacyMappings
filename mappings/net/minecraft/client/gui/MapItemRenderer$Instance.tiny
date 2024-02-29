@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/MapItemRenderer$Instance	net/minecraft/client/gui/MapItemRenderer$Instance	
+	f	Lnet/minecraft/client/gui/MapItemRenderer;	field_148244_a	renderer	#~, ~, ~, renderer
+	f	Lnet/minecraft/world/storage/MapData;	field_148242_b	mapData	#mapData, :, ~, mapData
+	f	Lnet/minecraft/client/renderer/texture/DynamicTexture;	field_148243_c	mapTexture	#mapTexture, :, ~, texture
+	f	Lnet/minecraft/util/ResourceLocation;	field_148240_d	location	#location, :, ~, currentTexture
+	f	[I	field_148241_e	mapTextureData	#mapTextureData, :, ~, colors
+	m	()V	func_148236_a	updateMapTexture	#updateMapTexture, :, ~, updateTexture
+		c	Updates a map {@link net.minecraft.client.gui.MapItemRenderer.Instance#mapTexture texture}
+	m	(Lnet/minecraft/client/gui/MapItemRenderer$Instance;)V	access$000	access$000	#~, ~, ~, updateTexture
+		p	0	p_access$000_0_	mapTexture	#~, ~, ~, mapTexture
+	m	(Lnet/minecraft/client/gui/MapItemRenderer$Instance;Z)V	access$100	access$100	#~, ~, ~, draw
+		p	0	p_access$100_0_	texture	#~, ~, ~, texture
+		p	1	p_access$100_1_	inItemFrame	#~, ~, ~, inItemFrame
+	m	(Z)V	func_148237_a	render	#render, :, ~, draw
+		c	Renders map and players to it
+		p	1	p_148237_1_	noOverlayRendering	#noOverlayRendering, :, ~, inItemFrame
+	m	(Lnet/minecraft/client/gui/MapItemRenderer$Instance;)Lnet/minecraft/util/ResourceLocation;	access$300	access$300	#~, ~, ~, getTexture
+		p	0	p_access$300_0_	mapTexture	#~, ~, ~, mapTexture
+	m	(Lnet/minecraft/client/gui/MapItemRenderer;Lnet/minecraft/world/storage/MapData;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i45007_2_	mapdataIn	#mapdataIn, :, ~, mapData
+		p	1	p_i45007_1_	p_i45007_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/MapItemRenderer;Lnet/minecraft/world/storage/MapData;Lnet/minecraft/client/gui/MapItemRenderer$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45008_1_	p_i45008_1_	#~, ~, ~, ~
+		p	2	p_i45008_2_	p_i45008_2_	#~, ~, ~, ~
+		p	3	p_i45008_3_	p_i45008_3_	#~, ~, ~, ~

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDropper	net/minecraft/block/BlockDropper	
+	f	Lnet/minecraft/dispenser/IBehaviorDispenseItem;	field_149947_P	dropBehavior	#dropBehavior, :, BEHAVIOR, dispenseBehavior
+	m	()V	<init>	<init>	#~, ~, ~, ~

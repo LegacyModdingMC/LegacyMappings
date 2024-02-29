@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/WeightedRandomFishable	net/minecraft/util/WeightedRandomFishable	
+	f	Lnet/minecraft/item/ItemStack;	field_150711_b	returnStack	#returnStack, :, stack, :
+	f	F	field_150712_c	maxDamagePercent	#maxDamagePercent, :, damagePercent, damage
+	f	Z	field_150710_d	enchantable	#enchantable, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45317_1_	returnStackIn	#returnStackIn, :, stack, :
+		p	2	p_i45317_2_	itemWeightIn	#itemWeightIn, :, i, weight
+	m	()Lnet/minecraft/util/WeightedRandomFishable;	func_150707_a	setEnchantable	#setEnchantable, :, :, :
+	m	(F)Lnet/minecraft/util/WeightedRandomFishable;	func_150709_a	setMaxDamagePercent	#setMaxDamagePercent, :, setDamagePercent, setDamage
+		p	1	p_150709_1_	maxDamagePercentIn	#maxDamagePercentIn, :, percent, damage
+	m	(Ljava/util/Random;)Lnet/minecraft/item/ItemStack;	func_150708_a	getItemStack	#getItemStack, :, :, :
+		p	1	p_150708_1_	random	#random, :, :, :

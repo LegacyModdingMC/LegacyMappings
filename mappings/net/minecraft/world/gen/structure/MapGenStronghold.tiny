@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenStronghold	net/minecraft/world/gen/structure/MapGenStronghold	
+	f	Ljava/util/List;	field_151546_e	allowedBiomes	#allowedBiomes, :, biomes, validBiomes
+	f	Z	field_75056_f	ranBiomeCheck	#ranBiomeCheck, :, initialized, isValid
+		c	is spawned false and set true once the defined BiomeGenBases were compared with the present ones
+	f	[Lnet/minecraft/world/ChunkCoordIntPair;	field_75057_g	structureCoords	#structureCoords, :, count, positions
+	f	D	field_82671_h	distance	#distance, :, :, :
+	f	I	field_82672_i	spread	#spread, :, :, :
+	m	(Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2068_1_	options	#~, ~, map, options
+	m	()V	<init>	<init>	#~, ~, ~, ~

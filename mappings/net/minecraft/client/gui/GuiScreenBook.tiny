@@ -1,0 +1,54 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenBook	net/minecraft/client/gui/GuiScreenBook	
+	f	Lnet/minecraft/client/gui/GuiScreenBook$NextPageButton;	field_146470_A	buttonNextPage	#buttonNextPage, :, ~, nextPageButton
+	f	Lnet/minecraft/client/gui/GuiScreenBook$NextPageButton;	field_146471_B	buttonPreviousPage	#buttonPreviousPage, :, ~, previousPageButton
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146472_C	buttonDone	#buttonDone, :, doneButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146465_D	buttonSign	#buttonSign, :, signButton, :
+		c	The GuiButton to sign this book.
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146467_E	buttonFinalize	#buttonFinalize, :, finalizeButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146469_F	buttonCancel	#buttonCancel, :, cancelButton, :
+	f	Lorg/apache/logging/log4j/Logger;	field_146473_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_146466_f	bookGuiTextures	#bookGuiTextures, BOOK_GUI_TEXTURES, TEXTURE, BACKGROUND_LOCATION
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_146468_g	editingPlayer	#editingPlayer, :, reader, :
+		c	The player editing the book
+	f	Lnet/minecraft/item/ItemStack;	field_146474_h	bookObj	#bookObj, book, item, book
+	f	Z	field_146475_i	bookIsUnsigned	#bookIsUnsigned, :, writeable, unsigned
+		c	Whether the book is signed or can still be edited
+	f	Z	field_146481_r	bookIsModified	#bookIsModified, :, dirty, :
+		c	Whether the book's title or contents has been modified since being opened
+	f	Z	field_146480_s	bookGettingSigned	#bookGettingSigned, :, signing, :
+		c	Determines if the signing screen is open
+	f	I	field_146479_t	updateCount	#updateCount, :, tickCounter, :
+		c	Update ticks since the gui was opened
+	f	I	field_146478_u	bookImageWidth	#bookImageWidth, :, pageWidth, widthOffset
+	f	I	field_146477_v	bookImageHeight	#bookImageHeight, :, pageHeight, horizontalMargin
+	f	I	field_146476_w	bookTotalPages	#bookTotalPages, :, totalPages, verticalMargin
+	f	I	field_146484_x	currPage	#currPage, :, currentPage, :
+	f	Lnet/minecraft/nbt/NBTTagList;	field_146483_y	bookPages	#bookPages, :, pages, pageList
+	f	Ljava/lang/String;	field_146482_z	bookTitle	#bookTitle, :, title, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/ItemStack;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1080_1_	player	#player, :, :, reader
+		p	2	p_i1080_2_	book	#book, :, item, book
+		p	3	p_i1080_3_	isUnsigned	#isUnsigned, :, writeable, unsigned
+	m	()Lnet/minecraft/util/ResourceLocation;	access$000	access$000	#~, ~, ~, ~
+	m	(Ljava/lang/String;)V	func_146457_a	pageSetCurrent	#pageSetCurrent, :, setPageContent, :
+		c	Sets the text of the current page as determined by currPage
+		p	1	p_146457_1_	pageContent	#~, ~, newContent, pageContent
+	m	(Z)V	func_146462_a	sendBookToServer	#sendBookToServer, :, finalizeBook, :
+		p	1	p_146462_1_	publish	#publish, :, signBook, :
+	m	(CI)V	func_146463_b	keyTypedInBook	#keyTypedInBook, :, keyPressedEditMode, handleBookKeyPresses
+		c	Processes keystrokes when editing the text of a book
+		p	1	p_146463_1_	typedChar	#typedChar, :, character, chr
+		p	2	p_146463_2_	keyCode	#keyCode, :, code, key
+	m	(Ljava/lang/String;)V	func_146459_b	pageInsertIntoCurrent	#pageInsertIntoCurrent, :, writeText, handleClipboardPaste
+		c	Processes any text getting inserted into the current page, enforcing the page size limit
+		p	1	p_146459_1_	content	#~, ~, text, content
+	m	(CI)V	func_146460_c	keyTypedInTitle	#keyTypedInTitle, :, keyPressedSignMode, handleTitleKeyPresses
+		c	Processes keystrokes when editing the title of a book
+		p	1	p_146460_1_	typedChar	#typedChar, :, character, chr
+		p	2	p_146460_2_	keyCode	#keyCode, :, code, key
+	m	()V	func_146464_h	updateButtons	#updateButtons, :, :, :
+	m	()V	func_146461_i	addNewPage	#addNewPage, :, appendNewPage, :
+	m	()Ljava/lang/String;	func_146456_p	pageGetCurrent	#pageGetCurrent, :, getCurrentPageContent, :
+		c	Returns the entire text of the current page as determined by currPage
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

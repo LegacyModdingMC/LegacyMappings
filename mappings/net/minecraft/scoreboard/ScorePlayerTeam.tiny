@@ -1,0 +1,46 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/ScorePlayerTeam	net/minecraft/scoreboard/ScorePlayerTeam	
+	f	Lnet/minecraft/scoreboard/Scoreboard;	field_96677_a	theScoreboard	#theScoreboard, scoreboard, scoreboardInstance, scoreboard
+	f	Ljava/lang/String;	field_96675_b	registeredName	#registeredName, name, :, :
+	f	Ljava/util/Set;	field_96676_c	membershipSet	#membershipSet, :, playerList, members
+		c	A set of all team member usernames.
+	f	Ljava/lang/String;	field_96673_d	teamNameSPT	#teamNameSPT, displayName, :, :
+	f	Ljava/lang/String;	field_96674_e	namePrefixSPT	#namePrefixSPT, prefix, :, :
+	f	Ljava/lang/String;	field_96671_f	colorSuffix	#colorSuffix, suffix, :, :
+	f	Z	field_96672_g	allowFriendlyFire	#allowFriendlyFire, :, friendlyFire, allowFriendlyFire
+	f	Z	field_98301_h	canSeeFriendlyInvisibles	#canSeeFriendlyInvisibles, :, showFriendlyInvisibles, :
+	m	(Lnet/minecraft/scoreboard/Scoreboard;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2308_1_	theScoreboardIn	#theScoreboardIn, scoreboardIn, scoreboard, :
+		p	2	p_i2308_2_	name	#name, :, :, :
+	m	(I)V	func_98298_a	setFriendlyFlags	#setFriendlyFlags, :, setFriendlyFlagsBitwise, unpackFriendlyFlags
+		c	Sets friendly fire and invisibles flags based off of the given bitmask.\n \n@param flags The bitmask.
+		p	1	p_98298_1_	flags	#flags, :, bit, flags
+	m	(Lnet/minecraft/scoreboard/Team;Ljava/lang/String;)Ljava/lang/String;	func_96667_a	formatPlayerName	#formatPlayerName, :, decorateName, getMemberDisplayName
+		c	Returns the player name including the color prefixes and suffixes
+		p	0	p_96667_0_	teamIn	#teamIn, :, team, :
+		p	1	p_96667_1_	string	#string, :, name, member
+	m	(Ljava/lang/String;)V	func_96664_a	setTeamName	#setTeamName, setDisplayName, :, :
+		c	Sets the display name for this team.\n \n@param name The new name for the team (cannot be null or longer than 32 chars)
+		p	1	p_96664_1_	name	#name, :, displayName, :
+	m	(Z)V	func_96660_a	setAllowFriendlyFire	#setAllowFriendlyFire, :, setFriendlyFireAllowed, setAllowFriendlyFire
+		c	Sets whether friendly fire (PVP between members of the team) is allowed.\n \n@param friendlyFire The new value
+		p	1	p_96660_1_	friendlyFire	#friendlyFire, :, :, allowFriendlyFire
+	m	(Ljava/lang/String;)V	func_96666_b	setNamePrefix	#setNamePrefix, setPrefix, :, :
+		c	Sets the prefix applied before the names of members of this team.\n \n@param prefix The new prefix (cannot be null or longer than 16 chars)
+		p	1	p_96666_1_	prefix	#prefix, :, :, :
+	m	(Z)V	func_98300_b	setSeeFriendlyInvisiblesEnabled	#setSeeFriendlyInvisiblesEnabled, :, setShowFriendlyInvisibles, :
+		c	Sets whether members of this team can see other members that are invisible.\n \n@param friendlyInvisibles The new value
+		p	1	p_98300_1_	friendlyInvisibles	#friendlyInvisibles, :, showFriendlyInvisible, showFriendlyInvisibles
+	m	()Ljava/lang/String;	func_96669_c	getTeamName	#getTeamName, getDisplayName, :, :
+		c	Gets the display name for this team.
+	m	(Ljava/lang/String;)V	func_96662_c	setNameSuffix	#setNameSuffix, setSuffix, :, :
+		c	Sets the suffix applied after the names of members of this team.\n \n@param suffix The new suffix (cannot be null or longer than 16 chars)
+		p	1	p_96662_1_	suffix	#suffix, :, :, :
+	m	()Ljava/util/Collection;	func_96670_d	getMembershipCollection	#getMembershipCollection, :, getPlayerList, getMembers
+		c	Gets a collection of all members of this team.
+	m	()Ljava/lang/String;	func_96668_e	getColorPrefix	#getColorPrefix, getPrefix, :, :
+		c	Returns the color prefix for the player's team name
+	m	()Ljava/lang/String;	func_96663_f	getColorSuffix	#getColorSuffix, getSuffix, :, :
+		c	Returns the color suffix for the player's team name
+	m	()I	func_98299_i	getFriendlyFlags	#getFriendlyFlags, :, getFriendlyFlagsBitwise, packFriendlyFlags
+		c	Gets a bitmask containing the friendly fire and invisibles flags.

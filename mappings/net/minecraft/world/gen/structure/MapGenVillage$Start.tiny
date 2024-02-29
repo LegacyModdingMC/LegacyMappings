@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenVillage$Start	net/minecraft/world/gen/structure/MapGenVillage$Start	
+	f	Z	field_75076_c	hasMoreThanTwoComponents	#hasMoreThanTwoComponents, :, ~, valid
+		c	well ... thats what it does
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2092_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i2092_2_	rand	#rand, :, ~, random
+		p	3	p_i2092_3_	x	#x, :, ~, chunkX
+		p	4	p_i2092_4_	z	#z, :, ~, chunkZ
+		p	5	p_i2092_5_	size	#size, :, ~, size
+	m	()V	<init>	<init>	#~, ~, ~, ~

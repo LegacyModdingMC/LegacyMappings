@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C00PacketKeepAlive	net/minecraft/network/play/client/C00PacketKeepAlive	
+	f	I	field_149461_a	key	#key, :, time, timeMillis
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45252_1_	key	#key, :, time, timeMillis
+	m	()I	func_149460_c	getKey	#getKey, :, getTime, getTimeMillis
+	m	()V	<init>	<init>	#~, ~, ~, ~

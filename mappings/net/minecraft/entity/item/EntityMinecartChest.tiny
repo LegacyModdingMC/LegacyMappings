@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityMinecartChest	net/minecraft/entity/item/EntityMinecartChest	
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1714_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1715_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1715_2_	x	#x, :, ~, x
+		p	4	p_i1715_4_	y	#y, :, ~, y
+		p	6	p_i1715_6_	z	#z, :, ~, z

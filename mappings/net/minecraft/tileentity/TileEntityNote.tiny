@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityNote	net/minecraft/tileentity/TileEntityNote	
+	f	B	field_145879_a	note	#note, :, :, :
+		c	Note to play
+	f	Z	field_145880_i	previousRedstoneState	#previousRedstoneState, :, powered, :
+		c	stores the latest redstone state
+	m	()V	func_145877_a	changePitch	#changePitch, :, increaseNote, tunePitch
+		c	change pitch by -> (currentPitch + 1) % 25
+	m	(Lnet/minecraft/world/World;III)V	func_145878_a	triggerNote	#triggerNote, :, ~, playNote
+		c	plays the stored note
+		p	1	p_145878_1_	world	#~, ~, ~, world
+		p	2	p_145878_2_	x	#~, ~, ~, x
+		p	3	p_145878_3_	y	#~, ~, ~, y
+		p	4	p_145878_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

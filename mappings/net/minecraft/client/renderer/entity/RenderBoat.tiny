@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderBoat	net/minecraft/client/renderer/entity/RenderBoat	
+	f	Lnet/minecraft/client/model/ModelBase;	field_76998_a	modelBoat	#modelBoat, :, model, :
+		c	instance of ModelBoat for rendering
+	f	Lnet/minecraft/util/ResourceLocation;	field_110782_f	boatTextures	#boatTextures, BOAT_TEXTURES, TEXTURE, BOAT_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

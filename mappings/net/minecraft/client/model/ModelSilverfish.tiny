@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSilverfish	net/minecraft/client/model/ModelSilverfish	
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78171_a	silverfishBodyParts	#silverfishBodyParts, :, ~, body
+		c	The body parts of the silverfish's model.
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78169_b	silverfishWings	#silverfishWings, :, ~, scales
+		c	The wings (dust-looking sprites) on the silverfish's model.
+	f	[F	field_78170_c	zPlacement	#zPlacement, :, ~, radii
+	f	[[I	field_78167_d	silverfishBoxLength	#silverfishBoxLength, SILVERFISH_BOX_LENGTH, ~, SEGMENT_LOCATIONS
+		c	The widths, heights, and lengths for the silverfish model boxes.
+	f	[[I	field_78168_e	silverfishTexturePositions	#silverfishTexturePositions, SILVERFISH_TEXTURE_POSITIONS, ~, SEGMENT_SIZES
+		c	The texture positions for the silverfish's model's boxes.
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

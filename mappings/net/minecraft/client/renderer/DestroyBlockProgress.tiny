@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/DestroyBlockProgress	net/minecraft/client/renderer/DestroyBlockProgress	
+	f	I	field_73115_a	miningPlayerEntId	#miningPlayerEntId, :, actorNetworkId, id
+		c	entity ID of the player associated with this partially destroyed Block. Used to identify the Blocks in the client Renderer, max 1 per player on a server
+	f	I	field_73113_b	partialBlockX	#partialBlockX, :, ~, x
+	f	I	field_73114_c	partialBlockY	#partialBlockY, :, ~, y
+	f	I	field_73111_d	partialBlockZ	#partialBlockZ, :, ~, z
+	f	I	field_73112_e	partialBlockProgress	#partialBlockProgress, :, stage, progress
+		c	damage ranges from 1 to 10. -1 causes the client to delete the partial block renderer.
+	f	I	field_82745_f	createdAtCloudUpdateTick	#createdAtCloudUpdateTick, :, lastUpdateTick, :
+		c	keeps track of how many ticks this PartiallyDestroyedBlock already exists
+	m	(I)V	func_73107_a	setPartialBlockDamage	#setPartialBlockDamage, :, setStage, setProgress
+		c	inserts damage value into this partially destroyed Block. -1 causes client renderer to delete it, otherwise ranges from 1 to 10
+		p	1	p_73107_1_	damage	#damage, :, stage, progress
+	m	()I	func_73110_b	getPartialBlockX	#getPartialBlockX, :, ~, getX
+	m	(I)V	func_82744_b	setCloudUpdateTick	#setCloudUpdateTick, :, setLastUpdateTick, :
+		c	saves the current Cloud update tick into the PartiallyDestroyedBlock
+		p	1	p_82744_1_	createdAtCloudUpdateTickIn	#createdAtCloudUpdateTickIn, :, lastUpdateTick, :
+	m	()I	func_73109_c	getPartialBlockY	#getPartialBlockY, :, ~, getY
+	m	()I	func_73108_d	getPartialBlockZ	#getPartialBlockZ, :, ~, getZ
+	m	()I	func_73106_e	getPartialBlockDamage	#getPartialBlockDamage, :, getStage, getProgress
+	m	()I	func_82743_f	getCreationCloudUpdateTick	#getCreationCloudUpdateTick, :, getLastUpdateTick, :
+		c	retrieves the 'date' at which the PartiallyDestroyedBlock was created
+	m	(IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1511_1_	entityId	#~, ~, ~, entityId
+		p	2	p_i1511_2_	x	#~, ~, ~, x
+		p	3	p_i1511_3_	y	#~, ~, ~, y
+		p	4	p_i1511_4_	z	#~, ~, ~, z

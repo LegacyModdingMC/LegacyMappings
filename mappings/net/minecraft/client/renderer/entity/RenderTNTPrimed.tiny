@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderTNTPrimed	net/minecraft/client/renderer/entity/RenderTNTPrimed	
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_76993_a	blockRenderer	#blockRenderer, :, ~, blockRenderer
+	m	()V	<init>	<init>	#~, ~, ~, ~

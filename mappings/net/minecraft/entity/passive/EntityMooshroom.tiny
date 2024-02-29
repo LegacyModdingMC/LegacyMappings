@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityMooshroom	net/minecraft/entity/passive/EntityMooshroom	
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1687_1_	worldIn	#worldIn, :, ~, ~

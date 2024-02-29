@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/ChunkLoader$AnvilConverterData	net/minecraft/world/chunk/storage/ChunkLoader$AnvilConverterData	
+	f	J	field_76698_a	lastUpdated	#lastUpdated, :, ~, lastUpdate
+	f	Z	field_76696_b	terrainPopulated	#terrainPopulated, :, ~, terrainPopulated
+	f	[B	field_76697_c	heightmap	#heightmap, :, ~, heightMap
+	f	Lnet/minecraft/world/chunk/storage/NibbleArrayReader;	field_76694_d	blockLight	#blockLight, :, ~, blockLight
+	f	Lnet/minecraft/world/chunk/storage/NibbleArrayReader;	field_76695_e	skyLight	#skyLight, :, ~, skyLight
+	f	Lnet/minecraft/world/chunk/storage/NibbleArrayReader;	field_76692_f	data	#data, :, ~, data
+	f	[B	field_76693_g	blocks	#blocks, :, ~, blocks
+	f	Lnet/minecraft/nbt/NBTTagList;	field_76702_h	entities	#entities, :, ~, entities
+	f	Lnet/minecraft/nbt/NBTTagList;	field_151564_i	tileEntities	#tileEntities, :, ~, tileEntities
+	f	Lnet/minecraft/nbt/NBTTagList;	field_151563_j	tileTicks	#tileTicks, :, ~, tileTicks
+	f	I	field_76701_k	x	#x, :, ~, chunkX
+	f	I	field_76699_l	z	#z, :, ~, chunkZ
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1999_1_	xIn	#xIn, :, ~, chunkX
+		p	2	p_i1999_2_	zIn	#zIn, :, ~, chunkZ

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandClearInventory	net/minecraft/command/CommandClearInventory	
+	m	()[Ljava/lang/String;	func_147209_d	getPlayerNames	#~, ~, ~, getPlayerNames
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntity$2	net/minecraft/tileentity/TileEntity$2	
+	f	Lnet/minecraft/tileentity/TileEntity;	field_150832_a	anonBlockEntity	#~, ~, blockEntity, anonBlockEntity
+	m	(Lnet/minecraft/tileentity/TileEntity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45439_1_	blockEntity	#~, ~, blockEntity, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

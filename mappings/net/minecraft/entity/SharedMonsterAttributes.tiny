@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/SharedMonsterAttributes	net/minecraft/entity/SharedMonsterAttributes	
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_111267_a	maxHealth	#maxHealth, MAX_HEALTH, GENERIC_MAX_HEALTH, MAX_HEALTH
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_111265_b	followRange	#followRange, FOLLOW_RANGE, GENERIC_FOLLOW_RANGE, FOLLOW_RANGE
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_111266_c	knockbackResistance	#knockbackResistance, KNOCKBACK_RESISTANCE, GENERIC_KNOCKBACK_RESISTANCE, KNOCKBACK_RESISTANCE
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_111263_d	movementSpeed	#movementSpeed, MOVEMENT_SPEED, GENERIC_MOVEMENT_SPEED, MOVEMENT_SPEED
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_111264_e	attackDamage	#attackDamage, ATTACK_DAMAGE, GENERIC_ATTACK_DAMAGE, ATTACK_DAMAGE
+	f	Lorg/apache/logging/log4j/Logger;	field_151476_f	logger	#logger, LOGGER, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/entity/ai/attributes/AttributeModifier;	func_111259_a	readAttributeModifierFromNBT	#readAttributeModifierFromNBT, :, fromNbt, :
+		c	Creates an AttributeModifier from an NBTTagCompound
+		p	0	p_111259_0_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/entity/ai/attributes/IAttributeInstance;)Lnet/minecraft/nbt/NBTTagCompound;	func_111261_a	writeAttributeInstanceToNBT	#writeAttributeInstanceToNBT, :, toNbt, :
+		c	Creates an NBTTagCompound from an AttributeInstance, including its AttributeModifiers
+		p	0	p_111261_0_	instance	#instance, :, :, :
+	m	(Lnet/minecraft/entity/ai/attributes/IAttributeInstance;Lnet/minecraft/nbt/NBTTagCompound;)V	func_111258_a	applyModifiersToAttributeInstance	#applyModifiersToAttributeInstance, :, fromNbt, readNbt
+		p	0	p_111258_0_	instance	#instance, :, :, :
+		p	1	p_111258_1_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/entity/ai/attributes/AttributeModifier;)Lnet/minecraft/nbt/NBTTagCompound;	func_111262_a	writeAttributeModifierToNBT	#writeAttributeModifierToNBT, :, toNbt, :
+		c	Creates an NBTTagCompound from an AttributeModifier
+		p	0	p_111262_0_	modifier	#modifier, :, :, :
+	m	(Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;)Lnet/minecraft/nbt/NBTTagList;	func_111257_a	writeBaseAttributeMapToNBT	#writeBaseAttributeMapToNBT, :, toNbt, :
+		c	Creates an NBTTagList from a BaseAttributeMap, including all its AttributeInstances
+		p	0	p_111257_0_	map	#map, :, container, :
+	m	(Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;Lnet/minecraft/nbt/NBTTagList;)V	func_151475_a	setAttributeModifiers	#setAttributeModifiers, :, fromNbt, readNbt
+		p	0	p_151475_0_	map	#map, :, container, :
+		p	1	p_151475_1_	list	#list, :, nbt, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

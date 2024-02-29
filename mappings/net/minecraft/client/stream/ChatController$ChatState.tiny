@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/ChatController$ChatState	net/minecraft/client/stream/ChatController$ChatState	
+	f	Lnet/minecraft/client/stream/ChatController$ChatState;	Uninitialized	Uninitialized	#~, ~, UNINITIALIZED, :
+	f	Lnet/minecraft/client/stream/ChatController$ChatState;	Initialized	Initialized	#~, ~, INITIALIZED, :
+	f	Lnet/minecraft/client/stream/ChatController$ChatState;	Connecting	Connecting	#~, ~, CONNECTING, :
+	f	Lnet/minecraft/client/stream/ChatController$ChatState;	Connected	Connected	#~, ~, CONNECTED, :
+	f	Lnet/minecraft/client/stream/ChatController$ChatState;	Disconnected	Disconnected	#~, ~, DISCONNECTED, :
+	f	[Lnet/minecraft/client/stream/ChatController$ChatState;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/client/stream/ChatController$ChatState;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/client/stream/ChatController$ChatState;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1021_1_	stateName	#stateName, :, ~, ~
+		p	2	p_i1021_2_	id	#id, :, ~, ~

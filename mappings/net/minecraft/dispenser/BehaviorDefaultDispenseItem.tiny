@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/BehaviorDefaultDispenseItem	net/minecraft/dispenser/BehaviorDefaultDispenseItem	
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;ILnet/minecraft/util/EnumFacing;Lnet/minecraft/dispenser/IPosition;)V	func_82486_a	doDispense	#doDispense, :, spawnItem, :
+		p	0	p_82486_0_	worldIn	#worldIn, :, world, :
+		p	1	p_82486_1_	stack	#stack, :, :, :
+		p	2	p_82486_2_	speed	#speed, :, offset, :
+		p	3	p_82486_3_	facing	#facing, :, side, facing
+		p	4	p_82486_4_	position	#position, :, pos, :
+	m	(Lnet/minecraft/dispenser/IBlockSource;)V	func_82485_a	playDispenseSound	#playDispenseSound, :, playSound, :
+		c	Play the dispense sound from the specified block.
+		p	1	p_82485_1_	source	#source, :, pointer, source
+	m	(Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/util/EnumFacing;)V	func_82489_a	spawnDispenseParticles	#spawnDispenseParticles, :, spawnParticles, doWorldEvent
+		c	Order clients to display dispense particles from the specified block and facing.
+		p	1	p_82489_1_	source	#source, :, pointer, source
+		p	2	p_82489_2_	facingIn	#facingIn, :, side, facing
+	m	(Lnet/minecraft/util/EnumFacing;)I	func_82488_a	getWorldEventDataFrom	#getWorldEventDataFrom, :, getDataFromDirection, toInt
+		p	1	p_82488_1_	facingIn	#facingIn, :, dir, :
+	m	(Lnet/minecraft/dispenser/IBlockSource;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;	func_82487_b	dispenseStack	#dispenseStack, :, dispenseSilently, dispenseItem
+		c	Dispense the specified stack, play the dispense sound and spawn particles.
+		p	1	p_82487_1_	source	#source, :, pointer, source
+		p	2	p_82487_2_	stack	#stack, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

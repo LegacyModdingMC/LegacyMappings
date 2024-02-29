@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemDye	net/minecraft/item/ItemDye	
+	f	[Ljava/lang/String;	field_150923_a	dyeColorNames	#dyeColorNames, :, ~, TRANSLATION_KEYS
+	f	[Ljava/lang/String;	field_150921_b	dyeIcons	#dyeIcons, :, ~, COLOR_NAMES
+	f	[I	field_150922_c	dyeColors	#dyeColors, DYE_COLORS, COLORS, :
+	f	[Lnet/minecraft/util/IIcon;	field_150920_d	dyeIconArray	#dyeIconArray, :, ~, itemSprites
+		c	Contains all dye icons, parsed from ItemDye.dyeIcons
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;III)Z	func_150919_a	fertilize	#~, ~, ~, fertilize
+		p	0	p_150919_0_	stack	#stack, :, ~, stack
+		p	1	p_150919_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150919_2_	x	#x, :, ~, x
+		p	3	p_150919_3_	y	#y, :, ~, y
+		p	4	p_150919_4_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;IIII)V	func_150918_a	spawnParticles	#~, ~, ~, spawnParticles
+		p	0	p_150918_0_	world	#~, ~, ~, world
+		p	1	p_150918_1_	x	#~, ~, ~, x
+		p	2	p_150918_2_	y	#~, ~, ~, y
+		p	3	p_150918_3_	z	#~, ~, ~, z
+		p	4	p_150918_4_	color	#~, ~, ~, color
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

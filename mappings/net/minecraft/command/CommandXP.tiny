@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandXP	net/minecraft/command/CommandXP	
+	m	()[Ljava/lang/String;	func_71542_c	getAllUsernames	#getAllUsernames, :, ~, getPlayerNames
+	m	()V	<init>	<init>	#~, ~, ~, ~

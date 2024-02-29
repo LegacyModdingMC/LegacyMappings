@@ -1,0 +1,317 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityLivingBase	net/minecraft/entity/EntityLivingBase	
+	f	I	field_70725_aQ	deathTime	#deathTime, :, :, :
+		c	The amount of time remaining this entity should act 'dead', i.e. have a corpse in the world.
+	f	I	field_70724_aR	attackTime	#attackTime, :, ~, attackTime
+	f	F	field_70732_aI	prevSwingProgress	#prevSwingProgress, :, lastHandSwingProgress, :
+	f	F	field_70733_aJ	swingProgress	#swingProgress, :, handSwingProgress, :
+	f	F	field_70722_aY	prevLimbSwingAmount	#prevLimbSwingAmount, :, ~, prevHandSwingAmount
+	f	F	field_70721_aZ	limbSwingAmount	#limbSwingAmount, :, ~, handSwingAmount
+	f	F	field_70754_ba	limbSwing	#limbSwing, :, ~, handSwing
+		c	Only relevant when limbYaw is not 0(the entity is moving). Influences where in its swing legs and arms currently are.
+	f	I	field_70771_an	maxHurtResistantTime	#maxHurtResistantTime, :, defaultMaxHealth, :
+	f	F	field_70727_aS	prevCameraPitch	#prevCameraPitch, :, ~, prevCameraPitch
+	f	F	field_70726_aT	cameraPitch	#cameraPitch, :, ~, cameraPitch
+	f	F	field_70769_ao	randomUnused2	#randomUnused2, :, randomLargeSeed, :
+		c	An unused random value set in the constructor to a random number between 0 and 12398
+	f	F	field_70770_ap	randomUnused1	#randomUnused1, :, randomSmallSeed, :
+		c	An unused random value set in the constructor to a random number between .01 and .02
+	f	F	field_70761_aq	renderYawOffset	#renderYawOffset, :, bodyYaw, :
+	f	F	field_70760_ar	prevRenderYawOffset	#prevRenderYawOffset, :, prevBodyYaw, :
+	f	F	field_70759_as	rotationYawHead	#rotationYawHead, :, headYaw, :
+		c	Entity head rotation yaw
+	f	F	field_70758_at	prevRotationYawHead	#prevRotationYawHead, :, prevHeadYaw, :
+		c	Entity head rotation yaw at previous tick
+	f	F	field_70747_aH	jumpMovementFactor	#jumpMovementFactor, :, flyingSpeed, airSpeed
+		c	A factor used to determine how far this entity will move each tick if it is jumping or falling.
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_70717_bb	attackingPlayer	#attackingPlayer, :, :, :
+		c	The most recent player that has attacked this entity
+	f	I	field_70718_bc	recentlyHit	#recentlyHit, :, playerHitTimer, :
+		c	Set to 60 when hit by the player or the player's wolf, then decrements. Used to determine whether the entity should drop items on death.
+	f	Z	field_70729_aU	dead	#dead, :, :, :
+		c	This gets set on entity death, but never used. Looks like a duplicate of isDead
+	f	I	field_70708_bq	entityAge	#entityAge, idleTime, despawnCounter, despawnTicks
+		c	The age of this EntityLiving (used to determine when it dies)
+	f	F	field_70768_au	prevOnGroundSpeedFactor	#prevOnGroundSpeedFactor, :, prevStepBobbingAmount, :
+	f	F	field_110154_aX	onGroundSpeedFactor	#onGroundSpeedFactor, :, stepBobbingAmount, :
+	f	F	field_70764_aw	movedDistance	#movedDistance, :, distanceTravelled, :
+	f	F	field_70763_ax	prevMovedDistance	#prevMovedDistance, :, prevDistanceTravelled, :
+	f	F	field_70741_aB	unused180	#unused180, :, ~, halfCircleDegrees
+		c	An unused field that is set to 180 in the constructor of EntityPlayer (and otherwise is 0)
+	f	Z	field_82175_bq	isSwingInProgress	#isSwingInProgress, :, handSwinging, :
+		c	Whether an arm swing is currently in progress.
+	f	I	field_110158_av	swingProgressInt	#swingProgressInt, :, handSwingTicks, :
+	f	I	field_70720_be	arrowHitTimer	#arrowHitTimer, :, ~, arrowDespawnTimer
+	f	F	field_70735_aL	prevHealth	#prevHealth, :, ~, lastHealth
+	f	I	field_70737_aN	hurtTime	#hurtTime, :, :, :
+		c	The amount of time remaining this entity should act 'hurt'. (Visual appearance of red tint)
+	f	I	field_70738_aO	maxHurtTime	#maxHurtTime, :, :, hurtAnimationTicks
+		c	What the hurt time was max set to last.
+	f	F	field_70739_aP	attackedAtYaw	#attackedAtYaw, :, knockbackVelocity, :
+		c	The yaw at which this entity was last attacked from.
+	f	Ljava/util/UUID;	field_110156_b	sprintingSpeedBoostModifierUUID	#sprintingSpeedBoostModifierUUID, SPRINTING_SPEED_BOOST_ID, :, SPRINTING_SPEED_MODIFIER_ID
+	f	I	field_70744_aE	scoreValue	#scoreValue, :, ~, mobValue
+		c	The score value of the Mob, the amount of points the mob is worth.
+	f	F	field_110153_bc	lastDamage	#lastDamage, :, ~, damageAmount
+		c	Damage taken in the last hit. Mobs are resistant to damage less than this for a short time after taking damage.
+	f	Z	field_70703_bu	isJumping	#isJumping, :, jumping, :
+		c	used to check whether entity is jumping.
+	f	F	field_70702_br	moveStrafing	#moveStrafing, :, sidewaysSpeed, :
+	f	F	field_70701_bs	moveForward	#moveForward, moveVertical, forwardSpeed, :
+	f	F	field_70704_bt	randomYawVelocity	#randomYawVelocity, :, ~, randomYaw
+	f	I	field_70716_bi	newPosRotationIncrements	#newPosRotationIncrements, :, bodyTrackingIncrements, :
+		c	The number of updates over which the new position and rotation are to be applied to the entity.
+	f	D	field_70709_bj	newPosX	#newPosX, interpTargetPitch, serxerX, serverX
+		c	The new X position to be applied to the entity.
+	f	D	field_70710_bk	newPosY	#newPosY, :, serverY, :
+		c	The new Y position to be applied to the entity.
+	f	D	field_110152_bk	newPosZ	#newPosZ, :, serverZ, :
+	f	D	field_70712_bm	newRotationYaw	#newRotationYaw, :, serverYaw, :
+		c	The new yaw rotation to be applied to the entity.
+	f	D	field_70705_bn	newRotationPitch	#newRotationPitch, :, serverPitch, :
+		c	The new yaw rotation to be applied to the entity.
+	f	I	field_70756_c	revengeTimer	#revengeTimer, :, lastAttackedTime, :
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_110150_bn	lastAttacker	#lastAttacker, lastAttackedEntity, attacking, attackTarget
+		c	The target that this entity is currently attacking.
+	f	I	field_142016_bo	lastAttackerTime	#lastAttackerTime, lastAttackedEntityTime, lastAttackTime, :
+		c	Holds the value of ticksExisted when setLastAttacker was last called.
+	f	F	field_70746_aG	landMovementFactor	#landMovementFactor, :, movementSpeed, :
+		c	A factor used to determine how far this entity will move each tick if it is walking on land. Adjusted by speed, and slipperiness of the current block.
+	f	I	field_70773_bE	jumpTicks	#jumpTicks, :, jumpingCooldown, :
+		c	Number of ticks since last jump
+	f	F	field_110151_bq	absorptionAmount	#absorptionAmount, :, :, absorption
+	f	Lnet/minecraft/entity/ai/attributes/AttributeModifier;	field_110157_c	sprintingSpeedBoostModifier	#sprintingSpeedBoostModifier, SPRINTING_SPEED_BOOST, SPRINTING_SPEED_MODIFIER, :
+	f	Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;	field_110155_d	attributeMap	#attributeMap, :, attributeContainer, attributes
+	f	Lnet/minecraft/util/CombatTracker;	field_94063_bt	_combatTracker	#_combatTracker, combatTracker, damageTracker, :
+	f	Ljava/util/HashMap;	field_70713_bf	activePotionsMap	#activePotionsMap, :, ~, statusEffects
+	f	[Lnet/minecraft/item/ItemStack;	field_82180_bT	previousEquipment	#previousEquipment, :, equippedItems, :
+		c	The equipment this mob was previously wearing, used for syncing.
+	f	Z	field_70752_e	potionsNeedUpdate	#potionsNeedUpdate, :, effectsChanged, :
+		c	Whether the DataWatcher needs to be updated with the active potions
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_70755_b	entityLivingToAttack	#entityLivingToAttack, revengeTarget, attacker, :
+		c	is only being set, has no uses as of MC 1.1
+	m	(DDD)V	func_70634_a	setPositionAndUpdate	#setPositionAndUpdate, :, ~, teleport
+		c	Sets the position of the entity, keeps yaw/pitch,  and updates the 'last' variables
+		p	1	p_70634_1_	x	#x, :, ~, x
+		p	3	p_70634_3_	y	#y, :, ~, y
+		p	5	p_70634_5_	z	#z, :, ~, z
+	m	(DF)Lnet/minecraft/util/MovingObjectPosition;	func_70614_a	rayTrace	#rayTrace, :, ~, rayTrace
+		c	Performs a ray trace for the distance specified and using the partial tick time. Args: distance, partialTickTime
+		p	1	p_70614_1_	distance	#~, ~, ~, distance
+		p	3	p_70614_3_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/item/ItemStack;)V	func_70669_a	renderBrokenItemStack	#renderBrokenItemStack, :, ~, renderBrokenItem
+		c	Renders broken item particles using the given ItemStack
+		p	1	p_70669_1_	stack	#stack, :, :, itemStack
+	m	(Lnet/minecraft/scoreboard/Team;)Z	func_142012_a	isOnTeam	#isOnTeam, :, isInTeam, :
+		c	Returns true if the entity is on a specific team.
+		p	1	p_142012_1_	teamIn	#teamIn, :, team, :
+	m	(Lnet/minecraft/util/DamageSource;)V	func_70645_a	onDeath	#onDeath, :, onKilled, :
+		c	Called when the mob's health reaches 0.
+		p	1	p_70645_1_	cause	#cause, :, source, :
+	m	(Lnet/minecraft/potion/Potion;)Z	func_70644_a	isPotionActive	#isPotionActive, :, hasStatusEffect, :
+		p	1	p_70644_1_	potionIn	#potionIn, :, effect, :
+	m	(Lnet/minecraft/potion/PotionEffect;)V	func_70670_a	onNewPotionEffect	#onNewPotionEffect, :, ~, onStatusEffectApplied
+		p	1	p_70670_1_	id	#id, :, instance, :
+	m	(Lnet/minecraft/potion/PotionEffect;Z)V	func_70695_b	onChangedPotionEffect	#onChangedPotionEffect, :, ~, onStatusEffectUpgraded
+		p	1	p_70695_1_	id	#id, :, instance, :
+		p	2	p_70695_2_	timerRanOut	#~, ~, ~, timerRanOut
+	m	(Lnet/minecraft/entity/Entity;FDD)V	func_70653_a	knockBack	#knockBack, :, ~, applyKnockback
+		c	knocks back this entity
+		p	1	p_70653_1_	entityIn	#entityIn, :, ~, entity
+		p	2	p_70653_2_	strenght	#strenght, strength, ~, amount
+		p	3	p_70653_3_	xRatio	#xRatio, :, ~, velocityX
+		p	5	p_70653_5_	zRatio	#zRatio, :, ~, velocityZ
+	m	(Lnet/minecraft/entity/Entity;I)V	func_71001_a	onItemPickup	#onItemPickup, :, sendPickup, :
+		c	Called whenever an item is picked up from walking over it. Args: pickedUpEntity, stackSize
+		p	1	p_71001_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_71001_2_	quantity	#quantity, :, count, :
+	m	(Lnet/minecraft/entity/ai/attributes/IAttribute;)Lnet/minecraft/entity/ai/attributes/IAttributeInstance;	func_110148_a	getEntityAttribute	#getEntityAttribute, :, initializeAttribute, getAttribute
+		p	1	p_110148_1_	attribute	#attribute, :, :, :
+	m	(ZI)V	func_82160_b	dropEquipment	#dropEquipment, :, ~, dropEquipment
+		c	Drop the equipment for this entity.
+		p	1	p_82160_1_	wasRecentlyHit	#wasRecentlyHit, :, ~, hasBeenHit
+		p	2	p_82160_2_	lootingModifier	#lootingModifier, :, ~, lootingLevel
+	m	()V	func_110147_ax	applyEntityAttributes	#applyEntityAttributes, :, initializeAttributes, initAttributes
+	m	()Z	func_70648_aU	canBreatheUnderwater	#canBreatheUnderwater, :, ~, isWaterCreature
+	m	()V	func_70609_aI	onDeathUpdate	#onDeathUpdate, :, dropXp, tickPostDeath
+		c	handles entity death timer, experience orb and particle creation
+	m	()Z	func_146066_aG	canDropLoot	#canDropLoot, :, shouldDropXp, isGrownUp
+		c	Entity won't drop items or experience points if this returns false
+	m	()Z	func_70684_aJ	isPlayer	#isPlayer, :, shouldAlwaysDropXp, shouldDropXp
+		c	Only use is to identify if class is an instance of player for experience dropping
+	m	()Ljava/util/Random;	func_70681_au	getRNG	#getRNG, :, getRandom, :
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_70643_av	getAITarget	#getAITarget, getRevengeTarget, getAttacker, :
+	m	()I	func_142015_aE	getRevengeTimer	#getRevengeTimer, :, getLastHurtTimestamp, getLastAttackedTime
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_110144_aD	getLastAttacker	#getLastAttacker, getLastAttackedEntity, getAttacking, getAttackTarget
+	m	()I	func_142013_aG	getLastAttackerTime	#getLastAttackerTime, getLastAttackedEntityTime, getLastAttackTime, :
+	m	()I	func_70654_ax	getAge	#getAge, getIdleTime, ~, getDespawnTimer
+	m	()V	func_70679_bo	updatePotionEffects	#updatePotionEffects, :, tickStatusEffects, :
+	m	()V	func_70674_bp	clearActivePotions	#clearActivePotions, :, clearStatusEffects, :
+	m	()Ljava/util/Collection;	func_70651_bq	getActivePotionEffects	#getActivePotionEffects, :, getStatusEffectInstances, getStatusEffects
+	m	()Z	func_70662_br	isEntityUndead	#isEntityUndead, :, isAffectedBySmite, :
+		c	Returns true if this entity is undead.
+	m	()F	func_110143_aJ	getHealth	#getHealth, :, :, :
+	m	()Ljava/lang/String;	func_70621_aR	getHurtSound	#getHurtSound, :, :, :
+		c	Returns the sound this mob makes when it is hurt.
+	m	()Ljava/lang/String;	func_70673_aS	getDeathSound	#getDeathSound, :, :, :
+		c	Returns the sound this mob makes on death.
+	m	()I	func_70658_aO	getTotalArmorValue	#getTotalArmorValue, :, getArmorProtectionValue, getArmorProtection
+		c	Returns the current armor value as determined by a call to InventoryPlayer.getTotalArmorValue
+	m	()Lnet/minecraft/util/CombatTracker;	func_110142_aN	getCombatTracker	#getCombatTracker, :, getDamageTracker, :
+		c	1.8.9
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_94060_bK	getAttackingEntity	#getAttackingEntity, :, getOpponent, getLastAttacker
+	m	()F	func_110138_aP	getMaxHealth	#getMaxHealth, :, :, :
+		c	Returns the maximum health of the entity (what it is able to regenerate up to, what it spawned with, etc)
+	m	()I	func_85035_bI	getArrowCountInEntity	#getArrowCountInEntity, :, getStuckArrows, :
+		c	counts the amount of arrows stuck in the entity. getting hit by arrows increases this, used in rendering
+	m	(Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/util/IIcon;	func_70620_b	getItemIcon	#getItemIcon, :, ~, getIconSprite
+		c	Gets the Icon Index of the item currently held
+		p	1	p_70620_1_	itemStackIn	#itemStackIn, :, ~, stack
+		p	2	p_70620_2_	stage	#~, ~, ~, stage
+	m	(Lnet/minecraft/util/DamageSource;F)F	func_70655_b	applyArmorCalculations	#applyArmorCalculations, :, applyArmorDamage, damageAfterArmorResistance
+		c	Reduces damage, depending on armor
+		p	1	p_70655_1_	source	#source, :, :, :
+		p	2	p_70655_2_	damage	#damage, :, :, :
+	m	(Lnet/minecraft/potion/Potion;)Lnet/minecraft/potion/PotionEffect;	func_70660_b	getActivePotionEffect	#getActivePotionEffect, :, getEffectInstance, :
+		c	returns the PotionEffect for the supplied Potion if it is active, null otherwise.
+		p	1	p_70660_1_	potionIn	#potionIn, :, effect, :
+	m	(Lnet/minecraft/potion/PotionEffect;)V	func_70688_c	onFinishedPotionEffect	#onFinishedPotionEffect, :, ~, onStatusEffectRemoved
+		p	1	p_70688_1_	effect	#effect, :, instance, effect
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_70604_c	setRevengeTarget	#setRevengeTarget, :, setAttacker, :
+		c	Hint to AI tasks that we were attacked by the passed EntityLivingBase and should retaliate. Is not guaranteed to change our actual active target (for example if we are currently busy attacking someone else)
+		p	1	p_70604_1_	livingBase	#livingBase, :, entity, attacker
+	m	(ZI)V	func_70628_a	dropFewItems	#dropFewItems, :, dropLoot, :
+		c	Drop 0-2 items of this living's type. @param par1 - Whether this entity has recently been hit by a player. @param par2 - Level of Looting used to kill this mob.
+		p	1	p_70628_1_	wasRecentlyHit	#wasRecentlyHit, :, allowDrops, :
+		p	2	p_70628_2_	lootingModifier	#lootingModifier, :, lootingMultiplier, :
+	m	()V	func_71038_i	swingItem	#swingItem, :, swingHand, :
+		c	Swings the item the player is holding.
+	m	()V	func_82168_bl	updateArmSwingProgress	#updateArmSwingProgress, :, tickHandSwing, updateHandSwing
+		c	Updates the arm swing progress counters and animation progress
+	m	()Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;	func_110140_aT	getAttributeMap	#getAttributeMap, :, getAttributeContainer, getAttributes
+		c	Returns this entity's attribute map (where all its attributes are stored)
+	m	()Lnet/minecraft/entity/EnumCreatureAttribute;	func_70668_bt	getCreatureAttribute	#getCreatureAttribute, :, getGroup, getMobType
+		c	Get this Entity's EnumCreatureAttribute
+	m	()Lnet/minecraft/item/ItemStack;	func_70694_bm	getHeldItem	#getHeldItem, :, getStackInHand, :
+		c	Returns the item that this EntityLiving is holding, if any.
+	m	()F	func_70599_aP	getSoundVolume	#getSoundVolume, :, :, :
+		c	Returns the volume for the sounds this mob makes.
+	m	()F	func_70647_i	getSoundPitch	#getSoundPitch, :, :, :
+		c	Gets the pitch of living sounds in living entities.
+	m	()Z	func_70610_aX	isMovementBlocked	#isMovementBlocked, :, ~, isDead
+		c	Dead and sleeping entities cannot move
+	m	()Z	func_94059_bO	getAlwaysRenderNameTagForRender	#getAlwaysRenderNameTagForRender, :, ~, shouldShowNameTag
+	m	()V	func_70664_aZ	jump	#jump, :, :, :
+		c	Causes this entity to do an upwards motion (jumping).
+	m	()Z	func_70650_aV	isAIEnabled	#isAIEnabled, ableToCauseSkullDrop, ~, aiEnabled
+		c	Returns true if the newer Entity AI code should be run
+	m	()F	func_70689_ay	getAIMoveSpeed	#getAIMoveSpeed, :, getMovementSpeed, :
+		c	the movespeed used for the new AI system
+	m	()Z	func_70608_bn	isPlayerSleeping	#isPlayerSleeping, :, isSleeping, :
+		c	Returns whether player is sleeping or not
+	m	()V	func_70619_bc	updateAITasks	#updateAITasks, :, ~, serverTickAi
+	m	()V	func_85033_bc	collideWithNearbyEntities	#collideWithNearbyEntities, :, tickCramming, pushAwayCollidingEntities
+	m	()V	func_70629_bd	updateAITick	#updateAITick, handleJumpWater, ~, mobTick
+		c	main AI tick function, replaces updateEntityActionState
+	m	()V	func_70626_be	updateEntityActionState	#updateEntityActionState, :, tickNewAi, tickDespawn
+	m	()Z	func_70613_aW	isClientWorld	#isClientWorld, isServerWorld, canMoveVoluntarily, isLocallyControlled
+		c	Returns whether the entity is in a local (client) world
+	m	()F	func_110139_bj	getAbsorptionAmount	#getAbsorptionAmount, :, getAbsorption, :
+		c	Returns the amount of health added by the Absorption effect.
+	m	()Lnet/minecraft/scoreboard/Team;	func_96124_cp	getTeam	#getTeam, :, getScoreboardTeam, :
+	m	()V	func_152111_bt	sendEnterCombat	#sendEnterCombat, :, enterCombat, endCombat
+		c	Sends an ENTER_COMBAT packet to the client
+	m	()V	func_152112_bu	sendEndCombat	#sendEndCombat, :, endCombat, enterCombat
+		c	Sends an END_COMBAT packet to the client
+	m	(Lnet/minecraft/util/DamageSource;F)F	func_70672_c	applyPotionDamageCalculations	#applyPotionDamageCalculations, :, applyEnchantmentsToDamage, damageAfterEffectsAndEnchantments
+		c	Reduces damage, depending on potions
+		p	1	p_70672_1_	source	#source, :, :, :
+		p	2	p_70672_2_	damage	#damage, :, amount, damage
+	m	(Lnet/minecraft/potion/PotionEffect;)V	func_70690_d	addPotionEffect	#addPotionEffect, :, addStatusEffect, :
+		c	adds a PotionEffect to the entity
+		p	1	p_70690_1_	potioneffectIn	#potioneffectIn, :, instance, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_142014_c	isOnSameTeam	#isOnSameTeam, :, isInSameTeam, :
+		p	1	p_142014_1_	otherEntity	#otherEntity, :, entity, :
+	m	(Lnet/minecraft/util/DamageSource;F)V	func_70665_d	damageEntity	#damageEntity, :, applyDamage, :
+		c	Deals damage to the entity. If its a EntityPlayer then will take damage from the armor first and then health second with the reduced value. Args: damageAmount
+		p	1	p_70665_1_	damageSrc	#damageSrc, :, source, :
+		p	2	p_70665_2_	damageAmount	#damageAmount, :, damage, :
+	m	(Lnet/minecraft/potion/PotionEffect;)Z	func_70687_e	isPotionApplicable	#isPotionApplicable, :, ~, canHaveStatusEffect
+		p	1	p_70687_1_	potioneffectIn	#potioneffectIn, :, instance, effect
+	m	()V	func_70636_d	onLivingUpdate	#onLivingUpdate, :, tickMovement, tickAi
+		c	Called frequently so the entity can update its state every tick as required. For example, zombies and skeletons use this to react to sunlight and start to burn.
+	m	(FF)V	func_70612_e	moveEntityWithHeading	#moveEntityWithHeading, :, travel, moveEntityWithVelocity
+		c	Moves the entity based on the specified heading.  Args: strafe, forward
+		p	1	p_70612_1_	strafe	#strafe, :, ~, sidewaysVelocity
+		p	2	p_70612_2_	forward	#forward, :, ~, forwardVelocity
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)I	func_70693_a	getExperiencePoints	#getExperiencePoints, :, getXpToDrop, getXpDrop
+		c	Get the experience points the entity currently has.
+		p	1	p_70693_1_	player	#player, :, :, playerEntity
+	m	()Z	func_70631_g_	isChild	#isChild, :, isBaby, :
+		c	If Animal, checks if the age timer is negative
+	m	(F)V	func_70691_i	heal	#heal, :, :, :
+		c	Heal living entity (param: amount of half-hearts)
+		p	1	p_70691_1_	healAmount	#healAmount, :, ~, amount
+	m	(FF)F	func_110146_f	updateDistance	#updateDistance, :, turnHead, bodyMovement
+		p	1	p_110146_1_	yaw	#~, ~, bodyRotation, yaw
+		p	2	p_110146_2_	movement	#~, ~, headRotation, movement
+	m	(Z)V	func_70637_d	setJumping	#setJumping, :, :, :
+		p	1	p_70637_1_	jumping	#jumping, :, :, :
+	m	(F)V	func_70606_j	setHealth	#setHealth, :, :, :
+		p	1	p_70606_1_	health	#health, :, ~, amount
+	m	(F)V	func_70675_k	damageArmor	#damageArmor, :, :, :
+		p	1	p_70675_1_	damage	#damage, :, value, :
+	m	()Z	func_70617_f_	isOnLadder	#isOnLadder, :, isClimbing, :
+		c	returns true if this entity is by a ladder, false otherwise
+	m	(F)V	func_70659_e	setAIMoveSpeed	#setAIMoveSpeed, :, setMovementSpeed, :
+		c	set the movespeed used for the new AI system
+		p	1	p_70659_1_	speedIn	#speedIn, :, movementSpeed, :
+	m	()I	func_82166_i	getArmSwingAnimationEnd	#getArmSwingAnimationEnd, :, getMiningSpeedMultiplier, :
+		c	Returns an integer indicating the end point of the swing animation, used by {@link #swingProgress} to provide a progress indicator. Takes dig speed enchantments into account.
+	m	(F)Lnet/minecraft/util/Vec3;	func_70676_i	getLook	#getLook, :, ~, getCameraRotation
+		c	interpolated look vector
+		p	1	p_70676_1_	partialTicks	#partialTicks, :, ~, modifier
+	m	(I)I	func_70682_h	decreaseAirSupply	#decreaseAirSupply, :, getNextAirUnderwater, removeBreathUnderWater
+		c	Decrements the entity's air supply when underwater
+		p	1	p_70682_1_	air	#air, :, :, breath
+	m	(F)F	func_70678_g	getSwingProgress	#getSwingProgress, :, getHandSwingProgress, getHandSwingProcess
+		c	Returns where in the swing animation the living entity is (from 0 to 1).  Args: partialTickTime
+		p	1	p_70678_1_	partialTickTime	#partialTickTime, :, tickDelta, :
+	m	(I)Z	func_82165_m	isPotionActive	#isPotionActive, :, hasStatusEffect, :
+		p	1	p_82165_1_	potionId	#potionId, :, id, :
+	m	(F)Lnet/minecraft/util/Vec3;	func_70666_h	getPosition	#getPosition, :, ~, lerpPosition
+		c	interpolated position vector
+		p	1	p_70666_1_	tickDelta	#~, ~, ~, tickDelta
+	m	(I)V	func_70618_n	removePotionEffectClient	#removePotionEffectClient, :, removeEffect, :
+		c	Remove the speified potion effect from this entity.
+		p	1	p_70618_1_	potionId	#potionId, :, id, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_130011_c	setLastAttacker	#setLastAttacker, setLastAttackedEntity, ~, setAttackTarget
+		p	1	p_130011_1_	entityIn	#entityIn, :, ~, target
+	m	(F)V	func_110149_m	setAbsorptionAmount	#setAbsorptionAmount, :, setAbsorption, :
+		p	1	p_110149_1_	amount	#amount, :, absorption, :
+	m	(I)V	func_82170_o	removePotionEffect	#removePotionEffect, :, ~, removeStatusEffect
+		c	Remove the specified potion effect from this entity.
+		p	1	p_82170_1_	potionId	#potionId, :, id, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_110145_l	dismountEntity	#dismountEntity, :, ~, dismountRider
+		c	Moves the entity to a position out of the way of its mount.
+		p	1	p_110145_1_	entityIn	#entityIn, :, entity, :
+	m	(I)V	func_70600_l	dropRareDrop	#dropRareDrop, :, ~, dropRareItem
+		p	1	p_70600_1_	id	#~, ~, ~, id
+	m	(Lnet/minecraft/entity/Entity;)Z	func_70652_k	attackEntityAsMob	#attackEntityAsMob, :, tryAttack, damageAttackTarget
+		p	1	p_70652_1_	entityIn	#entityIn, :, target, :
+	m	(I)Ljava/lang/String;	func_146067_o	getFallSoundString	#getFallSoundString, :, getFallSound, :
+		p	1	p_146067_1_	damageValue	#damageValue, :, distance, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_82167_n	collideWithEntity	#collideWithEntity, :, pushAway, :
+		p	1	p_82167_1_	entityIn	#entityIn, :, entity, :
+	m	(I)V	func_85034_r	setArrowCountInEntity	#setArrowCountInEntity, :, setStuckArrows, :
+		c	sets the amount of arrows stuck in the entity. used for rendering those
+		p	1	p_85034_1_	count	#count, :, arrows, :
+	m	(Lnet/minecraft/entity/Entity;)Z	func_70685_l	canEntityBeSeen	#canEntityBeSeen, :, canSee, :
+		c	returns true if the entity provided in the argument can be seen. (Raytrace)
+		p	1	p_70685_1_	entityIn	#entityIn, :, entity, :
+	m	(I)Lnet/minecraft/item/ItemStack;	func_71124_b	getEquipmentInSlot	#getEquipmentInSlot, :, getMainSlot, getStackInInventory
+		c	0: Tool in Hand; 1-4: Armor
+		p	1	p_71124_1_	slotIn	#slotIn, :, slot, id
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1594_1_	worldIn	#worldIn, :, ~, ~

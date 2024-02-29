@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityEnchantmentTableParticleFX	net/minecraft/client/particle/EntityEnchantmentTableParticleFX	
+	f	F	field_70565_a	oSize	#oSize, :, ~, baseScale
+	f	D	field_70568_aq	coordX	#coordX, :, startX, :
+	f	D	field_70567_ar	coordY	#coordY, :, startY, :
+	f	D	field_70566_as	coordZ	#coordZ, :, startZ, :
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1204_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1204_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1204_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1204_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1204_8_	xSpeedIn	#xSpeedIn, :, ~, ~
+		p	10	p_i1204_10_	ySpeedIn	#ySpeedIn, :, ~, ~
+		p	12	p_i1204_12_	zSpeedIn	#zSpeedIn, :, ~, ~

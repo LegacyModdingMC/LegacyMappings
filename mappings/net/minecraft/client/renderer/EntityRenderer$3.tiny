@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/EntityRenderer$3	net/minecraft/client/renderer/EntityRenderer$3	
+	f	Lnet/minecraft/client/gui/ScaledResolution;	field_90029_a	theScaledResolution	#theScaledResolution, :, window, :
+	f	Lnet/minecraft/client/renderer/EntityRenderer;	field_90028_b	theEntityRenderer	#theEntityRenderer, :, gameRenderer, :
+	m	(Lnet/minecraft/client/renderer/EntityRenderer;Lnet/minecraft/client/gui/ScaledResolution;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1245_1_	gameRenderer	#~, ~, gameRenderer, ~
+		p	2	p_i1245_2_	window	#~, ~, window, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

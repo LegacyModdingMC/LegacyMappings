@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatComponentStyle	net/minecraft/util/ChatComponentStyle	
+	f	Ljava/util/List;	field_150264_a	siblings	#siblings, :, :, :
+		c	The later siblings of this component.  If this component turns the text bold, that will apply to all the siblings until a later sibling turns the text something else.
+	f	Lnet/minecraft/util/ChatStyle;	field_150263_b	style	#style, :, :, :
+	m	(Ljava/lang/Iterable;)Ljava/util/Iterator;	func_150262_a	createDeepCopyIterator	#createDeepCopyIterator, :, ~, concatenate
+		c	Creates an iterator that iterates over the given components, returning deep copies of each component in turn so that the properties of the returned objects will remain externally consistent after being returned.
+		p	0	p_150262_0_	components	#components, :, iterable, text
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, object, :
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/util/Iterator;	iterator	iterator	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

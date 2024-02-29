@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ObjectIntIdentityMap	net/minecraft/util/ObjectIntIdentityMap	
+	f	Ljava/util/IdentityHashMap;	field_148749_a	identityMap	#identityMap, :, idMap, ids
+	f	Ljava/util/List;	field_148748_b	objectList	#objectList, :, list, values
+	m	(I)Ljava/lang/Object;	func_148745_a	getByValue	#getByValue, :, fromId, get
+		p	1	p_148745_1_	value	#value, :, index, id
+	m	(Ljava/lang/Object;I)V	func_148746_a	put	#put, :, set, put
+		p	1	p_148746_1_	key	#key, :, value, :
+		p	2	p_148746_2_	value	#value, :, index, id
+	m	(I)Z	func_148744_b	containsId	#~, ~, hasId, containsId
+		p	1	p_148744_1_	id	#~, ~, index, id
+	m	(Ljava/lang/Object;)I	func_148747_b	get	#get, :, getId, :
+		p	1	p_148747_1_	key	#key, :, value, :
+	m	()Ljava/util/Iterator;	iterator	iterator	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

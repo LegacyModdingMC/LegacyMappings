@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenDeadBush	net/minecraft/world/gen/feature/WorldGenDeadBush	
+	f	Lnet/minecraft/block/Block;	field_150547_a	deadBush	#~, ~, ~, deadBush
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45451_1_	deadBush	#~, ~, ~, deadBush

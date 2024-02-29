@@ -1,0 +1,113 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatStyle	net/minecraft/util/ChatStyle	
+	f	Lnet/minecraft/util/ChatStyle;	field_150249_a	parentStyle	#parentStyle, :, parent, :
+		c	The parent of this ChatStyle.  Used for looking up values that this instance does not override.
+	f	Lnet/minecraft/util/EnumChatFormatting;	field_150247_b	color	#color, :, formatting, color
+	f	Ljava/lang/Boolean;	field_150248_c	bold	#bold, :, :, :
+	f	Ljava/lang/Boolean;	field_150245_d	italic	#italic, :, :, :
+	f	Ljava/lang/Boolean;	field_150246_e	underlined	#underlined, :, underline, underlined
+	f	Ljava/lang/Boolean;	field_150243_f	strikethrough	#strikethrough, :, :, :
+	f	Ljava/lang/Boolean;	field_150244_g	obfuscated	#obfuscated, :, :, :
+	f	Lnet/minecraft/event/ClickEvent;	field_150251_h	chatClickEvent	#chatClickEvent, clickEvent, :, :
+	f	Lnet/minecraft/event/HoverEvent;	field_150252_i	chatHoverEvent	#chatHoverEvent, hoverEvent, :, :
+	f	Lnet/minecraft/util/ChatStyle;	field_150250_j	rootStyle	#rootStyle, ROOT, :, :
+		c	The base of the ChatStyle hierarchy.  All ChatStyle instances are implicitly children of this.
+	m	()Lnet/minecraft/util/EnumChatFormatting;	func_150215_a	getColor	#getColor, :, :, :
+		c	Gets the effective color of this ChatStyle.
+	m	(Lnet/minecraft/util/EnumChatFormatting;)Lnet/minecraft/util/ChatStyle;	func_150238_a	setColor	#setColor, :, setFormatting, setColor
+		c	Sets the color for this ChatStyle to the given value.  Only use color values for this; set other values using the specific methods.
+		p	1	p_150238_1_	colorIn	#colorIn, color, formatting, color
+	m	(Lnet/minecraft/event/ClickEvent;)Lnet/minecraft/util/ChatStyle;	func_150241_a	setChatClickEvent	#setChatClickEvent, setClickEvent, :, :
+		c	Sets the event that should be run when text of this ChatStyle is clicked on.
+		p	1	p_150241_1_	event	#event, :, clickEvent, :
+	m	(Lnet/minecraft/event/HoverEvent;)Lnet/minecraft/util/ChatStyle;	func_150209_a	setChatHoverEvent	#setChatHoverEvent, setHoverEvent, :, :
+		c	Sets the event that should be run when text of this ChatStyle is hovered over.
+		p	1	p_150209_1_	event	#event, :, hoverEvent, clickEvent
+	m	(Lnet/minecraft/util/ChatStyle;)Lnet/minecraft/util/ChatStyle;	func_150221_a	setParentStyle	#setParentStyle, :, setParent, :
+		c	Sets the fallback ChatStyle to use if this ChatStyle does not override some value.  Without a parent, obvious defaults are used (bold: false, underlined: false, etc).
+		p	1	p_150221_1_	parent	#parent, :, :, :
+	m	(Lnet/minecraft/util/ChatStyle;Lnet/minecraft/util/EnumChatFormatting;)Lnet/minecraft/util/EnumChatFormatting;	access$502	access$502	#~, ~, ~, setFormattingStyle
+		p	0	p_access$502_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$502_1_	formattingStyle	#~, ~, ~, formattingStyle
+	m	(Lnet/minecraft/util/ChatStyle;Lnet/minecraft/event/ClickEvent;)Lnet/minecraft/event/ClickEvent;	access$602	access$602	#~, ~, ~, setClickEvent
+		p	0	p_access$602_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$602_1_	clickEvent	#~, ~, ~, clickEvent
+	m	(Lnet/minecraft/util/ChatStyle;Lnet/minecraft/event/HoverEvent;)Lnet/minecraft/event/HoverEvent;	access$702	access$702	#~, ~, ~, setHoverEvent
+		p	0	p_access$702_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$702_1_	hoverEvent	#~, ~, ~, hoverEvent
+	m	(Lnet/minecraft/util/ChatStyle;Ljava/lang/Boolean;)Ljava/lang/Boolean;	access$002	access$002	#~, ~, ~, setBold
+		p	0	p_access$002_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$002_1_	bold	#~, ~, ~, bold
+	m	(Ljava/lang/Boolean;)Lnet/minecraft/util/ChatStyle;	func_150227_a	setBold	#setBold, :, :, :
+		c	Sets whether or not text of this ChatStyle should be in bold.  Set to false if, e.g., the parent style is bold and you want text of this style to be unbolded.
+		p	1	p_150227_1_	boldIn	#boldIn, :, bold, :
+	m	()Z	func_150223_b	getBold	#getBold, :, isBold, :
+		c	Whether or not text of this ChatStyle should be in bold.
+	m	(Lnet/minecraft/util/ChatStyle;)Ljava/lang/Boolean;	access$000	access$000	#~, ~, ~, isBold
+		p	0	p_access$000_0_	textStyle	#~, ~, ~, textStyle
+	m	(Lnet/minecraft/util/ChatStyle;Ljava/lang/Boolean;)Ljava/lang/Boolean;	access$102	access$102	#~, ~, ~, setItalic
+		p	0	p_access$102_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$102_1_	italic	#~, ~, ~, italic
+	m	(Ljava/lang/Boolean;)Lnet/minecraft/util/ChatStyle;	func_150217_b	setItalic	#setItalic, :, :, :
+		c	Sets whether or not text of this ChatStyle should be italicized.  Set to false if, e.g., the parent style is italicized and you want to override that for this style.
+		p	1	p_150217_1_	italic	#italic, :, :, :
+	m	()Z	func_150242_c	getItalic	#getItalic, :, isItalic, :
+		c	Whether or not text of this ChatStyle should be italicized.
+	m	(Lnet/minecraft/util/ChatStyle;)Ljava/lang/Boolean;	access$100	access$100	#~, ~, ~, isItalic
+		p	0	p_access$100_0_	textStyle	#~, ~, ~, textStyle
+	m	(Lnet/minecraft/util/ChatStyle;Ljava/lang/Boolean;)Ljava/lang/Boolean;	access$202	access$202	#~, ~, ~, setUnderline
+		p	0	p_access$202_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$202_1_	underline	#~, ~, ~, underline
+	m	(Ljava/lang/Boolean;)Lnet/minecraft/util/ChatStyle;	func_150225_c	setStrikethrough	#setStrikethrough, :, :, :
+		c	Sets whether or not to format text of this ChatStyle using strikethrough.  Set to false if, e.g., the parent style uses strikethrough and you want to override that for this style.
+		p	1	p_150225_1_	strikethrough	#strikethrough, :, :, :
+	m	()Z	func_150236_d	getStrikethrough	#getStrikethrough, :, isStrikethrough, :
+		c	Whether or not to format text of this ChatStyle using strikethrough.
+	m	(Lnet/minecraft/util/ChatStyle;)Ljava/lang/Boolean;	access$200	access$200	#~, ~, ~, isUnderline
+		p	0	p_access$200_0_	textStyle	#~, ~, ~, textStyle
+	m	(Lnet/minecraft/util/ChatStyle;Ljava/lang/Boolean;)Ljava/lang/Boolean;	access$302	access$302	#~, ~, ~, setStrikethrough
+		p	0	p_access$302_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$302_1_	strikethrough	#~, ~, ~, strikethrough
+	m	(Ljava/lang/Boolean;)Lnet/minecraft/util/ChatStyle;	func_150228_d	setUnderlined	#setUnderlined, :, setUnderline, setUnderlined
+		c	Sets whether or not text of this ChatStyle should be underlined.  Set to false if, e.g., the parent style is underlined and you want to override that for this style.
+		p	1	p_150228_1_	underlined	#underlined, :, underline, underlined
+	m	()Z	func_150234_e	getUnderlined	#getUnderlined, :, isUnderlined, :
+		c	Whether or not text of this ChatStyle should be underlined.
+	m	(Lnet/minecraft/util/ChatStyle;)Ljava/lang/Boolean;	access$300	access$300	#~, ~, ~, isStrikethrough
+		p	0	p_access$300_0_	textStyle	#~, ~, ~, textStyle
+	m	(Lnet/minecraft/util/ChatStyle;Ljava/lang/Boolean;)Ljava/lang/Boolean;	access$402	access$402	#~, ~, ~, setObfuscated
+		p	0	p_access$402_0_	textStyle	#~, ~, ~, textStyle
+		p	1	p_access$402_1_	obfuscated	#~, ~, ~, obfuscated
+	m	(Ljava/lang/Boolean;)Lnet/minecraft/util/ChatStyle;	func_150237_e	setObfuscated	#setObfuscated, :, :, :
+		c	Sets whether or not text of this ChatStyle should be obfuscated.  Set to false if, e.g., the parent style is obfuscated and you want to override that for this style.
+		p	1	p_150237_1_	obfuscated	#obfuscated, :, :, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, ~, obj
+	m	()Z	func_150233_f	getObfuscated	#getObfuscated, :, isObfuscated, :
+		c	Whether or not text of this ChatStyle should be obfuscated.
+	m	(Lnet/minecraft/util/ChatStyle;)Ljava/lang/Boolean;	access$400	access$400	#~, ~, ~, isObfuscated
+		p	0	p_access$400_0_	textStyle	#~, ~, ~, textStyle
+	m	()Z	func_150229_g	isEmpty	#isEmpty, :, :, :
+		c	Whether or not this style is empty (inherits everything from the parent).
+	m	(Lnet/minecraft/util/ChatStyle;)Lnet/minecraft/util/EnumChatFormatting;	access$500	access$500	#~, ~, ~, getFormattingstyle
+		p	0	p_access$500_0_	textStyle	#~, ~, ~, textStyle
+	m	()Lnet/minecraft/event/ClickEvent;	func_150235_h	getChatClickEvent	#getChatClickEvent, getClickEvent, :, :
+		c	The effective chat click event.
+	m	(Lnet/minecraft/util/ChatStyle;)Lnet/minecraft/event/ClickEvent;	access$600	access$600	#~, ~, ~, getClickEvent
+		p	0	p_access$600_0_	textStyle	#~, ~, ~, textStyle
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Lnet/minecraft/event/HoverEvent;	func_150210_i	getChatHoverEvent	#getChatHoverEvent, getHoverEvent, :, :
+		c	The effective chat hover event.
+	m	(Lnet/minecraft/util/ChatStyle;)Lnet/minecraft/event/HoverEvent;	access$700	access$700	#~, ~, ~, getHoverEvent
+		p	0	p_access$700_0_	textStyle	#~, ~, ~, textStyle
+	m	()Ljava/lang/String;	func_150218_j	getFormattingCode	#getFormattingCode, :, asString, :
+		c	Gets the equivalent text formatting code for this style, without the initial section sign (U+00A7) character.
+	m	()Lnet/minecraft/util/ChatStyle;	func_150232_l	createShallowCopy	#createShallowCopy, :, deepCopy, :
+		c	Creates a shallow copy of this style.  Changes to this instance's values will not be reflected in the copy, but changes to the parent style's values WILL be reflected in both this instance and the copy, wherever either does not override a value.
+	m	()Lnet/minecraft/util/ChatStyle;	func_150206_m	createDeepCopy	#createDeepCopy, :, copy, :
+		c	Creates a deep copy of this style.  No changes to this instance or its parent style will be reflected in the copy.
+	m	()Lnet/minecraft/util/ChatStyle;	func_150224_n	getParent	#getParent, :, :, :
+		c	Gets the immediate parent of this ChatStyle.
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

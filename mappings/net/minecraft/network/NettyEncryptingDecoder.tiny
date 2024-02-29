@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NettyEncryptingDecoder	net/minecraft/network/NettyEncryptingDecoder	
+	f	Lnet/minecraft/network/NettyEncryptionTranslator;	field_150509_a	decryptionCodec	#decryptionCodec, :, manager, :
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V	decode	decode	#~, ~, decode, :
+		p	1	p_decode_1_	p_decode_1_	#~, ~, ~, ~
+		p	2	p_decode_2_	p_decode_2_	#~, ~, ~, ~
+		p	3	p_decode_3_	p_decode_3_	#~, ~, ~, ~
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;Ljava/util/List;)V	decode	decode	#~, ~, ~, ~
+		p	1	p_decode_1_	context	#~, ~, ~, context
+		p	2	p_decode_2_	buf	#~, ~, ~, buf
+		p	3	p_decode_3_	list	#~, ~, ~, list
+	m	(Ljavax/crypto/Cipher;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45141_1_	cipher	#cipher, :, ~, cipher

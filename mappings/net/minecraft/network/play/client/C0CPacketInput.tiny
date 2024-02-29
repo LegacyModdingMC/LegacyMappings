@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C0CPacketInput	net/minecraft/network/play/client/C0CPacketInput	
+	f	F	field_149624_a	strafeSpeed	#strafeSpeed, :, sideways, sidewaysSpeed
+		c	Positive for left strafe, negative for right
+	f	F	field_149622_b	forwardSpeed	#forwardSpeed, :, forward, forwardSpeed
+		c	Positive for forward, negative for backward
+	f	Z	field_149623_c	jumping	#jumping, :, :, :
+	f	Z	field_149621_d	sneaking	#sneaking, :, :, :
+	m	(FFZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45261_1_	strafeSpeed	#strafeSpeed, :, sideWays, sidewaysSpeed
+		p	2	p_i45261_2_	forwardSpeed	#forwardSpeed, :, forward, forwardSpeed
+		p	3	p_i45261_3_	jumping	#jumping, :, :, :
+		p	4	p_i45261_4_	sneaking	#sneaking, :, :, :
+	m	()F	func_149620_c	getStrafeSpeed	#getStrafeSpeed, :, getSideways, getSidewaysSpeed
+	m	()F	func_149616_d	getForwardSpeed	#getForwardSpeed, :, getForward, getForwardSpeed
+	m	()Z	func_149618_e	isJumping	#isJumping, :, :, getJumping
+	m	()Z	func_149617_f	isSneaking	#isSneaking, :, :, getSneaking
+	m	()V	<init>	<init>	#~, ~, ~, ~

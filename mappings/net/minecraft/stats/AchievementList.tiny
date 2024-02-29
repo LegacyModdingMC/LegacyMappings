@@ -1,0 +1,81 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/AchievementList	net/minecraft/stats/AchievementList	
+	f	Lnet/minecraft/stats/Achievement;	field_76027_z	blazeRod	#blazeRod, :, BLAZE_ROD, GET_BLAZE_ROD
+		c	Is the 'Into Fire' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_76001_A	potion	#potion, :, POTION, BREW_POTION
+		c	Is the 'Local Brewery' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_76002_B	theEnd	#theEnd, THE_END, :, ENTER_THE_END
+		c	Is the 'The End?' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_76003_C	theEnd2	#theEnd2, :, THE_END_2, LEAVE_THE_END
+		c	Is the 'The End.' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_75998_D	enchantments	#enchantments, :, ENCHANTMENTS, CRAFT_ENCHANTING_TABLE
+		c	Is the 'Enchanter' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_75999_E	overkill	#overkill, :, OVERKILL, DEAL_OVERKILL_DAMAGE
+		c	Achieved when dealing 18 damage (9 hearts) in a single melee attack
+	f	Lnet/minecraft/stats/Achievement;	field_76000_F	bookcase	#bookcase, :, BOOKCASE, CRAFT_BOOKSHELF
+		c	Is the 'Librarian' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_150962_H	breedCow	#breedCow, :, BREED_COW, :
+		c	Is the 'Repopulation' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_150963_I	spawnWither	#spawnWither, :, SPAWN_WITHER, SUMMON_WITHER
+		c	Is the 'The Beginning?' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_150964_J	killWither	#killWither, :, KILL_WITHER, :
+		c	Is the 'The Beginning.' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_150965_K	fullBeacon	#fullBeacon, :, FULL_BEACON, ACTIVATE_MAX_BEACON
+		c	Is the 'Beaconator' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_150961_L	exploreAllBiomes	#exploreAllBiomes, :, EXPLORE_ALL_BIOMES, ENTER_ALL_BIOMES
+		c	Is the 'Adventuring Time' achievement
+	f	I	field_76010_a	minDisplayColumn	#minDisplayColumn, :, minColumn, :
+		c	Is the smallest column used to display a achievement on the GUI.
+	f	I	field_76008_b	minDisplayRow	#minDisplayRow, :, minRow, :
+		c	Is the smallest row used to display a achievement on the GUI.
+	f	I	field_76009_c	maxDisplayColumn	#maxDisplayColumn, :, maxColumn, :
+		c	Is the biggest column used to display a achievement on the GUI.
+	f	I	field_76006_d	maxDisplayRow	#maxDisplayRow, :, maxRow, :
+		c	Is the biggest row used to display a achievement on the GUI.
+	f	Ljava/util/List;	field_76007_e	achievementList	#achievementList, :, ACHIEVEMENTS, ALL
+		c	Holds a list of all registered achievements.
+	f	Lnet/minecraft/stats/Achievement;	field_76004_f	openInventory	#openInventory, :, TAKING_INVENTORY, OPEN_INVENTORY
+		c	Is the 'open inventory' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76005_g	mineWood	#mineWood, :, GETTING_WOOD, GET_LOG
+		c	Is the 'getting wood' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76017_h	buildWorkBench	#buildWorkBench, :, BUILD_WORK_BENCH, CRAFT_CRAFTING_TABLE
+		c	Is the 'benchmarking' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76018_i	buildPickaxe	#buildPickaxe, :, BUILD_PICKAXE, CRAFT_PICKAXE
+		c	Is the 'time to mine' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76015_j	buildFurnace	#buildFurnace, :, BUILD_FURNACE, CRAFT_FURNACE
+		c	Is the 'hot topic' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76016_k	acquireIron	#acquireIron, :, ACQUIRE_IRON, GET_IRON_INGOT
+		c	Is the 'acquire hardware' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76013_l	buildHoe	#buildHoe, BUILD_HOE, :, CRAFT_WOODEN_HOE
+		c	Is the 'time to farm' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76014_m	makeBread	#makeBread, :, MAKE_BREAD, CRAFT_BREAD
+		c	Is the 'bake bread' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76011_n	bakeCake	#bakeCake, BAKE_CAKE, :, CRAFT_CAKE
+		c	Is the 'the lie' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76012_o	buildBetterPickaxe	#buildBetterPickaxe, :, BUILD_BETTER_PICKAXE, CRAFT_BETTER_PICKAXE
+		c	Is the 'getting a upgrade' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76026_p	cookFish	#cookFish, COOK_FISH, :, :
+		c	Is the 'delicious fish' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76025_q	onARail	#onARail, :, ON_A_RAIL, TRAVEL_KILOMETER_BY_MINECART
+		c	Is the 'on a rail' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_76024_r	buildSword	#buildSword, :, BUILD_SWORD, CRAFT_SWORD
+		c	Is the 'time to strike' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76023_s	killEnemy	#killEnemy, :, KILL_EMEMY, KILL_ENEMY
+		c	Is the 'monster hunter' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76022_t	killCow	#killCow, KILL_COW, :, :
+		c	is the 'cow tipper' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76021_u	flyPig	#flyPig, :, FLY_PIG, RIDE_PIG_OFF_CLIFF
+		c	Is the 'when pig fly' achievement.
+	f	Lnet/minecraft/stats/Achievement;	field_76020_v	snipeSkeleton	#snipeSkeleton, :, SNIPE_SKELETON, KILL_SKELETON_FROM_DISTANCE
+		c	The achievement for killing a Skeleton from 50 meters aways.
+	f	Lnet/minecraft/stats/Achievement;	field_76019_w	diamonds	#diamonds, :, DIAMONDS, GET_DIAMOND
+		c	Is the 'DIAMONDS!' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_150966_x	diamondsToYou	#diamondsToYou, :, DIAMONDS_TO_YOU, GIVE_DIAMOND
+		c	Achieved when the player throwns a diamond that is picked up by an entity, including the player themselves
+	f	Lnet/minecraft/stats/Achievement;	field_76029_x	portal	#portal, :, PORTAL, ENTER_THE_NETHER
+		c	Is the 'We Need to Go Deeper' achievement
+	f	Lnet/minecraft/stats/Achievement;	field_76028_y	ghast	#ghast, GHAST, :, KILL_GHAST_WITH_FIREBALL
+		c	Is the 'Return to Sender' achievement
+	m	()V	func_75997_a	init	#init, :, load, init
+		c	A stub functions called to make the static initializer for this class run.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

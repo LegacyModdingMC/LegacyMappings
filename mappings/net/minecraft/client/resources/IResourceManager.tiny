@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/IResourceManager	net/minecraft/client/resources/IResourceManager	
+	m	()Ljava/util/Set;	func_135055_a	getResourceDomains	#getResourceDomains, :, getAllNamespaces, getNamespaces
+	m	(Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/resources/IResource;	func_110536_a	getResource	#getResource, :, :, :
+		p	1	p_110536_1_	location	#location, :, id, location
+	m	(Lnet/minecraft/util/ResourceLocation;)Ljava/util/List;	func_135056_b	getAllResources	#getAllResources, :, :, getResources
+		c	Gets all versions of the resource identified by {@code location}. The list is ordered by resource pack priority from lowest to highest.
+		p	1	p_135056_1_	location	#location, :, id, location

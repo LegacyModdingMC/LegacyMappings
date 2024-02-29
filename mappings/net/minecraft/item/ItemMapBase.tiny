@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemMapBase	net/minecraft/item/ItemMapBase	
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/network/Packet;	func_150911_c	createMapDataPacket	#createMapDataPacket, :, createSyncPacket, getUpdatePacket
+		p	1	p_150911_1_	stack	#stack, :, :, :
+		p	2	p_150911_2_	worldIn	#worldIn, :, world, :
+		p	3	p_150911_3_	player	#player, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

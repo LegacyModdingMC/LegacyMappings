@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/RegistryNamespacedDefaultedByKey	net/minecraft/util/RegistryNamespacedDefaultedByKey	
+	c	
+	f	Ljava/lang/String;	field_148760_d	defaultValueKey	#defaultValueKey, :, ~, defaultKey
+		c	The key of the default value.
+	f	Ljava/lang/Object;	field_148761_e	defaultValue	#defaultValue, :, :, :
+		c	The default value for this registry, retrurned in the place of a null value.
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45127_1_	defaultKey	#~, ~, ~, defaultKey

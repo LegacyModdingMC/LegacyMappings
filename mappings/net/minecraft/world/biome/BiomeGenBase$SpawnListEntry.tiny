@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenBase$SpawnListEntry	net/minecraft/world/biome/BiomeGenBase$SpawnListEntry	
+	f	Ljava/lang/Class;	field_76300_b	entityClass	#entityClass, :, type, :
+		c	Holds the class of the entity to be spawned.
+	f	I	field_76301_c	minGroupCount	#minGroupCount, :, minGroupSize, :
+	f	I	field_76299_d	maxGroupCount	#maxGroupCount, :, maxGroupSize, :
+	m	(Ljava/lang/Class;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1970_1_	entityclassIn	#entityclassIn, :, type, :
+		p	2	p_i1970_2_	weight	#weight, :, :, :
+		p	3	p_i1970_3_	groupCountMin	#groupCountMin, :, minGroupSize, :
+		p	4	p_i1970_4_	groupCountMax	#groupCountMax, :, maxGroupSize, :
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenClay	net/minecraft/world/gen/feature/WorldGenClay	
+	f	Lnet/minecraft/block/Block;	field_150546_a	block	#block, :, clay, :
+	f	I	field_76517_b	numberOfBlocks	#numberOfBlocks, :, count, size
+		c	The number of blocks to generate.
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2011_1_	size	#~, ~, count, size

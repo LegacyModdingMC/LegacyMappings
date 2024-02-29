@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiFlatPresets$ListSlot	net/minecraft/client/gui/GuiFlatPresets$ListSlot	
+	f	I	field_148175_k	selected	#selected, :, ~, selectedEntryIndex
+	f	Lnet/minecraft/client/gui/GuiFlatPresets;	field_148174_l	screen	#~, ~, ~, screen
+	m	(IILnet/minecraft/item/Item;)V	func_148172_a	renderIcon	#~, ~, ~, renderIcon
+		p	1	p_148172_1_	x	#~, ~, ~, x
+		p	2	p_148172_2_	y	#~, ~, ~, y
+		p	3	p_148172_3_	icon	#~, ~, ~, icon
+	m	(IIII)V	func_148171_c	blitSlotIcon	#blitSlotIcon, :, ~, render
+		p	1	p_148171_1_	x	#~, ~, ~, x
+		p	2	p_148171_2_	y	#~, ~, ~, y
+		p	3	p_148171_3_	u	#~, ~, ~, u
+		p	4	p_148171_4_	v	#~, ~, ~, v
+	m	(II)V	func_148173_e	blitSlotBg	#blitSlotBg, :, ~, render
+		p	1	p_148173_1_	x	#~, ~, ~, x
+		p	2	p_148173_2_	y	#~, ~, ~, y
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1048_1_	p_i1048_1_	#~, ~, ~, ~

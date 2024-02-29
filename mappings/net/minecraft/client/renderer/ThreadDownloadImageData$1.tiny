@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/ThreadDownloadImageData$1	net/minecraft/client/renderer/ThreadDownloadImageData$1	
+	f	Lnet/minecraft/client/renderer/ThreadDownloadImageData;	field_110932_a	theThreadDownloadImageData	#theThreadDownloadImageData, :, ~, playerSkin
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/renderer/ThreadDownloadImageData;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45093_1_	p_i45093_1_	#~, ~, ~, ~
+		p	2	p_i45093_2_	p_i45093_2_	#~, ~, ~, ~

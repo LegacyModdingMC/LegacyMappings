@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/IRangedAttackMob	net/minecraft/entity/IRangedAttackMob	
+	m	(Lnet/minecraft/entity/EntityLivingBase;F)V	func_82196_d	attackEntityWithRangedAttack	#attackEntityWithRangedAttack, :, rangedAttack, doRangedAttack
+		c	Attack the specified entity using a ranged attack.
+		p	1	p_82196_1_	target	#target, :, :, :
+		p	2	p_82196_2_	distanceFactor	#distanceFactor, :, pullProgress, range

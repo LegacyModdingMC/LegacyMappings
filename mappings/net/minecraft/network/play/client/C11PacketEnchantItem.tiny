@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C11PacketEnchantItem	net/minecraft/network/play/client/C11PacketEnchantItem	
+	f	I	field_149541_a	id	#id, windowId, syncId, menuId
+	f	I	field_149540_b	button	#button, :, buttonId, :
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45245_1_	windowId	#windowId, :, syncId, menuId
+		p	2	p_i45245_2_	button	#button, :, buttonId, :
+	m	()I	func_149539_c	getId	#getId, getWindowId, getSyncId, getMenuId
+	m	()I	func_149537_d	getButton	#getButton, :, getButtonId, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

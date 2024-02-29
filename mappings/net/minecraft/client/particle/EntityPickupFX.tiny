@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityPickupFX	net/minecraft/client/particle/EntityPickupFX	
+	f	Lnet/minecraft/entity/Entity;	field_70591_a	entityToPickUp	#entityToPickUp, :, itemEntity, entity
+		c	The entity being picked up - this could be an item, arrow, or xp.
+	f	Lnet/minecraft/entity/Entity;	field_70595_aq	entityPickingUp	#entityPickingUp, :, interactingEntity, collector
+		c	The collector that is picking up the entity.
+	f	I	field_70594_ar	age	#age, :, pickupAge, age
+	f	I	field_70593_as	maxAge	#maxAge, :, pickupMaxAge, maxAge
+	f	F	field_70592_at	yOffs	#yOffs, :, ~, yOffset
+		c	renamed from yOffset to fix shadowing Entity.yOffset
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1233_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1233_2_	entity	#~, ~, itemEntity, entity
+		p	3	p_i1233_3_	collector	#~, ~, interactingEntity, collector
+		p	4	p_i1233_4_	yOffset	#~, ~, ~, yOffset

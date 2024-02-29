@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFence	net/minecraft/block/BlockFence	
+	f	Ljava/lang/String;	field_149827_a	blockSprite	#~, ~, ~, blockSprite
+	m	(Lnet/minecraft/block/Block;)Z	func_149825_a	isFence	#isFence, :, ~, isFence
+		p	0	p_149825_0_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_149826_e	canConnectFenceTo	#canConnectFenceTo, :, ~, shouldConnectTo
+		c	Returns true if the specified block can be connected by a fence
+		p	1	p_149826_1_	world	#~, ~, ~, world
+		p	2	p_149826_2_	x	#~, ~, ~, x
+		p	3	p_149826_3_	y	#~, ~, ~, y
+		p	4	p_149826_4_	z	#~, ~, ~, z
+	m	(Ljava/lang/String;Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45406_1_	blockSprite	#~, ~, ~, blockSprite
+		p	2	p_i45406_2_	material	#~, ~, ~, material

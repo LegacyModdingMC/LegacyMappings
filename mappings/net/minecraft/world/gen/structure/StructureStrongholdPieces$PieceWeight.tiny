@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$PieceWeight	net/minecraft/world/gen/structure/StructureStrongholdPieces$PieceWeight	
+	f	Ljava/lang/Class;	field_75194_a	pieceClass	#pieceClass, :, ~, type
+	f	I	field_75192_b	pieceWeight	#pieceWeight, :, ~, weight
+		c	This basically keeps track of the 'epicness' of a structure. Epic structure components have a higher 'weight', and Structures may only grow up to a certain 'weight' before generation is stopped
+	f	I	field_75193_c	instancesSpawned	#instancesSpawned, :, ~, amountGenerated
+	f	I	field_75191_d	instancesLimit	#instancesLimit, :, ~, maxAmount
+		c	How many Structure Pieces of this type may spawn in a structure
+	m	()Z	func_75190_a	canSpawnMoreStructures	#canSpawnMoreStructures, :, ~, isValid
+	m	(I)Z	func_75189_a	canSpawnMoreStructuresOfType	#canSpawnMoreStructuresOfType, :, ~, isValid
+		p	1	p_75189_1_	generationDepth	#~, ~, ~, generationDepth
+	m	(Ljava/lang/Class;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2076_1_	type	#~, ~, ~, type
+		p	2	p_i2076_2_	weight	#~, ~, ~, weight
+		p	3	p_i2076_3_	maxAmount	#~, ~, ~, maxAmount

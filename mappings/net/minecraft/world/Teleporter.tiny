@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/Teleporter	net/minecraft/world/Teleporter	
+	f	Lnet/minecraft/world/WorldServer;	field_85192_a	worldServerInstance	#worldServerInstance, world, :, :
+	f	Ljava/util/Random;	field_77187_a	random	#random, :, :, :
+		c	A private Random() function in Teleporter
+	f	Lnet/minecraft/util/LongHashMap;	field_85191_c	destinationCoordinateCache	#destinationCoordinateCache, :, ~, portalCache
+		c	Stores successful portal placement locations for rapid lookup.
+	f	Ljava/util/List;	field_85190_d	destinationCoordinateKeys	#destinationCoordinateKeys, :, ~, portalCacheKeys
+		c	A list of valid keys for the destinationCoordainteCache. These are based on the X & Z of the players initial location.
+	m	(Lnet/minecraft/world/WorldServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1963_1_	worldIn	#worldIn, :, world, :
+	m	(J)V	func_85189_a	removeStalePortalLocations	#removeStalePortalLocations, :, ~, tick
+		c	called periodically to remove out-of-date portal locations from the cache list. Argument par1 is a WorldServer.getTotalWorldTime() value.
+		p	1	p_85189_1_	worldTime	#worldTime, :, ~, time
+	m	(Lnet/minecraft/entity/Entity;)Z	func_85188_a	makePortal	#makePortal, :, ~, generateNetherPortal
+		p	1	p_85188_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;DDDF)V	func_77185_a	placeInPortal	#placeInPortal, :, ~, onDimensionChanged
+		c	Place an entity in a nearby portal, creating one if necessary.
+		p	1	p_77185_1_	entity	#~, ~, ~, entity
+		p	2	p_77185_2_	x	#~, ~, ~, x
+		p	4	p_77185_4_	y	#~, ~, ~, y
+		p	6	p_77185_6_	z	#~, ~, ~, z
+		p	8	p_77185_8_	yaw	#~, ~, ~, yaw
+	m	(Lnet/minecraft/entity/Entity;DDDF)Z	func_77184_b	placeInExistingPortal	#placeInExistingPortal, :, ~, findNetherPortal
+		c	Place an entity in a nearby portal which already exists.
+		p	1	p_77184_1_	entity	#~, ~, ~, entity
+		p	2	p_77184_2_	x	#~, ~, ~, x
+		p	4	p_77184_4_	y	#~, ~, ~, y
+		p	6	p_77184_6_	z	#~, ~, ~, z
+		p	8	p_77184_8_	yaw	#~, ~, ~, yaw

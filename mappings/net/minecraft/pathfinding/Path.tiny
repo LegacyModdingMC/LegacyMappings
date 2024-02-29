@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/pathfinding/Path	net/minecraft/pathfinding/Path	
+	f	[Lnet/minecraft/pathfinding/PathPoint;	field_75852_a	pathPoints	#pathPoints, :, nodes, heap
+		c	Contains the points in this path
+	f	I	field_75851_b	count	#count, :, :, size
+		c	The number of points in this path
+	m	()V	func_75848_a	clearPath	#clearPath, :, clear, :
+		c	Clears the path
+	m	(I)V	func_75847_a	sortBack	#sortBack, :, shiftUp, upHeap
+		c	Sorts a point to the left
+		p	1	p_75847_1_	index	#index, :, :, :
+	m	(Lnet/minecraft/pathfinding/PathPoint;)Lnet/minecraft/pathfinding/PathPoint;	func_75849_a	addPoint	#addPoint, :, push, insert
+		c	Adds a point to the path
+		p	1	p_75849_1_	point	#point, :, node, :
+	m	(Lnet/minecraft/pathfinding/PathPoint;F)V	func_75850_a	changeDistance	#changeDistance, :, setNodeWeight, setWeight
+		c	Changes the provided point's distance to target
+		p	1	p_75850_1_	point	#point, :, node, :
+		p	2	p_75850_2_	distance	#distance, :, weight, :
+	m	(I)V	func_75846_b	sortForward	#sortForward, :, shiftDown, :
+		c	Sorts a point to the right
+		p	1	p_75846_1_	index	#index, :, :, :
+	m	()Lnet/minecraft/pathfinding/PathPoint;	func_75844_c	dequeue	#dequeue, :, pop, :
+		c	Returns and removes the first point in the path
+	m	()Z	func_75845_e	isPathEmpty	#isPathEmpty, :, isEmpty, :
+		c	Returns true if this path contains no points
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/MapGenRavine	net/minecraft/world/gen/MapGenRavine	
+	f	[F	field_75046_d	rs	#rs, :, heightToHorizontalStretchFactor, buffer
+	m	(JII[Lnet/minecraft/block/Block;DDDFFFIID)V	func_151540_a	placeBranch	#~, ~, ~, placeBranch
+		p	1	p_151540_1_	seed	#~, ~, ~, seed
+		p	3	p_151540_3_	chunkX	#~, ~, ~, chunkX
+		p	4	p_151540_4_	chunkZ	#~, ~, ~, chunkZ
+		p	5	p_151540_5_	blocks	#~, ~, ~, blocks
+		p	6	p_151540_6_	x	#~, ~, ~, x
+		p	8	p_151540_8_	y	#~, ~, ~, y
+		p	10	p_151540_10_	z	#~, ~, ~, z
+		p	12	p_151540_12_	baseWidth	#~, ~, ~, baseWidth
+		p	13	p_151540_13_	yaw	#~, ~, ~, yaw
+		p	14	p_151540_14_	pitch	#~, ~, ~, pitch
+		p	15	p_151540_15_	branch	#~, ~, ~, branch
+		p	16	p_151540_16_	branchCount	#~, ~, ~, branchCount
+		p	17	p_151540_17_	widthHeightRatio	#~, ~, ~, widthHeightRatio
+	m	()V	<init>	<init>	#~, ~, ~, ~

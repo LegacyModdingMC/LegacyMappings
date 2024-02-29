@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/IResourceManagerReloadListener	net/minecraft/client/resources/IResourceManagerReloadListener	
+	m	(Lnet/minecraft/client/resources/IResourceManager;)V	func_110549_a	onResourceManagerReload	#onResourceManagerReload, :, reload, :
+		p	1	p_110549_1_	resourceManager	#resourceManager, :, :, :

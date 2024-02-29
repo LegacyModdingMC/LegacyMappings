@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S07PacketRespawn	net/minecraft/network/play/server/S07PacketRespawn	
+	f	I	field_149088_a	dimensionID	#dimensionID, :, dimensionId, worldHeight
+	f	Lnet/minecraft/world/EnumDifficulty;	field_149086_b	difficulty	#difficulty, :, :, :
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_149087_c	gameType	#gameType, :, ~, gameMode
+	f	Lnet/minecraft/world/WorldType;	field_149085_d	worldType	#worldType, :, generatorType, :
+	m	()I	func_149082_c	getDimensionID	#getDimensionID, :, getDimensionId, :
+	m	()Lnet/minecraft/world/EnumDifficulty;	func_149081_d	getDifficulty	#getDifficulty, :, :, :
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_149083_e	getGameType	#getGameType, :, ~, getGameMode
+	m	()Lnet/minecraft/world/WorldType;	func_149080_f	getWorldType	#getWorldType, :, getGeneratorType, :
+	m	(ILnet/minecraft/world/EnumDifficulty;Lnet/minecraft/world/WorldType;Lnet/minecraft/world/WorldSettings$GameType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45213_1_	dimensionIDIn	#dimensionIDIn, :, ~, dimensionId
+		p	2	p_i45213_2_	difficultyIn	#difficultyIn, :, ~, difficulty
+		p	3	p_i45213_3_	worldTypeIn	#worldTypeIn, :, ~, generatorType
+		p	4	p_i45213_4_	gameTypeIn	#gameTypeIn, :, ~, gameMode
+	m	()V	<init>	<init>	#~, ~, ~, ~

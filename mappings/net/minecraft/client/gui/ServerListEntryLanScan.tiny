@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ServerListEntryLanScan	net/minecraft/client/gui/ServerListEntryLanScan	
+	f	Lnet/minecraft/client/Minecraft;	field_148288_a	mc	#mc, :, client, minecraft
+	m	()V	<init>	<init>	#~, ~, ~, ~

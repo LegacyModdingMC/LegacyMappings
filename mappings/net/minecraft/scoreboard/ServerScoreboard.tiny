@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/ServerScoreboard	net/minecraft/scoreboard/ServerScoreboard	
+	f	Lnet/minecraft/server/MinecraftServer;	field_96555_a	scoreboardMCServer	#scoreboardMCServer, server, :, :
+	f	Ljava/util/Set;	field_96553_b	addedObjectives	#addedObjectives, :, objectives, displayedObjectives
+	f	Lnet/minecraft/scoreboard/ScoreboardSaveData;	field_96554_c	scoreboardSaveData	#scoreboardSaveData, :, state, savedData
+	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1501_1_	mcServer	#mcServer, :, server, :
+	m	(Lnet/minecraft/scoreboard/ScoreboardSaveData;)V	func_96547_a	setSavedData	#~, ~, setScoreboardState, setSavedData
+		p	1	p_96547_1_	savedData	#~, ~, state, savedData
+	m	()V	func_96551_b	markSaveDataDirty	#markSaveDataDirty, :, markDirtyIfNull, markDirty
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)Ljava/util/List;	func_96550_d	getCreatePackets	#getCreatePackets, :, createChangePackets, createStartDisplayingObjectivePackets
+		p	1	p_96550_1_	objective	#objective, :, ~, objective
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)V	func_96549_e	addObjective	#addObjective, :, addScoreboardObjective, startDisplayingObjective
+		p	1	p_96549_1_	objective	#objective, :, :, :
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)Ljava/util/List;	func_96548_f	getDestroyPackets	#getDestroyPackets, :, ~, createStopDisplayingObjectivePackets
+		p	1	p_96548_1_	objective	#~, ~, ~, objective
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)V	func_96546_g	sendDisplaySlotRemovalPackets	#sendDisplaySlotRemovalPackets, :, removeScoreboardObjective, stopDisplayingObjective
+		p	1	p_96546_1_	objective	#~, ~, objective, :
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;)I	func_96552_h	getObjectiveDisplaySlotCount	#getObjectiveDisplaySlotCount, :, getSlot, getDisplaySlot
+		p	1	p_96552_1_	objective	#~, ~, objective, :

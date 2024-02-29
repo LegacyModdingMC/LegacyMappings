@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockWall	net/minecraft/block/BlockWall	
+	f	[Ljava/lang/String;	field_150092_a	VARIANTS	#~, ~, ~, VARIANTS
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45435_1_	modelBlock	#modelBlock, :, block, :
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_150091_e	canConnectWallTo	#canConnectWallTo, :, ~, shouldConnectTo
+		c	Return whether an adjacent block can connect to a wall.
+		p	1	p_150091_1_	world	#~, ~, ~, world
+		p	2	p_150091_2_	x	#~, ~, ~, x
+		p	3	p_150091_3_	y	#~, ~, ~, y
+		p	4	p_150091_4_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

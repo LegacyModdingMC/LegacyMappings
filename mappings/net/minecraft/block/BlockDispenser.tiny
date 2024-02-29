@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDispenser	net/minecraft/block/BlockDispenser	
+	f	Lnet/minecraft/util/IIcon;	field_149944_M	topSprite	#~, ~, ~, topSprite
+	f	Lnet/minecraft/util/IIcon;	field_149945_N	horizontalSprite	#~, ~, ~, horizontalSprite
+	f	Lnet/minecraft/util/IIcon;	field_149946_O	verticalSprite	#~, ~, ~, verticalSprite
+	f	Lnet/minecraft/util/IRegistry;	field_149943_a	dispenseBehaviorRegistry	#dispenseBehaviorRegistry, DISPENSE_BEHAVIOR_REGISTRY, BEHAVIOR_REGISTRY, BEHAVIORS
+		c	Registry for all dispense behaviors.
+	f	Ljava/util/Random;	field_149942_b	rand	#rand, :, random, :
+	m	(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/dispenser/IBehaviorDispenseItem;	func_149940_a	getBehavior	#getBehavior, :, getBehaviorForItem, getDispenseBehavior
+		p	1	p_149940_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/dispenser/IBlockSource;)Lnet/minecraft/dispenser/IPosition;	func_149939_a	getIPositionFromBlockSource	#getIPositionFromBlockSource, getDispensePosition, getPosition, getDispensePos
+		c	Gets an IPosition instance for the dispenser's output given a block source
+		p	0	p_149939_0_	coords	#coords, :, pointer, block
+	m	(I)Lnet/minecraft/util/EnumFacing;	func_149937_b	getFacingDirection	#getFacingDirection, getFacing, getDirection, :
+		c	Gets an EnumFacing for the given dispenser metadata value
+		p	0	p_149937_0_	meta	#meta, :, data, id
+	m	(Lnet/minecraft/world/World;III)V	func_149941_e	dispense	#~, ~, ~, dispense
+		p	1	p_149941_1_	world	#~, ~, ~, world
+		p	2	p_149941_2_	x	#~, ~, ~, x
+		p	3	p_149941_3_	y	#~, ~, ~, y
+		p	4	p_149941_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)V	func_149938_m	updateFacing	#~, ~, ~, updateFacing
+		p	1	p_149938_1_	world	#~, ~, ~, world
+		p	2	p_149938_2_	x	#~, ~, ~, x
+		p	3	p_149938_3_	y	#~, ~, ~, y
+		p	4	p_149938_4_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

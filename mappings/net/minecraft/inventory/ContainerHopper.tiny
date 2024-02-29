@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerHopper	net/minecraft/inventory/ContainerHopper	
+	f	Lnet/minecraft/inventory/IInventory;	field_94538_a	hopperInventory	#hopperInventory, :, inventory, hopper
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/inventory/IInventory;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1814_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1814_2_	hopper	#~, ~, ~, hopper

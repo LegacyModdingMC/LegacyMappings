@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiOptionsRowList$Row	net/minecraft/client/gui/GuiOptionsRowList$Row	
+	f	Lnet/minecraft/client/Minecraft;	field_148325_a	client	#client, :, ~, minecraft
+	f	Lnet/minecraft/client/gui/GuiButton;	field_148323_b	buttonA	#buttonA, :, ~, left
+	f	Lnet/minecraft/client/gui/GuiButton;	field_148324_c	buttonB	#buttonB, :, ~, right
+	m	(Lnet/minecraft/client/gui/GuiButton;Lnet/minecraft/client/gui/GuiButton;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45014_1_	buttonAIn	#buttonAIn, :, ~, left
+		p	2	p_i45014_2_	buttonBIn	#buttonBIn, :, ~, right

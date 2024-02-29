@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/NoiseGeneratorOctaves	net/minecraft/world/gen/NoiseGeneratorOctaves	
+	f	[Lnet/minecraft/world/gen/NoiseGeneratorImproved;	field_76307_a	generatorCollection	#generatorCollection, :, ~, samplers
+		c	Collection of noise generation functions.  Output is combined to produce different octaves of noise.
+	f	I	field_76306_b	octaves	#octaves, :, ~, samplerCount
+	m	(Ljava/util/Random;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2111_1_	seed	#seed, :, random, :
+		p	2	p_i2111_2_	octavesIn	#octavesIn, :, ~, samplerCount
+	m	([DIIIIDDD)[D	func_76305_a	generateNoiseOctaves	#generateNoiseOctaves, :, ~, getNoise
+		c	Bouncer function to the main one with some default arguments.
+		p	1	p_76305_1_	noiseArray	#noiseArray, :, ~, noise
+		p	2	p_76305_2_	xOffset	#xOffset, :, ~, x
+		p	3	p_76305_3_	zOffset	#zOffset, :, ~, y
+		p	4	p_76305_4_	xSize	#xSize, :, ~, z
+		p	5	p_76305_5_	zSize	#zSize, :, ~, sizeZ
+		p	6	p_76305_6_	xScale	#xScale, :, ~, saleX
+		p	8	p_76305_8_	zScale	#zScale, :, ~, scaleZ
+		p	10	p_76305_10_	scaleExponent	#~, ~, ~, scaleExponent
+	m	([DIIIIIIDDD)[D	func_76304_a	generateNoiseOctaves	#generateNoiseOctaves, :, ~, getNoise
+		c	pars:(par2,3,4=noiseOffset ; so that adjacent noise segments connect) (pars5,6,7=x,y,zArraySize),(pars8,10,12 = x,y,z noiseScale)
+		p	1	p_76304_1_	noiseArray	#noiseArray, :, ~, noise
+		p	2	p_76304_2_	xOffset	#xOffset, :, ~, x
+		p	3	p_76304_3_	yOffset	#yOffset, :, ~, y
+		p	4	p_76304_4_	zOffset	#zOffset, :, ~, z
+		p	5	p_76304_5_	xSize	#xSize, :, ~, sizeX
+		p	6	p_76304_6_	ySize	#ySize, :, ~, sizeY
+		p	7	p_76304_7_	zSize	#zSize, :, ~, sizeZ
+		p	8	p_76304_8_	xScale	#xScale, :, ~, scaleX
+		p	10	p_76304_10_	yScale	#yScale, :, ~, scaleY
+		p	12	p_76304_12_	zScale	#zScale, :, ~, scaleZ

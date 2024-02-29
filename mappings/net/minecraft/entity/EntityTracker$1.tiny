@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityTracker$1	net/minecraft/entity/EntityTracker$1	
+	f	I	field_96570_a	interval	#~, ~, ticks, interval
+	f	Lnet/minecraft/entity/EntityTracker;	field_96569_b	theEntityTracker	#theEntityTracker, :, entityTracket, entityTracker
+	m	(Lnet/minecraft/entity/EntityTracker;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1515_1_	entityTracker	#~, ~, entityTracker, ~
+		p	2	p_i1515_2_	ticks	#~, ~, ticks, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

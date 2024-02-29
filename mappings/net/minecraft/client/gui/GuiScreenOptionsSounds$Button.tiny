@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenOptionsSounds$Button	net/minecraft/client/gui/GuiScreenOptionsSounds$Button	
+	f	F	field_146156_o	volume	#volume, :, ~, sliderButtonPos
+	f	Z	field_146155_p	pressed	#pressed, :, ~, dragging
+	f	Lnet/minecraft/client/gui/GuiScreenOptionsSounds;	field_146154_q	soundScreen	#~, ~, ~, soundScreen
+	f	Lnet/minecraft/client/audio/SoundCategory;	field_146153_r	soundCatergory	#~, ~, ~, soundCatergory
+	f	Ljava/lang/String;	field_146152_s	categoryName	#categoryName, :, ~, widgetName
+	m	(Lnet/minecraft/client/gui/GuiScreenOptionsSounds;IIILnet/minecraft/client/audio/SoundCategory;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i45024_2_	x	#~, ~, ~, x
+		p	3	p_i45024_3_	y	#~, ~, ~, y
+		p	4	p_i45024_4_	id	#~, ~, ~, id
+		p	5	p_i45024_5_	category	#~, ~, ~, category
+		p	6	p_i45024_6_	doubleSlider	#~, ~, ~, doubleSlider
+		p	1	p_i45024_1_	p_i45024_1_	#~, ~, ~, ~

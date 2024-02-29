@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntityRendererChestHelper	net/minecraft/client/renderer/tileentity/TileEntityRendererChestHelper	
+	f	Lnet/minecraft/client/renderer/tileentity/TileEntityRendererChestHelper;	field_147719_a	instance	#instance, :, ~, INSTANCE
+	f	Lnet/minecraft/tileentity/TileEntityChest;	field_147717_b	chestBasic	#chestBasic, :, ~, chest
+	f	Lnet/minecraft/tileentity/TileEntityChest;	field_147718_c	chestTrap	#chestTrap, :, ~, trappedChest
+	f	Lnet/minecraft/tileentity/TileEntityEnderChest;	field_147716_d	enderChest	#enderChest, :, ~, enderChest
+	m	(Lnet/minecraft/block/Block;IF)V	func_147715_a	renderChest	#renderChest, :, ~, render
+		c	Renders a chest at 0,0,0 - used for item rendering
+		p	1	p_147715_1_	block	#~, ~, ~, block
+		p	2	p_147715_2_	metadata	#~, ~, ~, metadata
+		p	3	p_147715_3_	brightness	#~, ~, ~, brightness
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

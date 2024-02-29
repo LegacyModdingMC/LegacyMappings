@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenBlockBlob	net/minecraft/world/gen/feature/WorldGenBlockBlob	
+	f	Lnet/minecraft/block/Block;	field_150545_a	block	#block, :, :, :
+	f	I	field_150544_b	startRadius	#startRadius, :, radius, size
+	m	(Lnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45450_1_	blockIn	#blockIn, :, block, :
+		p	2	p_i45450_2_	startRadiusIn	#startRadiusIn, :, radius, size

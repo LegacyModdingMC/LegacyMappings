@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureNetherBridgePieces$End	net/minecraft/world/gen/structure/StructureNetherBridgePieces$End	
+	f	I	field_74972_a	fillSeed	#fillSeed, :, ~, seed
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureNetherBridgePieces$End;	func_74971_a	of	#~, ~, ~, of
+		p	0	p_74971_0_	pieces	#~, ~, ~, pieces
+		p	1	p_74971_1_	random	#~, ~, ~, random
+		p	2	p_74971_2_	x	#~, ~, ~, x
+		p	3	p_74971_3_	y	#~, ~, ~, y
+		p	4	p_74971_4_	z	#~, ~, ~, z
+		p	5	p_74971_5_	facing	#~, ~, ~, facing
+		p	6	p_74971_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2043_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2043_2_	seed	#~, ~, ~, seed
+		p	3	p_i2043_3_	box	#~, ~, ~, box
+		p	4	p_i2043_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

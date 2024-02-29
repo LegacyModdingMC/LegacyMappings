@@ -1,0 +1,683 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/RenderBlocks	net/minecraft/client/renderer/RenderBlocks	
+	f	F	field_147884_z	aoLightValueScratchXYZNNP	#aoLightValueScratchXYZNNP, :, ~, bottomSouthWestVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the north/bottom/west corner.
+	f	F	field_147814_A	aoLightValueScratchYZNN	#aoLightValueScratchYZNN, :, ~, bottomNorthEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the bottom face and the east face.
+	f	F	field_147815_B	aoLightValueScratchYZNP	#aoLightValueScratchYZNP, :, ~, bottomSouthEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the bottom face and the west face.
+	f	F	field_147816_C	aoLightValueScratchXYZPNN	#aoLightValueScratchXYZPNN, :, ~, bottomNorthEastVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the south/bottom/east corner.
+	f	F	field_147810_D	aoLightValueScratchXYPN	#aoLightValueScratchXYPN, :, ~, bottomEastEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the bottom face and the south face.
+	f	F	field_147811_E	aoLightValueScratchXYZPNP	#aoLightValueScratchXYZPNP, :, ~, bottomSouthEastVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the south/bottom/west corner.
+	f	F	field_147812_F	aoLightValueScratchXYZNPN	#aoLightValueScratchXYZNPN, :, ~, topNorthWestVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the north/top/east corner.
+	f	F	field_147813_G	aoLightValueScratchXYNP	#aoLightValueScratchXYNP, :, ~, topWestEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the top face and the north face.
+	f	F	field_147821_H	aoLightValueScratchXYZNPP	#aoLightValueScratchXYZNPP, :, ~, topSouthWestVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the north/top/west corner.
+	f	F	field_147822_I	aoLightValueScratchYZPN	#aoLightValueScratchYZPN, :, ~, topNorthEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the top face and the east face.
+	f	F	field_147823_J	aoLightValueScratchXYZPPN	#aoLightValueScratchXYZPPN, :, ~, topNorthEastVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the south/top/east corner.
+	f	F	field_147824_K	aoLightValueScratchXYPP	#aoLightValueScratchXYPP, :, ~, topEastEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the top face and the south face.
+	f	F	field_147817_L	aoLightValueScratchYZPP	#aoLightValueScratchYZPP, :, ~, topSouthEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the top face and the west face.
+	f	F	field_147818_M	aoLightValueScratchXYZPPP	#aoLightValueScratchXYZPPP, :, ~, topSouthEastVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the south/top/west corner.
+	f	F	field_147819_N	aoLightValueScratchXZNN	#aoLightValueScratchXZNN, :, ~, northWestEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the north face and the east face.
+	f	F	field_147820_O	aoLightValueScratchXZPN	#aoLightValueScratchXZPN, :, ~, northEastEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the south face and the east face.
+	f	F	field_147830_P	aoLightValueScratchXZNP	#aoLightValueScratchXZNP, :, ~, southWestEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the north face and the west face.
+	f	F	field_147829_Q	aoLightValueScratchXZPP	#aoLightValueScratchXZPP, :, ~, southEastEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the south face and the west face.
+	f	I	field_147832_R	aoBrightnessXYZNNN	#aoBrightnessXYZNNN, :, ~, bottomNorthWestVertexLightColor
+		c	Ambient occlusion brightness XYZNNN
+	f	I	field_147831_S	aoBrightnessXYNN	#aoBrightnessXYNN, :, ~, bottomWestEdgeLightColor
+		c	Ambient occlusion brightness XYNN
+	f	I	field_147826_T	aoBrightnessXYZNNP	#aoBrightnessXYZNNP, :, ~, bottomSouthWestVertexLightColor
+		c	Ambient occlusion brightness XYZNNP
+	f	I	field_147825_U	aoBrightnessYZNN	#aoBrightnessYZNN, :, ~, bottomNorthEdgeLightColor
+		c	Ambient occlusion brightness YZNN
+	f	I	field_147828_V	aoBrightnessYZNP	#aoBrightnessYZNP, :, ~, bottomSouthEdgeLightColor
+		c	Ambient occlusion brightness YZNP
+	f	I	field_147827_W	aoBrightnessXYZPNN	#aoBrightnessXYZPNN, :, ~, bottomNorthEastVertexLightColor
+		c	Ambient occlusion brightness XYZPNN
+	f	I	field_147835_X	aoBrightnessXYPN	#aoBrightnessXYPN, :, ~, bottomEastEdgeLightColor
+		c	Ambient occlusion brightness XYPN
+	f	I	field_147834_Y	aoBrightnessXYZPNP	#aoBrightnessXYZPNP, :, ~, bottomSouthEastVertexLightColor
+		c	Ambient occlusion brightness XYZPNP
+	f	Lnet/minecraft/world/IBlockAccess;	field_147845_a	blockAccess	#blockAccess, :, world, :
+		c	The IBlockAccess used by this instance of RenderBlocks
+	f	F	field_147839_az	colorBlueBottomRight	#colorBlueBottomRight, :, ~, vertex3B
+		c	Blue color value for the bottom right corner
+	f	F	field_147833_aA	colorBlueTopRight	#colorBlueTopRight, :, ~, vertex4B
+		c	Blue color value for the top right corner
+	f	I	field_147836_Z	aoBrightnessXYZNPN	#aoBrightnessXYZNPN, :, ~, topNorthWestVertexLightColor
+		c	Ambient occlusion brightness XYZNPN
+	f	I	field_147880_aa	aoBrightnessXYNP	#aoBrightnessXYNP, :, ~, topWestEdgeLightColor
+		c	Ambient occlusion brightness XYNP
+	f	I	field_147881_ab	aoBrightnessXYZNPP	#aoBrightnessXYZNPP, :, ~, topSouthWestVertexLightColor
+		c	Ambient occlusion brightness XYZNPP
+	f	I	field_147878_ac	aoBrightnessYZPN	#aoBrightnessYZPN, :, ~, topNorthEdgeLightColor
+		c	Ambient occlusion brightness YZPN
+	f	I	field_147879_ad	aoBrightnessXYZPPN	#aoBrightnessXYZPPN, :, ~, topNorthEastVertexLightColor
+		c	Ambient occlusion brightness XYZPPN
+	f	I	field_147885_ae	aoBrightnessXYPP	#aoBrightnessXYPP, :, ~, topEastEdgeLightColor
+		c	Ambient occlusion brightness XYPP
+	f	I	field_147887_af	aoBrightnessYZPP	#aoBrightnessYZPP, :, ~, topSouthEdgeLightColor
+		c	Ambient occlusion brightness YZPP
+	f	I	field_147882_ag	aoBrightnessXYZPPP	#aoBrightnessXYZPPP, :, ~, topSouthEastVertexLightColor
+		c	Ambient occlusion brightness XYZPPP
+	f	I	field_147883_ah	aoBrightnessXZNN	#aoBrightnessXZNN, :, ~, northWestEdgeLightColor
+		c	Ambient occlusion brightness XZNN
+	f	I	field_147866_ai	aoBrightnessXZPN	#aoBrightnessXZPN, :, ~, northEastEdgeLightColor
+		c	Ambient occlusion brightness XZPN
+	f	I	field_147868_aj	aoBrightnessXZNP	#aoBrightnessXZNP, :, ~, southWestEdgeLightColor
+		c	Ambient occlusion brightness XZNP
+	f	I	field_147862_ak	aoBrightnessXZPP	#aoBrightnessXZPP, :, ~, southEastEdgeLightColor
+		c	Ambient occlusion brightness XZPP
+	f	I	field_147864_al	brightnessTopLeft	#brightnessTopLeft, :, ~, vertex1Brightness
+		c	Brightness top left
+	f	I	field_147874_am	brightnessBottomLeft	#brightnessBottomLeft, :, ~, vertex2Brightness
+		c	Brightness bottom left
+	f	I	field_147876_an	brightnessBottomRight	#brightnessBottomRight, :, ~, vertex3Brightness
+		c	Brightness bottom right
+	f	I	field_147870_ao	brightnessTopRight	#brightnessTopRight, :, ~, vertex4Brightness
+		c	Brightness top right
+	f	F	field_147872_ap	colorRedTopLeft	#colorRedTopLeft, :, ~, vertex1R
+		c	Red color value for the top left corner
+	f	F	field_147852_aq	colorRedBottomLeft	#colorRedBottomLeft, :, ~, vertex2R
+		c	Red color value for the bottom left corner
+	f	F	field_147850_ar	colorRedBottomRight	#colorRedBottomRight, :, ~, vertex3R
+		c	Red color value for the bottom right corner
+	f	F	field_147848_as	colorRedTopRight	#colorRedTopRight, :, ~, vertex4R
+		c	Red color value for the top right corner
+	f	F	field_147846_at	colorGreenTopLeft	#colorGreenTopLeft, :, ~, vertex1G
+		c	Green color value for the top left corner
+	f	F	field_147860_au	colorGreenBottomLeft	#colorGreenBottomLeft, :, ~, vertex2G
+		c	Green color value for the bottom left corner
+	f	F	field_147858_av	colorGreenBottomRight	#colorGreenBottomRight, :, ~, vertex3G
+		c	Green color value for the bottom right corner
+	f	F	field_147856_aw	colorGreenTopRight	#colorGreenTopRight, :, ~, vertex4G
+		c	Green color value for the top right corner
+	f	F	field_147854_ax	colorBlueTopLeft	#colorBlueTopLeft, :, ~, vretex1B
+		c	Blue color value for the top left corner
+	f	F	field_147841_ay	colorBlueBottomLeft	#colorBlueBottomLeft, :, ~, vertex2B
+		c	Blue color value for the bottom left corner
+	f	Z	field_147843_b	fancyGrass	#fancyGrass, :, ~, fancyGraphics
+		c	Fancy grass side matching biome
+	f	Z	field_147844_c	useInventoryTint	#useInventoryTint, :, ~, updateColor
+		c	When set to {@code true} the block renderer will request the block's color information\nand update the appropriate GL properties.
+	f	Lnet/minecraft/util/IIcon;	field_147840_d	overrideBlockTexture	#overrideBlockTexture, :, ~, sprite
+		c	If set to >=0, all block faces will be rendered using this texture index
+	f	Z	field_147842_e	flipTexture	#flipTexture, :, ~, renderFlipped
+		c	Set to true if the texture should be flipped horizontally during render*Face
+	f	Z	field_152631_f	field_152631_f	#~, ~, ~, ~
+	f	Z	field_147837_f	renderAllFaces	#renderAllFaces, :, ~, renderFaceAlways
+		c	If true, renders all faces on all blocks rather than using the logic in Block.shouldSideBeRendered.
+	f	Z	field_147838_g	renderFromInside	#renderFromInside, :, ~, flipDepth
+	f	D	field_147859_h	renderMinX	#renderMinX, :, ~, minX
+		c	The minimum X value for rendering (default 0.0).
+	f	D	field_147861_i	renderMaxX	#renderMaxX, :, ~, maxX
+		c	The maximum X value for rendering (default 1.0).
+	f	D	field_147855_j	renderMinY	#renderMinY, :, ~, minY
+		c	The minimum Y value for rendering (default 0.0).
+	f	D	field_147857_k	renderMaxY	#renderMaxY, :, ~, maxY
+		c	The maximum Y value for rendering (default 1.0).
+	f	D	field_147851_l	renderMinZ	#renderMinZ, :, ~, minZ
+		c	The minimum Z value for rendering (default 0.0).
+	f	D	field_147853_m	renderMaxZ	#renderMaxZ, :, ~, maxZ
+		c	The maximum Z value for rendering (default 1.0).
+	f	Z	field_147847_n	lockBlockBounds	#lockBlockBounds, :, ~, inItemFrame
+	f	Z	field_147849_o	partialRenderBounds	#partialRenderBounds, :, ~, maxAmbientOcclusion
+	f	Lnet/minecraft/client/Minecraft;	field_147877_p	minecraftRB	#minecraftRB, :, ~, minecraft
+	f	I	field_147875_q	uvRotateEast	#uvRotateEast, :, ~, northFaceRotation
+	f	I	field_147873_r	uvRotateWest	#uvRotateWest, :, ~, southFaceRotation
+	f	I	field_147871_s	uvRotateSouth	#uvRotateSouth, :, ~, westFaceRotation
+	f	I	field_147869_t	uvRotateNorth	#uvRotateNorth, :, ~, eastFaceRotation
+	f	I	field_147867_u	uvRotateTop	#uvRotateTop, :, ~, topFaceRotation
+	f	I	field_147865_v	uvRotateBottom	#uvRotateBottom, :, ~, bottomFaceRotation
+	f	Z	field_147863_w	enableAO	#enableAO, :, ~, ambientOcclusion
+		c	Whether ambient occlusion is enabled or not
+	f	F	field_147888_x	aoLightValueScratchXYZNNN	#aoLightValueScratchXYZNNN, :, ~, bottomNorthWestVertexAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion on the north/bottom/east corner.
+	f	F	field_147886_y	aoLightValueScratchXYNN	#aoLightValueScratchXYNN, :, ~, bottomWestEdgeAmbientOcclusionLight
+		c	Used as a scratch variable for ambient occlusion between the bottom face and the north face.
+	m	(Lnet/minecraft/world/IBlockAccess;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1251_1_	world	#~, ~, world, :
+	m	()V	func_147771_a	clearOverrideBlockTexture	#clearOverrideBlockTexture, :, ~, clearSprite
+		c	Clear override block texture
+	m	(DDDDDD)V	func_147782_a	setRenderBounds	#setRenderBounds, :, ~, prepare
+		p	1	p_147782_1_	minX	#~, ~, ~, minX
+		p	3	p_147782_3_	minY	#~, ~, ~, minY
+		p	5	p_147782_5_	minZ	#~, ~, ~, minZ
+		p	7	p_147782_7_	maxX	#~, ~, ~, maxX
+		p	9	p_147782_9_	maxY	#~, ~, ~, maxY
+		p	11	p_147782_11_	maxZ	#~, ~, ~, maxZ
+	m	(DDDDDDFD)V	func_147763_a	renderPistonRodUD	#renderPistonRodUD, :, ~, tessellatePistonSideX
+		c	Render piston rod up/down
+		p	1	p_147763_1_	minX	#~, ~, x0, minX
+		p	3	p_147763_3_	maxX	#~, ~, x1, maxX
+		p	5	p_147763_5_	minY	#~, ~, y1, minY
+		p	7	p_147763_7_	maxY	#~, ~, y0, maxY
+		p	9	p_147763_9_	minZ	#~, ~, z0, minZ
+		p	11	p_147763_11_	maxZ	#~, ~, z1, maxZ
+		p	13	p_147763_13_	color	#~, ~, color, :
+		p	14	p_147763_14_	length	#~, ~, ~, length
+	m	(I)Z	func_147739_a	renderItemIn3d	#renderItemIn3d, :, ~, isGui3D
+		c	Checks to see if the item's render type indicates that it should be rendered as a regular block or not.
+		p	0	p_147739_0_	type	#~, ~, ~, type
+	m	(IIII)I	func_147778_a	getAoBrightness	#getAoBrightness, :, ~, interpolateLightColor
+		c	Get ambient occlusion brightness
+		p	1	p_147778_1_	br1	#br1, :, ~, color1
+		p	2	p_147778_2_	br2	#br2, :, ~, color2
+		p	3	p_147778_3_	br3	#br3, :, ~, color3
+		p	4	p_147778_4_	br4	#br4, :, ~, center
+	m	(IIIIDDDD)I	func_147727_a	mixAoBrightness	#mixAoBrightness, :, ~, getVertexBrightness
+		p	1	p_147727_1_	corner1	#~, ~, ~, corner1
+		p	2	p_147727_2_	conrner2	#~, ~, ~, conrner2
+		p	3	p_147727_3_	conrner3	#~, ~, ~, conrner3
+		p	4	p_147727_4_	corner4	#~, ~, ~, corner4
+		p	5	p_147727_5_	edgeScale1	#~, ~, ~, edgeScale1
+		p	7	p_147727_7_	edgeScale2	#~, ~, ~, edgeScale2
+		p	9	p_147727_9_	edgeScale3	#~, ~, ~, edgeScale3
+		p	11	p_147727_11_	edgeScale4	#~, ~, ~, edgeScale4
+	m	(IIILnet/minecraft/block/material/Material;)F	func_147729_a	getLiquidHeight	#getLiquidHeight, :, getFluidHeight, getLiquidHeight
+		p	1	p_147729_1_	x	#~, ~, x, :
+		p	2	p_147729_2_	y	#~, ~, y, :
+		p	3	p_147729_3_	z	#~, ~, z, :
+		p	4	p_147729_4_	liquid	#~, ~, material, liquid
+	m	(Lnet/minecraft/block/BlockAnvil;III)Z	func_147725_a	renderBlockAnvil	#renderBlockAnvil, :, ~, tessellateAnvil
+		c	Renders anvil
+		p	1	p_147725_1_	block	#~, ~, ~, block
+		p	2	p_147725_2_	x	#~, ~, ~, x
+		p	3	p_147725_3_	y	#~, ~, ~, y
+		p	4	p_147725_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockAnvil;IIII)Z	func_147780_a	renderBlockAnvilMetadata	#renderBlockAnvilMetadata, :, ~, tessellateAnvil
+		c	Renders anvil block with metadata
+		p	1	p_147780_1_	block	#~, ~, ~, block
+		p	2	p_147780_2_	x	#~, ~, ~, x
+		p	3	p_147780_3_	y	#~, ~, ~, y
+		p	4	p_147780_4_	z	#~, ~, ~, z
+		p	5	p_147780_5_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/BlockAnvil;IIIIFFFFZZI)F	func_147737_a	renderBlockAnvilRotate	#renderBlockAnvilRotate, :, ~, tessellateAnvilPart
+		c	Renders anvil block with rotation
+		p	1	p_147737_1_	block	#~, ~, ~, block
+		p	2	p_147737_2_	x	#~, ~, ~, x
+		p	3	p_147737_3_	y	#~, ~, ~, y
+		p	4	p_147737_4_	z	#~, ~, ~, z
+		p	5	p_147737_5_	part	#~, ~, ~, part
+		p	6	p_147737_6_	height	#~, ~, ~, height
+		p	7	p_147737_7_	sizeX	#~, ~, ~, sizeX
+		p	8	p_147737_8_	sizeY	#~, ~, ~, sizeY
+		p	9	p_147737_9_	sizeZ	#~, ~, ~, sizeZ
+		p	10	p_147737_10_	rotated	#~, ~, ~, rotated
+		p	11	p_147737_11_	item	#~, ~, ~, item
+		p	12	p_147737_12_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/BlockAnvil;IIIIZ)Z	func_147728_a	renderBlockAnvilOrient	#renderBlockAnvilOrient, :, ~, tessellateAnvil
+		c	Renders anvil block with orientation
+		p	1	p_147728_1_	block	#~, ~, ~, block
+		p	2	p_147728_2_	x	#~, ~, ~, x
+		p	3	p_147728_3_	y	#~, ~, ~, y
+		p	4	p_147728_4_	z	#~, ~, ~, z
+		p	5	p_147728_5_	metadata	#~, ~, ~, metadata
+		p	6	p_147728_6_	item	#~, ~, ~, item
+	m	(Lnet/minecraft/block/BlockRailBase;III)Z	func_147766_a	renderBlockMinecartTrack	#renderBlockMinecartTrack, :, ~, tessellateRail
+		p	1	p_147766_1_	block	#~, ~, ~, block
+		p	2	p_147766_2_	x	#~, ~, ~, x
+		p	3	p_147766_3_	y	#~, ~, ~, y
+		p	4	p_147766_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockBeacon;III)Z	func_147797_a	renderBlockBeacon	#renderBlockBeacon, :, ~, tessellateBeacon
+		p	1	p_147797_1_	block	#~, ~, ~, block
+		p	2	p_147797_2_	x	#~, ~, ~, x
+		p	3	p_147797_3_	y	#~, ~, ~, y
+		p	4	p_147797_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;)V	func_147775_a	setRenderBoundsFromBlock	#setRenderBoundsFromBlock, :, ~, prepare
+		c	Like setRenderBounds, but automatically pulling the bounds from the given Block.
+		p	1	p_147775_1_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/block/Block;DDDDDI)V	func_147747_a	renderTorchAtAngle	#renderTorchAtAngle, :, ~, tessellateTorch
+		c	Renders a torch at the given coordinates, with the base slanting at the given delta
+		p	1	p_147747_1_	block	#~, ~, ~, block
+		p	2	p_147747_2_	x	#~, ~, ~, x
+		p	4	p_147747_4_	y	#~, ~, ~, y
+		p	6	p_147747_6_	z	#~, ~, ~, z
+		p	8	p_147747_8_	xOffset	#~, ~, ~, xOffset
+		p	10	p_147747_10_	yOffset	#~, ~, ~, yOffset
+		p	12	p_147747_12_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/Block;DDDLnet/minecraft/util/IIcon;)V	func_147768_a	renderFaceYNeg	#renderFaceYNeg, :, ~, tessellateBottomFace
+		c	Renders the given texture to the bottom face of the block. Args: block, x, y, z, texture
+		p	1	p_147768_1_	block	#~, ~, ~, block
+		p	2	p_147768_2_	x	#~, ~, ~, x
+		p	4	p_147768_4_	y	#~, ~, ~, y
+		p	6	p_147768_6_	z	#~, ~, ~, z
+		p	8	p_147768_8_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;I)Lnet/minecraft/util/IIcon;	func_147777_a	getBlockIconFromSide	#getBlockIconFromSide, :, ~, getSprite
+		p	1	p_147777_1_	block	#~, ~, ~, block
+		p	2	p_147777_2_	face	#~, ~, ~, face
+	m	(Lnet/minecraft/block/Block;IDDD)V	func_147795_a	renderBlockCropsImpl	#renderBlockCropsImpl, :, ~, tessellatePlant
+		c	Render block crops implementation
+		p	1	p_147795_1_	block	#~, ~, block, :
+		p	2	p_147795_2_	metadata	#~, ~, ~, metadata
+		p	3	p_147795_3_	x	#~, ~, ~, x
+		p	5	p_147795_5_	y	#~, ~, ~, y
+		p	7	p_147795_7_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;IDDDD)V	func_147730_a	renderBlockStemSmall	#renderBlockStemSmall, :, ~, tessellateStem
+		p	1	p_147730_1_	block	#~, ~, ~, block
+		p	2	p_147730_2_	metadata	#~, ~, ~, metadata
+		p	3	p_147730_3_	height	#~, ~, ~, height
+		p	5	p_147730_5_	x	#~, ~, ~, x
+		p	7	p_147730_7_	y	#~, ~, ~, y
+		p	9	p_147730_9_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;IF)V	func_147800_a	renderBlockAsItem	#renderBlockAsItem, :, ~, render
+		c	Is called to render the image of a block on an inventory, as a held item, or as a an item on the ground
+		p	1	p_147800_1_	block	#~, ~, ~, block
+		p	2	p_147800_2_	metadata	#~, ~, ~, metadata
+		p	3	p_147800_3_	brightness	#~, ~, ~, brightness
+	m	(Lnet/minecraft/block/Block;II)Lnet/minecraft/util/IIcon;	func_147787_a	getBlockIconFromSideAndMetadata	#getBlockIconFromSideAndMetadata, :, ~, getSprite
+		p	1	p_147787_1_	block	#~, ~, ~, block
+		p	2	p_147787_2_	face	#~, ~, ~, face
+		p	3	p_147787_3_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/Block;III)V	func_147769_a	renderBlockAllFaces	#renderBlockAllFaces, :, ~, renderBlock
+		c	Render all faces of a block
+		p	1	p_147769_1_	block	#~, ~, block, :
+		p	2	p_147769_2_	x	#~, ~, x, :
+		p	3	p_147769_3_	y	#~, ~, y, :
+		p	4	p_147769_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;IIIFFF)Z	func_147751_a	renderStandardBlockWithAmbientOcclusion	#renderStandardBlockWithAmbientOcclusion, :, renderCubeAO, tessellateWithMinAmbientOcclusion
+		p	1	p_147751_1_	block	#~, ~, block, :
+		p	2	p_147751_2_	x	#~, ~, x, :
+		p	3	p_147751_3_	y	#~, ~, y, :
+		p	4	p_147751_4_	z	#~, ~, z, :
+		p	5	p_147751_5_	r	#~, ~, r, :
+		p	6	p_147751_6_	g	#~, ~, g, :
+		p	7	p_147751_7_	b	#~, ~, b, :
+	m	(Lnet/minecraft/block/Block;IIILnet/minecraft/util/IIcon;)V	func_147792_a	renderBlockUsingTexture	#renderBlockUsingTexture, :, ~, tessellateBlock
+		c	Renders a block using the given texture instead of the block's own default texture
+		p	1	p_147792_1_	block	#~, ~, ~, block
+		p	2	p_147792_2_	x	#~, ~, ~, x
+		p	3	p_147792_3_	y	#~, ~, ~, y
+		p	4	p_147792_4_	z	#~, ~, ~, z
+		p	5	p_147792_5_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;IIIZ)V	func_147750_a	renderPistonExtensionAllFaces	#renderPistonExtensionAllFaces, :, ~, renderPistonHead
+		c	Render all faces of the piston extension
+		p	1	p_147750_1_	block	#~, ~, block, :
+		p	2	p_147750_2_	x	#~, ~, x, :
+		p	3	p_147750_3_	y	#~, ~, y, :
+		p	4	p_147750_4_	z	#~, ~, z, :
+		p	5	p_147750_5_	isShort	#~, ~, ~, isShort
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/world/World;IIII)V	func_147749_a	renderBlockSandFalling	#renderBlockSandFalling, :, ~, render
+		p	1	p_147749_1_	block	#~, ~, block, :
+		p	2	p_147749_2_	world	#~, ~, world, :
+		p	3	p_147749_3_	x	#~, ~, x, :
+		p	4	p_147749_4_	y	#~, ~, y, :
+		p	5	p_147749_5_	z	#~, ~, z, :
+		p	6	p_147749_6_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/world/IBlockAccess;IIII)Lnet/minecraft/util/IIcon;	func_147793_a	getBlockIcon	#getBlockIcon, :, ~, getSprite
+		p	1	p_147793_1_	block	#~, ~, ~, block
+		p	2	p_147793_2_	world	#~, ~, ~, world
+		p	3	p_147793_3_	x	#~, ~, ~, x
+		p	4	p_147793_4_	y	#~, ~, ~, y
+		p	5	p_147793_5_	z	#~, ~, ~, z
+		p	6	p_147793_6_	face	#~, ~, ~, face
+	m	(Lnet/minecraft/block/BlockBrewingStand;III)Z	func_147741_a	renderBlockBrewingStand	#renderBlockBrewingStand, :, renderBrewingStand, tessellateBrewingStand
+		c	Render BlockBrewingStand
+		p	1	p_147741_1_	block	#~, ~, block, :
+		p	2	p_147741_2_	x	#~, ~, x, :
+		p	3	p_147741_3_	y	#~, ~, y, :
+		p	4	p_147741_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockCauldron;III)Z	func_147785_a	renderBlockCauldron	#renderBlockCauldron, :, renderCauldron, tessellateCauldron
+		c	Render block cauldron
+		p	1	p_147785_1_	block	#~, ~, block, :
+		p	2	p_147785_2_	x	#~, ~, x, :
+		p	3	p_147785_3_	y	#~, ~, y, :
+		p	4	p_147785_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockCocoa;III)Z	func_147772_a	renderBlockCocoa	#renderBlockCocoa, :, renderCocoa, tessellateCocoa
+		p	1	p_147772_1_	block	#~, ~, block, :
+		p	2	p_147772_2_	x	#~, ~, x, :
+		p	3	p_147772_3_	y	#~, ~, y, :
+		p	4	p_147772_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockRedstoneComparator;III)Z	func_147781_a	renderBlockRedstoneComparator	#renderBlockRedstoneComparator, :, ~, tessellateComparator
+		p	1	p_147781_1_	block	#~, ~, ~, block
+		p	2	p_147781_2_	x	#~, ~, ~, x
+		p	3	p_147781_3_	y	#~, ~, ~, y
+		p	4	p_147781_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockRedstoneDiode;III)Z	func_147748_a	renderBlockRedstoneDiode	#renderBlockRedstoneDiode, :, ~, tessellateDiode
+		p	1	p_147748_1_	block	#~, ~, ~, block
+		p	2	p_147748_2_	x	#~, ~, ~, x
+		p	3	p_147748_3_	y	#~, ~, ~, y
+		p	4	p_147748_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockRedstoneDiode;IIII)V	func_147732_a	renderBlockRedstoneDiodeMetadata	#renderBlockRedstoneDiodeMetadata, :, ~, tessellateDiodeBase
+		p	1	p_147732_1_	block	#~, ~, ~, block
+		p	2	p_147732_2_	x	#~, ~, ~, x
+		p	3	p_147732_3_	y	#~, ~, ~, y
+		p	4	p_147732_4_	z	#~, ~, ~, z
+		p	5	p_147732_5_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/block/BlockDoublePlant;III)Z	func_147774_a	renderBlockDoublePlant	#renderBlockDoublePlant, :, ~, tessellateDoublePlant
+		p	1	p_147774_1_	block	#~, ~, ~, block
+		p	2	p_147774_2_	x	#~, ~, ~, x
+		p	3	p_147774_3_	y	#~, ~, ~, y
+		p	4	p_147774_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockDragonEgg;III)Z	func_147802_a	renderBlockDragonEgg	#renderBlockDragonEgg, :, renderDragonEgg, tessellateDragonEgg
+		p	1	p_147802_1_	block	#~, ~, block, :
+		p	2	p_147802_2_	x	#~, ~, x, :
+		p	3	p_147802_3_	y	#~, ~, y, :
+		p	4	p_147802_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockEndPortalFrame;III)Z	func_147743_a	renderBlockEndPortalFrame	#renderBlockEndPortalFrame, :, ~, tessellateEndPortalFrame
+		c	Render BlockEndPortalFrame
+		p	1	p_147743_1_	block	#~, ~, ~, block
+		p	2	p_147743_2_	x	#~, ~, ~, x
+		p	3	p_147743_3_	y	#~, ~, ~, y
+		p	4	p_147743_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockFence;III)Z	func_147735_a	renderBlockFence	#renderBlockFence, :, renderFence, tessellateFence
+		p	1	p_147735_1_	block	#~, ~, fence, block
+		p	2	p_147735_2_	x	#~, ~, x, :
+		p	3	p_147735_3_	y	#~, ~, y, :
+		p	4	p_147735_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockFenceGate;III)Z	func_147776_a	renderBlockFenceGate	#renderBlockFenceGate, :, renderFenceGate, tessellateFenceGate
+		p	1	p_147776_1_	block	#~, ~, block, :
+		p	2	p_147776_2_	x	#~, ~, x, :
+		p	3	p_147776_3_	y	#~, ~, y, :
+		p	4	p_147776_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockFire;III)Z	func_147801_a	renderBlockFire	#renderBlockFire, :, ~, tessellateFire
+		c	Renders a fire block at the given coordinates
+		p	1	p_147801_1_	block	#~, ~, ~, block
+		p	2	p_147801_2_	x	#~, ~, ~, x
+		p	3	p_147801_3_	y	#~, ~, ~, y
+		p	4	p_147801_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockFlowerPot;III)Z	func_147752_a	renderBlockFlowerpot	#renderBlockFlowerpot, :, ~, tessellateFlowerPot
+		c	Renders flower pot
+		p	1	p_147752_1_	block	#~, ~, ~, block
+		p	2	p_147752_2_	x	#~, ~, ~, x
+		p	3	p_147752_3_	y	#~, ~, ~, y
+		p	4	p_147752_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockHopper;III)Z	func_147803_a	renderBlockHopper	#renderBlockHopper, :, ~, tessellateHopper
+		p	1	p_147803_1_	block	#~, ~, ~, block
+		p	2	p_147803_2_	x	#~, ~, ~, x
+		p	3	p_147803_3_	y	#~, ~, ~, y
+		p	4	p_147803_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockHopper;IIIIZ)Z	func_147799_a	renderBlockHopperMetadata	#renderBlockHopperMetadata, :, ~, renderHopper
+		p	1	p_147799_1_	block	#~, ~, ~, block
+		p	2	p_147799_2_	x	#~, ~, ~, x
+		p	3	p_147799_3_	y	#~, ~, ~, y
+		p	4	p_147799_4_	z	#~, ~, ~, z
+		p	5	p_147799_5_	metadata	#~, ~, ~, metadata
+		p	6	p_147799_6_	isEntity	#~, ~, ~, isEntity
+	m	(Lnet/minecraft/block/BlockRedstoneRepeater;III)Z	func_147759_a	renderBlockRepeater	#renderBlockRepeater, :, ~, tessellateRepeater
+		c	render a redstone repeater at the given coordinates
+		p	1	p_147759_1_	block	#~, ~, ~, block
+		p	2	p_147759_2_	x	#~, ~, ~, x
+		p	3	p_147759_3_	y	#~, ~, ~, y
+		p	4	p_147759_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockStairs;III)Z	func_147722_a	renderBlockStairs	#renderBlockStairs, :, ~, tessellateStairs
+		c	Renders a stair block at the given coordinates
+		p	1	p_147722_1_	block	#~, ~, ~, block
+		p	2	p_147722_2_	x	#~, ~, ~, x
+		p	3	p_147722_3_	y	#~, ~, ~, y
+		p	4	p_147722_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockStem;IIDDDD)V	func_147740_a	renderBlockStemBig	#renderBlockStemBig, :, ~, tessellateConnectedStem
+		p	1	p_147740_1_	block	#~, ~, ~, block
+		p	2	p_147740_2_	metadata	#~, ~, ~, metadata
+		p	3	p_147740_3_	dir	#~, ~, ~, dir
+		p	4	p_147740_4_	height	#~, ~, ~, height
+		p	6	p_147740_6_	x	#~, ~, ~, x
+		p	8	p_147740_8_	y	#~, ~, ~, y
+		p	10	p_147740_10_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/BlockPane;III)Z	func_147767_a	renderBlockPane	#renderBlockPane, :, renderPane, tessellatePaneBlock
+		p	1	p_147767_1_	block	#~, ~, block, :
+		p	2	p_147767_2_	x	#~, ~, x, :
+		p	3	p_147767_3_	y	#~, ~, y, :
+		p	4	p_147767_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/BlockWall;III)Z	func_147807_a	renderBlockWall	#renderBlockWall, :, ~, tessellateWall
+		p	1	p_147807_1_	block	#~, ~, ~, block
+		p	2	p_147807_2_	x	#~, ~, ~, x
+		p	3	p_147807_3_	y	#~, ~, ~, y
+		p	4	p_147807_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/util/IIcon;)V	func_147757_a	setOverrideBlockTexture	#setOverrideBlockTexture, :, ~, setSprite
+		c	Sets overrideBlockTexture
+		p	1	p_147757_1_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/util/IIcon;DDDF)V	func_147765_a	drawCrossedSquares	#drawCrossedSquares, :, ~, tessellateCross
+		c	Utility function to draw crossed swuares
+		p	1	p_147765_1_	sprite	#~, ~, ~, sprite
+		p	2	p_147765_2_	x	#~, ~, ~, x
+		p	4	p_147765_4_	y	#~, ~, ~, y
+		p	6	p_147765_6_	z	#~, ~, ~, z
+		p	8	p_147765_8_	size	#~, ~, ~, size
+	m	(Z)V	func_147786_a	setRenderFromInside	#setRenderFromInside, :, ~, setFlipDepth
+		p	1	p_147786_1_	flipDepth	#~, ~, ~, flipDepth
+	m	()Z	func_147744_b	hasOverrideBlockTexture	#hasOverrideBlockTexture, :, ~, hasSprite
+	m	(DDDDDD)V	func_147770_b	overrideBlockBounds	#overrideBlockBounds, :, ~, prepareItemFrame
+		c	Like setRenderBounds, but locks the values so that RenderBlocks won't change them.  If you use this, you must call unlockBlockBounds after you finish rendering!
+		p	1	p_147770_1_	minX	#~, ~, ~, minX
+		p	3	p_147770_3_	minY	#~, ~, ~, minY
+		p	5	p_147770_5_	minZ	#~, ~, ~, minZ
+		p	7	p_147770_7_	maxX	#~, ~, ~, maxX
+		p	9	p_147770_9_	maxY	#~, ~, ~, maxY
+		p	11	p_147770_11_	maxZ	#~, ~, ~, maxZ
+	m	(DDDDDDFD)V	func_147789_b	renderPistonRodSN	#renderPistonRodSN, :, ~, tessellatePistonSideY
+		c	Render piston rod south/north
+		p	1	p_147789_1_	minX	#~, ~, x0, minX
+		p	3	p_147789_3_	maxX	#~, ~, x1, maxX
+		p	5	p_147789_5_	minY	#~, ~, y0, minY
+		p	7	p_147789_7_	maxY	#~, ~, y1, maxY
+		p	9	p_147789_9_	minZ	#~, ~, z1, minZ
+		p	11	p_147789_11_	maxZ	#~, ~, z0, maxZ
+		p	13	p_147789_13_	color	#~, ~, color, :
+		p	14	p_147789_14_	length	#~, ~, ~, length
+	m	(Lnet/minecraft/block/Block;)Lnet/minecraft/util/IIcon;	func_147745_b	getBlockIcon	#getBlockIcon, :, ~, getTopSprite
+		p	1	p_147745_1_	block	#~, ~, ~, block
+	m	(Lnet/minecraft/block/Block;DDDLnet/minecraft/util/IIcon;)V	func_147806_b	renderFaceYPos	#renderFaceYPos, :, ~, tessellateTopFace
+		c	Renders the given texture to the top face of the block. Args: block, x, y, z, texture
+		p	1	p_147806_1_	block	#~, ~, ~, block
+		p	2	p_147806_2_	x	#~, ~, ~, x
+		p	4	p_147806_4_	y	#~, ~, ~, y
+		p	6	p_147806_6_	z	#~, ~, ~, z
+		p	8	p_147806_8_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;III)Z	func_147805_b	renderBlockByRenderType	#renderBlockByRenderType, :, render, tessellateBlock
+		c	Renders the block at the given coordinates using the block's rendering type
+		p	1	p_147805_1_	block	#~, ~, block, :
+		p	2	p_147805_2_	x	#~, ~, x, :
+		p	3	p_147805_3_	y	#~, ~, y, :
+		p	4	p_147805_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;IIIFFF)Z	func_147808_b	renderStandardBlockWithAmbientOcclusionPartial	#renderStandardBlockWithAmbientOcclusionPartial, :, ~, tessellateWithMaxAmbientOcclusion
+		c	Renders non-full-cube block with ambient occusion.  Args: block, x, y, z, red, green, blue (lighting)
+		p	1	p_147808_1_	block	#~, ~, ~, block
+		p	2	p_147808_2_	x	#~, ~, ~, x
+		p	3	p_147808_3_	y	#~, ~, ~, y
+		p	4	p_147808_4_	z	#~, ~, ~, z
+		p	5	p_147808_5_	r	#~, ~, ~, r
+		p	6	p_147808_6_	g	#~, ~, ~, g
+		p	7	p_147808_7_	b	#~, ~, ~, b
+	m	(Lnet/minecraft/block/Block;IIIZ)Z	func_147731_b	renderPistonBase	#renderPistonBase, :, renderPiston, tessellatePistonBase
+		c	renders a block as a piston base
+		p	1	p_147731_1_	block	#~, ~, block, :
+		p	2	p_147731_2_	x	#~, ~, x, :
+		p	3	p_147731_3_	y	#~, ~, y, :
+		p	4	p_147731_4_	z	#~, ~, z, :
+		p	5	p_147731_5_	extended	#~, ~, ~, extended
+	m	(Lnet/minecraft/util/IIcon;)Lnet/minecraft/util/IIcon;	func_147758_b	getIconSafe	#getIconSafe, :, ~, getSpriteOrMissing
+		p	1	p_147758_1_	sprite	#~, ~, ~, sprite
+	m	(Z)V	func_147753_b	setRenderAllFaces	#setRenderAllFaces, :, ~, setRenderFaceAlways
+		p	1	p_147753_1_	renderFaceAlways	#~, ~, ~, renderFaceAlways
+	m	()V	func_147762_c	unlockBlockBounds	#unlockBlockBounds, :, ~, clearInItemFrame
+		c	Unlocks the visual bounding box so that RenderBlocks can change it again.
+	m	(DDDDDDFD)V	func_147738_c	renderPistonRodEW	#renderPistonRodEW, :, ~, tessellatePistonSideZ
+		c	Render piston rod east/west
+		p	1	p_147738_1_	minX	#~, ~, x1, minX
+		p	3	p_147738_3_	maxX	#~, ~, x0, maxX
+		p	5	p_147738_5_	minY	#~, ~, y0, minY
+		p	7	p_147738_7_	maxY	#~, ~, y1, maxY
+		p	9	p_147738_9_	minZ	#~, ~, z0, minZ
+		p	11	p_147738_11_	maxZ	#~, ~, z1, maxZ
+		p	13	p_147738_13_	color	#~, ~, color, :
+		p	14	p_147738_14_	length	#~, ~, ~, length
+	m	(Lnet/minecraft/block/Block;DDDLnet/minecraft/util/IIcon;)V	func_147761_c	renderFaceZNeg	#renderFaceZNeg, :, ~, tessellateNorthFace
+		c	Renders the given texture to the north (z-negative) face of the block.  Args: block, x, y, z, texture
+		p	1	p_147761_1_	block	#~, ~, ~, block
+		p	2	p_147761_2_	x	#~, ~, ~, x
+		p	4	p_147761_4_	y	#~, ~, ~, y
+		p	6	p_147761_6_	z	#~, ~, ~, z
+		p	8	p_147761_8_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;III)Z	func_147791_c	renderBlockTorch	#renderBlockTorch, :, renderTorch, tessellateTorch
+		c	Renders a torch block at the given coordinates
+		p	1	p_147791_1_	block	#~, ~, block, :
+		p	2	p_147791_2_	x	#~, ~, x, :
+		p	3	p_147791_3_	y	#~, ~, y, :
+		p	4	p_147791_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;IIIZ)Z	func_147809_c	renderPistonExtension	#renderPistonExtension, :, renderPistonHead, tessellatePistonHead
+		c	renders the pushing part of a piston
+		p	1	p_147809_1_	block	#~, ~, block, :
+		p	2	p_147809_2_	x	#~, ~, x, :
+		p	3	p_147809_3_	y	#~, ~, y, :
+		p	4	p_147809_4_	z	#~, ~, z, :
+		p	5	p_147809_5_	isShort	#~, ~, ~, isShort
+	m	(Lnet/minecraft/block/Block;DDDLnet/minecraft/util/IIcon;)V	func_147734_d	renderFaceZPos	#renderFaceZPos, :, ~, tessellateSouthFace
+		c	Renders the given texture to the south (z-positive) face of the block.  Args: block, x, y, z, texture
+		p	1	p_147734_1_	block	#~, ~, ~, block
+		p	2	p_147734_2_	x	#~, ~, ~, x
+		p	4	p_147734_4_	y	#~, ~, ~, y
+		p	6	p_147734_6_	z	#~, ~, ~, z
+		p	8	p_147734_8_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;III)V	func_147804_d	renderPistonBaseAllFaces	#renderPistonBaseAllFaces, :, ~, renderExtendedPistonBase
+		c	Render all faces of the piston base
+		p	1	p_147804_1_	block	#~, ~, block, :
+		p	2	p_147804_2_	x	#~, ~, x, :
+		p	3	p_147804_3_	y	#~, ~, y, :
+		p	4	p_147804_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;IIIFFF)Z	func_147736_d	renderStandardBlockWithColorMultiplier	#renderStandardBlockWithColorMultiplier, :, renderCubeNoAO, tessellateWithoutAmbientOcclusion
+		c	Renders a standard cube block at the given coordinates, with a given color ratio.  Args: block, x, y, z, r, g, b
+		p	1	p_147736_1_	block	#~, ~, block, :
+		p	2	p_147736_2_	x	#~, ~, x, :
+		p	3	p_147736_3_	y	#~, ~, y, :
+		p	4	p_147736_4_	z	#~, ~, z, :
+		p	5	p_147736_5_	r	#~, ~, r, :
+		p	6	p_147736_6_	g	#~, ~, g, :
+		p	7	p_147736_7_	b	#~, ~, b, :
+	m	(Lnet/minecraft/block/Block;DDDLnet/minecraft/util/IIcon;)V	func_147798_e	renderFaceXNeg	#renderFaceXNeg, :, ~, tessellateWestFace
+		c	Renders the given texture to the west (x-negative) face of the block.  Args: block, x, y, z, texture
+		p	1	p_147798_1_	block	#~, ~, ~, block
+		p	2	p_147798_2_	x	#~, ~, ~, x
+		p	4	p_147798_4_	y	#~, ~, ~, y
+		p	6	p_147798_6_	z	#~, ~, ~, z
+		p	8	p_147798_8_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;III)Z	func_147790_e	renderBlockLever	#renderBlockLever, :, renderLever, tessellateLever
+		c	Renders a lever block at the given coordinates
+		p	1	p_147790_1_	block	#~, ~, ~, block
+		p	2	p_147790_2_	x	#~, ~, ~, x
+		p	3	p_147790_3_	y	#~, ~, ~, y
+		p	4	p_147790_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;IIIFFF)Z	func_147754_e	renderBlockCactusImpl	#renderBlockCactusImpl, :, renderCactusInternal, renderCactus
+		c	Render block cactus implementation
+		p	1	p_147754_1_	block	#~, ~, block, :
+		p	2	p_147754_2_	x	#~, ~, x, :
+		p	3	p_147754_3_	y	#~, ~, y, :
+		p	4	p_147754_4_	z	#~, ~, z, :
+		p	5	p_147754_5_	r	#~, ~, r, :
+		p	6	p_147754_6_	g	#~, ~, g, :
+		p	7	p_147754_7_	b	#~, ~, b, :
+	m	(Lnet/minecraft/block/Block;DDDLnet/minecraft/util/IIcon;)V	func_147764_f	renderFaceXPos	#renderFaceXPos, :, ~, tessellateEastFace
+		c	Renders the given texture to the east (x-positive) face of the block.  Args: block, x, y, z, texture
+		p	1	p_147764_1_	block	#~, ~, ~, block
+		p	2	p_147764_2_	x	#~, ~, ~, x
+		p	4	p_147764_4_	y	#~, ~, ~, y
+		p	6	p_147764_6_	z	#~, ~, ~, z
+		p	8	p_147764_8_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/block/Block;III)Z	func_147723_f	renderBlockTripWireSource	#renderBlockTripWireSource, :, renderTripwireHook, tessellateTripwireHook
+		c	Renders a trip wire source block at the given coordinates
+		p	1	p_147723_1_	block	#~, ~, block, :
+		p	2	p_147723_2_	x	#~, ~, x, :
+		p	3	p_147723_3_	y	#~, ~, y, :
+		p	4	p_147723_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147756_g	renderBlockTripWire	#renderBlockTripWire, :, renderTripwire, tessellateTripwire
+		c	Renders a trip wire block at the given coordinates
+		p	1	p_147756_1_	block	#~, ~, block, :
+		p	2	p_147756_2_	x	#~, ~, x, :
+		p	3	p_147756_3_	y	#~, ~, y, :
+		p	4	p_147756_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147788_h	renderBlockRedstoneWire	#renderBlockRedstoneWire, :, renderRedstone, tessellateRedstoneWire
+		c	Renders a redstone wire block at the given coordinates
+		p	1	p_147788_1_	block	#~, ~, block, :
+		p	2	p_147788_2_	x	#~, ~, x, :
+		p	3	p_147788_3_	y	#~, ~, y, :
+		p	4	p_147788_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147794_i	renderBlockLadder	#renderBlockLadder, :, renderLadder, tessellateLadder
+		p	1	p_147794_1_	block	#~, ~, block, :
+		p	2	p_147794_2_	x	#~, ~, x, :
+		p	3	p_147794_3_	y	#~, ~, y, :
+		p	4	p_147794_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147726_j	renderBlockVine	#renderBlockVine, :, renderVines, tessellateVine
+		p	1	p_147726_1_	block	#~, ~, block, :
+		p	2	p_147726_2_	x	#~, ~, x, :
+		p	3	p_147726_3_	y	#~, ~, y, :
+		p	4	p_147726_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147733_k	renderBlockStainedGlassPane	#renderBlockStainedGlassPane, :, ~, tessellateStainedGlassPane
+		p	1	p_147733_1_	block	#~, ~, ~, block
+		p	2	p_147733_2_	x	#~, ~, ~, x
+		p	3	p_147733_3_	y	#~, ~, ~, y
+		p	4	p_147733_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;III)Z	func_147746_l	renderCrossedSquares	#renderCrossedSquares, :, renderCross, tessellateCross
+		c	Renders any block requiring crossed squares such as reeds, flowers, and mushrooms
+		p	1	p_147746_1_	block	#~, ~, block, :
+		p	2	p_147746_2_	x	#~, ~, x, :
+		p	3	p_147746_3_	y	#~, ~, y, :
+		p	4	p_147746_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147724_m	renderBlockStem	#renderBlockStem, :, renderStem, tessellateStem
+		p	1	p_147724_1_	block	#~, ~, block, :
+		p	2	p_147724_2_	x	#~, ~, x, :
+		p	3	p_147724_3_	y	#~, ~, y, :
+		p	4	p_147724_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147796_n	renderBlockCrops	#renderBlockCrops, :, renderCrop, tessellatePlant
+		p	1	p_147796_1_	block	#~, ~, block, :
+		p	2	p_147796_2_	x	#~, ~, x, :
+		p	3	p_147796_3_	y	#~, ~, y, :
+		p	4	p_147796_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147783_o	renderBlockLilyPad	#renderBlockLilyPad, :, renderLilyPad, tessellateLilyPad
+		p	1	p_147783_1_	block	#~, ~, block, :
+		p	2	p_147783_2_	x	#~, ~, x, :
+		p	3	p_147783_3_	y	#~, ~, y, :
+		p	4	p_147783_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147721_p	renderBlockLiquid	#renderBlockLiquid, :, renderFluid, tessellateLiquid
+		c	Renders a block based on the BlockLiquid class at the given coordinates
+		p	1	p_147721_1_	block	#~, ~, block, :
+		p	2	p_147721_2_	x	#~, ~, x, :
+		p	3	p_147721_3_	y	#~, ~, y, :
+		p	4	p_147721_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147784_q	renderStandardBlock	#renderStandardBlock, :, renderCube, tessellate
+		c	Renders a standard cube block at the given coordinates
+		p	1	p_147784_1_	blockType	#blockType, :, block, :
+		p	2	p_147784_2_	blockX	#blockX, :, x, :
+		p	3	p_147784_3_	blockY	#blockY, :, y, :
+		p	4	p_147784_4_	blockZ	#blockZ, :, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147742_r	renderBlockLog	#renderBlockLog, :, renderPillar, tessellateAxisBlock
+		p	1	p_147742_1_	block	#~, ~, block, :
+		p	2	p_147742_2_	x	#~, ~, x, :
+		p	3	p_147742_3_	y	#~, ~, y, :
+		p	4	p_147742_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147779_s	renderBlockQuartz	#renderBlockQuartz, :, ~, tessellateQuartz
+		p	1	p_147779_1_	block	#~, ~, ~, block
+		p	2	p_147779_2_	x	#~, ~, ~, x
+		p	3	p_147779_3_	y	#~, ~, ~, y
+		p	4	p_147779_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/Block;III)Z	func_147755_t	renderBlockCactus	#renderBlockCactus, :, renderCactus, tessellateCactus
+		p	1	p_147755_1_	block	#~, ~, block, :
+		p	2	p_147755_2_	x	#~, ~, x, :
+		p	3	p_147755_3_	y	#~, ~, y, :
+		p	4	p_147755_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147760_u	renderBlockDoor	#renderBlockDoor, :, renderDoor, tessellateDoor
+		p	1	p_147760_1_	block	#~, ~, block, :
+		p	2	p_147760_2_	x	#~, ~, x, :
+		p	3	p_147760_3_	y	#~, ~, y, :
+		p	4	p_147760_4_	z	#~, ~, z, :
+	m	(Lnet/minecraft/block/Block;III)Z	func_147773_v	renderBlockBed	#renderBlockBed, :, renderBed, tessellateBed
+		c	render a bed at the given coordinates
+		p	1	p_147773_1_	block	#~, ~, block, :
+		p	2	p_147773_2_	x	#~, ~, x, :
+		p	3	p_147773_3_	y	#~, ~, y, :
+		p	4	p_147773_4_	z	#~, ~, z, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

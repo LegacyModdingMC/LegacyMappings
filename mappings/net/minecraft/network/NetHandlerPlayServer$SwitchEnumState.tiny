@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetHandlerPlayServer$SwitchEnumState	net/minecraft/network/NetHandlerPlayServer$SwitchEnumState	
+	f	[I	field_151290_a	ALL	#~, ~, ~, ALL
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

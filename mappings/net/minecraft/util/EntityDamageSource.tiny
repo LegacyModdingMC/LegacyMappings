@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EntityDamageSource	net/minecraft/util/EntityDamageSource	
+	f	Lnet/minecraft/entity/Entity;	field_76386_o	damageSourceEntity	#damageSourceEntity, :, source, entity
+	m	(Ljava/lang/String;Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1567_1_	damageTypeIn	#damageTypeIn, :, name, :
+		p	2	p_i1567_2_	damageSourceEntityIn	#damageSourceEntityIn, :, source, entity

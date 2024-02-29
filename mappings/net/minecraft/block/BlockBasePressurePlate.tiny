@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockBasePressurePlate	net/minecraft/block/BlockBasePressurePlate	
+	f	Ljava/lang/String;	field_150067_a	name	#name, :, ~, stepSound
+	m	(III)Lnet/minecraft/util/AxisAlignedBB;	func_150061_a	getSensitiveAABB	#getSensitiveAABB, :, ~, getActivationBounds
+		c	Returns the bounds within which entities can activate this pressure plate.
+		p	1	p_150061_1_	x	#x, :, ~, x
+		p	2	p_150061_2_	y	#y, :, ~, y
+		p	3	p_150061_3_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;IIII)V	func_150062_a	setStateIfMobInteractsWithPlate	#setStateIfMobInteractsWithPlate, :, ~, updateOutputState
+		p	1	p_150062_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150062_2_	x	#x, :, ~, x
+		p	3	p_150062_3_	y	#y, :, ~, y
+		p	4	p_150062_4_	z	#z, :, ~, z
+		p	5	p_150062_5_	power	#power, :, ~, currentSignal
+	m	(Lnet/minecraft/world/World;III)V	func_150064_a_	updateNeighbors	#updateNeighbors, :, ~, updateNeighbors
+		p	1	p_150064_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_150064_2_	x	#x, :, ~, x
+		p	3	p_150064_3_	y	#y, :, ~, y
+		p	4	p_150064_4_	z	#z, :, ~, z
+	m	(I)V	func_150063_b	setBlockBoundsFromMeta	#setBlockBoundsFromMeta, :, ~, updateShape
+		p	1	p_150063_1_	meta	#meta, :, ~, metadata
+	m	(I)I	func_150060_c	getPowerFromMeta	#getPowerFromMeta, :, ~, getOutputSignal
+		c	Returns the output signal encoded in the given block metadata.
+		p	1	p_150060_1_	metadata	#~, ~, ~, metadata
+	m	(I)I	func_150066_d	getMetaFromPower	#getMetaFromPower, :, ~, setOutputSignal
+		c	Returns the block metadata that encodes the given output signal.
+		p	1	p_150066_1_	signal	#~, ~, ~, signal
+	m	(Lnet/minecraft/world/World;III)I	func_150065_e	getPlateState	#getPlateState, :, ~, calculateOutputSignal
+		p	1	p_150065_1_	world	#~, ~, ~, world
+		p	2	p_150065_2_	x	#~, ~, ~, x
+		p	3	p_150065_3_	y	#~, ~, ~, y
+		p	4	p_150065_4_	z	#~, ~, ~, z
+	m	(Ljava/lang/String;Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45387_1_	name	#name, :, ~, stepSound
+		p	2	p_i45387_2_	materialIn	#materialIn, :, ~, material

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockGlowstone	net/minecraft/block/BlockGlowstone	
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45409_1_	materialIn	#materialIn, :, ~, ~

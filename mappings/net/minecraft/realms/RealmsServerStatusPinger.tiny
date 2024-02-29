@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/RealmsServerStatusPinger	net/minecraft/realms/RealmsServerStatusPinger	
+	f	Lorg/apache/logging/log4j/Logger;	LOGGER	LOGGER	#~, ~, ~, ~
+	f	Ljava/util/List;	connections	connections	#~, ~, ~, ~
+	m	()Lorg/apache/logging/log4j/Logger;	access$000	access$000	#~, ~, ~, ~
+	m	(Ljava/lang/String;Lnet/minecraft/realms/ServerPing;)V	pingServer	pingServer	#~, ~, ~, ~
+		p	1	p_pingServer_1_	p_pingServer_1_	#~, ~, ~, ~
+		p	2	p_pingServer_2_	p_pingServer_2_	#~, ~, ~, ~
+	m	()V	removeAll	removeAll	#~, ~, ~, ~
+	m	()V	tick	tick	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandOp	net/minecraft/command/server/CommandOp	
+	m	()V	<init>	<init>	#~, ~, ~, ~

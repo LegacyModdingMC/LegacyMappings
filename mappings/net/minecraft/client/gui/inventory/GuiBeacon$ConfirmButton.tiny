@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiBeacon$ConfirmButton	net/minecraft/client/gui/inventory/GuiBeacon$ConfirmButton	
+	f	Lnet/minecraft/client/gui/inventory/GuiBeacon;	field_146147_o	beaconScreen	#~, ~, ~, beaconScreen
+	m	(Lnet/minecraft/client/gui/inventory/GuiBeacon;III)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1075_2_	buttonId	#buttonId, :, ~, x
+		p	3	p_i1075_3_	x	#x, :, ~, y
+		p	4	p_i1075_4_	y	#y, :, ~, id
+		p	1	p_i1075_1_	p_i1075_1_	#~, ~, ~, ~

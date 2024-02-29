@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight	net/minecraft/world/gen/structure/StructureNetherBridgePieces$PieceWeight	
+	f	Ljava/lang/Class;	field_78828_a	weightClass	#weightClass, :, ~, type
+		c	The class of the StructureComponent to which this weight corresponds.
+	f	I	field_78826_b	weight	#weight, :, ~, weight
+	f	I	field_78827_c	placeCount	#placeCount, :, ~, amountGenerated
+	f	I	field_78824_d	maxPlaceCount	#maxPlaceCount, :, ~, maxAmount
+	f	Z	field_78825_e	allowInRow	#allowInRow, :, ~, isConnectorPiece
+	m	()Z	func_78823_a	isValid	#isValid, :, ~, isValid
+	m	(I)Z	func_78822_a	doPlace	#doPlace, :, ~, isValid
+		p	1	p_78822_1_	generationDepth	#~, ~, ~, generationDepth
+	m	(Ljava/lang/Class;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2056_1_	type	#~, ~, ~, type
+		p	2	p_i2056_2_	weight	#~, ~, ~, weight
+		p	3	p_i2056_3_	maxAmount	#~, ~, ~, maxAmount
+	m	(Ljava/lang/Class;IIZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2055_1_	type	#~, ~, ~, type
+		p	2	p_i2055_2_	weight	#~, ~, ~, weight
+		p	3	p_i2055_3_	maxAmount	#~, ~, ~, maxAmount
+		p	4	p_i2055_4_	isConnectorPiece	#~, ~, ~, isConnectorPiece

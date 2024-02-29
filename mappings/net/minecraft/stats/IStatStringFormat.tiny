@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/IStatStringFormat	net/minecraft/stats/IStatStringFormat	
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_74535_a	formatString	#formatString, :, format, :
+		c	Formats the strings based on 'IStatStringFormat' interface.
+		p	1	p_74535_1_	str	#str, :, string, value

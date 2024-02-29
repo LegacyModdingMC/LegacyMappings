@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/BroadcastController$SwitchBroadcastState	net/minecraft/client/stream/BroadcastController$SwitchBroadcastState	
+	f	[I	field_152815_a	field_152815_a	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

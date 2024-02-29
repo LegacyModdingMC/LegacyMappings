@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/culling/ICamera	net/minecraft/client/renderer/culling/ICamera	
+	m	(DDD)V	func_78547_a	setPosition	#setPosition, :, setPos, set
+		p	1	p_78547_1_	xIn	#xIn, :, x, :
+		p	3	p_78547_3_	yIn	#yIn, :, y, :
+		p	5	p_78547_5_	zIn	#zIn, :, z, :
+	m	(Lnet/minecraft/util/AxisAlignedBB;)Z	func_78546_a	isBoundingBoxInFrustum	#isBoundingBoxInFrustum, :, isBoxInFrustum, isVisible
+		c	Returns true if the bounding box is inside all 6 clipping planes, otherwise returns false.
+		p	1	p_78546_1_	box	#~, ~, box, :

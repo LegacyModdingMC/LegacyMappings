@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/CreativeCrafting	net/minecraft/client/gui/inventory/CreativeCrafting	
+	f	Lnet/minecraft/client/Minecraft;	field_146109_a	mc	#mc, :, client, minecraft
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1085_1_	selectionListIn	#selectionListIn, :, client, minecraft

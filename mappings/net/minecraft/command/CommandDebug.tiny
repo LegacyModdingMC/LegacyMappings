@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandDebug	net/minecraft/command/CommandDebug	
+	f	Lorg/apache/logging/log4j/Logger;	field_147208_a	logger	#logger, LOGGER, ~, LOGGER
+	f	J	field_147206_b	profileStartTime	#profileStartTime, :, ~, startMillis
+		c	The time (in milliseconds) that profiling was started
+	f	I	field_147207_c	profileStartTick	#profileStartTick, :, ~, startTicks
+		c	The tick number that profiling was started on
+	m	(ILjava/lang/String;Ljava/lang/StringBuilder;)V	func_147202_a	addResults	#~, ~, ~, addResults
+		p	1	p_147202_1_	spacing	#~, ~, ~, spacing
+		p	2	p_147202_2_	location	#~, ~, ~, location
+		p	3	p_147202_3_	stringBuilder	#stringBuilder, :, ~, report
+	m	(JI)V	func_147205_a	saveProfileResults	#saveProfileResults, :, ~, stop
+		c	Save the profiling results from the last profile
+		p	1	p_147205_1_	timeSpan	#timeSpan, :, ~, durationMillis
+		p	3	p_147205_3_	tickSpan	#tickSpan, :, ~, durationTicks
+	m	(JI)Ljava/lang/String;	func_147204_b	getProfileResults	#getProfileResults, :, ~, buildReport
+		c	Get the profiling results from the last profile
+		p	1	p_147204_1_	timeSpan	#timeSpan, :, ~, durationMillis
+		p	3	p_147204_3_	tickSpan	#tickSpan, :, ~, durationTicks
+	m	()Ljava/lang/String;	func_147203_d	getWittyComment	#getWittyComment, :, ~, getWittyComment
+		c	Get a random witty comment
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

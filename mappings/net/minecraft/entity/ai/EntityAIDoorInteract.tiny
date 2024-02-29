@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIDoorInteract	net/minecraft/entity/ai/EntityAIDoorInteract	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75356_a	theEntity	#theEntity, entity, mob, :
+	f	I	field_75354_b	entityPosX	#entityPosX, :, ~, doorX
+	f	I	field_75355_c	entityPosY	#entityPosY, :, ~, doorY
+	f	I	field_75352_d	entityPosZ	#entityPosZ, :, ~, doorZ
+	f	Lnet/minecraft/block/BlockDoor;	field_151504_e	doorBlock	#doorBlock, :, :, :
+		c	The wooden door block
+	f	Z	field_75350_f	hasStoppedDoorInteraction	#hasStoppedDoorInteraction, :, shouldStop, :
+		c	If is true then the Entity has stopped Door Interaction and compoleted the task.
+	f	F	field_75351_g	entityPositionX	#entityPositionX, :, xOffset, offsetX
+	f	F	field_75357_h	entityPositionZ	#entityPositionZ, :, zOffset, offsetZ
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1621_1_	entityIn	#entityIn, :, entity, mob
+	m	(III)Lnet/minecraft/block/BlockDoor;	func_151503_a	getWoodenDoorBlock	#getWoodenDoorBlock, :, ~, getDoorBlock
+		c	Returns the block at the specified position, null if that block is not a wooden door. Args : x, y, z
+		p	1	p_151503_1_	x	#~, ~, ~, x
+		p	2	p_151503_2_	y	#~, ~, ~, y
+		p	3	p_151503_3_	z	#~, ~, ~, z

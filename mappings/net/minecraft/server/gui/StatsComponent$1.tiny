@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/StatsComponent$1	net/minecraft/server/gui/StatsComponent$1	
+	f	Lnet/minecraft/server/gui/StatsComponent;	field_120030_a	playerStatsGui	#~, ~, ~, playerStatsGui
+	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	actionPerformed	#~, ~, ~, ~
+		p	1	p_actionPerformed_1_	actionEvent	#~, ~, ~, actionEvent
+	m	(Lnet/minecraft/server/gui/StatsComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2368_1_	p_i2368_1_	#~, ~, ~, ~

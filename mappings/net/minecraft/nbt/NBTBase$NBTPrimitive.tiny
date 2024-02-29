@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTBase$NBTPrimitive	net/minecraft/nbt/NBTBase$NBTPrimitive	
+	m	()J	func_150291_c	getLong	#getLong, :, longValue, getLong
+		c	Gets the value as a 64-bit integer.\n\n@return the value as a long
+	m	()I	func_150287_d	getInt	#getInt, :, intValue, getInt
+		c	Gets the value as a 32-bit integer.\n\n@return the value as an int
+	m	()S	func_150289_e	getShort	#getShort, :, shortValue, getShort
+		c	Gets the value as a 16-bit integer.\n\n@return the value as a short
+	m	()B	func_150290_f	getByte	#getByte, :, byteValue, getByte
+		c	Gets the value as an 8-bit integer.\n\n@return the value as a byte
+	m	()D	func_150286_g	getDouble	#getDouble, :, doubleValue, getDouble
+		c	Gets the value as a 64-bit floating-point number.\n\n@return the value as a double
+	m	()F	func_150288_h	getFloat	#getFloat, :, floatValue, getFloat
+		c	Gets the value as a 32-bit floating-point number.\n\n@return the value as a float
+	m	()V	<init>	<init>	#~, ~, ~, ~

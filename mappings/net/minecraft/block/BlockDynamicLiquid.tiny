@@ -1,0 +1,49 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDynamicLiquid	net/minecraft/block/BlockDynamicLiquid	
+	f	[I	field_149816_M	distanceToGap	#~, ~, ~, distanceToGap
+		c	The distance to the nearest gap to flow into for each horizontal direction.\n<br>\n@see net.minecraft.util.math.Facings
+	f	I	field_149815_a	adjacentSourceBlocks	#adjacentSourceBlocks, :, neighborSourceBlocks, adjacentSources
+		c	A counter that stores the amount of adjacent source liquids along the X and Z axes.
+	f	[Z	field_149814_b	spreadDirections	#~, ~, ~, spreadDirections
+		c	Whether this liquid should flow in each direction.\n<br>\n@see net.minecraft.util.math.Facings
+	m	(Lnet/minecraft/world/World;IIII)I	func_149810_a	decreaseLevel	#~, ~, ~, decreaseLevel
+		p	1	p_149810_1_	world	#~, ~, ~, world
+		p	2	p_149810_2_	x	#~, ~, ~, x
+		p	3	p_149810_3_	y	#~, ~, ~, y
+		p	4	p_149810_4_	z	#~, ~, ~, z
+		p	5	p_149810_5_	level	#~, ~, ~, level
+	m	(Lnet/minecraft/world/World;IIIII)I	func_149812_c	getDistanceToGap	#~, ~, ~, getDistanceToGap
+		p	1	p_149812_1_	world	#~, ~, ~, world
+		p	2	p_149812_2_	x	#~, ~, ~, x
+		p	3	p_149812_3_	y	#~, ~, ~, y
+		p	4	p_149812_4_	z	#~, ~, ~, z
+		p	5	p_149812_5_	distance	#~, ~, ~, distance
+		p	6	p_149812_6_	fromDir	#~, ~, ~, fromDir
+	m	(Lnet/minecraft/world/World;IIII)V	func_149813_h	spreadTo	#~, ~, ~, spreadTo
+		p	1	p_149813_1_	world	#~, ~, ~, world
+		p	2	p_149813_2_	x	#~, ~, ~, x
+		p	3	p_149813_3_	y	#~, ~, ~, y
+		p	4	p_149813_4_	z	#~, ~, ~, z
+		p	5	p_149813_5_	level	#~, ~, ~, level
+	m	(Lnet/minecraft/world/World;III)V	func_149811_n	convertToSource	#~, ~, ~, convertToSource
+		p	1	p_149811_1_	world	#~, ~, ~, world
+		p	2	p_149811_2_	x	#~, ~, ~, x
+		p	3	p_149811_3_	y	#~, ~, ~, y
+		p	4	p_149811_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)[Z	func_149808_o	getSpreadDirections	#~, ~, ~, getSpreadDirections
+		p	1	p_149808_1_	world	#~, ~, ~, world
+		p	2	p_149808_2_	x	#~, ~, ~, x
+		p	3	p_149808_3_	y	#~, ~, ~, y
+		p	4	p_149808_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_149807_p	blocksSpreading	#~, ~, ~, blocksSpreading
+		p	1	p_149807_1_	world	#~, ~, ~, world
+		p	2	p_149807_2_	x	#~, ~, ~, x
+		p	3	p_149807_3_	y	#~, ~, ~, y
+		p	4	p_149807_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_149809_q	canSpreadTo	#~, ~, ~, canSpreadTo
+		p	1	p_149809_1_	world	#~, ~, ~, world
+		p	2	p_149809_2_	x	#~, ~, ~, x
+		p	3	p_149809_3_	y	#~, ~, ~, y
+		p	4	p_149809_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45403_1_	materialIn	#materialIn, :, ~, ~

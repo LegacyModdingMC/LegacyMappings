@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Direction	net/minecraft/util/Direction	
+	f	[I	field_71583_a	offsetX	#offsetX, :, OFFSET_X, X_OFFSET
+	f	[I	field_71581_b	offsetZ	#offsetZ, :, OFFSET_Z, Z_OFFSET
+	f	[Ljava/lang/String;	field_82373_c	directions	#directions, :, NAMES, :
+	f	[I	field_71582_c	directionToFacing	#directionToFacing, :, AXIS_TO_DIRECTION, TO_DIR
+		c	Maps a Direction value (2D) to a Facing value (3D).
+	f	[I	field_71579_d	facingToDirection	#facingToDirection, :, DIRECTION_TO_AXIS, FROM_DIR
+		c	Maps a Facing value (3D) to a Direction value (2D).
+	f	[I	field_71580_e	rotateOpposite	#rotateOpposite, :, OPPOSITE, :
+		c	Maps a direction to that opposite of it.
+	f	[I	field_71577_f	rotateRight	#rotateRight, enderEyeMetaToDirection, ROTATE_CLOCKWISE, CLOCKWISE
+		c	Maps a direction to that to the right of it.
+	f	[I	field_71578_g	rotateLeft	#rotateLeft, :, ROTATE_COUNTER_CLOCKWISE, ANTICLOCKWISE
+		c	Maps a direction to that to the left of it.
+	f	[[I	field_71584_h	bedDirection	#bedDirection, :, ~, BED_FACINGS
+	m	(DD)I	func_82372_a	getMovementDirection	#getMovementDirection, :, getPrimaryAxis, fromRelativePosition
+		c	Returns the movement direction from a velocity vector.
+		p	0	p_82372_0_	dx	#~, ~, x, dx
+		p	2	p_82372_2_	dz	#~, ~, z, dz
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

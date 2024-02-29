@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/PositionImpl	net/minecraft/dispenser/PositionImpl	
+	f	D	field_82630_a	x	#x, :, :, :
+	f	D	field_82628_b	y	#y, :, :, :
+	f	D	field_82629_c	z	#z, :, :, :
+	m	(DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1368_1_	xCoord	#xCoord, :, x, :
+		p	3	p_i1368_3_	yCoord	#yCoord, :, y, :
+		p	5	p_i1368_5_	zCoord	#zCoord, :, z, :

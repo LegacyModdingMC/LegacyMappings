@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/IIconRegister	net/minecraft/client/renderer/texture/IIconRegister	
+	m	(Ljava/lang/String;)Lnet/minecraft/util/IIcon;	func_94245_a	registerIcon	#registerIcon, :, registerTexture, loadSprite
+		p	1	p_94245_1_	name	#~, ~, getTextureName, name

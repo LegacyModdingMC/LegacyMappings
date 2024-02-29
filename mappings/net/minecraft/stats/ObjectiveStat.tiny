@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/ObjectiveStat	net/minecraft/stats/ObjectiveStat	
+	f	Lnet/minecraft/stats/StatBase;	field_151459_g	stat	#stat, :, :, :
+	m	(Lnet/minecraft/stats/StatBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45483_1_	statIn	#statIn, :, stat, :

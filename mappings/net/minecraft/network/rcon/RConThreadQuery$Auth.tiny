@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/rcon/RConThreadQuery$Auth	net/minecraft/network/rcon/RConThreadQuery$Auth	
+	f	Lnet/minecraft/network/rcon/RConThreadQuery;	field_72600_a	queryThread	#queryThread, :, ~, queryResponseHandler
+		c	The RConThreadQuery that this is probably an inner class of
+	f	J	field_72598_b	timestamp	#timestamp, :, ~, startTime
+		c	The creation timestamp for this auth
+	f	I	field_72599_c	randomChallenge	#randomChallenge, :, ~, id
+		c	A random integer value to be used for client response authentication
+	f	[B	field_72596_d	requestId	#requestId, :, ~, messageBytes
+		c	A client-provided request ID associated with this query.
+	f	[B	field_72597_e	challengeValue	#challengeValue, :, ~, replyBuf
+		c	A unique string of bytes used to verify client auth
+	f	Ljava/lang/String;	field_72595_f	requestIdAsString	#requestIdAsString, :, ~, message
+		c	The request ID stored as a String
+	m	()I	func_72592_a	getRandomChallenge	#getRandomChallenge, :, ~, getId
+		c	Returns the random challenge number assigned to this auth
+	m	(J)Ljava/lang/Boolean;	func_72593_a	hasExpired	#hasExpired, :, ~, startedBefore
+		c	Returns true if the auth's creation timestamp is less than the given time, otherwise false
+		p	1	p_72593_1_	currentTime	#currentTime, :, ~, lastQueryTime
+	m	()[B	func_72594_b	getChallengeValue	#getChallengeValue, :, ~, getReplyBuf
+		c	Returns the auth challenge value
+	m	()[B	func_72591_c	getRequestId	#getRequestId, :, ~, getMessageBytes
+		c	Returns the request ID provided by the client.
+	m	(Lnet/minecraft/network/rcon/RConThreadQuery;Ljava/net/DatagramPacket;)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1535_2_	requestPacket	#requestPacket, :, ~, packet
+		p	1	p_i1535_1_	p_i1535_1_	#~, ~, ~, ~

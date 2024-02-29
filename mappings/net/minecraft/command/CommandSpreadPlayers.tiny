@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandSpreadPlayers	net/minecraft/command/CommandSpreadPlayers	
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/util/List;Lnet/minecraft/command/CommandSpreadPlayers$Position;DDLnet/minecraft/world/World;Z)V	func_110669_a	spread	#spread, :, ~, spreadPlayers
+		p	1	p_110669_1_	sender	#sender, :, ~, source
+		p	2	p_110669_2_	players	#~, ~, ~, players
+		p	3	p_110669_3_	pos	#pos, :, ~, pile
+		p	4	p_110669_4_	spreadDistance	#spreadDistance, :, ~, spreadDistance
+		p	6	p_110669_6_	maxRange	#maxRange, :, ~, maxRange
+		p	8	p_110669_8_	worldIn	#worldIn, :, ~, world
+		p	9	p_110669_9_	respectTeams	#respectTeams, :, ~, teams
+	m	(Lnet/minecraft/command/CommandSpreadPlayers$Position;DLnet/minecraft/world/World;Ljava/util/Random;DDDD[Lnet/minecraft/command/CommandSpreadPlayers$Position;Z)I	func_110668_a	spreadPositions	#spreadPositions, :, ~, spreadPlayers
+		p	1	p_110668_1_	pile	#~, ~, ~, pile
+		p	2	p_110668_2_	spreadDistance	#~, ~, ~, spreadDistance
+		p	4	p_110668_4_	worldIn	#worldIn, :, ~, world
+		p	5	p_110668_5_	random	#random, :, ~, rand
+		p	6	p_110668_6_	minX	#minX, :, ~, minX
+		p	8	p_110668_8_	minZ	#minZ, :, ~, minZ
+		p	10	p_110668_10_	maxX	#maxX, :, ~, maxX
+		p	12	p_110668_12_	maxZ	#maxZ, :, ~, maxZ
+		p	14	p_110668_14_	piles	#~, ~, ~, piles
+		p	15	p_110668_15_	respectTeams	#respectTeams, :, ~, teams
+	m	(Ljava/util/List;)I	func_110667_a	getNumberOfTeams	#getNumberOfTeams, :, ~, getTeamCount
+		p	1	p_110667_1_	entities	#~, ~, ~, entities
+	m	(Ljava/util/List;Lnet/minecraft/world/World;[Lnet/minecraft/command/CommandSpreadPlayers$Position;Z)D	func_110671_a	setPlayerPositions	#setPlayerPositions, :, ~, teleportPlayers
+		p	1	p_110671_1_	players	#~, ~, ~, players
+		p	2	p_110671_2_	worldIn	#worldIn, :, ~, world
+		p	3	p_110671_3_	piles	#~, ~, ~, piles
+		p	4	p_110671_4_	teams	#~, ~, ~, teams
+	m	(Ljava/util/Random;IDDDD)[Lnet/minecraft/command/CommandSpreadPlayers$Position;	func_110670_a	createInitialPositions	#createInitialPositions, :, ~, makePiles
+		p	1	p_110670_1_	rand	#~, ~, ~, rand
+		p	2	p_110670_2_	count	#~, ~, ~, count
+		p	3	p_110670_3_	minX	#~, ~, ~, minX
+		p	5	p_110670_5_	minZ	#~, ~, ~, minZ
+		p	7	p_110670_7_	maxX	#~, ~, ~, maxX
+		p	9	p_110670_9_	maxZ	#~, ~, ~, maxZ
+	m	()V	<init>	<init>	#~, ~, ~, ~

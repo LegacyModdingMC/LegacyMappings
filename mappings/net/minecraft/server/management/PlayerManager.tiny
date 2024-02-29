@@ -1,0 +1,75 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerManager	net/minecraft/server/management/PlayerManager	
+	f	Lorg/apache/logging/log4j/Logger;	field_152627_a	pmLogger	#pmLogger, :, LOGGER, :
+	f	Lnet/minecraft/world/WorldServer;	field_72701_a	theWorldServer	#theWorldServer, world, :, :
+	f	Ljava/util/List;	field_72699_b	players	#players, :, :, :
+		c	players in the current instance
+	f	Lnet/minecraft/util/LongHashMap;	field_72700_c	playerInstances	#playerInstances, entryMap, playerInstancesById, chunksByPos
+		c	A map of chunk position (two ints concatenated into a long) to PlayerInstance
+	f	Ljava/util/List;	field_72697_d	chunkWatcherWithPlayers	#chunkWatcherWithPlayers, dirtyEntries, ~, dirty
+		c	contains a PlayerInstance for every chunk they can see. the "player instance" cotains a list of all players who can also that chunk
+	f	Ljava/util/List;	field_111193_e	playerInstanceList	#playerInstanceList, entries, playerInstances, chunks
+		c	This field is using when chunk should be processed (every 8000 ticks)
+	f	I	field_72698_e	playerViewRadius	#playerViewRadius, :, viewDistance, chunkViewDistance
+		c	Number of chunks the server sends to the client. Valid 3<=x<=15. In server.properties.
+	f	J	field_111192_g	previousTotalWorldTime	#previousTotalWorldTime, :, ~, lastUpdateTime
+		c	time what is using to check if InhabitedTime should be calculated
+	f	[[I	field_72696_f	xzDirectionsConst	#xzDirectionsConst, :, ~, adjacentChunkCoords
+		c	x, z direction vectors: east, south, west, north
+	m	(Lnet/minecraft/world/WorldServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1176_1_	serverWorld	#serverWorld, :, world, :
+	m	()Lnet/minecraft/world/WorldServer;	func_72688_a	getWorldServer	#getWorldServer, :, getWorld, :
+		c	Returns the MinecraftServer associated with the PlayerManager.
+	m	(I)V	func_152622_a	setPlayerViewRadius	#setPlayerViewRadius, :, applyViewDistance, updateViewDistance
+		c	Called when the server's view distance changes, sending or rescinding chunks as needed.\n \n@param radius Radius in chunks
+		p	1	p_152622_1_	radius	#radius, :, viewDistance, chunkViewDistance
+	m	(II)Z	func_152621_a	hasPlayerInstance	#hasPlayerInstance, contains, ~, hasChunk
+		p	1	p_152621_1_	chunkX	#chunkX, :, ~, chunkX
+		p	2	p_152621_2_	chunkZ	#chunkZ, :, ~, chunkZ
+	m	(III)V	func_151250_a	markBlockForUpdate	#markBlockForUpdate, :, ~, onBlockChanged
+		p	1	p_151250_1_	x	#~, ~, ~, x
+		p	2	p_151250_2_	y	#~, ~, ~, y
+		p	3	p_151250_3_	z	#~, ~, ~, z
+	m	(IIIII)Z	func_72684_a	overlaps	#overlaps, :, ~, isChunkWithinView
+		c	Determine if two rectangles centered at the given points overlap for the provided radius. Arguments: x1, z1, x2, z2, radius.
+		p	1	p_72684_1_	x1	#x1, :, ~, chunkX
+		p	2	p_72684_2_	z1	#z1, :, ~, chunkZ
+		p	3	p_72684_3_	x2	#x2, :, ~, playerChunkX
+		p	4	p_72684_4_	z2	#z2, :, ~, playerChunkZ
+		p	5	p_72684_5_	radius	#radius, :, ~, chunkViewDistance
+	m	(IIZ)Lnet/minecraft/server/management/PlayerManager$PlayerInstance;	func_72690_a	getOrCreateChunkWatcher	#getOrCreateChunkWatcher, getPlayerInstance, ~, getChunk
+		c	passi n the chunk x and y and a flag as to whether or not the instance should be made if it doesnt exist
+		p	1	p_72690_1_	chunkX	#chunkX, :, ~, chunkX
+		p	2	p_72690_2_	chunkZ	#chunkZ, :, ~, chunkZ
+		p	3	p_72690_3_	createIfAbsent	#createIfAbsent, :, ~, add
+	m	(Lnet/minecraft/server/management/PlayerManager;)Lnet/minecraft/world/WorldServer;	access$100	access$100	#~, ~, getWorld, ~
+		p	0	p_access$100_0_	manager	#~, ~, manager, ~
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_72683_a	addPlayer	#addPlayer, :, ~, addPlayer
+		c	Adds an EntityPlayerMP to the PlayerManager.
+		p	1	p_72683_1_	player	#player, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;II)Z	func_72694_a	isPlayerWatchingChunk	#isPlayerWatchingChunk, :, ~, isChunkWithinView
+		p	1	p_72694_1_	player	#player, :, :, :
+		p	2	p_72694_2_	chunkX	#chunkX, :, ~, chunkX
+		p	3	p_72694_3_	chunkZ	#chunkZ, :, ~, chunkZ
+	m	()V	func_72693_b	updatePlayerInstances	#updatePlayerInstances, tick, ~, tick
+		c	updates all the player instances that need to be updated
+	m	(I)I	func_72686_a	getFurthestViewableBlock	#getFurthestViewableBlock, :, ~, getViewDistance
+		c	Get the furthest viewable block given player's view distance
+		p	0	p_72686_0_	distance	#distance, :, ~, chunkViewDistance
+	m	(Lnet/minecraft/server/management/PlayerManager;)Lnet/minecraft/util/LongHashMap;	access$200	access$200	#~, ~, getPlayerInstacesByIdMap, ~
+		p	0	p_access$200_0_	manager	#~, ~, manager, ~
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_72691_b	filterChunkLoadQueue	#filterChunkLoadQueue, :, ~, trackNewLoadedChunks
+		c	Removes all chunks from the given player's chunk load queue that are not in viewing range of the player.
+		p	1	p_72691_1_	player	#player, :, :, :
+	m	()Lorg/apache/logging/log4j/Logger;	access$000	access$000	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/management/PlayerManager;)Ljava/util/List;	access$300	access$300	#~, ~, ~, ~
+		p	0	p_access$300_0_	p_access$300_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_72695_c	removePlayer	#removePlayer, :, ~, removePlayer
+		c	Removes an EntityPlayerMP from the PlayerManager.
+		p	1	p_72695_1_	player	#player, :, :, :
+	m	(Lnet/minecraft/server/management/PlayerManager;)Ljava/util/List;	access$400	access$400	#~, ~, ~, ~
+		p	0	p_access$400_0_	manager	#~, ~, manager, ~
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;)V	func_72685_d	updatePlayerPertinentChunks	#updatePlayerPertinentChunks, updateMovingPlayer, ~, movePlayer
+		c	Update which chunks the player needs info on.
+		p	1	p_72685_1_	player	#player, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

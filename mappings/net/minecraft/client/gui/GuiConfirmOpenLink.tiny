@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiConfirmOpenLink	net/minecraft/client/gui/GuiConfirmOpenLink	
+	f	Ljava/lang/String;	field_146363_r	openLinkWarning	#openLinkWarning, :, warning, :
+		c	Text to warn players from opening unsafe links.
+	f	Ljava/lang/String;	field_146362_s	copyLinkButtonText	#copyLinkButtonText, :, copy, :
+		c	Label for the Copy to Clipboard button.
+	f	Ljava/lang/String;	field_146361_t	linkText	#linkText, :, link, :
+	f	Z	field_146360_u	showSecurityWarning	#showSecurityWarning, :, drawWarning, :
+	m	(Lnet/minecraft/client/gui/GuiYesNoCallback;Ljava/lang/String;IZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1084_1_	parentScreenIn	#parentScreenIn, :, consumer, ~
+		p	2	p_i1084_2_	linkTextIn	#linkTextIn, :, link, ~
+		p	3	p_i1084_3_	parentButtonClickedIdIn	#parentButtonClickedIdIn, :, id, ~
+		p	4	p_i1084_4_	trusted	#trusted, :, :, ~
+	m	()V	func_146359_e	copyLinkToClipboard	#copyLinkToClipboard, :, copyToClipboard, :
+		c	Copies the link to the system clipboard.
+	m	()V	func_146358_g	disableSecurityWarning	#disableSecurityWarning, :, disableWarning, noWarning

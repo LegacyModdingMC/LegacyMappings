@@ -1,0 +1,50 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/VillageCollection	net/minecraft/village/VillageCollection	
+	f	Lnet/minecraft/world/World;	field_75556_a	worldObj	#worldObj, world, :, :
+	f	Ljava/util/List;	field_75554_b	villagerPositionsList	#villagerPositionsList, :, positions, villagerPositions
+		c	This is a black hole. You can add data to this list through a public interface, but you can't query that information in any way and it's not used internally either.
+	f	Ljava/util/List;	field_75555_c	newDoors	#newDoors, :, doors, newDoors
+	f	Ljava/util/List;	field_75552_d	villageList	#villageList, :, villages, :
+	f	I	field_75553_e	tickCounter	#tickCounter, :, tick, ticks
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1678_1_	worldIn	#worldIn, :, world, :
+	m	()V	func_75544_a	tick	#tick, :, ~, tick
+		c	Runs a single tick for the village collection
+	m	(III)V	func_75551_a	addVillagerPosition	#addVillagerPosition, :, ~, addVillagerPosition
+		c	This is a black hole. You can add data to this list through a public interface, but you can't query that information in any way and it's not used internally either.
+		p	1	p_75551_1_	x	#~, ~, ~, x
+		p	2	p_75551_2_	y	#~, ~, ~, y
+		p	3	p_75551_3_	z	#~, ~, ~, z
+	m	(IIII)Lnet/minecraft/village/Village;	func_75550_a	findNearestVillage	#findNearestVillage, :, ~, getClosestVillage
+		c	Finds the nearest village, but only the given coordinates are withing it's bounding box plus the given the distance.
+		p	1	p_75550_1_	x	#~, ~, ~, x
+		p	2	p_75550_2_	y	#~, ~, ~, y
+		p	3	p_75550_3_	z	#~, ~, ~, z
+		p	4	p_75550_4_	range	#~, ~, ~, range
+	m	(Lnet/minecraft/world/World;)V	func_82566_a	setWorldsForAll	#setWorldsForAll, :, setWorld, :
+		p	1	p_82566_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/util/ChunkCoordinates;)V	func_75546_a	addUnassignedWoodenDoorsAroundToNewDoorsList	#addUnassignedWoodenDoorsAroundToNewDoorsList, :, ~, findDoorsAround
+		p	1	p_75546_1_	pos	#~, ~, ~, pos
+	m	()Ljava/util/List;	func_75540_b	getVillageList	#getVillageList, :, ~, getVillages
+		c	Get a list of villages.
+	m	(III)Lnet/minecraft/village/VillageDoorInfo;	func_75547_b	getVillageDoorAt	#getVillageDoorAt, :, ~, getDoor
+		p	1	p_75547_1_	x	#~, ~, ~, x
+		p	2	p_75547_2_	y	#~, ~, ~, y
+		p	3	p_75547_3_	z	#~, ~, ~, z
+	m	(III)V	func_75542_c	addDoorToNewListIfAppropriate	#addDoorToNewListIfAppropriate, :, ~, addNewDoor
+		p	1	p_75542_1_	x	#~, ~, ~, x
+		p	2	p_75542_2_	y	#~, ~, ~, y
+		p	3	p_75542_3_	z	#~, ~, ~, z
+	m	(III)Z	func_75548_d	isVillagerPositionPresent	#isVillagerPositionPresent, :, ~, hasVillagerPosition
+		p	1	p_75548_1_	x	#~, ~, ~, x
+		p	2	p_75548_2_	y	#~, ~, ~, y
+		p	3	p_75548_3_	z	#~, ~, ~, z
+	m	()V	func_75549_c	removeAnnihilatedVillages	#removeAnnihilatedVillages, :, ~, removeVillagesWithoutDoors
+	m	(III)Z	func_75541_e	isWoodenDoorAt	#isWoodenDoorAt, :, ~, isWoodenDoor
+		p	1	p_75541_1_	x	#~, ~, ~, x
+		p	2	p_75541_2_	y	#~, ~, ~, y
+		p	3	p_75541_3_	z	#~, ~, ~, z
+	m	()V	func_75543_d	dropOldestVillagerPosition	#dropOldestVillagerPosition, :, ~, removeOldestVillagerPosition
+	m	()V	func_75545_e	addNewDoorsToVillageOrCreateVillage	#addNewDoorsToVillageOrCreateVillage, :, ~, addDoorsToVillages
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1677_1_	name	#name, :, ~, ~

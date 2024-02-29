@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/MerchantRecipeList	net/minecraft/village/MerchantRecipeList	
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1944_1_	compound	#compound, :, nbt, :
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_77202_a	getRecipiesAsTags	#getRecipiesAsTags, :, toNbt, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/village/MerchantRecipe;	func_77203_a	canRecipeBeUsed	#canRecipeBeUsed, :, getValidRecipe, get
+		c	can par1,par2 be used to in crafting recipe par3
+		p	1	p_77203_1_	stack0	#stack0, :, firstBuyItem, primaryPayment
+		p	2	p_77203_2_	stack1	#stack1, :, secondBuyItem, secondaryPayment
+		p	3	p_77203_3_	index	#index, :, :, :
+	m	(Lnet/minecraft/village/MerchantRecipe;)V	func_77205_a	addToListWithCheck	#addToListWithCheck, :, ~, improve
+		c	checks if there is a recipie for the same ingredients already on the list, and replaces it. otherwise, adds it
+		p	1	p_77205_1_	offer	#~, ~, ~, offer
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_77201_a	readRecipiesFromTags	#readRecipiesFromTags, :, fromNbt, readNbt
+		p	1	p_77201_1_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/network/PacketBuffer;)V	func_151391_a	writeToBuf	#writeToBuf, :, toPacket, serialize
+		p	1	p_151391_1_	buffer	#buffer, :, :, :
+	m	(Lnet/minecraft/network/PacketBuffer;)Lnet/minecraft/village/MerchantRecipeList;	func_151390_b	readFromBuf	#readFromBuf, :, fromPacket, deserialize
+		p	0	p_151390_0_	buffer	#buffer, :, byteBuf, buffer
+	m	()V	<init>	<init>	#~, ~, ~, ~

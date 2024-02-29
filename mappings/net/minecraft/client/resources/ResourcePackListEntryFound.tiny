@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackListEntryFound	net/minecraft/client/resources/ResourcePackListEntryFound	
+	f	Lnet/minecraft/client/resources/ResourcePackRepository$Entry;	field_148319_c	resourcePackEntry	#resourcePackEntry, :, ~, pack
+	m	()Lnet/minecraft/client/resources/ResourcePackRepository$Entry;	func_148318_i	getResourcePackEntry	#getResourcePackEntry, :, ~, getPack
+	m	(Lnet/minecraft/client/gui/GuiScreenResourcePacks;Lnet/minecraft/client/resources/ResourcePackRepository$Entry;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45053_1_	resourcePacksGUIIn	#resourcePacksGUIIn, :, ~, parent
+		p	2	p_i45053_2_	entry	#entry, :, ~, pack

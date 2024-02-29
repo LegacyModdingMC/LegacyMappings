@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIWatchClosest2	net/minecraft/entity/ai/EntityAIWatchClosest2	
+	m	(Lnet/minecraft/entity/EntityLiving;Ljava/lang/Class;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1629_1_	entitylivingIn	#entitylivingIn, :, ~, ~
+		p	2	p_i1629_2_	watchTargetClass	#watchTargetClass, :, ~, ~
+		p	3	p_i1629_3_	maxDistance	#maxDistance, :, ~, ~
+		p	4	p_i1629_4_	chanceIn	#chanceIn, :, ~, ~

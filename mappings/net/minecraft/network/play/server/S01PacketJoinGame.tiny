@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S01PacketJoinGame	net/minecraft/network/play/server/S01PacketJoinGame	
+	f	I	field_149206_a	entityId	#entityId, playerId, playerEntityId, id
+	f	Z	field_149204_b	hardcoreMode	#hardcoreMode, :, hardcore, :
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_149205_c	gameType	#gameType, :, gameMode, :
+	f	I	field_149202_d	dimension	#dimension, :, viewDistance, dimension
+	f	Lnet/minecraft/world/EnumDifficulty;	field_149203_e	difficulty	#difficulty, :, :, :
+	f	I	field_149200_f	maxPlayers	#maxPlayers, :, :, maxPlayerCount
+	f	Lnet/minecraft/world/WorldType;	field_149201_g	worldType	#worldType, :, levelGeneratorType, generatorType
+	m	()I	func_149197_c	getEntityId	#getEntityId, getPlayerId, getEntityId, :
+	m	()Z	func_149195_d	isHardcoreMode	#isHardcoreMode, :, isHardcore, getHardcore
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_149198_e	getGameType	#getGameType, :, getGameMode, :
+	m	()I	func_149194_f	getDimension	#getDimension, :, getChunkLoadDistance, getDimension
+	m	()Lnet/minecraft/world/EnumDifficulty;	func_149192_g	getDifficulty	#getDifficulty, :, :, :
+	m	()I	func_149193_h	getMaxPlayers	#getMaxPlayers, :, :, getMaxPlayerCount
+	m	()Lnet/minecraft/world/WorldType;	func_149196_i	getWorldType	#getWorldType, :, getGeneratorType, :
+	m	(ILnet/minecraft/world/WorldSettings$GameType;ZILnet/minecraft/world/EnumDifficulty;ILnet/minecraft/world/WorldType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45201_1_	entityId	#~, ~, ~, entityId
+		p	2	p_i45201_2_	gameMode	#~, ~, ~, gameMode
+		p	3	p_i45201_3_	hardcore	#~, ~, ~, hardcore
+		p	4	p_i45201_4_	dimension	#~, ~, ~, dimension
+		p	5	p_i45201_5_	difficulty	#~, ~, ~, difficulty
+		p	6	p_i45201_6_	maxPlayerCount	#~, ~, ~, maxPlayerCount
+		p	7	p_i45201_7_	generatorType	#~, ~, ~, generatorType
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/EnumSkyBlock	net/minecraft/world/EnumSkyBlock	
+	f	Lnet/minecraft/world/EnumSkyBlock;	Sky	Sky	#~, ~, SKY, :
+	f	Lnet/minecraft/world/EnumSkyBlock;	Block	Block	#~, ~, BLOCK, :
+	f	I	field_77198_c	defaultLightValue	#defaultLightValue, :, defaultValue, :
+	f	[Lnet/minecraft/world/EnumSkyBlock;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;II)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1961_3_	defaultLightValueIn	#defaultLightValueIn, :, defaultValue, :
+		p	1	p_i1961_1_	p_i1961_1_	#~, ~, ~, ~
+		p	2	p_i1961_2_	p_i1961_2_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/world/EnumSkyBlock;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/world/EnumSkyBlock;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

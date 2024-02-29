@@ -1,0 +1,89 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkManager	net/minecraft/network/NetworkManager	
+	f	Lorg/apache/logging/log4j/Marker;	field_150740_a	logMarkerNetwork	#logMarkerNetwork, NETWORK_MARKER, MARKER_NETWORK, :
+	f	Lorg/apache/logging/log4j/Marker;	field_150738_b	logMarkerPackets	#logMarkerPackets, NETWORK_PACKETS_MARKER, MARKER_NETWORK_PACKETS, :
+	f	Lorg/apache/logging/log4j/Marker;	field_152461_c	logMarkerStat	#logMarkerStat, :, ~, ~
+	f	Lio/netty/util/AttributeKey;	field_150739_c	attrKeyConnectionState	#attrKeyConnectionState, PROTOCOL_ATTRIBUTE_KEY, ATTR_KEY_PROTOCOL, PROTOCOL
+	f	Lio/netty/util/AttributeKey;	field_150736_d	attrKeyReceivable	#attrKeyReceivable, :, ATTR_RECEIVABLE_PACKETS, RECEIVABLE_PACKETS
+	f	Lio/netty/util/AttributeKey;	field_150737_e	attrKeySendable	#attrKeySendable, :, ATTR_SENDABLE_PACKETS, SENDABLE_PACKETS
+	f	Lio/netty/channel/nio/NioEventLoopGroup;	field_150734_f	eventLoops	#eventLoops, :, ~, NETWORK_GROUP
+	f	Lnet/minecraft/network/NetworkStatistics;	field_152462_h	STATISTICS	#STATISTICS, :, ~, ~
+	f	Lorg/apache/logging/log4j/Logger;	field_150735_g	logger	#logger, LOGGER, :, :
+	f	Z	field_150747_h	isClientSide	#isClientSide, :, isClient, :
+		c	Whether this NetworkManager deals with the client or server side of the connection
+	f	Ljava/util/Queue;	field_150748_i	receivedPacketsQueue	#receivedPacketsQueue, :, ~, readQueue
+		c	The queue for received, unprioritized packets that will be processed at the earliest opportunity
+	f	Ljava/util/Queue;	field_150745_j	outboundPacketsQueue	#outboundPacketsQueue, :, packetQueue, sendQueue
+		c	The queue for packets that require transmission
+	f	Lio/netty/channel/Channel;	field_150746_k	channel	#channel, :, :, :
+		c	The active channel used to send data
+	f	Ljava/net/SocketAddress;	field_150743_l	socketAddress	#socketAddress, :, address, :
+		c	The address of the remote party
+	f	Lnet/minecraft/network/INetHandler;	field_150744_m	netHandler	#netHandler, packetListener, :, listener
+		c	The INetHandler instance responsible for processing received packets
+	f	Lnet/minecraft/network/EnumConnectionState;	field_150741_n	connectionState	#connectionState, :, state, protocol
+		c	The current connection state, being one of: HANDSHAKING, PLAY, STATUS, LOGIN
+	f	Lnet/minecraft/util/IChatComponent;	field_150742_o	terminationReason	#terminationReason, :, disconnectReason, :
+		c	A String indicating why the network has shutdown.
+	f	Z	field_152463_r	isEncrypted	#isEncrypted, :, encrypted, ~
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45147_1_	isClient	#isClient, :, :, :
+	m	()V	func_74428_b	processReceivedPackets	#processReceivedPackets, :, tick, :
+		c	Checks timeouts and processes all packets received
+	m	(Lnet/minecraft/network/NetworkManager;)Lio/netty/channel/Channel;	access$000	access$000	#~, ~, ~, getChannel
+		p	0	p_access$000_0_	connection	#~, ~, ~, connection
+	m	(Lnet/minecraft/network/EnumConnectionState;)V	func_150723_a	setConnectionState	#setConnectionState, :, setState, setProtocol
+		c	Sets the new connection state and registers which packets this channel may send and receive
+		p	1	p_150723_1_	newState	#newState, :, state, protocol
+	m	(Lnet/minecraft/network/INetHandler;)V	func_150719_a	setNetHandler	#setNetHandler, :, setPacketListener, setListener
+		c	Sets the NetHandler for this NetworkManager, no checks are made if this handler is suitable for the particular connection state (protocol)
+		p	1	p_150719_1_	handler	#handler, :, listener, :
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_150718_a	closeChannel	#closeChannel, :, disconnect, :
+		c	Closes the channel, the parameter can be used for an exit message (not certain how it gets sent)
+		p	1	p_150718_1_	message	#message, :, disconnectReason, reason
+	m	(Lnet/minecraft/network/Packet;[Lio/netty/util/concurrent/GenericFutureListener;)V	func_150725_a	scheduleOutboundPacket	#scheduleOutboundPacket, :, send, :
+		c	Will flush the outbound queue and dispatch the supplied Packet if the channel is ready, otherwise it adds the packet to the outbound queue and registers the GenericFutureListener to fire after transmission
+		p	1	p_150725_1_	inPacket	#inPacket, :, packet, :
+		p	2	p_150725_2_	futureListeners	#futureListeners, :, listeners, :
+	m	(Lio/netty/channel/ChannelHandlerContext;Lnet/minecraft/network/Packet;)V	channelRead0	channelRead0	#~, ~, channelRead0, :
+		p	1	p_channelRead0_1_	p_channelRead0_1_	#~, ~, ~, ~
+		p	2	p_channelRead0_2_	p_channelRead0_2_	#~, ~, ~, ~
+	m	(Ljava/net/InetAddress;I)Lnet/minecraft/network/NetworkManager;	func_150726_a	provideLanClient	#provideLanClient, :, connect, :
+		c	Prepares a clientside NetworkManager: establishes a connection to the address and port supplied and configures the channel pipeline. Returns the newly created instance.
+		p	0	p_150726_0_	address	#~, ~, address, :
+		p	1	p_150726_1_	port	#~, ~, port, :
+	m	(Ljava/net/SocketAddress;)Lnet/minecraft/network/NetworkManager;	func_150722_a	provideLocalClient	#provideLocalClient, :, connectLocal, :
+		c	Prepares a clientside NetworkManager: establishes a connection to the socket supplied and configures the channel pipeline. Returns the newly created instance.
+		p	0	p_150722_0_	address	#address, :, :, :
+	m	(Ljavax/crypto/SecretKey;)V	func_150727_a	enableEncryption	#enableEncryption, :, setupEncryption, :
+		c	Adds an encoder+decoder to the channel pipeline. The parameter is the secret key used for encrypted communication
+		p	1	p_150727_1_	key	#key, :, secretKey, key
+	m	()Ljava/net/SocketAddress;	func_74430_c	getSocketAddress	#getSocketAddress, getRemoteAddress, getAddress, :
+		c	Return the InetSocketAddress of the remote endpoint
+	m	(Lnet/minecraft/network/Packet;[Lio/netty/util/concurrent/GenericFutureListener;)V	func_150732_b	dispatchPacket	#dispatchPacket, :, sendImmediately, doSend
+		c	Will commit the packet to the channel. If the current thread 'owns' the channel it will write and flush the packet, otherwise it will add a task for the channel eventloop thread to do that.
+		p	1	p_150732_1_	inPacket	#inPacket, :, packet, :
+		p	2	p_150732_2_	futureListeners	#futureListeners, :, listeners, :
+	m	()Z	func_150731_c	isLocalChannel	#isLocalChannel, :, isLocal, :
+		c	True if this NetworkManager uses a memory connection (single player game). False may imply both an active TCP connection or simply no active connection at all
+	m	(Lio/netty/channel/ChannelHandlerContext;)V	channelActive	channelActive	#~, ~, ~, ~
+		p	1	p_channelActive_1_	context	#~, ~, ~, context
+	m	(Lio/netty/channel/ChannelHandlerContext;)V	channelInactive	channelInactive	#~, ~, ~, ~
+		p	1	p_channelInactive_1_	context	#~, ~, ~, context
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V	channelRead0	channelRead0	#~, ~, ~, ~
+		p	1	p_channelRead0_1_	context	#~, ~, ~, context
+		p	2	p_channelRead0_2_	packet	#~, ~, ~, packet
+	m	()Z	func_150724_d	isChannelOpen	#isChannelOpen, :, isOpen, isConnected
+		c	Returns true if this NetworkManager has an active channel, false otherwise
+	m	()Lnet/minecraft/network/INetHandler;	func_150729_e	getNetHandler	#getNetHandler, :, getPacketListener, getListener
+		c	Gets the current handler for processing packets
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Throwable;)V	exceptionCaught	exceptionCaught	#~, ~, ~, ~
+		p	1	p_exceptionCaught_1_	context	#~, ~, ~, context
+		p	2	p_exceptionCaught_2_	t	#~, ~, ~, t
+	m	()Lnet/minecraft/util/IChatComponent;	func_150730_f	getExitMessage	#getExitMessage, :, getDisconnectReason, :
+		c	If this channel is closed, returns the exit message, null otherwise.
+	m	()V	func_150721_g	disableAutoRead	#disableAutoRead, :, :, :
+		c	Switches the channel to manual reading modus
+	m	()V	func_150733_h	flushOutboundQueue	#flushOutboundQueue, :, sendQueuedPackets, flushQueue
+		c	Will iterate through the outboundPacketQueue and dispatch all Packets
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

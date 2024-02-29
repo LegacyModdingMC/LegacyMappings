@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/ShapelessRecipes	net/minecraft/item/crafting/ShapelessRecipes	
+	f	Lnet/minecraft/item/ItemStack;	field_77580_a	recipeOutput	#recipeOutput, :, result, :
+		c	Is the ItemStack that you get when craft the recipe.
+	f	Ljava/util/List;	field_77579_b	recipeItems	#recipeItems, :, stacks, ingredients
+		c	Is a List of ItemStack that composes the recipe.
+	m	(Lnet/minecraft/item/ItemStack;Ljava/util/List;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1918_1_	output	#output, :, result, :
+		p	2	p_i1918_2_	inputList	#inputList, :, stacks, inputs

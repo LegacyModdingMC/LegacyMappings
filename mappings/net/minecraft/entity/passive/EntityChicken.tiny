@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityChicken	net/minecraft/entity/passive/EntityChicken	
+	f	F	field_70886_e	wingRotation	#wingRotation, :, flapProgress, :
+	f	F	field_70883_f	destPos	#destPos, :, maxWingDeviation, :
+	f	F	field_70884_g	oFlapSpeed	#oFlapSpeed, :, prevMaxWingDeviation, :
+	f	F	field_70888_h	oFlap	#oFlap, :, prevFlapProgress, :
+	f	F	field_70889_i	wingRotDelta	#wingRotDelta, :, flapSpeed, :
+	f	I	field_70887_j	timeUntilNextEgg	#timeUntilNextEgg, :, eggLayTime, :
+		c	The time until the next egg is spawned.
+	f	Z	field_152118_bv	chickenJockey	#chickenJockey, :, jockey, hasJockey
+	m	()Z	func_152116_bZ	isChickenJockey	#isChickenJockey, :, hasJockey, :
+		c	Determines if this chicken is a jokey with a zombie riding it.
+	m	(Z)V	func_152117_i	setChickenJockey	#setChickenJockey, :, setHasJockey, :
+		c	Sets whether this chicken is a jockey or not.
+		p	1	p_152117_1_	jockey	#jockey, :, hasJockey, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1682_1_	worldIn	#worldIn, :, ~, world

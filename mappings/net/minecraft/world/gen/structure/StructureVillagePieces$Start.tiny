@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$Start	net/minecraft/world/gen/structure/StructureVillagePieces$Start	
+	f	Lnet/minecraft/world/biome/WorldChunkManager;	field_74929_a	worldChunkMngr	#worldChunkMngr, biomeProvider, ~, biomeSource
+	f	Z	field_74927_b	inDesert	#inDesert, :, ~, isDesertVillage
+		c	Boolean that determines if the village is in a desert or not.
+	f	I	field_74928_c	terrainType	#terrainType, :, ~, size
+		c	World terrain type, 0 for normal, 1 for flap map
+	f	Lnet/minecraft/world/gen/structure/StructureVillagePieces$PieceWeight;	field_74926_d	structVillagePieceWeight	#structVillagePieceWeight, lastPlaced, ~, previous
+	f	Ljava/util/List;	field_74931_h	structureVillageWeightedPieceList	#structureVillageWeightedPieceList, :, ~, weights
+		c	Contains List of all spawnable Structure Piece Weights. If no more Pieces of a type can be spawned, they are removed from this list
+	f	Ljava/util/List;	field_74932_i	pendingHouses	#pendingHouses, :, ~, buildingPieces
+	f	Ljava/util/List;	field_74930_j	pendingRoads	#pendingRoads, :, ~, roadPieces
+	m	()Lnet/minecraft/world/biome/WorldChunkManager;	func_74925_d	getWorldChunkManager	#getWorldChunkManager, getBiomeProvider, ~, getBiomeSource
+	m	(Lnet/minecraft/world/biome/WorldChunkManager;ILjava/util/Random;IILjava/util/List;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2104_1_	chunkManagerIn	#chunkManagerIn, biomeProviderIn, ~, biomeSource
+		p	3	p_i2104_3_	rand	#rand, :, ~, random
+		p	4	p_i2104_4_	x	#~, ~, ~, x
+		p	5	p_i2104_5_	z	#~, ~, ~, z
+		p	6	p_i2104_6_	weights	#~, ~, ~, weights
+		p	7	p_i2104_7_	size	#~, ~, ~, size
+		p	2	p_i2104_2_	p_i2104_2_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/TwitchStream$1$1	net/minecraft/client/stream/TwitchStream$1$1	
+	f	Lnet/minecraft/client/stream/TwitchStream$1;	field_153082_a	field_153082_a	#~, ~, ~, ~
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/stream/TwitchStream$1;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1008_1_	mcIn	#mcIn, :, ~, ~
+		p	2	p_i1008_2_	p_i1008_2_	#~, ~, ~, ~

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelCreeper	net/minecraft/client/model/ModelCreeper	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78135_a	head	#head, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78133_b	creeperArmor	#creeperArmor, :, helmet, largeHead
+		c	Has the shape of the head, but it is .5 larger in size than a normal head. It has texture coordinates pointing to an empty place in the texture atlas.\nThis field is initialised but never rendered.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78134_c	body	#body, :, torso, body
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78131_d	leg1	#leg1, :, rightBackLeg, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78132_e	leg2	#leg2, :, leftBackLeg, leftBackleg
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78129_f	leg3	#leg3, :, rightFrontLeg, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78130_g	leg4	#leg4, :, leftFrontLeg, :
+	m	(F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1147_1_	valueIn	#valueIn, :, extra, reduction
+	m	()V	<init>	<init>	#~, ~, ~, ~

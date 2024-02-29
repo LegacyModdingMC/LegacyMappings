@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/RenderItemFrame	net/minecraft/client/renderer/tileentity/RenderItemFrame	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110789_a	mapBackgroundTextures	#mapBackgroundTextures, MAP_BACKGROUND_TEXTURES, ~, MAP_BACKGROUND_LOCATION
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147916_f	blockRenderer	#~, ~, ~, blockRenderer
+	f	Lnet/minecraft/client/Minecraft;	field_147917_g	mc	#mc, :, ~, minecraft
+	f	Lnet/minecraft/util/IIcon;	field_94147_f	backgroundSprite	#~, ~, ~, backgroundSprite
+	m	(Lnet/minecraft/entity/item/EntityItemFrame;DDD)V	func_147914_a	renderNameTag	#~, ~, ~, renderNameTag
+		p	1	p_147914_1_	itemFrame	#~, ~, ~, itemFrame
+		p	2	p_147914_2_	x	#~, ~, ~, x
+		p	4	p_147914_4_	y	#~, ~, ~, y
+		p	6	p_147914_6_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/entity/item/EntityItemFrame;)V	func_147915_b	renderFrameForMap	#~, ~, ~, renderFrameForMap
+		p	1	p_147915_1_	itemFrame	#~, ~, ~, itemFrame
+	m	(Lnet/minecraft/entity/item/EntityItemFrame;)V	func_82403_a	renderFrameItemAsBlock	#renderFrameItemAsBlock, :, ~, renderDefaultFrame
+		c	Render the item frame's item as a block.
+		p	1	p_82403_1_	itemFrame	#~, ~, ~, itemFrame
+	m	(Lnet/minecraft/entity/item/EntityItemFrame;)V	func_82402_b	renderItem	#renderItem, :, ~, renderItem
+		p	1	p_82402_1_	itemFrame	#itemFrame, :, ~, itemFrame
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

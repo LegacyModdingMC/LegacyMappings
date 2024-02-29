@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFenceGate	net/minecraft/block/BlockFenceGate	
+	m	(I)Z	func_149896_b	isFenceGateOpen	#isFenceGateOpen, :, ~, isOpen
+		c	Returns if the fence gate is open according to its metadata.
+		p	0	p_149896_0_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/IPlayerFileData	net/minecraft/world/storage/IPlayerFileData	
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_75753_a	writePlayerData	#writePlayerData, :, savePlayerData, :
+		c	Writes the player data to disk from the specified PlayerEntityMP.
+		p	1	p_75753_1_	player	#player, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/nbt/NBTTagCompound;	func_75752_b	readPlayerData	#readPlayerData, :, getPlayerData, loadPlayerData
+		c	Reads the player data from disk into the specified PlayerEntityMP.
+		p	1	p_75752_1_	player	#player, :, :, :
+	m	()[Ljava/lang/String;	func_75754_f	getAvailablePlayerDat	#getAvailablePlayerDat, :, getSavedPlayerIds, :
+		c	Returns an array of usernames for which player.dat exists for.

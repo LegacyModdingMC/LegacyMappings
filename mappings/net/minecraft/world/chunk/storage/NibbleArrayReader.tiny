@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/NibbleArrayReader	net/minecraft/world/chunk/storage/NibbleArrayReader	
+	f	[B	field_76689_a	data	#data, :, :, :
+	f	I	field_76687_b	depthBits	#depthBits, :, zOffset, zBitOffset
+	f	I	field_76688_c	depthBitsPlusFour	#depthBitsPlusFour, :, xOffset, xBitOffset
+	m	([BI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1998_1_	dataIn	#dataIn, :, data, :
+		p	2	p_i1998_2_	depthBitsIn	#depthBitsIn, :, yCoordinateBits, zBitOffset
+	m	(III)I	func_76686_a	get	#get, :, :, :
+		p	1	p_76686_1_	x	#x, :, :, :
+		p	2	p_76686_2_	y	#y, :, :, :
+		p	3	p_76686_3_	z	#z, :, :, :

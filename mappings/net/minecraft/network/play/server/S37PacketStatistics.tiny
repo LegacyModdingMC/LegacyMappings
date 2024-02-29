@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S37PacketStatistics	net/minecraft/network/play/server/S37PacketStatistics	
+	f	Ljava/util/Map;	field_148976_a	statisticMap	#statisticMap, :, stats, :
+	m	(Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45173_1_	stats	#~, ~, stats, :
+	m	()Ljava/util/Map;	func_148974_c	getStatisticMap	#getStatisticMap, :, getStatMap, getStats
+	m	()V	<init>	<init>	#~, ~, ~, ~

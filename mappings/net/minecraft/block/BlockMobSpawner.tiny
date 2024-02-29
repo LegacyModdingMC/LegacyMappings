@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockMobSpawner	net/minecraft/block/BlockMobSpawner	
+	m	()V	<init>	<init>	#~, ~, ~, ~

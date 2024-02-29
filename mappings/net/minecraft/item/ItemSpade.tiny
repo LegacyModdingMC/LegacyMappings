@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSpade	net/minecraft/item/ItemSpade	
+	f	Ljava/util/Set;	field_150916_c	EFFECTIVE_ON	#EFFECTIVE_ON, :, EFFECTIVE_BLOCKS, :
+	m	(Lnet/minecraft/item/Item$ToolMaterial;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45353_1_	material	#material, :, ~, material
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

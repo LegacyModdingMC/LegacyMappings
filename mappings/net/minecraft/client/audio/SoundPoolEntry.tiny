@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundPoolEntry	net/minecraft/client/audio/SoundPoolEntry	
+	f	Lnet/minecraft/util/ResourceLocation;	field_148656_a	location	#location, :, id, location
+	f	Z	field_148654_b	streamingSound	#streamingSound, :, ~, stream
+	f	D	field_148655_c	pitch	#pitch, :, volume, :
+	f	D	field_148653_d	volume	#volume, :, pitch, :
+	m	(Lnet/minecraft/util/ResourceLocation;DDZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45113_1_	locationIn	#locationIn, :, id, location
+		p	2	p_i45113_2_	pitchIn	#pitchIn, :, volume, :
+		p	4	p_i45113_4_	volumeIn	#volumeIn, :, pitch, :
+		p	6	p_i45113_6_	streamingSoundIn	#streamingSoundIn, :, ~, stream
+	m	(Lnet/minecraft/client/audio/SoundPoolEntry;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45114_1_	locationIn	#locationIn, :, sound, :
+	m	()Lnet/minecraft/util/ResourceLocation;	func_148652_a	getSoundPoolEntryLocation	#getSoundPoolEntryLocation, :, getIdentifier, getLocation
+	m	(D)V	func_148651_a	setPitch	#setPitch, :, setVolume, :
+		p	1	p_148651_1_	pitchIn	#pitchIn, :, volume, :
+	m	()D	func_148650_b	getPitch	#getPitch, :, getVolume, :
+	m	(D)V	func_148647_b	setVolume	#setVolume, :, setPitch, :
+		p	1	p_148647_1_	volumeIn	#volumeIn, :, pitch, :
+	m	()D	func_148649_c	getVolume	#getVolume, :, getPitch, :
+	m	()Z	func_148648_d	isStreamingSound	#isStreamingSound, :, ~, isStream

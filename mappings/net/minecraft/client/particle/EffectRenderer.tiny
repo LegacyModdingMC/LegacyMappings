@@ -1,0 +1,38 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EffectRenderer	net/minecraft/client/particle/EffectRenderer	
+	f	Lnet/minecraft/world/World;	field_78878_a	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	f	Lnet/minecraft/util/ResourceLocation;	field_110737_b	particleTextures	#particleTextures, PARTICLE_TEXTURES, PARTICLE_TEXTURE, PARTICLES_LOCATION
+	f	[Ljava/util/List;	field_78876_b	fxLayers	#fxLayers, :, ~, particles
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_78877_c	renderer	#renderer, :, textureManager, :
+	f	Ljava/util/Random;	field_78875_d	rand	#rand, :, random, :
+		c	RNG.
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/client/renderer/texture/TextureManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1220_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1220_2_	rendererIn	#rendererIn, :, textureManager, :
+	m	()V	func_78868_a	updateEffects	#updateEffects, :, tick, :
+	m	(IIII)V	func_78867_a	addBlockHitEffects	#addBlockHitEffects, :, ~, addBlockBreakingParticles
+		c	Adds block hit particles for the specified block. Args: x, y, z, sideHit
+		p	1	p_78867_1_	x	#~, ~, ~, x
+		p	2	p_78867_2_	y	#~, ~, ~, y
+		p	3	p_78867_3_	z	#~, ~, ~, z
+		p	4	p_78867_4_	face	#~, ~, ~, face
+	m	(IIILnet/minecraft/block/Block;I)V	func_147215_a	addBlockDestroyEffects	#addBlockDestroyEffects, :, ~, addBlockBreakingParticles
+		p	1	p_147215_1_	x	#~, ~, ~, x
+		p	2	p_147215_2_	y	#~, ~, ~, y
+		p	3	p_147215_3_	z	#~, ~, ~, z
+		p	4	p_147215_4_	block	#~, ~, ~, block
+		p	5	p_147215_5_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;)V	func_78870_a	clearEffects	#clearEffects, :, setWorld, :
+		p	1	p_78870_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/client/particle/EntityFX;)V	func_78873_a	addEffect	#addEffect, :, addParticle, :
+		p	1	p_78873_1_	effect	#effect, :, particle, :
+	m	(Lnet/minecraft/entity/Entity;F)V	func_78874_a	renderParticles	#renderParticles, :, :, :
+		c	Renders all current particles. Args player, partialTickTime
+		p	1	p_78874_1_	entityIn	#entityIn, :, entity, camera
+		p	2	p_78874_2_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()Ljava/lang/String;	func_78869_b	getStatistics	#getStatistics, :, getDebugString, getParticlesDebugInfo
+	m	(Lnet/minecraft/entity/Entity;F)V	func_78872_b	renderLitParticles	#renderLitParticles, :, ~, renderLitParticles
+		p	1	p_78872_1_	entityIn	#entityIn, :, entity, camera
+		p	2	p_78872_2_	partialTick	#partialTick, :, tickDelta, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

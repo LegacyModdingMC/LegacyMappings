@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockEndPortal	net/minecraft/block/BlockEndPortal	
+	f	Z	field_149948_a	forcePlace	#~, ~, ~, forcePlace
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45404_1_	materialIn	#materialIn, :, ~, ~

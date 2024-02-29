@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/MinecraftServerGui$1	net/minecraft/server/gui/MinecraftServerGui$1	
+	f	Lnet/minecraft/server/dedicated/DedicatedServer;	field_120023_a	server	#~, ~, ~, server
+	m	(Ljava/awt/event/WindowEvent;)V	windowClosing	windowClosing	#~, ~, ~, ~
+		p	1	p_windowClosing_1_	event	#~, ~, ~, event
+	m	(Lnet/minecraft/server/dedicated/DedicatedServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1223_1_	p_i1223_1_	#~, ~, ~, ~

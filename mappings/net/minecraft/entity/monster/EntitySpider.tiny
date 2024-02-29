@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntitySpider	net/minecraft/entity/monster/EntitySpider	
+	m	(Z)V	func_70839_e	setBesideClimbableBlock	#setBesideClimbableBlock, :, setCanClimb, setClimbingWall
+		c	Updates the WatchableObject (Byte) created in entityInit(), setting it to 0x01 if par1 is true or 0x00 if it is false.
+		p	1	p_70839_1_	climbing	#climbing, :, ~, climbing
+	m	()Z	func_70841_p	isBesideClimbableBlock	#isBesideClimbableBlock, :, getCanClimb, isClimbingWall
+		c	Returns true if the WatchableObject (Byte) is 0x01 otherwise returns false. The WatchableObject is updated using setBesideClimableBlock.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1743_1_	worldIn	#worldIn, :, ~, world

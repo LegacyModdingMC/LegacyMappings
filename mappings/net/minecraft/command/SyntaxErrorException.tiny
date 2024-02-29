@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/SyntaxErrorException	net/minecraft/command/SyntaxErrorException	
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1361_1_	message	#message, :, ~, ~
+		p	2	p_i1361_2_	replacements	#replacements, :, ~, ~

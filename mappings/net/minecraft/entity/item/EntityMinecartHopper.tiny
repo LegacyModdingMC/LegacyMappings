@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityMinecartHopper	net/minecraft/entity/item/EntityMinecartHopper	
+	f	Z	field_96113_a	isBlocked	#isBlocked, :, enabled, :
+		c	Whether this hopper minecart is being blocked by an activator rail.
+	f	I	field_98044_b	transferTicker	#transferTicker, :, transferCooldown, :
+	m	()Z	func_96112_aD	captureDroppedItems	#captureDroppedItems, :, canOperate, transferItems
+	m	()Z	func_98043_aE	canTransfer	#canTransfer, :, isCoolingDown, hasTransferCooldown
+		c	Returns whether the hopper cart can currently transfer an item.
+	m	(Z)V	func_96110_f	setBlocked	#setBlocked, :, setEnabled, :
+		c	Set whether this hopper minecart is being blocked by an activator rail.
+		p	1	p_96110_1_	enabled	#~, ~, enabled, :
+	m	(I)V	func_98042_n	setTransferTicker	#setTransferTicker, :, setTransferCooldown, :
+		c	Sets the transfer ticker, used to determine the delay between transfers.
+		p	1	p_98042_1_	transferCooldown	#~, ~, cooldown, transferCooldown
+	m	()Z	func_96111_ay	getBlocked	#getBlocked, :, isEnabled, :
+		c	Get whether this hopper minecart is being blocked by an activator rail.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1720_1_	worldIn	#worldIn, :, ~, world
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1721_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1721_2_	x	#x, :, ~, x
+		p	4	p_i1721_4_	y	#y, :, ~, y
+		p	6	p_i1721_6_	z	#z, :, ~, z

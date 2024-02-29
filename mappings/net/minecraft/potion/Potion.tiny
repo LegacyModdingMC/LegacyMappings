@@ -1,0 +1,126 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/potion/Potion	net/minecraft/potion/Potion	
+	f	Lnet/minecraft/potion/Potion;	field_76409_A	field_76409_A	#~, ~, ~, ~
+	f	Lnet/minecraft/potion/Potion;	field_76410_B	field_76410_B	#~, ~, ~, ~
+	f	Lnet/minecraft/potion/Potion;	field_76411_C	field_76411_C	#~, ~, ~, ~
+	f	Lnet/minecraft/potion/Potion;	field_76405_D	field_76405_D	#~, ~, ~, ~
+	f	Lnet/minecraft/potion/Potion;	field_76406_E	field_76406_E	#~, ~, ~, ~
+	f	Lnet/minecraft/potion/Potion;	field_76407_F	field_76407_F	#~, ~, ~, ~
+	f	Lnet/minecraft/potion/Potion;	field_76408_G	field_76408_G	#~, ~, ~, ~
+	f	I	field_76415_H	id	#id, :, :, :
+		c	The Id of a Potion object.
+	f	Ljava/util/Map;	field_111188_I	attributeModifierMap	#attributeModifierMap, :, attributeModifiers, modifiers
+		c	Contains a Map of the AttributeModifiers registered by potions
+	f	Z	field_76418_K	isBadEffect	#isBadEffect, :, negative, harmful
+		c	This field indicated if the effect is 'bad' - negative - for the entity.
+	f	I	field_76414_N	liquidColor	#liquidColor, :, color, potionColor
+		c	Is the color of the liquid for this potion.
+	f	Ljava/lang/String;	field_76416_I	name	#name, :, translationKey, key
+		c	The name of the Potion.
+	f	I	field_76417_J	statusIconIndex	#statusIconIndex, :, iconLevel, iconIndex
+		c	The index for the icon displayed when the potion effect is active.
+	f	D	field_76412_L	effectiveness	#effectiveness, :, ~, effectiveness
+	f	Z	field_76413_M	usable	#usable, :, ~, usable
+	f	[Lnet/minecraft/potion/Potion;	field_76425_a	potionTypes	#potionTypes, :, STATUS_EFFECTS, BY_ID
+		c	The array of potion types.
+	f	Lnet/minecraft/potion/Potion;	field_76423_b	UNKNOWN	#~, ~, UNKNOWN, :
+	f	Lnet/minecraft/potion/Potion;	field_76424_c	moveSpeed	#moveSpeed, SPEED, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76421_d	moveSlowdown	#moveSlowdown, SLOWNESS, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76422_e	digSpeed	#digSpeed, HASTE, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76419_f	digSlowdown	#digSlowdown, MINING_FATIGUE, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76420_g	damageBoost	#damageBoost, STRENGTH, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76432_h	heal	#heal, INSTANT_HEALTH, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76433_i	harm	#harm, INSTANT_DAMAGE, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76430_j	jump	#jump, JUMP_BOOST, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76431_k	confusion	#confusion, NAUSEA, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76428_l	regeneration	#regeneration, REGENERATION, :, :
+		c	The regeneration Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76429_m	resistance	#resistance, RESISTANCE, :, :
+	f	Lnet/minecraft/potion/Potion;	field_76426_n	fireResistance	#fireResistance, FIRE_RESISTANCE, :, :
+		c	The fire resistance Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76427_o	waterBreathing	#waterBreathing, WATER_BREATHING, :, :
+		c	The water breathing Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76441_p	invisibility	#invisibility, INVISIBILITY, :, :
+		c	The invisibility Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76440_q	blindness	#blindness, BLINDNESS, :, :
+		c	The blindness Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76439_r	nightVision	#nightVision, NIGHT_VISION, NIGHTVISION, :
+		c	The night vision Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76438_s	hunger	#hunger, HUNGER, :, :
+		c	The hunger Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76437_t	weakness	#weakness, WEAKNESS, :, :
+		c	The weakness Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76436_u	poison	#poison, POISON, :, :
+		c	The poison Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_82731_v	wither	#wither, WITHER, :, :
+		c	The wither Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76434_w	healthBoost	#healthBoost, :, HEALTH_BOOST, :
+		c	The health boost Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76444_x	absorption	#absorption, ABSORPTION, :, :
+		c	The absorption Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76443_y	saturation	#saturation, SATURATION, :, :
+		c	The saturation Potion object.
+	f	Lnet/minecraft/potion/Potion;	field_76442_z	field_76442_z	#~, ~, ~, ~
+	m	()Ljava/lang/String;	func_76393_a	getName	#getName, :, getTranslationKey, :
+		c	returns the name of the potion
+	m	(D)Lnet/minecraft/potion/Potion;	func_76404_a	setEffectiveness	#setEffectiveness, :, ~, setEffectiveness
+		p	1	p_76404_1_	effectivenessIn	#effectivenessIn, :, ~, effectiveness
+	m	(II)Z	func_76397_a	isReady	#isReady, :, canApplyUpdateEffect, shouldApply
+		c	checks if Potion effect is ready to be applied this tick.
+		p	1	p_76397_1_	duration	#duration, :, :, :
+		p	2	p_76397_2_	amplifier	#amplifier, :, :, :
+	m	(ILnet/minecraft/entity/ai/attributes/AttributeModifier;)D	func_111183_a	getAttributeModifierAmount	#getAttributeModifierAmount, :, adjustModifierAmount, getModifier
+		p	1	p_111183_1_	amplifier	#amplifier, :, :, :
+		p	2	p_111183_2_	modifier	#modifier, :, :, :
+	m	(Lnet/minecraft/potion/PotionEffect;)Ljava/lang/String;	func_76389_a	getDurationString	#getDurationString, :, getFormattedDuration, getDurationString
+		p	0	p_76389_0_	effect	#effect, :, :, instance
+	m	(Lnet/minecraft/entity/EntityLivingBase;I)V	func_76394_a	performEffect	#performEffect, :, ~, apply
+		p	1	p_76394_1_	entityLivingBaseIn	#entityLivingBaseIn, :, ~, entity
+		p	2	p_76394_2_	amplifier	#amplifier, :, ~, amplifier
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;ID)V	func_76402_a	affectEntity	#affectEntity, :, ~, affectHealth
+		c	Hits the provided entity with this potion's instant effect.
+		p	1	p_76402_1_	thrower	#~, ~, ~, thrower
+		p	2	p_76402_2_	entity	#~, ~, ~, entity
+		p	3	p_76402_3_	multiplier	#~, ~, ~, multiplier
+		p	4	p_76402_4_	strength	#~, ~, ~, strength
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;I)V	func_111187_a	removeAttributesModifiersFromEntity	#removeAttributesModifiersFromEntity, :, onRemoved, removeModifiers
+		p	1	p_111187_1_	entityLivingBaseIn	#entityLivingBaseIn, :, entity, :
+		p	2	p_111187_2_	attributeMapIn	#attributeMapIn, :, attributes, container
+		p	3	p_111187_3_	amplifier	#amplifier, :, :, :
+	m	(Lnet/minecraft/entity/ai/attributes/IAttribute;Ljava/lang/String;DI)Lnet/minecraft/potion/Potion;	func_111184_a	registerPotionAttributeModifier	#registerPotionAttributeModifier, :, addAttribute, addModifier
+		c	Used by potions to register the attribute they modify.
+		p	1	p_111184_1_	attribute	#attribute, :, ~, attribute
+		p	2	p_111184_2_	uniqueId	#uniqueId, :, ~, id
+		p	3	p_111184_3_	ammount	#ammount, :, ~, value
+		p	5	p_111184_5_	operation	#operation, :, ~, operation
+	m	()Z	func_76403_b	isInstant	#isInstant, :, :, :
+		c	Returns true if the potion has an instant effect instead of a continuous one (eg Harming)
+	m	(II)Lnet/minecraft/potion/Potion;	func_76399_b	setIconIndex	#setIconIndex, :, ~, setIcon
+		c	Sets the index for the icon displayed in the player's inventory when the status is active.
+		p	1	p_76399_1_	column	#~, ~, ~, column
+		p	2	p_76399_2_	row	#~, ~, ~, row
+	m	(Ljava/lang/String;)Lnet/minecraft/potion/Potion;	func_76390_b	setPotionName	#setPotionName, :, setTranslationKey, setKey
+		c	Set the potion name.
+		p	1	p_76390_1_	nameIn	#nameIn, :, key, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/ai/attributes/BaseAttributeMap;I)V	func_111185_a	applyAttributesModifiersToEntity	#applyAttributesModifiersToEntity, :, ~, addModifiers
+		p	1	p_111185_1_	entityLivingBaseIn	#entityLivingBaseIn, :, entity, :
+		p	2	p_111185_2_	attributeMapIn	#attributeMapIn, :, attributes, container
+		p	3	p_111185_3_	amplifier	#amplifier, :, ~, amplifier
+	m	()I	func_76396_c	getId	#getId, :, :, :
+		c	returns the ID of the potion
+	m	()Z	func_76400_d	hasStatusIcon	#hasStatusIcon, :, hasIcon, :
+		c	Returns true if the potion has a associated status icon to display in then inventory when active.
+	m	()I	func_76392_e	getStatusIconIndex	#getStatusIconIndex, :, getIconLevel, getIconIndex
+		c	Returns the index for the icon to display when the potion is active.
+	m	()Z	func_76398_f	isBadEffect	#isBadEffect, :, isNegative, isHarmful
+		c	This method returns true if the potion effect is bad - negative - for the entity.
+	m	()D	func_76388_g	getEffectiveness	#getEffectiveness, :, ~, getEffectiveness
+	m	()Z	func_76395_i	isUsable	#isUsable, :, ~, isUsable
+	m	()I	func_76401_j	getLiquidColor	#getLiquidColor, :, getColor, getPotionColor
+		c	Returns the color of the potion liquid.
+	m	()Ljava/util/Map;	func_111186_k	getAttributeModifierMap	#getAttributeModifierMap, :, getAttributeModifiers, getModifiers
+	m	(IZI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1573_1_	id	#~, ~, ~, id
+		p	2	p_i1573_2_	harmful	#~, ~, ~, harmful
+		p	3	p_i1573_3_	potionColor	#~, ~, ~, potionColor
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

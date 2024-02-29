@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/WorldInfo$8	net/minecraft/world/storage/WorldInfo$8	
+	f	Lnet/minecraft/world/storage/WorldInfo;	field_85111_a	worldInfoInstance	#worldInfoInstance, :, properties, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2155_1_	properties	#~, ~, properties, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

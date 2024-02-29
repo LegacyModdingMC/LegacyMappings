@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/RenderHelper	net/minecraft/client/renderer/RenderHelper	
+	f	Ljava/nio/FloatBuffer;	field_74522_a	colorBuffer	#colorBuffer, COLOR_BUFFER, ~, BUFFER
+		c	Float buffer used to set OpenGL material colors
+	f	Lnet/minecraft/util/Vec3;	field_82884_b	LIGHT0_POS	#LIGHT0_POS, :, ~, LIGHT_0
+	f	Lnet/minecraft/util/Vec3;	field_82885_c	LIGHT1_POS	#LIGHT1_POS, :, ~, LIGHT_1
+	m	()V	func_74518_a	disableStandardItemLighting	#disableStandardItemLighting, :, disable, turnOff
+		c	Disables the OpenGL lighting properties enabled by enableStandardItemLighting
+	m	(DDDD)Ljava/nio/FloatBuffer;	func_74517_a	setColorBuffer	#setColorBuffer, :, ~, getBuffer
+		c	Update and return colorBuffer with the RGBA values passed as arguments
+		p	0	p_74517_0_	r	#~, ~, ~, r
+		p	2	p_74517_2_	g	#~, ~, ~, g
+		p	4	p_74517_4_	b	#~, ~, ~, b
+		p	6	p_74517_6_	a	#~, ~, ~, a
+	m	(FFFF)Ljava/nio/FloatBuffer;	func_74521_a	setColorBuffer	#setColorBuffer, :, ~, getBuffer
+		c	Update and return colorBuffer with the RGBA values passed as arguments
+		p	0	p_74521_0_	r	#~, ~, ~, r
+		p	1	p_74521_1_	g	#~, ~, ~, g
+		p	2	p_74521_2_	b	#~, ~, ~, b
+		p	3	p_74521_3_	a	#~, ~, ~, a
+	m	()V	func_74519_b	enableStandardItemLighting	#enableStandardItemLighting, :, enableNormally, turnOn
+		c	Sets the OpenGL lighting properties to the values used when rendering blocks as items
+	m	()V	func_74520_c	enableGUIStandardItemLighting	#enableGUIStandardItemLighting, :, enable, turnOnGui
+		c	Sets OpenGL lighting for rendering blocks as items inside GUI screens (such as containers).
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

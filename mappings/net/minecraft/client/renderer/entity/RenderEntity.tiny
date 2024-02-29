@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderEntity	net/minecraft/client/renderer/entity/RenderEntity	
+	m	()V	<init>	<init>	#~, ~, ~, ~

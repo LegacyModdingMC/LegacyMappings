@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityThrowable	net/minecraft/entity/projectile/EntityThrowable	
+	f	Z	field_70193_a	inGround	#inGround, :, :, :
+	f	I	field_70195_i	ticksInAir	#ticksInAir, :, ~, ticksInAir
+	f	I	field_70191_b	throwableShake	#throwableShake, :, shake, :
+	f	I	field_145788_c	xTile	#xTile, :, blockX, :
+	f	I	field_145786_d	yTile	#yTile, :, blockY, :
+	f	I	field_145787_e	zTile	#zTile, :, blockZ, :
+	f	Lnet/minecraft/block/Block;	field_145785_f	inBlock	#inBlock, :, :, :
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_70192_c	thrower	#thrower, :, ~, thrower
+		c	The entity that threw this throwable item.
+	f	Ljava/lang/String;	field_85053_h	throwerName	#throwerName, :, ownerName, throwerName
+	f	I	field_70194_h	ticksInGround	#ticksInGround, :, inGroundTime, ticksInBlock
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1778_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1778_2_	x	#x, :, :, :
+		p	4	p_i1778_4_	y	#y, :, :, :
+		p	6	p_i1778_6_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1777_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1777_2_	throwerIn	#throwerIn, :, owner, thrower
+	m	(Lnet/minecraft/util/MovingObjectPosition;)V	func_70184_a	onImpact	#onImpact, :, onCollision, :
+		c	Called when this EntityThrowable hits a block or entity.
+		p	1	p_70184_1_	result	#result, :, :, :
+	m	()F	func_70182_d	getVelocity	#getVelocity, :, ~, getSpeed
+	m	()F	func_70183_g	getInaccuracy	#getInaccuracy, :, ~, getStartPitchOffset
+	m	()F	func_70185_h	getGravityVelocity	#getGravityVelocity, :, getGravity, :
+		c	Gets the amount of gravity to apply to the thrown entity with each tick.
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_85052_h	getThrower	#getThrower, :, getOwner, getThrower
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1776_1_	worldIn	#worldIn, :, ~, ~

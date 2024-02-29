@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C08PacketPlayerBlockPlacement	net/minecraft/network/play/client/C08PacketPlayerBlockPlacement	
+	f	I	field_149583_a	placedBlockX	#placedBlockX, :, ~, x
+	f	I	field_149581_b	placedBlockY	#placedBlockY, :, ~, y
+	f	I	field_149582_c	placedBlockZ	#placedBlockZ, :, ~, z
+	f	I	field_149579_d	placedBlockDirection	#placedBlockDirection, :, directionId, face
+		c	The face of the block on which the interaction takes place. Can be set to 255 if the\nplayer is using an item while not looking at a block.
+	f	Lnet/minecraft/item/ItemStack;	field_149580_e	stack	#stack, :, :, :
+	f	F	field_149577_f	facingX	#facingX, :, distanceX, dx
+	f	F	field_149578_g	facingY	#facingY, :, distanceY, dy
+	f	F	field_149584_h	facingZ	#facingZ, :, distanceZ, dz
+	m	(IIIILnet/minecraft/item/ItemStack;FFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45265_1_	x	#~, ~, x, :
+		p	2	p_i45265_2_	y	#~, ~, y, :
+		p	3	p_i45265_3_	z	#~, ~, z, :
+		p	4	p_i45265_4_	face	#~, ~, side, face
+		p	5	p_i45265_5_	stack	#~, ~, stack, :
+		p	6	p_i45265_6_	dx	#~, ~, ~, dx
+		p	7	p_i45265_7_	dy	#~, ~, ~, dy
+		p	8	p_i45265_8_	dz	#~, ~, ~, dz
+	m	()I	func_149576_c	getPlacedBlockX	#getPlacedBlockX, :, ~, getX
+	m	()I	func_149571_d	getPlacedBlockY	#getPlacedBlockY, :, ~, getY
+	m	()I	func_149570_e	getPlacedBlockZ	#getPlacedBlockZ, :, ~, getZ
+	m	()I	func_149568_f	getPlacedBlockDirection	#getPlacedBlockDirection, :, getDirectionId, getFace
+	m	()Lnet/minecraft/item/ItemStack;	func_149574_g	getStack	#getStack, :, :, :
+	m	()F	func_149573_h	getPlacedBlockOffsetX	#getPlacedBlockOffsetX, :, getDistanceX, getDx
+		c	Returns the offset from xPosition where the actual click took place.
+	m	()F	func_149569_i	getPlacedBlockOffsetY	#getPlacedBlockOffsetY, :, getDistanceY, getDy
+		c	Returns the offset from yPosition where the actual click took place.
+	m	()F	func_149575_j	getPlacedBlockOffsetZ	#getPlacedBlockOffsetZ, :, getDistanceZ, getDz
+		c	Returns the offset from zPosition where the actual click took place.
+	m	()V	<init>	<init>	#~, ~, ~, ~

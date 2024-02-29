@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiOptionSlider	net/minecraft/client/gui/GuiOptionSlider	
+	f	Z	field_146135_o	dragging	#dragging, :, :, :
+	f	F	field_146134_p	sliderValue	#sliderValue, :, value, :
+	f	Lnet/minecraft/client/settings/GameSettings$Options;	field_146133_q	options	#options, :, ~, option
+	f	F	field_146132_r	minValue	#minValue, :, min, :
+	f	F	field_146131_s	maxValue	#maxValue, :, max, :
+	m	(IIILnet/minecraft/client/settings/GameSettings$Options;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45016_1_	buttonId	#buttonId, :, ~, x
+		p	2	p_i45016_2_	x	#x, :, ~, y
+		p	3	p_i45016_3_	y	#y, :, ~, id
+		p	4	p_i45016_4_	optionIn	#optionIn, :, ~, option
+	m	(IIILnet/minecraft/client/settings/GameSettings$Options;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45017_1_	buttonId	#buttonId, :, ~, x
+		p	2	p_i45017_2_	x	#x, :, ~, y
+		p	3	p_i45017_3_	y	#y, :, ~, id
+		p	4	p_i45017_4_	optionIn	#optionIn, :, ~, option
+		p	5	p_i45017_5_	minValueIn	#minValueIn, :, ~, min
+		p	6	p_i45017_6_	maxValue	#maxValue, :, ~, max

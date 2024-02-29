@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAINearestAttackableTarget$Sorter	net/minecraft/entity/ai/EntityAINearestAttackableTarget$Sorter	
+	f	Lnet/minecraft/entity/Entity;	field_75459_b	theEntity	#theEntity, entity, ~, entity
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)I	compare	compare	#~, ~, compare, :
+		p	1	p_compare_1_	p_compare_1_	#~, ~, ~, ~
+		p	2	p_compare_2_	p_compare_2_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	#~, ~, ~, ~
+		p	1	p_compare_1_	entity1	#~, ~, ~, entity1
+		p	2	p_compare_2_	entity2	#~, ~, ~, entity2
+	m	(Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1662_1_	theEntityIn	#theEntityIn, entityIn, ~, entity

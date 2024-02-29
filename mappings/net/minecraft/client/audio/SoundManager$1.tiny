@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundManager$1	net/minecraft/client/audio/SoundManager$1	
+	f	Lnet/minecraft/client/audio/SoundManager;	field_148631_a	soundSystem	#~, ~, ~, soundSystem
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1324_1_	p_i1324_1_	#~, ~, ~, ~

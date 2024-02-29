@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemMinecart	net/minecraft/item/ItemMinecart	
+	f	I	field_77841_a	minecartType	#minecartType, :, ~, type
+	f	Lnet/minecraft/dispenser/IBehaviorDispenseItem;	field_96602_b	dispenserMinecartBehavior	#dispenserMinecartBehavior, MINECART_DISPENSER_BEHAVIOR, MINECART_BEHAVIOR, DISPENSE_BEHAVIOR
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45345_1_	variant	#~, ~, ~, variant
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

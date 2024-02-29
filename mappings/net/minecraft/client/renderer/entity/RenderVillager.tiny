@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderVillager	net/minecraft/client/renderer/entity/RenderVillager	
+	f	Lnet/minecraft/client/model/ModelVillager;	field_77056_a	villagerModel	#villagerModel, :, ~, model
+		c	Model of the villager.
+	f	Lnet/minecraft/util/ResourceLocation;	field_110903_f	villagerTextures	#villagerTextures, VILLAGER_TEXTURES, UNEMPLOYED, VILLAGER_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110904_g	farmerVillagerTextures	#farmerVillagerTextures, FARMER_VILLAGER_TEXTURES, FARMER, FARMER_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110908_h	librarianVillagerTextures	#librarianVillagerTextures, LIBRARIAN_VILLAGER_TEXTURES, LIBRARIAN, LIBRARIAN_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110907_k	priestVillagerTextures	#priestVillagerTextures, PRIEST_VILLAGER_TEXTURES, PRIEST, PRIEST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110905_l	smithVillagerTextures	#smithVillagerTextures, SMITH_VILLAGER_TEXTURES, BLACKSMITH, BLACKSMITH_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110906_m	butcherVillagerTextures	#butcherVillagerTextures, BUTCHER_VILLAGER_TEXTURES, BUTCHER, BUTCHER_LOCATION
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

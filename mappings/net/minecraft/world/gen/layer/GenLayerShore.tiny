@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerShore	net/minecraft/world/gen/layer/GenLayerShore	
+	m	([I[IIIIII)V	func_151632_a	replaceIfNeighborOcean	#replaceIfNeighborOcean, :, ~, createShore
+		p	1	p_151632_1_	biome1	#~, ~, ~, biome1
+		p	2	p_151632_2_	biome2	#~, ~, ~, biome2
+		p	3	p_151632_3_	x	#~, ~, ~, x
+		p	4	p_151632_4_	z	#~, ~, ~, z
+		p	5	p_151632_5_	width	#~, ~, ~, width
+		p	6	p_151632_6_	length	#~, ~, ~, length
+		p	7	p_151632_7_	id	#~, ~, ~, id
+	m	(I)Z	func_151631_c	isJungleCompatible	#isJungleCompatible, :, ~, isJungleEdge
+		p	1	p_151631_1_	id	#~, ~, ~, id
+	m	(I)Z	func_151633_d	isMesa	#isMesa, :, ~, isDesert
+		p	1	p_151633_1_	id	#~, ~, ~, id
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2130_1_	seed	#~, ~, ~, seed
+		p	3	p_i2130_3_	parent	#~, ~, ~, parent

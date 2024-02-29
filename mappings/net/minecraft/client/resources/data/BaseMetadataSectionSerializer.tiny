@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/BaseMetadataSectionSerializer	net/minecraft/client/resources/data/BaseMetadataSectionSerializer	
+	m	()V	<init>	<init>	#~, ~, ~, ~

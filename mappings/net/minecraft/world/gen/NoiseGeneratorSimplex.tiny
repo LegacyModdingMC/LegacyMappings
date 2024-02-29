@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/NoiseGeneratorSimplex	net/minecraft/world/gen/NoiseGeneratorSimplex	
+	f	D	field_151614_a	SQRT_3	#SQRT_3, :, SQRT3, SQRT_THREE
+	f	D	field_151612_b	xo	#xo, :, ~, originX
+	f	D	field_151613_c	yo	#yo, :, ~, originY
+	f	D	field_151610_d	zo	#zo, :, ~, originZ
+	f	[[I	field_151611_e	grad3	#grad3, :, ~, gradient3D
+	f	[I	field_151608_f	p	#p, :, permutations, :
+	f	D	field_151609_g	F2	#F2, :, ~, SKEW_FACTOR_2D
+	f	D	field_151615_h	G2	#G2, :, ~, UNSKEW_FACTOR_2D
+	m	(Ljava/util/Random;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45471_1_	seed	#seed, :, random, :
+	m	(D)I	func_151607_a	fastFloor	#fastFloor, :, ~, fastFloor
+		p	0	p_151607_0_	value	#value, :, ~, x
+	m	(DD)D	func_151605_a	getValue	#getValue, :, sample, :
+		p	1	p_151605_1_	x	#~, ~, x, :
+		p	3	p_151605_3_	z	#~, ~, y, z
+	m	([DDDIIDDD)V	func_151606_a	add	#add, :, ~, addNoise
+		p	1	p_151606_1_	noise	#~, ~, ~, noise
+		p	2	p_151606_2_	x	#~, ~, ~, x
+		p	4	p_151606_4_	z	#~, ~, ~, z
+		p	6	p_151606_6_	sizeX	#~, ~, ~, sizeX
+		p	7	p_151606_7_	sizeZ	#~, ~, ~, sizeZ
+		p	8	p_151606_8_	scaleX	#~, ~, ~, scaleX
+		p	10	p_151606_10_	scaleZ	#~, ~, ~, scaleZ
+		p	12	p_151606_12_	scaleExponent	#~, ~, ~, scaleExponent
+	m	([IDD)D	func_151604_a	dot	#dot, :, ~, dot
+		p	0	p_151604_0_	noise	#~, ~, ~, noise
+		p	1	p_151604_1_	x	#~, ~, ~, x
+		p	3	p_151604_3_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

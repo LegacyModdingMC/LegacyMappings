@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderGhast	net/minecraft/client/renderer/entity/RenderGhast	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110869_a	ghastTextures	#ghastTextures, GHAST_TEXTURES, TEXTURE, GHAST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110868_f	ghastShootingTextures	#ghastShootingTextures, GHAST_SHOOTING_TEXTURES, ANGRY_TEXTURE, GHAST_SHOOTING_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

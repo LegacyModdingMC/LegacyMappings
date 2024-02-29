@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityMinecartMobSpawner$1	net/minecraft/entity/ai/EntityMinecartMobSpawner$1	
+	f	Lnet/minecraft/entity/ai/EntityMinecartMobSpawner;	field_98296_a	spawnerMinecart	#spawnerMinecart, :, :, anonSpawnerCart
+		c	The spawner minecart using this mob spawner logic.
+	m	(Lnet/minecraft/entity/ai/EntityMinecartMobSpawner;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1724_1_	spawnerMinecart	#~, ~, spawnerMinecart, ~

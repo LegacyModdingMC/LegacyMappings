@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/Packet	net/minecraft/network/Packet	
+	f	Lorg/apache/logging/log4j/Logger;	field_148841_a	logger	#logger, :, LOGGER, :
+	m	()Z	func_148836_a	hasPriority	#hasPriority, :, ~, canHandleOffMainThread
+		c	If true, the network manager will process the packet immediately when received, otherwise it will queue it for processing. Currently true for: Disconnect, LoginSuccess, KeepAlive, ServerQuery/Info, Ping/Pong
+	m	(Lcom/google/common/collect/BiMap;I)Lnet/minecraft/network/Packet;	func_148839_a	generatePacket	#generatePacket, :, create, :
+		c	Returns a packet instance, given the params: BiMap<int, (Packet) Class> and (int) id
+		p	0	p_148839_0_	protocolMap	#protocolMap, :, packetMap, map
+		p	1	p_148839_1_	packetId	#packetId, :, id, :
+	m	(Lnet/minecraft/network/PacketBuffer;)V	func_148837_a	readPacketData	#readPacketData, :, read, :
+		c	Reads the raw packet data from the data stream.
+		p	1	p_148837_1_	data	#data, buf, :, buffer
+	m	(Lnet/minecraft/network/INetHandler;)V	func_148833_a	processPacket	#processPacket, :, apply, handle
+		c	Passes this Packet on to the NetHandler for processing.
+		p	1	p_148833_1_	handler	#handler, :, listener, handler
+	m	(Lio/netty/buffer/ByteBuf;)[B	func_148834_a	readBlob	#readBlob, :, readKey, readByteArray
+		c	Will read a byte array from the supplied ByteBuf, the first short encountered will be interpreted as the size of the byte array to read in
+		p	0	p_148834_0_	buffer	#buffer, :, buf, buffer
+	m	(Lio/netty/buffer/ByteBuf;[B)V	func_148838_a	writeBlob	#writeBlob, :, writeKey, writeByteArray
+		c	Will write a byte array to supplied ByteBuf as a separately defined structure by prefixing the byte array with its length
+		p	0	p_148838_0_	buffer	#buffer, :, buf, buffer
+		p	1	p_148838_1_	blob	#blob, :, data, bytes
+	m	()Ljava/lang/String;	func_148835_b	serialize	#serialize, :, dataToString, asString
+		c	Returns a string formatted as comma separated [field]=[value] values. Used by Minecraft for logging purposes.
+	m	(Lnet/minecraft/network/PacketBuffer;)V	func_148840_b	writePacketData	#writePacketData, :, write, :
+		c	Writes the raw packet data to the data stream.
+		p	1	p_148840_1_	data	#data, buf, :, buffer
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

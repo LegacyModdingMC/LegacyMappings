@@ -1,0 +1,41 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold	net/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold	
+	f	Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	field_143013_d	entryDoor	#entryDoor, :, ~, entranceType
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;III)V	func_74990_a	placeDoor	#placeDoor, :, ~, generateEntrance
+		c	builds a door of the enumerated types (empty opening is a door)
+		p	1	p_74990_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_74990_2_	random	#~, ~, ~, random
+		p	3	p_74990_3_	bounds	#~, ~, ~, bounds
+		p	4	p_74990_4_	type	#~, ~, ~, type
+		p	5	p_74990_5_	x	#~, ~, ~, x
+		p	6	p_74990_6_	y	#~, ~, ~, y
+		p	7	p_74990_7_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z	func_74991_a	canStrongholdGoDeeper	#canStrongholdGoDeeper, :, ~, isValidStructureBounds
+		c	returns false if the Structure Bounding Box goes below 10
+		p	0	p_74991_0_	bounds	#~, ~, ~, bounds
+	m	(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74986_a	getNextComponentNormal	#getNextComponentNormal, :, ~, generatePieceForward
+		c	Gets the next component in any cardinal direction
+		p	1	p_74986_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74986_2_	pieces	#~, ~, ~, pieces
+		p	3	p_74986_3_	random	#~, ~, ~, random
+		p	4	p_74986_4_	offset	#~, ~, ~, offset
+		p	5	p_74986_5_	yOffset	#~, ~, ~, yOffset
+	m	(Ljava/util/Random;)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stronghold$Door;	func_74988_a	getRandomDoor	#getRandomDoor, :, ~, pickEntranceType
+		p	1	p_74988_1_	random	#~, ~, ~, random
+	m	(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74989_b	getNextComponentX	#getNextComponentX, :, ~, generatePieceLeft
+		c	Gets the next component in the +/- X direction
+		p	1	p_74989_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74989_2_	pieces	#~, ~, ~, pieces
+		p	3	p_74989_3_	random	#~, ~, ~, random
+		p	4	p_74989_4_	yOffset	#~, ~, ~, yOffset
+		p	5	p_74989_5_	offset	#~, ~, ~, offset
+	m	(Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Stairs2;Ljava/util/List;Ljava/util/Random;II)Lnet/minecraft/world/gen/structure/StructureComponent;	func_74987_c	getNextComponentZ	#getNextComponentZ, :, ~, generatePieceRight
+		c	Gets the next component in the +/- Z direction
+		p	1	p_74987_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_74987_2_	piecesList	#~, ~, ~, piecesList
+		p	3	p_74987_3_	random	#~, ~, ~, random
+		p	4	p_74987_4_	yOffset	#~, ~, ~, yOffset
+		p	5	p_74987_5_	offset	#~, ~, ~, offset
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2087_1_	p_i2087_1_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

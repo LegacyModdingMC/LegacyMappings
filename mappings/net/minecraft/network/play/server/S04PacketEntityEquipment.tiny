@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S04PacketEntityEquipment	net/minecraft/network/play/server/S04PacketEntityEquipment	
+	f	I	field_149394_a	entityID	#entityID, :, id, :
+	f	I	field_149392_b	equipmentSlot	#equipmentSlot, :, slot, equipmentSlot
+	f	Lnet/minecraft/item/ItemStack;	field_149393_c	itemStack	#itemStack, :, stack, :
+	m	(IILnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45221_1_	entityIDIn	#entityIDIn, :, id, :
+		p	2	p_i45221_2_	equipmentSlot	#~, ~, slot, equipmentSlot
+		p	3	p_i45221_3_	itemStackIn	#itemStackIn, :, stack, :
+	m	()Lnet/minecraft/item/ItemStack;	func_149390_c	getItemStack	#getItemStack, :, getStack, :
+	m	()I	func_149389_d	getEntityID	#getEntityID, :, getId, :
+	m	()I	func_149388_e	getEquipmentSlot	#getEquipmentSlot, :, getSlot, getEquipmentSlot
+	m	()V	<init>	<init>	#~, ~, ~, ~

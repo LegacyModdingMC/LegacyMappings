@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockHopper	net/minecraft/block/BlockHopper	
+	f	Lnet/minecraft/util/IIcon;	field_149923_M	hopperTopIcon	#hopperTopIcon, :, ~, hopperTopSprite
+	f	Lnet/minecraft/util/IIcon;	field_149924_N	hopperInsideIcon	#hopperInsideIcon, :, ~, hopperInsideSprite
+	f	Ljava/util/Random;	field_149922_a	random	#~, ~, ~, random
+	f	Lnet/minecraft/util/IIcon;	field_149921_b	hopperOutsideIcon	#hopperOutsideIcon, :, ~, hopperOutsideSprite
+	m	(I)I	func_149918_b	getDirectionFromMetadata	#getDirectionFromMetadata, :, ~, getFacing
+		c	Get's the hopper's orientation from the last three bits of metadata. Returns 0-5 for down, unattached, north, south, east, and west.
+		p	0	p_149918_0_	metadata	#~, ~, ~, metadata
+	m	(I)Z	func_149917_c	getActiveStateFromMetadata	#getActiveStateFromMetadata, isEnabled, :, :
+		c	Get's the hopper's active status from the 8-bit of the metadata. Note that the metadata stores whether the block is powered, so this returns true when that bit is 0.
+		p	0	p_149917_0_	meta	#meta, :, data, metadata
+	m	(Lnet/minecraft/world/World;III)V	func_149919_e	updateBlockData	#updateBlockData, :, ~, updateEnabled
+		c	Updates the block's metadata to reflect the current power state (stored in the 4th bit).
+		p	1	p_149919_1_	world	#~, ~, ~, world
+		p	2	p_149919_2_	x	#~, ~, ~, x
+		p	3	p_149919_3_	y	#~, ~, ~, y
+		p	4	p_149919_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;III)Lnet/minecraft/tileentity/TileEntityHopper;	func_149920_e	getHopperBlockEntity	#~, ~, ~, getHopperBlockEntity
+		p	0	p_149920_0_	world	#~, ~, ~, world
+		p	1	p_149920_1_	x	#~, ~, ~, x
+		p	2	p_149920_2_	y	#~, ~, ~, y
+		p	3	p_149920_3_	z	#~, ~, ~, z
+	m	(Ljava/lang/String;)Lnet/minecraft/util/IIcon;	func_149916_e	getHopperIcon	#getHopperIcon, :, ~, getSprite
+		p	0	p_149916_0_	name	#~, ~, ~, name
+	m	()V	<init>	<init>	#~, ~, ~, ~

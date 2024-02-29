@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandException	net/minecraft/command/CommandException	
+	f	[Ljava/lang/Object;	field_74845_a	errorObjects	#errorObjects, :, args, :
+	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1359_1_	message	#message, :, reason, :
+		p	2	p_i1359_2_	objects	#objects, :, args, :
+	m	()[Ljava/lang/Object;	func_74844_a	getErrorOjbects	#getErrorOjbects, getErrorObjects, getArgs, :

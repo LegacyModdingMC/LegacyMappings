@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIMate	net/minecraft/entity/ai/EntityAIMate	
+	f	Lnet/minecraft/world/World;	field_75394_a	theWorld	#theWorld, world, :, :
+	f	I	field_75392_b	spawnBabyDelay	#spawnBabyDelay, :, timer, breedTimer
+		c	Delay preventing a baby from spawning immediately when two mate-able animals find each other.
+	f	D	field_75393_c	moveSpeed	#moveSpeed, :, chance, speedModifier
+		c	The speed the creature moves at during mating behavior.
+	f	Lnet/minecraft/entity/passive/EntityAnimal;	field_75390_d	theAnimal	#theAnimal, animal, :, :
+	f	Lnet/minecraft/entity/passive/EntityAnimal;	field_75391_e	targetMate	#targetMate, :, mate, animalTwo
+	m	(Lnet/minecraft/entity/passive/EntityAnimal;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1619_1_	animal	#animal, :, :, :
+		p	2	p_i1619_2_	speedIn	#speedIn, :, chance, speedModifier
+	m	()Lnet/minecraft/entity/passive/EntityAnimal;	func_75389_f	getNearbyMate	#getNearbyMate, :, findMate, :
+		c	Loops through nearby animals and finds another animal of the same type that can be mated with. Returns the first valid mate found.
+	m	()V	func_75388_i	spawnBaby	#spawnBaby, :, breed, :
+		c	Spawns a baby animal of the same type.

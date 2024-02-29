@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPortal	net/minecraft/block/BlockPortal	
+	f	[[I	field_150001_a	CARDINAL_DIRECTIONS	#~, ~, ~, CARDINAL_DIRECTIONS
+		c	This table links axes to cardinal directions. Given an axis and a direction on\nthat axis, {@code int axis, dir;}, the resulting cardinal direction is given by\n{@code FACINGS_BY_AXIS[axis][dir]}.\n\n<p>\naxes:\n<br>- 0: y-axis\n<br>- 1: x-axis\n<br>- 2: z-axis\n\n<p>\naxis directions:\n<br>- 0: positive (for the x-axis), negative (for the z-axis)\n<br>- 1: negative (for the x-axis), positive (for the z-axis)
+	m	(I)I	func_149999_b	getFacing	#~, ~, ~, getFacing
+		p	0	p_149999_0_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;III)Z	func_150000_e	tryToCreatePortal	#tryToCreatePortal, :, ~, create
+		p	1	p_150000_1_	world	#~, ~, ~, world
+		p	2	p_150000_2_	x	#~, ~, ~, x
+		p	3	p_150000_3_	y	#~, ~, ~, y
+		p	4	p_150000_4_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

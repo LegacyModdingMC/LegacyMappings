@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIWander	net/minecraft/entity/ai/EntityAIWander	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75457_a	entity	#entity, :, mob, entity
+	f	D	field_75455_b	xPosition	#xPosition, x, targetX, :
+	f	D	field_75456_c	yPosition	#yPosition, y, targetY, :
+	f	D	field_75453_d	zPosition	#zPosition, z, targetZ, :
+	f	D	field_75454_e	speed	#speed, :, :, :
+	m	(Lnet/minecraft/entity/EntityCreature;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1648_1_	creatureIn	#creatureIn, :, mob, entity
+		p	2	p_i1648_2_	speedIn	#speedIn, :, speed, :

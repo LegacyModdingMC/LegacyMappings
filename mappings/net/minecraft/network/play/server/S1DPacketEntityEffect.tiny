@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S1DPacketEntityEffect	net/minecraft/network/play/server/S1DPacketEntityEffect	
+	f	I	field_149434_a	entityId	#entityId, :, :, id
+	f	B	field_149432_b	effectId	#effectId, :, :, effect
+	f	B	field_149433_c	amplifier	#amplifier, :, :, :
+	f	S	field_149431_d	duration	#duration, :, :, :
+	m	(ILnet/minecraft/potion/PotionEffect;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45237_1_	entityIdIn	#entityIdIn, :, entityId, :
+		p	2	p_i45237_2_	effect	#effect, :, effectInstance, effect
+	m	()Z	func_149429_c	isMaxDuration	#isMaxDuration, :, isPermanent, :
+	m	()I	func_149426_d	getEntityId	#getEntityId, :, :, getId
+	m	()B	func_149427_e	getEffectId	#getEffectId, :, :, getEffect
+	m	()B	func_149428_f	getAmplifier	#getAmplifier, :, :, :
+	m	()S	func_149425_g	getDuration	#~, ~, getDuration, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

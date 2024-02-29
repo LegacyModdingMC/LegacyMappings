@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerRepair$2	net/minecraft/inventory/ContainerRepair$2	
+	f	Lnet/minecraft/world/World;	field_135071_a	field_135071_a	#~, ~, ~, ~
+	f	I	field_135069_b	field_135069_b	#~, ~, ~, ~
+	f	I	field_135070_c	field_135070_c	#~, ~, ~, ~
+	f	I	field_135067_d	field_135067_d	#~, ~, ~, ~
+	f	Lnet/minecraft/inventory/ContainerRepair;	field_135068_e	repairContainer	#repairContainer, :, ~, ~
+	m	(Lnet/minecraft/inventory/ContainerRepair;Lnet/minecraft/inventory/IInventory;IIILnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1799_1_	p_i1799_1_	#~, ~, ~, ~
+		p	2	p_i1799_2_	p_i1799_2_	#~, ~, ~, ~
+		p	3	p_i1799_3_	p_i1799_3_	#~, ~, ~, ~
+		p	4	p_i1799_4_	p_i1799_4_	#~, ~, ~, ~
+		p	5	p_i1799_5_	p_i1799_5_	#~, ~, ~, ~
+		p	6	p_i1799_6_	p_i1799_6_	#~, ~, ~, ~
+		p	7	p_i1799_7_	p_i1799_7_	#~, ~, ~, ~
+		p	8	p_i1799_8_	p_i1799_8_	#~, ~, ~, ~
+		p	9	p_i1799_9_	p_i1799_9_	#~, ~, ~, ~

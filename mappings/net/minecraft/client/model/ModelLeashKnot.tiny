@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelLeashKnot	net/minecraft/client/model/ModelLeashKnot	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110723_a	knotRenderer	#knotRenderer, :, ~, leash
+	m	(IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1150_1_	textureOffsetU	#~, ~, ~, textureOffsetU
+		p	2	p_i1150_2_	textureOffsetV	#~, ~, ~, textureOffsetV
+		p	3	p_i1150_3_	textureWidth	#~, ~, ~, textureWidth
+		p	4	p_i1150_4_	textureHeight	#~, ~, ~, textureHeight
+	m	()V	<init>	<init>	#~, ~, ~, ~

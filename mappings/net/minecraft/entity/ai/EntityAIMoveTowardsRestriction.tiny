@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIMoveTowardsRestriction	net/minecraft/entity/ai/EntityAIMoveTowardsRestriction	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75436_a	theEntity	#theEntity, creature, mob, entity
+	f	D	field_75434_b	movePosX	#movePosX, :, x, targetX
+	f	D	field_75435_c	movePosY	#movePosY, :, y, targetY
+	f	D	field_75432_d	movePosZ	#movePosZ, :, z, targetZ
+	f	D	field_75433_e	movementSpeed	#movementSpeed, :, speed, :
+	m	(Lnet/minecraft/entity/EntityCreature;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2347_1_	creatureIn	#creatureIn, :, mob, entity
+		p	2	p_i2347_2_	speedIn	#speedIn, :, speed, :

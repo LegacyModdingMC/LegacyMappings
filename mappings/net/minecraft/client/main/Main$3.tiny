@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/main/Main$3	net/minecraft/client/main/Main$3	
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1059_1_	p_i1059_1_	#~, ~, ~, ~

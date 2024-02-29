@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntityChestRenderer	net/minecraft/client/renderer/tileentity/TileEntityChestRenderer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147507_b	textureTrappedDouble	#textureTrappedDouble, TEXTURE_TRAPPED_DOUBLE, TRAPPED_DOUBLE_TEXTURE, TRAPPED_DOUBLE_CHEST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_147508_c	textureChristmasDouble	#textureChristmasDouble, TEXTURE_CHRISTMAS_DOUBLE, CHRISTMAS_DOUBLE_TEXTURE, CHRISTMAS_DOUBLE_CHEST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_147505_d	textureNormalDouble	#textureNormalDouble, TEXTURE_NORMAL_DOUBLE, NORMAL_DOUBLE_TEXTURE, DOUBLE_CHEST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_147506_e	textureTrapped	#textureTrapped, TEXTURE_TRAPPED, TRAPPED_TEXTURE, TRAPPED_CHEST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_147503_f	textureChristmas	#textureChristmas, TEXTURE_CHRISTMAS, CHRISTMAS_TEXTURE, CHRISTMAS_CHEST_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_147504_g	textureNormal	#textureNormal, TEXTURE_NORMAL, NORMAL_TEXTURE, CHEST_LOCATION
+	f	Lnet/minecraft/client/model/ModelChest;	field_147510_h	simpleChest	#simpleChest, :, model, singleChestModel
+	f	Lnet/minecraft/client/model/ModelChest;	field_147511_i	largeChest	#largeChest, :, largeModel, doubleChestModel
+	f	Z	field_147509_j	isChristams	#isChristams, isChristmas, christmas, isChristmas
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

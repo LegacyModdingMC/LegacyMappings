@@ -1,0 +1,132 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiTextField	net/minecraft/client/gui/GuiTextField	
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_146211_a	fontRendererInstance	#fontRendererInstance, fontRenderer, textRenderer, :
+	f	I	field_146209_f	xPosition	#xPosition, x, :, :
+	f	I	field_146210_g	yPosition	#yPosition, y, :, :
+	f	I	field_146218_h	width	#width, :, :, :
+		c	The width of this text field.
+	f	I	field_146219_i	height	#height, :, :, :
+	f	Ljava/lang/String;	field_146216_j	text	#text, :, :, :
+		c	Has the current text being edited on the textbox.
+	f	I	field_146217_k	maxStringLength	#maxStringLength, :, maxLength, :
+	f	I	field_146214_l	cursorCounter	#cursorCounter, :, focusedTicks, :
+	f	Z	field_146215_m	enableBackgroundDrawing	#enableBackgroundDrawing, :, hasBorder, :
+	f	Z	field_146212_n	canLoseFocus	#canLoseFocus, :, focusUnlocked, :
+		c	if true the textbox can lose focus by clicking elsewhere on the screen
+	f	Z	field_146213_o	isFocused	#isFocused, :, focused, :
+		c	If this value is true along with isEnabled, keyTyped will process the keys.
+	f	Z	field_146226_p	isEnabled	#isEnabled, :, editable, :
+		c	If this value is true along with isFocused, keyTyped will process the keys.
+	f	I	field_146225_q	lineScrollOffset	#lineScrollOffset, :, firstCharacterIndex, :
+		c	The current character index that should be used as start of the rendered text.
+	f	I	field_146224_r	cursorPosition	#cursorPosition, :, selectionStart, :
+	f	I	field_146223_s	selectionEnd	#selectionEnd, :, :, :
+		c	other selection position, maybe the same as the cursor
+	f	I	field_146222_t	enabledColor	#enabledColor, :, editableColor, :
+	f	I	field_146221_u	disabledColor	#disabledColor, :, uneditableColor, :
+	f	Z	field_146220_v	visible	#visible, :, :, :
+		c	True if this textbox is visible
+	m	()V	func_146178_a	updateCursorCounter	#updateCursorCounter, :, tick, :
+		c	Increments the cursor counter
+	m	(CI)Z	func_146201_a	textboxKeyTyped	#textboxKeyTyped, :, keyPressed, :
+		c	Call this method from your GuiScreen to process the keys into the textbox
+		p	1	p_146201_1_	typedChar	#typedChar, :, character, chr
+		p	2	p_146201_2_	keyCode	#keyCode, :, code, :
+	m	(I)V	func_146177_a	deleteWords	#deleteWords, :, eraseWords, :
+		c	Deletes the specified number of words starting at the cursor position. Negative numbers will delete words left of the cursor.
+		p	1	p_146177_1_	num	#num, :, wordOffset, :
+	m	(II)I	func_146183_a	getNthWordFromPos	#getNthWordFromPos, :, getWordSkipPosition, :
+		c	gets the position of the nth word. N may be negative, then it looks backwards. params: N, position
+		p	1	p_146183_1_	n	#n, :, wordOffset, :
+		p	2	p_146183_2_	pos	#pos, :, cursorPosition, :
+	m	(III)V	func_146192_a	mouseClicked	#mouseClicked, :, :, :
+		c	Args: x, y, buttonClicked
+		p	1	p_146192_1_	mouseX	#mouseX, :, :, :
+		p	2	p_146192_2_	mouseY	#mouseY, :, :, :
+		p	3	p_146192_3_	mouseButton	#mouseButton, :, button, :
+	m	(IIZ)I	func_146197_a	getNthWordFromPosWS	#getNthWordFromPosWS, :, getWordSkipPosition, :
+		c	Like getNthWordFromPos (which wraps this), but adds option for skipping consecutive spaces
+		p	1	p_146197_1_	n	#n, :, wordOffset, :
+		p	2	p_146197_2_	pos	#pos, :, cursorPosition, :
+		p	3	p_146197_3_	skipWs	#skipWs, :, skipOverSpaces, :
+	m	(Ljava/lang/String;)V	func_146180_a	setText	#setText, :, :, :
+		c	Sets the text of the textbox
+		p	1	p_146180_1_	textIn	#textIn, :, text, :
+	m	(Z)V	func_146185_a	setEnableBackgroundDrawing	#setEnableBackgroundDrawing, :, setHasBorder, :
+		c	enable drawing background and outline
+		p	1	p_146185_1_	enableBackgroundDrawingIn	#enableBackgroundDrawingIn, :, hasBorder, :
+	m	()Ljava/lang/String;	func_146179_b	getText	#getText, :, :, :
+		c	Returns the contents of the textbox
+	m	(I)V	func_146175_b	deleteFromCursor	#deleteFromCursor, :, eraseCharacters, :
+		c	delete the selected text, otherwsie deletes characters from either side of the cursor. params: delete num
+		p	1	p_146175_1_	num	#num, :, characterOffset, :
+	m	(Ljava/lang/String;)V	func_146191_b	writeText	#writeText, :, write, :
+		c	replaces selected text, or inserts text at the position on the cursor
+		p	1	p_146191_1_	textToWrite	#textToWrite, :, text, :
+	m	(Z)V	func_146195_b	setFocused	#setFocused, :, :, :
+		c	Sets focus to this gui element
+		p	1	p_146195_1_	isFocusedIn	#isFocusedIn, :, focused, :
+	m	()Ljava/lang/String;	func_146207_c	getSelectedText	#getSelectedText, :, :, :
+		c	returns the text between the cursor and selectionEnd
+	m	(I)I	func_146187_c	getNthWordFromCursor	#getNthWordFromCursor, :, getWordSkipPosition, :
+		c	see @getNthNextWordFromPos() params: N, position
+		p	1	p_146187_1_	numWords	#numWords, :, wordOffset, :
+	m	(IIII)V	func_146188_c	drawCursorVertical	#drawCursorVertical, drawSelectionBox, renderSelection, :
+		c	draws the vertical line cursor in the textbox
+		p	1	p_146188_1_	startX	#startX, :, x1, :
+		p	2	p_146188_2_	startY	#startY, :, y1, :
+		p	3	p_146188_3_	endX	#endX, :, x2, :
+		p	4	p_146188_4_	endY	#endY, :, y2, :
+	m	(Z)V	func_146184_c	setEnabled	#setEnabled, :, setEditable, :
+		c	Sets whether this text box is enabled. Disabled text boxes cannot be typed in.
+		p	1	p_146184_1_	enabled	#enabled, :, editable, :
+	m	()V	func_146196_d	setCursorPositionZero	#setCursorPositionZero, :, setCursorToStart, :
+		c	sets the cursors position to the beginning
+	m	(I)V	func_146182_d	moveCursorBy	#moveCursorBy, :, moveCursor, :
+		c	Moves the text cursor by a specified number of characters and clears the selection
+		p	1	p_146182_1_	num	#num, :, offset, :
+	m	(Z)V	func_146205_d	setCanLoseFocus	#setCanLoseFocus, :, setFocusUnlocked, :
+		c	if true the textbox can lose focus by clicking elsewhere on the screen
+		p	1	p_146205_1_	canLoseFocusIn	#canLoseFocusIn, :, focusUnlocked, :
+	m	()V	func_146202_e	setCursorPositionEnd	#setCursorPositionEnd, :, setCursorToEnd, :
+		c	sets the cursors position to after the text
+	m	(I)V	func_146190_e	setCursorPosition	#setCursorPosition, :, setCursor, :
+		c	sets the position of the cursor to the provided index
+		p	1	p_146190_1_	pos	#pos, :, cursor, :
+	m	(Z)V	func_146189_e	setVisible	#setVisible, :, :, :
+		c	Sets whether or not this textbox is visible
+		p	1	p_146189_1_	isVisible	#isVisible, :, visible, :
+	m	()V	func_146194_f	drawTextBox	#drawTextBox, :, render, :
+		c	Draws the textbox
+	m	(I)V	func_146203_f	setMaxStringLength	#setMaxStringLength, :, setMaxLength, :
+		c	Sets the maximum length for the text in this text box. If the current text is longer than this length, the current text will be trimmed.
+		p	1	p_146203_1_	length	#length, :, maximumLength, :
+	m	()I	func_146208_g	getMaxStringLength	#getMaxStringLength, :, getMaxLength, :
+		c	returns the maximum number of character that can be contained in this textbox
+	m	(I)V	func_146193_g	setTextColor	#setTextColor, :, setEditableColor, :
+		c	Sets the text colour for this textbox (disabled text will not use this colour)
+		p	1	p_146193_1_	color	#color, :, :, :
+	m	()I	func_146198_h	getCursorPosition	#getCursorPosition, :, getCursor, :
+		c	returns the current position of the cursor
+	m	(I)V	func_146204_h	setDisabledTextColour	#setDisabledTextColour, :, setUneditableColor, :
+		c	Sets the color to use for text in this text box when this text box is disabled.
+		p	1	p_146204_1_	color	#color, :, :, :
+	m	()Z	func_146181_i	getEnableBackgroundDrawing	#getEnableBackgroundDrawing, :, hasBorder, :
+		c	get enable drawing background and outline
+	m	(I)V	func_146199_i	setSelectionPos	#setSelectionPos, :, setSelectionEnd, :
+		c	Sets the position of the selection anchor (i.e. position the selection was started at)
+		p	1	p_146199_1_	position	#position, :, index, :
+	m	()Z	func_146206_l	isFocused	#isFocused, :, :, :
+		c	Getter for the focused field
+	m	()I	func_146186_n	getSelectionEnd	#getSelectionEnd, :, :, :
+		c	the side of the selection that is not the cursor, may be the same as the cursor
+	m	()I	func_146200_o	getWidth	#getWidth, :, getInnerWidth, :
+		c	returns the width of the textbox depending on if background drawing is enabled
+	m	()Z	func_146176_q	getVisible	#getVisible, :, isVisible, :
+		c	returns true if this textbox is visible
+	m	(Lnet/minecraft/client/gui/FontRenderer;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1032_1_	textRenderer	#~, ~, ~, textRenderer
+		p	2	p_i1032_2_	x	#~, ~, ~, x
+		p	3	p_i1032_3_	y	#~, ~, ~, y
+		p	4	p_i1032_4_	width	#~, ~, ~, width
+		p	5	p_i1032_5_	height	#~, ~, ~, height

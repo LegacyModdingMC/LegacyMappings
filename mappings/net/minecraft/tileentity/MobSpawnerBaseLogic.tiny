@@ -1,0 +1,52 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/MobSpawnerBaseLogic	net/minecraft/tileentity/MobSpawnerBaseLogic	
+	f	Ljava/lang/String;	field_98288_a	entityTypeName	#entityTypeName, mobID, entityId, type
+	f	I	field_98286_b	spawnDelay	#spawnDelay, :, :, delay
+		c	The delay to spawn.
+	f	D	field_98287_c	mobRotation	#mobRotation, :, mobAngleNext, rotation
+		c	The rotation of the mob inside the mob spawner
+	f	D	field_98284_d	prevMobRotation	#prevMobRotation, :, mobAngle, lastRotation
+		c	the previous rotation of the mob inside the mob spawner
+	f	Ljava/util/List;	field_98285_e	potentialEntitySpawns	#potentialEntitySpawns, potentialSpawns, spawnPotentials, :
+		c	List of entities to spawn.
+	f	Lnet/minecraft/tileentity/MobSpawnerBaseLogic$WeightedRandomMinecart;	field_98282_f	randomEntity	#randomEntity, spawnData, ~, nextEntry
+	f	I	field_98283_g	minSpawnDelay	#minSpawnDelay, :, :, :
+	f	I	field_98293_h	maxSpawnDelay	#maxSpawnDelay, :, :, :
+	f	I	field_98294_i	spawnCount	#spawnCount, :, :, :
+		c	A counter for spawn tries.
+	f	Lnet/minecraft/entity/Entity;	field_98291_j	cachedEntity	#cachedEntity, :, renderedEntity, displayEntity
+		c	Cached instance of the entity to render inside the spawner.
+	f	I	field_98292_k	maxNearbyEntities	#maxNearbyEntities, :, :, :
+	f	I	field_98289_l	activatingRangeFromPlayer	#activatingRangeFromPlayer, :, requiredPlayerRange, :
+		c	The distance from which a player activates the spawner.
+	f	I	field_98290_m	spawnRange	#spawnRange, :, :, :
+		c	The range coefficient for spawning entities around.
+	m	()Lnet/minecraft/world/World;	func_98271_a	getSpawnerWorld	#getSpawnerWorld, :, getWorld, :
+	m	(I)V	func_98267_a	broadcastEvent	#broadcastEvent, :, sendStatus, broacastEvent
+		p	1	p_98267_1_	id	#id, :, status, event
+	m	(Lnet/minecraft/tileentity/MobSpawnerBaseLogic$WeightedRandomMinecart;)V	func_98277_a	setRandomEntity	#setRandomEntity, :, setSpawnData, setNextEntry
+		p	1	p_98277_1_	entry	#~, ~, data, entry
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_98270_a	readFromNBT	#readFromNBT, :, deserialize, readNbt
+		p	1	p_98270_1_	nbt	#nbt, :, :, :
+	m	(Ljava/lang/String;)V	func_98272_a	setEntityName	#setEntityName, :, setEntityId, setType
+		p	1	p_98272_1_	name	#name, :, entityId, type
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/entity/Entity;	func_98265_a	spawnEntity	#spawnEntity, :, ~, prepareEntityForSpawning
+		p	1	p_98265_1_	entity	#~, ~, ~, entity
+	m	()I	func_98275_b	getSpawnerX	#getSpawnerX, :, getX, :
+	m	(I)Z	func_98268_b	setDelayToMin	#setDelayToMin, :, handleStatus, doEvent
+		c	Sets the delay to minDelay if parameter given is 1, else return false.
+		p	1	p_98268_1_	delay	#delay, :, status, event
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_98280_b	writeToNBT	#writeToNBT, :, serialize, writeNbt
+		p	1	p_98280_1_	nbt	#nbt, :, :, :
+	m	()I	func_98274_c	getSpawnerY	#getSpawnerY, :, getY, :
+	m	()I	func_98266_d	getSpawnerZ	#getSpawnerZ, :, getZ, :
+	m	()Ljava/lang/String;	func_98276_e	getEntityNameToSpawn	#getEntityNameToSpawn, :, getEntityId, getType
+		c	Gets the entity name that should be spawned.
+	m	()Z	func_98279_f	isActivated	#isActivated, :, isPlayerInRange, isNearPlayer
+		c	Returns true if there's a player close enough to this mob spawner to activate it.
+	m	()V	func_98278_g	updateSpawner	#updateSpawner, :, tick, :
+	m	()Lnet/minecraft/entity/Entity;	func_98281_h	getEntityToRender	#getEntityToRender, :, ~, getDisplayEntity
+		c	Returns the entity to render inside the spawner. The instance is only created once and then cached.
+	m	()Lnet/minecraft/tileentity/MobSpawnerBaseLogic$WeightedRandomMinecart;	func_98269_i	getRandomEntity	#getRandomEntity, :, ~, getNextEntry
+	m	()V	func_98273_j	resetTimer	#resetTimer, :, updateSpawns, delay
+	m	()V	<init>	<init>	#~, ~, ~, ~

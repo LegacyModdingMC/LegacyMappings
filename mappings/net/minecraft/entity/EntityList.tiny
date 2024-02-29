@@ -1,0 +1,54 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityList	net/minecraft/entity/EntityList	
+	f	Ljava/util/HashMap;	field_75627_a	entityEggs	#entityEggs, ENTITY_EGGS, ~, SPAWN_EGG_DATA
+		c	This is a HashMap of the Creative Entity Eggs/Spawners.
+	f	Lorg/apache/logging/log4j/Logger;	field_151516_b	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Map;	field_75625_b	stringToClassMapping	#stringToClassMapping, NAME_TO_CLASS, NAME_CLASS_MAP, KEY_TO_TYPE
+		c	Provides a mapping between entity classes and a string
+	f	Ljava/util/Map;	field_75626_c	classToStringMapping	#classToStringMapping, CLASS_TO_NAME, CLASS_NAME_MAP, TYPE_TO_KEY
+		c	Provides a mapping between a string and an entity classes
+	f	Ljava/util/Map;	field_75623_d	IDtoClassMapping	#IDtoClassMapping, ID_TO_CLASS, ID_CLASS_MAP, ID_TO_TYPE
+		c	provides a mapping between an entityID and an Entity Class
+	f	Ljava/util/Map;	field_75624_e	classToIDMapping	#classToIDMapping, CLASS_TO_ID, CLASS_ID_MAP, TYPE_TO_ID
+		c	provides a mapping between an Entity Class and an entity ID
+	f	Ljava/util/Map;	field_75622_f	stringToIDMapping	#stringToIDMapping, :, ~, KEY_TO_ID
+		c	Maps entity names to their numeric identifiers
+	m	()V	func_151514_a	init	#init, :, load, init
+	m	(I)Ljava/lang/Class;	func_90035_a	getClassFromID	#getClassFromID, :, getEntityById, getType
+		c	Return the class assigned to this entity ID.
+		p	0	p_90035_0_	entityID	#entityID, :, id, :
+	m	(ILnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;	func_75616_a	createEntityByID	#createEntityByID, :, createInstanceFromRawId, create
+		c	Create a new instance of an entity in the world by using an entity ID.
+		p	0	p_75616_0_	entityID	#entityID, :, id, :
+		p	1	p_75616_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;	func_75615_a	createEntityFromNBT	#createEntityFromNBT, :, createInstanceFromNbt, create
+		c	create a new instance of an entity from NBT store
+		p	0	p_75615_0_	nbt	#nbt, :, :, :
+		p	1	p_75615_1_	worldIn	#worldIn, :, world, :
+	m	(Ljava/lang/Class;Ljava/lang/String;I)V	func_75618_a	addMapping	#addMapping, :, registerEntity, register
+		c	adds a mapping between Entity classes and both a string representation and an ID
+		p	0	p_75618_0_	entityClass	#entityClass, :, clazz, type
+		p	1	p_75618_1_	entityName	#entityName, :, name, key
+		p	2	p_75618_2_	id	#id, :, :, :
+	m	(Ljava/lang/Class;Ljava/lang/String;III)V	func_75614_a	addMapping	#addMapping, :, registerEntity, registerWithSpawnEgg
+		c	Adds a entity mapping with egg info.
+		p	0	p_75614_0_	entityClass	#entityClass, :, clazz, type
+		p	1	p_75614_1_	entityName	#entityName, :, name, key
+		p	2	p_75614_2_	entityID	#entityID, :, id, :
+		p	3	p_75614_3_	baseColor	#baseColor, :, foregroundColor, baseColor
+		p	4	p_75614_4_	spotColor	#spotColor, :, backgroundColor, spotsColor
+	m	(Ljava/lang/String;Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;	func_75620_a	createEntityByName	#createEntityByName, :, createInstanceFromName, createSilently
+		c	Create a new instance of an entity in the world by using the entity name.
+		p	0	p_75620_0_	entityName	#entityName, :, name, key
+		p	1	p_75620_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/entity/Entity;)I	func_75619_a	getEntityID	#getEntityID, :, getIdByEntity, getId
+		c	gets the entityID of a specific entity
+		p	0	p_75619_0_	entityIn	#entityIn, :, entity, :
+	m	()Ljava/util/Set;	func_151515_b	getKeys	#~, ~, ~, getKeys
+	m	(I)Ljava/lang/String;	func_75617_a	getStringFromID	#getStringFromID, :, getEntityName, getKey
+		c	Finds the class using IDtoClassMapping and classToStringMapping
+		p	0	p_75617_0_	entityID	#entityID, :, id, :
+	m	(Lnet/minecraft/entity/Entity;)Ljava/lang/String;	func_75621_b	getEntityString	#getEntityString, :, getEntityName, getKey
+		c	Gets the string representation of a specific entity.
+		p	0	p_75621_0_	entityIn	#entityIn, :, entity, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

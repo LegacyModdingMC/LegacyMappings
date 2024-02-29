@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/RandomPositionGenerator	net/minecraft/entity/ai/RandomPositionGenerator	
+	f	Lnet/minecraft/util/Vec3;	field_75465_a	staticVector	#staticVector, :, ~, distanceFromStart
+		c	used to store a driection when the user passes a point to move towards or away from. WARNING: NEVER THREAD SAFE.  MULTIPLE findTowards and findAway calls, will share this var
+	m	(Lnet/minecraft/entity/EntityCreature;II)Lnet/minecraft/util/Vec3;	func_75463_a	findRandomTarget	#findRandomTarget, :, ~, getTarget
+		c	finds a random target within par1(x,z) and par2 (y) blocks
+		p	0	p_75463_0_	entitycreatureIn	#entitycreatureIn, :, mob, entity
+		p	1	p_75463_1_	xz	#xz, :, ~, horizontalRange
+		p	2	p_75463_2_	y	#y, :, ~, verticalRange
+	m	(Lnet/minecraft/entity/EntityCreature;IILnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;	func_75464_a	findRandomTargetBlockTowards	#findRandomTargetBlockTowards, :, ~, getTargetAwayFromPosition
+		c	finds a random target within par1(x,z) and par2 (y) blocks in the direction of the point par3
+		p	0	p_75464_0_	entitycreatureIn	#entitycreatureIn, :, mob, entity
+		p	1	p_75464_1_	xz	#xz, :, ~, horizontalRange
+		p	2	p_75464_2_	y	#y, :, ~, verticalRange
+		p	3	p_75464_3_	targetVec3	#targetVec3, :, ~, pos
+	m	(Lnet/minecraft/entity/EntityCreature;IILnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;	func_75461_b	findRandomTargetBlockAwayFrom	#findRandomTargetBlockAwayFrom, :, ~, getTargetAwayFromEntity
+		c	finds a random target within par1(x,z) and par2 (y) blocks in the reverse direction of the point par3
+		p	0	p_75461_0_	entitycreatureIn	#entitycreatureIn, :, mob, pathAwareEntity
+		p	1	p_75461_1_	xz	#xz, :, ~, horizontalRange
+		p	2	p_75461_2_	y	#y, :, ~, verticalRange
+		p	3	p_75461_3_	targetVec3	#targetVec3, :, ~, pos
+	m	(Lnet/minecraft/entity/EntityCreature;IILnet/minecraft/util/Vec3;)Lnet/minecraft/util/Vec3;	func_75462_c	findRandomTargetBlock	#findRandomTargetBlock, :, ~, getTarget
+		c	searches 10 blocks at random in a within par1(x,z) and par2 (y) distance, ignores those not in the direction of par3Vec3, then points to the tile for which creature.getBlockPathWeight returns the highest number
+		p	0	p_75462_0_	entitycreatureIn	#entitycreatureIn, :, mob, pathAwareEntity
+		p	1	p_75462_1_	xz	#xz, :, ~, horizontalRange
+		p	2	p_75462_2_	y	#y, :, ~, verticalRange
+		p	3	p_75462_3_	targetVec3	#targetVec3, :, ~, distanceFromStart
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

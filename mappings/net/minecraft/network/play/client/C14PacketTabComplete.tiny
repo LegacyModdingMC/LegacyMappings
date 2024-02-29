@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C14PacketTabComplete	net/minecraft/network/play/client/C14PacketTabComplete	
+	f	Ljava/lang/String;	field_149420_a	message	#message, :, partialCommand, command
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45239_1_	msg	#msg, :, text, command
+	m	()Ljava/lang/String;	func_149419_c	getMessage	#getMessage, :, getPartialCommand, getCommand
+	m	()V	<init>	<init>	#~, ~, ~, ~

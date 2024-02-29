@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockSand	net/minecraft/block/BlockSand	
+	f	Lnet/minecraft/util/IIcon;	field_149839_N	redSandIcon	#redSandIcon, :, ~, redSandSprite
+	f	[Ljava/lang/String;	field_149838_a	VARIANTS	#~, ~, ~, VARIANTS
+	f	Lnet/minecraft/util/IIcon;	field_149837_b	sandIcon	#sandIcon, :, ~, sandSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

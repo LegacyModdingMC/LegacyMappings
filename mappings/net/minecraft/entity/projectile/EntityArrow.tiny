@@ -1,0 +1,47 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/projectile/EntityArrow	net/minecraft/entity/projectile/EntityArrow	
+	f	I	field_70251_a	canBePickedUp	#canBePickedUp, pickupStatus, pickup, :
+		c	1 if the player can pick up the arrow
+	f	I	field_70252_j	ticksInGround	#ticksInGround, :, life, lifeTicks
+	f	I	field_70257_an	ticksInAir	#ticksInAir, :, ~, ticksInAir
+	f	D	field_70255_ao	damage	#damage, :, :, :
+	f	I	field_70256_ap	knockbackStrength	#knockbackStrength, :, punch, punchLevel
+		c	The amount of knockback an arrow applies when it hits a mob.
+	f	I	field_70249_b	arrowShake	#arrowShake, :, shake, :
+		c	Seems to be some sort of timer for animating an arrow.
+	f	Lnet/minecraft/entity/Entity;	field_70250_c	shootingEntity	#shootingEntity, :, owner, shooter
+		c	The owner of this arrow.
+	f	I	field_145791_d	xTile	#xTile, :, blockX, :
+	f	I	field_145792_e	yTile	#yTile, :, blockY, :
+	f	I	field_145789_f	zTile	#zTile, :, blockZ, :
+	f	Lnet/minecraft/block/Block;	field_145790_g	inTile	#inTile, :, block, :
+	f	I	field_70253_h	inData	#inData, :, blockData, :
+	f	Z	field_70254_i	inGround	#inGround, :, :, :
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1754_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1754_2_	x	#x, :, :, :
+		p	4	p_i1754_4_	y	#y, :, :, :
+		p	6	p_i1754_6_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1756_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1756_2_	shooter	#shooter, :, ~, shooter
+		p	3	p_i1756_3_	velocity	#velocity, :, ~, speed
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1755_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1755_2_	shooter	#shooter, :, ~, shooter
+		p	3	p_i1755_3_	target	#target, :, ~, target
+		p	4	p_i1755_4_	velocity	#velocity, :, ~, speed
+		p	5	p_i1755_5_	innacuracy	#innacuracy, :, ~, divergence
+	m	(I)V	func_70240_a	setKnockbackStrength	#setKnockbackStrength, :, setPunch, setPunchLevel
+		c	Sets the amount of knockback the arrow applies when it hits a mob.
+		p	1	p_70240_1_	knockbackStrengthIn	#knockbackStrengthIn, :, punch, level
+	m	(Z)V	func_70243_d	setIsCritical	#setIsCritical, :, setCritical, :
+		c	Whether the arrow has a stream of critical hit particles flying behind it.
+		p	1	p_70243_1_	critical	#critical, :, :, :
+	m	(D)V	func_70239_b	setDamage	#setDamage, :, :, :
+		p	1	p_70239_1_	damageIn	#damageIn, :, damage, :
+	m	()D	func_70242_d	getDamage	#getDamage, :, :, :
+	m	()Z	func_70241_g	getIsCritical	#getIsCritical, :, isCritical, :
+		c	Whether the arrow has a stream of critical hit particles flying behind it.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1753_1_	worldIn	#worldIn, :, ~, ~

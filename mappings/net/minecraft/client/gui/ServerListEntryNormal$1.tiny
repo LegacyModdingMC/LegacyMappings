@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/ServerListEntryNormal$1	net/minecraft/client/gui/ServerListEntryNormal$1	
+	f	Lnet/minecraft/client/gui/ServerListEntryNormal;	field_148521_a	server	#~, ~, ~, server
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/ServerListEntryNormal;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45047_1_	p_i45047_1_	#~, ~, ~, ~

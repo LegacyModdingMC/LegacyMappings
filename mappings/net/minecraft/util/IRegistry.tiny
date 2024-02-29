@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IRegistry	net/minecraft/util/IRegistry	
+	m	(Ljava/lang/Object;)Ljava/lang/Object;	func_82594_a	getObject	#getObject, :, get, :
+		p	1	p_82594_1_	name	#name, :, key, :
+	m	(Ljava/lang/Object;Ljava/lang/Object;)V	func_82595_a	putObject	#putObject, :, put, :
+		c	Register an object on this registry.
+		p	1	p_82595_1_	key	#key, :, :, :
+		p	2	p_82595_2_	value	#value, :, :, :

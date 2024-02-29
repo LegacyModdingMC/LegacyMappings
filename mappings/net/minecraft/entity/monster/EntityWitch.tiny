@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityWitch	net/minecraft/entity/monster/EntityWitch	
+	f	Ljava/util/UUID;	field_110184_bp	MODIFIER_UUID	#MODIFIER_UUID, :, DRINKING_SPEED_PENALTY_MODIFIER_ID, DRINKING_SPEED_PENALTY_UUID
+	f	Lnet/minecraft/entity/ai/attributes/AttributeModifier;	field_110185_bq	MODIFIER	#MODIFIER, :, ~, DRINKING_SPEED_PENALTY
+	f	[Lnet/minecraft/item/Item;	field_82199_d	witchDrops	#witchDrops, :, ~, LOOT
+		c	List of items a witch should drop on death.
+	f	I	field_82200_e	witchAttackTimer	#witchAttackTimer, potionUseTimer, drinkTimeLeft, :
+		c	Timer used as interval for a witch's attack, decremented every tick if aggressive and when reaches zero the witch will throw a potion at the target entity.
+	m	(Z)V	func_82197_f	setAggressive	#setAggressive, setDrinkingPotion, ~, setAgressive
+		c	Set whether this witch is aggressive at an entity.
+		p	1	p_82197_1_	aggressive	#aggressive, drinkingPotion, ~, agressive
+	m	()Z	func_82198_m	getAggressive	#getAggressive, :, ~, isAgressive
+		c	Return whether this witch is aggressive at an entity.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1744_1_	worldIn	#worldIn, :, ~, world
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetHandlerPlayServer$1	net/minecraft/network/NetHandlerPlayServer$1	
+	f	Lnet/minecraft/util/ChatComponentText;	field_151289_a	reason	#~, ~, ~, reason
+	f	Lnet/minecraft/network/NetHandlerPlayServer;	field_151288_b	networkHandler	#~, ~, ~, networkHandler
+	m	(Lio/netty/util/concurrent/Future;)V	operationComplete	operationComplete	#~, ~, ~, ~
+		p	1	p_operationComplete_1_	future	#~, ~, ~, future
+	m	(Lnet/minecraft/network/NetHandlerPlayServer;Lnet/minecraft/util/ChatComponentText;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45293_1_	p_i45293_1_	#~, ~, ~, ~
+		p	2	p_i45293_2_	p_i45293_2_	#~, ~, ~, ~

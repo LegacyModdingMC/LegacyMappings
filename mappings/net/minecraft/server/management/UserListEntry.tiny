@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserListEntry	net/minecraft/server/management/UserListEntry	
+	f	Ljava/lang/Object;	field_152642_a	value	#value, :, object, user
+	m	(Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1146_1_	valueIn	#valueIn, :, object, user
+	m	(Ljava/lang/Object;Lcom/google/gson/JsonObject;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1147_1_	valueIn	#valueIn, :, object, user
+		p	2	p_i1147_2_	json	#json, :, jsonObject, json
+	m	(Lcom/google/gson/JsonObject;)V	func_152641_a	onSerialization	#onSerialization, :, serialize, :
+		p	1	p_152641_1_	data	#data, :, jsonObject, json
+	m	()Z	func_73682_e	hasBanExpired	#hasBanExpired, :, isInvalid, hasExpired
+	m	()Ljava/lang/Object;	func_152640_f	getValue	#getValue, :, getKey, getUser

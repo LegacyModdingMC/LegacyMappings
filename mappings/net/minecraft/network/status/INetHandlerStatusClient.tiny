@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/status/INetHandlerStatusClient	net/minecraft/network/status/INetHandlerStatusClient	
+	m	(Lnet/minecraft/network/status/server/S01PacketPong;)V	func_147398_a	handlePong	#handlePong, :, onPong, handlePing
+		p	1	p_147398_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/status/server/S00PacketServerInfo;)V	func_147397_a	handleServerInfo	#handleServerInfo, :, onResponse, handleServerStatus
+		p	1	p_147397_1_	packetIn	#packetIn, :, packet, :

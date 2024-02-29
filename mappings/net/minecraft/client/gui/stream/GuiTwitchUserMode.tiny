@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/stream/GuiTwitchUserMode	net/minecraft/client/gui/stream/GuiTwitchUserMode	
+	f	Lnet/minecraft/util/EnumChatFormatting;	field_152331_a	DARK_GREEN	#~, ~, DARK_GREEN, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	field_152335_f	RED	#~, ~, RED, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	field_152336_g	DARK_PURPLE	#~, ~, DARK_PURPLE, :
+	f	Ltv/twitch/chat/ChatUserInfo;	field_152337_h	userInfo	#~, ~, chatUserInfo, userInfo
+	f	Lnet/minecraft/util/IChatComponent;	field_152338_i	userDisplayName	#~, ~, chatUserName, userDisplayName
+	f	Ljava/util/List;	field_152332_r	displayTexts	#~, ~, displayTexts, ~
+	f	Lnet/minecraft/client/stream/IStream;	field_152333_s	stream	#stream, :, twitchStreamProvider, stream
+	f	I	field_152334_t	textX	#~, ~, textX, ~
+	m	(Lnet/minecraft/client/stream/IStream;Ltv/twitch/chat/ChatUserInfo;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1064_1_	streamIn	#streamIn, :, twitchStreamProvider, stream
+		p	2	p_i1064_2_	userInfo	#~, ~, chatUserInfo, userInfo
+	m	(Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/client/stream/IStream;)Ljava/util/List;	func_152328_a	getDisplayTexts	#~, ~, getDisplayTexts, ~
+		p	0	p_152328_0_	modes	#~, ~, modes, ~
+		p	1	p_152328_1_	subscriptions	#~, ~, subscriptions, ~
+		p	2	p_152328_2_	provider	#~, ~, provider, ~
+	m	(Ltv/twitch/chat/ChatUserMode;Ljava/lang/String;Z)Lnet/minecraft/util/IChatComponent;	func_152329_a	getUserModeText	#~, ~, getUserModeText, ~
+		p	0	p_152329_0_	mode	#~, ~, mode, ~
+		p	1	p_152329_1_	channel	#~, ~, channel, ~
+		p	2	p_152329_2_	nameSet	#~, ~, nameSet, ~
+	m	(Ltv/twitch/chat/ChatUserSubscription;Ljava/lang/String;Z)Lnet/minecraft/util/IChatComponent;	func_152330_a	getSubscriberText	#~, ~, getSubscriberText, ~
+		p	0	p_152330_0_	subscription	#~, ~, subscription, ~
+		p	1	p_152330_1_	channel	#~, ~, channel, ~
+		p	2	p_152330_2_	nameSet	#~, ~, nameSet, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,52 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenHugeTrees	net/minecraft/world/gen/feature/WorldGenHugeTrees	
+	f	I	field_76522_a	baseHeight	#baseHeight, :, :, :
+		c	The base height of the tree
+	f	I	field_76520_b	woodMetadata	#woodMetadata, :, ~, logVariant
+		c	Sets the metadata for the wood blocks used
+	f	I	field_76521_c	leavesMetadata	#leavesMetadata, :, ~, leavesVariant
+		c	Sets the metadata for the leaves used in huge trees
+	f	I	field_150538_d	extraRandomHeight	#extraRandomHeight, :, extraHeight, bonusHeight
+	m	(Lnet/minecraft/world/World;IIIILjava/util/Random;)V	func_150535_a	placeLeavesRingStrict	#~, ~, ~, placeLeavesRingStrict
+		p	1	p_150535_1_	world	#~, ~, ~, world
+		p	2	p_150535_2_	x	#~, ~, ~, x
+		p	3	p_150535_3_	y	#~, ~, ~, y
+		p	4	p_150535_4_	z	#~, ~, ~, z
+		p	5	p_150535_5_	radius	#~, ~, ~, radius
+		p	6	p_150535_6_	random	#~, ~, ~, random
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;IIII)Z	func_150537_a	canGrow	#~, ~, ~, canGrow
+		p	1	p_150537_1_	world	#~, ~, ~, world
+		p	2	p_150537_2_	random	#~, ~, ~, random
+		p	3	p_150537_3_	x	#~, ~, ~, x
+		p	4	p_150537_4_	y	#~, ~, ~, y
+		p	5	p_150537_5_	z	#~, ~, ~, z
+		p	6	p_150537_6_	height	#~, ~, ~, height
+	m	(Ljava/util/Random;)I	func_150533_a	getHeight	#getHeight, :, calculateMaxHeight, getRandomHeight
+		c	calculates the height based on this trees base height and its extra random height
+		p	1	p_150533_1_	rand	#rand, :, random, :
+	m	(Lnet/minecraft/world/World;IIIILjava/util/Random;)V	func_150534_b	placeLeavesRing	#~, ~, ~, placeLeavesRing
+		p	1	p_150534_1_	world	#~, ~, ~, world
+		p	2	p_150534_2_	x	#~, ~, ~, x
+		p	3	p_150534_3_	y	#~, ~, ~, y
+		p	4	p_150534_4_	z	#~, ~, ~, z
+		p	5	p_150534_5_	radius	#~, ~, ~, radius
+		p	6	p_150534_6_	random	#~, ~, ~, random
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;IIII)Z	func_150536_b	canGrowAt	#~, ~, ~, canGrowAt
+		p	1	p_150536_1_	world	#~, ~, ~, world
+		p	2	p_150536_2_	random	#~, ~, ~, random
+		p	3	p_150536_3_	x	#~, ~, ~, x
+		p	4	p_150536_4_	y	#~, ~, ~, y
+		p	5	p_150536_5_	z	#~, ~, ~, z
+		p	6	p_150536_6_	height	#~, ~, ~, height
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;III)Z	func_150532_c	checkAndPlaceDirtUnderneath	#~, ~, ~, checkAndPlaceDirtUnderneath
+		p	1	p_150532_1_	world	#~, ~, ~, world
+		p	2	p_150532_2_	random	#~, ~, ~, random
+		p	3	p_150532_3_	x	#~, ~, ~, x
+		p	4	p_150532_4_	y	#~, ~, ~, y
+		p	5	p_150532_5_	z	#~, ~, ~, z
+	m	(ZIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45458_1_	notifyNeighbors	#~, ~, ~, notifyNeighbors
+		p	2	p_i45458_2_	baseHeight	#~, ~, ~, baseHeight
+		p	3	p_i45458_3_	bonusHeight	#~, ~, ~, bonusHeight
+		p	4	p_i45458_4_	logVariant	#~, ~, ~, logVariant
+		p	5	p_i45458_5_	leavesVariant	#~, ~, ~, leavesVariant

@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/Entity$EnumEntitySize	net/minecraft/entity/Entity$EnumEntitySize	
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	SIZE_1	SIZE_1	#~, ~, SIZE_1, :
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	SIZE_2	SIZE_2	#~, ~, SIZE_2, :
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	SIZE_3	SIZE_3	#~, ~, SIZE_3, :
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	SIZE_4	SIZE_4	#~, ~, SIZE_4, :
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	SIZE_5	SIZE_5	#~, ~, SIZE_5, :
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	SIZE_6	SIZE_6	#~, ~, SIZE_6, :
+	f	[Lnet/minecraft/entity/Entity$EnumEntitySize;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(D)I	func_75630_a	multiplyBy32AndRound	#multiplyBy32AndRound, :, ~, roundCoordinate
+		p	1	p_75630_1_	coordinate	#~, ~, ~, coordinate
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/Entity$EnumEntitySize;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/entity/Entity$EnumEntitySize;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1581_1_	p_i1581_1_	#~, ~, ~, ~
+		p	2	p_i1581_2_	p_i1581_2_	#~, ~, ~, ~

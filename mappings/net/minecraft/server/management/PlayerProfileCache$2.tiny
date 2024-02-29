@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerProfileCache$2	net/minecraft/server/management/PlayerProfileCache$2	
+	m	()[Ljava/lang/reflect/Type;	getActualTypeArguments	getActualTypeArguments	#~, ~, ~, ~
+	m	()Ljava/lang/reflect/Type;	getOwnerType	getOwnerType	#~, ~, ~, ~
+	m	()Ljava/lang/reflect/Type;	getRawType	getRawType	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

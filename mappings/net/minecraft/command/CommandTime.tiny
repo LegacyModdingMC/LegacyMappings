@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandTime	net/minecraft/command/CommandTime	
+	m	(Lnet/minecraft/command/ICommandSender;I)V	func_71552_a	setTime	#setTime, :, ~, setTimeOfDay
+		c	Set the time in the server object.
+		p	1	p_71552_1_	sender	#sender, :, ~, source
+		p	2	p_71552_2_	time	#time, :, ~, time
+	m	(Lnet/minecraft/command/ICommandSender;I)V	func_71553_b	addTime	#addTime, :, ~, addToTimeOfDay
+		c	Adds (or removes) time in the server object.
+		p	1	p_71553_1_	sender	#sender, :, ~, source
+		p	2	p_71553_2_	time	#time, :, ~, time
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Tuple	net/minecraft/util/Tuple	
+	f	Ljava/lang/Object;	field_76343_a	first	#first, :, left, :
+		c	First Object in the Tuple
+	f	Ljava/lang/Object;	field_76342_b	second	#second, :, right, :
+		c	Second Object in the Tuple
+	m	(Ljava/lang/Object;Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1555_1_	aIn	#aIn, :, left, :
+		p	2	p_i1555_2_	bIn	#bIn, :, right, :
+	m	()Ljava/lang/Object;	func_76341_a	getFirst	#getFirst, :, getLeft, :
+		c	Get the first Object in the Tuple
+	m	()Ljava/lang/Object;	func_76340_b	getSecond	#getSecond, :, getRight, :
+		c	Get the second Object in the Tuple

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderMagmaCube	net/minecraft/client/renderer/entity/RenderMagmaCube	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110873_a	magmaCubeTextures	#magmaCubeTextures, MAGMA_CUBE_TEXTURES, MAGMA_CUBE_TEX, MAGMA_CUBE_LOCATION
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

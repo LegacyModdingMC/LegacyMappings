@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiChest	net/minecraft/client/gui/inventory/GuiChest	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147017_u	CHEST_GUI_TEXTURE	#CHEST_GUI_TEXTURE, :, TEXTURE, MENU_LOCATION
+		c	The ResourceLocation containing the chest GUI texture.
+	f	Lnet/minecraft/inventory/IInventory;	field_147016_v	upperChestInventory	#upperChestInventory, :, playerInventory, bottom
+	f	Lnet/minecraft/inventory/IInventory;	field_147015_w	lowerChestInventory	#lowerChestInventory, :, inventory, top
+		c	The chest's inventory. Number of slots will vary based off of the type of chest.
+	f	I	field_147018_x	inventoryRows	#inventoryRows, :, rows, :
+		c	window height is calculated with these values; the more rows, the heigher
+	m	(Lnet/minecraft/inventory/IInventory;Lnet/minecraft/inventory/IInventory;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1083_1_	parentScreenIn	#parentScreenIn, :, playerInventory, bottom
+		p	2	p_i1083_2_	messageLine1In	#messageLine1In, :, inventory, top
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

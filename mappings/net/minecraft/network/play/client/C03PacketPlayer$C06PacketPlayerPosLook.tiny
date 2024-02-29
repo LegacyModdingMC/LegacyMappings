@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C03PacketPlayer$C06PacketPlayerPosLook	net/minecraft/network/play/client/C03PacketPlayer$C06PacketPlayerPosLook	
+	m	(DDDDFFZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45254_1_	x	#~, ~, x, :
+		p	3	p_i45254_3_	minY	#~, ~, y, minY
+		p	7	p_i45254_7_	z	#~, ~, z, :
+		p	9	p_i45254_9_	yaw	#~, ~, yaw, :
+		p	10	p_i45254_10_	pitch	#~, ~, pitch, :
+		p	11	p_i45254_11_	onGround	#~, ~, onGround, :
+		p	5	p_i45254_5_	y	#~, ~, ~, y
+	m	()V	<init>	<init>	#~, ~, ~, ~

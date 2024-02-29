@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSquid	net/minecraft/client/model/ModelSquid	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78202_a	squidBody	#squidBody, :, ~, body
+		c	The squid's body
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78201_b	squidTentacles	#squidTentacles, :, ~, legs
+		c	The squid's tentacles
+	m	()V	<init>	<init>	#~, ~, ~, ~

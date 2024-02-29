@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityMob	net/minecraft/entity/monster/EntityMob	
+	m	()Z	func_70814_o	isValidLightLevel	#isValidLightLevel, :, ~, canSpawnAtLightLevel
+		c	Checks to make sure the light is not too bright where the mob is spawning
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1738_1_	worldIn	#worldIn, :, ~, ~

@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderLiving	net/minecraft/client/renderer/entity/RenderLiving	
+	m	(DDD)D	func_110828_a	interpolateValue	#interpolateValue, :, ~, lerp
+		c	Gets the value between start and end according to pct
+		p	1	p_110828_1_	start	#start, :, ~, from
+		p	3	p_110828_3_	end	#end, :, ~, to
+		p	5	p_110828_5_	pct	#pct, :, ~, amount
+	m	(Lnet/minecraft/entity/EntityLiving;DDDFF)V	func_110827_b	renderLeash	#renderLeash, :, ~, renderRiders
+		p	1	p_110827_1_	entityLivingIn	#entityLivingIn, :, ~, entity
+		p	2	p_110827_2_	x	#x, :, ~, dx
+		p	4	p_110827_4_	y	#y, :, ~, dy
+		p	6	p_110827_6_	z	#z, :, ~, dz
+		p	8	p_110827_8_	entityYaw	#entityYaw, :, ~, yaw
+		p	9	p_110827_9_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1262_1_	p_i1262_1_	#~, ~, ~, ~
+		p	2	p_i1262_2_	p_i1262_2_	#~, ~, ~, ~

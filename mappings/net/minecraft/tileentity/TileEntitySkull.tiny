@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntitySkull	net/minecraft/tileentity/TileEntitySkull	
+	f	I	field_145908_a	skullType	#skullType, :, :, :
+	f	I	field_145910_i	skullRotation	#skullRotation, :, rot, rotation
+	f	Lcom/mojang/authlib/GameProfile;	field_152110_j	playerProfile	#playerProfile, :, owner, extraType
+	m	()Lcom/mojang/authlib/GameProfile;	func_152108_a	getPlayerProfile	#getPlayerProfile, :, getOwner, getExtraType
+	m	(I)V	func_152107_a	setType	#setType, :, setSkullType, :
+		p	1	p_152107_1_	type	#type, :, :, ~
+	m	(Lcom/mojang/authlib/GameProfile;)V	func_152106_a	setPlayerProfile	#setPlayerProfile, :, setOwnerAndType, ~
+		p	1	p_152106_1_	playerProfile	#playerProfile, :, owner, ~
+	m	()I	func_145904_a	getSkullType	#getSkullType, :, :, getType
+	m	(I)V	func_145903_a	setSkullRotation	#setSkullRotation, :, setRotation, :
+		p	1	p_145903_1_	rotation	#rotation, :, rot, rotation
+	m	()I	func_145906_b	getSkullRotation	#getSkullRotation, :, getRotation, :
+	m	()V	func_152109_d	updatePlayerProfile	#updatePlayerProfile, :, loadOwnerProperties, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

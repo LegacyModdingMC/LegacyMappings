@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$1	net/minecraft/client/Minecraft$1	
+	f	Lnet/minecraft/client/Minecraft;	field_74532_a	mc	#mc, :, ~, ~
+		c	A reference to the Minecraft object.
+	m	(Lnet/minecraft/client/Minecraft;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1002_1_	client	#~, ~, client, ~
+		p	2	p_i1002_2_	name	#~, ~, name, ~
+	m	()V	run	run	#~, ~, ~, ~

@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/AnimationMetadataSection	net/minecraft/client/resources/data/AnimationMetadataSection	
+	f	Ljava/util/List;	field_110478_a	animationFrames	#animationFrames, :, metadataList, frames
+	f	I	field_110476_b	frameWidth	#frameWidth, :, width, :
+	f	I	field_110477_c	frameHeight	#frameHeight, :, height, :
+	f	I	field_110475_d	frameTime	#frameTime, :, time, :
+	m	()I	func_110471_a	getFrameHeight	#getFrameHeight, :, getHeight, :
+	m	(I)I	func_110472_a	getFrameTimeSingle	#getFrameTimeSingle, :, getTime, :
+		p	1	p_110472_1_	frame	#frame, :, i, :
+	m	()I	func_110474_b	getFrameWidth	#getFrameWidth, :, getWidth, :
+	m	(I)Z	func_110470_b	frameHasTime	#frameHasTime, :, ~, usesNonDefaultFrameTime
+		p	1	p_110470_1_	frame	#frame, :, i, :
+	m	()I	func_110473_c	getFrameCount	#getFrameCount, :, getMetadataListSize, getFrameCount
+	m	(I)I	func_110468_c	getFrameIndex	#getFrameIndex, :, getIndex, :
+		p	1	p_110468_1_	frame	#frame, :, i, :
+	m	()I	func_110469_d	getFrameTime	#getFrameTime, :, getTime, :
+	m	(I)Lnet/minecraft/client/resources/data/AnimationFrame;	func_130072_d	getAnimationFrame	#getAnimationFrame, :, get, :
+		p	1	p_130072_1_	frame	#frame, :, i, :
+	m	()Ljava/util/Set;	func_130073_e	getFrameIndexSet	#getFrameIndexSet, :, getIndices, :
+	m	(Ljava/util/List;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1309_1_	frames	#~, ~, ~, frames
+		p	2	p_i1309_2_	width	#~, ~, ~, width
+		p	3	p_i1309_3_	height	#~, ~, ~, height
+		p	4	p_i1309_4_	time	#~, ~, ~, time

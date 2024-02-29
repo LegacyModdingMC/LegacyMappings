@@ -1,0 +1,43 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiContainerCreative	net/minecraft/client/gui/inventory/GuiContainerCreative	
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_147062_A	searchField	#searchField, :, :, :
+	f	Ljava/util/List;	field_147063_B	originalSlots	#originalSlots, :, slots, :
+	f	Lnet/minecraft/inventory/Slot;	field_147064_C	destroyItemSlot	#destroyItemSlot, :, deleteItemSlot, slot
+	f	Z	field_147057_D	clearSearch	#clearSearch, :, scrolling, :
+	f	Lnet/minecraft/client/gui/inventory/CreativeCrafting;	field_147059_E	listener	#listener, :, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_147061_u	creativeInventoryTabs	#creativeInventoryTabs, CREATIVE_INVENTORY_TABS, ITEM_GROUPS, MENU_LOCATION
+		c	The location of the creative inventory tabs texture
+	f	Lnet/minecraft/inventory/InventoryBasic;	field_147060_v	basicInventory	#basicInventory, :, inventory, :
+	f	I	field_147058_w	selectedTabIndex	#selectedTabIndex, :, selectedTab, :
+		c	Currently selected creative inventory tab index.
+	f	F	field_147067_x	currentScroll	#currentScroll, :, scrollPosition, :
+		c	Amount scrolled in Creative mode inventory (0 = top, 1 = bottom)
+	f	Z	field_147066_y	isScrolling	#isScrolling, :, hasScrollbar, hasScrollBar
+		c	True if the scrollbar is being dragged
+	f	Z	field_147065_z	wasClicking	#wasClicking, :, clicking, isMouseButtonDown
+		c	True if the left mouse button was held down last time drawScreen was called.
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1088_1_	player	#player, :, :, :
+	m	()I	func_147056_g	getSelectedTabIndex	#getSelectedTabIndex, :, getSelectedTab, :
+		c	Returns the index of the currently selected tab.
+	m	(Lnet/minecraft/creativetab/CreativeTabs;)V	func_147051_a	drawTab	#drawTab, :, renderTabIcon, :
+		c	Draws the given tab and its background, deciding whether to highlight the tab or not based off of the selected index.
+		p	1	p_147051_1_	tab	#tab, :, group, tab
+	m	(Lnet/minecraft/creativetab/CreativeTabs;II)Z	func_147049_a	isMouseOverTab	#isMouseOverTab, :, isClickInTab, isInRow
+		c	Checks if the mouse is over the given tab. Returns true if so.
+		p	1	p_147049_1_	tab	#tab, :, group, tab
+		p	2	p_147049_2_	mouseX	#mouseX, :, :, x
+		p	3	p_147049_3_	mouseY	#mouseY, :, :, z
+	m	(Lnet/minecraft/creativetab/CreativeTabs;)V	func_147050_b	setCurrentCreativeTab	#setCurrentCreativeTab, :, setSelectedTab, :
+		c	Sets the current creative tab, restructuring the GUI as needed.
+		p	1	p_147050_1_	tab	#tab, :, group, tab
+	m	(Lnet/minecraft/creativetab/CreativeTabs;II)Z	func_147052_b	renderCreativeInventoryHoveringText	#renderCreativeInventoryHoveringText, :, renderTabTooltipIfHovered, :
+		c	Renders the creative inventory hovering text if mouse is over it. Returns true if did render or false otherwise. Params: current creative tab to be checked, current mouse x position, current mouse y position.
+		p	1	p_147052_1_	tab	#tab, :, group, tab
+		p	2	p_147052_2_	mouseX	#mouseX, :, :, :
+		p	3	p_147052_3_	mouseY	#mouseY, :, :, :
+	m	()Lnet/minecraft/inventory/InventoryBasic;	access$000	access$000	#~, ~, ~, getInventory
+	m	()V	func_147053_i	updateCreativeSearch	#updateCreativeSearch, :, search, :
+	m	()Z	func_147055_p	needsScrollBars	#needsScrollBars, :, hasScrollbar, :
+		c	returns (if you are not on the inventoryTab) and (the flag isn't set) and (you have more than 1 page of items)
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

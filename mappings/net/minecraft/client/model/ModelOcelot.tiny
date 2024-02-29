@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelOcelot	net/minecraft/client/model/ModelOcelot	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78161_a	ocelotBackLeftLeg	#ocelotBackLeftLeg, :, ~, backLeftLeg
+		c	The back left leg model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78159_b	ocelotBackRightLeg	#ocelotBackRightLeg, :, ~, backRightLeg
+		c	The back right leg model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78160_c	ocelotFrontLeftLeg	#ocelotFrontLeftLeg, :, ~, frontLeftLeg
+		c	The front left leg model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78157_d	ocelotFrontRightLeg	#ocelotFrontRightLeg, :, ~, frontrightLeg
+		c	The front right leg model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78158_e	ocelotTail	#ocelotTail, :, ~, upperTail
+		c	The tail model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78155_f	ocelotTail2	#ocelotTail2, :, ~, lowerTail
+		c	The second part of tail model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78156_g	ocelotHead	#ocelotHead, :, ~, head
+		c	The head model for the Ocelot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78162_h	ocelotBody	#ocelotBody, :, ~, body
+		c	The body model for the Ocelot.
+	f	I	field_78163_i	state	#state, :, ~, state
+		c	<ul>\n<li>0: sneaking</li>\n<li>1: stationary</li>\n<li>2: sprinting</li>\n<li>3: sitting</li>\n</ul>
+	m	()V	<init>	<init>	#~, ~, ~, ~

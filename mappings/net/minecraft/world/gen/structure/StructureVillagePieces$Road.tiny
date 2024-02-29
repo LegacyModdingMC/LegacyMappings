@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$Road	net/minecraft/world/gen/structure/StructureVillagePieces$Road	
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2108_1_	start	#start, :, ~, ~
+		p	2	p_i2108_2_	type	#type, :, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/RegistryNamespaced	net/minecraft/util/RegistryNamespaced	
+	f	Lnet/minecraft/util/ObjectIntIdentityMap;	field_148759_a	underlyingIntegerMap	#underlyingIntegerMap, :, ids, :
+		c	The backing store that maps Integers to objects.
+	f	Ljava/util/Map;	field_148758_b	inverseObjectRegistry	#inverseObjectRegistry, :, objects, keys
+		c	A BiMap of objects (key) to their names (value).
+	m	(I)Ljava/lang/Object;	func_148754_a	getObjectById	#getObjectById, :, getByRawId, get
+		c	Gets the object identified by the given ID.
+		p	1	p_148754_1_	id	#id, :, index, id
+	m	(ILjava/lang/String;Ljava/lang/Object;)V	func_148756_a	addObject	#addObject, :, add, register
+		c	Adds a new object to this registry, keyed by both the given integer ID and the given string.
+		p	1	p_148756_1_	id	#~, ~, rawId, id
+		p	2	p_148756_2_	key	#~, ~, id, key
+		p	3	p_148756_3_	value	#~, ~, object, value
+	m	(I)Z	func_148753_b	containsId	#containsId, :, hasId, containsId
+		c	Gets a value indicating whether this registry contains an object that can be identified by the given integer value
+		p	1	p_148753_1_	id	#~, ~, i, id
+	m	(Ljava/lang/Object;)I	func_148757_b	getIDForObject	#getIDForObject, :, getRawId, getId
+		c	Gets the integer ID we use to identify the given object.
+		p	1	p_148757_1_	value	#value, :, object, value
+	m	(Ljava/lang/Object;)Ljava/lang/String;	func_148750_c	getNameForObject	#getNameForObject, :, getId, getKey
+		c	Gets the name we use to identify the given object.
+		p	1	p_148750_1_	value	#~, ~, object, value
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_148755_c	ensureNamespaced	#ensureNamespaced, :, addPrefix, validateKey
+		c	Ensures that the given name is indicated by a colon-delimited namespace, prepending "minecraft:" if it is not already.
+		p	0	p_148755_0_	key	#~, ~, id, key
+	m	()Ljava/util/Iterator;	iterator	iterator	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

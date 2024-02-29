@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/IngestServerTester$SwitchStatType	net/minecraft/client/stream/IngestServerTester$SwitchStatType	
+	f	[I	field_153026_a	field_153026_a	#~, ~, ~, ~
+	f	[I	field_153027_b	field_153027_b	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

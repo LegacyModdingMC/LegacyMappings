@@ -1,0 +1,90 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldServer	net/minecraft/world/WorldServer	
+	f	Lnet/minecraft/server/MinecraftServer;	field_73061_a	mcServer	#mcServer, server, :, :
+	f	Lnet/minecraft/entity/EntityTracker;	field_73062_L	theEntityTracker	#theEntityTracker, entityTracker, :, :
+		c	The entity tracker for this server world.
+	f	Lnet/minecraft/server/management/PlayerManager;	field_73063_M	thePlayerManager	#thePlayerManager, playerChunkMap, playerWorldManager, chunkMap
+		c	The player chunk map for this server world.
+	f	Ljava/util/Set;	field_73064_N	pendingTickListEntriesHashSet	#pendingTickListEntriesHashSet, :, ~, scheduledTicks
+	f	Ljava/util/TreeSet;	field_73065_O	pendingTickListEntriesTreeSet	#pendingTickListEntriesTreeSet, :, scheduledTicks, scheduledTicksInOrder
+		c	All work to do in future ticks.
+	f	Z	field_73068_P	allPlayersSleeping	#allPlayersSleeping, :, ready, allPlayersSleeping
+		c	is false if there are no players
+	f	I	field_80004_Q	updateEntityTick	#updateEntityTick, :, idleTimeout, :
+	f	Lnet/minecraft/world/Teleporter;	field_85177_Q	worldTeleporter	#worldTeleporter, :, portalTeleporter, portalForcer
+		c	the teleporter to use when the entity is being transferred into the dimension
+	f	Lnet/minecraft/world/SpawnerAnimals;	field_135059_Q	animalSpawner	#animalSpawner, :, ~, naturalSpawner
+	f	[Lnet/minecraft/world/WorldServer$ServerBlockEventList;	field_147490_S	blockEventQueue	#blockEventQueue, :, ~, blockEvents
+	f	I	field_147489_T	blockEventCacheIndex	#blockEventCacheIndex, :, ~, nextBlockEventQueueIndex
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_73069_S	bonusChestContent	#bonusChestContent, :, ~, BONUS_CHEST_LOOT_ENTRIES
+	f	Ljava/util/List;	field_94579_S	pendingTickListEntriesThisTick	#pendingTickListEntriesThisTick, :, ~, scheduledTicksThisTick
+	f	Lnet/minecraft/util/IntHashMap;	field_73066_T	entityIdMap	#entityIdMap, :, ~, entitiesById
+		c	An IntHashMap of entity IDs (integers) to their Entity objects.
+	f	Lorg/apache/logging/log4j/Logger;	field_147491_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/world/gen/ChunkProviderServer;	field_73059_b	theChunkProviderServer	#theChunkProviderServer, :, chunkCache, :
+	f	Z	field_73058_d	levelSaving	#levelSaving, disableLevelSaving, savingDisabled, saving
+		c	Whether or not level saving is enabled
+	m	()V	func_73051_P	resetRainAndThunder	#resetRainAndThunder, :, resetWeather, clearWeather
+		c	Clears the current rain and thunder weather states.
+	m	()V	func_147488_Z	sendQueuedBlockEvents	#sendQueuedBlockEvents, :, ~, doBlockEvents
+	m	()V	func_73042_a	saveLevel	#saveLevel, :, ~, saveData
+		c	Saves the chunks to disk.
+	m	(IIIIII)Ljava/util/List;	func_147486_a	getTileEntitiesIn	#getTileEntitiesIn, :, ~, getBlockEntities
+		c	Returns all the tile entities located between the given coordinates
+		p	1	p_147486_1_	minX	#minX, :, ~, minX
+		p	2	p_147486_2_	minY	#minY, :, ~, minY
+		p	3	p_147486_3_	minZ	#minZ, :, ~, minZ
+		p	4	p_147486_4_	maxX	#maxX, :, ~, maxX
+		p	5	p_147486_5_	maxY	#maxY, :, ~, maxY
+		p	6	p_147486_6_	maxZ	#maxZ, :, ~, maxZ
+	m	(Lnet/minecraft/block/BlockEventData;)Z	func_147485_a	fireBlockEvent	#fireBlockEvent, :, ~, doBlockEvent
+		p	1	p_147485_1_	event	#event, :, ~, blockEvent
+	m	(Ljava/lang/String;DDDIDDDD)V	func_147487_a	addParticle	#~, ~, ~, addParticle
+		p	1	p_147487_1_	type	#~, ~, ~, type
+		p	2	p_147487_2_	x	#~, ~, ~, x
+		p	4	p_147487_4_	y	#~, ~, ~, y
+		p	6	p_147487_6_	z	#~, ~, ~, z
+		p	8	p_147487_8_	count	#~, ~, ~, count
+		p	9	p_147487_9_	velocityX	#~, ~, ~, velocityX
+		p	11	p_147487_11_	velocityY	#~, ~, ~, velocityY
+		p	13	p_147487_13_	velocityZ	#~, ~, ~, velocityZ
+		p	15	p_147487_15_	velocityScale	#~, ~, ~, velocityScale
+	m	(Lnet/minecraft/entity/EnumCreatureType;III)Lnet/minecraft/world/biome/BiomeGenBase$SpawnListEntry;	func_73057_a	spawnRandomCreature	#spawnRandomCreature, :, ~, pickSpawnEntry
+		c	only spawns creatures allowed by the chunkProvider
+		p	1	p_73057_1_	category	#~, ~, ~, category
+		p	2	p_73057_2_	x	#~, ~, ~, x
+		p	3	p_73057_3_	y	#~, ~, ~, y
+		p	4	p_73057_4_	z	#~, ~, ~, z
+	m	(ZLnet/minecraft/util/IProgressUpdate;)V	func_73044_a	saveAllChunks	#saveAllChunks, :, save, :
+		c	Saves all chunks to disk while updating progress bar.
+		p	2	p_73044_2_	progressCallback	#progressCallback, :, listener, progressListener
+		p	1	p_73044_1_	all	#all, :, ~, saveEntities
+	m	(Lnet/minecraft/world/WorldSettings;)V	func_73052_b	createSpawnPosition	#createSpawnPosition, :, init, initSpawnPoint
+		c	creates a spawn position at random within 256 blocks of 0,0
+		p	1	p_73052_1_	settings	#settings, :, levelInfo, settings
+	m	()V	func_73053_d	wakeAllPlayers	#wakeAllPlayers, :, awakenPlayers, wakeSleepingPlayers
+	m	()Z	func_73056_e	areAllPlayersAsleep	#areAllPlayersAsleep, :, isReady, canSkipNight
+		c	Checks if all players in this world are sleeping.
+	m	()V	func_82742_i	resetUpdateEntityTick	#resetUpdateEntityTick, :, resetIdleTimeout, :
+		c	Resets the updateEntityTick field to 0
+	m	()V	func_73047_i	createBonusChest	#createBonusChest, :, placeBonusChest, :
+		c	Creates the bonus chest in the world.
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_73054_j	getEntrancePortalLocation	#getEntrancePortalLocation, :, getWorldSpawn, getForcedSpawnPoint
+		c	Gets the hard-coded portal location to use when entering this dimension.
+	m	()V	func_104140_m	saveChunkData	#saveChunkData, flushToDisk, ~, saveChunks
+		c	saves chunk data - currently only called during execution of the Save All command
+	m	()V	func_73041_k	flush	#flush, :, close, waitIfSaving
+		c	Syncs all changes to disk and wait for completion.
+	m	()Lnet/minecraft/server/MinecraftServer;	func_73046_m	getMinecraftServer	#getMinecraftServer, :, getServer, :
+	m	()Lnet/minecraft/entity/EntityTracker;	func_73039_n	getEntityTracker	#getEntityTracker, :, :, :
+		c	Gets the EntityTracker
+	m	()Lnet/minecraft/server/management/PlayerManager;	func_73040_p	getPlayerManager	#getPlayerManager, :, getPlayerWorldManager, getChunkMap
+	m	()Lnet/minecraft/world/Teleporter;	func_85176_s	getDefaultTeleporter	#getDefaultTeleporter, :, getPortalTeleporter, getPortalForcer
+	m	(Lnet/minecraft/server/MinecraftServer;Lnet/minecraft/world/storage/ISaveHandler;Ljava/lang/String;ILnet/minecraft/world/WorldSettings;Lnet/minecraft/profiler/Profiler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45284_1_	server	#~, ~, ~, server
+		p	2	p_i45284_2_	storage	#~, ~, ~, storage
+		p	3	p_i45284_3_	name	#~, ~, ~, name
+		p	4	p_i45284_4_	dimension	#~, ~, ~, dimension
+		p	5	p_i45284_5_	settings	#~, ~, ~, settings
+		p	6	p_i45284_6_	profiler	#~, ~, ~, profiler
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

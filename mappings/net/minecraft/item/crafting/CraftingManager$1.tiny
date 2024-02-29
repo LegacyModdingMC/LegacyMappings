@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/CraftingManager$1	net/minecraft/item/crafting/CraftingManager$1	
+	f	Lnet/minecraft/item/crafting/CraftingManager;	field_77582_a	craftingManager	#craftingManager, :, ~, registry
+	m	(Lnet/minecraft/item/crafting/IRecipe;Lnet/minecraft/item/crafting/IRecipe;)I	compare	compare	#~, ~, compare, :
+		p	1	p_compare_1_	p_compare_1_	#~, ~, ~, ~
+		p	2	p_compare_2_	p_compare_2_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	#~, ~, ~, ~
+		p	1	p_compare_1_	type1	#~, ~, ~, type1
+		p	2	p_compare_2_	type2	#~, ~, ~, type2
+	m	(Lnet/minecraft/item/crafting/CraftingManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1916_1_	p_i1916_1_	#~, ~, ~, ~

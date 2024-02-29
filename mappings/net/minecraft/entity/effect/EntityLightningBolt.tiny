@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/effect/EntityLightningBolt	net/minecraft/entity/effect/EntityLightningBolt	
+	f	J	field_70264_a	boltVertex	#boltVertex, :, seed, :
+		c	A random long that is used to change the vertex of the lightning rendered in RenderLightningBolt
+	f	I	field_70262_b	lightningState	#lightningState, :, ambientTick, stage
+		c	Declares which state the lightning bolt is in. Whether it's in the air, hit the ground, etc.
+	f	I	field_70263_c	boltLivingTime	#boltLivingTime, :, remainingActions, fireAttempts
+		c	Determines the time before the EntityLightningBolt is destroyed. It is a random integer decremented over time.
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1703_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1703_2_	posX	#posX, :, x, :
+		p	4	p_i1703_4_	posY	#posY, :, y, :
+		p	6	p_i1703_6_	posZ	#posZ, :, z, :

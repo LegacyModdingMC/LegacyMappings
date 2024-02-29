@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenDungeons	net/minecraft/world/gen/feature/WorldGenDungeons	
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_111189_a	LOOT_ENTRIES	#~, ~, ~, LOOT_ENTRIES
+	m	(Ljava/util/Random;)Ljava/lang/String;	func_76543_b	pickMobSpawner	#pickMobSpawner, :, getRandomSpawnerMob, pickDungeonType
+		c	Randomly decides which spawner to use in a dungeon
+		p	1	p_76543_1_	rand	#rand, :, random, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

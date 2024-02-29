@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockStainedGlass	net/minecraft/block/BlockStainedGlass	
+	f	[Lnet/minecraft/util/IIcon;	field_149998_a	TEXTURES	#~, ~, ~, TEXTURES
+	m	(I)I	func_149997_b	getColorFromId	#~, ~, ~, getColorFromId
+		p	0	p_149997_0_	id	#~, ~, ~, id
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45427_1_	materialIn	#materialIn, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

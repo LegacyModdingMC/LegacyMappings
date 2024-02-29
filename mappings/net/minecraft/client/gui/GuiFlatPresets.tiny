@@ -1,0 +1,43 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiFlatPresets	net/minecraft/client/gui/GuiFlatPresets	
+	f	Lnet/minecraft/client/renderer/entity/RenderItem;	field_146437_a	presetItemRenderer	#~, ~, ~, presetItemRenderer
+	f	Ljava/util/List;	field_146431_f	FLAT_WORLD_PRESETS	#FLAT_WORLD_PRESETS, :, PRESETS, :
+	f	Lnet/minecraft/client/gui/GuiCreateFlatWorld;	field_146432_g	parentScreen	#parentScreen, :, parent, :
+		c	The parent GUI
+	f	Ljava/lang/String;	field_146438_h	presetsTitle	#presetsTitle, :, title, titleText
+	f	Ljava/lang/String;	field_146439_i	presetsShare	#presetsShare, :, shareText, :
+	f	Ljava/lang/String;	field_146436_r	listText	#listText, :, :, :
+	f	Lnet/minecraft/client/gui/GuiFlatPresets$ListSlot;	field_146435_s	list	#list, :, ~, listWidget
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146434_t	btnSelect	#btnSelect, :, selectButton, :
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146433_u	export	#export, :, customPresetField, :
+	m	(Lnet/minecraft/client/gui/GuiCreateFlatWorld;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1049_1_	cacheFileIn	#cacheFileIn, :, parent, :
+	m	()V	func_146426_g	updateButtonValidity	#updateButtonValidity, :, updateSelectButton, activateSelectButtonIfPresetSelected
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)F	access$100	access$100	#~, ~, ~, getZOffset1
+		p	0	p_access$100_0_	presetScreen	#~, ~, ~, presetScreen
+	m	(Ljava/lang/String;Lnet/minecraft/item/Item;Lnet/minecraft/world/biome/BiomeGenBase;Ljava/util/List;[Lnet/minecraft/world/gen/FlatLayerInfo;)V	func_146421_a	registerPreset	#registerPreset, :, addPreset, :
+		p	0	p_146421_0_	name	#name, :, :, :
+		p	1	p_146421_1_	icon	#icon, :, :, item
+		p	2	p_146421_2_	biome	#biome, :, :, :
+		p	3	p_146421_3_	features	#features, :, structures, biomesAndStructures
+		p	4	p_146421_4_	layers	#layers, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/item/Item;Lnet/minecraft/world/biome/BiomeGenBase;[Lnet/minecraft/world/gen/FlatLayerInfo;)V	func_146425_a	registerPreset	#registerPreset, :, addRedstonePreset, :
+		p	0	p_146425_0_	name	#name, :, :, :
+		p	1	p_146425_1_	icon	#icon, :, :, :
+		p	2	p_146425_2_	biome	#biome, :, iconDamage, :
+		p	3	p_146425_3_	layers	#layers, :, :, :
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)F	access$200	access$200	#~, ~, ~, getZOffset2
+		p	0	p_access$200_0_	presetScreen	#~, ~, ~, presetScreen
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)F	access$300	access$300	#~, ~, ~, getZOffset3
+		p	0	p_access$300_0_	presetScreen	#~, ~, ~, presetScreen
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)F	access$400	access$400	#~, ~, ~, getZOffset4
+		p	0	p_access$400_0_	presetScreen	#~, ~, ~, presetScreen
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)Lnet/minecraft/client/gui/GuiFlatPresets$ListSlot;	access$600	access$600	#~, ~, ~, getListWidget
+		p	0	p_access$600_0_	presetScreen	#~, ~, ~, presetScreen
+	m	()Lnet/minecraft/client/renderer/entity/RenderItem;	access$000	access$000	#~, ~, ~, getPresetsItemRenderer
+	m	(Lnet/minecraft/client/gui/GuiFlatPresets;)Lnet/minecraft/client/gui/GuiTextField;	access$700	access$700	#~, ~, ~, getField
+		p	0	p_access$700_0_	presetScreen	#~, ~, ~, presetScreen
+	m	()Ljava/util/List;	access$500	access$500	#~, ~, ~, getPresetsList
+	m	()Z	func_146430_p	hasValidSelection	#hasValidSelection, :, isEntrySelected, isPresetSelected
+		c	Returns true if any preset is selected
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

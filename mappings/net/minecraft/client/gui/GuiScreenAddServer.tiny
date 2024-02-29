@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenAddServer	net/minecraft/client/gui/GuiScreenAddServer	
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146310_a	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/multiplayer/ServerData;	field_146311_h	serverData	#serverData, :, server, :
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146308_f	serverIPField	#serverIPField, :, addressField, :
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146309_g	serverNameField	#serverNameField, :, :, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_152176_i	serverResourcePacks	#serverResourcePacks, :, resourcePackOptionButton, ~
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/multiplayer/ServerData;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1033_1_	parentScreenIn	#parentScreenIn, :, parent, :
+		p	2	p_i1033_2_	serverDataIn	#serverDataIn, :, server, :

@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntitySpellParticleFX	net/minecraft/client/particle/EntitySpellParticleFX	
+	f	I	field_70590_a	baseSpellTextureIndex	#baseSpellTextureIndex, :, textureIndex, miscTexOffset
+		c	Base spell texture index
+	m	(I)V	func_70589_b	setBaseSpellTextureIndex	#setBaseSpellTextureIndex, :, setTextureIndex, setMiscTexOffset
+		c	Sets the base spell texture index
+		p	1	p_70589_1_	baseSpellTextureIndexIn	#baseSpellTextureIndexIn, :, index, offset
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1229_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1229_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1229_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1229_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1229_8_	p_i1229_8_	#~, ~, ~, ~
+		p	10	p_i1229_10_	ySpeed	#ySpeed, :, ~, ~
+		p	12	p_i1229_12_	p_i1229_12_	#~, ~, ~, ~

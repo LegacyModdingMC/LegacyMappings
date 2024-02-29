@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/achievement/GuiAchievements	net/minecraft/client/gui/achievement/GuiAchievements	
+	f	I	field_146559_A	X_MAX	#X_MAX, :, MAX_PAN_X, MAX_COLUMN
+	f	I	field_146560_B	Y_MAX	#Y_MAX, :, MAX_PAN_Y, MAX_ROW
+	f	Lnet/minecraft/util/ResourceLocation;	field_146561_C	ACHIEVEMENT_BACKGROUND	#ACHIEVEMENT_BACKGROUND, :, :, BACKGROUND_LOCATION
+	f	I	field_146554_D	scrolling	#scrolling, :, isDragging, scroll
+	f	Lnet/minecraft/stats/StatFileWriter;	field_146556_E	statFileWriter	#statFileWriter, :, handler, stats
+	f	Z	field_146558_F	loadingAchievements	#loadingAchievements, :, downloadingStats, downloading
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146562_a	parentScreen	#parentScreen, :, parent, :
+	f	I	field_146555_f	imageWidth	#imageWidth, :, originX, iconWidth
+	f	I	field_146557_g	imageHeight	#imageHeight, :, originY, iconHeight
+	f	I	field_146563_h	xLastScroll	#xLastScroll, :, targetMouseX, prevMouseX
+	f	I	field_146564_i	yLastScroll	#yLastScroll, :, targetMouseY, prevMouseY
+	f	F	field_146570_r	zoom	#zoom, :, fov, scale
+	f	D	field_146569_s	xScrollO	#xScrollO, :, attemptedCenterX, mouseX
+	f	D	field_146568_t	yScrollO	#yScrollO, :, attemptedCenterY, mouseY
+	f	D	field_146567_u	xScrollP	#xScrollP, :, targetCenterX, scaledMouseDx
+	f	D	field_146566_v	yScrollP	#yScrollP, :, targetCenterY, scaledMouseDy
+	f	D	field_146565_w	xScrollTarget	#xScrollTarget, :, centeredX, scrollX
+	f	D	field_146573_x	yScrollTarget	#yScrollTarget, :, centeredY, scrollY
+	f	I	field_146572_y	X_MIN	#X_MIN, :, MIN_PAN_X, MIN_COLUMN
+	f	I	field_146571_z	Y_MIN	#Y_MIN, :, MIN_PAN_Y, MIN_ROW
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/stats/StatFileWriter;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45026_1_	parentScreenIn	#parentScreenIn, :, parent, :
+		p	2	p_i45026_2_	statFileWriterIn	#statFileWriterIn, :, handler, statHandler
+	m	(IIF)V	func_146552_b	drawAchievementScreen	#drawAchievementScreen, :, renderIcons, :
+		p	1	p_146552_1_	mouseX	#~, ~, mouseX, :
+		p	2	p_146552_2_	mouseY	#~, ~, mouseY, :
+		p	3	p_146552_3_	tickdelta	#~, ~, tickDelta, tickdelta
+	m	()V	func_146553_h	drawTitle	#drawTitle, :, renderTitle, setTitle
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/RenderList	net/minecraft/client/renderer/RenderList	
+	f	I	field_78429_a	renderChunkX	#renderChunkX, :, ~, regionX
+		c	The location of the 16x16x16 render chunk rendered by this RenderList.
+	f	I	field_78427_b	renderChunkY	#renderChunkY, :, ~, regionY
+	f	I	field_78428_c	renderChunkZ	#renderChunkZ, :, ~, regionZ
+	f	D	field_78425_d	cameraX	#cameraX, :, ~, cameraX
+		c	The in-world location of the camera, used to translate the world into the proper position for rendering.
+	f	D	field_78426_e	cameraY	#cameraY, :, ~, cameraY
+	f	D	field_78423_f	cameraZ	#cameraZ, :, ~, cameraZ
+	f	Ljava/nio/IntBuffer;	field_78424_g	glLists	#glLists, :, ~, glList
+		c	A list of OpenGL render list IDs rendered by this RenderList.
+	f	Z	field_78430_h	valid	#valid, :, ~, renderingLeft
+		c	Does this RenderList contain properly-initialized and current data for rendering?
+	f	Z	field_78431_i	bufferFlipped	#bufferFlipped, :, ~, doNotFlipGlList
+		c	Has glLists been flipped to make it ready for reading yet?
+	m	()V	func_78419_a	callLists	#callLists, :, ~, render
+	m	(I)V	func_78420_a	addGLRenderList	#addGLRenderList, :, ~, addNewIdToGlList
+		p	1	p_78420_1_	id	#~, ~, ~, id
+	m	(III)Z	func_78418_a	rendersChunk	#rendersChunk, :, ~, checkMatch
+		p	1	p_78418_1_	x	#~, ~, ~, x
+		p	2	p_78418_2_	y	#~, ~, ~, y
+		p	3	p_78418_3_	z	#~, ~, ~, z
+	m	(IIIDDD)V	func_78422_a	setupRenderList	#setupRenderList, :, ~, setPositions
+		p	1	p_78422_1_	regionX	#~, ~, ~, regionX
+		p	2	p_78422_2_	regionY	#~, ~, ~, regionY
+		p	3	p_78422_3_	regionZ	#~, ~, ~, regionZ
+		p	4	p_78422_4_	cameraX	#~, ~, ~, cameraX
+		p	6	p_78422_6_	cameraY	#~, ~, ~, cameraY
+		p	8	p_78422_8_	cameraZ	#~, ~, ~, cameraZ
+	m	()V	func_78421_b	resetList	#resetList, :, ~, reset
+		c	Resets this RenderList to an uninitialized state.
+	m	()V	<init>	<init>	#~, ~, ~, ~

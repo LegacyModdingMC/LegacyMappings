@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S21PacketChunkData	net/minecraft/network/play/server/S21PacketChunkData	
+	f	I	field_149284_a	chunkX	#chunkX, :, :, :
+	f	I	field_149282_b	chunkZ	#chunkZ, :, :, :
+	f	I	field_149283_c	sectionsWithData	#~, ~, sections, sectionsWithData
+	f	I	field_149280_d	sectionsWithBlockIdsUpper	#~, ~, ~, sectionsWithBlockIdsUpper
+	f	[B	field_149281_e	compressedData	#~, ~, ~, compressedData
+	f	[B	field_149278_f	data	#~, ~, ~, data
+	f	Z	field_149279_g	loadChunk	#loadChunk, fullChunk, load, full
+	f	I	field_149285_h	compressedSize	#~, ~, ~, compressedSize
+	f	[B	field_149286_i	buffer	#~, ~, ~, buffer
+	m	(Lnet/minecraft/world/chunk/Chunk;ZI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45196_1_	chunkIn	#chunkIn, :, chunk, :
+		p	2	p_i45196_2_	full	#~, ~, load, full
+		p	3	p_i45196_3_	sections	#~, ~, ~, sections
+	m	(Lnet/minecraft/world/chunk/Chunk;ZI)Lnet/minecraft/network/play/server/S21PacketChunkData$Extracted;	func_149269_a	writeChunkData	#~, ~, ~, writeChunkData
+		p	0	p_149269_0_	chunk	#~, ~, chunk, :
+		p	1	p_149269_1_	full	#~, ~, load, full
+		p	2	p_149269_2_	dirtySections	#~, ~, ~, dirtySections
+	m	()I	func_149275_c	getFullChunkDataSize	#~, ~, ~, getFullChunkDataSize
+	m	()[B	func_149272_d	getExtractedDataBytes	#getExtractedDataBytes, :, ~, getChunkData
+	m	()I	func_149273_e	getChunkX	#getChunkX, :, :, :
+	m	()I	func_149271_f	getChunkZ	#getChunkZ, :, :, :
+	m	()I	func_149276_g	getExtractedSize	#getExtractedSize, :, getDataSize, getSections
+	m	()I	func_149270_h	getSectionsWithBlockIdsUpper	#~, ~, ~, getSectionsWithBlockIdsUpper
+	m	()Z	func_149274_i	doChunkLoad	#doChunkLoad, isFullChunk, shouldLoad, isFull
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

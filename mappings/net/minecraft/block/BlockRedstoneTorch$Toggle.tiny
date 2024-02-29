@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockRedstoneTorch$Toggle	net/minecraft/block/BlockRedstoneTorch$Toggle	
+	f	I	field_150847_a	x	#~, ~, ~, x
+	f	I	field_150845_b	y	#~, ~, ~, y
+	f	I	field_150846_c	z	#~, ~, ~, z
+	f	J	field_150844_d	time	#time, :, ~, time
+	m	(IIIJ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45422_1_	x	#~, ~, ~, x
+		p	2	p_i45422_2_	y	#~, ~, ~, y
+		p	3	p_i45422_3_	z	#~, ~, ~, z
+		p	4	p_i45422_4_	time	#~, ~, ~, time

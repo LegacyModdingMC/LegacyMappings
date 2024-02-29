@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S35PacketUpdateTileEntity	net/minecraft/network/play/server/S35PacketUpdateTileEntity	
+	f	I	field_148863_a	x	#x, :, :, :
+	f	I	field_148861_b	y	#y, :, :, :
+	f	I	field_148862_c	z	#z, :, :, :
+	f	I	field_148859_d	metadata	#metadata, tileEntityType, blockEntityId, type
+		c	Used only for vanilla tile entities
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_148860_e	nbt	#nbt, :, :, :
+	m	(IIIILnet/minecraft/nbt/NBTTagCompound;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45175_1_	xcoord	#xcoord, :, x, :
+		p	2	p_i45175_2_	ycoord	#ycoord, :, y, :
+		p	3	p_i45175_3_	zcoord	#zcoord, :, z, :
+		p	4	p_i45175_4_	meta	#meta, :, blockEntityId, type
+		p	5	p_i45175_5_	nbtTag	#nbtTag, :, nbt, :
+	m	()I	func_148856_c	getX	#getX, :, :, :
+	m	()I	func_148855_d	getY	#getY, :, :, :
+	m	()I	func_148854_e	getZ	#getZ, :, :, :
+	m	()I	func_148853_f	getTileEntityType	#getTileEntityType, :, getBlockEntityId, getType
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_148857_g	getNbtCompound	#getNbtCompound, :, getNbt, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

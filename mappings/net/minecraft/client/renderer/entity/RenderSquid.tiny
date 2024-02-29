@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSquid	net/minecraft/client/renderer/entity/RenderSquid	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110901_a	squidTextures	#squidTextures, SQUID_TEXTURES, SQUID_TEX, SQUID_LOCATION
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1268_1_	p_i1268_1_	#~, ~, ~, ~
+		p	2	p_i1268_2_	p_i1268_2_	#~, ~, ~, ~

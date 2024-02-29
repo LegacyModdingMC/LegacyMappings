@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIFollowGolem	net/minecraft/entity/ai/EntityAIFollowGolem	
+	f	Lnet/minecraft/entity/passive/EntityVillager;	field_75294_a	theVillager	#theVillager, villager, :, :
+	f	Lnet/minecraft/entity/monster/EntityIronGolem;	field_75292_b	theGolem	#theGolem, ironGolem, golem, :
+	f	I	field_75293_c	takeGolemRoseTick	#takeGolemRoseTick, :, ~, golemLookingTicks
+	f	Z	field_75291_d	tookGolemRose	#tookGolemRose, :, ~, isFollowingGolem
+	m	(Lnet/minecraft/entity/passive/EntityVillager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1656_1_	theVillagerIn	#theVillagerIn, villagerIn, villager, :

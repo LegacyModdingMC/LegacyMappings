@@ -1,0 +1,109 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/Village	net/minecraft/village/Village	
+	f	Lnet/minecraft/world/World;	field_75586_a	worldObj	#worldObj, world, :, :
+	f	Ljava/util/List;	field_75584_b	villageDoorInfoList	#villageDoorInfoList, :, doors, :
+		c	list of VillageDoorInfo objects
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_75585_c	centerHelper	#centerHelper, :, ~, combinedDoorPositions
+		c	This is the sum of all door coordinates and used to calculate the actual village center by dividing by the number of doors.
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_75582_d	center	#center, :, ~, center
+		c	This is the actual village center.
+	f	I	field_75583_e	villageRadius	#villageRadius, :, radius, :
+	f	I	field_75580_f	lastAddDoorTimestamp	#lastAddDoorTimestamp, :, stable, ticksOfLastDoorAdded
+	f	I	field_75581_g	tickCounter	#tickCounter, :, ticks, :
+	f	I	field_75588_h	numVillagers	#numVillagers, :, populationSize, :
+	f	I	field_82694_i	noBreedTicks	#noBreedTicks, :, mtick, ticksOfLastMating
+		c	Timestamp of tick count when villager last bred
+	f	Ljava/util/TreeMap;	field_82693_j	playerReputation	#playerReputation, :, players, playerReputations
+		c	List of player reputations with this village
+	f	Ljava/util/List;	field_75589_i	villageAgressors	#villageAgressors, :, attackers, :
+	f	I	field_75587_j	numIronGolems	#numIronGolems, :, golems, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1675_1_	worldIn	#worldIn, :, world, :
+	m	()Lnet/minecraft/util/ChunkCoordinates;	func_75577_a	getCenter	#getCenter, :, ~, getCenter
+	m	(I)V	func_75560_a	tick	#tick, :, setTicks, tick
+		c	Called periodically by VillageCollection
+		p	1	p_75560_1_	tickCounterIn	#tickCounterIn, :, ticks, :
+	m	(III)Z	func_75570_a	isInRange	#isInRange, :, ~, contains
+		c	Returns true, if the given coordinates are within the bounding box of the village.
+		p	1	p_75570_1_	x	#~, ~, ~, x
+		p	2	p_75570_2_	y	#~, ~, ~, y
+		p	3	p_75570_3_	z	#~, ~, ~, z
+	m	(IIIIII)Lnet/minecraft/util/Vec3;	func_75559_a	tryGetIronGolemSpawningLocation	#tryGetIronGolemSpawningLocation, :, ~, getSpawnPosForIronGolem
+		c	Tries up to 10 times to get a valid spawning location before eventually failing and returning null.
+		p	1	p_75559_1_	centerX	#~, ~, ~, centerX
+		p	2	p_75559_2_	centerY	#~, ~, ~, centerY
+		p	3	p_75559_3_	centerZ	#~, ~, ~, centerZ
+		p	4	p_75559_4_	rangeX	#~, ~, ~, rangeX
+		p	5	p_75559_5_	rangeY	#~, ~, ~, rangeY
+		p	6	p_75559_6_	rangeZ	#~, ~, ~, rangeZ
+	m	(Lnet/minecraft/world/World;)V	func_82691_a	setWorld	#setWorld, :, :, :
+		p	1	p_82691_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_82690_a	readVillageDataFromNBT	#readVillageDataFromNBT, :, fromNbt, readNbt
+		c	Read this village's data from NBT.
+		p	1	p_82690_1_	compound	#compound, :, nbt, :
+	m	(Ljava/lang/String;)I	func_82684_a	getReputationForPlayer	#getReputationForPlayer, getPlayerReputation, ~, getReputation
+		c	Return the village reputation for a player
+		p	1	p_82684_1_	playerName	#playerName, :, ~, playerName
+	m	(Ljava/lang/String;I)I	func_82688_a	setReputationForPlayer	#setReputationForPlayer, modifyPlayerReputation, ~, updateReputation
+		c	Set the village reputation for a player.
+		p	1	p_82688_1_	playerName	#playerName, :, name, playerName
+		p	2	p_82688_2_	reputation	#reputation, :, ~, reputation
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_75575_a	addOrRenewAgressor	#addOrRenewAgressor, :, addAttacker, addOrUpdateAttacker
+		p	1	p_75575_1_	entitylivingbaseIn	#entitylivingbaseIn, :, entity, attacker
+	m	(Lnet/minecraft/village/VillageDoorInfo;)V	func_75576_a	addVillageDoorInfo	#addVillageDoorInfo, :, ~, addDoor
+		p	1	p_75576_1_	doorInfo	#doorInfo, :, door, :
+	m	()I	func_75568_b	getVillageRadius	#getVillageRadius, :, getRadius, :
+	m	(I)V	func_82683_b	setDefaultPlayerReputation	#setDefaultPlayerReputation, :, ~, updateAllReputations
+		p	1	p_82683_1_	defaultReputation	#defaultReputation, :, ~, reputation
+	m	(III)Lnet/minecraft/village/VillageDoorInfo;	func_75564_b	findNearestDoor	#findNearestDoor, :, ~, getClosestDoor
+		p	1	p_75564_1_	x	#~, ~, ~, x
+		p	2	p_75564_2_	y	#~, ~, ~, y
+		p	3	p_75564_3_	z	#~, ~, ~, z
+	m	(IIIIII)Z	func_75563_b	isValidIronGolemSpawningLocation	#isValidIronGolemSpawningLocation, :, ~, canIronGolemSpawn
+		p	1	p_75563_1_	x	#~, ~, ~, x
+		p	2	p_75563_2_	y	#~, ~, ~, y
+		p	3	p_75563_3_	z	#~, ~, ~, z
+		p	4	p_75563_4_	rangeX	#~, ~, ~, rangeX
+		p	5	p_75563_5_	rangeY	#~, ~, ~, rangeY
+		p	6	p_75563_6_	rangeZ	#~, ~, ~, rangeZ
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_82689_b	writeVillageDataToNBT	#writeVillageDataToNBT, :, toNbt, writeNbt
+		c	Write this village's data to NBT.
+		p	1	p_82689_1_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/entity/EntityLivingBase;	func_75571_b	findNearestVillageAggressor	#findNearestVillageAggressor, :, getClosestAttacker, :
+		p	1	p_75571_1_	entitylivingbaseIn	#entitylivingbaseIn, :, entity, :
+	m	()I	func_75567_c	getNumVillageDoors	#getNumVillageDoors, :, getDoorsAmount, getDoorCount
+		c	Actually get num village door info entries, but that boils down to number of doors. Called by EntityAIVillagerMate and VillageSiege
+	m	(III)Lnet/minecraft/village/VillageDoorInfo;	func_75569_c	findNearestDoorUnrestricted	#findNearestDoorUnrestricted, :, ~, getClosestTickingDoor
+		c	Find a door suitable for shelter. If there are more doors in a distance of 16 blocks, then the least restricted one (i.e. the one protecting the lowest number of villagers) of them is chosen, else the nearest one regardless of restriction.
+		p	1	p_75569_1_	x	#~, ~, ~, x
+		p	2	p_75569_2_	y	#~, ~, ~, y
+		p	3	p_75569_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/entity/player/EntityPlayer;	func_82685_c	getNearestTargetPlayer	#getNearestTargetPlayer, :, ~, getClosestPlayer
+		p	1	p_82685_1_	villageDefender	#villageDefender, :, entity, :
+	m	()I	func_75561_d	getTicksSinceLastDoorAdding	#getTicksSinceLastDoorAdding, :, ~, getTimeSinceLastDoorAdded
+	m	(Ljava/lang/String;)Z	func_82687_d	isPlayerReputationTooLow	#isPlayerReputationTooLow, :, ~, hasBadReputation
+		c	Return whether this player has a too low reputation with this village.
+		p	1	p_82687_1_	playerName	#playerName, :, ~, playerName
+	m	()I	func_75562_e	getNumVillagers	#getNumVillagers, :, getPopulationSize, :
+	m	(III)Lnet/minecraft/village/VillageDoorInfo;	func_75578_e	getVillageDoorAt	#getVillageDoorAt, :, ~, getDoor
+		p	1	p_75578_1_	x	#~, ~, ~, x
+		p	2	p_75578_2_	y	#~, ~, ~, y
+		p	3	p_75578_3_	z	#~, ~, ~, z
+	m	()Ljava/util/List;	func_75558_f	getVillageDoorInfoList	#getVillageDoorInfoList, :, getDoors, :
+		c	called only by class EntityAIMoveThroughVillage
+	m	(III)Z	func_75574_f	isBlockDoor	#isBlockDoor, :, ~, isWoodenDoor
+		p	1	p_75574_1_	x	#~, ~, ~, x
+		p	2	p_75574_2_	y	#~, ~, ~, y
+		p	3	p_75574_3_	z	#~, ~, ~, z
+	m	()Z	func_75566_g	isAnnihilated	#isAnnihilated, :, hasNoDoors, :
+		c	Returns true, if there is not a single village door left. Called by VillageCollection
+	m	()V	func_82692_h	endMatingSeason	#endMatingSeason, :, ~, stopMating
+		c	Prevent villager breeding for a fixed interval of time
+	m	()Z	func_82686_i	isMatingSeason	#isMatingSeason, :, ~, canMate
+		c	Return whether villagers mating refractory period has passed
+	m	()V	func_75579_h	updateNumIronGolems	#updateNumIronGolems, :, ~, updateIronGolemCount
+	m	()V	func_75572_i	updateNumVillagers	#updateNumVillagers, :, ~, updatePopulationSize
+	m	()V	func_75565_j	removeDeadAndOldAgressors	#removeDeadAndOldAgressors, :, ~, cleanUpAttackers
+	m	()V	func_75557_k	removeDeadAndOutOfRangeDoors	#removeDeadAndOutOfRangeDoors, :, ~, cleanUpDoors
+	m	()V	func_75573_l	updateVillageRadiusAndCenter	#updateVillageRadiusAndCenter, :, ~, updateCenterAndRadius
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/LanServerDetector$LanServerList	net/minecraft/client/network/LanServerDetector$LanServerList	
+	f	Z	field_77556_a	wasUpdated	#wasUpdated, :, ~, dirty
+	f	Ljava/util/ArrayList;	field_77555_b	listOfLanServers	#listOfLanServers, :, ~, servers
+	m	()Z	func_77553_a	getWasUpdated	#getWasUpdated, :, ~, needsUpdate
+	m	(Ljava/lang/String;Ljava/net/InetAddress;)V	func_77551_a	addServer	#addServer, :, ~, addServer
+		p	1	p_77551_1_	pingResponse	#pingResponse, :, ~, metadata
+		p	2	p_77551_2_	ipAddress	#ipAddress, :, ~, address
+	m	()V	func_77552_b	setWasNotUpdated	#setWasNotUpdated, :, ~, markClean
+	m	()Ljava/util/List;	func_77554_c	getLanServers	#getLanServers, :, ~, getServers
+	m	()V	<init>	<init>	#~, ~, ~, ~

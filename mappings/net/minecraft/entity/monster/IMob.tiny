@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/IMob	net/minecraft/entity/monster/IMob	
+	f	Lnet/minecraft/command/IEntitySelector;	field_82192_a	mobSelector	#mobSelector, MOB_SELECTOR, ~, FILTER
+		c	Entity selector for IMob types.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

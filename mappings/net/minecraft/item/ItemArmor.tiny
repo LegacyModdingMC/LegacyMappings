@@ -1,0 +1,41 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemArmor	net/minecraft/item/ItemArmor	
+	f	[Ljava/lang/String;	field_94603_a	EMPTY_SLOT_NAMES	#EMPTY_SLOT_NAMES, :, EMPTY, EMPTY_SLOTS
+	f	I	field_77881_a	armorType	#armorType, :, slot, :
+		c	Stores the armor type: 0 is helmet, 1 is plate, 2 is legs and 3 is boots
+	f	I	field_77879_b	damageReduceAmount	#damageReduceAmount, :, protection, :
+		c	Holds the amount of damage that the armor reduces at full durability.
+	f	I	field_77880_c	renderIndex	#renderIndex, :, materialId, :
+		c	Used on RenderPlayer to select the correspondent armor to be rendered on the player: 0 is cloth, 1 is chain, 2 is iron, 3 is diamond and 4 is gold.
+	f	[I	field_77882_bY	maxDamageArray	#maxDamageArray, MAX_DAMAGE_ARRAY, BASE_DURABILITY, :
+		c	Holds the 'base' maxDamage that each armorType have.
+	f	[Ljava/lang/String;	field_94606_cu	CLOTH_OVERLAY_NAMES	#CLOTH_OVERLAY_NAMES, :, ~, OVERLAYS
+	f	Lnet/minecraft/dispenser/IBehaviorDispenseItem;	field_96605_cw	dispenserBehavior	#dispenserBehavior, DISPENSER_BEHAVIOR, ARMOR_DISPENSER_BEHAVIOR, DISPENSE_BEHAVIOR
+	f	Lnet/minecraft/item/ItemArmor$ArmorMaterial;	field_77878_bZ	material	#material, :, ~, material
+		c	The EnumArmorMaterial used for this ItemArmor
+	f	Lnet/minecraft/util/IIcon;	field_94605_cw	overlayIcon	#overlayIcon, :, ~, overlaySprite
+	f	Lnet/minecraft/util/IIcon;	field_94604_cx	emptySlotIcon	#emptySlotIcon, :, ~, sprite
+	m	(I)Lnet/minecraft/util/IIcon;	func_94602_b	getBackgroundIcon	#getBackgroundIcon, :, ~, getTexture
+		c	Return the background icon of the Slot used to hold the armor item stack. Args : armorId (0 : helmet, 1 : chestplace, 2 : leggings, 3 : boots : other : null)
+		p	0	p_94602_0_	type	#~, ~, ~, type
+	m	(Lnet/minecraft/item/ItemStack;)I	func_82814_b	getColor	#getColor, :, :, :
+		c	Return the color for the specified armor ItemStack.
+		p	1	p_82814_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;I)V	func_82813_b	setColor	#setColor, :, :, :
+		c	Sets the color of the specified armor ItemStack
+		p	1	p_82813_1_	stack	#stack, :, :, :
+		p	2	p_82813_2_	color	#color, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)V	func_82815_c	removeColor	#removeColor, :, :, :
+		c	Remove the color from the specified armor ItemStack.
+		p	1	p_82815_1_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_82816_b_	hasColor	#hasColor, :, :, :
+		c	Return whether the specified armor ItemStack has a color.
+		p	1	p_82816_1_	stack	#stack, :, :, :
+	m	()[I	access$000	access$000	#~, ~, ~, getBaseDurability
+	m	()Lnet/minecraft/item/ItemArmor$ArmorMaterial;	func_82812_d	getArmorMaterial	#getArmorMaterial, :, ~, ~
+		c	Return the armor material for this armor item.
+	m	(Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45325_1_	material	#material, :, ~, material
+		p	2	p_i45325_2_	renderIndex	#renderIndex, :, ~, materialId
+		p	3	p_i45325_3_	armorType	#armorType, :, ~, slot
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

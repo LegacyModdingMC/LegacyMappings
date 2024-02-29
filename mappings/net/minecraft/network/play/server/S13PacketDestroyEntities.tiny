@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S13PacketDestroyEntities	net/minecraft/network/play/server/S13PacketDestroyEntities	
+	f	[I	field_149100_a	entityIDs	#entityIDs, :, entityIds, ids
+	m	([I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45211_1_	entityIDsIn	#entityIDsIn, :, entityIds, ids
+	m	()[I	func_149098_c	getEntityIDs	#getEntityIDs, :, getEntityIds, getIds
+	m	()V	<init>	<init>	#~, ~, ~, ~

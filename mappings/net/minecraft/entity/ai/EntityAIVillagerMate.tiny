@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIVillagerMate	net/minecraft/entity/ai/EntityAIVillagerMate	
+	f	Lnet/minecraft/village/Village;	field_75452_a	villageObj	#villageObj, village, :, :
+	f	Lnet/minecraft/entity/passive/EntityVillager;	field_75450_b	villagerObj	#villagerObj, villager, :, villagerOne
+	f	Lnet/minecraft/entity/passive/EntityVillager;	field_75451_c	mate	#mate, :, :, villagerTwo
+	f	Lnet/minecraft/world/World;	field_75448_d	worldObj	#worldObj, world, :, :
+	f	I	field_75449_e	matingTimeout	#matingTimeout, :, timer, breedTimer
+	m	(Lnet/minecraft/entity/passive/EntityVillager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1634_1_	villagerIn	#villagerIn, :, villager, :
+	m	()Z	func_75446_f	checkSufficientDoorsPresentForNewVillager	#checkSufficientDoorsPresentForNewVillager, :, ~, checkVillageValidity
+	m	()V	func_75447_i	giveBirth	#giveBirth, :, ~, breed

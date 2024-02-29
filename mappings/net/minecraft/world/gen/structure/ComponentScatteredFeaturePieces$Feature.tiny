@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$Feature	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$Feature	
+	f	I	field_74939_a	scatteredFeatureSizeX	#scatteredFeatureSizeX, width, ~, width
+		c	The size of the bounding box for this feature in the X axis
+	f	I	field_74937_b	scatteredFeatureSizeY	#scatteredFeatureSizeY, height, ~, height
+		c	The size of the bounding box for this feature in the Y axis
+	f	I	field_74938_c	scatteredFeatureSizeZ	#scatteredFeatureSizeZ, depth, ~, depth
+		c	The size of the bounding box for this feature in the Z axis
+	f	I	field_74936_d	horizontalPos	#horizontalPos, :, ~, hPos
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)Z	func_74935_a	offsetToAverageGroundLevel	#offsetToAverageGroundLevel, :, ~, updateHPos
+		c	Calculates and offsets this structure boundingbox to average ground level
+		p	1	p_74935_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_74935_2_	structurebb	#structurebb, :, ~, bounds
+		p	3	p_74935_3_	yOffset	#yOffset, :, ~, offset
+	m	(Ljava/util/Random;IIIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2065_1_	rand	#rand, :, ~, random
+		p	2	p_i2065_2_	x	#x, :, ~, x
+		p	3	p_i2065_3_	y	#y, :, ~, y
+		p	4	p_i2065_4_	z	#z, :, ~, z
+		p	5	p_i2065_5_	sizeX	#sizeX, :, ~, width
+		p	6	p_i2065_6_	sizeY	#sizeY, :, ~, height
+		p	7	p_i2065_7_	sizeZ	#sizeZ, :, ~, depth
+	m	()V	<init>	<init>	#~, ~, ~, ~

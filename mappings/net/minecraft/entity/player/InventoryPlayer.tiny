@@ -1,0 +1,92 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/InventoryPlayer	net/minecraft/entity/player/InventoryPlayer	
+	f	[Lnet/minecraft/item/ItemStack;	field_70462_a	mainInventory	#mainInventory, :, main, inventorySlots
+		c	An array of 36 item stacks indicating the main player inventory (including the visible bar).
+	f	[Lnet/minecraft/item/ItemStack;	field_70460_b	armorInventory	#armorInventory, :, armor, armorSlots
+		c	An array of 4 item stacks containing the currently worn armor pieces.
+	f	I	field_70461_c	currentItem	#currentItem, :, selectedSlot, :
+		c	The index of the currently held item (0-8).
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_70458_d	player	#player, :, :, :
+		c	The player whose inventory this is.
+	f	Z	field_70459_e	inventoryChanged	#inventoryChanged, :, dirty, :
+		c	Set true whenever the inventory changes. Nothing sets it false so you will have to write your own code to check it and reset the value.
+	f	Lnet/minecraft/item/ItemStack;	field_70456_f	currentItemStack	#currentItemStack, :, ~, mainHandStack
+		c	The current ItemStack.
+	f	Lnet/minecraft/item/ItemStack;	field_70457_g	itemStack	#itemStack, :, cursorStack, :
+		c	The stack currently held by the mouse cursor
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1750_1_	playerIn	#playerIn, :, player, :
+	m	(F)V	func_70449_g	damageArmor	#damageArmor, :, :, :
+		c	Damages armor in each slot by the specified amount.
+		p	1	p_70449_1_	damage	#damage, :, armor, :
+	m	(Lnet/minecraft/item/Item;)Z	func_146026_a	consumeInventoryItem	#consumeInventoryItem, :, useItem, consumeOne
+		c	removed one item of specified Item from inventory (if it is in a stack, the stack size will reduce with 1)
+		p	1	p_146026_1_	itemIn	#itemIn, :, item, :
+	m	(Lnet/minecraft/item/Item;I)I	func_146027_a	clearInventory	#clearInventory, :, ~, getRemovedAmount
+		c	Clear this player's inventory (including armor), using the specified Item and metadata as filters or -1 for no filter.
+		p	1	p_146027_1_	item	#~, ~, ~, item
+		p	2	p_146027_2_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/item/Item;IZZ)V	func_146030_a	setCurrentItem	#setCurrentItem, :, addPickBlock, pickItem
+		p	1	p_146030_1_	itemIn	#itemIn, :, item, :
+		p	2	p_146030_2_	metadataIn	#metadataIn, :, data, metadata
+		p	3	p_146030_3_	isMetaSpecific	#isMetaSpecific, :, hasData, damageable
+		p	4	p_146030_4_	creativeMode	#~, ~, isInCreative, creativeMode
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_70441_a	addItemStackToInventory	#addItemStackToInventory, :, insertStack, :
+		c	Adds the item stack to the inventory, returns false if it is impossible.
+		p	1	p_70441_1_	itemStackIn	#itemStackIn, :, itemStack, stack
+	m	(Lnet/minecraft/block/Block;)F	func_146023_a	getStrVsBlock	#getStrVsBlock, :, getMiningSpeed, :
+		p	1	p_146023_1_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/nbt/NBTTagList;)Lnet/minecraft/nbt/NBTTagList;	func_70442_a	writeToNBT	#writeToNBT, :, serialize, writeNbt
+		c	Writes the inventory out as a list of compound tags. This is where the slot indices are used (+100 for armor, +80 for crafting).
+		p	1	p_70442_1_	nbtTagListIn	#nbtTagListIn, :, nbt, list
+	m	(Lnet/minecraft/item/Item;)Z	func_146028_b	hasItem	#hasItem, :, containsItem, contains
+		c	Checks if a specified Item is inside the inventory
+		p	1	p_146028_1_	itemIn	#itemIn, :, item, :
+	m	(Lnet/minecraft/item/Item;I)V	func_70439_a	creativePickItem	#~, ~, ~, creativePickItem
+		p	1	p_70439_1_	item	#~, ~, ~, item
+		p	2	p_70439_2_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/item/ItemStack;)V	func_70437_b	setItemStack	#setItemStack, :, setCursorStack, :
+		c	Set the stack helds by mouse, used in GUI/Container
+		p	1	p_70437_1_	itemStackIn	#itemStackIn, :, stack, :
+	m	(Lnet/minecraft/block/Block;)Z	func_146025_b	canHeldItemHarvest	#canHeldItemHarvest, :, canToolBreak, :
+		p	1	p_146025_1_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/nbt/NBTTagList;)V	func_70443_b	readFromNBT	#readFromNBT, :, deserialize, readNbt
+		c	Reads from the given tag list and fills the slots in the inventory with the correct items.
+		p	1	p_70443_1_	nbtTagListIn	#nbtTagListIn, :, ~, list
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;)V	func_70455_b	copyInventory	#copyInventory, :, copy, :
+		c	Copy the ItemStack contents from another InventoryPlayer instance
+		p	1	p_70455_1_	playerInventory	#playerInventory, :, inventory, :
+	m	(I)V	func_70453_c	changeCurrentItem	#changeCurrentItem, :, scrollInHotbar, :
+		c	Switch the current item to the next one or the previous one
+		p	1	p_70453_1_	direction	#direction, :, scrollAmount, scroll
+	m	(Lnet/minecraft/item/Item;)I	func_146029_c	getInventorySlotContainItem	#getInventorySlotContainItem, :, getSlotWithItem, indexOfItem
+		p	1	p_146029_1_	itemIn	#itemIn, :, item, :
+	m	(Lnet/minecraft/item/Item;I)I	func_146024_c	getInventorySlotContainItemAndDamage	#getInventorySlotContainItemAndDamage, :, getSlotWithItem, indexOfItemWithMetaData
+		p	1	p_146024_1_	itemIn	#itemIn, :, item, :
+		p	2	p_146024_2_	metadataIn	#metadataIn, :, data, metadata
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_70431_c	hasItemStack	#hasItemStack, :, contains, :
+		c	Returns true if the specified ItemStack exists in the inventory.
+		p	1	p_70431_1_	itemStackIn	#itemStackIn, :, stack, :
+	m	(I)Lnet/minecraft/item/ItemStack;	func_70440_f	armorItemInSlot	#armorItemInSlot, :, getArmor, :
+		c	returns a player armor item (as itemstack) contained in specified armor slot.
+		p	1	p_70440_1_	slotIn	#slotIn, :, slot, :
+	m	(Lnet/minecraft/item/ItemStack;)I	func_70432_d	storeItemStack	#storeItemStack, :, getSlotWithItemStack, indexOfItemStack
+		c	stores an itemstack in the users inventory
+		p	1	p_70432_1_	itemStackIn	#itemStackIn, :, stack, :
+	m	(Lnet/minecraft/item/ItemStack;)I	func_70452_e	storePartialItemStack	#storePartialItemStack, :, ~, putStackInInventory
+		c	This function stores as many items of an ItemStack as possible in a matching slot and returns the quantity of left over items.
+		p	1	p_70452_1_	itemStackIn	#itemStackIn, :, ~, stack
+	m	()Lnet/minecraft/item/ItemStack;	func_70448_g	getCurrentItem	#getCurrentItem, :, getMainHandStack, :
+		c	Returns the item stack currently held by the player.
+	m	()I	func_70451_h	getHotbarSize	#getHotbarSize, :, :, :
+		c	Get the size of the player hotbar inventory
+	m	()I	func_70447_i	getFirstEmptyStack	#getFirstEmptyStack, :, getEmptySlot, :
+		c	Returns the first item stack that is empty.
+	m	()V	func_70429_k	decrementAnimations	#decrementAnimations, :, updateItems, tickItems
+		c	Decrement the number of animations remaining. Only called on client side. This is used to handle the animation of receiving a block.
+	m	()I	func_70430_l	getTotalArmorValue	#getTotalArmorValue, :, getArmorProtectionValue, :
+		c	Based on the damage values and maximum damage values of each armor item, returns the current armor value.
+	m	()V	func_70436_m	dropAllItems	#dropAllItems, :, dropAll, :
+		c	Drop all armor and main inventory items.
+	m	()Lnet/minecraft/item/ItemStack;	func_70445_o	getItemStack	#getItemStack, :, getCursorStack, :
+		c	Stack helds by mouse, used in GUI and Containers

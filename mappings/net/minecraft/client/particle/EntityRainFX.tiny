@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityRainFX	net/minecraft/client/particle/EntityRainFX	
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1235_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1235_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1235_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1235_6_	zCoordIn	#zCoordIn, :, ~, ~

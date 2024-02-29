@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/ChunkProviderClient	net/minecraft/client/multiplayer/ChunkProviderClient	
+	f	Lorg/apache/logging/log4j/Logger;	field_147436_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/world/chunk/Chunk;	field_73238_a	blankChunk	#blankChunk, :, emptyChunk, empty
+		c	The completely empty chunk used by ChunkProviderClient when field_73236_b doesn't contain the requested coordinates.
+	f	Lnet/minecraft/util/LongHashMap;	field_73236_b	chunkMapping	#chunkMapping, loadedChunks, chunkStorage, chunksByPos
+		c	The mapping between ChunkCoordinates and Chunks that ChunkProviderClient maintains.
+	f	Ljava/util/List;	field_73237_c	chunkListing	#chunkListing, :, chunks, :
+		c	This may have been intended to be an iterable version of all currently loaded chunks (MultiplayerChunkCache), with identical contents to chunkMapping's values. However it is never actually added to.
+	f	Lnet/minecraft/world/World;	field_73235_d	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1184_1_	worldIn	#worldIn, :, world, :
+	m	(II)V	func_73234_b	unloadChunk	#unloadChunk, :, :, :
+		c	Unload chunk from ChunkProviderClient's hashmap. Called in response to a Packet50PreChunk with its mode field set to false
+		p	1	p_73234_1_	x	#x, :, :, chunkX
+		p	2	p_73234_2_	z	#z, :, :, chunkZ
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

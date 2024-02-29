@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSnooper$List	net/minecraft/client/gui/GuiSnooper$List	
+	f	Lnet/minecraft/client/gui/GuiSnooper;	field_148206_k	screen	#~, ~, ~, screen
+	m	(Lnet/minecraft/client/gui/GuiSnooper;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1060_1_	p_i1060_1_	#~, ~, ~, ~

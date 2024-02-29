@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenReed	net/minecraft/world/gen/feature/WorldGenReed	
+	m	()V	<init>	<init>	#~, ~, ~, ~

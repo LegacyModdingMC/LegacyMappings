@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/boss/BossStatus	net/minecraft/entity/boss/BossStatus	
+	f	F	field_82828_a	healthScale	#healthScale, :, percent, health
+	f	I	field_82826_b	statusBarTime	#statusBarTime, :, framesToLive, timer
+	f	Ljava/lang/String;	field_82827_c	bossName	#bossName, :, name, :
+	f	Z	field_82825_d	hasColorModifier	#hasColorModifier, :, darkenSky, modifiesSkyColor
+	m	(Lnet/minecraft/entity/boss/IBossDisplayData;Z)V	func_82824_a	setBossStatus	#setBossStatus, :, update, :
+		p	0	p_82824_0_	displayData	#displayData, :, provider, boss
+		p	1	p_82824_1_	hasColorModifierIn	#hasColorModifierIn, :, darkenSky, modifiesSkyColor

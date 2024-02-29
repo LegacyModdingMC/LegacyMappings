@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/VillageDoorInfo	net/minecraft/village/VillageDoorInfo	
+	f	I	field_75481_a	posX	#posX, :, ~, x
+	f	I	field_75479_b	posY	#posY, :, ~, y
+	f	I	field_75480_c	posZ	#posZ, :, ~, z
+	f	I	field_75477_d	insideDirectionX	#insideDirectionX, :, ~, indoorsOffsetX
+	f	I	field_75478_e	insideDirectionZ	#insideDirectionZ, :, ~, indoorsOffsetZ
+	f	I	field_75475_f	lastActivityTimestamp	#lastActivityTimestamp, :, ~, lastVillageTick
+	f	Z	field_75476_g	isDetachedFromVillageFlag	#isDetachedFromVillageFlag, :, ~, isOutsideVillage
+	f	I	field_75482_h	doorOpeningRestrictionCounter	#doorOpeningRestrictionCounter, :, ~, restrictedTicks
+	m	()I	func_75471_a	getInsidePosX	#getInsidePosX, :, ~, getIndoorsX
+	m	(II)Z	func_75467_a	isInside	#isInside, :, ~, isIndoors
+		p	1	p_75467_1_	x	#~, ~, ~, x
+		p	2	p_75467_2_	z	#~, ~, ~, z
+	m	()I	func_75473_b	getInsidePosY	#getInsidePosY, getLastActivityTimestamp, ~, getIndoorsY
+	m	(III)I	func_75474_b	getDistanceSquared	#getDistanceSquared, :, ~, squaredDistanceTo
+		c	Returns the squared distance between this door and the given coordinate.
+		p	1	p_75474_1_	x	#x, :, :, :
+		p	2	p_75474_2_	y	#y, :, :, :
+		p	3	p_75474_3_	z	#z, :, :, :
+	m	()I	func_75472_c	getInsidePosZ	#getInsidePosZ, :, ~, getIndoorsZ
+	m	(III)I	func_75469_c	getInsideDistanceSquare	#getInsideDistanceSquare, :, ~, squaredDistanceToIndoors
+		c	Get the square of the distance from a location 2 blocks away from the door considered 'inside' and the given arguments
+		p	1	p_75469_1_	x	#~, ~, ~, x
+		p	2	p_75469_2_	y	#~, ~, ~, y
+		p	3	p_75469_3_	z	#~, ~, ~, z
+	m	()V	func_75466_d	resetDoorOpeningRestrictionCounter	#resetDoorOpeningRestrictionCounter, :, ~, resetRestrictedTicks
+	m	()V	func_75470_e	incrementDoorOpeningRestrictionCounter	#incrementDoorOpeningRestrictionCounter, :, ~, restrictOpening
+	m	()I	func_75468_f	getDoorOpeningRestrictionCounter	#getDoorOpeningRestrictionCounter, :, ~, getRestrictedTicks
+	m	(IIIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1673_1_	x	#~, ~, ~, x
+		p	2	p_i1673_2_	y	#~, ~, ~, y
+		p	3	p_i1673_3_	z	#~, ~, ~, z
+		p	4	p_i1673_4_	indoorsOffsetX	#~, ~, ~, indoorsOffsetX
+		p	5	p_i1673_5_	indoorsOffsetZ	#~, ~, ~, indoorsOffsetZ
+		p	6	p_i1673_6_	lastVillageTick	#~, ~, ~, lastVillageTick

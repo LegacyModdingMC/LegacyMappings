@@ -1,0 +1,65 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntity	net/minecraft/tileentity/TileEntity	
+	f	Lorg/apache/logging/log4j/Logger;	field_145852_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/world/World;	field_145850_b	worldObj	#worldObj, world, :, :
+		c	the instance of the world the tile entity is in.
+	f	I	field_145851_c	xCoord	#xCoord, :, x, :
+	f	I	field_145848_d	yCoord	#yCoord, :, y, :
+	f	I	field_145849_e	zCoord	#zCoord, :, z, :
+	f	Z	field_145846_f	tileEntityInvalid	#tileEntityInvalid, :, removed, :
+	f	I	field_145847_g	blockMetadata	#blockMetadata, :, dataValue, metadata
+	f	Lnet/minecraft/block/Block;	field_145854_h	blockType	#blockType, :, block, :
+		c	the Block type that this TileEntity is contained within
+	f	Ljava/util/Map;	field_145855_i	nameToClassMap	#nameToClassMap, :, stringClassMap, ID_TO_TYPE
+		c	A HashMap storing string names of classes mapping to the actual java.lang.Class type.
+	f	Ljava/util/Map;	field_145853_j	classToNameMap	#classToNameMap, :, classStringMap, TYPE_TO_ID
+		c	A HashMap storing the classes and mapping to the string names (reverse of nameToClassMap).
+	m	(DDD)D	func_145835_a	getDistanceFrom	#getDistanceFrom, getDistanceSq, getSquaredDistance, squaredDistanceTo
+		c	Returns the square of the distance between this entity and the passed in coordinates.
+		p	1	p_145835_1_	x	#x, :, :, :
+		p	3	p_145835_3_	y	#y, :, :, :
+		p	5	p_145835_5_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;)V	func_145834_a	setWorldObj	#setWorldObj, setWorld, :, :
+		c	Sets the worldObj for this tileEntity.
+		p	1	p_145834_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_145839_a	readFromNBT	#readFromNBT, :, fromNbt, readNbt
+		p	1	p_145839_1_	compound	#compound, :, nbt, :
+	m	(Ljava/lang/Class;Ljava/lang/String;)V	func_145826_a	addMapping	#addMapping, :, registerBlockEntity, register
+		c	Adds a new two-way mapping between the class and its string name in both hashmaps.
+		p	0	p_145826_0_	cl	#cl, :, clazz, type
+		p	1	p_145826_1_	id	#id, :, stringId, id
+	m	(Lnet/minecraft/crash/CrashReportCategory;)V	func_145828_a	addInfoToCrashReport	#addInfoToCrashReport, :, populateCrashReport, :
+		p	1	p_145828_1_	reportCategory	#reportCategory, :, section, category
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_145841_b	writeToNBT	#writeToNBT, :, toNbt, writeNbt
+		p	1	p_145841_1_	compound	#compound, :, nbt, :
+	m	(II)Z	func_145842_c	receiveClientEvent	#receiveClientEvent, :, onBlockAction, doEvent
+		c	Called when a client event is received with the event number and argument, see World.sendClientEvent
+		p	1	p_145842_1_	id	#id, :, code, type
+		p	2	p_145842_2_	type	#type, :, data, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/tileentity/TileEntity;	func_145827_c	createAndLoadEntity	#createAndLoadEntity, :, createFromNbt, fromNbt
+		c	Creates a new entity and loads its data from the specified NBT.
+		p	0	p_145827_0_	nbt	#nbt, :, :, :
+	m	()V	func_70296_d	markDirty	#markDirty, :, :, :
+		c	For tile entities, ensures the chunk containing the tile entity is saved to disk later - the game won't think it hasn't changed and skip it.
+	m	()V	func_145845_h	updateEntity	#updateEntity, :, ~, tick
+	m	()Lnet/minecraft/network/Packet;	func_145844_m	getDescriptionPacket	#getDescriptionPacket, :, getPacket, createUpdatePacket
+		c	Overriden in a sign to provide the text.
+	m	()D	func_145833_n	getMaxRenderDistanceSquared	#getMaxRenderDistanceSquared, :, getSquaredRenderDistance, getSquaredViewDistance
+	m	()Z	func_145830_o	hasWorldObj	#hasWorldObj, hasWorld, :, :
+		c	Returns true if the worldObj isn't null.
+	m	()I	func_145832_p	getBlockMetadata	#getBlockMetadata, :, getDataValue, getBlockMetadata
+	m	()Lnet/minecraft/block/Block;	func_145838_q	getBlockType	#getBlockType, :, getBlock, :
+		c	Gets the block type at the location of this entity (client-only).
+	m	()Z	func_145837_r	isInvalid	#isInvalid, :, isRemoved, :
+		c	returns true if tile entity is invalid, false otherwise
+	m	()V	func_145843_s	invalidate	#invalidate, :, markRemoved, :
+		c	invalidates a tile entity
+	m	()V	func_145829_t	validate	#validate, :, cancelRemoval, :
+		c	validates a tile entity
+	m	()V	func_145836_u	updateContainingBlockInfo	#updateContainingBlockInfo, :, resetBlock, clearBlockCache
+		c	Causes the TileEntity to reset all it's cached values for it's container Block, metadata and in the case of chests, the adjacent chest check
+	m	()Ljava/util/Map;	access$000	access$000	#~, ~, ~, getBlockToId
+	m	()Lnet/minecraft/world/World;	func_145831_w	getWorldObj	#getWorldObj, getWorld, getEntityWorld, getWorld
+		c	Returns the worldObj for this tileEntity.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

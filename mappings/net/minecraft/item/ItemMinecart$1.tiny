@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemMinecart$1	net/minecraft/item/ItemMinecart$1	
+	f	Lnet/minecraft/dispenser/BehaviorDefaultDispenseItem;	field_96465_b	behaviourDefaultDispenseItem	#behaviourDefaultDispenseItem, :, itemDispenserBehavior, fallback
+	m	()V	<init>	<init>	#~, ~, ~, ~

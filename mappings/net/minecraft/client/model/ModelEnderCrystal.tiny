@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelEnderCrystal	net/minecraft/client/model/ModelEnderCrystal	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78230_a	cube	#cube, :, core, cube
+		c	The cube model for the Ender Crystal.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78228_b	glass	#glass, :, frame, glass
+		c	The glass model for the Ender Crystal.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78229_c	base	#base, :, bottom, base
+		c	The base model for the Ender Crystal.
+	m	(FZ)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1170_2_	renderBase	#renderBase, :, hasBase, base
+		p	1	p_i1170_1_	reduction	#~, ~, ~, reduction

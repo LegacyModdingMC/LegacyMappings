@@ -1,0 +1,36 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/FurnaceRecipes	net/minecraft/item/crafting/FurnaceRecipes	
+	f	Lnet/minecraft/item/crafting/FurnaceRecipes;	field_77606_a	smeltingBase	#smeltingBase, SMELTING_BASE, INSTANCE, :
+	f	Ljava/util/Map;	field_77604_b	smeltingList	#smeltingList, :, ORIGINAL_PRODUCT_MAP, recipes
+		c	The list of smelting results.
+	f	Ljava/util/Map;	field_77605_c	experienceList	#experienceList, :, PRODUCT_XP_MAP, xpResults
+		c	A list which contains how many experience points each recipe output will give.
+	m	()Lnet/minecraft/item/crafting/FurnaceRecipes;	func_77602_a	smelting	#smelting, instance, getInstance, :
+		c	Used to call methods addSmelting and getSmeltingResult.
+	m	(Lnet/minecraft/item/Item;Lnet/minecraft/item/ItemStack;F)V	func_151396_a	addSmelting	#addSmelting, :, addItem, register
+		c	Adds a smelting recipe using an Item as the input item.
+		p	1	p_151396_1_	input	#input, :, item, input
+		p	2	p_151396_2_	stack	#stack, :, :, result
+		p	3	p_151396_3_	experience	#experience, :, xp, :
+	m	(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;	func_151395_a	getSmeltingResult	#getSmeltingResult, :, getResult, :
+		c	Returns the smelting result of an item.
+		p	1	p_151395_1_	stack	#stack, :, :, input
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z	func_151397_a	compareItemStacks	#compareItemStacks, :, stackEquals, matchesInput
+		c	Compares two itemstacks to ensure that they are the same. This checks both the item and the metadata of the item.
+		p	1	p_151397_1_	stack1	#stack1, :, :, stack
+		p	2	p_151397_2_	stack2	#stack2, :, :, input
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;F)V	func_151394_a	addSmeltingRecipe	#addSmeltingRecipe, :, addItemStack, register
+		c	Adds a smelting recipe using an ItemStack as the input for the recipe.
+		p	1	p_151394_1_	input	#input, :, original, input
+		p	2	p_151394_2_	stack	#stack, :, product, result
+		p	3	p_151394_3_	experience	#experience, :, xp, :
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemStack;F)V	func_151393_a	addSmeltingRecipeForBlock	#addSmeltingRecipeForBlock, :, addBlock, register
+		c	Adds a smelting recipe, where the input item is an instance of Block.
+		p	1	p_151393_1_	input	#input, :, block, input
+		p	2	p_151393_2_	stack	#stack, :, :, result
+		p	3	p_151393_3_	experience	#experience, :, xp, :
+	m	()Ljava/util/Map;	func_77599_b	getSmeltingList	#getSmeltingList, :, getRecipeMap, getRecipes
+	m	(Lnet/minecraft/item/ItemStack;)F	func_151398_b	getSmeltingExperience	#getSmeltingExperience, :, getXp, :
+		p	1	p_151398_1_	stack	#stack, :, :, input
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

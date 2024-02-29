@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/FoodStats	net/minecraft/util/FoodStats	
+	f	I	field_75127_a	foodLevel	#foodLevel, :, :, :
+		c	The player's food level.
+	f	F	field_75125_b	foodSaturationLevel	#foodSaturationLevel, :, :, saturationLevel
+		c	The player's food saturation.
+	f	F	field_75126_c	foodExhaustionLevel	#foodExhaustionLevel, :, exhaustion, :
+		c	The player's food exhaustion.
+	f	I	field_75123_d	foodTimer	#foodTimer, :, foodStarvationTimer, starvationTimer
+		c	The player's food timer value.
+	f	I	field_75124_e	prevFoodLevel	#prevFoodLevel, :, :, lastFoodLevel
+	m	()I	func_75116_a	getFoodLevel	#getFoodLevel, :, :, :
+		c	Get the player's food level.
+	m	(F)V	func_75113_a	addExhaustion	#addExhaustion, :, :, :
+		c	adds input to foodExhaustionLevel to a max of 40
+		p	1	p_75113_1_	exhaustion	#exhaustion, :, :, :
+	m	(I)V	func_75114_a	setFoodLevel	#setFoodLevel, :, :, :
+		p	1	p_75114_1_	foodLevelIn	#foodLevelIn, :, foodLevel, :
+	m	(IF)V	func_75122_a	addStats	#addStats, :, add, :
+		c	Args: int foodLevel, float foodSaturationModifier
+		p	1	p_75122_1_	foodLevelIn	#foodLevelIn, :, food, :
+		p	2	p_75122_2_	foodSaturationModifier	#foodSaturationModifier, :, saturationModifier, saturation
+	m	(Lnet/minecraft/item/ItemFood;Lnet/minecraft/item/ItemStack;)V	func_151686_a	addStats	#addStats, :, incrementStat, add
+		p	1	p_151686_1_	foodItem	#foodItem, :, food, :
+		p	2	p_151686_2_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_75112_a	readNBT	#readNBT, :, deserialize, readNbt
+		c	Reads food stats from an NBT object.
+		p	1	p_75112_1_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_75118_a	onUpdate	#onUpdate, :, update, tick
+		c	Handles the food game logic.
+		p	1	p_75118_1_	player	#player, :, :, :
+	m	()I	func_75120_b	getPrevFoodLevel	#getPrevFoodLevel, :, :, getLastFoodLevel
+	m	(F)V	func_75119_b	setFoodSaturationLevel	#setFoodSaturationLevel, :, setSaturationLevelClient, setSaturationLevel
+		p	1	p_75119_1_	foodSaturationLevelIn	#foodSaturationLevelIn, :, saturationLevel, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_75117_b	writeNBT	#writeNBT, :, serialize, writeNbt
+		c	Writes food stats to an NBT object.
+		p	1	p_75117_1_	compound	#compound, :, nbt, :
+	m	()Z	func_75121_c	needFood	#needFood, :, isNotFull, needsFood
+		c	If foodLevel is not max.
+	m	()F	func_75115_e	getSaturationLevel	#getSaturationLevel, :, :, :
+		c	Get the player's food saturation level.
+	m	()V	<init>	<init>	#~, ~, ~, ~

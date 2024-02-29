@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelBlaze	net/minecraft/client/model/ModelBlaze	
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78106_a	blazeSticks	#blazeSticks, :, rods, :
+		c	The sticks that fly around the Blaze.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78105_b	blazeHead	#blazeHead, :, head, :
+	m	()I	func_78104_a	getNumberOfTopRods	#~, ~, ~, getNumberOfTopRods
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,78 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureBoundingBox	net/minecraft/world/gen/structure/StructureBoundingBox	
+	f	I	field_78897_a	minX	#minX, :, :, :
+		c	The first x coordinate of a bounding box.
+	f	I	field_78895_b	minY	#minY, :, :, :
+		c	The first y coordinate of a bounding box.
+	f	I	field_78896_c	minZ	#minZ, :, :, :
+		c	The first z coordinate of a bounding box.
+	f	I	field_78893_d	maxX	#maxX, :, :, :
+		c	The second x coordinate of a bounding box.
+	f	I	field_78894_e	maxY	#maxY, :, :, :
+		c	The second y coordinate of a bounding box.
+	f	I	field_78892_f	maxZ	#maxZ, :, :, :
+		c	The second z coordinate of a bounding box.
+	m	(IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2033_1_	xMin	#xMin, :, minX, :
+		p	2	p_i2033_2_	zMin	#zMin, :, minZ, :
+		p	3	p_i2033_3_	xMax	#xMax, :, maxX, :
+		p	4	p_i2033_4_	zMax	#zMax, :, maxZ, :
+	m	(IIIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2032_1_	xMin	#xMin, :, minX, :
+		p	2	p_i2032_2_	yMin	#yMin, :, minY, :
+		p	3	p_i2032_3_	zMin	#zMin, :, minZ, :
+		p	4	p_i2032_4_	xMax	#xMax, :, maxX, :
+		p	5	p_i2032_5_	yMax	#yMax, :, maxY, :
+		p	6	p_i2032_6_	zMax	#zMax, :, maxZ, :
+	m	(Lnet/minecraft/world/gen/structure/StructureBoundingBox;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2031_1_	structurebb	#structurebb, :, source, box
+	m	([I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i43000_1_	coords	#coords, :, data, coords
+	m	()Lnet/minecraft/world/gen/structure/StructureBoundingBox;	func_78887_a	getNewBoundingBox	#getNewBoundingBox, :, empty, infinite
+		c	returns a new StructureBoundingBox with MAX values
+	m	(III)V	func_78886_a	offset	#offset, :, move, :
+		c	Offsets the current bounding box by the specified coordinates. Args: x, y, z
+		p	1	p_78886_1_	x	#x, :, dx, :
+		p	2	p_78886_2_	y	#y, :, dy, :
+		p	3	p_78886_3_	z	#z, :, dz, :
+	m	(IIII)Z	func_78885_a	intersectsWith	#intersectsWith, :, intersectsXZ, intersects
+		c	Discover if a coordinate is inside the bounding box area.
+		p	1	p_78885_1_	minXIn	#minXIn, :, minX, :
+		p	2	p_78885_2_	minZIn	#minZIn, :, minZ, :
+		p	3	p_78885_3_	maxXIn	#maxXIn, :, maxX, :
+		p	4	p_78885_4_	maxZIn	#maxZIn, :, maxZ, :
+	m	(IIIIIIIIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;	func_78889_a	getComponentToAddBoundingBox	#getComponentToAddBoundingBox, :, rotated, orient
+		c	used to project a possible new component Bounding Box - to check if it would cut anything already spawned
+		p	0	p_78889_0_	x	#~, ~, x, :
+		p	1	p_78889_1_	y	#~, ~, y, :
+		p	2	p_78889_2_	z	#~, ~, z, :
+		p	3	p_78889_3_	offsetX	#~, ~, offsetX, :
+		p	4	p_78889_4_	offsetY	#~, ~, offsetY, :
+		p	5	p_78889_5_	offsetZ	#~, ~, offsetZ, :
+		p	6	p_78889_6_	sizeX	#~, ~, sizeX, :
+		p	7	p_78889_7_	sizeY	#~, ~, sizeY, :
+		p	8	p_78889_8_	sizeZ	#~, ~, sizeZ, :
+		p	9	p_78889_9_	dir	#~, ~, facing, dir
+	m	(Lnet/minecraft/world/gen/structure/StructureBoundingBox;)Z	func_78884_a	intersectsWith	#intersectsWith, :, intersects, :
+		c	Returns whether the given bounding box intersects with this one. Args: structureboundingbox
+		p	1	p_78884_1_	structurebb	#structurebb, :, other, box
+	m	()I	func_78883_b	getXSize	#getXSize, :, getBlockCountX, getSpanX
+		c	Returns width of a bounding box
+	m	(III)Z	func_78890_b	isVecInside	#isVecInside, :, intersects, contains
+		c	Returns true if block is inside bounding box
+		p	1	p_78890_1_	x	#~, ~, x, :
+		p	2	p_78890_2_	y	#~, ~, y, :
+		p	3	p_78890_3_	z	#~, ~, z, :
+	m	(Lnet/minecraft/world/gen/structure/StructureBoundingBox;)V	func_78888_b	expandTo	#expandTo, :, encompass, union
+		c	Expands a bounding box's dimensions to include the supplied bounding box.
+		p	1	p_78888_1_	sbb	#sbb, :, region, box
+	m	()I	func_78882_c	getYSize	#getYSize, :, getBlockCountY, getSpanY
+		c	Returns height of a bounding box
+	m	()I	func_78880_d	getZSize	#getZSize, :, getBlockCountZ, getSpanZ
+		c	Returns length of a bounding box
+	m	()I	func_78881_e	getCenterX	#getCenterX, :, :, :
+	m	()I	func_78879_f	getCenterY	#getCenterY, :, :, :
+	m	()I	func_78891_g	getCenterZ	#getCenterZ, :, :, :
+	m	()Lnet/minecraft/nbt/NBTTagIntArray;	func_151535_h	toNBTTagIntArray	#toNBTTagIntArray, :, toNbt, :
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

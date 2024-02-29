@@ -1,0 +1,38 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/SaveFormatComparator	net/minecraft/world/storage/SaveFormatComparator	
+	f	Ljava/lang/String;	field_75797_a	fileName	#fileName, :, :, saveName
+		c	the file name of this save
+	f	Ljava/lang/String;	field_75795_b	displayName	#displayName, :, :, name
+		c	the displayed name of this save file
+	f	J	field_75796_c	lastTimePlayed	#lastTimePlayed, :, lastPlayed, :
+	f	J	field_75793_d	sizeOnDisk	#sizeOnDisk, :, :, size
+	f	Z	field_75794_e	requiresConversion	#requiresConversion, :, :, sameVersion
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_75791_f	theEnumGameType	#theEnumGameType, gameType, ~, gameMode
+		c	Instance of EnumGameType.
+	f	Z	field_75792_g	hardcore	#hardcore, :, :, :
+	f	Z	field_75798_h	cheatsEnabled	#cheatsEnabled, :, cheats, :
+	m	()Ljava/lang/String;	func_75786_a	getFileName	#getFileName, :, :, getSaveName
+		c	return the file name
+	m	(Lnet/minecraft/world/storage/SaveFormatComparator;)I	compareTo	compareTo	#~, ~, compareTo, :
+		p	1	p_compareTo_1_	p_compareTo_1_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	func_75788_b	getDisplayName	#getDisplayName, :, :, getName
+		c	return the display name of the save
+	m	()J	func_154336_c	getSizeOnDisk	#getSizeOnDisk, :, :, getSize
+	m	(Ljava/lang/Object;)I	compareTo	compareTo	#~, ~, ~, ~
+		p	1	p_compareTo_1_	info	#~, ~, levelSummary, info
+	m	()Z	func_75785_d	requiresConversion	#requiresConversion, :, :, isSameVersion
+	m	()J	func_75784_e	getLastTimePlayed	#getLastTimePlayed, :, getLastPlayed, :
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_75790_f	getEnumGameType	#getEnumGameType, :, ~, getGameMode
+		c	Gets the EnumGameType.
+	m	()Z	func_75789_g	isHardcoreModeEnabled	#isHardcoreModeEnabled, :, isHardcore, :
+	m	()Z	func_75783_h	getCheatsEnabled	#getCheatsEnabled, :, cheatsEnabled, areCheatsEnabled
+		c	@return {@code true} if cheats are enabled for this world
+	m	(Ljava/lang/String;Ljava/lang/String;JJLnet/minecraft/world/WorldSettings$GameType;ZZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2161_1_	fileNameIn	#fileNameIn, :, ~, fileName
+		p	2	p_i2161_2_	displayNameIn	#displayNameIn, :, ~, worldName
+		p	3	p_i2161_3_	lastTimePlayedIn	#lastTimePlayedIn, :, ~, lastPlayed
+		p	5	p_i2161_5_	sizeOnDiskIn	#sizeOnDiskIn, :, ~, size
+		p	7	p_i2161_7_	theEnumGameTypeIn	#theEnumGameTypeIn, :, ~, gameMode
+		p	8	p_i2161_8_	requiresConversionIn	#requiresConversionIn, :, ~, sameVersion
+		p	9	p_i2161_9_	hardcoreIn	#hardcoreIn, :, ~, hardcore
+		p	10	p_i2161_10_	cheatsEnabledIn	#cheatsEnabledIn, :, ~, cheats

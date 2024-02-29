@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C16PacketClientStatus$EnumState	net/minecraft/network/play/client/C16PacketClientStatus$EnumState	
+	f	Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	PERFORM_RESPAWN	PERFORM_RESPAWN	#~, ~, PERFORM_RESPAWN, :
+	f	Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	REQUEST_STATS	REQUEST_STATS	#~, ~, REQUEST_STATS, :
+	f	Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	OPEN_INVENTORY_ACHIEVEMENT	OPEN_INVENTORY_ACHIEVEMENT	#~, ~, OPEN_INVENTORY_ACHIEVEMENT, :
+	f	I	field_151403_d	id	#id, :, ~, index
+	f	[Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	field_151404_e	BY_ID	#BY_ID, :, ~, ALL
+	f	[Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	()[Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	access$000	access$000	#~, ~, ~, ~
+	m	(Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;)I	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	values	values	#~, ~, ~, ~
+	m	(Ljava/lang/String;II)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45241_3_	statusId	#statusId, :, ~, index
+		p	1	p_i45241_1_	p_i45241_1_	#~, ~, ~, ~
+		p	2	p_i45241_2_	p_i45241_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

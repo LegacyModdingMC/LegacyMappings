@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCocoa	net/minecraft/block/BlockCocoa	
+	f	[Lnet/minecraft/util/IIcon;	field_149989_a	cocoaSprite	#~, ~, ~, cocoaSprite
+	m	(I)Lnet/minecraft/util/IIcon;	func_149988_b	getCocoaIcon	#getCocoaIcon, :, ~, setSprite
+		p	1	p_149988_1_	metadata	#~, ~, ~, metadata
+	m	(I)I	func_149987_c	getNextGrowthStage	#~, ~, ~, getNextGrowthStage
+		p	0	p_149987_0_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

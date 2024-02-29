@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/stream/GuiStreamUnavailable	net/minecraft/client/gui/stream/GuiStreamUnavailable	
+	f	Lorg/apache/logging/log4j/Logger;	field_152322_a	LOGGER	#~, ~, LOGGER, :
+	f	Lnet/minecraft/util/IChatComponent;	field_152324_f	title	#~, ~, unavailableText, title
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_152325_g	parentScreen	#parentScreen, :, parent, :
+	f	Lnet/minecraft/client/gui/stream/GuiStreamUnavailable$Reason;	field_152326_h	reason	#~, ~, ~, reason
+	f	Ljava/util/List;	field_152327_i	errorDetails	#~, ~, errorDetails, ~
+	f	Ljava/util/List;	field_152323_r	errorMessages	#~, ~, errorMessages, ~
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	func_152321_a	openNew	#~, ~, openNew, ~
+		p	0	p_152321_0_	parent	#~, ~, parent, ~
+	m	(Ljava/lang/String;)V	func_152320_a	setUrl	#~, ~, setUrl, ~
+		p	1	p_152320_1_	url	#~, ~, url, ~
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/gui/stream/GuiStreamUnavailable$Reason;Ljava/util/List;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1071_1_	parent	#parent, :, ~, ~
+		p	2	p_i1071_2_	manager	#manager, :, ~, ~
+		p	3	p_i1071_3_	p_i1071_3_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/gui/stream/GuiStreamUnavailable$Reason;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1070_1_	p_i1070_1_	#~, ~, ~, ~
+		p	2	p_i1070_2_	p_i1070_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

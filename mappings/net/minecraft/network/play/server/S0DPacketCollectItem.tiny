@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S0DPacketCollectItem	net/minecraft/network/play/server/S0DPacketCollectItem	
+	f	I	field_149357_a	collectedItemEntityId	#collectedItemEntityId, :, chunkX, id
+	f	I	field_149356_b	entityId	#entityId, :, chunkZ, collectorId
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45232_1_	collectedItemEntityIdIn	#collectedItemEntityIdIn, :, chunkX, id
+		p	2	p_i45232_2_	entityIdIn	#entityIdIn, :, chunkZ, collectorId
+	m	()I	func_149354_c	getCollectedItemEntityID	#getCollectedItemEntityID, :, getChunkX, getId
+	m	()I	func_149353_d	getEntityID	#getEntityID, :, getChunkZ, getCollectorId
+	m	()V	<init>	<init>	#~, ~, ~, ~

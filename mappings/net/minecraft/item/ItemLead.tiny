@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemLead	net/minecraft/item/ItemLead	
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;III)Z	func_150909_a	attachLead	#~, ~, ~, attachLead
+		p	0	p_150909_0_	player	#~, ~, ~, player
+		p	1	p_150909_1_	world	#~, ~, ~, world
+		p	2	p_150909_2_	x	#~, ~, ~, x
+		p	3	p_150909_3_	y	#~, ~, ~, y
+		p	4	p_150909_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

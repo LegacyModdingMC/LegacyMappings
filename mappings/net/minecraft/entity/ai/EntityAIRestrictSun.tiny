@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIRestrictSun	net/minecraft/entity/ai/EntityAIRestrictSun	
+	f	Lnet/minecraft/entity/EntityCreature;	field_75273_a	theEntity	#theEntity, entity, :, :
+	m	(Lnet/minecraft/entity/EntityCreature;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1652_1_	creature	#creature, :, entity, :

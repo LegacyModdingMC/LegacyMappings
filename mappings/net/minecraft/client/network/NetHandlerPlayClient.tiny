@@ -1,0 +1,39 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/NetHandlerPlayClient	net/minecraft/client/network/NetHandlerPlayClient	
+	f	Lnet/minecraft/world/storage/MapStorage;	field_147305_a	mapStorageOrigin	#mapStorageOrigin, :, stateManager, savedDataStorage
+		c	Origin of the central MapStorage serving as a public reference for WorldClient. Not used in this class
+	f	Ljava/util/List;	field_147303_b	playerInfoList	#playerInfoList, :, ~, onlinePlayers
+		c	An ArrayList of GuiPlayerInfo (includes all the players' GuiPlayerInfo on the current server)
+	f	I	field_147304_c	currentServerMaxPlayers	#currentServerMaxPlayers, :, maxPlayers, maxPlayerCount
+	f	Lorg/apache/logging/log4j/Logger;	field_147301_d	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/network/NetworkManager;	field_147302_e	netManager	#netManager, :, connection, :
+		c	The NetworkManager instance used to communicate with the server (used only by handlePlayerPosLook to update positioning and handleJoinGame to inform the server of the client distribution/mods)
+	f	Lnet/minecraft/client/Minecraft;	field_147299_f	gameController	#gameController, client, :, minecraft
+		c	Reference to the Minecraft instance, which many handler methods operate on
+	f	Lnet/minecraft/client/multiplayer/WorldClient;	field_147300_g	clientWorldController	#clientWorldController, world, :, :
+		c	Reference to the current ClientWorld instance, which many handler methods operate on
+	f	Z	field_147309_h	doneLoadingTerrain	#doneLoadingTerrain, :, positionLookSetup, started
+		c	True if the client has finished downloading terrain and may spawn. Set upon receipt of S08PacketPlayerPosLook, reset upon respawning
+	f	Ljava/util/Map;	field_147310_i	playerInfoMap	#playerInfoMap, :, playerListEntries, onlinePlayersByName
+		c	A mapping from player names to their respective GuiPlayerInfo (specifies the clients response time to the server)
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_147307_j	guiScreenServer	#guiScreenServer, :, loginScreen, callbackScreen
+		c	Seems to be either null (integrated server) or an instance of either GuiMultiplayer (when connecting to a server) or GuiScreenReamlsTOS (when connecting to MCO server)
+	f	Z	field_147308_k	hasStatistics	#hasStatistics, :, ~, hasAchievements
+	f	Ljava/util/Random;	field_147306_l	avRandomizer	#avRandomizer, :, random, :
+		c	Just an ordinary random number generator, used to randomize audio pitch of item/orb pickup and randomize both particlespawn offset and velocity
+	m	(Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/network/NetworkManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45061_1_	minecraft	#~, ~, client, minecraft
+		p	2	p_i45061_2_	callbackScreen	#~, ~, loginScreen, callbackScreen
+		p	3	p_i45061_3_	connection	#~, ~, connection, :
+	m	(Lnet/minecraft/client/network/NetHandlerPlayClient;)Lnet/minecraft/client/Minecraft;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/network/NetHandlerPlayClient;Lnet/minecraft/client/Minecraft;)Lnet/minecraft/client/Minecraft;	access$002	access$002	#~, ~, ~, ~
+		p	0	p_access$002_0_	p_access$002_0_	#~, ~, ~, ~
+		p	1	p_access$002_1_	p_access$002_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/network/Packet;)V	func_147297_a	addToSendQueue	#addToSendQueue, sendPacket, :, :
+		p	1	p_147297_1_	packetIn	#packetIn, :, packet, :
+	m	()Lnet/minecraft/network/NetworkManager;	func_147298_b	getNetworkManager	#getNetworkManager, :, getClientConnection, getConnection
+		c	Returns this the NetworkManager instance registered with this NetworkHandlerPlayClient
+	m	()V	func_147296_c	cleanup	#cleanup, :, clearWorld, cleanUp
+		c	Clears the WorldClient instance associated with this NetHandlerPlayClient
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

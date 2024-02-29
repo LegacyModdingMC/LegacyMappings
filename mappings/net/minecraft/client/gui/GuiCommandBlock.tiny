@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiCommandBlock	net/minecraft/client/gui/GuiCommandBlock	
+	f	Lorg/apache/logging/log4j/Logger;	field_146488_a	LOGGER	#~, ~, LOGGER, :
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146485_f	commandTextField	#commandTextField, :, input, :
+		c	Text field containing the command block's command.
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_146486_g	previousOutputTextField	#previousOutputTextField, :, output, :
+	f	Lnet/minecraft/command/server/CommandBlockLogic;	field_146489_h	localCommandBlock	#localCommandBlock, :, executor, :
+		c	Command block being edited.
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146490_i	doneBtn	#doneBtn, :, doneButton, :
+		c	"Done" button for the GUI.
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146487_r	cancelBtn	#cancelBtn, :, cancelButton, :
+	m	(Lnet/minecraft/command/server/CommandBlockLogic;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45032_1_	executor	#~, ~, executor, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

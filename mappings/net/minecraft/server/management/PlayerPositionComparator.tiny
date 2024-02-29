@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/PlayerPositionComparator	net/minecraft/server/management/PlayerPositionComparator	
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_82548_a	theChunkCoordinates	#theChunkCoordinates, :, blockPos, pos
+	m	(Lnet/minecraft/util/ChunkCoordinates;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1499_1_	pos	#~, ~, blockPos, pos
+	m	(Lnet/minecraft/entity/player/EntityPlayerMP;Lnet/minecraft/entity/player/EntityPlayerMP;)I	compare	compare	#~, ~, compare, :
+		p	1	p_compare_1_	p_compare_1_	#~, ~, ~, ~
+		p	2	p_compare_2_	p_compare_2_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	#~, ~, ~, ~
+		p	1	p_compare_1_	player1	#~, ~, ~, player1
+		p	2	p_compare_2_	player2	#~, ~, ~, player2

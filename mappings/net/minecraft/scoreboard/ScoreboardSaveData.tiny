@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/ScoreboardSaveData	net/minecraft/scoreboard/ScoreboardSaveData	
+	f	Lorg/apache/logging/log4j/Logger;	field_151481_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/scoreboard/Scoreboard;	field_96507_a	theScoreboard	#theScoreboard, scoreboard, ~, scoreboard
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_96506_b	delayedInitNbt	#delayedInitNbt, :, ~, nbt
+	m	()Lnet/minecraft/nbt/NBTTagList;	func_96496_a	teamsToNbt	#teamsToNbt, :, serializeTeams, teamsToNbt
+	m	(Lnet/minecraft/scoreboard/ScorePlayerTeam;Lnet/minecraft/nbt/NBTTagList;)V	func_96502_a	loadTeamPlayers	#loadTeamPlayers, :, deserializeTeamPlayers, readTeamMembersFromNbt
+		p	1	p_96502_1_	playerTeam	#playerTeam, :, team, :
+		p	2	p_96502_2_	tagList	#tagList, :, ~, nbt
+	m	(Lnet/minecraft/scoreboard/Scoreboard;)V	func_96499_a	setScoreboard	#setScoreboard, :, :, :
+		p	1	p_96499_1_	scoreboardIn	#scoreboardIn, :, ~, scoreboard
+	m	(Lnet/minecraft/nbt/NBTTagList;)V	func_96498_a	readTeams	#readTeams, :, deserializeTeams, readTeamsFromNbt
+		p	1	p_96498_1_	tagList	#tagList, :, ~, nbt
+	m	()Lnet/minecraft/nbt/NBTTagList;	func_96505_b	objectivesToNbt	#objectivesToNbt, :, serializeObjectives, objectivesToNbt
+	m	(Lnet/minecraft/nbt/NBTTagList;)V	func_96501_b	readObjectives	#readObjectives, :, ~, readObjectivesFromNbt
+		p	1	p_96501_1_	nbt	#nbt, :, ~, nbt
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_96504_c	readDisplayConfig	#readDisplayConfig, :, deserializeDisplaySlots, readDisplaySlotsFromNbt
+		p	1	p_96504_1_	compound	#compound, :, ~, nbt
+	m	(Lnet/minecraft/nbt/NBTTagList;)V	func_96500_c	readScores	#readScores, :, ~, readScoresFromNbt
+		p	1	p_96500_1_	nbt	#nbt, :, ~, nbt
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_96497_d	fillInDisplaySlots	#fillInDisplaySlots, :, serializeSlots, writeDisplaySlots
+		p	1	p_96497_1_	compound	#compound, :, ~, nbt
+	m	()Lnet/minecraft/nbt/NBTTagList;	func_96503_e	scoresToNbt	#scoresToNbt, :, ~, scoresToNbt
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2310_1_	name	#name, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

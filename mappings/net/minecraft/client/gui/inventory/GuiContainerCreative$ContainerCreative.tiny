@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiContainerCreative$ContainerCreative	net/minecraft/client/gui/inventory/GuiContainerCreative$ContainerCreative	
+	f	Ljava/util/List;	field_148330_a	itemList	#itemList, :, ~, inventory
+		c	the list of items in this container
+	m	(F)V	func_148329_a	scrollTo	#scrollTo, :, ~, scrollItems
+		c	Updates the gui slots ItemStack's based on scroll position.
+		p	1	p_148329_1_	pos	#pos, :, ~, position
+	m	()Z	func_148328_e	canScroll	#canScroll, :, ~, isMaxTabsReached
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1086_1_	player	#player, :, ~, player

@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiYesNo	net/minecraft/client/gui/GuiYesNo	
+	f	Lnet/minecraft/client/gui/GuiYesNoCallback;	field_146355_a	parentScreen	#parentScreen, :, consumer, parent
+		c	A reference to the screen object that created this. Used for navigating between screens.
+	f	Ljava/lang/String;	field_146351_f	messageLine1	#messageLine1, :, title, :
+	f	Ljava/lang/String;	field_146352_g	confirmButtonText	#confirmButtonText, :, yesText, confirmText
+		c	The text shown for the first button in GuiYesNo
+	f	Ljava/lang/String;	field_146356_h	cancelButtonText	#cancelButtonText, :, noText, abortText
+		c	The text shown for the second button in GuiYesNo
+	f	I	field_146357_i	parentButtonClickedId	#parentButtonClickedId, :, identifier, id
+	f	Ljava/lang/String;	field_146354_r	messageLine2	#messageLine2, :, subtitle, description
+	f	I	field_146353_s	ticksUntilEnable	#ticksUntilEnable, :, buttonEnableTimer, :
+	m	(Lnet/minecraft/client/gui/GuiYesNoCallback;Ljava/lang/String;Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1082_1_	parentScreenIn	#parentScreenIn, :, consumer, ~
+		p	2	p_i1082_2_	messageLine1In	#messageLine1In, :, title, ~
+		p	3	p_i1082_3_	messageLine2In	#messageLine2In, :, subtitle, ~
+		p	4	p_i1082_4_	parentButtonClickedIdIn	#parentButtonClickedIdIn, :, identifier, ~
+	m	(Lnet/minecraft/client/gui/GuiYesNoCallback;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1083_1_	parentScreenIn	#parentScreenIn, :, consumer, ~
+		p	2	p_i1083_2_	messageLine1In	#messageLine1In, :, title, ~
+		p	3	p_i1083_3_	messageLine2In	#messageLine2In, :, subtitle, ~
+		p	4	p_i1083_4_	confirmButtonTextIn	#confirmButtonTextIn, :, yesText, ~
+		p	5	p_i1083_5_	cancelButtonTextIn	#cancelButtonTextIn, :, noText, ~
+		p	6	p_i1083_6_	parentButtonClickedIdIn	#parentButtonClickedIdIn, :, identifier, ~
+	m	(I)V	func_146350_a	setButtonDelay	#setButtonDelay, :, disableButtons, :
+		c	Sets the number of ticks to wait before enabling the buttons.
+		p	1	p_146350_1_	ticksUntilEnableIn	#ticksUntilEnableIn, :, duration, :

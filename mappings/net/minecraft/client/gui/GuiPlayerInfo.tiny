@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiPlayerInfo	net/minecraft/client/gui/GuiPlayerInfo	
+	f	Ljava/lang/String;	field_78831_a	name	#name, :, ~, name
+		c	The string value of the object
+	f	I	field_78829_b	responseTime	#responseTime, :, ~, ping
+		c	Player response time to server in milliseconds
+	f	Ljava/lang/String;	field_78830_c	nameinLowerCase	#nameinLowerCase, :, ~, nameLowerCase
+		c	Player name in lowercase.
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1190_1_	name	#~, ~, ~, name

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/RenderEndPortal	net/minecraft/client/renderer/tileentity/RenderEndPortal	
+	f	Ljava/nio/FloatBuffer;	field_147528_b	buffer	#buffer, :, :, glFloatBuffer
+	f	Lnet/minecraft/util/ResourceLocation;	field_147529_c	END_SKY_TEXTURE	#END_SKY_TEXTURE, :, SKY_TEXTURE, END_SKY_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_147526_d	END_PORTAL_TEXTURE	#END_PORTAL_TEXTURE, :, PORTAL_TEXTURE, END_PORTAL_LOCATION
+	f	Ljava/util/Random;	field_147527_e	RANDOM	#RANDOM, :, :, :
+	m	(FFFF)Ljava/nio/FloatBuffer;	func_147525_a	getBuffer	#getBuffer, :, createBuffer, getBuffer
+		p	1	p_147525_1_	r	#~, ~, f1, r
+		p	2	p_147525_2_	g	#~, ~, f2, g
+		p	3	p_147525_3_	b	#~, ~, f3, b
+		p	4	p_147525_4_	a	#~, ~, f4, a
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

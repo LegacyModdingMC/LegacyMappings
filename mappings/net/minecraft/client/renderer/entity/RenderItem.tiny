@@ -1,0 +1,70 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderItem	net/minecraft/client/renderer/entity/RenderItem	
+	f	Z	field_77024_a	renderWithColor	#renderWithColor, :, ~, useCustomDisplayColor
+	f	F	field_77023_b	zLevel	#zLevel, :, zOffset, :
+		c	Defines the zLevel of rendering of item on GUI.
+	f	Z	field_82407_g	renderInFrame	#renderInFrame, :, ~, forceRotation
+	f	Lnet/minecraft/util/ResourceLocation;	field_110798_h	RES_ITEM_GLINT	#RES_ITEM_GLINT, :, ITEM_GLINT_TEXTURE, ENCHANTMENT_GLINT_LOCATION
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147913_i	renderBlocksRi	#renderBlocksRi, :, ~, blockRenderer
+	f	Ljava/util/Random;	field_77025_h	random	#random, :, ~, random
+		c	The RNG used in RenderItem (for bobbing itemstacks on the ground)
+	m	(IIIII)V	func_77018_a	renderGlint	#renderGlint, :, ~, renderEnchantmentGlint
+		p	1	p_77018_1_	seed	#~, ~, ~, seed
+		p	2	p_77018_2_	x	#~, ~, ~, x
+		p	3	p_77018_3_	y	#~, ~, ~, y
+		p	4	p_77018_4_	width	#~, ~, ~, width
+		p	5	p_77018_5_	height	#~, ~, ~, height
+	m	(IILnet/minecraft/util/IIcon;II)V	func_94149_a	renderIcon	#renderIcon, :, ~, drawTexture
+		p	1	p_94149_1_	x	#~, ~, ~, x
+		p	2	p_94149_2_	y	#~, ~, ~, y
+		p	3	p_94149_3_	sprite	#~, ~, ~, sprite
+		p	4	p_94149_4_	dX	#~, ~, ~, dX
+		p	5	p_94149_5_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/item/ItemStack;II)V	func_77015_a	renderItemIntoGUI	#renderItemIntoGUI, :, ~, renderGuiItem
+		c	Renders the item's icon or block into the UI at the specified position.
+		p	1	p_77015_1_	textRenderer	#~, ~, ~, textRenderer
+		p	2	p_77015_2_	textureManager	#~, ~, ~, textureManager
+		p	3	p_77015_3_	stack	#~, ~, ~, stack
+		p	4	p_77015_4_	x	#~, ~, ~, x
+		p	5	p_77015_5_	y	#~, ~, ~, y
+	m	(Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/item/ItemStack;IILjava/lang/String;)V	func_94148_a	renderItemOverlayIntoGUI	#renderItemOverlayIntoGUI, :, ~, renderItemInfo
+		c	Render an item info overlay conaining info such as the number of items in a stack or\nthe damage for armour or tools.
+		p	1	p_94148_1_	textRenderer	#~, ~, ~, textRenderer
+		p	2	p_94148_2_	textureManager	#~, ~, ~, textureManager
+		p	3	p_94148_3_	item	#~, ~, ~, item
+		p	4	p_94148_4_	width	#~, ~, ~, width
+		p	5	p_94148_5_	height	#~, ~, ~, height
+		p	6	p_94148_6_	overlayText	#~, ~, ~, overlayText
+	m	(Lnet/minecraft/client/renderer/Tessellator;IIIII)V	func_77017_a	renderQuad	#renderQuad, :, ~, drawRect
+		c	Adds a quad to the tesselator at the specified position with the set width and height and color.  Args: tessellator, x, y, width, height, color
+		p	1	p_77017_1_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	2	p_77017_2_	x	#~, ~, ~, x
+		p	3	p_77017_3_	y	#~, ~, ~, y
+		p	4	p_77017_4_	width	#~, ~, ~, width
+		p	5	p_77017_5_	height	#~, ~, ~, height
+		p	6	p_77017_6_	color	#~, ~, ~, color
+	m	(Lnet/minecraft/entity/item/EntityItem;Lnet/minecraft/util/IIcon;IFFFF)V	func_77020_a	renderDroppedItem	#renderDroppedItem, :, ~, render
+		c	Renders a dropped item
+		p	1	p_77020_1_	item	#~, ~, ~, item
+		p	2	p_77020_2_	sprite	#~, ~, ~, sprite
+		p	3	p_77020_3_	stackType	#~, ~, ~, stackType
+		p	4	p_77020_4_	tickDelta	#~, ~, ~, tickDelta
+		p	5	p_77020_5_	r	#~, ~, ~, r
+		p	6	p_77020_6_	g	#~, ~, ~, g
+		p	7	p_77020_7_	b	#~, ~, ~, b
+	m	(Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/item/ItemStack;II)V	func_82406_b	renderItemAndEffectIntoGUI	#renderItemAndEffectIntoGUI, :, ~, renderGuiItemWithEnchantmentGlint
+		c	Render the item's icon or block into the GUI, including the glint effect.
+		p	1	p_82406_1_	textRenderer	#~, ~, ~, textRenderer
+		p	2	p_82406_2_	textureManager	#~, ~, ~, textureManager
+		p	3	p_82406_3_	stack	#~, ~, ~, stack
+		p	4	p_82406_4_	x	#~, ~, ~, x
+		p	5	p_82406_5_	y	#~, ~, ~, y
+	m	(Lnet/minecraft/client/gui/FontRenderer;Lnet/minecraft/client/renderer/texture/TextureManager;Lnet/minecraft/item/ItemStack;II)V	func_77021_b	renderItemOverlayIntoGUI	#renderItemOverlayIntoGUI, :, ~, renderItemInfo
+		c	Renders the item's overlay information. Examples being stack count or damage on top of the item's image at the specified position.
+		p	1	p_77021_1_	textRenderer	#~, ~, ~, textRenderer
+		p	2	p_77021_2_	textureManager	#~, ~, ~, textureManager
+		p	3	p_77021_3_	item	#~, ~, ~, item
+		p	4	p_77021_4_	width	#~, ~, ~, width
+		p	5	p_77021_5_	height	#~, ~, ~, height
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

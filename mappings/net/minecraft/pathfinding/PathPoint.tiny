@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/pathfinding/PathPoint	net/minecraft/pathfinding/PathPoint	
+	f	I	field_75839_a	xCoord	#xCoord, x, posX, x
+		c	The x coordinate of this point
+	f	I	field_75837_b	yCoord	#yCoord, y, posY, y
+		c	The y coordinate of this point
+	f	I	field_75838_c	zCoord	#zCoord, z, posZ, z
+		c	The z coordinate of this point
+	f	I	field_75835_d	index	#index, :, heapIndex, :
+		c	The index of this point in its assigned path
+	f	F	field_75836_e	totalPathDistance	#totalPathDistance, :, penalizedPathLength, distanceFromStart
+		c	The distance along the path to this point
+	f	F	field_75833_f	distanceToNext	#distanceToNext, :, distanceToNearestTarget, distanceToTarget
+		c	The linear distance to the next point
+	f	F	field_75834_g	distanceToTarget	#distanceToTarget, :, heapWeight, weight
+		c	The distance to the target
+	f	Lnet/minecraft/pathfinding/PathPoint;	field_75841_h	previous	#previous, :, :, prev
+		c	The point preceding this in its assigned path
+	f	Z	field_75842_i	isFirst	#isFirst, visited, :, :
+		c	Indicates this is the origin
+	f	I	field_75840_j	hash	#hash, :, hashCode, hash
+		c	A hash of the coordinates used to identify this point
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2135_1_	x	#x, :, :, :
+		p	2	p_i2135_2_	y	#y, :, :, :
+		p	3	p_i2135_3_	z	#z, :, :, :
+	m	()Z	func_75831_a	isAssigned	#isAssigned, :, isInHeap, :
+		c	Returns true if this point has already been assigned to a path
+	m	(III)I	func_75830_a	makeHash	#makeHash, :, hash, :
+		p	0	p_75830_0_	x	#x, :, :, :
+		p	1	p_75830_1_	y	#y, :, :, :
+		p	2	p_75830_2_	z	#z, :, :, :
+	m	(Lnet/minecraft/pathfinding/PathPoint;)F	func_75829_a	distanceTo	#distanceTo, :, getDistance, distanceTo
+		c	Returns the linear distance to another path point
+		p	1	p_75829_1_	pathpointIn	#pathpointIn, :, node, other
+	m	(Lnet/minecraft/pathfinding/PathPoint;)F	func_75832_b	distanceToSquared	#distanceToSquared, :, getSquaredDistance, squaredDistanceTo
+		c	Returns the squared distance to another path point
+		p	1	p_75832_1_	pathpointIn	#pathpointIn, :, node, other
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	obj	#~, ~, object, obj
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~

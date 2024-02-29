@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/MinecraftServer$5	net/minecraft/server/MinecraftServer$5	
+	f	Lnet/minecraft/server/MinecraftServer;	field_74272_a	mcServer	#mcServer, :, ~, server
+		c	Reference to the MinecraftServer object.
+	m	(Lnet/minecraft/server/MinecraftServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1496_1_	server	#~, ~, server, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

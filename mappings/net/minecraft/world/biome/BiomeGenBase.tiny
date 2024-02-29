@@ -1,0 +1,211 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenBase	net/minecraft/world/biome/BiomeGenBase	
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76774_n	icePlains	#icePlains, ICE_PLAINS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76775_o	iceMountains	#iceMountains, ICE_MOUNTAINS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76789_p	mushroomIsland	#mushroomIsland, MUSHROOM_ISLAND, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76788_q	mushroomIslandShore	#mushroomIslandShore, MUSHROOM_ISLAND_SHORE, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76787_r	beach	#beach, BEACH, :, :
+		c	Beach biome.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76786_s	desertHills	#desertHills, DESERT_HILLS, :, :
+		c	Desert Hills biome.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76785_t	forestHills	#forestHills, FOREST_HILLS, :, :
+		c	Forest Hills biome.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76784_u	taigaHills	#taigaHills, TAIGA_HILLS, :, :
+		c	Taiga Hills biome.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76783_v	extremeHillsEdge	#extremeHillsEdge, EXTREME_HILLS_EDGE, :, :
+		c	Extreme Hills Edge biome.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76782_w	jungle	#jungle, JUNGLE, :, :
+		c	Jungle biome identifier
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76792_x	jungleHills	#jungleHills, JUNGLE_HILLS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150574_L	jungleEdge	#jungleEdge, JUNGLE_EDGE, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150575_M	deepOcean	#deepOcean, DEEP_OCEAN, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150576_N	stoneBeach	#stoneBeach, STONE_BEACH, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150577_O	coldBeach	#coldBeach, COLD_BEACH, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150583_P	birchForest	#birchForest, BIRCH_FOREST, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150582_Q	birchForestHills	#birchForestHills, BIRCH_FOREST_HILLS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150585_R	roofedForest	#roofedForest, ROOFED_FOREST, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150584_S	coldTaiga	#coldTaiga, COLD_TAIGA, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150579_T	coldTaigaHills	#coldTaigaHills, COLD_TAIGA_HILLS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150578_U	megaTaiga	#megaTaiga, REDWOOD_TAIGA, MEGA_TAIGA, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150581_V	megaTaigaHills	#megaTaigaHills, REDWOOD_TAIGA_HILLS, MEGA_TAIGA_HILLS, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150580_W	extremeHillsPlus	#extremeHillsPlus, EXTREME_HILLS_WITH_TREES, EXTREME_HILLS_PLUS, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150588_X	savanna	#savanna, SAVANNA, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150587_Y	savannaPlateau	#savannaPlateau, SAVANNA_PLATEAU, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150589_Z	mesa	#mesa, MESA, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150596_a	height_Default	#height_Default, :, ~, DEFAULT_HEIGHT
+	f	Lnet/minecraft/world/gen/feature/WorldGenBigTree;	field_76758_O	worldGeneratorBigTree	#worldGeneratorBigTree, BIG_TREE_FEATURE, ~, largeTree
+		c	The big tree generator.
+	f	Lnet/minecraft/world/gen/feature/WorldGenSwamp;	field_76763_Q	worldGeneratorSwamp	#worldGeneratorSwamp, SWAMP_FEATURE, OAK_TREE_FEATURE, swampTree
+		c	The swamp tree generator.
+	f	Lorg/apache/logging/log4j/Logger;	field_150586_aC	logger	#logger, LOGGER, :, :
+	f	[Lnet/minecraft/world/biome/BiomeGenBase;	field_76773_a	biomeList	#biomeList, :, BIOMES, BY_ID
+		c	An array of all the biomes, indexed by biome id.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150607_aa	mesaPlateau_F	#mesaPlateau_F, MESA_ROCK, MESA_PLATEAU_F, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_150608_ab	mesaPlateau	#mesaPlateau, MESA_CLEAR_ROCK, MESA_PLATEAU, :
+	f	Lnet/minecraft/world/gen/NoiseGeneratorPerlin;	field_150605_ac	temperatureNoise	#temperatureNoise, TEMPERATURE_NOISE, :, :
+	f	Lnet/minecraft/world/gen/NoiseGeneratorPerlin;	field_150606_ad	plantNoise	#plantNoise, :, FOLIAGE_NOISE, :
+	f	Lnet/minecraft/world/gen/feature/WorldGenDoublePlant;	field_150610_ae	genTallFlowers	#genTallFlowers, :, DOUBLE_PLANT_FEATURE, DOUBLE_PLANT
+	f	Ljava/lang/String;	field_76791_y	biomeName	#biomeName, :, name, :
+	f	I	field_76790_z	color	#color, :, ~, biomeColor
+	f	I	field_150609_ah	baseColor	#~, ~, ~, baseColor
+	f	Lnet/minecraft/block/Block;	field_76752_A	topBlock	#topBlock, :, ~, surfaceBlock
+		c	The block expected to be on the top of this biome
+	f	I	field_150604_aj	topBlockMetadata	#topBlockMetadata, :, ~, surfaceBlockMetadata
+	f	Lnet/minecraft/block/Block;	field_76753_B	fillerBlock	#fillerBlock, :, ~, subsurfaceBlock
+		c	The block to fill spots in when not on the top
+	f	I	field_76754_C	fillerBlockMetadata	#fillerBlockMetadata, :, ~, mutatedColor
+	f	F	field_76748_D	rootHeight	#rootHeight, baseHeight, depth, baseHeight
+		c	The median height from which this biome will be generated. Values between -2 and 2  loosely represent y=0 and y=128 respectively.
+	f	F	field_76749_E	heightVariation	#heightVariation, :, variationModifier, heightVariation
+		c	Determines the maximum degree of departure from the rootHeight of the biome, positive or negative. Low values result in flatter terrain, where high values create steep peaks and trenches.
+	f	F	field_76750_F	temperature	#temperature, :, :, :
+		c	The temperature of this biome.
+	f	F	field_76751_G	rainfall	#rainfall, :, downfall, :
+		c	The rainfall in this biome.
+	f	I	field_76759_H	waterColorMultiplier	#waterColorMultiplier, waterColor, :, :
+		c	Color tint applied to water depending on biome
+	f	Lnet/minecraft/world/biome/BiomeDecorator;	field_76760_I	theBiomeDecorator	#theBiomeDecorator, decorator, biomeDecorator, decorator
+		c	The biome decorator.
+	f	Ljava/util/List;	field_76761_J	spawnableMonsterList	#spawnableMonsterList, :, monsterEntries, :
+		c	Holds the classes of IMobs (hostile mobs) that can be spawned in the biome.
+	f	Ljava/util/List;	field_76762_K	spawnableCreatureList	#spawnableCreatureList, :, passiveEntries, :
+		c	Holds the classes of any creature that can be spawned in the biome as friendly creature.
+	f	Ljava/util/List;	field_76755_L	spawnableWaterCreatureList	#spawnableWaterCreatureList, :, waterEntries, :
+		c	Holds the classes of any aquatic creature that can be spawned in the water of the biome.
+	f	Ljava/util/List;	field_82914_M	spawnableCaveCreatureList	#spawnableCaveCreatureList, :, flyingEntries, ambientEntries
+	f	Z	field_76766_R	enableSnow	#enableSnow, :, mutated, snowy
+		c	Set to true if snow is enabled for this biome.
+	f	Z	field_76765_S	enableRain	#enableRain, :, ~, hasRain
+		c	Is true (default) if the biome support rain (desert and nether can't have rain)
+	f	I	field_76756_M	biomeID	#biomeID, :, id, :
+		c	The id number to this biome, and its index in the biomeList array.
+	f	Lnet/minecraft/world/gen/feature/WorldGenTrees;	field_76757_N	worldGeneratorTrees	#worldGeneratorTrees, TREE_FEATURE, JUNGLE_TREE_FEATURE, tree
+		c	The tree generator.
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150594_b	height_ShallowWaters	#height_ShallowWaters, :, ~, RIVER_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150595_c	height_Oceans	#height_Oceans, :, ~, OCEAN_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150592_d	height_DeepOceans	#height_DeepOceans, :, ~, DEEP_OCEAN_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150593_e	height_LowPlains	#height_LowPlains, :, ~, PLAINS_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150590_f	height_MidPlains	#height_MidPlains, MUTATED_TAIGA, ~, TAIGA_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150591_g	height_LowHills	#height_LowHills, :, ~, HILLS_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150602_h	height_HighPlateaus	#height_HighPlateaus, :, ~, PLATEAU_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150603_i	height_MidHills	#height_MidHills, :, ~, EXTREME_HILLS_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150600_j	height_Shores	#height_Shores, :, ~, MUSHROOM_SHORE_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150601_k	height_RockyWaters	#height_RockyWaters, :, ~, STONE_BEACH_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150598_l	height_LowIslands	#height_LowIslands, :, ~, MUSHROOM_HEIGHT
+	f	Lnet/minecraft/world/biome/BiomeGenBase$Height;	field_150599_m	height_PartiallySubmerged	#height_PartiallySubmerged, MUTATED_SWAMPLAND, ~, SWAMP_HEIGHT
+	f	Ljava/util/Set;	field_150597_n	explorationBiomesList	#explorationBiomesList, EXPLORATION_BIOMES_LIST, BIOMESET, EXPLORABLE
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76771_b	ocean	#ocean, OCEAN, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76772_c	plains	#plains, PLAINS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76769_d	desert	#desert, DESERT, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76770_e	extremeHills	#extremeHills, EXTREME_HILLS, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76767_f	forest	#forest, FOREST, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76768_g	taiga	#taiga, TAIGA, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76780_h	swampland	#swampland, SWAMPLAND, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76781_i	river	#river, RIVER, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76778_j	hell	#hell, HELL, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76779_k	sky	#sky, SKY, THE_END, :
+		c	Is the biome used for sky world.
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76776_l	frozenOcean	#frozenOcean, FROZEN_OCEAN, :, :
+	f	Lnet/minecraft/world/biome/BiomeGenBase;	field_76777_m	frozenRiver	#frozenRiver, FROZEN_RIVER, :, :
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1971_1_	id	#id, :, :, :
+	m	()Lnet/minecraft/world/biome/BiomeDecorator;	func_76729_a	createBiomeDecorator	#createBiomeDecorator, :, createBiomePopulator, createDecorator
+		c	Allocate a new BiomeDecorator for this BiomeGenBase
+	m	(F)I	func_76731_a	getSkyColorByTemp	#getSkyColorByTemp, :, getSkyColor, :
+		c	takes temperature, returns color
+		p	1	p_76731_1_	currentTemperature	#currentTemperature, :, temperature, :
+	m	(FF)Lnet/minecraft/world/biome/BiomeGenBase;	func_76732_a	setTemperatureRainfall	#setTemperatureRainfall, :, setTempratureAndDownfall, setTemperatureAndDownfall
+		c	Sets the temperature and rainfall of this biome.
+		p	1	p_76732_1_	temperatureIn	#temperatureIn, :, temperature, :
+		p	2	p_76732_2_	rainfallIn	#rainfallIn, :, downfall, :
+	m	(I)Lnet/minecraft/world/biome/BiomeGenBase;	func_76733_a	setFillerBlockMetadata	#setFillerBlockMetadata, :, ~, setMutatedColor
+		p	1	p_76733_1_	meta	#meta, :, ~, color
+	m	(III)F	func_150564_a	getFloatTemperature	#getFloatTemperature, :, ~, getTemperature
+		c	Gets a floating point representation of this biome's temperature
+		p	1	p_150564_1_	x	#~, ~, ~, x
+		p	2	p_150564_2_	y	#~, ~, ~, y
+		p	3	p_150564_3_	z	#~, ~, ~, z
+	m	(IZ)Lnet/minecraft/world/biome/BiomeGenBase;	func_150557_a	setColor	#~, ~, seedModifier, setColor
+		p	1	p_150557_1_	colorIn	#colorIn, :, ~, color
+		p	2	p_150557_2_	modifyBaseColor	#~, ~, ~, modifyBaseColor
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;II)V	func_76728_a	decorate	#decorate, :, :, :
+		p	1	p_76728_1_	world	#~, ~, world, :
+		p	2	p_76728_2_	random	#~, ~, random, :
+		p	3	p_76728_3_	x	#~, ~, ~, x
+		p	4	p_76728_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;[Lnet/minecraft/block/Block;[BIID)V	func_150573_a	genTerrainBlocks	#genTerrainBlocks, :, ~, populateChunk
+		p	1	p_150573_1_	world	#~, ~, ~, world
+		p	2	p_150573_2_	random	#~, ~, ~, random
+		p	3	p_150573_3_	blocks	#~, ~, ~, blocks
+		p	4	p_150573_4_	blockMetadata	#~, ~, ~, blockMetadata
+		p	5	p_150573_5_	x	#~, ~, ~, x
+		p	6	p_150573_6_	y	#~, ~, ~, y
+		p	7	p_150573_7_	noise	#~, ~, ~, noise
+	m	(Lnet/minecraft/world/biome/BiomeGenBase;)Z	func_150569_a	isEqualTo	#isEqualTo, :, ~, is
+		c	returns true if the biome specified is equal to this biome
+		p	1	p_150569_1_	biome	#biome, :, :, :
+	m	(Lnet/minecraft/world/biome/BiomeGenBase$Height;)Lnet/minecraft/world/biome/BiomeGenBase;	func_150570_a	setHeight	#setHeight, :, ~, setHeight
+		p	1	p_150570_1_	heights	#heights, :, ~, height
+	m	(Ljava/lang/String;)Lnet/minecraft/world/biome/BiomeGenBase;	func_76735_a	setBiomeName	#setBiomeName, :, setName, :
+		p	1	p_76735_1_	name	#name, :, :, :
+	m	(Ljava/util/Random;)Lnet/minecraft/world/gen/feature/WorldGenAbstractTree;	func_150567_a	genBigTreeChance	#genBigTreeChance, getRandomTreeFeature, ~, getRandomTree
+		p	1	p_150567_1_	rand	#rand, :, random, :
+	m	(Ljava/util/Random;III)Ljava/lang/String;	func_150572_a	getRandomFlower	#~, ~, ~, getRandomFlower
+		p	1	p_150572_1_	random	#~, ~, ~, random
+		p	2	p_150572_2_	x	#~, ~, ~, x
+		p	3	p_150572_3_	y	#~, ~, ~, y
+		p	4	p_150572_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/entity/EnumCreatureType;)Ljava/util/List;	func_76747_a	getSpawnableList	#getSpawnableList, :, getSpawnEntries, :
+		c	Returns the correspondent list of the EnumCreatureType informed.
+		p	1	p_76747_1_	creatureType	#creatureType, :, category, :
+	m	()Lnet/minecraft/world/biome/BiomeGenBase;	func_76745_m	setDisableRain	#setDisableRain, :, ~, disableRain
+		c	Disable the rain for the biome.
+	m	(I)Lnet/minecraft/world/biome/BiomeGenBase;	func_76739_b	setColor	#setColor, :, setSeedModifier, setColor
+		p	1	p_76739_1_	colorIn	#colorIn, :, modifier, :
+	m	(III)I	func_150558_b	getBiomeGrassColor	#getBiomeGrassColor, :, ~, getGrassColor
+		c	Provides the basic grass color based on the biome temperature and rainfall
+		p	1	p_150558_1_	x	#~, ~, ~, x
+		p	2	p_150558_2_	y	#~, ~, ~, y
+		p	3	p_150558_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;[Lnet/minecraft/block/Block;[BIID)V	func_150560_b	genBiomeTerrain	#genBiomeTerrain, :, ~, populate
+		p	1	p_150560_1_	world	#~, ~, ~, world
+		p	2	p_150560_2_	random	#~, ~, ~, random
+		p	3	p_150560_3_	blocks	#~, ~, ~, blocks
+		p	4	p_150560_4_	blockMetadata	#~, ~, ~, blockMetadata
+		p	5	p_150560_5_	x	#~, ~, ~, x
+		p	6	p_150560_6_	z	#~, ~, ~, z
+		p	7	p_150560_7_	noise	#~, ~, ~, noise
+	m	(Ljava/util/Random;)Lnet/minecraft/world/gen/feature/WorldGenerator;	func_76730_b	getRandomWorldGenForGrass	#getRandomWorldGenForGrass, :, ~, getRandomGrass
+		c	Gets a WorldGen appropriate for this biome.
+		p	1	p_76730_1_	rand	#rand, :, random, :
+	m	()Lnet/minecraft/world/biome/BiomeGenBase;	func_76742_b	setEnableSnow	#setEnableSnow, :, setMutated, setSnowy
+		c	sets enableSnow to true during biome initialization. returns BiomeGenBase.
+	m	(I)Lnet/minecraft/world/biome/BiomeGenBase;	func_150563_c	setBaseColor	#~, ~, ~, setBaseColor
+		p	1	p_150563_1_	color	#~, ~, ~, color
+	m	(III)I	func_150571_c	getBiomeFoliageColor	#getBiomeFoliageColor, :, ~, getFoliageColor
+		c	Provides the basic foliage color based on the biome temperature and rainfall
+		p	1	p_150571_1_	x	#~, ~, ~, x
+		p	2	p_150571_2_	y	#~, ~, ~, y
+		p	3	p_150571_3_	z	#~, ~, ~, z
+	m	()Z	func_76746_c	getEnableSnow	#getEnableSnow, :, isMutated, canSnow
+		c	Returns true if the biome have snowfall instead a normal rain.
+	m	(I)Lnet/minecraft/world/biome/BiomeGenBase;	func_150568_d	getBiome	#getBiome, :, byId, :
+		c	return the biome specified by biomeID, or 0 (ocean) if out of bounds
+		p	0	p_150568_0_	id	#id, :, :, :
+	m	()Z	func_76738_d	canSpawnLightningBolt	#canSpawnLightningBolt, canRain, ~, canRain
+		c	Return true if the biome supports lightning bolt spawn, either by have the bolts enabled and have rain enabled.
+	m	()Z	func_76736_e	isHighHumidity	#isHighHumidity, :, hasHighHumidity, isHumid
+		c	Checks to see if the rainfall level of the biome is extremely high
+	m	()F	func_76741_f	getSpawningChance	#getSpawningChance, :, getMaxSpawnLimit, getAnimalSpawnChance
+		c	returns the chance a creature has to spawn.
+	m	()I	func_76744_g	getIntRainfall	#getIntRainfall, :, getDownfall, getScaledDownfall
+		c	Gets an integer representation of this biome's rainfall
+	m	()F	func_76727_i	getFloatRainfall	#getFloatRainfall, getRainfall, :, getDownfall
+		c	Gets a floating point representation of this biome's rainfall
+	m	()Z	func_150559_j	isSnowyBiome	#isSnowyBiome, :, isMutatedBiome, isSnowy
+	m	()Lnet/minecraft/world/biome/BiomeGenBase;	func_150566_k	createMutation	#createMutation, :, getMutatedVariant, mutate
+		c	Creates a mutated version of the biome and places it into the biomeList with an index equal to the original plus 128
+	m	()Ljava/lang/Class;	func_150562_l	getBiomeClass	#getBiomeClass, :, asClass, getType
+	m	()Lnet/minecraft/world/biome/BiomeGenBase$TempCategory;	func_150561_m	getTempCategory	#getTempCategory, :, ~, getTemperatureCategory
+	m	()[Lnet/minecraft/world/biome/BiomeGenBase;	func_150565_n	getBiomeGenArray	#getBiomeGenArray, :, getBiomes, getAll
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

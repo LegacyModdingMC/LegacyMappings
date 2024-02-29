@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C07PacketPlayerDigging	net/minecraft/network/play/client/C07PacketPlayerDigging	
+	f	I	field_149511_a	diggedBlockX	#diggedBlockX, :, ~, x
+	f	I	field_149509_b	diggedBlockY	#diggedBlockY, :, ~, y
+	f	I	field_149510_c	diggedBlockZ	#diggedBlockZ, :, ~, z
+	f	I	field_149507_d	diggingBlockFace	#diggingBlockFace, :, ~, face
+		c	The face of the block on which the interaction takes place.
+	f	I	field_149508_e	status	#status, action, ~, action
+		c	Status of the digging (started, ongoing, broken).
+	m	()I	func_149505_c	getDiggedBlockX	#getDiggedBlockX, :, ~, getX
+		c	Returns X coordinate of the block that was digged.
+	m	()I	func_149503_d	getDiggedBlockY	#getDiggedBlockY, :, ~, getY
+		c	Returns Y coordinate of the block that was digged.
+	m	()I	func_149502_e	getDiggedBlockZ	#getDiggedBlockZ, :, ~, getZ
+		c	Returns Z coordinate of the block that was digged.
+	m	()I	func_149501_f	getDiggingBlockFace	#getDiggingBlockFace, :, ~, getFace
+	m	()I	func_149506_g	getDiggedBlockStatus	#getDiggedBlockStatus, :, ~, getAction
+		c	Status of the digging (started, ongoing, broken).
+	m	(IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45258_1_	action	#~, ~, ~, action
+		p	2	p_i45258_2_	x	#~, ~, ~, x
+		p	3	p_i45258_3_	y	#~, ~, ~, y
+		p	4	p_i45258_4_	z	#~, ~, ~, z
+		p	5	p_i45258_5_	face	#~, ~, ~, face
+	m	()V	<init>	<init>	#~, ~, ~, ~

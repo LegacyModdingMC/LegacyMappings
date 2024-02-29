@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatComponentTranslation	net/minecraft/util/ChatComponentTranslation	
+	f	Ljava/util/List;	field_150278_b	children	#children, :, translations, :
+		c	The discrete elements that make up this component.  For example, this would be ["Prefix, ", "FirstArg", "SecondArg", " again ", "SecondArg", " and ", "FirstArg", " lastly ", "ThirdArg", " and also ", "FirstArg", " again!"] for "translation.test.complex" (see en-US.lang)
+	f	Ljava/util/regex/Pattern;	field_150279_c	stringVariablePattern	#stringVariablePattern, STRING_VARIABLE_PATTERN, ARG_FORMAT, :
+	f	Ljava/lang/String;	field_150276_d	key	#key, :, :, :
+	f	[Ljava/lang/Object;	field_150277_e	formatArgs	#formatArgs, :, args, :
+	f	Ljava/lang/Object;	field_150274_f	syncLock	#syncLock, :, lock, :
+	f	J	field_150275_g	lastTranslationUpdateTimeInMilliseconds	#lastTranslationUpdateTimeInMilliseconds, :, languageReloadTimestamp, :
+	m	(Ljava/lang/String;[Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45160_1_	translationKey	#translationKey, :, key, :
+		p	2	p_i45160_2_	args	#args, :, :, :
+	m	(I)Lnet/minecraft/util/IChatComponent;	func_150272_a	getFormatArgumentAsComponent	#getFormatArgumentAsComponent, :, getArg, :
+		p	1	p_150272_1_	index	#index, :, :, :
+	m	(Ljava/lang/String;)V	func_150269_b	initializeFromFormat	#initializeFromFormat, :, setTranslation, :
+		c	initializes our children from a format string, using the format args to fill in the placeholder variables.
+		p	1	p_150269_1_	format	#format, :, translation, :
+	m	()V	func_150270_g	ensureInitialized	#ensureInitialized, :, updateTranslations, :
+		c	ensures that our children are initialized from the most recent string translation mapping.
+	m	()Ljava/lang/String;	func_150268_i	getKey	#getKey, :, :, :
+		c	Gets the key used to translate this component.
+	m	()[Ljava/lang/Object;	func_150271_j	getFormatArgs	#getFormatArgs, :, getArgs, :
+		c	Gets the object array that is used to translate the key.
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	p_equals_1_	#~, ~, ~, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/util/Iterator;	iterator	iterator	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

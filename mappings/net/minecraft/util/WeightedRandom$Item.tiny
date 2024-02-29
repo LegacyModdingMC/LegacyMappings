@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/WeightedRandom$Item	net/minecraft/util/WeightedRandom$Item	
+	f	I	field_76292_a	itemWeight	#itemWeight, :, weight, :
+		c	The Weight is how often the item is chosen(higher number is higher chance(lower is lower))
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1556_1_	itemWeightIn	#itemWeightIn, :, weight, :

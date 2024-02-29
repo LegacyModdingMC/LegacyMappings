@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiFlatPresets$LayerItem	net/minecraft/client/gui/GuiFlatPresets$LayerItem	
+	f	Lnet/minecraft/item/Item;	field_148234_a	icon	#icon, :, ~, presetItem
+	f	Ljava/lang/String;	field_148232_b	name	#name, :, ~, presetName
+	f	Ljava/lang/String;	field_148233_c	generatorInfo	#generatorInfo, :, ~, presetLayers
+	m	(Lnet/minecraft/item/Item;Ljava/lang/String;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45022_1_	icon	#~, ~, ~, icon
+		p	2	p_i45022_2_	name	#~, ~, ~, name
+		p	3	p_i45022_3_	preset	#~, ~, ~, preset

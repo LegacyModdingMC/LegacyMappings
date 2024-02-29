@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/ISoundEventAccessor	net/minecraft/client/audio/ISoundEventAccessor	
+	m	()I	func_148721_a	getWeight	#getWeight, :, :, :
+	m	()Ljava/lang/Object;	func_148720_g	cloneEntry	#cloneEntry, :, getSound, get

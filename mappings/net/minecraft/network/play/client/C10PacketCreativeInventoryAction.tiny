@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C10PacketCreativeInventoryAction	net/minecraft/network/play/client/C10PacketCreativeInventoryAction	
+	f	I	field_149629_a	slotId	#slotId, :, slot, slotId
+	f	Lnet/minecraft/item/ItemStack;	field_149628_b	stack	#stack, :, :, :
+	m	(ILnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45263_1_	slotIdIn	#slotIdIn, :, slot, slotId
+		p	2	p_i45263_2_	stackIn	#stackIn, :, stack, :
+	m	()I	func_149627_c	getSlotId	#getSlotId, :, getSlot, getSlotId
+	m	()Lnet/minecraft/item/ItemStack;	func_149625_d	getStack	#getStack, :, getItemStack, getStack
+	m	()V	<init>	<init>	#~, ~, ~, ~

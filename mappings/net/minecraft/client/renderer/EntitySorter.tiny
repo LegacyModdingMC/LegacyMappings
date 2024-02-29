@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/EntitySorter	net/minecraft/client/renderer/EntitySorter	
+	f	D	field_78949_a	entityPosX	#entityPosX, :, ~, cameraX
+		c	Entity position X
+	f	D	field_78947_b	entityPosY	#entityPosY, :, ~, cameraY
+		c	Entity position Y
+	f	D	field_78948_c	entityPosZ	#entityPosZ, :, ~, cameraZ
+		c	Entity position Z
+	m	(Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1242_1_	camera	#~, ~, entity, camera
+	m	(Lnet/minecraft/client/renderer/WorldRenderer;Lnet/minecraft/client/renderer/WorldRenderer;)I	compare	compare	#~, ~, compare, :
+		p	1	p_compare_1_	p_compare_1_	#~, ~, ~, ~
+		p	2	p_compare_2_	p_compare_2_	#~, ~, ~, ~
+	m	(Ljava/lang/Object;Ljava/lang/Object;)I	compare	compare	#~, ~, ~, ~
+		p	1	p_compare_1_	chunk1	#~, ~, ~, chunk1
+		p	2	p_compare_2_	chunk2	#~, ~, ~, chunk2

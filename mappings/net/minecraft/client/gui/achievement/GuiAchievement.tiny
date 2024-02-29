@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/achievement/GuiAchievement	net/minecraft/client/gui/achievement/GuiAchievement	
+	f	Lnet/minecraft/util/ResourceLocation;	field_146261_a	achievementBg	#achievementBg, ACHIEVEMENT_BG, ACHIEVEMENT_BACKGROUND, BACKGROUND_LOCATION
+	f	Lnet/minecraft/client/Minecraft;	field_146259_f	mc	#mc, :, client, minecraft
+	f	I	field_146260_g	width	#width, :, :, :
+	f	I	field_146267_h	height	#height, :, :, :
+	f	Ljava/lang/String;	field_146268_i	achievementTitle	#achievementTitle, :, title, :
+	f	Ljava/lang/String;	field_146265_j	achievementDescription	#achievementDescription, :, name, description
+	f	Lnet/minecraft/stats/Achievement;	field_146266_k	theAchievement	#theAchievement, achievement, :, :
+	f	J	field_146263_l	notificationTime	#notificationTime, :, time, startTime
+	f	Lnet/minecraft/client/renderer/entity/RenderItem;	field_146264_m	renderItem	#renderItem, :, itemRenderer, :
+	f	Z	field_146262_n	permanentNotification	#permanentNotification, :, permanent, tutorial
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1063_1_	mc	#mc, :, client, minecraft
+	m	()V	func_146254_a	updateAchievementWindow	#updateAchievementWindow, :, tick, :
+	m	(Lnet/minecraft/stats/Achievement;)V	func_146256_a	displayAchievement	#displayAchievement, :, display, set
+		p	1	p_146256_1_	ach	#ach, :, achieved, :
+	m	()V	func_146257_b	clearAchievements	#clearAchievements, :, reset, clear
+	m	(Lnet/minecraft/stats/Achievement;)V	func_146255_b	displayUnformattedAchievement	#displayUnformattedAchievement, :, displayRaw, setTutorial
+		p	1	p_146255_1_	achievementIn	#achievementIn, :, achieved, :
+	m	()V	func_146258_c	updateAchievementWindowScale	#updateAchievementWindowScale, :, render, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/CryptManager	net/minecraft/util/CryptManager	
+	m	()Ljavax/crypto/SecretKey;	func_75890_a	createNewSharedKey	#createNewSharedKey, :, generateKey, :
+		c	Generate a new shared secret AES key from a secure random source
+	m	(ILjava/lang/String;Ljava/security/Key;)Ljavax/crypto/Cipher;	func_75886_a	createTheCipherInstance	#createTheCipherInstance, :, crypt, :
+		c	Creates the Cipher Instance.
+		p	0	p_75886_0_	opMode	#opMode, :, :, :
+		p	1	p_75886_1_	transformation	#transformation, :, algorithm, :
+		p	2	p_75886_2_	key	#key, :, :, :
+	m	(ILjava/security/Key;)Ljavax/crypto/Cipher;	func_151229_a	createNetCipherInstance	#createNetCipherInstance, :, cipherFromKey, crypt
+		c	Creates an Cipher instance using the AES/CFB8/NoPadding algorithm. Used for protocol encryption.
+		p	0	p_151229_0_	opMode	#opMode, :, :, :
+		p	1	p_151229_1_	key	#key, :, :, :
+	m	(ILjava/security/Key;[B)[B	func_75885_a	cipherOperation	#cipherOperation, :, crypt, :
+		c	Encrypt or decrypt byte[] data using the specified key
+		p	0	p_75885_0_	opMode	#opMode, :, :, :
+		p	1	p_75885_1_	key	#key, :, :, :
+		p	2	p_75885_2_	data	#data, :, :, :
+	m	(Ljava/lang/String;Ljava/security/PublicKey;Ljavax/crypto/SecretKey;)[B	func_75895_a	getServerIdHash	#getServerIdHash, :, generateServerId, :
+		c	Compute a serverId hash for use by sendSessionRequest()
+		p	0	p_75895_0_	serverId	#serverId, :, baseServerId, :
+		p	1	p_75895_1_	publicKey	#publicKey, :, :, :
+		p	2	p_75895_2_	secretKey	#secretKey, :, :, :
+	m	(Ljava/lang/String;[[B)[B	func_75893_a	digestOperation	#digestOperation, :, hash, :
+		c	Compute a message digest on arbitrary byte[] data
+		p	0	p_75893_0_	algorithm	#algorithm, :, :, :
+		p	1	p_75893_1_	data	#data, :, :, :
+	m	(Ljava/security/Key;[B)[B	func_75894_a	encryptData	#encryptData, :, encrypt, :
+		c	Encrypt byte[] data with RSA public key
+		p	0	p_75894_0_	key	#key, :, :, :
+		p	1	p_75894_1_	data	#data, :, :, :
+	m	(Ljava/security/PrivateKey;[B)Ljavax/crypto/SecretKey;	func_75887_a	decryptSharedKey	#decryptSharedKey, :, decryptSecretKey, :
+		c	Decrypt shared secret AES key using RSA private key
+		p	0	p_75887_0_	key	#key, :, privateKey, :
+		p	1	p_75887_1_	secretKeyEncrypted	#secretKeyEncrypted, :, encryptedSecretKey, :
+	m	([B)Ljava/security/PublicKey;	func_75896_a	decodePublicKey	#decodePublicKey, :, readEncodedPublicKey, reconstitutePublicKey
+		c	Create a new PublicKey from encoded X.509 data
+		p	0	p_75896_0_	encodedKey	#encodedKey, :, data, :
+	m	()Ljava/security/KeyPair;	func_75891_b	createNewKeyPair	#createNewKeyPair, generateKeyPair, generateServerKeyPair, generateKeyPair
+		c	Generates RSA KeyPair
+	m	(Ljava/security/Key;[B)[B	func_75889_b	decryptData	#decryptData, :, decrypt, :
+		c	Decrypt byte[] data with RSA private key
+		p	0	p_75889_0_	key	#key, :, :, :
+		p	1	p_75889_1_	data	#data, :, :, :

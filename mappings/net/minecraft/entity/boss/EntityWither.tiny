@@ -1,0 +1,53 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/boss/EntityWither	net/minecraft/entity/boss/EntityWither	
+	f	[F	field_82220_d	xRotationHeads	#xRotationHeads, :, sideHeadPitches, :
+	f	[F	field_82221_e	yRotationHeads	#yRotationHeads, :, sideHeadYaws, :
+	f	[F	field_82217_f	xRotOHeads	#xRotOHeads, :, prevSideHeadPitches, :
+	f	[F	field_82218_g	yRotOHeads	#yRotOHeads, :, prevSideHeadYaws, :
+	f	[I	field_82223_h	nextHeadUpdate	#nextHeadUpdate, :, ~, skullCooldowns
+	f	[I	field_82224_i	idleHeadUpdates	#idleHeadUpdates, :, ~, chargedSkullCooldowns
+	f	I	field_82222_j	blockBreakCounter	#blockBreakCounter, :, ~, blockBreakingCooldown
+		c	Time before the Wither tries to break blocks
+	f	Lnet/minecraft/command/IEntitySelector;	field_82219_bJ	attackEntitySelector	#attackEntitySelector, NOT_UNDEAD, ~, UNDEAD_FILTER
+		c	Selector used to determine the entities a wither boss should attack.
+	m	(I)F	func_82207_a	getHeadYRotation	#getHeadYRotation, :, getHeadYaw, :
+		p	1	p_82207_1_	id	#~, ~, headIndex, id
+	m	(IDDDZ)V	func_82209_a	launchWitherSkullToCoords	#launchWitherSkullToCoords, :, shootSkullAt, :
+		c	Launches a Wither skull toward (par2, par4, par6)
+		p	1	p_82209_1_	headIndex	#~, ~, headIndex, :
+		p	2	p_82209_2_	x	#x, :, targetX, :
+		p	4	p_82209_4_	y	#y, :, targetY, :
+		p	6	p_82209_6_	z	#z, :, targetZ, :
+		p	8	p_82209_8_	invulnerable	#invulnerable, :, charged, :
+	m	(ILnet/minecraft/entity/EntityLivingBase;)V	func_82216_a	launchWitherSkullToEntity	#launchWitherSkullToEntity, :, shootSkullAt, :
+		p	1	p_82216_1_	headIndex	#~, ~, headIndex, :
+		p	2	p_82216_2_	target	#~, ~, target, :
+	m	(FFF)F	func_82204_b	rotlerp	#rotlerp, :, getNextAngle, :
+		p	1	p_82204_1_	prevAngle	#~, ~, prevAngle, :
+		p	2	p_82204_2_	desiredAngle	#~, ~, desiredAngle, :
+		p	3	p_82204_3_	maxDelta	#~, ~, maxDifference, maxDelta
+	m	(II)V	func_82211_c	updateWatchedTargetId	#updateWatchedTargetId, :, setTrackedEntityId, :
+		c	Updates the target entity ID
+		p	1	p_82211_1_	targetOffset	#targetOffset, :, headIndex, :
+		p	2	p_82211_2_	newId	#newId, :, id, :
+	m	()V	func_82206_m	ignite	#ignite, :, onSummoned, :
+		c	Initializes this Wither's explosion sequence and makes it invulnerable. Called immediately after spawning.
+	m	(I)F	func_82210_r	getHeadXRotation	#getHeadXRotation, :, getHeadPitch, :
+		p	1	p_82210_1_	id	#~, ~, headIndex, id
+	m	()I	func_82212_n	getInvulTime	#getInvulTime, :, getInvulnerabilityTime, getInvulnerabilityTimer
+	m	()Z	func_82205_o	isArmored	#isArmored, :, shouldRenderOverlay, isAtHalfHealth
+		c	Returns whether the wither is armored with its boss armor or not by checking whether its health is below half of its maximum.
+	m	(I)V	func_82215_s	setInvulTime	#setInvulTime, :, setInvulnerabilityTime, setInvulnerabilityTimer
+		p	1	p_82215_1_	time	#time, :, :, ticks
+	m	(I)I	func_82203_t	getWatchedTargetId	#getWatchedTargetId, :, getTrackedEntityId, :
+		c	Returns the target entity ID if present, or -1 if not @param par1 The target offset, should be from 0-2
+		p	1	p_82203_1_	head	#head, :, headIndex, :
+	m	(I)D	func_82214_u	getHeadX	#getHeadX, :, :, :
+		p	1	p_82214_1_	headIndex	#~, ~, headIndex, :
+	m	(I)D	func_82208_v	getHeadY	#getHeadY, :, :, :
+		p	1	p_82208_1_	headIndec	#~, ~, headIndex, headIndec
+	m	(I)D	func_82213_w	getHeadZ	#getHeadZ, :, :, :
+		p	1	p_82213_1_	headIndex	#~, ~, headIndex, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1701_1_	worldIn	#worldIn, :, ~, world
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

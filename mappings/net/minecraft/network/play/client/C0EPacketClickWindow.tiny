@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C0EPacketClickWindow	net/minecraft/network/play/client/C0EPacketClickWindow	
+	f	I	field_149554_a	windowId	#windowId, :, syncId, menuId
+		c	The id of the window which was clicked. 0 for player inventory.
+	f	I	field_149552_b	slotId	#slotId, :, slot, slotId
+		c	Id of the clicked slot
+	f	I	field_149553_c	usedButton	#usedButton, packedClickData, button, clickData
+		c	Button used
+	f	S	field_149550_d	actionNumber	#actionNumber, :, transactionId, actionId
+		c	A unique number for the action, used for transaction handling
+	f	Lnet/minecraft/item/ItemStack;	field_149551_e	clickedItem	#clickedItem, :, selectedStack, stack
+		c	The item stack present in the slot
+	f	I	field_149549_f	mode	#mode, :, actionType, action
+		c	Inventory operation mode
+	m	(IIIILnet/minecraft/item/ItemStack;S)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45246_1_	windowId	#windowId, :, syncId, menuId
+		p	2	p_i45246_2_	slotId	#slotId, :, slot, slotId
+		p	3	p_i45246_3_	usedButton	#usedButton, :, button, clickData
+		p	4	p_i45246_4_	mode	#mode, :, actionType, action
+		p	5	p_i45246_5_	clickedItem	#clickedItem, :, selectedSlot, stack
+		p	6	p_i45246_6_	actionNumber	#actionNumber, :, transactionId, actionId
+	m	()I	func_149548_c	getWindowId	#getWindowId, :, getSyncId, getMenuId
+	m	()I	func_149544_d	getSlotId	#getSlotId, :, getSlot, getSlotId
+	m	()I	func_149543_e	getUsedButton	#getUsedButton, :, getButton, getClickData
+	m	()S	func_149547_f	getActionNumber	#getActionNumber, :, getTransactionId, getActionId
+	m	()Lnet/minecraft/item/ItemStack;	func_149546_g	getClickedItem	#getClickedItem, :, getSelectedStack, getStack
+	m	()I	func_149542_h	getMode	#getMode, :, getActionType, getAction
+	m	()V	<init>	<init>	#~, ~, ~, ~

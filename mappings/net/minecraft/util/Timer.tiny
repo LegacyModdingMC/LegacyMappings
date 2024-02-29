@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Timer	net/minecraft/util/Timer	
+	f	F	field_74282_a	ticksPerSecond	#ticksPerSecond, :, :, tps
+		c	The number of timer ticks per second of real time
+	f	I	field_74280_b	elapsedTicks	#elapsedTicks, :, ticksThisFrame, :
+		c	How many full ticks have turned over since the last call to updateTimer(), capped at 10.
+	f	F	field_74281_c	renderPartialTicks	#renderPartialTicks, :, tickDelta, partialTick
+		c	How much time has elapsed since the last tick, in ticks, for use by display rendering routines (range: 0.0 - 1.0).  This field is frozen if the display is paused to eliminate jitter.
+	f	F	field_74278_d	timerSpeed	#timerSpeed, :, ~, tpsScale
+		c	A multiplier to make the timer (and therefore the game) go faster or slower.  0.5 makes the game run at half-speed.
+	f	F	field_74279_e	elapsedPartialTicks	#elapsedPartialTicks, :, lastFrameDuration, tickDelta
+		c	How much time has elapsed since the last tick, in ticks (range: 0.0 - 1.0).
+	f	D	field_74276_f	lastHRTime	#lastHRTime, :, ~, timeSec
+		c	The time reported by the high-resolution clock at the last call of updateTimer(), in seconds
+	f	J	field_74277_g	lastSyncSysClock	#lastSyncSysClock, :, ~, lastTickTime
+		c	The time reported by the system clock at the last sync, in milliseconds
+	f	J	field_74284_h	lastSyncHRClock	#lastSyncHRClock, :, ~, lastCorrectionTime
+		c	The time reported by the high-resolution clock at the last sync, in milliseconds
+	f	J	field_74285_i	counter	#counter, :, ~, cumTickTime
+		c	Increase per 1 every tick, reset when reach 1000
+	f	D	field_74283_j	timeSyncAdjustment	#timeSyncAdjustment, :, ~, tickTimeCorrection
+		c	A ratio used to sync the high-resolution clock to the system clock, updated once per second
+	m	(F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1018_1_	tps	#tps, :, ticksPerSecond, tps
+	m	()V	func_74275_a	updateTimer	#updateTimer, :, tick, advance
+		c	Updates all fields of the Timer using the current time

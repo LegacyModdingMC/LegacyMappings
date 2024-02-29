@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S1CPacketEntityMetadata	net/minecraft/network/play/server/S1CPacketEntityMetadata	
+	f	I	field_149379_a	entityId	#entityId, :, id, :
+	f	Ljava/util/List;	field_149378_b	dataManagerEntries	#dataManagerEntries, :, trackedValues, dataEntries
+	m	(ILnet/minecraft/entity/DataWatcher;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45217_1_	entityIdIn	#entityIdIn, :, id, :
+		p	2	p_i45217_2_	tracker	#~, ~, tracker, :
+		p	3	p_i45217_3_	forceUpdateAll	#~, ~, all, forceUpdateAll
+	m	()Ljava/util/List;	func_149376_c	getDataManagerEntries	#getDataManagerEntries, :, getTrackedValues, getDataEntries
+	m	()I	func_149375_d	getEntityId	#getEntityId, :, getId, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

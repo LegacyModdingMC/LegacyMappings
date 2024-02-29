@@ -1,0 +1,52 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/crash/CrashReport	net/minecraft/crash/CrashReport	
+	f	Lorg/apache/logging/log4j/Logger;	field_147150_a	logger	#logger, LOGGER, :, :
+	f	Ljava/lang/String;	field_71513_a	description	#description, :, message, description
+		c	Description of the crash report.
+	f	Ljava/lang/Throwable;	field_71511_b	cause	#cause, :, :, exception
+		c	The Throwable that is the "cause" for this crash and Crash Report.
+	f	Lnet/minecraft/crash/CrashReportCategory;	field_85061_c	theReportCategory	#theReportCategory, systemDetailsCategory, systemDetailsSection, systemDetails
+		c	Category of crash
+	f	Ljava/util/List;	field_71512_c	crashReportSections	#crashReportSections, :, otherSections, details
+		c	Holds the keys and values of all crash report sections.
+	f	Ljava/io/File;	field_71510_d	crashReportFile	#crashReportFile, :, file, :
+		c	File of crash report.
+	f	Z	field_85059_f	firstCategoryInCrashReport	#firstCategoryInCrashReport, :, hasStackTrace, :
+		c	Is true when the current category is the first in the crash report
+	f	[Ljava/lang/StackTraceElement;	field_85060_g	stacktrace	#stacktrace, :, stackTrace, :
+	m	(Ljava/lang/String;Ljava/lang/Throwable;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1348_1_	descriptionIn	#descriptionIn, :, message, description
+		p	2	p_i1348_2_	causeThrowable	#causeThrowable, :, cause, :
+	m	()Ljava/lang/String;	func_71501_a	getDescription	#getDescription, :, getMessage, getDescription
+		c	Returns the description of the Crash Report.
+	m	(Ljava/io/File;)Z	func_147149_a	saveToFile	#saveToFile, :, writeToFile, :
+		c	Saves this CrashReport to the given file and returns a value indicating whether we were successful at doing so.
+		p	1	p_147149_1_	toFile	#toFile, :, file, :
+	m	(Ljava/lang/String;)Lnet/minecraft/crash/CrashReportCategory;	func_85058_a	makeCategory	#makeCategory, :, addElement, addCategory
+		c	Creates a CrashReportCategory
+		p	1	p_85058_1_	name	#name, :, :, title
+	m	(Ljava/lang/String;I)Lnet/minecraft/crash/CrashReportCategory;	func_85057_a	makeCategoryDepth	#makeCategoryDepth, :, addElement, addCategory
+		c	Creates a CrashReportCategory for the given stack trace depth
+		p	1	p_85057_1_	categoryName	#categoryName, :, name, title
+		p	2	p_85057_2_	stacktraceLength	#stacktraceLength, :, ignoredStackTraceCallCount, :
+	m	(Ljava/lang/StringBuilder;)V	func_71506_a	getSectionsInStringBuilder	#getSectionsInStringBuilder, :, addStackTrace, addDetails
+		c	Gets the various sections of the crash report into the given StringBuilder
+		p	1	p_71506_1_	builder	#builder, :, stringBuilder, sb
+	m	(Ljava/lang/Throwable;Ljava/lang/String;)Lnet/minecraft/crash/CrashReport;	func_85055_a	makeCrashReport	#makeCrashReport, :, create, of
+		c	Creates a crash report for the exception
+		p	0	p_85055_0_	causeIn	#causeIn, :, cause, exception
+		p	1	p_85055_1_	descriptionIn	#descriptionIn, :, title, :
+	m	()Ljava/lang/Throwable;	func_71505_b	getCrashCause	#getCrashCause, :, getCause, getException
+		c	Returns the Throwable object that is the cause for the crash and Crash Report.
+	m	()Ljava/lang/String;	func_71498_d	getCauseStackTraceOrString	#getCauseStackTraceOrString, :, getCauseAsString, getExceptionMessage
+		c	Gets the stack trace of the Throwable that caused this crash report, or if that fails, the cause .toString().
+	m	()Ljava/lang/String;	func_71502_e	getCompleteReport	#getCompleteReport, :, asString, build
+		c	Gets the complete report with headers, stack trace, and different sections as a string.
+	m	()Ljava/io/File;	func_71497_f	getFile	#getFile, :, :, :
+		c	Gets the file this crash report is saved into.
+	m	()Lnet/minecraft/crash/CrashReportCategory;	func_85056_g	getCategory	#getCategory, :, getSystemDetailsSection, getSystemDetails
+	m	()V	func_71504_g	populateEnvironment	#populateEnvironment, :, fillSystemDetails, :
+		c	Populates this crash report with initial information about the running server and operating system / java environment
+	m	()Ljava/lang/String;	func_71503_h	getWittyComment	#getWittyComment, :, generateWittyComment, getWittyComment
+		c	Gets a random witty comment for inclusion in this CrashReport
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

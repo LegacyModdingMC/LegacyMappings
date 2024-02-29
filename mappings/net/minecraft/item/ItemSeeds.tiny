@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSeeds	net/minecraft/item/ItemSeeds	
+	f	Lnet/minecraft/block/Block;	field_150925_a	crops	#crops, :, crop, plantBlock
+	f	Lnet/minecraft/block/Block;	field_77838_b	soilBlockID	#soilBlockID, :, soil, soilBlock
+		c	BlockID of the block the seeds can be planted on.
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45352_1_	crops	#crops, :, crop, plant
+		p	2	p_i45352_2_	soil	#soil, :, :, :

@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S39PacketPlayerAbilities	net/minecraft/network/play/server/S39PacketPlayerAbilities	
+	f	Z	field_149119_a	invulnerable	#invulnerable, :, :, :
+	f	Z	field_149117_b	flying	#flying, :, :, :
+	f	Z	field_149118_c	allowFlying	#allowFlying, :, :, :
+	f	Z	field_149115_d	creativeMode	#creativeMode, :, :, :
+	f	F	field_149116_e	flySpeed	#flySpeed, :, :, :
+	f	F	field_149114_f	walkSpeed	#walkSpeed, :, fovModifier, walkSpeed
+	m	(Lnet/minecraft/entity/player/PlayerCapabilities;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45208_1_	capabilities	#capabilities, :, abilities, :
+	m	(F)V	func_149104_a	setFlySpeed	#setFlySpeed, :, :, :
+		p	1	p_149104_1_	flySpeedIn	#flySpeedIn, :, flySpeed, :
+	m	(Z)V	func_149108_a	setInvulnerable	#setInvulnerable, :, :, :
+		p	1	p_149108_1_	isInvulnerable	#isInvulnerable, :, invulnerable, :
+	m	(F)V	func_149110_b	setWalkSpeed	#setWalkSpeed, :, setFovModifier, setWalkSpeed
+		p	1	p_149110_1_	walkSpeedIn	#walkSpeedIn, :, fovModifier, walkSpeed
+	m	(Z)V	func_149102_b	setFlying	#setFlying, :, :, :
+		p	1	p_149102_1_	isFlying	#isFlying, :, flying, :
+	m	()Z	func_149112_c	isInvulnerable	#isInvulnerable, :, :, :
+	m	(Z)V	func_149109_c	setAllowFlying	#setAllowFlying, :, :, :
+		p	1	p_149109_1_	isAllowFlying	#isAllowFlying, :, allowFlying, :
+	m	()Z	func_149106_d	isFlying	#isFlying, :, :, :
+	m	(Z)V	func_149111_d	setCreativeMode	#setCreativeMode, :, :, :
+		p	1	p_149111_1_	isCreativeMode	#isCreativeMode, :, creativeMode, :
+	m	()Z	func_149105_e	isAllowFlying	#isAllowFlying, :, allowFlying, allowsFlying
+	m	()Z	func_149103_f	isCreativeMode	#isCreativeMode, :, :, :
+	m	()F	func_149101_g	getFlySpeed	#getFlySpeed, :, :, :
+	m	()F	func_149107_h	getWalkSpeed	#getWalkSpeed, :, getFovModifier, getWalkSpeed
+	m	()V	<init>	<init>	#~, ~, ~, ~

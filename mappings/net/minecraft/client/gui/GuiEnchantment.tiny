@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiEnchantment	net/minecraft/client/gui/GuiEnchantment	
+	f	F	field_147076_A	oOpen	#oOpen, :, pageTurningSpeed, turningSpeed
+	f	Lnet/minecraft/item/ItemStack;	field_147077_B	last	#last, :, stack, itemStackToEnchant
+	f	Lnet/minecraft/util/ResourceLocation;	field_147078_C	ENCHANTMENT_TABLE_GUI_TEXTURE	#ENCHANTMENT_TABLE_GUI_TEXTURE, :, TEXTURE, MENU_LOCATION
+		c	The ResourceLocation containing the Enchantment GUI texture location
+	f	Lnet/minecraft/util/ResourceLocation;	field_147070_D	ENCHANTMENT_TABLE_BOOK_TEXTURE	#ENCHANTMENT_TABLE_BOOK_TEXTURE, :, BOOK_TEXTURE, BOOK_LOCATION
+		c	The ResourceLocation containing the texture for the Book rendered above the enchantment table
+	f	Lnet/minecraft/client/model/ModelBook;	field_147072_E	MODEL_BOOK	#MODEL_BOOK, :, BOOK_MODEL, :
+		c	The ModelBook instance used for rendering the book on the Enchantment table
+	f	Ljava/util/Random;	field_147074_F	random	#random, :, :, :
+		c	A Random instance for use with the enchantment gui
+	f	Lnet/minecraft/inventory/ContainerEnchantment;	field_147075_G	container	#container, :, enchantingScreenHandler, menu
+		c	The same reference as {@link GuiContainer#field_147002_h}, downcasted to {@link ContainerEnchantment}.
+	f	Ljava/lang/String;	field_147079_H	name	#~, ~, ~, name
+	f	I	field_147073_u	ticks	#ticks, :, :, ticksOpen
+	f	F	field_147071_v	flip	#flip, :, nextPageAngle, :
+	f	F	field_147069_w	oFlip	#oFlip, :, pageAngle, :
+	f	F	field_147082_x	flipT	#flipT, :, approximatePageAngle, :
+	f	F	field_147081_y	flipA	#flipA, :, pageRotationSpeed, :
+	f	F	field_147080_z	open	#open, :, nextPageTurningSpeed, nextTurningSpeed
+	m	()V	func_147068_g	tickBook	#tickBook, :, doTick, tickEnchantingScreen
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/world/World;IIILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1090_1_	realmsButtonIn	#realmsButtonIn, :, ~, playerInventory
+		p	2	p_i1090_2_	buttonId	#buttonId, :, ~, world
+		p	3	p_i1090_3_	x	#x, :, ~, x
+		p	4	p_i1090_4_	y	#y, :, ~, y
+		p	5	p_i1090_5_	text	#text, :, ~, z
+		p	6	p_i1090_6_	widthIn	#widthIn, :, ~, name
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

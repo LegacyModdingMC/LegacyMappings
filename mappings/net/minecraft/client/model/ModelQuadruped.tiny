@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelQuadruped	net/minecraft/client/model/ModelQuadruped	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78150_a	head	#head, :, :, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78148_b	body	#body, :, torso, body
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78149_c	leg1	#leg1, :, backRightLeg, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78146_d	leg2	#leg2, :, backLeftLeg, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78147_e	leg3	#leg3, :, frontRightLeg, :
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78144_f	leg4	#leg4, :, frontLeftLeg, :
+	f	F	field_78145_g	childYOffset	#childYOffset, :, ~, babyHeadHeightOffset
+	f	F	field_78151_h	childZOffset	#childZOffset, :, ~, babyHeadOffset
+	m	(IF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1154_1_	height	#height, :, ~, pivotPoint
+		p	2	p_i1154_2_	scale	#scale, :, ~, reduction

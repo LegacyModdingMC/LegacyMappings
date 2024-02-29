@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPistonExtension	net/minecraft/block/BlockPistonExtension	
+	f	Lnet/minecraft/util/IIcon;	field_150088_a	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/util/IIcon;)V	func_150086_a	setSprite	#~, ~, ~, setSprite
+		p	1	p_150086_1_	sprite	#~, ~, ~, sprite
+	m	(I)I	func_150085_b	getDirectionMeta	#getDirectionMeta, :, ~, getFacing
+		p	0	p_150085_0_	metadata	#~, ~, ~, metadata
+	m	()V	func_150087_e	clearSprite	#~, ~, ~, clearSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

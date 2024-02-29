@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/AnvilChunkLoader	net/minecraft/world/chunk/storage/AnvilChunkLoader	
+	f	Lorg/apache/logging/log4j/Logger;	field_151505_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/List;	field_75828_a	chunksToRemove	#chunksToRemove, chunksToSave, ~, chunkSaveQueue
+		c	A map containing chunks to be written to disk (but not those that are currently in the process of being written). Key is the chunk position, value is the NBT to write.
+	f	Ljava/util/Set;	field_75826_b	pendingAnvilChunksCoordinates	#pendingAnvilChunksCoordinates, :, chunksBeingSaved, queuedChunks
+	f	Ljava/lang/Object;	field_75827_c	syncLockObject	#syncLockObject, :, ~, lock
+	f	Ljava/io/File;	field_75825_d	chunkSaveLocation	#chunkSaveLocation, :, saveLocation, dir
+		c	Save directory for chunks using the Anvil format
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2003_1_	chunkSaveLocationIn	#chunkSaveLocationIn, :, saveLocation, dir
+	m	(Lnet/minecraft/world/ChunkCoordIntPair;Lnet/minecraft/nbt/NBTTagCompound;)V	func_75824_a	addChunkToPending	#addChunkToPending, :, registerChunkChecker, queueChunkSave
+		p	1	p_75824_1_	pos	#pos, :, :, :
+		p	2	p_75824_2_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/world/World;IILnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/Chunk;	func_75822_a	checkedReadChunkFromNBT	#checkedReadChunkFromNBT, :, validateChunk, loadChunk
+		c	Wraps readChunkFromNBT. Checks the coordinates and several NBT tags.
+		p	1	p_75822_1_	worldIn	#worldIn, :, world, :
+		p	2	p_75822_2_	x	#x, :, chunkX, :
+		p	3	p_75822_3_	z	#z, :, chunkZ, :
+		p	4	p_75822_4_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/Chunk;	func_75823_a	readChunkFromNBT	#readChunkFromNBT, :, getChunk, createChunkFromNbt
+		c	Reads the data stored in the passed NBTTagCompound and creates a Chunk with that data in the passed World. Returns the created Chunk.
+		p	1	p_75823_1_	worldIn	#worldIn, :, world, :
+		p	2	p_75823_2_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/world/World;Lnet/minecraft/nbt/NBTTagCompound;)V	func_75820_a	writeChunkToNBT	#writeChunkToNBT, :, putChunk, writeChunkToNbt
+		c	Writes the Chunk passed as an argument to the NBTTagCompound also passed, using the World argument to retrieve the Chunk's last update time.
+		p	1	p_75820_1_	chunkIn	#chunkIn, :, chunk, :
+		p	2	p_75820_2_	worldIn	#worldIn, :, world, :
+		p	3	p_75820_3_	compound	#compound, :, nbt, :
+	m	(Lnet/minecraft/world/chunk/storage/AnvilChunkLoader$PendingChunk;)V	func_75821_a	writeChunkNBTTags	#writeChunkNBTTags, :, ~, saveChunk
+		p	1	p_75821_1_	chunkNbt	#~, ~, ~, chunkNbt
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

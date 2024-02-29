@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenBase$Height	net/minecraft/world/biome/BiomeGenBase$Height	
+	f	F	field_150777_a	rootHeight	#rootHeight, :, ~, baseHeight
+	f	F	field_150776_b	variation	#variation, :, ~, heightModifier
+	m	()Lnet/minecraft/world/biome/BiomeGenBase$Height;	func_150775_a	attenuate	#attenuate, :, ~, diminish
+		c	Reduces the baseHeight by 20%, and the variation intensity by 40%, and returns the resulting Height object
+	m	(FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45371_1_	rootHeightIn	#rootHeightIn, :, ~, baseHeight
+		p	2	p_i45371_2_	variationIn	#variationIn, :, ~, heightModifier

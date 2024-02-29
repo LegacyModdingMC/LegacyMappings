@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentData	net/minecraft/enchantment/EnchantmentData	
+	c	Represents an entry in an enchantments array, i.e. a pair between\nenchantment and level. This is also a weighted entry and is available\nfor the weighted picker to pick from a list.\n\n<p>This is usually used where multiple enchantment to level mappings can\nexist, such as in enchanting logic. In other cases, vanilla prefers\n{@code Map<Enchantment, Integer>} over {@code List<EnchantmentLevelEntry>}.\n\n<p>This class is immutable. It does not override hashCode or equals.
+	f	Lnet/minecraft/enchantment/Enchantment;	field_76302_b	enchantmentobj	#enchantmentobj, enchantment, :, :
+		c	Enchantment object associated with this EnchantmentData
+	f	I	field_76303_c	enchantmentLevel	#enchantmentLevel, :, level, :
+		c	Enchantment level associated with this EnchantmentData
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1931_1_	id	#~, ~, id, :
+		p	2	p_i1931_2_	level	#~, ~, level, :
+	m	(Lnet/minecraft/enchantment/Enchantment;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1930_1_	enchantmentObj	#enchantmentObj, :, enchantment, :
+		p	2	p_i1930_2_	enchLevel	#enchLevel, :, level, :

@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockLeaves	net/minecraft/block/BlockLeaves	
+	f	[[Lnet/minecraft/util/IIcon;	field_150129_M	sprites	#~, ~, ~, sprites
+	f	[I	field_150128_a	surroundings	#surroundings, :, neighborBlockDecayInfo, decayRegion
+	f	I	field_150127_b	iconIndex	#iconIndex, :, fancyIndex, spriteIndex
+	m	(I)I	func_150123_b	getSaplingDropChance	#~, ~, ~, getSaplingDropChance
+		c	Returns the base chance for the block to drop a sapling when broken
+		p	1	p_150123_1_	metadata	#~, ~, ~, metadata
+	m	(Z)V	func_150122_b	setGraphicsLevel	#setGraphicsLevel, :, setGraphics, setFancyGraphics
+		c	Pass true to draw this block using fancy graphics, or false for fast graphics.
+		p	1	p_150122_1_	fancy	#fancy, :, fancyGraphics, :
+	m	(Lnet/minecraft/world/World;IIIII)V	func_150124_c	dropAppleWithChance	#~, ~, ~, dropAppleWithChance
+		c	If leaf block has correct metadata, then drop an apple item with 1/chance probability
+		p	1	p_150124_1_	world	#~, ~, ~, world
+		p	2	p_150124_2_	x	#~, ~, ~, x
+		p	3	p_150124_3_	y	#~, ~, ~, y
+		p	4	p_150124_4_	z	#~, ~, ~, z
+		p	5	p_150124_5_	metadata	#~, ~, ~, metadata
+		p	6	p_150124_6_	chance	#~, ~, ~, chance
+	m	()[Ljava/lang/String;	func_150125_e	getVariants	#~, ~, ~, getVariants
+	m	(Lnet/minecraft/world/World;III)V	func_150126_e	removeLeaves	#removeLeaves, :, ~, breakLeaves
+		p	1	p_150126_1_	world	#~, ~, ~, world
+		p	2	p_150126_2_	x	#~, ~, ~, x
+		p	3	p_150126_3_	y	#~, ~, ~, y
+		p	4	p_150126_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

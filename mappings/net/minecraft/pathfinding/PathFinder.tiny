@@ -1,0 +1,91 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/pathfinding/PathFinder	net/minecraft/pathfinding/PathFinder	
+	f	Lnet/minecraft/world/IBlockAccess;	field_75868_a	worldMap	#worldMap, :, ~, world
+		c	Used to find obstacles
+	f	Lnet/minecraft/pathfinding/Path;	field_75866_b	path	#path, :, minHeap, heap
+		c	The path being generated
+	f	Lnet/minecraft/util/IntHashMap;	field_75867_c	pointMap	#pointMap, :, ~, nodes
+		c	The points in the path
+	f	[Lnet/minecraft/pathfinding/PathPoint;	field_75864_d	pathOptions	#pathOptions, :, nodes, neighbors
+		c	Selection of path points to add to the path
+	f	Z	field_75865_e	isWoddenDoorAllowed	#isWoddenDoorAllowed, canPassOpenWoodenDoors, ~, canWalkThroughDoors
+		c	should the PathFinder go through wodden door blocks
+	f	Z	field_75862_f	isMovementBlockAllowed	#isMovementBlockAllowed, canPassClosedWoodenDoor, ~, canOpenDoors
+		c	should the PathFinder disregard BlockMovement type materials in its path
+	f	Z	field_75863_g	isPathingInWater	#isPathingInWater, avoidsWater, ~, canFloat
+		c	Should the PathFinder avoids waters blocks
+	f	Z	field_75869_h	canEntityDrown	#canEntityDrown, canEntitySwim, ~, canSwim
+		c	tells the FathFinder to not stop pathing underwater
+	m	(III)Lnet/minecraft/pathfinding/PathPoint;	func_75854_a	openPoint	#openPoint, :, ~, getOrAddNode
+		c	Returns a mapped point or creates and adds one
+		p	1	p_75854_1_	x	#~, ~, ~, x
+		p	2	p_75854_2_	y	#~, ~, ~, y
+		p	3	p_75854_3_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;)Lnet/minecraft/pathfinding/PathEntity;	func_75853_a	createEntityPath	#createEntityPath, createPath, :, buildPath
+		c	Returns a new PathEntity for a given start and end point
+		p	1	p_75853_1_	start	#start, :, startNode, start
+		p	2	p_75853_2_	end	#end, :, endNode, target
+	m	(Lnet/minecraft/entity/Entity;DDDF)Lnet/minecraft/pathfinding/PathEntity;	func_75857_a	createEntityPathTo	#createEntityPathTo, :, ~, findPath
+		c	Internal implementation of creating a path from an entity to a point
+		p	1	p_75857_1_	entity	#~, ~, ~, entity
+		p	2	p_75857_2_	x	#~, ~, ~, x
+		p	4	p_75857_4_	y	#~, ~, ~, y
+		p	6	p_75857_6_	z	#~, ~, ~, z
+		p	8	p_75857_8_	range	#~, ~, ~, range
+	m	(Lnet/minecraft/entity/Entity;IIIF)Lnet/minecraft/pathfinding/PathEntity;	func_75859_a	createEntityPathTo	#createEntityPathTo, :, ~, findPath
+		c	Creates a path from an entity to a specified location within a minimum distance
+		p	1	p_75859_1_	entity	#~, ~, ~, entity
+		p	2	p_75859_2_	x	#~, ~, ~, x
+		p	3	p_75859_3_	y	#~, ~, ~, y
+		p	4	p_75859_4_	z	#~, ~, ~, z
+		p	5	p_75859_5_	range	#~, ~, ~, range
+	m	(Lnet/minecraft/entity/Entity;IIILnet/minecraft/pathfinding/PathPoint;)I	func_75855_a	getVerticalOffset	#getVerticalOffset, canEntityStandAt, ~, getBlockingType
+		c	Checks if an entity collides with blocks at a position. Returns 1 if clear, 0 for colliding with any solid block, -1 for water(if avoiding water) but otherwise clear, -2 for lava, -3 for fence, -4 for closed trapdoor, 2 if otherwise clear except for open trapdoor or water(if not avoiding)
+		p	1	p_75855_1_	entity	#~, ~, ~, entity
+		p	2	p_75855_2_	x	#~, ~, ~, x
+		p	3	p_75855_3_	y	#~, ~, ~, y
+		p	4	p_75855_4_	z	#~, ~, ~, z
+		p	5	p_75855_5_	bounds	#~, ~, ~, bounds
+	m	(Lnet/minecraft/entity/Entity;IIILnet/minecraft/pathfinding/PathPoint;I)Lnet/minecraft/pathfinding/PathPoint;	func_75858_a	getSafePoint	#getSafePoint, :, ~, getValidNode
+		c	Returns a point that the entity can safely move to
+		p	1	p_75858_1_	entity	#~, ~, ~, entity
+		p	2	p_75858_2_	x	#~, ~, ~, x
+		p	3	p_75858_3_	y	#~, ~, ~, y
+		p	4	p_75858_4_	z	#~, ~, ~, z
+		p	5	p_75858_5_	bounds	#~, ~, ~, bounds
+		p	6	p_75858_6_	neighborBlockingType	#~, ~, ~, neighborBlockingType
+	m	(Lnet/minecraft/entity/Entity;IIILnet/minecraft/pathfinding/PathPoint;ZZZ)I	func_82565_a	canEntityStandAt	#canEntityStandAt, :, ~, getBlockingType
+		c	Checks if an entity collides with blocks at a position. Returns : 1 = clear, 0 = blocked, -1 = water (if avoiding water), -2 = lava (if not already in lava), -3 = fence or rails, -4 = closed trapdoor, 2 = open trapdoor or water (if not avoiding) or open door (if can pass trhough). Args : entity, posX, posY, posZ, entitySize, avoidsWater, canPassClosedWoodenDoor, scanPassOpe
+		p	0	p_82565_0_	entity	#~, ~, ~, entity
+		p	1	p_82565_1_	x	#~, ~, ~, x
+		p	2	p_82565_2_	y	#~, ~, ~, y
+		p	3	p_82565_3_	z	#~, ~, ~, z
+		p	4	p_82565_4_	bounds	#~, ~, ~, bounds
+		p	5	p_82565_5_	canFloat	#~, ~, ~, canFloat
+		p	6	p_82565_6_	canOpenDoors	#~, ~, ~, canOpenDoors
+		p	7	p_82565_7_	canWalkThroughDoors	#~, ~, ~, canWalkThroughDoors
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;F)Lnet/minecraft/pathfinding/PathEntity;	func_75861_a	addToPath	#addToPath, :, ~, buildPath
+		c	Adds a path from start to end and returns the whole path (args: unused, start, end, unused, maxDistance)
+		p	1	p_75861_1_	entity	#~, ~, ~, entity
+		p	2	p_75861_2_	start	#~, ~, ~, start
+		p	3	p_75861_3_	target	#~, ~, ~, target
+		p	4	p_75861_4_	bounds	#~, ~, ~, bounds
+		p	5	p_75861_5_	range	#~, ~, ~, range
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;F)Lnet/minecraft/pathfinding/PathEntity;	func_75856_a	createEntityPathTo	#createEntityPathTo, :, ~, findPath
+		c	Creates a path from one entity to another within a minimum distance
+		p	1	p_75856_1_	entity	#~, ~, ~, entity
+		p	2	p_75856_2_	target	#~, ~, ~, target
+		p	3	p_75856_3_	range	#~, ~, ~, range
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;Lnet/minecraft/pathfinding/PathPoint;F)I	func_75860_b	findPathOptions	#findPathOptions, :, ~, getNeighbors
+		c	populates pathOptions with available points and returns the number of options found (args: unused1, currentPoint, unused2, targetPoint, maxDistance)
+		p	1	p_75860_1_	entity	#~, ~, ~, entity
+		p	2	p_75860_2_	node	#~, ~, ~, node
+		p	3	p_75860_3_	bounds	#~, ~, ~, bounds
+		p	4	p_75860_4_	target	#~, ~, ~, target
+		p	5	p_75860_5_	range	#~, ~, ~, range
+	m	(Lnet/minecraft/world/IBlockAccess;ZZZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2137_1_	world	#~, ~, ~, world
+		p	2	p_i2137_2_	canWalkThroughDoors	#~, ~, ~, canWalkThroughDoors
+		p	3	p_i2137_3_	canOpenDoors	#~, ~, ~, canOpenDoors
+		p	4	p_i2137_4_	canFloat	#~, ~, ~, canFloat
+		p	5	p_i2137_5_	canSwim	#~, ~, ~, canSwim

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/IBlockSource	net/minecraft/dispenser/IBlockSource	
+	m	()I	func_82623_d	getXInt	#getXInt, :, getBlockX, :
+	m	()I	func_82622_e	getYInt	#getYInt, :, getBlockY, :
+	m	()I	func_82621_f	getZInt	#getZInt, :, getBlockZ, :
+	m	()I	func_82620_h	getBlockMetadata	#getBlockMetadata, :, getBlockStateData, getBlockMetadata
+	m	()Lnet/minecraft/tileentity/TileEntity;	func_150835_j	getBlockTileEntity	#getBlockTileEntity, :, getBlockEntity, :

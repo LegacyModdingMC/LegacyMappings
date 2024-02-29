@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSheep1	net/minecraft/client/model/ModelSheep1	
+	f	F	field_78152_i	headRotationAngleX	#headRotationAngleX, :, ~, headAngle
+	m	()V	<init>	<init>	#~, ~, ~, ~

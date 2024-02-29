@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S14PacketEntity	net/minecraft/network/play/server/S14PacketEntity	
+	f	I	field_149074_a	entityId	#entityId, :, id, :
+	f	B	field_149072_b	posX	#posX, :, x, dx
+	f	B	field_149073_c	posY	#posY, :, y, dy
+	f	B	field_149070_d	posZ	#posZ, :, z, dz
+	f	B	field_149071_e	yaw	#yaw, :, :, :
+	f	B	field_149068_f	pitch	#pitch, :, :, :
+	f	Z	field_149069_g	rotating	#rotating, :, rotate, hasAngles
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45206_1_	entityIdIn	#entityIdIn, :, id, :
+	m	(Lnet/minecraft/world/World;)Lnet/minecraft/entity/Entity;	func_149065_a	getEntity	#getEntity, :, :, :
+		p	1	p_149065_1_	worldIn	#worldIn, :, world, :
+	m	()B	func_149062_c	getDx	#~, ~, getX, getDx
+	m	()B	func_149061_d	getDy	#~, ~, getY, getDy
+	m	()B	func_149064_e	getDz	#~, ~, getZ, getDz
+	m	()B	func_149066_f	getYaw	#getYaw, :, :, :
+	m	()B	func_149063_g	getPitch	#getPitch, :, :, :
+	m	()Z	func_149060_h	isRotating	#isRotating, :, shouldRotate, hasAngles
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

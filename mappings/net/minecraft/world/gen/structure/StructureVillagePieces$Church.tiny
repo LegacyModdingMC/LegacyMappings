@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$Church	net/minecraft/world/gen/structure/StructureVillagePieces$Church	
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Church;	func_74919_a	of	#~, ~, ~, of
+		p	0	p_74919_0_	statPiece	#~, ~, ~, statPiece
+		p	1	p_74919_1_	pieces	#~, ~, ~, pieces
+		p	2	p_74919_2_	random	#~, ~, ~, random
+		p	3	p_74919_3_	x	#~, ~, ~, x
+		p	4	p_74919_4_	y	#~, ~, ~, y
+		p	5	p_74919_5_	z	#~, ~, ~, z
+		p	6	p_74919_6_	facing	#~, ~, ~, facing
+		p	7	p_74919_7_	generationDepth	#~, ~, ~, generationDepth
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2102_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_i2102_2_	generationDepth	#~, ~, ~, generationDepth
+		p	3	p_i2102_3_	random	#~, ~, ~, random
+		p	4	p_i2102_4_	box	#~, ~, ~, box
+		p	5	p_i2102_5_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

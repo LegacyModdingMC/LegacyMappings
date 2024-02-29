@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenForest	net/minecraft/world/biome/BiomeGenForest	
+	f	Lnet/minecraft/world/gen/feature/WorldGenForest;	field_150629_aC	SUPER_BIRCH_TREE	#SUPER_BIRCH_TREE, :, ~, TALL_BIRCH_TREE
+	f	Lnet/minecraft/world/gen/feature/WorldGenForest;	field_150630_aD	BIRCH_TREE	#BIRCH_TREE, :, ~, BIRCH_TREE
+	f	Lnet/minecraft/world/gen/feature/WorldGenCanopyTree;	field_150631_aE	ROOF_TREE	#ROOF_TREE, :, ~, DARK_OAK_TREE
+	f	I	field_150632_aF	type	#type, :, ~, variant
+		c	The variant of forest. The possible values are:\n<br> 0: normal\n<br> 1: flower\n<br> 2: birch\n<br> 3: roofed
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45377_1_	id	#id, :, :, :
+		p	2	p_i45377_2_	type	#~, ~, ~, type
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

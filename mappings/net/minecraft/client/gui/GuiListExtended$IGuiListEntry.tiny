@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiListExtended$IGuiListEntry	net/minecraft/client/gui/GuiListExtended$IGuiListEntry	
+	m	(IIIIII)Z	func_148278_a	mousePressed	#mousePressed, :, ~, mouseClicked
+		c	Returns true if the mouse has been pressed on this control.
+		p	1	p_148278_1_	slotIndex	#slotIndex, :, ~, index
+		p	2	p_148278_2_	mouseX	#mouseX, :, ~, mouseX
+		p	3	p_148278_3_	mouseY	#mouseY, :, ~, mouseY
+		p	4	p_148278_4_	mouseEvent	#mouseEvent, :, ~, button
+		p	5	p_148278_5_	relativeX	#relativeX, :, ~, entryMouseX
+		p	6	p_148278_6_	relativeY	#relativeY, :, ~, entryMouseY
+	m	(IIIIILnet/minecraft/client/renderer/Tessellator;IIZ)V	func_148279_a	drawEntry	#drawEntry, :, ~, render
+		p	1	p_148279_1_	index	#~, ~, ~, index
+		p	2	p_148279_2_	x	#~, ~, ~, x
+		p	3	p_148279_3_	y	#~, ~, ~, y
+		p	4	p_148279_4_	width	#~, ~, ~, width
+		p	5	p_148279_5_	height	#~, ~, ~, height
+		p	6	p_148279_6_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	7	p_148279_7_	mouseX	#~, ~, ~, mouseX
+		p	8	p_148279_8_	mouseY	#~, ~, ~, mouseY
+		p	9	p_148279_9_	hovered	#~, ~, ~, hovered
+	m	(IIIIII)V	func_148277_b	mouseReleased	#mouseReleased, :, ~, mouseReleased
+		c	Fired when the mouse button is released. Arguments: index, x, y, mouseEvent, relativeX, relativeY
+		p	1	p_148277_1_	slotIndex	#slotIndex, :, ~, index
+		p	2	p_148277_2_	x	#x, :, ~, mouseX
+		p	3	p_148277_3_	y	#y, :, ~, mouseY
+		p	4	p_148277_4_	mouseEvent	#mouseEvent, :, ~, button
+		p	5	p_148277_5_	relativeX	#relativeX, :, ~, entryMouseX
+		p	6	p_148277_6_	relativeY	#relativeY, :, ~, entryMouseY

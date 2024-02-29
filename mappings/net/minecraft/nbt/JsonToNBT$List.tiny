@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/JsonToNBT$List	net/minecraft/nbt/JsonToNBT$List	
+	f	Ljava/util/ArrayList;	field_150492_b	tagList	#tagList, :, parsers, entries
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45138_1_	json	#json, :, key, :

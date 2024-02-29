@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/NullStream	net/minecraft/client/stream/NullStream	
+	f	Ljava/lang/Throwable;	field_152938_a	error	#~, ~, throwable, error
+	m	(Ljava/lang/Throwable;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1006_1_	error	#~, ~, throwable, error
+	m	()Ljava/lang/Throwable;	func_152937_a	getError	#~, ~, getThrowable, getError

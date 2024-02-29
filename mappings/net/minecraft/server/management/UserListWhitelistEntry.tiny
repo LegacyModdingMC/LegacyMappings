@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserListWhitelistEntry	net/minecraft/server/management/UserListWhitelistEntry	
+	m	(Lcom/google/gson/JsonObject;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1130_1_	json	#json, :, jsonObject, json
+	m	(Lcom/mojang/authlib/GameProfile;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1129_1_	profile	#profile, :, :, :
+	m	(Lcom/google/gson/JsonObject;)Lcom/mojang/authlib/GameProfile;	func_152646_b	gameProfileFromJsonObject	#gameProfileFromJsonObject, :, deserializeProfile, deserialize
+		p	0	p_152646_0_	json	#json, :, :, :

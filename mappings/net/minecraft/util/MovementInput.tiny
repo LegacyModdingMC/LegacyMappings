@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MovementInput	net/minecraft/util/MovementInput	
+	f	F	field_78902_a	moveStrafe	#moveStrafe, :, movementSideways, :
+		c	The speed at which the player is strafing. Postive numbers to the left and negative to the right.
+	f	F	field_78900_b	moveForward	#moveForward, :, movementForward, :
+		c	The speed at which the player is moving forward. Negative numbers will move backwards.
+	f	Z	field_78901_c	jump	#jump, :, jumping, :
+	f	Z	field_78899_d	sneak	#sneak, :, sneaking, :
+	m	()V	func_78898_a	updatePlayerMoveState	#updatePlayerMoveState, :, tick, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/PingResponseHandler	net/minecraft/network/PingResponseHandler	
+	f	Lorg/apache/logging/log4j/Logger;	field_151258_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/network/NetworkSystem;	field_151257_b	networkSystem	#networkSystem, :, ~, connection
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;)V	func_151256_a	writeAndFlush	#writeAndFlush, :, reply, :
+		p	1	p_151256_1_	ctx	#ctx, :, :, context
+		p	2	p_151256_2_	data	#data, :, buf, buffer
+	m	(Ljava/lang/String;)Lio/netty/buffer/ByteBuf;	func_151255_a	getStringBuffer	#getStringBuffer, :, toBuffer, :
+		p	1	p_151255_1_	string	#string, :, s, :
+	m	(Lio/netty/channel/ChannelHandlerContext;Ljava/lang/Object;)V	channelRead	channelRead	#~, ~, ~, ~
+		p	1	p_channelRead_1_	context	#~, ~, ~, context
+		p	2	p_channelRead_2_	obj	#~, ~, ~, obj
+	m	(Lnet/minecraft/network/NetworkSystem;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45286_1_	networkSystemIn	#networkSystemIn, :, ~, connection
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

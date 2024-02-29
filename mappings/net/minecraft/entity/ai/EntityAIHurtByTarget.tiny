@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIHurtByTarget	net/minecraft/entity/ai/EntityAIHurtByTarget	
+	f	Z	field_75312_a	entityCallsForHelp	#entityCallsForHelp, :, groupRevenge, callOthersForRevenge
+	f	I	field_142052_b	revengeTimerOld	#revengeTimerOld, :, lastAttackedTime, :
+		c	Store the previous revengeTimer value
+	m	(Lnet/minecraft/entity/EntityCreature;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1660_1_	p_i1660_1_	#~, ~, ~, ~
+		p	2	p_i1660_2_	p_i1660_2_	#~, ~, ~, ~

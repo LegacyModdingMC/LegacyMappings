@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C01PacketChatMessage	net/minecraft/network/play/client/C01PacketChatMessage	
+	f	Ljava/lang/String;	field_149440_a	message	#message, :, chatMessage, message
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45240_1_	messageIn	#messageIn, :, chatMessage, message
+	m	()Ljava/lang/String;	func_149439_c	getMessage	#getMessage, :, getChatMessage, getMessage
+	m	()V	<init>	<init>	#~, ~, ~, ~

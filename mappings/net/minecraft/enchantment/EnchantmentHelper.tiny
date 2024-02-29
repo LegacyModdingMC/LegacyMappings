@@ -1,0 +1,106 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentHelper	net/minecraft/enchantment/EnchantmentHelper	
+	f	Ljava/util/Random;	field_77522_a	enchantmentRand	#enchantmentRand, RANDOM, :, :
+		c	Is the random seed of enchantment effects.
+	f	Lnet/minecraft/enchantment/EnchantmentHelper$ModifierDamage;	field_77520_b	enchantmentModifierDamage	#enchantmentModifierDamage, ENCHANTMENT_MODIFIER_DAMAGE, ~, PROTECTION_MODIFIER
+		c	Used to calculate the extra armor of enchantments on armors equipped on player.
+	f	Lnet/minecraft/enchantment/EnchantmentHelper$ModifierLiving;	field_77521_c	enchantmentModifierLiving	#enchantmentModifierLiving, ENCHANTMENT_MODIFIER_LIVING, ~, DAMAGE_MODIFIER
+		c	Used to calculate the (magic) extra damage done by enchantments on current equipped item of player.
+	f	Lnet/minecraft/enchantment/EnchantmentHelper$HurtIterator;	field_151388_d	ENCHANTMENT_ITERATOR_HURT	#ENCHANTMENT_ITERATOR_HURT, :, ~, PROTECTION_WILDCARD
+	f	Lnet/minecraft/enchantment/EnchantmentHelper$DamageIterator;	field_151389_e	ENCHANTMENT_ITERATOR_DAMAGE	#ENCHANTMENT_ITERATOR_DAMAGE, :, ~, DAMAGE_WILDCARD
+	m	(ILnet/minecraft/item/ItemStack;)I	func_77506_a	getEnchantmentLevel	#getEnchantmentLevel, :, getLevel, :
+		c	Returns the level of enchantment on the ItemStack passed.
+		p	0	p_77506_0_	enchID	#enchID, :, id, :
+		p	1	p_77506_1_	stack	#stack, :, :, :
+	m	(I[Lnet/minecraft/item/ItemStack;)I	func_77511_a	getMaxEnchantmentLevel	#getMaxEnchantmentLevel, :, getLevel, getHighestEnchantmentLevel
+		c	Returns the biggest level of the enchantment on the array of ItemStack passed.
+		p	0	p_77511_0_	enchID	#enchID, :, enchantmentId, id
+		p	1	p_77511_1_	stacks	#stacks, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)Ljava/util/Map;	func_82781_a	getEnchantments	#getEnchantments, :, get, getEnchantments
+		c	Return the enchantments for the specified stack.
+		p	0	p_82781_0_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/EnumCreatureAttribute;)F	func_152377_a	getModifierForCreature	#getModifierForCreature, :, getAttackDamage, modifyDamage
+		c	Returns the increase in damage to the target due to the attacker's enchantments.
+		p	0	p_152377_0_	stack	#stack, :, :, weapon
+		p	1	p_152377_1_	creatureAttribute	#creatureAttribute, :, group, target
+	m	(Lnet/minecraft/enchantment/Enchantment;Lnet/minecraft/entity/EntityLivingBase;)Lnet/minecraft/item/ItemStack;	func_92099_a	getEnchantedItem	#getEnchantedItem, :, chooseEquipmentWith, getFirstArmorStackWithEnchantment
+		p	0	p_92099_0_	enchantment	#~, ~, enchantment, :
+		p	1	p_92099_1_	entity	#~, ~, entity, :
+	m	(Lnet/minecraft/enchantment/EnchantmentHelper$IModifier;Lnet/minecraft/item/ItemStack;)V	func_77518_a	applyEnchantmentModifier	#applyEnchantmentModifier, :, ~, applyAttackModifier
+		c	Executes the enchantment modifier on the ItemStack passed.
+		p	0	p_77518_0_	modifier	#modifier, :, ~, modifier
+		p	1	p_77518_1_	stack	#stack, :, ~, stack
+	m	(Lnet/minecraft/enchantment/EnchantmentHelper$IModifier;[Lnet/minecraft/item/ItemStack;)V	func_77516_a	applyEnchantmentModifierArray	#applyEnchantmentModifierArray, :, ~, applyAttackModifier
+		c	Executes the enchantment modifier on the array of ItemStack passed.
+		p	0	p_77516_0_	modifier	#modifier, :, ~, modifier
+		p	1	p_77516_1_	stacks	#stacks, :, ~, stacks
+	m	(Ljava/util/Map;Lnet/minecraft/item/ItemStack;)V	func_82782_a	setEnchantments	#setEnchantments, :, set, setEnchantments
+		c	Set the enchantments for the specified stack.
+		p	0	p_82782_0_	enchMap	#enchMap, :, enchantments, :
+		p	1	p_82782_1_	stack	#stack, :, :, :
+	m	(Ljava/util/Random;IILnet/minecraft/item/ItemStack;)I	func_77514_a	calcItemStackEnchantability	#calcItemStackEnchantability, :, calculateRequiredExperienceLevel, getRequiredXpLevel
+		c	Returns the enchantability of itemstack, it's uses a singular formula for each index (2nd parameter: 0, 1 and 2), cutting to the max enchantability power of the table (3rd parameter)
+		p	0	p_77514_0_	rand	#rand, :, random, :
+		p	1	p_77514_1_	enchantNum	#enchantNum, :, slotIndex, entry
+		p	2	p_77514_2_	power	#power, :, bookshelfCount, max
+		p	3	p_77514_3_	stack	#stack, :, :, :
+	m	(Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Lnet/minecraft/item/ItemStack;	func_77504_a	addRandomEnchantment	#addRandomEnchantment, :, :, :
+		c	Adds a random enchantment to the specified item. Args: random, itemStack, enchantabilityLevel
+		p	0	p_77504_0_	random	#random, :, :, :
+		p	1	p_77504_1_	stack	#stack, :, :, :
+		p	2	p_77504_2_	level	#level, :, ~, xpLevel
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_90036_a	getFireAspectModifier	#getFireAspectModifier, :, getFireAspect, getFireAspectLevel
+		c	Returns the fire aspect modifier of the players held item.
+		p	0	p_90036_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/Entity;)V	func_151384_a	applyThornEnchantments	#applyThornEnchantments, :, onUserDamaged, applyProtectionWildcard
+		p	0	p_151384_0_	target	#~, ~, user, target
+		p	1	p_151384_1_	attacker	#~, ~, attacker, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;)F	func_77512_a	getEnchantmentModifierLiving	#getEnchantmentModifierLiving, :, ~, modifyDamage
+		c	Return the (magic) extra damage of the enchantments on player equipped item.
+		p	0	p_77512_0_	attacker	#~, ~, ~, attacker
+		p	1	p_77512_1_	target	#~, ~, ~, target
+	m	([Lnet/minecraft/item/ItemStack;Lnet/minecraft/util/DamageSource;)I	func_77508_a	getEnchantmentModifierDamage	#getEnchantmentModifierDamage, :, ~, modifyProtection
+		c	Returns the modifier of protection enchantments on armors equipped on player.
+		p	0	p_77508_0_	stacks	#stacks, :, :, armor
+		p	1	p_77508_1_	source	#source, :, :, :
+	m	(ILnet/minecraft/item/ItemStack;)Ljava/util/Map;	func_77505_b	mapEnchantmentData	#mapEnchantmentData, :, ~, getAvailableEnchantmentEntries
+		c	Creates a 'Map' of EnchantmentData (enchantments) possible to add on the ItemStack and the enchantability level passed.
+		p	0	p_77505_0_	xp	#~, ~, power, xp
+		p	1	p_77505_1_	stack	#~, ~, stack, :
+	m	(Ljava/util/Random;Lnet/minecraft/item/ItemStack;I)Ljava/util/List;	func_77513_b	buildEnchantmentList	#buildEnchantmentList, :, getEnchantmentInfoEntries, getEnchantmentEntries
+		c	Create a list of random EnchantmentData (enchantments) that can be added together to the ItemStack, the 3rd parameter is the total enchantability level.
+		p	0	p_77513_0_	randomIn	#randomIn, :, random, :
+		p	1	p_77513_1_	itemStackIn	#itemStackIn, :, stack, :
+		p	2	p_77513_2_	level	#level, :, ~, xpLevel
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_77501_a	getRespiration	#getRespiration, getKnockbackModifier, getKnockback, getRespirationLevel
+		c	Returns the 'Water Breathing' modifier of enchantments on player equipped armors.
+		p	0	p_77501_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/Entity;)V	func_151385_b	applyArthropodEnchantments	#applyArthropodEnchantments, :, onTargetDamaged, applyDamageWildcard
+		p	0	p_151385_0_	attacker	#~, ~, user, attacker
+		p	1	p_151385_1_	target	#~, ~, attacker, target
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/EntityLivingBase;)I	func_77507_b	getKnockbackModifier	#getKnockbackModifier, :, ~, getKnockbackLevel
+		c	Returns the knockback value of enchantments on equipped player item.
+		p	0	p_77507_0_	attacker	#~, ~, ~, attacker
+		p	1	p_77507_1_	target	#~, ~, ~, target
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_77509_b	getEfficiencyModifier	#getEfficiencyModifier, :, getEfficiency, getEfficiencyLevel
+		c	Return the extra efficiency of tools based on enchantments on equipped player item.
+		p	0	p_77509_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_77502_d	getSilkTouchModifier	#getSilkTouchModifier, :, hasSilkTouch, :
+		c	Returns the silk touch status of enchantments on current equipped item of player.
+		p	0	p_77502_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_77517_e	getFortuneModifier	#getFortuneModifier, :, getFortune, getFortuneLevel
+		c	Returns the fortune enchantment modifier of the current equipped item of player.
+		p	0	p_77517_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_151386_g	getLuckOfSeaModifier	#getLuckOfSeaModifier, :, getLuckOfTheSea, getLuckOfTheSeaLevel
+		c	Returns the level of the 'Luck Of The Sea' enchantment.
+		p	0	p_151386_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_151387_h	getLureModifier	#getLureModifier, :, getLure, getLureLevel
+		c	Returns the level of the 'Lure' enchantment on the players held item.
+		p	0	p_151387_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)I	func_77519_f	getLootingModifier	#getLootingModifier, :, getLooting, getLootingLevel
+		c	Returns the looting enchantment modifier of the current equipped item of player.
+		p	0	p_77519_0_	player	#player, :, entity, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_77510_g	getAquaAffinityModifier	#getAquaAffinityModifier, :, hasAquaAffinity, getAquaAffinityLevel
+		c	Returns the aqua affinity status of enchantments on current equipped item of player.
+		p	0	p_77510_0_	player	#player, :, entity, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

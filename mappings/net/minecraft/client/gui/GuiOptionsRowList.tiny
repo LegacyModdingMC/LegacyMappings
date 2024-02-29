@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiOptionsRowList	net/minecraft/client/gui/GuiOptionsRowList	
+	f	Ljava/util/List;	field_148184_k	options	#options, :, entries, :
+	m	(Lnet/minecraft/client/Minecraft;IILnet/minecraft/client/settings/GameSettings$Options;)Lnet/minecraft/client/gui/GuiButton;	func_148182_a	createButton	#createButton, :, ~, createWidget
+		p	1	p_148182_1_	mcIn	#mcIn, :, ~, minecraft
+		p	2	p_148182_2_	x	#~, ~, ~, x
+		p	3	p_148182_3_	y	#~, ~, ~, y
+		p	4	p_148182_4_	options	#options, :, ~, option
+	m	(Lnet/minecraft/client/Minecraft;IIIII[Lnet/minecraft/client/settings/GameSettings$Options;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45015_1_	mcIn	#mcIn, :, ~, minecraft
+		p	2	p_i45015_2_	width	#~, ~, ~, width
+		p	3	p_i45015_3_	height	#~, ~, ~, height
+		p	4	p_i45015_4_	yStart	#~, ~, ~, yStart
+		p	5	p_i45015_5_	yEnd	#~, ~, ~, yEnd
+		p	6	p_i45015_6_	entryHeight	#~, ~, ~, entryHeight
+		p	7	p_i45015_7_	options	#~, ~, ~, options

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderGiantZombie	net/minecraft/client/renderer/entity/RenderGiantZombie	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110871_a	zombieTextures	#zombieTextures, ZOMBIE_TEXTURES, TEXTURE, ZOMBIE_LOCATION
+	f	F	field_77073_a	scale	#scale, :, :, size
+		c	Scale of the model to use
+	m	(Lnet/minecraft/client/model/ModelBase;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1255_1_	model	#~, ~, ~, model
+		p	2	p_i1255_2_	shadowSize	#~, ~, ~, shadowSize
+		p	3	p_i1255_3_	size	#~, ~, ~, size
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

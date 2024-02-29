@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDirectional	net/minecraft/block/BlockDirectional	
+	m	(I)I	func_149895_l	getDirection	#getDirection, :, getRotation, getFacing
+		c	Returns an int encoding the direction this block is facing, given its state (metadata).\nSee {@link net.minecraft.util.math.Facings Facings}.
+		p	0	p_149895_0_	metadata	#~, ~, blockData, metadata
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45401_1_	materialIn	#materialIn, :, ~, ~

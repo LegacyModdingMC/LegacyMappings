@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/stream/GuiStreamUnavailable$SwitchReason	net/minecraft/client/gui/stream/GuiStreamUnavailable$SwitchReason	
+	f	[I	field_152577_a	field_152577_a	#~, ~, ~, ~
+	f	[I	field_152578_b	field_152578_b	#~, ~, ~, ~
+	f	[I	field_152579_c	field_152579_c	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

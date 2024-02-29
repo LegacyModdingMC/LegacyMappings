@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiDispenser	net/minecraft/client/gui/inventory/GuiDispenser	
+	f	Lnet/minecraft/tileentity/TileEntityDispenser;	field_147089_u	tileDispenser	#tileDispenser, :, ~, dispenser
+	f	Lnet/minecraft/util/ResourceLocation;	field_147088_v	dispenserGuiTextures	#dispenserGuiTextures, DISPENSER_GUI_TEXTURES, TEXTURE, MENU_LOCATION
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityDispenser;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1098_1_	usernameIn	#usernameIn, :, ~, playerInventory
+		p	2	p_i1098_2_	playerIDIn	#playerIDIn, :, ~, dispenser
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderEnderman	net/minecraft/client/renderer/entity/RenderEnderman	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110840_a	endermanEyesTexture	#endermanEyesTexture, :, ~, ENDERMAN_EYES_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110839_f	endermanTextures	#endermanTextures, ENDERMAN_TEXTURES, TEXTURE, ENDERMAN_LOCATION
+	f	Lnet/minecraft/client/model/ModelEnderman;	field_77078_a	endermanModel	#endermanModel, :, :, model
+		c	The model of the enderman
+	f	Ljava/util/Random;	field_77077_b	rnd	#rnd, :, random, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

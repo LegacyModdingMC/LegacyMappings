@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandGameRule	net/minecraft/command/CommandGameRule	
+	m	()Lnet/minecraft/world/GameRules;	func_82366_d	getGameRules	#getGameRules, :, ~, getGameRules
+		c	Return the game rule set this command should be able to manipulate.
+	m	()V	<init>	<init>	#~, ~, ~, ~

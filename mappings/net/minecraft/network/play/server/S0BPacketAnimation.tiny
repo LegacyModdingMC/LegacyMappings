@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S0BPacketAnimation	net/minecraft/network/play/server/S0BPacketAnimation	
+	f	I	field_148981_a	entityId	#entityId, :, id, :
+	f	I	field_148980_b	type	#type, :, animationId, action
+	m	(Lnet/minecraft/entity/Entity;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45172_1_	ent	#ent, :, entity, :
+		p	2	p_i45172_2_	animationType	#animationType, :, animationId, action
+	m	()I	func_148978_c	getEntityID	#getEntityID, :, getId, :
+	m	()I	func_148977_d	getAnimationType	#getAnimationType, :, getAnimationId, getAction
+	m	()V	<init>	<init>	#~, ~, ~, ~

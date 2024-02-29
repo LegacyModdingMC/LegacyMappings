@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S3FPacketCustomPayload	net/minecraft/network/play/server/S3FPacketCustomPayload	
+	f	Ljava/lang/String;	field_149172_a	channel	#channel, :, :, :
+	f	[B	field_149171_b	data	#data, :, payload, data
+	m	(Ljava/lang/String;Lio/netty/buffer/ByteBuf;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45189_1_	channelName	#channelName, :, channel, :
+		p	2	p_i45189_2_	dataIn	#dataIn, :, payload, data
+	m	(Ljava/lang/String;[B)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45190_1_	channelName	#channelName, :, channel, :
+		p	2	p_i45190_2_	dataIn	#dataIn, :, payload, data
+	m	()Ljava/lang/String;	func_149169_c	getChannelName	#getChannelName, :, getChannel, :
+	m	()[B	func_149168_d	getData	#~, ~, getPayload, getData
+	m	()V	<init>	<init>	#~, ~, ~, ~

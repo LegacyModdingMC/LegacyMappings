@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockLog	net/minecraft/block/BlockLog	
+	f	[Lnet/minecraft/util/IIcon;	field_150167_a	sideSprites	#~, ~, ~, sideSprites
+	f	[Lnet/minecraft/util/IIcon;	field_150166_b	topSprites	#~, ~, ~, topSprites
+	m	(I)I	func_150165_c	getLogAxis	#~, ~, ~, getLogAxis
+		p	0	p_150165_0_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiContainerCreative$CreativeSlot	net/minecraft/client/gui/inventory/GuiContainerCreative$CreativeSlot	
+	f	Lnet/minecraft/client/gui/inventory/GuiContainerCreative;	field_148333_a	inventoryScreen	#~, ~, ~, inventoryScreen
+	f	Lnet/minecraft/inventory/Slot;	field_148332_b	slot	#slot, :, ~, invSlot
+	m	(Lnet/minecraft/client/gui/inventory/GuiContainerCreative$CreativeSlot;)Lnet/minecraft/inventory/Slot;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/inventory/GuiContainerCreative;Lnet/minecraft/inventory/Slot;I)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1087_2_	invSlot	#~, ~, ~, invSlot
+		p	3	p_i1087_3_	slot	#~, ~, ~, slot
+		p	1	p_i1087_1_	proxyIn	#proxyIn, :, ~, ~

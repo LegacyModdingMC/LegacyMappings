@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderIronGolem	net/minecraft/client/renderer/entity/RenderIronGolem	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110899_a	ironGolemTextures	#ironGolemTextures, IRON_GOLEM_TEXTURES, TEXTURE, IRON_GOLEM_LOCATION
+	f	Lnet/minecraft/client/model/ModelIronGolem;	field_77050_a	ironGolemModel	#ironGolemModel, :, ~, model
+		c	Iron Golem's Model.
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

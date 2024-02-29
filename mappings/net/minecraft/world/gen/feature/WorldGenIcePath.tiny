@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenIcePath	net/minecraft/world/gen/feature/WorldGenIcePath	
+	f	Lnet/minecraft/block/Block;	field_150555_a	block	#block, :, iceBlock, ice
+	f	I	field_150554_b	basePathWidth	#basePathWidth, :, width, size
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45454_1_	basePathWidthIn	#basePathWidthIn, :, width, size

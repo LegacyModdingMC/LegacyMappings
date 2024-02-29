@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/Block$SoundType	net/minecraft/block/Block$SoundType	
+	f	Ljava/lang/String;	field_150501_a	soundName	#soundName, :, id, key
+	f	F	field_150499_b	volume	#volume, :, :, :
+	f	F	field_150500_c	frequency	#frequency, :, pitch, :
+	m	(Ljava/lang/String;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45393_1_	name	#name, :, id, key
+		p	2	p_i45393_2_	volume	#volume, :, :, :
+		p	3	p_i45393_3_	frequency	#frequency, :, pitch, :
+	m	()Ljava/lang/String;	func_150495_a	getBreakSound	#getBreakSound, :, getHitId, getDigSound
+		c	Used when a block breaks, e.g.: Player break, Sheep eating grass, etc..
+	m	()Ljava/lang/String;	func_150496_b	getPlaceSound	#getPlaceSound, :, getPlaceId, getSound
+	m	()F	func_150497_c	getVolume	#getVolume, :, :, :
+	m	()F	func_150494_d	getPitch	#getPitch, getFrequency, getPitch, :
+	m	()Ljava/lang/String;	func_150498_e	getStepResourcePath	#getStepResourcePath, getStepSound, getStepId, getStepSound

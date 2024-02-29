@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/EntityPlayer$EnumStatus	net/minecraft/entity/player/EntityPlayer$EnumStatus	
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	OK	OK	#~, ~, OK, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	NOT_POSSIBLE_HERE	NOT_POSSIBLE_HERE	#~, ~, NOT_POSSIBLE_HERE, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	NOT_POSSIBLE_NOW	NOT_POSSIBLE_NOW	#~, ~, NOT_POSSIBLE_NOW, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	TOO_FAR_AWAY	TOO_FAR_AWAY	#~, ~, TOO_FAR_AWAY, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	OTHER_PROBLEM	OTHER_PROBLEM	#~, ~, OTHER_PROBLEM, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	NOT_SAFE	NOT_SAFE	#~, ~, NOT_SAFE, :
+	f	[Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/entity/player/EntityPlayer$EnumStatus;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1751_1_	p_i1751_1_	#~, ~, ~, ~
+		p	2	p_i1751_2_	p_i1751_2_	#~, ~, ~, ~

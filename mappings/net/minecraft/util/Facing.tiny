@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Facing	net/minecraft/util/Facing	
+	f	[I	field_71588_a	oppositeSide	#oppositeSide, :, ~, OPPOSITE
+		c	Converts a side to the opposite side. This is the same as XOR'ing it with 1.
+	f	[I	field_71586_b	offsetsXForSide	#offsetsXForSide, :, ~, X_OFFSET
+		c	gives the offset required for this axis to get the block at that side.
+	f	[I	field_71587_c	offsetsYForSide	#offsetsYForSide, :, ~, Y_OFFSET
+		c	gives the offset required for this axis to get the block at that side.
+	f	[I	field_71585_d	offsetsZForSide	#offsetsZForSide, :, ~, Z_OFFSET
+		c	gives the offset required for this axis to get the block at that side.
+	f	[Ljava/lang/String;	field_82374_e	facings	#facings, :, ~, NAMES
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/RenderGlobal$1	net/minecraft/client/renderer/RenderGlobal$1	
+	f	D	field_85101_a	posX	#posX, :, x, :
+	f	D	field_85099_b	posY	#posY, :, y, :
+	f	D	field_85100_c	posZ	#posZ, :, z, :
+	f	Lnet/minecraft/client/renderer/RenderGlobal;	field_85098_d	globalRenderer	#globalRenderer, :, worldRenderer, :
+	m	(Lnet/minecraft/client/renderer/RenderGlobal;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1248_1_	worldRenderer	#~, ~, worldRenderer, ~
+		p	2	p_i1248_2_	x	#~, ~, x, ~
+		p	4	p_i1248_4_	y	#~, ~, y, ~
+		p	6	p_i1248_6_	z	#~, ~, z, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemHoe	net/minecraft/item/ItemHoe	
+	f	Lnet/minecraft/item/Item$ToolMaterial;	field_77843_a	theToolMaterial	#theToolMaterial, toolMaterial, ~, material
+	m	()Ljava/lang/String;	func_77842_f	getToolMaterialName	#getToolMaterialName, getMaterialName, getAsString, :
+		c	Returns the name of the material this tool is made from as it is declared in Item.ToolMaterial (meaning diamond would return "EMERALD")
+	m	(Lnet/minecraft/item/Item$ToolMaterial;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45343_1_	material	#material, :, ~, material

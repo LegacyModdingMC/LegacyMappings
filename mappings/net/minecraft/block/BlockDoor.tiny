@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDoor	net/minecraft/block/BlockDoor	
+	f	[Lnet/minecraft/util/IIcon;	field_150017_a	spriteUpper	#~, ~, ~, spriteUpper
+	f	[Lnet/minecraft/util/IIcon;	field_150016_b	spriteLower	#~, ~, ~, spriteLower
+	m	(Lnet/minecraft/world/World;IIIZ)V	func_150014_a	updateOpenState	#~, ~, ~, updateOpenState
+		p	1	p_150014_1_	world	#~, ~, ~, world
+		p	2	p_150014_2_	x	#~, ~, ~, x
+		p	3	p_150014_3_	y	#~, ~, ~, y
+		p	4	p_150014_4_	z	#~, ~, ~, z
+		p	5	p_150014_5_	powered	#~, ~, ~, powered
+	m	(I)V	func_150011_b	setBoundBasedOnMeta	#setBoundBasedOnMeta, :, setBoundingBoxWithData, updateBoundingBox
+		p	1	p_150011_1_	combinedMeta	#combinedMeta, :, totalData, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;III)I	func_150013_e	getFacing	#~, ~, ~, getFacing
+		p	1	p_150013_1_	world	#~, ~, ~, world
+		p	2	p_150013_2_	x	#~, ~, ~, x
+		p	3	p_150013_3_	y	#~, ~, ~, y
+		p	4	p_150013_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_150015_f	getOpen	#~, ~, ~, getOpen
+		p	1	p_150015_1_	world	#~, ~, ~, world
+		p	2	p_150015_2_	x	#~, ~, ~, x
+		p	3	p_150015_3_	y	#~, ~, ~, y
+		p	4	p_150015_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;III)I	func_150012_g	getFullMetadata	#getFullMetadata, :, ~, getCombinedMetadata
+		c	Returns the combined metadata of both halves of the door. The information is laid\nout as follows:\n\n<p>  bit   property\n<br> 1     facing\n<br> 2\n<br> 3     open\n<br> 4     half (0 = lower, 1 = upper)\n<br> 5     hinge (0 = left, 1 = right)
+		p	1	p_150012_1_	world	#~, ~, ~, world
+		p	2	p_150012_2_	x	#~, ~, ~, x
+		p	3	p_150012_3_	y	#~, ~, ~, y
+		p	4	p_150012_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45402_1_	materialIn	#materialIn, :, ~, ~

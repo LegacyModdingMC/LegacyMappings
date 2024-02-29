@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ChatComponentTranslationFormatException	net/minecraft/util/ChatComponentTranslationFormatException	
+	m	(Lnet/minecraft/util/ChatComponentTranslation;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45162_1_	component	#component, :, text, :
+		p	2	p_i45162_2_	index	#index, :, :, :
+	m	(Lnet/minecraft/util/ChatComponentTranslation;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45161_1_	component	#component, :, text, :
+		p	2	p_i45161_2_	message	#message, :, :, reason
+	m	(Lnet/minecraft/util/ChatComponentTranslation;Ljava/lang/Throwable;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45163_1_	component	#component, :, text, :
+		p	2	p_i45163_2_	cause	#cause, :, exception, :

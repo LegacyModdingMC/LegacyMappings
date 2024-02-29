@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/INetHandler	net/minecraft/network/INetHandler	
+	m	()V	func_147233_a	onNetworkTick	#onNetworkTick, :, tick, :
+		c	For scheduled network tasks. Used in NetHandlerPlayServer to send keep-alive packets and in NetHandlerLoginServer for a login-timeout
+	m	(Lnet/minecraft/network/EnumConnectionState;Lnet/minecraft/network/EnumConnectionState;)V	func_147232_a	onConnectionStateTransition	#onConnectionStateTransition, :, switchNetworkState, changeProtocol
+		c	Allows validation of the connection state transition. Parameters: from, to (connection state). Typically throws IllegalStateException or UnsupportedOperationException if validation fails
+		p	1	p_147232_1_	oldState	#oldState, :, from, :
+		p	2	p_147232_2_	newState	#newState, :, to, :
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_147231_a	onDisconnect	#onDisconnect, :, onDisconnected, onDisconnect
+		c	Invoked when disconnecting, the parameter is a ChatComponent describing the reason for termination
+		p	1	p_147231_1_	reason	#reason, :, :, :

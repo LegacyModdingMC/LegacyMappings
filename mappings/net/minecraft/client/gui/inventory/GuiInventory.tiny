@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiInventory	net/minecraft/client/gui/inventory/GuiInventory	
+	f	F	field_147048_u	xSizeFloat	#xSizeFloat, oldMouseX, mouseX, :
+		c	x size of the inventory window in pixels. Defined as  float, passed as int
+	f	F	field_147047_v	ySizeFloat	#ySizeFloat, oldMouseY, mouseY, :
+		c	y size of the inventory window in pixels. Defined as  float, passed as int.
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1094_1_	player	#player, :, :, :
+	m	(IIIFFLnet/minecraft/entity/EntityLivingBase;)V	func_147046_a	drawEntityOnScreen	#drawEntityOnScreen, :, renderEntity, :
+		c	Draws the entity to the screen. Args: xPos, yPos, scale, mouseX, mouseY, entityLiving
+		p	0	p_147046_0_	posX	#posX, :, x, :
+		p	1	p_147046_1_	posY	#posY, :, y, :
+		p	2	p_147046_2_	scale	#scale, :, size, :
+		p	3	p_147046_3_	mouseX	#mouseX, :, :, :
+		p	4	p_147046_4_	mouseY	#mouseY, :, :, :
+		p	5	p_147046_5_	ent	#ent, :, entity, :

@@ -1,0 +1,33 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/Explosion	net/minecraft/world/Explosion	
+	f	Z	field_77286_a	isFlaming	#isFlaming, causesFire, createFire, :
+		c	whether or not the explosion sets fire to blocks around it
+	f	Z	field_82755_b	isSmoking	#isSmoking, damagesTerrain, destructive, :
+		c	whether or not this explosion spawns smoke particles
+	f	D	field_77284_b	explosionX	#explosionX, x, :, :
+	f	D	field_77285_c	explosionY	#explosionY, y, :, :
+	f	D	field_77282_d	explosionZ	#explosionZ, z, :, :
+	f	Lnet/minecraft/entity/Entity;	field_77283_e	exploder	#exploder, :, causingEntity, source
+	f	F	field_77280_f	explosionSize	#explosionSize, size, power, :
+	f	Ljava/util/List;	field_77281_g	affectedBlockPositions	#affectedBlockPositions, :, affectedBlocks, damagedBlocks
+		c	A list of ChunkPositions of blocks affected by this explosion
+	f	I	field_77289_h	range	#~, ~, ~, range
+	f	Ljava/util/Random;	field_77290_i	explosionRNG	#explosionRNG, random, :, :
+	f	Lnet/minecraft/world/World;	field_77287_j	worldObj	#worldObj, world, :, :
+	f	Ljava/util/Map;	field_77288_k	playerKnockbackMap	#playerKnockbackMap, :, affectedPlayers, damagedPlayers
+		c	Maps players to the knockback vector applied by the explosion, to send to the client
+	m	()V	func_77278_a	doExplosionA	#doExplosionA, :, collectBlocksAndDamageEntities, damageEntities
+		c	Does the first part of the explosion (destroy blocks)
+	m	(Z)V	func_77279_a	doExplosionB	#doExplosionB, :, affectWorld, damageBlocks
+		c	Does the second part of the explosion (sound, particles, drop spawn)
+		p	1	p_77279_1_	spawnParticles	#spawnParticles, :, showSmallParticles, createFire
+	m	()Ljava/util/Map;	func_77277_b	getPlayerKnockbackMap	#getPlayerKnockbackMap, :, getAffectedPlayers, getDamagedPlayers
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_94613_c	getExplosivePlacedBy	#getExplosivePlacedBy, :, getCausingEntity, getSource
+		c	Returns either the entity that placed the explosive block, the entity that caused the explosion or null.
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;DDDF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1948_1_	world	#~, ~, ~, world
+		p	2	p_i1948_2_	source	#~, ~, ~, source
+		p	3	p_i1948_3_	x	#~, ~, ~, x
+		p	5	p_i1948_5_	y	#~, ~, ~, y
+		p	7	p_i1948_7_	z	#~, ~, ~, z
+		p	9	p_i1948_9_	power	#~, ~, ~, power

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSlotRealmsProxy	net/minecraft/client/gui/GuiSlotRealmsProxy	
+	f	Lnet/minecraft/realms/RealmsScrolledSelectionList;	field_154340_k	selectionList	#selectionList, :, list, ~
+	m	(Lnet/minecraft/realms/RealmsScrolledSelectionList;IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1085_1_	selectionListIn	#selectionListIn, :, list, ~
+		p	2	p_i1085_2_	widthIn	#widthIn, :, width, ~
+		p	3	p_i1085_3_	heightIn	#heightIn, :, height, ~
+		p	4	p_i1085_4_	topIn	#topIn, :, top, ~
+		p	5	p_i1085_5_	bottomIn	#bottomIn, :, bottom, ~
+		p	6	p_i1085_6_	slotHeightIn	#slotHeightIn, :, entryHeight, ~
+	m	()I	func_154338_k	getWidth	#getWidth, :, :, ~
+	m	()I	func_154339_l	getMouseY	#getMouseY, :, getLastMouseY, ~
+	m	()I	func_154337_m	getMouseX	#getMouseX, :, getLastMouseX, ~

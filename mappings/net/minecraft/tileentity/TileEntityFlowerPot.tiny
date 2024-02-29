@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityFlowerPot	net/minecraft/tileentity/TileEntityFlowerPot	
+	f	Lnet/minecraft/item/Item;	field_145967_a	flowerPotItem	#flowerPotItem, :, item, plant
+	f	I	field_145968_i	flowerPotData	#flowerPotData, :, data, metadata
+	m	(Lnet/minecraft/item/Item;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45442_1_	potItem	#potItem, :, item, plant
+		p	2	p_i45442_2_	potData	#potData, :, data, metadata
+	m	()Lnet/minecraft/item/Item;	func_145965_a	getFlowerPotItem	#getFlowerPotItem, :, getItem, getPlant
+	m	(Lnet/minecraft/item/Item;I)V	func_145964_a	setFlowerPotData	#setFlowerPotData, :, setFlower, setPlant
+		p	1	p_145964_1_	potItem	#potItem, :, item, plant
+		p	2	p_145964_2_	potData	#potData, :, data, metadata
+	m	()I	func_145966_b	getFlowerPotData	#getFlowerPotData, :, getData, getMetadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

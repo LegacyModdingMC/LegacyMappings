@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ContainerBrewingStand	net/minecraft/inventory/ContainerBrewingStand	
+	f	Lnet/minecraft/tileentity/TileEntityBrewingStand;	field_75188_e	tileBrewingStand	#tileBrewingStand, :, ~, brewingStand
+	f	Lnet/minecraft/inventory/Slot;	field_75186_f	theSlot	#theSlot, slot, ingredientSlot, :
+		c	Instance of Slot.
+	f	I	field_75187_g	brewTime	#brewTime, :, ~, timer
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityBrewingStand;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1805_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1805_2_	brewingStand	#~, ~, ~, brewingStand

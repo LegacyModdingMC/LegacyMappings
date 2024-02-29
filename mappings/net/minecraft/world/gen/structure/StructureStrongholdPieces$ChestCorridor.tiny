@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$ChestCorridor	net/minecraft/world/gen/structure/StructureStrongholdPieces$ChestCorridor	
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_75003_a	strongholdChestContents	#strongholdChestContents, :, ~, LOOT_ENTRIES
+		c	List of items that Stronghold chests can contain.
+	f	Z	field_75002_c	hasMadeChest	#hasMadeChest, :, ~, hasChest
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$ChestCorridor;	func_75000_a	findValidPlacement	#findValidPlacement, :, ~, of
+		p	0	p_75000_0_	pieces	#~, ~, ~, pieces
+		p	1	p_75000_1_	random	#~, ~, ~, random
+		p	2	p_75000_2_	x	#~, ~, ~, x
+		p	3	p_75000_3_	y	#~, ~, ~, y
+		p	4	p_75000_4_	z	#~, ~, ~, z
+		p	5	p_75000_5_	facing	#~, ~, ~, facing
+		p	6	p_75000_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2071_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2071_2_	random	#~, ~, ~, random
+		p	3	p_i2071_3_	box	#~, ~, ~, box
+		p	4	p_i2071_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/status/INetHandlerStatusServer	net/minecraft/network/status/INetHandlerStatusServer	
+	m	(Lnet/minecraft/network/status/client/C01PacketPing;)V	func_147311_a	processPing	#processPing, :, onPing, handlePing
+		p	1	p_147311_1_	packetIn	#packetIn, :, packet, :
+	m	(Lnet/minecraft/network/status/client/C00PacketServerQuery;)V	func_147312_a	processServerQuery	#processServerQuery, :, onRequest, handleServerStatus
+		p	1	p_147312_1_	packetIn	#packetIn, :, packet, :

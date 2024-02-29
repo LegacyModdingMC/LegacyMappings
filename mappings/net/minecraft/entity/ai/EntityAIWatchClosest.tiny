@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIWatchClosest	net/minecraft/entity/ai/EntityAIWatchClosest	
+	f	Lnet/minecraft/entity/Entity;	field_75334_a	closestEntity	#closestEntity, :, target, targetEntity
+		c	The closest entity which is being watched by this one.
+	f	Lnet/minecraft/entity/EntityLiving;	field_75332_b	theWatcher	#theWatcher, entity, mob, :
+	f	F	field_75333_c	maxDistanceForPlayer	#maxDistanceForPlayer, maxDistance, range, :
+		c	This is the Maximum distance that the AI will look for the Entity
+	f	I	field_75330_d	lookTime	#lookTime, :, :, :
+	f	F	field_75331_e	chance	#chance, :, :, :
+	f	Ljava/lang/Class;	field_75329_f	watchedClass	#watchedClass, :, targetType, tagetType
+	m	(Lnet/minecraft/entity/EntityLiving;Ljava/lang/Class;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1631_1_	entitylivingIn	#entitylivingIn, entityIn, mob, :
+		p	2	p_i1631_2_	watchTargetClass	#watchTargetClass, :, targetType, :
+		p	3	p_i1631_3_	maxDistance	#maxDistance, :, range, :
+	m	(Lnet/minecraft/entity/EntityLiving;Ljava/lang/Class;FF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1632_1_	entitylivingIn	#entitylivingIn, entityIn, mob, :
+		p	2	p_i1632_2_	watchTargetClass	#watchTargetClass, :, targetType, :
+		p	3	p_i1632_3_	maxDistance	#maxDistance, :, range, :
+		p	4	p_i1632_4_	chanceIn	#chanceIn, :, chance, :

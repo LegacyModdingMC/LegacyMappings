@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemWritableBook	net/minecraft/item/ItemWritableBook	
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Z	func_150930_a	validBookPageTagContents	#validBookPageTagContents, isNBTValid, isValid, :
+		c	this method returns true if the book's NBT Tag List "pages" is valid
+		p	0	p_150930_0_	nbt	#nbt, :, :, tag
+	m	()V	<init>	<init>	#~, ~, ~, ~

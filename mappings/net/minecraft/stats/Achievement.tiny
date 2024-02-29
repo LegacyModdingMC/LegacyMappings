@@ -1,0 +1,46 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/Achievement	net/minecraft/stats/Achievement	
+	f	I	field_75993_a	displayColumn	#displayColumn, :, column, :
+		c	Is the column (related to center of achievement gui, in 24 pixels unit) that the achievement will be displayed.
+	f	I	field_75991_b	displayRow	#displayRow, :, row, :
+		c	Is the row (related to center of achievement gui, in 24 pixels unit) that the achievement will be displayed.
+	f	Lnet/minecraft/stats/Achievement;	field_75992_c	parentAchievement	#parentAchievement, :, parent, :
+		c	Holds the parent achievement, that must be taken before this achievement is avaiable.
+	f	Lnet/minecraft/item/ItemStack;	field_75990_d	theItemStack	#theItemStack, icon, logo, icon
+		c	Holds the ItemStack that will be used to draw the achievement into the GUI.
+	f	Ljava/lang/String;	field_75996_k	achievementDescription	#achievementDescription, :, translationKey, description
+		c	Holds the description of the achievement, ready to be formatted and/or displayed.
+	f	Lnet/minecraft/stats/IStatStringFormat;	field_75994_l	statStringFormatter	#statStringFormatter, :, statFormatter, achievementFormatter
+		c	Holds a string formatter for the achievement, some of then needs extra dynamic info - like the key used to open the inventory.
+	f	Z	field_75995_m	isSpecial	#isSpecial, :, challenge, :
+		c	Special achievements have a 'spiked' (on normal texture pack) frame, special achievements are the hardest ones to achieve.
+	m	(Ljava/lang/String;Ljava/lang/String;IILnet/minecraft/item/Item;Lnet/minecraft/stats/Achievement;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45300_1_	serverIn	#serverIn, :, statName, :
+		p	2	p_i45300_2_	threadName	#threadName, :, achievementName, :
+		p	3	p_i45300_3_	column	#~, ~, column, :
+		p	4	p_i45300_4_	row	#~, ~, row, :
+		p	5	p_i45300_5_	logo	#~, ~, logo, :
+		p	6	p_i45300_6_	parent	#~, ~, parent, :
+	m	(Ljava/lang/String;Ljava/lang/String;IILnet/minecraft/item/ItemStack;Lnet/minecraft/stats/Achievement;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45302_1_	statIdIn	#statIdIn, :, statName, :
+		p	2	p_i45302_2_	unlocalizedName	#unlocalizedName, :, achievementName, :
+		p	3	p_i45302_3_	column	#column, :, :, :
+		p	4	p_i45302_4_	row	#row, :, :, :
+		p	5	p_i45302_5_	stack	#stack, :, logo, item
+		p	6	p_i45302_6_	parent	#parent, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/String;IILnet/minecraft/block/Block;Lnet/minecraft/stats/Achievement;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45301_1_	statIdIn	#statIdIn, :, statName, :
+		p	2	p_i45301_2_	unlocalizedName	#unlocalizedName, :, achievementName, :
+		p	3	p_i45301_3_	column	#column, :, :, :
+		p	4	p_i45301_4_	row	#row, :, :, :
+		p	5	p_i45301_5_	blockIn	#blockIn, :, logo, block
+		p	6	p_i45301_6_	parent	#parent, :, :, :
+	m	(Lnet/minecraft/stats/IStatStringFormat;)Lnet/minecraft/stats/Achievement;	func_75988_a	setStatStringFormatter	#setStatStringFormatter, :, setStatFormatter, setFormatter
+		c	Defines a string formatter for the achievement.
+		p	1	p_75988_1_	statStringFormatterIn	#statStringFormatterIn, :, statFormatter, formatter
+	m	()Lnet/minecraft/stats/Achievement;	func_75987_b	setSpecial	#setSpecial, :, challenge, setChallenge
+		c	Special achievements have a 'spiked' (on normal texture pack) frame, special achievements are the hardest ones to achieve.
+	m	()Ljava/lang/String;	func_75989_e	getDescription	#getDescription, :, :, :
+		c	Returns the fully description of the achievement - ready to be displayed on screen.
+	m	()Z	func_75984_f	getSpecial	#getSpecial, :, isChallenge, :
+		c	Special achievements have a 'spiked' (on normal texture pack) frame, special achievements are the hardest ones to achieve.

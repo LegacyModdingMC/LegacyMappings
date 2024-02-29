@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelWither	net/minecraft/client/model/ModelWither	
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_82905_a	upperBodyParts	#upperBodyParts, :, ~, body
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_82904_b	heads	#heads, :, ~, skulls
+	m	()I	func_82903_a	maxHands	#~, ~, ~, maxHands
+	m	()V	<init>	<init>	#~, ~, ~, ~

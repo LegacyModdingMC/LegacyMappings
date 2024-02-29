@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockMycelium	net/minecraft/block/BlockMycelium	
+	f	Lnet/minecraft/util/IIcon;	field_150200_a	topSprite	#~, ~, ~, topSprite
+	f	Lnet/minecraft/util/IIcon;	field_150199_b	sideSnowedSprite	#~, ~, ~, sideSnowedSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

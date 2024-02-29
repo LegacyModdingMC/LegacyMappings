@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/rcon/RConConsoleSource	net/minecraft/network/rcon/RConConsoleSource	
+	f	Lnet/minecraft/network/rcon/RConConsoleSource;	field_70010_a	instance	#instance, :, INSTANCE, :
+		c	Single instance of RConConsoleSource
+	f	Ljava/lang/StringBuffer;	field_70009_b	buffer	#buffer, :, text, :
+		c	RCon string buffer for log.
+	m	()V	func_70007_b	resetLog	#resetLog, :, destroy, :
+		c	Clears the RCon log
+	m	()Ljava/lang/String;	func_70008_c	getLogContents	#getLogContents, :, getTextAsString, :
+		c	Gets the contents of the RCon log
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

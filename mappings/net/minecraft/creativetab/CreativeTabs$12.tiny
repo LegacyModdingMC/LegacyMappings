@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/creativetab/CreativeTabs$12	net/minecraft/creativetab/CreativeTabs$12	
+	m	(ILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1843_1_	p_i1843_1_	#~, ~, ~, ~
+		p	2	p_i1843_2_	p_i1843_2_	#~, ~, ~, ~

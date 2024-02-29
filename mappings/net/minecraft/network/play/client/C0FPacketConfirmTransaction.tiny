@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C0FPacketConfirmTransaction	net/minecraft/network/play/client/C0FPacketConfirmTransaction	
+	f	I	field_149536_a	id	#id, windowId, :, menuId
+	f	S	field_149534_b	uid	#uid, :, actionId, :
+	f	Z	field_149535_c	accepted	#accepted, :, :, :
+	m	(ISZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45244_1_	windowId	#windowId, :, :, menuId
+		p	2	p_i45244_2_	uid	#uid, :, actionId, :
+		p	3	p_i45244_3_	accepted	#accepted, :, :, :
+	m	()I	func_149532_c	getId	#getId, getWindowId, :, getMenuId
+	m	()S	func_149533_d	getUid	#getUid, :, getSyncId, getActionId
+	m	()V	<init>	<init>	#~, ~, ~, ~

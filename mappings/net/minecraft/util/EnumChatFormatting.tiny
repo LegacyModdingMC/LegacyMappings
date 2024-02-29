@@ -1,0 +1,68 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EnumChatFormatting	net/minecraft/util/EnumChatFormatting	
+	f	Z	field_96303_A	fancyStyling	#fancyStyling, :, modifier, :
+	f	Ljava/lang/String;	field_96304_B	controlString	#controlString, :, stringValue, key
+		c	The control string (section sign + formatting code) that can be inserted into client-side text to display subsequent text in this format.
+	f	[Lnet/minecraft/util/EnumChatFormatting;	$VALUES	$VALUES	#~, ~, ~, ~
+	f	Lnet/minecraft/util/EnumChatFormatting;	BLACK	BLACK	#~, ~, BLACK, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	DARK_BLUE	DARK_BLUE	#~, ~, DARK_BLUE, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	DARK_GREEN	DARK_GREEN	#~, ~, DARK_GREEN, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	DARK_AQUA	DARK_AQUA	#~, ~, DARK_AQUA, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	DARK_RED	DARK_RED	#~, ~, DARK_RED, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	DARK_PURPLE	DARK_PURPLE	#~, ~, DARK_PURPLE, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	GOLD	GOLD	#~, ~, GOLD, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	GRAY	GRAY	#~, ~, GRAY, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	DARK_GRAY	DARK_GRAY	#~, ~, DARK_GRAY, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	BLUE	BLUE	#~, ~, BLUE, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	GREEN	GREEN	#~, ~, GREEN, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	AQUA	AQUA	#~, ~, AQUA, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	RED	RED	#~, ~, RED, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	LIGHT_PURPLE	LIGHT_PURPLE	#~, ~, LIGHT_PURPLE, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	YELLOW	YELLOW	#~, ~, YELLOW, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	WHITE	WHITE	#~, ~, WHITE, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	OBFUSCATED	OBFUSCATED	#~, ~, OBFUSCATED, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	BOLD	BOLD	#~, ~, BOLD, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	STRIKETHROUGH	STRIKETHROUGH	#~, ~, STRIKETHROUGH, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	UNDERLINE	UNDERLINE	#~, ~, UNDERLINE, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	ITALIC	ITALIC	#~, ~, ITALIC, :
+	f	Lnet/minecraft/util/EnumChatFormatting;	RESET	RESET	#~, ~, RESET, :
+	f	Ljava/util/Map;	field_96321_w	formattingCodeMapping	#formattingCodeMapping, :, BY_CODE, :
+		c	Maps a formatting code (e.g., 'f') to its corresponding enum value (e.g., WHITE).
+	f	Ljava/util/Map;	field_96331_x	nameMapping	#nameMapping, NAME_MAPPING, BY_NAME, :
+		c	Maps a name (e.g., 'underline') to its corresponding enum value (e.g., UNDERLINE).
+	f	Ljava/util/regex/Pattern;	field_96330_y	formattingCodePattern	#formattingCodePattern, FORMATTING_CODE_PATTERN, :, CODE_PATTERN
+		c	Matches formatting codes that indicate that the client should treat the following text as bold, recolored, obfuscated, etc.
+	f	C	field_96329_z	formattingCode	#formattingCode, :, code, :
+		c	The formatting code that produces this format.
+	m	(Ljava/lang/String;IC)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1336_3_	code	#~, ~, code, :
+		p	1	p_i1336_1_	p_i1336_1_	#~, ~, ~, ~
+		p	2	p_i1336_2_	p_i1336_2_	#~, ~, ~, ~
+	m	(Ljava/lang/String;ICZ)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1337_3_	code	#~, ~, code, :
+		p	4	p_i1337_4_	modifier	#~, ~, modifier, :
+		p	1	p_i1337_1_	p_i1337_1_	#~, ~, ~, ~
+		p	2	p_i1337_2_	p_i1337_2_	#~, ~, ~, ~
+	m	()C	func_96298_a	getFormattingCode	#getFormattingCode, :, getCode, :
+		c	Gets the formatting code that produces this format.
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_110646_a	getTextWithoutFormattingCodes	#getTextWithoutFormattingCodes, :, strip, :
+		c	Returns a copy of the given string, with formatting codes stripped away.
+		p	0	p_110646_0_	text	#text, :, string, s
+	m	(ZZ)Ljava/util/Collection;	func_96296_a	getValidValues	#getValidValues, :, getNames, :
+		c	Gets all the valid values. Args: @param par0: Whether or not to include color values. @param par1: Whether or not to include fancy-styling values (anything that isn't a color value or the "reset" value).
+		p	0	p_96296_0_	colors	#~, ~, colors, :
+		p	1	p_96296_1_	modifiers	#~, ~, modifiers, :
+	m	()Z	func_96301_b	isFancyStyling	#isFancyStyling, :, isModifier, :
+		c	False if this is just changing the color or resetting; true otherwise.
+	m	(Ljava/lang/String;)Lnet/minecraft/util/EnumChatFormatting;	func_96300_b	getValueByName	#getValueByName, :, byName, :
+		c	Gets a value by its friendly name; null if the given name does not map to a defined value.
+		p	0	p_96300_0_	friendlyName	#friendlyName, :, name, :
+	m	()Z	func_96302_c	isColor	#isColor, :, :, :
+		c	Checks if typo is a color.
+	m	()Ljava/lang/String;	func_96297_d	getFriendlyName	#getFriendlyName, :, getName, :
+		c	Gets the friendly name of this value.
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/util/EnumChatFormatting;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/util/EnumChatFormatting;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

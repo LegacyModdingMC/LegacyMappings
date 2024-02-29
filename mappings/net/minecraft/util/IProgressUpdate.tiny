@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IProgressUpdate	net/minecraft/util/IProgressUpdate	
+	m	()V	func_146586_a	setDoneWorking	#setDoneWorking, :, setDone, :
+	m	(I)V	func_73718_a	setLoadingProgress	#setLoadingProgress, :, setProgressPercentage, progressStagePercentage
+		c	Updates the progress bar on the loading screen to the specified amount. Args: loadProgress
+		p	1	p_73718_1_	progress	#progress, :, percentage, :
+	m	(Ljava/lang/String;)V	func_73720_a	displayProgressMessage	#displayProgressMessage, displaySavingString, setTitle, updateProgress
+		c	"Saving level", or the loading,or downloading equivelent
+		p	1	p_73720_1_	message	#message, :, title, :
+	m	(Ljava/lang/String;)V	func_73721_b	resetProgressAndMessage	#resetProgressAndMessage, :, setTitleAndTask, updateTitle
+		c	this string, followed by "working..." and then the "% complete" are the 3 lines shown. This resets progress to 0, and the WorkingString to "working...".
+		p	1	p_73721_1_	message	#message, :, title, :
+	m	(Ljava/lang/String;)V	func_73719_c	resetProgresAndWorkingMessage	#resetProgresAndWorkingMessage, displayLoadingString, setTask, :
+		c	This is called with "Working..." by resetProgressAndMessage
+		p	1	p_73719_1_	message	#message, :, task, :

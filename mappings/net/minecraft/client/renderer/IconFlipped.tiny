@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/IconFlipped	net/minecraft/client/renderer/IconFlipped	
+	f	Lnet/minecraft/util/IIcon;	field_96454_a	baseIcon	#baseIcon, :, ~, delegate
+	f	Z	field_96452_b	flipU	#flipU, :, ~, flipHorizontal
+	f	Z	field_96453_c	flipV	#flipV, :, ~, flipVertical
+	m	(Lnet/minecraft/util/IIcon;ZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1560_1_	delegate	#~, ~, ~, delegate
+		p	2	p_i1560_2_	flipHorizontal	#~, ~, ~, flipHorizontal
+		p	3	p_i1560_3_	flipVertical	#~, ~, ~, flipVertical

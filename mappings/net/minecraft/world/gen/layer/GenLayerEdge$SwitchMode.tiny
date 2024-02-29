@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerEdge$SwitchMode	net/minecraft/world/gen/layer/GenLayerEdge$SwitchMode	
+	f	[I	field_151642_a	EDGE_MODES	#~, ~, ~, EDGE_MODES
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

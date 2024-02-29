@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderOcelot	net/minecraft/client/renderer/entity/RenderOcelot	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110877_a	blackOcelotTextures	#blackOcelotTextures, BLACK_OCELOT_TEXTURES, BLACK_CAT, BLACK_CAT_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110875_f	ocelotTextures	#ocelotTextures, OCELOT_TEXTURES, OCELOT, OCELOT_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110876_g	redOcelotTextures	#redOcelotTextures, RED_OCELOT_TEXTURES, RED_CAT, RED_CAT_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110878_h	siameseOcelotTextures	#siameseOcelotTextures, SIAMESE_OCELOT_TEXTURES, SIAMESE_CAT, SIAMESE_CAT_LOCATION
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1264_1_	p_i1264_1_	#~, ~, ~, ~
+		p	2	p_i1264_2_	p_i1264_2_	#~, ~, ~, ~

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/IImageBuffer	net/minecraft/client/renderer/IImageBuffer	
+	m	()V	func_152634_a	skinAvailable	#skinAvailable, :, setAvailable, ~
+	m	(Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage;	func_78432_a	parseUserSkin	#parseUserSkin, :, parseSkin, process
+		p	1	p_78432_1_	image	#image, :, :, :

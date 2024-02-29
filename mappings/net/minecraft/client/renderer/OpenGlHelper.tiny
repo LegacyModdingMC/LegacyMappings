@@ -1,0 +1,199 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/OpenGlHelper	net/minecraft/client/renderer/OpenGlHelper	
+	f	Z	field_148828_i	openGL14	#openGL14, :, gl14Supported, separateBlend
+	f	Ljava/lang/String;	field_153196_B	logText	#logText, :, contextDescription, glCapsInfo
+	f	Z	field_148827_a	openGL21	#openGL21, :, gl21Supported, openGl21
+	f	I	field_77478_a	defaultTexUnit	#defaultTexUnit, :, textureUnit, GL_TEXTURE0
+		c	An OpenGL constant corresponding to GL_TEXTURE0, used when setting data pertaining to auxiliary OpenGL texture units.
+	f	I	field_77476_b	lightmapTexUnit	#lightmapTexUnit, :, lightmapTextureUnit, GL_TEXTURE1
+		c	An OpenGL constant corresponding to GL_TEXTURE1, used when setting data pertaining to auxiliary OpenGL texture units.
+	f	Z	field_153197_d	nvidia	#nvidia, :, :, isNvidia
+	f	I	field_153198_e	GL_FRAMEBUFFER	#GL_FRAMEBUFFER, :, framebuffer, GL_FRAMEBUFFER
+	f	I	field_153199_f	GL_RENDERBUFFER	#GL_RENDERBUFFER, :, renderbuffer, GL_RENDERBUFFER
+	f	I	field_153200_g	GL_COLOR_ATTACHMENT0	#GL_COLOR_ATTACHMENT0, :, colorAttachment, GL_COLOR_ATTACHMENT0
+	f	I	field_153201_h	GL_DEPTH_ATTACHMENT	#GL_DEPTH_ATTACHMENT, :, depthAttachment, GL_DEPTH_ATTACHMENT
+	f	I	field_153202_i	GL_FRAMEBUFFER_COMPLETE	#GL_FRAMEBUFFER_COMPLETE, :, completeFramebuffer, GL_FRAMEBUFFER_COMPLETE
+	f	I	field_153203_j	GL_FB_INCOMPLETE_ATTACHMENT	#GL_FB_INCOMPLETE_ATTACHMENT, :, incompleteFramebufferAttachment, GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT
+	f	I	field_153204_k	GL_FB_INCOMPLETE_MISS_ATTACH	#GL_FB_INCOMPLETE_MISS_ATTACH, :, incompleteFramebufferAttachmentMiss, GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT
+	f	I	field_153205_l	GL_FB_INCOMPLETE_DRAW_BUFFER	#GL_FB_INCOMPLETE_DRAW_BUFFER, :, incompleteFramebufferAttachmentDraw, GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER
+	f	I	field_153206_m	GL_FB_INCOMPLETE_READ_BUFFER	#GL_FB_INCOMPLETE_READ_BUFFER, :, incompleteFramebufferAttachmentRead, GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER
+	f	Z	field_148823_f	framebufferSupported	#framebufferSupported, :, advanced, useFramebufferObjects
+	f	I	field_153207_o	GL_LINK_STATUS	#GL_LINK_STATUS, :, linkStatus, GL_LINK_STATUS
+	f	I	field_153208_p	GL_COMPILE_STATUS	#GL_COMPILE_STATUS, :, compileStatus, GL_COMPILE_STATUS
+	f	I	field_153209_q	GL_VERTEX_SHADER	#GL_VERTEX_SHADER, :, vertexShader, GL_VERTEX_SHADER
+	f	I	field_153210_r	GL_FRAGMENT_SHADER	#GL_FRAGMENT_SHADER, :, fragmentShader, GL_FRAGMENT_SHADER
+	f	Z	field_148825_d	anisotropicFilteringSupported	#anisotropicFilteringSupported, :, ~, anisotropicFiltering
+	f	I	field_148826_e	anisotropicFilteringMax	#anisotropicFilteringMax, GL_STATIC_DRAW, staticDraw, anisotropicFilteringMax
+	f	Z	field_153211_u	extBlendFuncSeparate	#extBlendFuncSeparate, :, blendFuncSeperateSupported, useSeparateBlendExt
+	f	Z	field_148824_g	shadersSupported	#shadersSupported, :, :, usePostProcess
+	f	I	field_153212_w	framebufferType	#framebufferType, :, type, fboMode
+	f	Z	field_153213_x	shadersAvailable	#shadersAvailable, :, shaders, hasShaders
+	f	Z	field_153214_y	arbShaders	#arbShaders, :, arbShaderObjects, useShaderArb
+	f	Z	field_153215_z	arbMultitexture	#arbMultitexture, :, :, useMultitextureArb
+	m	()V	func_77474_a	initializeTextures	#initializeTextures, :, createContext, init
+		c	Initializes the texture constants to be used when rendering lightmap values
+	m	(I)V	func_153180_a	glDeleteShader	#glDeleteShader, :, gl20DeleteShader, deleteShader
+		c	Deletes a shader object
+		p	0	p_153180_0_	shaderIn	#shaderIn, :, shader, :
+	m	(IFF)V	func_77475_a	setLightmapTextureCoords	#setLightmapTextureCoords, :, gl13MultiTexCoord2f, multiTexCoord2f
+		c	Sets the current coordinates of the given lightmap texture
+		p	0	p_77475_0_	target	#target, :, i, texture
+		p	1	p_77475_1_	x	#x, :, f1, s
+		p	2	p_77475_2_	t	#t, y, f2, t
+	m	(II)I	func_153175_a	glGetProgrami	#glGetProgrami, :, gl20GetProgrami, getProgram
+		c	Returns a parameter from a program object
+		p	0	p_153175_0_	program	#program, :, :, :
+		p	1	p_153175_1_	pname	#pname, :, param, pname
+	m	(IIII)V	func_153186_a	glRenderbufferStorage	#glRenderbufferStorage, :, advancedRenderBufferStorage, renderbufferStorage
+		c	Establishes data storage, format and dimensions of a renderbuffer object's image
+		p	0	p_153186_0_	target	#target, :, :, :
+		p	1	p_153186_1_	internalFormat	#internalFormat, :, :, :
+		p	2	p_153186_2_	width	#width, :, :, :
+		p	3	p_153186_3_	height	#height, :, :, :
+	m	(IIIII)V	func_153188_a	glFramebufferTexture2D	#glFramebufferTexture2D, :, advancedFrameBufferTexture2D, framebufferTexture2D
+		c	Attaches a level of a texture object as a logical buffer of a framebuffer object
+		p	0	p_153188_0_	target	#target, :, :, :
+		p	1	p_153188_1_	attachment	#attachment, :, :, :
+		p	2	p_153188_2_	textarget	#textarget, :, :, textTarget
+		p	3	p_153188_3_	texture	#texture, :, :, :
+		p	4	p_153188_4_	level	#level, :, :, :
+	m	(ILjava/lang/CharSequence;)I	func_153194_a	glGetUniformLocation	#glGetUniformLocation, :, gl20GetUniformLocation, getUniformLocation
+		c	Returns the location of a uniform variable
+		p	0	p_153194_0_	programObj	#programObj, :, program, :
+		p	1	p_153194_1_	name	#name, :, :, :
+	m	(ILjava/nio/ByteBuffer;)V	func_153169_a	glShaderSource	#glShaderSource, :, gl20ShaderSource, shaderSource
+		c	Replaces the source code in a shader object
+		p	0	p_153169_0_	shaderIn	#shaderIn, :, shader, :
+		p	1	p_153169_1_	string	#string, :, count, buffer
+	m	(ILjava/nio/FloatBuffer;)V	func_153168_a	glUniform1	#glUniform1, :, gl20Uniform, uniform1
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153168_0_	location	#location, :, loc, location
+		p	1	p_153168_1_	values	#values, :, v, value
+	m	(ILjava/nio/IntBuffer;)V	func_153181_a	glUniform1	#glUniform1, :, gl20Uniform1, uniform1
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153181_0_	location	#location, :, loc, location
+		p	1	p_153181_1_	values	#values, :, v, value
+	m	(IZLjava/nio/FloatBuffer;)V	func_153173_a	glUniformMatrix2	#glUniformMatrix2, :, gl20UniformMatrix2, uniformMatrix2
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153173_0_	location	#location, :, uniform, location
+		p	1	p_153173_1_	transpose	#transpose, :, bl, transpose
+		p	2	p_153173_2_	matrices	#matrices, :, buf, value
+	m	()Z	func_153193_b	areShadersSupported	#areShadersSupported, :, :, isNextGen
+	m	(I)I	func_153195_b	glCreateShader	#glCreateShader, :, gl20CreateShader, createShader
+		c	creates a shader with the given mode and returns the GL id. params: mode
+		p	0	p_153195_0_	type	#type, :, shader, type
+	m	(II)V	func_153178_b	glAttachShader	#glAttachShader, :, gl20GetAttachShader, attachShader
+		c	Attaches a shader object to a program object
+		p	0	p_153178_0_	program	#program, :, :, :
+		p	1	p_153178_1_	shaderIn	#shaderIn, :, shader, :
+	m	(IIII)V	func_153190_b	glFramebufferRenderbuffer	#glFramebufferRenderbuffer, :, advancedFramebufferRenderbuffer, framebufferRenderbuffer
+		c	Attaches a renderbuffer as a logical buffer of a framebuffer object
+		p	0	p_153190_0_	target	#target, :, :, :
+		p	1	p_153190_1_	attachment	#attachment, :, :, :
+		p	2	p_153190_2_	renderBufferTarget	#renderBufferTarget, :, :, renderbufferTarget
+		p	3	p_153190_3_	renderBuffer	#renderBuffer, :, :, renderbuffer
+	m	(ILjava/lang/CharSequence;)I	func_153164_b	glGetAttribLocation	#glGetAttribLocation, :, gl20GetAttribLocation, getAttribLocation
+		c	Returns the location of an attribute variable
+		p	0	p_153164_0_	program	#program, :, loc, program
+		p	1	p_153164_1_	name	#name, :, sequence, name
+	m	(ILjava/nio/FloatBuffer;)V	func_153177_b	glUniform2	#glUniform2, :, gl20Uniform2, uniform2
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153177_0_	location	#location, :, loc, location
+		p	1	p_153177_1_	values	#values, :, v, value
+	m	(ILjava/nio/IntBuffer;)V	func_153182_b	glUniform2	#glUniform2, :, gl20Uniform2, uniform2
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153182_0_	location	#location, :, loc, location
+		p	1	p_153182_1_	values	#values, :, v, value
+	m	(IZLjava/nio/FloatBuffer;)V	func_153189_b	glUniformMatrix3	#glUniformMatrix3, :, gl20UniformMatrix3, uniformMatrix3
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153189_0_	location	#location, :, uniform, location
+		p	1	p_153189_1_	transpose	#transpose, :, bl, transpose
+		p	2	p_153189_2_	matrices	#matrices, :, buf, value
+	m	()Ljava/lang/String;	func_153172_c	getLogText	#getLogText, :, getContextDescription, getGlCapsInfo
+	m	(I)V	func_153170_c	glCompileShader	#glCompileShader, :, gl20CompileShader, compileShader
+		c	Compiles a shader object
+		p	0	p_153170_0_	shaderIn	#shaderIn, :, shader, :
+	m	(II)I	func_153157_c	glGetShaderi	#glGetShaderi, :, gl20GetShaderi, getShader
+		c	Returns a parameter from a shader object
+		p	0	p_153157_0_	shaderIn	#shaderIn, :, shader, :
+		p	1	p_153157_1_	pname	#pname, :, param, pname
+	m	(IIII)V	func_148821_a	glBlendFunc	#glBlendFunc, :, glBlendFuncSeparate, blendFuncSeparate
+		c	Specifies pixel arithmetic for RGB and alpha components separately
+		p	0	p_148821_0_	sFactorRGB	#sFactorRGB, :, r, sfactorRGB
+		p	1	p_148821_1_	dFactorRGB	#dFactorRGB, :, g, dfactorRGB
+		p	2	p_148821_2_	sfactorAlpha	#sfactorAlpha, :, b, sfactorAlpha
+		p	3	p_148821_3_	dfactorAlpha	#dfactorAlpha, :, a, dfactorAlpha
+	m	(ILjava/nio/FloatBuffer;)V	func_153191_c	glUniform3	#glUniform3, :, gl20Uniform3, uniform3
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153191_0_	location	#location, :, loc, location
+		p	1	p_153191_1_	values	#values, :, v, value
+	m	(ILjava/nio/IntBuffer;)V	func_153192_c	glUniform3	#glUniform3, :, gl20Uniform3, uniform3
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153192_0_	location	#location, :, loc, location
+		p	1	p_153192_1_	values	#values, :, v, value
+	m	(IZLjava/nio/FloatBuffer;)V	func_153160_c	glUniformMatrix4	#glUniformMatrix4, :, gl20UniformMatrix4, uniformMatrix4
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153160_0_	location	#location, :, uniform, location
+		p	1	p_153160_1_	transpose	#transpose, :, bl, transpose
+		p	2	p_153160_2_	matrices	#matrices, :, buf, value
+	m	()I	func_153183_d	glCreateProgram	#glCreateProgram, :, gl20CreateProgram, createProgram
+		c	Creates a program object
+	m	(I)V	func_153161_d	glUseProgram	#glUseProgram, :, gl20UseProgram, useProgram
+		c	Installs a program object as part of current rendering state
+		p	0	p_153161_0_	program	#program, :, :, :
+	m	(II)Ljava/lang/String;	func_153158_d	glGetShaderInfoLog	#glGetShaderInfoLog, :, gl20GetShaderInfoLog, getShaderInfoLog
+		c	Returns the information log for a shader object
+		p	0	p_153158_0_	shaderIn	#shaderIn, :, shader, :
+		p	1	p_153158_1_	maxLength	#maxLength, :, :, :
+	m	(ILjava/nio/FloatBuffer;)V	func_153159_d	glUniform4	#glUniform4, :, gl20Uniform4, uniform4
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153159_0_	location	#location, :, loc, location
+		p	1	p_153159_1_	values	#values, :, v, value
+	m	(ILjava/nio/IntBuffer;)V	func_153162_d	glUniform4	#glUniform4, :, gl20Uniform4, uniform4
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153162_0_	location	#location, :, loc, location
+		p	1	p_153162_1_	values	#values, :, v, value
+	m	()I	func_153165_e	glGenFramebuffers	#glGenFramebuffers, :, advancedGenFrameBuffers, genFramebuffers
+		c	Calls the appropriate glGenFramebuffers method and returns the newly created fbo, or returns -1 if not supported.
+	m	(I)V	func_153187_e	glDeleteProgram	#glDeleteProgram, :, gl20DeleteProgram, deleteProgram
+		c	Deletes a program object
+		p	0	p_153187_0_	program	#program, :, :, :
+	m	(II)Ljava/lang/String;	func_153166_e	glGetProgramInfoLog	#glGetProgramInfoLog, :, gl20GetProgramInfoLog, getProgramInfoLog
+		c	Returns the information log for a program object
+		p	0	p_153166_0_	program	#program, :, :, :
+		p	1	p_153166_1_	maxLength	#maxLength, :, :, :
+	m	()I	func_153185_f	glGenRenderbuffers	#glGenRenderbuffers, :, advancedGenRenderBuffers, genRenderbuffers
+		c	Generates renderbuffer object names
+	m	(I)V	func_153179_f	glLinkProgram	#glLinkProgram, :, gl20LinkProgram, linkProgram
+		c	Links a program object
+		p	0	p_153179_0_	program	#program, :, :, :
+	m	(II)V	func_153163_f	glUniform1i	#glUniform1i, :, gl20Uniform1, uniform1i
+		c	Specifies the value of a uniform variable for the current program object
+		p	0	p_153163_0_	location	#location, :, loc, location
+		p	1	p_153163_1_	v0	#v0, :, v, value
+	m	()Z	func_148822_b	isFramebufferEnabled	#isFramebufferEnabled, :, supportsFbo, useFbo
+		c	Returns whether OpenGl supports  Frame Buffer Objects
+	m	(I)V	func_153184_g	glDeleteRenderbuffers	#glDeleteRenderbuffers, :, advancedDeleteRenderBuffers, deleteRenderbuffers
+		c	Deletes renderbuffer objects
+		p	0	p_153184_0_	renderbuffer	#renderbuffer, :, :, :
+	m	(II)V	func_153171_g	glBindFramebuffer	#glBindFramebuffer, :, advancedBindFramebuffer, bindFramebuffer
+		c	Binds a framebuffer to a framebuffer target
+		p	0	p_153171_0_	target	#target, :, i, target
+		p	1	p_153171_1_	framebufferIn	#framebufferIn, :, j, framebuffer
+	m	(I)V	func_153174_h	glDeleteFramebuffers	#glDeleteFramebuffers, :, advancedDeleteFrameBuffers, deleteFramebuffers
+		c	Deletes framebuffer objects
+		p	0	p_153174_0_	framebufferIn	#framebufferIn, :, framebuffer, :
+	m	(II)V	func_153176_h	glBindRenderbuffer	#glBindRenderbuffer, :, advancedBindRenderBuffer, bindRenderbuffer
+		c	Binds a renderbuffer to a renderbuffer target
+		p	0	p_153176_0_	target	#target, :, i, target
+		p	1	p_153176_1_	renderbuffer	#renderbuffer, :, j, renderbuffer
+	m	(I)I	func_153167_i	glCheckFramebufferStatus	#glCheckFramebufferStatus, :, advancedCheckFrameBufferStatus, checkFramebufferStatus
+		c	Checks the completeness of a framebuffer
+		p	0	p_153167_0_	target	#target, :, framebuffer, target
+	m	(I)V	func_77473_a	setActiveTexture	#setActiveTexture, :, gl13ActiveTexture, activeTexture
+		c	Sets the current lightmap texture to the specified OpenGL constant
+		p	0	p_77473_0_	texture	#texture, :, :, :
+	m	(I)V	func_77472_b	setClientActiveTexture	#setClientActiveTexture, :, gl13ClientActiveTexture, clientActiveTexture
+		c	Sets the current lightmap texture to the specified OpenGL constant
+		p	0	p_77472_0_	texture	#texture, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

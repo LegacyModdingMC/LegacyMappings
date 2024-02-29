@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntitySkeleton	net/minecraft/entity/monster/EntitySkeleton	
+	f	Lnet/minecraft/entity/ai/EntityAIArrowAttack;	field_85037_d	aiArrowAttack	#aiArrowAttack, :, projectileAttackGoal, rangeAttackGoal
+	f	Lnet/minecraft/entity/ai/EntityAIAttackOnCollide;	field_85038_e	aiAttackOnCollide	#aiAttackOnCollide, :, meleeAttackGoal, :
+	m	(I)V	func_82201_a	setSkeletonType	#setSkeletonType, :, setType, :
+		c	Set this skeleton's type.
+		p	1	p_82201_1_	type	#~, ~, type, :
+	m	()V	func_85036_m	setCombatTask	#setCombatTask, :, updateAttackType, :
+		c	sets this entity's combat AI.
+	m	()I	func_82202_m	getSkeletonType	#getSkeletonType, :, getType, :
+		c	Return this skeleton's type.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1741_1_	worldIn	#worldIn, :, ~, ~

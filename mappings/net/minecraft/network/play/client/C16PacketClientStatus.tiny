@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C16PacketClientStatus	net/minecraft/network/play/client/C16PacketClientStatus	
+	f	Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	field_149437_a	status	#status, :, ~, status
+	m	()Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;	func_149435_c	getStatus	#getStatus, :, ~, getStatus
+	m	(Lnet/minecraft/network/play/client/C16PacketClientStatus$EnumState;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45242_1_	statusIn	#statusIn, :, ~, status
+	m	()V	<init>	<init>	#~, ~, ~, ~

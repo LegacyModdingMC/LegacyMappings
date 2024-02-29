@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/village/VillageSiege	net/minecraft/village/VillageSiege	
+	f	Lnet/minecraft/world/World;	field_75537_a	worldObj	#worldObj, world, :, :
+	f	Z	field_75535_b	hasSetupSiege	#hasSetupSiege, :, spawned, ready
+	f	I	field_75536_c	siegeState	#siegeState, :, ~, state
+	f	I	field_75533_d	siegeCount	#siegeCount, :, ~, zombieCount
+	f	I	field_75534_e	nextSpawnTime	#nextSpawnTime, :, ~, cooldown
+	f	Lnet/minecraft/village/Village;	field_75531_f	theVillage	#theVillage, village, :, :
+		c	Instance of Village.
+	f	I	field_75532_g	spawnX	#spawnX, :, ~, siegeX
+	f	I	field_75538_h	spawnY	#spawnY, :, ~, siegeY
+	f	I	field_75539_i	spawnZ	#spawnZ, :, ~, siegeZ
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1676_1_	worldIn	#worldIn, :, world, :
+	m	()V	func_75528_a	tick	#tick, :, ~, tick
+		c	Runs a single tick for the village siege
+	m	(III)Lnet/minecraft/util/Vec3;	func_75527_a	findSpawnPos	#~, ~, ~, findSpawnPos
+		p	1	p_75527_1_	siegeX	#~, ~, ~, siegeX
+		p	2	p_75527_2_	siegeY	#~, ~, ~, siegeY
+		p	3	p_75527_3_	siegeZ	#~, ~, ~, siegeZ
+	m	()Z	func_75529_b	trySetupSiege	#trySetupSiege, :, ~, initSiege
+	m	()Z	func_75530_c	spawnZombie	#spawnZombie, :, ~, spawnZombies

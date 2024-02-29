@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S23PacketBlockChange	net/minecraft/network/play/server/S23PacketBlockChange	
+	f	I	field_148887_a	x	#~, ~, x, :
+	f	I	field_148885_b	y	#~, ~, y, :
+	f	I	field_148886_c	z	#~, ~, z, :
+	f	Lnet/minecraft/block/Block;	field_148883_d	blockState	#blockState, :, block, :
+	f	I	field_148884_e	metadata	#~, ~, data, metadata
+	m	(IIILnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45177_1_	x	#~, ~, x, :
+		p	2	p_i45177_2_	y	#~, ~, y, :
+		p	3	p_i45177_3_	z	#~, ~, z, :
+		p	4	p_i45177_4_	world	#~, ~, world, :
+	m	()Lnet/minecraft/block/Block;	func_148880_c	getBlock	#~, ~, getBlock, :
+	m	()I	func_148879_d	getX	#~, ~, getX, :
+	m	()I	func_148878_e	getY	#~, ~, getY, :
+	m	()I	func_148877_f	getZ	#~, ~, getZ, :
+	m	()I	func_148881_g	getBlockMetadata	#~, ~, getBlockData, getBlockMetadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/EnumDifficulty	net/minecraft/world/EnumDifficulty	
+	f	Lnet/minecraft/world/EnumDifficulty;	PEACEFUL	PEACEFUL	#~, ~, PEACEFUL, :
+	f	Lnet/minecraft/world/EnumDifficulty;	EASY	EASY	#~, ~, EASY, :
+	f	Lnet/minecraft/world/EnumDifficulty;	NORMAL	NORMAL	#~, ~, NORMAL, :
+	f	Lnet/minecraft/world/EnumDifficulty;	HARD	HARD	#~, ~, HARD, :
+	f	[Lnet/minecraft/world/EnumDifficulty;	field_151530_e	difficultyEnums	#difficultyEnums, ID_MAPPING, DIFFICULTIES, BY_ID
+	f	I	field_151527_f	difficultyId	#difficultyId, id, :, :
+	f	Ljava/lang/String;	field_151528_g	difficultyResourceKey	#difficultyResourceKey, translationKey, name, key
+	f	[Lnet/minecraft/world/EnumDifficulty;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;IILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45312_3_	difficultyIdIn	#difficultyIdIn, :, id, :
+		p	4	p_i45312_4_	difficultyResourceKeyIn	#difficultyResourceKeyIn, :, name, key
+		p	1	p_i45312_1_	p_i45312_1_	#~, ~, ~, ~
+		p	2	p_i45312_2_	p_i45312_2_	#~, ~, ~, ~
+	m	()I	func_151525_a	getDifficultyId	#getDifficultyId, getId, :, :
+	m	(I)Lnet/minecraft/world/EnumDifficulty;	func_151523_a	getDifficultyEnum	#getDifficultyEnum, byId, byOrdinal, byId
+		p	0	p_151523_0_	id	#id, :, ordinal, id
+	m	()Ljava/lang/String;	func_151526_b	getDifficultyResourceKey	#getDifficultyResourceKey, getTranslationKey, getName, getKey
+	m	(Ljava/lang/String;)Lnet/minecraft/world/EnumDifficulty;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/world/EnumDifficulty;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

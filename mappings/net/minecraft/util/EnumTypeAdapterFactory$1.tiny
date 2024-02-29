@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/EnumTypeAdapterFactory$1	net/minecraft/util/EnumTypeAdapterFactory$1	
+	f	Ljava/util/Map;	field_151231_a	map	#~, ~, ~, map
+	f	Lnet/minecraft/util/EnumTypeAdapterFactory;	field_151230_b	factory	#~, ~, ~, factory
+	m	(Lcom/google/gson/stream/JsonReader;)Ljava/lang/Object;	read	read	#~, ~, ~, ~
+		p	1	p_read_1_	jr	#~, ~, ~, jr
+	m	(Lcom/google/gson/stream/JsonWriter;Ljava/lang/Object;)V	write	write	#~, ~, ~, ~
+		p	1	p_write_1_	jw	#~, ~, ~, jw
+		p	2	p_write_2_	obj	#~, ~, ~, obj
+	m	(Lnet/minecraft/util/EnumTypeAdapterFactory;Ljava/util/Map;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45310_1_	p_i45310_1_	#~, ~, ~, ~
+		p	2	p_i45310_2_	p_i45310_2_	#~, ~, ~, ~

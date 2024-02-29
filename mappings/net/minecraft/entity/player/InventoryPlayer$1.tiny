@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/InventoryPlayer$1	net/minecraft/entity/player/InventoryPlayer$1	
+	f	Lnet/minecraft/item/ItemStack;	field_96634_a	theItemStack	#theItemStack, :, itemStack, :
+	f	Lnet/minecraft/entity/player/InventoryPlayer;	field_96633_b	playerInventory	#playerInventory, :, :, inventory
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1749_1_	playerInventory	#~, ~, playerInventory, ~
+		p	2	p_i1749_2_	itemStack	#~, ~, itemStack, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

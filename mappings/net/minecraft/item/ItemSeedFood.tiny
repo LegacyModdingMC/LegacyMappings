@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemSeedFood	net/minecraft/item/ItemSeedFood	
+	f	Lnet/minecraft/block/Block;	field_150908_b	crops	#crops, :, crop, plant
+	f	Lnet/minecraft/block/Block;	field_82809_c	soilId	#soilId, :, soil, :
+		c	Block ID of the soil this seed food should be planted on.
+	m	(IFLnet/minecraft/block/Block;Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45351_1_	healAmount	#healAmount, :, hungerPoints, :
+		p	2	p_i45351_2_	saturation	#saturation, :, :, :
+		p	3	p_i45351_3_	crops	#crops, :, crop, plant
+		p	4	p_i45351_4_	soil	#soil, :, :, :

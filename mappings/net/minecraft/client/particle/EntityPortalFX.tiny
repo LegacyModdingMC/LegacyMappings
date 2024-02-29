@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityPortalFX	net/minecraft/client/particle/EntityPortalFX	
+	f	F	field_70571_a	portalParticleScale	#portalParticleScale, :, prevScale, baseScale
+	f	D	field_70574_aq	portalPosX	#portalPosX, :, startX, :
+	f	D	field_70573_ar	portalPosY	#portalPosY, :, startY, :
+	f	D	field_70572_as	portalPosZ	#portalPosZ, :, startZ, :
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1222_1_	p_i1222_1_	#~, ~, ~, ~
+		p	2	p_i1222_2_	p_i1222_2_	#~, ~, ~, ~
+		p	4	p_i1222_4_	p_i1222_4_	#~, ~, ~, ~
+		p	6	p_i1222_6_	p_i1222_6_	#~, ~, ~, ~
+		p	8	p_i1222_8_	p_i1222_8_	#~, ~, ~, ~
+		p	10	p_i1222_10_	p_i1222_10_	#~, ~, ~, ~
+		p	12	p_i1222_12_	p_i1222_12_	#~, ~, ~, ~

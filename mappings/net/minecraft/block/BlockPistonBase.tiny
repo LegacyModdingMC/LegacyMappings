@@ -1,0 +1,68 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPistonBase	net/minecraft/block/BlockPistonBase	
+	f	Lnet/minecraft/util/IIcon;	field_150083_M	bottomIcon	#bottomIcon, :, ~, pistonBottomSprite
+		c	Bottom side texture
+	f	Lnet/minecraft/util/IIcon;	field_150084_N	topIcon	#topIcon, :, ~, pistonTopSprite
+		c	Top icon of piston depends on (either sticky or normal)
+	f	Z	field_150082_a	isSticky	#isSticky, :, sticky, :
+		c	This piston is the sticky one?
+	f	Lnet/minecraft/util/IIcon;	field_150081_b	innerTopIcon	#innerTopIcon, :, ~, pistonInnerSprite
+		c	Only visible when piston is extended
+	m	(Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45443_1_	isSticky	#isSticky, :, sticky, :
+	m	(Lnet/minecraft/world/World;IIII)Z	func_150072_a	isIndirectlyPowered	#isIndirectlyPowered, :, ~, shouldExtend
+		p	1	p_150072_1_	world	#~, ~, ~, world
+		p	2	p_150072_2_	x	#~, ~, ~, x
+		p	3	p_150072_3_	y	#~, ~, ~, y
+		p	4	p_150072_4_	z	#~, ~, ~, z
+		p	5	p_150072_5_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/entity/EntityLivingBase;)I	func_150071_a	determineOrientation	#determineOrientation, :, ~, getFacingForPlacement
+		c	gets the way this piston should face for that entity that placed it.
+		p	0	p_150071_0_	world	#~, ~, ~, world
+		p	1	p_150071_1_	x	#~, ~, ~, x
+		p	2	p_150071_2_	y	#~, ~, ~, y
+		p	3	p_150071_3_	z	#~, ~, ~, z
+		p	4	p_150071_4_	entity	#~, ~, ~, entity
+	m	(Lnet/minecraft/block/Block;Lnet/minecraft/world/World;IIIZ)Z	func_150080_a	canPushBlock	#canPushBlock, :, ~, canMoveBlock
+		c	returns true if the piston can push the specified block
+		p	0	p_150080_0_	block	#~, ~, ~, block
+		p	1	p_150080_1_	world	#~, ~, ~, world
+		p	2	p_150080_2_	x	#~, ~, ~, x
+		p	3	p_150080_3_	y	#~, ~, ~, y
+		p	4	p_150080_4_	z	#~, ~, ~, z
+		p	5	p_150080_5_	allowBreaking	#~, ~, ~, allowBreaking
+	m	(FFFFFF)V	func_150070_b	setShapeForRendering	#~, ~, ~, setShapeForRendering
+		p	1	p_150070_1_	minX	#~, ~, ~, minX
+		p	2	p_150070_2_	minY	#~, ~, ~, minY
+		p	3	p_150070_3_	minZ	#~, ~, ~, minZ
+		p	4	p_150070_4_	maxX	#~, ~, ~, maxX
+		p	5	p_150070_5_	maxY	#~, ~, ~, maxY
+		p	6	p_150070_6_	maxZ	#~, ~, ~, maxZ
+	m	(I)I	func_150076_b	getPistonOrientation	#getPistonOrientation, :, getFacing, :
+		p	0	p_150076_0_	metadata	#~, ~, data, metadata
+	m	(I)Z	func_150075_c	isExtended	#isExtended, :, ~, isExtended
+		c	Determine if the metadata is related to something powered.
+		p	0	p_150075_0_	metadata	#~, ~, ~, metadata
+	m	()Lnet/minecraft/util/IIcon;	func_150073_e	getPistonExtensionTexture	#getPistonExtensionTexture, :, ~, getTopSprite
+	m	(Lnet/minecraft/world/World;III)V	func_150078_e	updatePistonState	#updatePistonState, :, ~, checkExtended
+		c	handles attempts to extend or retract the piston.
+		p	1	p_150078_1_	world	#~, ~, ~, world
+		p	2	p_150078_2_	x	#~, ~, ~, x
+		p	3	p_150078_3_	y	#~, ~, ~, y
+		p	4	p_150078_4_	z	#~, ~, ~, z
+	m	(Ljava/lang/String;)Lnet/minecraft/util/IIcon;	func_150074_e	getPistonBaseIcon	#getPistonBaseIcon, :, ~, getSprites
+		p	0	p_150074_0_	name	#~, ~, ~, name
+	m	(Lnet/minecraft/world/World;IIII)Z	func_150077_h	canExtend	#canExtend, :, ~, canExtend
+		c	checks to see if this piston could push the blocks in front of it.
+		p	0	p_150077_0_	world	#~, ~, ~, world
+		p	1	p_150077_1_	x	#~, ~, ~, x
+		p	2	p_150077_2_	y	#~, ~, ~, y
+		p	3	p_150077_3_	z	#~, ~, ~, z
+		p	4	p_150077_4_	dir	#~, ~, ~, dir
+	m	(Lnet/minecraft/world/World;IIII)Z	func_150079_i	tryExtend	#tryExtend, :, ~, push
+		c	attempts to extend the piston. returns false if impossible.
+		p	1	p_150079_1_	world	#~, ~, ~, world
+		p	2	p_150079_2_	x	#~, ~, ~, x
+		p	3	p_150079_3_	y	#~, ~, ~, y
+		p	4	p_150079_4_	z	#~, ~, ~, z
+		p	5	p_150079_5_	dir	#~, ~, ~, dir

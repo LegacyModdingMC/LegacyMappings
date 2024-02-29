@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentDurability	net/minecraft/enchantment/EnchantmentDurability	
+	m	(Lnet/minecraft/item/ItemStack;ILjava/util/Random;)Z	func_92097_a	negateDamage	#negateDamage, :, shouldPreventDamage, shouldReduceDamage
+		c	Used by ItemStack.attemptDamageItem. Randomly determines if a point of damage should be negated using the enchantment level (par1). If the ItemStack is Armor then there is a flat 60% chance for damage to be negated no matter the enchantment level, otherwise there is a 1-(par/1) chance for damage to be negated.
+		p	0	p_92097_0_	stack	#stack, :, item, :
+		p	1	p_92097_1_	level	#level, :, :, :
+		p	2	p_92097_2_	rand	#rand, :, random, :
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1924_1_	id	#~, ~, ~, id
+		p	2	p_i1924_2_	type	#~, ~, ~, type

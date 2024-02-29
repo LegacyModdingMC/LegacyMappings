@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityAnimal	net/minecraft/entity/passive/EntityAnimal	
+	f	I	field_70881_d	inLove	#inLove, :, loveTicks, :
+	f	I	field_70882_e	breeding	#breeding, :, ~, breedingTicks
+		c	This is representation of a counter for reproduction progress. (Note that this is different from the inLove which represent being in Love-Mode)
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_146084_br	playerInLove	#playerInLove, :, lovingPlayer, loveCausingPlayer
+	m	(Lnet/minecraft/entity/passive/EntityAnimal;)Z	func_70878_b	canMateWith	#canMateWith, :, canBreedWith, :
+		c	Returns true if the mob is currently able to mate with the specified mob.
+		p	1	p_70878_1_	otherAnimal	#otherAnimal, :, other, :
+	m	(Lnet/minecraft/entity/passive/EntityAnimal;)V	func_70876_c	procreate	#procreate, :, ~, breed
+		c	Creates a baby animal according to the animal type of the target at the actual position and spawns 'love' particles.
+		p	1	p_70876_1_	other	#~, ~, ~, other
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_70877_b	isBreedingItem	#isBreedingItem, :, :, :
+		c	Checks if the parameter is an item which this animal can be fed to breed it (wheat, carrots or seeds depending on the animal type)
+		p	1	p_70877_1_	stack	#stack, :, :, :
+	m	()Lnet/minecraft/entity/player/EntityPlayer;	func_146083_cb	getPlayerInLove	#getPlayerInLove, :, getLovingPlayer, getLoveCausingPlayer
+	m	()Z	func_70880_s	isInLove	#isInLove, :, :, :
+		c	Returns if the entity is currently in 'love mode'.
+	m	()V	func_70875_t	resetInLove	#resetInLove, :, resetLoveTicks, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_146082_f	setInLove	#setInLove, :, lovePlayer, :
+		p	1	p_146082_1_	player	#player, :, :, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1681_1_	worldIn	#worldIn, :, ~, ~

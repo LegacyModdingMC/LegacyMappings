@@ -1,0 +1,73 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiIngame	net/minecraft/client/gui/GuiIngame	
+	f	F	field_73843_a	prevVignetteBrightness	#prevVignetteBrightness, :, vignetteDarkness, vignetteBrightness
+		c	Previous frame vignette brightness (slowly changes by 1% each frame)
+	f	Lnet/minecraft/util/ResourceLocation;	field_110329_b	vignetteTexPath	#vignetteTexPath, VIGNETTE_TEX_PATH, VIGNETTE, VIGNETTE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110330_c	widgetsTexPath	#widgetsTexPath, WIDGETS_TEX_PATH, WIDGETS, WIDGETS_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110328_d	pumpkinBlurTexPath	#pumpkinBlurTexPath, PUMPKIN_BLUR_TEX_PATH, PUMPKIN_BLUR, PUMPKIN_BLUR_LOCATION
+	f	Lnet/minecraft/client/renderer/entity/RenderItem;	field_73841_b	itemRenderer	#itemRenderer, :, :, ITEM_RENDERER
+	f	Ljava/util/Random;	field_73842_c	rand	#rand, :, random, :
+	f	Lnet/minecraft/client/Minecraft;	field_73839_d	mc	#mc, :, client, minecraft
+	f	Lnet/minecraft/client/gui/GuiNewChat;	field_73840_e	persistantChatGUI	#persistantChatGUI, :, chatHud, chat
+		c	ChatGUI instance that retains all previous chat data
+	f	Lnet/minecraft/client/gui/GuiStreamIndicator;	field_152127_m	streamIndicator	#streamIndicator, :, streamIndicatorHud, streamOverlay
+	f	I	field_73837_f	updateCounter	#updateCounter, :, ticks, :
+	f	Ljava/lang/String;	field_73838_g	recordPlaying	#recordPlaying, overlayMessage, :, :
+		c	The string specifying which record music is playing
+	f	I	field_73845_h	recordPlayingUpFor	#recordPlayingUpFor, overlayMessageTime, overlayRemaining, overlayMessageTimer
+		c	How many ticks the record playing message will be displayed
+	f	Z	field_73844_j	recordIsPlaying	#recordIsPlaying, animateOverlayMessageColor, overlayTinted, overlayMessageTinted
+	f	I	field_92017_k	remainingHighlightTicks	#remainingHighlightTicks, :, heldItemTooltipFade, mainHandMessageTimer
+		c	Remaining ticks the item highlight should be visible
+	f	Lnet/minecraft/item/ItemStack;	field_92016_l	highlightingItemStack	#highlightingItemStack, :, heldItem, mainHandStack
+		c	The ItemStack that is currently being highlighted
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1036_1_	minecraft	#~, ~, client, minecraft
+	m	()V	func_73831_a	updateTick	#updateTick, :, tick, :
+		c	The update tick for the ingame UI
+	m	(FF)V	func_152126_a	renderStreamIndicator	#renderStreamIndicator, :, ~, renderStreamOverlay
+		p	1	p_152126_1_	p_152126_1_	#~, ~, ~, ~
+		p	2	p_152126_2_	p_152126_2_	#~, ~, ~, ~
+	m	(FII)V	func_73829_a	renderVignette	#renderVignette, :, ~, renderVignette
+		c	Renders the vignette. Args: vignetteBrightness, width, height
+		p	1	p_73829_1_	brightnessAtEyes	#~, ~, ~, brightnessAtEyes
+		p	2	p_73829_2_	width	#~, ~, ~, width
+		p	3	p_73829_3_	height	#~, ~, ~, height
+	m	(FZII)V	func_73830_a	renderGameOverlay	#renderGameOverlay, :, ~, render
+		c	Render the ingame overlay with quick icon bar, ...
+		p	1	p_73830_1_	tickDelta	#~, ~, ~, tickDelta
+		p	2	p_73830_2_	screenOpen	#~, ~, ~, screenOpen
+		p	3	p_73830_3_	mouseX	#~, ~, ~, mouseX
+		p	4	p_73830_4_	mouseY	#~, ~, ~, mouseY
+	m	(II)V	func_110327_a	renderIcons	#renderIcons, :, ~, renderStatusBars
+		p	1	p_110327_1_	width	#~, ~, ~, width
+		p	2	p_110327_2_	height	#~, ~, ~, height
+	m	(IIIF)V	func_73832_a	renderInventorySlot	#renderInventorySlot, :, ~, renderInventorySlot
+		c	Renders the specified item of the inventory slot at the specified location. Args: slot, x, y, partialTick
+		p	1	p_73832_1_	slot	#~, ~, ~, slot
+		p	2	p_73832_2_	x	#~, ~, ~, x
+		p	3	p_73832_3_	z	#~, ~, ~, z
+		p	4	p_73832_4_	tickDelta	#~, ~, ~, tickDelta
+	m	(Lnet/minecraft/scoreboard/ScoreObjective;IILnet/minecraft/client/gui/FontRenderer;)V	func_96136_a	renderScoreboard	#renderScoreboard, :, ~, renderSidebarObjective
+		p	1	p_96136_1_	objective	#~, ~, ~, objective
+		p	2	p_96136_2_	width	#~, ~, ~, width
+		p	3	p_96136_3_	height	#~, ~, ~, height
+		p	4	p_96136_4_	text	#~, ~, ~, text
+	m	(Ljava/lang/String;)V	func_73833_a	setRecordPlayingMessage	#setRecordPlayingMessage, :, setRecordPlayingOverlay, :
+		p	1	p_73833_1_	recordName	#recordName, :, name, playerName
+	m	(Ljava/lang/String;Z)V	func_110326_a	setRecordPlaying	#setRecordPlaying, setOverlayMessage, :, :
+		p	1	p_110326_1_	message	#message, :, :, overlayMessage
+		p	2	p_110326_2_	isPlaying	#isPlaying, animateColor, tinted, :
+	m	()Lnet/minecraft/client/gui/GuiNewChat;	func_146158_b	getChatGUI	#getChatGUI, :, getChatHud, getChat
+		c	returns a pointer to the persistant Chat GUI, containing all previous chat messages and such
+	m	(FII)V	func_130015_b	renderPortalOverlay	#~, ~, ~, renderPortalOverlay
+		p	1	p_130015_1_	portalTime	#~, ~, ~, portalTime
+		p	2	p_130015_2_	width	#~, ~, ~, width
+		p	3	p_130015_3_	height	#~, ~, ~, height
+	m	(II)V	func_73836_a	renderPumpkinBlur	#renderPumpkinBlur, :, ~, renderPumpkinBlur
+		p	1	p_73836_1_	width	#~, ~, ~, width
+		p	2	p_73836_2_	height	#~, ~, ~, height
+	m	()I	func_73834_c	getUpdateCounter	#getUpdateCounter, :, getTicks, :
+	m	()V	func_73828_d	renderBossHealth	#renderBossHealth, :, renderBossBar, renderBossBars
+		c	Renders dragon's (boss) health on the HUD
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

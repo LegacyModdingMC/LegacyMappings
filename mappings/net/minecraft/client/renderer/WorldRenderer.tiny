@@ -1,0 +1,93 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/WorldRenderer	net/minecraft/client/renderer/WorldRenderer	
+	f	Lnet/minecraft/client/renderer/Tessellator;	field_78941_z	tessellator	#tessellator, :, tesselator, BUFFER_BUILDER
+	f	Z	field_78915_A	isInitialized	#isInitialized, :, building, compiled
+	f	Ljava/util/List;	field_147893_C	tileEntities	#tileEntities, :, ~, globalBlockEntities
+	f	I	field_78917_C	bytesDrawn	#bytesDrawn, :, ~, drawIndex
+		c	Bytes sent to the GPU
+	f	Lnet/minecraft/world/World;	field_78924_a	worldObj	#worldObj, :, world, :
+		c	Reference to the World object.
+	f	I	field_78922_b	chunksUpdated	#chunksUpdated, :, ~, updateCounter
+	f	I	field_78923_c	posX	#posX, :, ~, originX
+	f	I	field_78920_d	posY	#posY, :, ~, originY
+	f	I	field_78921_e	posZ	#posZ, :, ~, originZ
+	f	I	field_78918_f	posXMinus	#posXMinus, :, ~, regionOriginX
+		c	Pos X minus
+	f	I	field_78919_g	posYMinus	#posYMinus, :, ~, regionOriginY
+		c	Pos Y minus
+	f	I	field_78931_h	posZMinus	#posZMinus, :, ~, regionOriginZ
+		c	Pos Z minus
+	f	I	field_78932_i	posXClip	#posXClip, :, ~, regionX
+		c	Pos X clipped
+	f	I	field_78929_j	posYClip	#posYClip, :, ~, regionY
+		c	Pos Y clipped
+	f	I	field_78930_k	posZClip	#posZClip, :, ~, regionZ
+		c	Pos Z clipped
+	f	Z	field_78927_l	isInFrustum	#isInFrustum, :, ~, visible
+	f	[Z	field_78928_m	skipRenderPass	#skipRenderPass, :, ~, blocks
+		c	Should this renderer skip this render pass
+	f	I	field_78925_n	posXPlus	#posXPlus, :, ~, centerX
+		c	Pos X plus
+	f	I	field_78926_o	posYPlus	#posYPlus, :, ~, centerY
+		c	Pos Y plus
+	f	I	field_78940_p	posZPlus	#posZPlus, :, ~, centerZ
+		c	Pos Z plus
+	f	Z	field_78939_q	needsUpdate	#needsUpdate, noColor, textured, dirty
+		c	Boolean for whether this renderer needs to be updated or not
+	f	Lnet/minecraft/util/AxisAlignedBB;	field_78938_r	rendererBoundingBox	#rendererBoundingBox, :, ~, bounds
+		c	Axis aligned bounding box
+	f	I	field_78937_s	chunkIndex	#chunkIndex, :, ~, index
+		c	Chunk index
+	f	Z	field_78936_t	isVisible	#isVisible, :, ~, glArbOcclusion
+		c	Is this renderer visible according to the occlusion query
+	f	Z	field_78935_u	isWaitingOnOcclusionQuery	#isWaitingOnOcclusionQuery, :, ~, glArbOcclusionPending
+		c	Is this renderer waiting on the result of the occlusion query
+	f	I	field_78934_v	glOcclusionQuery	#glOcclusionQuery, :, ~, glArbOcclusionQuery
+		c	OpenGL occlusion query
+	f	Z	field_78933_w	isChunkLit	#isChunkLit, :, ~, hasSkyLight
+		c	Is the chunk lit
+	f	Ljava/util/List;	field_147895_x	tileEntityRenderers	#tileEntityRenderers, :, ~, blockEntities
+		c	All the tile entities that have special rendering code for this chunk
+	f	Lnet/minecraft/client/shader/TesselatorVertexState;	field_147894_y	vertexState	#vertexState, :, ~, transparencyState
+	f	I	field_78942_y	glRenderList	#glRenderList, :, ~, glList
+	m	()V	func_78910_b	setDontDraw	#setDontDraw, :, ~, reset
+		c	When called this renderer won't draw anymore until its gets initialized again
+	m	(I)I	func_78909_a	getGLCallListForPass	#getGLCallListForPass, getColorIndex, ~, getGlList
+		c	Takes in the pass the call list is being requested for. Args: renderPass
+		p	1	p_78909_1_	vertexIndex	#vertexIndex, :, ~, layer
+	m	(III)V	func_78913_a	setPosition	#setPosition, :, ~, setOrigin
+		c	Sets a new position for the renderer and setting it up so it can be reloaded with the new data for that position
+		p	1	p_78913_1_	x	#~, ~, ~, x
+		p	2	p_78913_2_	y	#~, ~, ~, y
+		p	3	p_78913_3_	z	#~, ~, ~, z
+	m	(ILnet/minecraft/entity/EntityLivingBase;)V	func_147891_a	postRenderBlocks	#postRenderBlocks, :, ~, endLayer
+		p	1	p_147891_1_	layer	#~, ~, ~, layer
+		p	2	p_147891_2_	camera	#~, ~, ~, camera
+	m	(Lnet/minecraft/client/renderer/culling/ICamera;)V	func_78908_a	updateInFrustum	#updateInFrustum, :, ~, updateVisibility
+		p	1	p_78908_1_	culler	#~, ~, ~, culler
+	m	(Lnet/minecraft/entity/Entity;)F	func_78912_a	distanceToEntitySquared	#distanceToEntitySquared, :, ~, squaredDistanceToCenter
+		c	Returns the distance of this chunk renderer to the entity without performing the final normalizing square root, for performance reasons.
+		p	1	p_78912_1_	camera	#~, ~, ~, camera
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_147892_a	updateRenderer	#updateRenderer, :, ~, compile
+		c	Will update this chunk renderer
+		p	1	p_147892_1_	camera	#~, ~, ~, camera
+	m	()V	func_78911_c	stopRendering	#stopRendering, :, ~, releaseBuffers
+	m	(I)V	func_147890_b	preRenderBlocks	#preRenderBlocks, :, ~, beginLayer
+		p	1	p_147890_1_	layer	#~, ~, ~, layer
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_147889_b	updateRendererSort	#updateRendererSort, :, ~, rebuildTranslucent
+		p	1	p_147889_1_	camera	#~, ~, ~, camera
+	m	()V	func_78904_d	callOcclusionQueryList	#callOcclusionQueryList, :, ~, glCallList
+		c	Renders the occlusion query GL List
+	m	()Z	func_78906_e	skipAllRenderPasses	#skipAllRenderPasses, :, ~, isEmpty
+		c	Checks if all render passes are to be skipped. Returns false if the renderer is not initialized
+	m	()V	func_78914_f	markDirty	#markDirty, noColor, enableTexture, markDirty
+		c	Marks the current renderer data as dirty and needing to be updated.
+	m	()V	func_78905_g	setupGLTranslation	#setupGLTranslation, :, ~, glTranslatef
+	m	(Lnet/minecraft/world/World;Ljava/util/List;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1240_1_	world	#~, ~, ~, world
+		p	2	p_i1240_2_	globalBlockEntities	#~, ~, ~, globalBlockEntities
+		p	3	p_i1240_3_	x	#~, ~, ~, x
+		p	4	p_i1240_4_	y	#~, ~, ~, y
+		p	5	p_i1240_5_	z	#~, ~, ~, z
+		p	6	p_i1240_6_	glList	#~, ~, ~, glList
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

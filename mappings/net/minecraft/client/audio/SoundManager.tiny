@@ -1,0 +1,90 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/SoundManager	net/minecraft/client/audio/SoundManager	
+	f	Lorg/apache/logging/log4j/Marker;	field_148623_a	LOG_MARKER	#LOG_MARKER, :, MARKER, :
+		c	The marker used for logging
+	f	Lorg/apache/logging/log4j/Logger;	field_148621_b	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/audio/SoundHandler;	field_148622_c	sndHandler	#sndHandler, :, manager, :
+		c	A reference to the sound handler.
+	f	Lnet/minecraft/client/settings/GameSettings;	field_148619_d	options	#options, :, :, :
+		c	Reference to the GameSettings object.
+	f	Lnet/minecraft/client/audio/SoundManager$SoundSystemStarterThread;	field_148620_e	sndSystem	#sndSystem, :, ~, system
+		c	A reference to the sound system.
+	f	Z	field_148617_f	loaded	#loaded, :, started, :
+		c	Set to true when the SoundManager has been initialised.
+	f	I	field_148618_g	playTime	#playTime, :, ticks, :
+		c	A counter for how long the sound manager has been running
+	f	Ljava/util/Map;	field_148629_h	playingSounds	#playingSounds, :, ~, eventsByChannel
+		c	Identifiers of all currently playing sounds. Type: HashBiMap<String, ISound>
+	f	Ljava/util/Map;	field_148630_i	invPlayingSounds	#invPlayingSounds, :, ~, channelsByEvent
+		c	Inverse map of currently playing sounds, automatically mirroring changes in original map
+	f	Ljava/util/Map;	field_148627_j	playingSoundPoolEntries	#playingSoundPoolEntries, :, sources, :
+		c	A HashMap<String, SoundPoolEntry> of the playing sounds.
+	f	Lcom/google/common/collect/Multimap;	field_148628_k	categorySounds	#categorySounds, :, ~, channelsByCategory
+		c	Contains sounds mapped by category. Type: Multimap<SoundCategory, String>
+	f	Ljava/util/List;	field_148625_l	tickableSounds	#tickableSounds, :, ~, tickableEvents
+		c	A subset of playingSounds, this contains only ITickableSounds
+	f	Ljava/util/Map;	field_148626_m	delayedSounds	#delayedSounds, :, startTicks, soundQueue
+		c	Contains sounds to play in n ticks.  Type: HashMap<ISound, Integer>
+	f	Ljava/util/Map;	field_148624_n	playingSoundsStopTime	#playingSoundsStopTime, :, ~, soundBuffer
+		c	The future time in which to stop this sound.  Type: HashMap<String, Integer>
+	m	(Lnet/minecraft/client/audio/SoundHandler;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45119_1_	manager	#~, ~, manager, :
+		p	2	p_i45119_2_	options	#~, ~, options, :
+	m	()V	func_148596_a	reloadSoundSystem	#reloadSoundSystem, :, reloadSounds, reload
+	m	(Lnet/minecraft/util/ResourceLocation;)Ljava/net/URL;	func_148612_a	getURLForSoundResource	#getURLForSoundResource, :, ~, getSoundUrl
+		p	0	p_148612_0_	location	#~, ~, id, location
+	m	(Lnet/minecraft/client/audio/ISound;)Z	func_148597_a	isSoundPlaying	#isSoundPlaying, :, isPlaying, :
+		c	Returns true if the sound is playing or still within time
+		p	1	p_148597_1_	sound	#sound, :, ~, sound
+	m	(Lnet/minecraft/client/audio/ISound;I)V	func_148599_a	addDelayedSound	#addDelayedSound, playDelayedSound, play, :
+		c	Adds a sound to play in n tick
+		p	1	p_148599_1_	sound	#sound, :, :, :
+		p	2	p_148599_2_	delay	#delay, :, :, :
+	m	(Lnet/minecraft/client/audio/ISound;Lnet/minecraft/client/audio/SoundPoolEntry;)F	func_148606_a	getNormalizedPitch	#getNormalizedPitch, :, ~, getPitch
+		c	Normalizes pitch from parameters and clamps to [0.5, 2.0]
+		p	1	p_148606_1_	sound	#sound, :, ~, instance
+		p	2	p_148606_2_	entry	#entry, :, ~, sound
+	m	(Lnet/minecraft/client/audio/ISound;Lnet/minecraft/client/audio/SoundPoolEntry;Lnet/minecraft/client/audio/SoundCategory;)F	func_148594_a	getNormalizedVolume	#getNormalizedVolume, :, ~, getVolume
+		c	Normalizes volume level from parameters.  Range [0.0, 1.0]
+		p	1	p_148594_1_	sound	#sound, :, ~, instance
+		p	2	p_148594_2_	entry	#entry, :, ~, sound
+		p	3	p_148594_3_	category	#category, :, ~, category
+	m	(Lnet/minecraft/client/audio/SoundManager;)Lnet/minecraft/client/settings/GameSettings;	access$300	access$300	#~, ~, ~, ~
+		p	0	p_access$300_0_	p_access$300_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundManager;Lnet/minecraft/client/audio/SoundManager$SoundSystemStarterThread;)Lnet/minecraft/client/audio/SoundManager$SoundSystemStarterThread;	access$002	access$002	#~, ~, ~, ~
+		p	0	p_access$002_0_	p_access$002_0_	#~, ~, ~, ~
+		p	1	p_access$002_1_	p_access$002_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundManager;Z)Z	access$202	access$202	#~, ~, ~, ~
+		p	0	p_access$202_0_	p_access$202_0_	#~, ~, ~, ~
+		p	1	p_access$202_1_	p_access$202_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/audio/SoundCategory;)F	func_148595_a	getSoundCategoryVolume	#getSoundCategoryVolume, :, getSoundVolume, getVolume
+		c	Returns the sound level (between 0.0 and 1.0) for a category, but 1.0 for the master sound category
+		p	1	p_148595_1_	category	#category, :, ~, category
+	m	(Lnet/minecraft/client/audio/SoundCategory;F)V	func_148601_a	setSoundCategoryVolume	#setSoundCategoryVolume, :, updateSoundVolume, setVolume
+		c	Adjusts volume for currently playing sounds in this category
+		p	2	p_148601_2_	volume	#volume, :, :, :
+		p	1	p_148601_1_	category	#category, :, ~, category
+	m	(Lnet/minecraft/entity/player/EntityPlayer;F)V	func_148615_a	setListener	#setListener, :, updateListenerPosition, updateListener
+		c	Sets the listener of sounds
+		p	1	p_148615_1_	player	#player, :, :, :
+		p	2	p_148615_2_	tickDelta	#~, ~, tickDelta, :
+	m	()V	func_148613_b	unloadSoundSystem	#unloadSoundSystem, :, stop, close
+		c	Cleans up the Sound System
+	m	(Lnet/minecraft/client/audio/ISound;)V	func_148602_b	stopSound	#stopSound, :, stop, :
+		p	1	p_148602_1_	sound	#sound, :, ~, sound
+	m	(Lnet/minecraft/client/audio/SoundManager;)Lnet/minecraft/client/audio/SoundManager$SoundSystemStarterThread;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	()V	func_148614_c	stopAllSounds	#stopAllSounds, :, stopAll, stop
+		c	Stops all currently playing sounds
+	m	(Lnet/minecraft/client/audio/ISound;)V	func_148611_c	playSound	#playSound, :, play, :
+		p	1	p_148611_1_	p_sound	#p_sound, :, ~, sound
+	m	()V	func_148605_d	updateAllSounds	#updateAllSounds, :, tick, :
+	m	()V	func_148610_e	pauseAllSounds	#pauseAllSounds, :, pauseAll, pause
+		c	Pauses all currently playing sounds
+	m	()V	func_148604_f	resumeAllSounds	#resumeAllSounds, :, resumeAll, resume
+		c	Resumes playing all currently playing sounds (after pauseAllSounds)
+	m	()Lorg/apache/logging/log4j/Marker;	access$400	access$400	#~, ~, ~, ~
+	m	()Lorg/apache/logging/log4j/Logger;	access$500	access$500	#~, ~, ~, ~
+	m	()V	func_148608_i	loadSoundSystem	#loadSoundSystem, :, start, :
+		c	Tries to add the paulscode library and the relevant codecs. If it fails, the master volume  will be set to zero.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

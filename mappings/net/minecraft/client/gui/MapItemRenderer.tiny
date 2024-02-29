@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/MapItemRenderer	net/minecraft/client/gui/MapItemRenderer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_148253_a	mapIcons	#mapIcons, TEXTURE_MAP_ICONS, MAP_ICONS_TEXTURE, MAP_ICONS_LOCATION
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_148251_b	textureManager	#textureManager, :, :, :
+	f	Ljava/util/Map;	field_148252_c	loadedMaps	#loadedMaps, :, mapTextures, :
+	m	(Lnet/minecraft/client/renderer/texture/TextureManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45009_1_	textureManagerIn	#textureManagerIn, :, textureManager, :
+	m	()V	func_148249_a	clearLoadedMaps	#clearLoadedMaps, :, clearStateTextures, :
+		c	Clears the currently loaded maps and removes their corresponding textures
+	m	(Lnet/minecraft/world/storage/MapData;)V	func_148246_a	updateMapTexture	#updateMapTexture, :, updateTexture, :
+		c	Updates a map texture
+		p	1	p_148246_1_	mapdataIn	#mapdataIn, :, mapState, mapData
+	m	(Lnet/minecraft/world/storage/MapData;Z)V	func_148250_a	renderMap	#renderMap, :, draw, :
+		p	1	p_148250_1_	mapdataIn	#mapdataIn, :, mapState, mapData
+		p	2	p_148250_2_	noOverlayRendering	#noOverlayRendering, :, noIcons, inItemFrame
+	m	(Lnet/minecraft/client/gui/MapItemRenderer;)Lnet/minecraft/client/renderer/texture/TextureManager;	access$400	access$400	#~, ~, ~, getTextureManager
+		p	0	p_access$400_0_	mapRenderer	#~, ~, ~, mapRenderer
+	m	()Lnet/minecraft/util/ResourceLocation;	access$500	access$500	#~, ~, ~, getIconTexture
+	m	(Lnet/minecraft/world/storage/MapData;)Lnet/minecraft/client/gui/MapItemRenderer$Instance;	func_148248_b	getMapRendererInstance	#getMapRendererInstance, :, ~, getMapTexture
+		c	Returns {@link net.minecraft.client.gui.MapItemRenderer.Instance MapItemRenderer.Instance} with given map data
+		p	1	p_148248_1_	mapdataIn	#mapdataIn, :, ~, mapData
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiLanguage	net/minecraft/client/gui/GuiLanguage	
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146453_a	parentScreen	#parentScreen, :, parent, :
+		c	The parent Gui screen
+	f	Lnet/minecraft/client/gui/GuiLanguage$List;	field_146450_f	list	#list, :, ~, languageSelectionListWidget
+		c	The List GuiSlot object reference.
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146451_g	game_settings_3	#game_settings_3, :, options, gameOptions
+		c	Reference to the GameSettings object.
+	f	Lnet/minecraft/client/resources/LanguageManager;	field_146454_h	languageManager	#languageManager, :, :, :
+		c	Reference to the LanguageManager object.
+	f	Lnet/minecraft/client/gui/GuiOptionButton;	field_146455_i	forceUnicodeFontBtn	#forceUnicodeFontBtn, :, forceUnicodeButton, forceUnicodeFontButton
+		c	A button which allows the user to determine if the Unicode font should be forced.
+	f	Lnet/minecraft/client/gui/GuiOptionButton;	field_146452_r	confirmSettingsBtn	#confirmSettingsBtn, :, doneButton, :
+		c	The button to confirm the current settings.
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;Lnet/minecraft/client/resources/LanguageManager;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1043_1_	screen	#screen, :, parent, :
+		p	2	p_i1043_2_	gameSettingsObj	#gameSettingsObj, :, options, :
+		p	3	p_i1043_3_	manager	#manager, :, languageManager, :
+	m	(Lnet/minecraft/client/gui/GuiLanguage;)Lnet/minecraft/client/resources/LanguageManager;	access$000	access$000	#~, ~, ~, getLanguageManager
+		p	0	p_access$000_0_	screen	#~, ~, ~, screen
+	m	(Lnet/minecraft/client/gui/GuiLanguage;)Lnet/minecraft/client/settings/GameSettings;	access$100	access$100	#~, ~, ~, getGameOptions
+		p	0	p_access$100_0_	screen	#~, ~, ~, screen
+	m	(Lnet/minecraft/client/gui/GuiLanguage;)Lnet/minecraft/client/gui/GuiOptionButton;	access$200	access$200	#~, ~, ~, getDoneButton
+		p	0	p_access$200_0_	screen	#~, ~, ~, screen
+	m	(Lnet/minecraft/client/gui/GuiLanguage;)Lnet/minecraft/client/gui/GuiOptionButton;	access$300	access$300	#~, ~, ~, getOptionButtonWidget
+		p	0	p_access$300_0_	screen	#~, ~, ~, screen

@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/RangedAttribute	net/minecraft/entity/ai/attributes/RangedAttribute	
+	f	D	field_111120_a	minimumValue	#minimumValue, :, minValue, min
+	f	D	field_111118_b	maximumValue	#maximumValue, :, maxValue, max
+	f	Ljava/lang/String;	field_111119_c	description	#description, :, name, displayName
+	m	(Ljava/lang/String;)Lnet/minecraft/entity/ai/attributes/RangedAttribute;	func_111117_a	setDescription	#setDescription, :, setName, setDisplayName
+		p	1	p_111117_1_	descriptionIn	#descriptionIn, :, name, displayName
+	m	()Ljava/lang/String;	func_111116_f	getDescription	#getDescription, :, getName, getDisplayName
+	m	(Ljava/lang/String;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1609_1_	name	#~, ~, ~, name
+		p	2	p_i1609_2_	defaultValue	#~, ~, ~, defaultValue
+		p	4	p_i1609_4_	min	#~, ~, ~, min
+		p	6	p_i1609_6_	max	#~, ~, ~, max

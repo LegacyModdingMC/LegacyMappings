@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDragonEgg	net/minecraft/block/BlockDragonEgg	
+	m	(Lnet/minecraft/world/World;III)V	func_150018_e	tryFall	#~, ~, ~, tryFall
+		p	1	p_150018_1_	world	#~, ~, ~, world
+		p	2	p_150018_2_	x	#~, ~, ~, x
+		p	3	p_150018_3_	y	#~, ~, ~, y
+		p	4	p_150018_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)V	func_150019_m	tryTeleport	#~, ~, ~, tryTeleport
+		p	1	p_150019_1_	world	#~, ~, ~, world
+		p	2	p_150019_2_	x	#~, ~, ~, x
+		p	3	p_150019_3_	y	#~, ~, ~, y
+		p	4	p_150019_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

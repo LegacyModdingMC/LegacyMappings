@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/MinecraftServerGui$2	net/minecraft/server/gui/MinecraftServerGui$2	
+	f	Ljavax/swing/JTextField;	field_120025_a	chatTextfield	#chatTextfield, :, ~, textField
+		c	Textfield below the server GUI textarea.
+	f	Lnet/minecraft/server/gui/MinecraftServerGui;	field_120024_b	servergui	#servergui, :, ~, gui
+		c	Reference to server GUI.
+	m	(Ljava/awt/event/ActionEvent;)V	actionPerformed	actionPerformed	#~, ~, ~, ~
+		p	1	p_actionPerformed_1_	event	#~, ~, ~, event
+	m	(Lnet/minecraft/server/gui/MinecraftServerGui;Ljavax/swing/JTextField;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1222_1_	p_i1222_1_	#~, ~, ~, ~
+		p	2	p_i1222_2_	p_i1222_2_	#~, ~, ~, ~

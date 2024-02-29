@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiBeacon	net/minecraft/client/gui/inventory/GuiBeacon	
+	f	Lorg/apache/logging/log4j/Logger;	field_147026_u	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_147025_v	beaconGuiTextures	#beaconGuiTextures, BEACON_GUI_TEXTURES, TEXTURE, MENU_LOCATION
+	f	Lnet/minecraft/tileentity/TileEntityBeacon;	field_147024_w	tileBeacon	#tileBeacon, :, ~, beacon
+	f	Lnet/minecraft/client/gui/inventory/GuiBeacon$ConfirmButton;	field_147028_x	beaconConfirmButton	#beaconConfirmButton, :, ~, doneButton
+	f	Z	field_147027_y	buttonsNotDrawn	#buttonsNotDrawn, :, consumeGem, acceptsPayment
+	m	()Lnet/minecraft/util/ResourceLocation;	access$000	access$000	#~, ~, ~, getTexture
+	m	(Lnet/minecraft/client/gui/inventory/GuiBeacon;Ljava/lang/String;II)V	access$100	access$100	#~, ~, ~, renderTooltip1
+		p	0	p_access$100_0_	beaconScreen	#~, ~, ~, beaconScreen
+		p	1	p_access$100_1_	text	#~, ~, ~, text
+		p	2	p_access$100_2_	x	#~, ~, ~, x
+		p	3	p_access$100_3_	y	#~, ~, ~, y
+	m	(Lnet/minecraft/client/gui/inventory/GuiBeacon;Ljava/lang/String;II)V	access$200	access$200	#~, ~, ~, renderTooltip2
+		p	0	p_access$200_0_	beaconScreen	#~, ~, ~, beaconScreen
+		p	1	p_access$200_1_	text	#~, ~, ~, text
+		p	2	p_access$200_2_	x	#~, ~, ~, x
+		p	3	p_access$200_3_	y	#~, ~, ~, y
+	m	(Lnet/minecraft/client/gui/inventory/GuiBeacon;Ljava/lang/String;II)V	access$300	access$300	#~, ~, ~, renderTooltip3
+		p	0	p_access$300_0_	beaconScreen	#~, ~, ~, beaconScreen
+		p	1	p_access$300_1_	text	#~, ~, ~, text
+		p	2	p_access$300_2_	x	#~, ~, ~, x
+		p	3	p_access$300_3_	y	#~, ~, ~, y
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityBeacon;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1078_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1078_2_	beacon	#~, ~, ~, beacon
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

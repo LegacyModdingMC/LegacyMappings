@@ -1,0 +1,53 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/ItemRenderer	net/minecraft/client/renderer/ItemRenderer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110930_b	RES_ITEM_GLINT	#RES_ITEM_GLINT, :, ~, ENCHANTMENT_GLINT_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110931_c	RES_MAP_BACKGROUND	#RES_MAP_BACKGROUND, :, MAP_BACKGROUND, MAP_BACKGROUND_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110929_d	RES_UNDERWATER_OVERLAY	#RES_UNDERWATER_OVERLAY, :, UNDERWATER_TEXTURE, UNDERWATER_LOCATION
+	f	Lnet/minecraft/client/Minecraft;	field_78455_a	mc	#mc, :, client, minecraft
+		c	A reference to the Minecraft object.
+	f	Lnet/minecraft/item/ItemStack;	field_78453_b	itemToRender	#itemToRender, :, mainHand, item
+	f	F	field_78454_c	equippedProgress	#equippedProgress, :, equipProgress, handHeight
+		c	How far the current item has been equipped (0 disequipped and 1 fully up)
+	f	F	field_78451_d	prevEquippedProgress	#prevEquippedProgress, :, lastEquipProgress, lastHandHeight
+	f	Lnet/minecraft/client/renderer/RenderBlocks;	field_147720_h	renderBlocksIr	#renderBlocksIr, :, blockRenderer, :
+	f	I	field_78450_g	equippedItemSlot	#equippedItemSlot, :, selectedSlot, :
+		c	The index of the currently held item (0-8, or -1 if not yet updated)
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1247_1_	mcIn	#mcIn, :, client, minecraft
+	m	()V	func_78441_a	updateEquippedItem	#updateEquippedItem, :, updateHeldItems, updateHeldItem
+	m	(F)V	func_78440_a	renderItemInFirstPerson	#renderItemInFirstPerson, :, renderArmHoldingItem, renderHand
+		c	Renders the active item in the player's hand when in first person mode. Args: partialTickTime
+		p	1	p_78440_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(FLnet/minecraft/util/IIcon;)V	func_78446_a	renderInsideOfBlock	#renderInsideOfBlock, :, ~, renderSuffocatingEffect
+		c	Renders the texture of the block the player is inside as an overlay. Args: partialTickTime, blockTextureIndex
+		p	1	p_78446_1_	tickDelta	#~, ~, ~, tickDelta
+		p	2	p_78446_2_	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/client/renderer/Tessellator;FFFFIIF)V	func_78439_a	renderItemIn2D	#renderItemIn2D, :, ~, draw
+		c	Renders an item held in hand as a 2D texture with thickness
+		p	0	p_78439_0_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	1	p_78439_1_	uMin	#~, ~, ~, uMin
+		p	2	p_78439_2_	vMin	#~, ~, ~, vMin
+		p	3	p_78439_3_	uMax	#~, ~, ~, uMax
+		p	4	p_78439_4_	vMax	#~, ~, ~, vMax
+		p	5	p_78439_5_	width	#~, ~, ~, width
+		p	6	p_78439_6_	height	#~, ~, ~, height
+		p	7	p_78439_7_	offset	#~, ~, ~, offset
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/item/ItemStack;I)V	func_78443_a	renderItem	#renderItem, :, ~, render
+		c	Renders the item stack for being in an entity's hand Args: itemStack
+		p	1	p_78443_1_	entity	#~, ~, ~, entity
+		p	2	p_78443_2_	stack	#~, ~, ~, stack
+		p	3	p_78443_3_	stage	#~, ~, ~, stage
+	m	()V	func_78444_b	resetEquippedProgress	#resetEquippedProgress, :, resetEquipProgress, onBlockUsed
+		c	Resets equippedProgress
+	m	(F)V	func_78447_b	renderOverlays	#renderOverlays, :, :, renderScreenSpaceEffects
+		c	Renders all the overlays that are in first person mode. Args: partialTickTime
+		p	1	p_78447_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	func_78445_c	resetEquippedProgress2	#resetEquippedProgress2, :, resetEquipProgress2, onItemUsed
+		c	Resets equippedProgress
+	m	(F)V	func_78448_c	renderWarpedTextureOverlay	#renderWarpedTextureOverlay, renderWaterOverlayTexture, renderUnderwaterOverlay, renderInWaterEffect
+		c	Renders a texture that warps around based on the direction the player is looking. Texture needs to be bound before being called. Used for the water overlay. Args: parialTickTime
+		p	1	p_78448_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(F)V	func_78442_d	renderFireInFirstPerson	#renderFireInFirstPerson, :, renderFireOverlay, renderOnFireEffect
+		c	Renders the fire on the screen for first person mode. Arg: partialTickTime
+		p	1	p_78442_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,79 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatList	net/minecraft/stats/StatList	
+	f	Lnet/minecraft/stats/StatBase;	field_151183_A	junkFishedStat	#junkFishedStat, :, JUNK_FISHED, :
+	f	Lnet/minecraft/stats/StatBase;	field_151184_B	treasureFishedStat	#treasureFishedStat, :, TREASURE_FISHED, :
+	f	[Lnet/minecraft/stats/StatBase;	field_75934_C	mineBlockStatArray	#mineBlockStatArray, :, BLOCK_STATS, BLOCKS_MINED
+	f	[Lnet/minecraft/stats/StatBase;	field_75928_D	objectCraftStats	#objectCraftStats, :, CRAFTING_STATS, ITEMS_CRAFTED
+		c	Tracks the number of items a given block or item has been crafted.
+	f	[Lnet/minecraft/stats/StatBase;	field_75929_E	objectUseStats	#objectUseStats, OBJECT_USE_STATS, USED, ITEMS_USED
+		c	Tracks the number of times a given block or item has been used.
+	f	[Lnet/minecraft/stats/StatBase;	field_75930_F	objectBreakStats	#objectBreakStats, OBJECT_BREAK_STATS, BROKEN, ITEMS_BROKEN
+		c	Tracks the number of times a given block or item has been broken.
+	f	Ljava/util/Map;	field_75942_a	oneShotStats	#oneShotStats, :, ID_TO_STAT, BY_KEY
+		c	Tracks one-off stats.
+	f	Ljava/util/List;	field_75940_b	allStats	#allStats, ALL_STATS, ALL, :
+	f	Ljava/util/List;	field_75941_c	generalStats	#generalStats, :, GENERAL, :
+	f	Ljava/util/List;	field_75938_d	itemStats	#itemStats, :, ITEM, USED
+	f	Ljava/util/List;	field_75939_e	objectMineStats	#objectMineStats, :, MINE, MINED
+		c	Tracks the number of times a given block or item has been mined.
+	f	Lnet/minecraft/stats/StatBase;	field_75947_j	leaveGameStat	#leaveGameStat, LEAVE_GAME, GAMES_LEFT, :
+		c	number of times you've left a game
+	f	Lnet/minecraft/stats/StatBase;	field_75948_k	minutesPlayedStat	#minutesPlayedStat, :, MINUTES_PLAYED, :
+		c	number of minutes you have played
+	f	Lnet/minecraft/stats/StatBase;	field_75945_l	distanceWalkedStat	#distanceWalkedStat, :, CM_WALKED, :
+		c	distance you've walked
+	f	Lnet/minecraft/stats/StatBase;	field_75946_m	distanceSwumStat	#distanceSwumStat, SWIM_ONE_CM, CM_SWUM, :
+		c	distance you have swam
+	f	Lnet/minecraft/stats/StatBase;	field_75943_n	distanceFallenStat	#distanceFallenStat, FALL_ONE_CM, CM_FALLEN, :
+		c	the distance you have fallen
+	f	Lnet/minecraft/stats/StatBase;	field_75944_o	distanceClimbedStat	#distanceClimbedStat, :, CM_CLIMB, :
+		c	the distance you've climbed
+	f	Lnet/minecraft/stats/StatBase;	field_75958_p	distanceFlownStat	#distanceFlownStat, :, CM_FLOWN, :
+		c	the distance you've flown
+	f	Lnet/minecraft/stats/StatBase;	field_75957_q	distanceDoveStat	#distanceDoveStat, :, CM_DIVEN, :
+		c	the distance you've dived
+	f	Lnet/minecraft/stats/StatBase;	field_75956_r	distanceByMinecartStat	#distanceByMinecartStat, :, CM_MINECART, :
+		c	the distance you've traveled by minecart
+	f	Lnet/minecraft/stats/StatBase;	field_75955_s	distanceByBoatStat	#distanceByBoatStat, :, CM_SAILED, :
+		c	the distance you've traveled by boat
+	f	Lnet/minecraft/stats/StatBase;	field_75954_t	distanceByPigStat	#distanceByPigStat, :, CM_PIG, :
+		c	the distance you've traveled by pig
+	f	Lnet/minecraft/stats/StatBase;	field_151185_q	distanceByHorseStat	#distanceByHorseStat, :, CM_HORSE, :
+	f	Lnet/minecraft/stats/StatBase;	field_75953_u	jumpStat	#jumpStat, JUMP, JUMPS, :
+		c	the times you've jumped
+	f	Lnet/minecraft/stats/StatBase;	field_75952_v	dropStat	#dropStat, DROP, DROPS, :
+		c	the distance you've dropped (or times you've fallen?)
+	f	Lnet/minecraft/stats/StatBase;	field_75951_w	damageDealtStat	#damageDealtStat, :, DAMAGE_DEALT, :
+		c	the amount of damage you've dealt
+	f	Lnet/minecraft/stats/StatBase;	field_75961_x	damageTakenStat	#damageTakenStat, :, DAMAGE_TAKEN, :
+		c	the amount of damage you have taken
+	f	Lnet/minecraft/stats/StatBase;	field_75960_y	deathsStat	#deathsStat, :, DEATHS, :
+		c	the number of times you have died
+	f	Lnet/minecraft/stats/StatBase;	field_75959_z	mobKillsStat	#mobKillsStat, :, MOB_KILLS, MOBS_KILLED
+		c	the number of mobs you have killed
+	f	Lnet/minecraft/stats/StatBase;	field_151186_x	animalsBredStat	#animalsBredStat, ANIMALS_BRED, :, :
+		c	the number of animals you have bred
+	f	Lnet/minecraft/stats/StatBase;	field_75932_A	playerKillsStat	#playerKillsStat, PLAYER_KILLS, PLAYERS_KILLED, :
+		c	counts the number of times you've killed a player
+	f	Lnet/minecraft/stats/StatBase;	field_75933_B	fishCaughtStat	#fishCaughtStat, :, FISH_CAUGHT, :
+	m	()V	func_151178_a	init	#init, :, setup, init
+	m	(Ljava/lang/String;)Lnet/minecraft/stats/StatBase;	func_151177_a	getOneShotStat	#getOneShotStat, :, getAStat, byKey
+		p	0	p_151177_0_	statName	#statName, :, id, key
+	m	(Lnet/minecraft/entity/EntityList$EntityEggInfo;)Lnet/minecraft/stats/StatBase;	func_151182_a	getStatKillEntity	#getStatKillEntity, :, ~, createEntityKillStat
+		p	0	p_151182_0_	eggInfo	#eggInfo, :, ~, spawnEggData
+	m	([Lnet/minecraft/stats/StatBase;)V	func_75924_a	replaceAllSimilarBlocks	#replaceAllSimilarBlocks, :, ~, mergeBlockStats
+		c	Forces all dual blocks to count for each other on the stats list
+		p	0	p_75924_0_	stat	#stat, :, stats, :
+	m	([Lnet/minecraft/stats/StatBase;Lnet/minecraft/block/Block;Lnet/minecraft/block/Block;)V	func_151180_a	mergeStatBases	#mergeStatBases, :, ~, mergeBlockStats
+		c	Merge {@link StatBase} object references for similar blocks
+		p	0	p_151180_0_	statBaseIn	#statBaseIn, :, stats, :
+		p	1	p_151180_1_	block1	#block1, :, block0, block1
+		p	2	p_151180_2_	block2	#block2, :, block1, block2
+	m	()V	func_75918_d	initCraftableStats	#initCraftableStats, :, loadCraftingStats, initItemsCraftedStats
+		c	Initializes statistics related to craftable items. Is only called after both block and item stats have been initialized.
+	m	(Lnet/minecraft/entity/EntityList$EntityEggInfo;)Lnet/minecraft/stats/StatBase;	func_151176_b	getStatEntityKilledBy	#getStatEntityKilledBy, :, ~, createKilledByEntityStat
+		p	0	p_151176_0_	eggInfo	#eggInfo, :, ~, spawnEggData
+	m	()V	func_151181_c	initMiningStats	#initMiningStats, :, loadBlockStats, initBlocksMinedStats
+	m	()V	func_75925_c	initStats	#initStats, :, loadUseStats, initItemsUsedStats
+	m	()V	func_151179_e	initItemDepleteStats	#initItemDepleteStats, :, loadBreakStats, initItemsBrokenStats
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

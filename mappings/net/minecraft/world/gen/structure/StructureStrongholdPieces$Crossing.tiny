@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureStrongholdPieces$Crossing	net/minecraft/world/gen/structure/StructureStrongholdPieces$Crossing	
+	f	Z	field_74996_b	leftLow	#leftLow, :, ~, leftLow
+	f	Z	field_74997_c	leftHigh	#leftHigh, :, ~, leftHigh
+	f	Z	field_74995_d	rightLow	#rightLow, :, ~, rightLow
+	f	Z	field_74999_h	rightHigh	#rightHigh, :, ~, rightHigh
+	m	(Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureStrongholdPieces$Crossing;	func_74994_a	findValidPlacement	#findValidPlacement, :, ~, of
+		p	0	p_74994_0_	pieces	#~, ~, ~, pieces
+		p	1	p_74994_1_	random	#~, ~, ~, random
+		p	2	p_74994_2_	x	#~, ~, ~, x
+		p	3	p_74994_3_	y	#~, ~, ~, y
+		p	4	p_74994_4_	z	#~, ~, ~, z
+		p	5	p_74994_5_	facing	#~, ~, ~, facing
+		p	6	p_74994_6_	generationDepth	#~, ~, ~, generationDepth
+	m	(ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2073_1_	generationDepth	#~, ~, ~, generationDepth
+		p	2	p_i2073_2_	random	#~, ~, ~, random
+		p	3	p_i2073_3_	box	#~, ~, ~, box
+		p	4	p_i2073_4_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

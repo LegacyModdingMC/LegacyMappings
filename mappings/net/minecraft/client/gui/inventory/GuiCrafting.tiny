@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiCrafting	net/minecraft/client/gui/inventory/GuiCrafting	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147019_u	craftingTableGuiTextures	#craftingTableGuiTextures, CRAFTING_TABLE_GUI_TEXTURES, TEXTURE, MENU_LOCATION
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1084_1_	parentScreenIn	#parentScreenIn, :, ~, inventory
+		p	2	p_i1084_2_	linkTextIn	#linkTextIn, :, ~, world
+		p	3	p_i1084_3_	parentButtonClickedIdIn	#parentButtonClickedIdIn, :, ~, x
+		p	4	p_i1084_4_	trusted	#trusted, :, ~, y
+		p	5	p_i1084_5_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

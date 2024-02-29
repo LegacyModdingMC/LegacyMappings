@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAISit	net/minecraft/entity/ai/EntityAISit	
+	f	Lnet/minecraft/entity/passive/EntityTameable;	field_75272_a	theEntity	#theEntity, tameable, :, pet
+	f	Z	field_75271_b	isSitting	#isSitting, :, enabledWithOwner, :
+		c	If the EntityTameable is sitting.
+	m	(Lnet/minecraft/entity/passive/EntityTameable;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1654_1_	entityIn	#entityIn, :, tameable, pet
+	m	(Z)V	func_75270_a	setSitting	#setSitting, :, setEnabledWithOwner, :
+		c	Sets the sitting flag.
+		p	1	p_75270_1_	sitting	#sitting, :, enabledWithOwner, :

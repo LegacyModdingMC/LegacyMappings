@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer	net/minecraft/client/renderer/tileentity/TileEntitySpecialRenderer	
+	f	Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;	field_147501_a	rendererDispatcher	#rendererDispatcher, :, dispatcher, :
+	m	(Lnet/minecraft/world/World;)V	func_147496_a	onWorldChange	#onWorldChange, :, setWorld, :
+		p	1	p_147496_1_	world	#~, ~, world, :
+	m	(Lnet/minecraft/tileentity/TileEntity;DDDF)V	func_147500_a	renderTileEntityAt	#renderTileEntityAt, :, render, :
+		p	1	p_147500_1_	blockEntity	#~, ~, entity, blockEntity
+		p	2	p_147500_2_	x	#~, ~, x, :
+		p	4	p_147500_4_	y	#~, ~, y, :
+		p	6	p_147500_6_	z	#~, ~, z, :
+		p	8	p_147500_8_	tickDelta	#~, ~, tickDelta, :
+	m	(Lnet/minecraft/client/renderer/tileentity/TileEntityRendererDispatcher;)V	func_147497_a	setRendererDispatcher	#setRendererDispatcher, :, setDispatcher, init
+		p	1	p_147497_1_	rendererDispatcherIn	#rendererDispatcherIn, :, dispatcher, :
+	m	(Lnet/minecraft/util/ResourceLocation;)V	func_147499_a	bindTexture	#bindTexture, :, :, :
+		p	1	p_147499_1_	location	#location, :, texture, location
+	m	()Lnet/minecraft/client/gui/FontRenderer;	func_147498_b	getFontRenderer	#getFontRenderer, :, getTextRenderer, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

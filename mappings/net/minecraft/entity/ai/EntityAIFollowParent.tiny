@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIFollowParent	net/minecraft/entity/ai/EntityAIFollowParent	
+	f	Lnet/minecraft/entity/passive/EntityAnimal;	field_75348_a	childAnimal	#childAnimal, :, animal, childAnimal
+		c	The child that is following its parent.
+	f	Lnet/minecraft/entity/passive/EntityAnimal;	field_75346_b	parentAnimal	#parentAnimal, :, parent, parentAnimalEntity
+	f	D	field_75347_c	moveSpeed	#moveSpeed, :, speed, :
+	f	I	field_75345_d	delayCounter	#delayCounter, :, delay, :
+	m	(Lnet/minecraft/entity/passive/EntityAnimal;D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1626_1_	animal	#animal, :, :, childAnimal
+		p	2	p_i1626_2_	speed	#speed, :, :, :

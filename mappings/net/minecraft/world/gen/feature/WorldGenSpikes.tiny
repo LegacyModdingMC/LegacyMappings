@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenSpikes	net/minecraft/world/gen/feature/WorldGenSpikes	
+	f	Lnet/minecraft/block/Block;	field_150520_a	baseBlockRequired	#baseBlockRequired, :, block, :
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45464_1_	block	#~, ~, block, :

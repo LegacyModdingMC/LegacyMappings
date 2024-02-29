@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$DesertPyramid	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces$DesertPyramid	
+	f	[Z	field_74940_h	hasPlacedChest	#hasPlacedChest, :, ~, hasChest
+	f	[Lnet/minecraft/util/WeightedRandomChestContent;	field_74941_i	itemsToGenerateInTemple	#itemsToGenerateInTemple, :, ~, LOOT_ENTRIES
+		c	List of items to generate in chests of Temples.
+	m	(Ljava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2062_1_	random	#~, ~, ~, random
+		p	2	p_i2062_2_	x	#~, ~, ~, x
+		p	3	p_i2062_3_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

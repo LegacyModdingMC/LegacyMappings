@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/MapData$MapCoord	net/minecraft/world/storage/MapData$MapCoord	
+	f	B	field_76216_a	iconSize	#iconSize, :, ~, type
+	f	B	field_76214_b	centerX	#centerX, :, ~, x
+	f	B	field_76215_c	centerZ	#centerZ, :, ~, z
+	f	B	field_76212_d	iconRotation	#iconRotation, :, ~, rotation
+	f	Lnet/minecraft/world/storage/MapData;	field_76213_e	data	#data, :, ~, mapData
+	m	(Lnet/minecraft/world/storage/MapData;BBBB)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i2139_2_	type	#~, ~, ~, type
+		p	3	p_i2139_3_	x	#~, ~, ~, x
+		p	4	p_i2139_4_	z	#~, ~, ~, z
+		p	5	p_i2139_5_	rotation	#~, ~, ~, rotation
+		p	1	p_i2139_1_	p_i2139_1_	#~, ~, ~, ~

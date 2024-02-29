@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagByteArray	net/minecraft/nbt/NBTTagByteArray	
+	f	[B	field_74754_a	byteArray	#byteArray, data, value, :
+		c	The byte array stored in the tag.
+	m	([B)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45128_1_	data	#data, :, value, :
+	m	()[B	func_150292_c	getByteArray	#getByteArray, :, getArray, getByteArray
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	o	#~, ~, o, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

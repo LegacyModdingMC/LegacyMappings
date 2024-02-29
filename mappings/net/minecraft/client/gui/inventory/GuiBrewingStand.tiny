@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiBrewingStand	net/minecraft/client/gui/inventory/GuiBrewingStand	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147014_u	brewingStandGuiTextures	#brewingStandGuiTextures, BREWING_STAND_GUI_TEXTURES, TEXTURE, MENU_LOCATION
+	f	Lnet/minecraft/tileentity/TileEntityBrewingStand;	field_147013_v	tileBrewingStand	#tileBrewingStand, :, ~, brewingStand
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/tileentity/TileEntityBrewingStand;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1081_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1081_2_	brewingStand	#~, ~, ~, brewingStand
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

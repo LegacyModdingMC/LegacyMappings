@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockMushroom	net/minecraft/block/BlockMushroom	
+	m	(Lnet/minecraft/world/World;IIILjava/util/Random;)Z	func_149884_c	fertilizeMushroom	#fertilizeMushroom, :, ~, grow
+		p	1	p_149884_1_	world	#~, ~, ~, world
+		p	2	p_149884_2_	x	#~, ~, ~, x
+		p	3	p_149884_3_	y	#~, ~, ~, y
+		p	4	p_149884_4_	z	#~, ~, ~, z
+		p	5	p_149884_5_	random	#~, ~, ~, random
+	m	()V	<init>	<init>	#~, ~, ~, ~

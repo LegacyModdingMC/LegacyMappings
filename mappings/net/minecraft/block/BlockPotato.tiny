@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPotato	net/minecraft/block/BlockPotato	
+	f	[Lnet/minecraft/util/IIcon;	field_149869_a	sprites	#~, ~, ~, sprites
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/ServerStatusResponse	net/minecraft/network/ServerStatusResponse	
+	f	Lnet/minecraft/util/IChatComponent;	field_151326_a	serverMotd	#serverMotd, description, :, :
+	f	Lnet/minecraft/network/ServerStatusResponse$PlayerCountData;	field_151324_b	playerCount	#playerCount, players, ~, players
+	f	Lnet/minecraft/network/ServerStatusResponse$MinecraftProtocolVersionIdentifier;	field_151325_c	protocolVersion	#protocolVersion, version, ~, version
+	f	Ljava/lang/String;	field_151323_d	favicon	#favicon, :, :, :
+	m	()Lnet/minecraft/util/IChatComponent;	func_151317_a	getServerDescription	#getServerDescription, :, getDescription, :
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_151315_a	setServerDescription	#setServerDescription, :, setDescription, :
+		p	1	p_151315_1_	motd	#motd, descriptionIn, ~, description
+	m	(Ljava/lang/String;)V	func_151320_a	setFavicon	#setFavicon, :, :, :
+		p	1	p_151320_1_	faviconBlob	#faviconBlob, :, favicon, :
+	m	(Lnet/minecraft/network/ServerStatusResponse$PlayerCountData;)V	func_151319_a	setPlayerCountData	#setPlayerCountData, setPlayers, ~, setPlayers
+		p	1	p_151319_1_	countData	#countData, playersIn, ~, players
+	m	(Lnet/minecraft/network/ServerStatusResponse$MinecraftProtocolVersionIdentifier;)V	func_151321_a	setProtocolVersionInfo	#setProtocolVersionInfo, setVersion, ~, setVersion
+		p	1	p_151321_1_	protocolVersionData	#protocolVersionData, versionIn, ~, version
+	m	()Lnet/minecraft/network/ServerStatusResponse$PlayerCountData;	func_151318_b	getPlayerCountData	#getPlayerCountData, getPlayers, ~, getPlayers
+	m	()Lnet/minecraft/network/ServerStatusResponse$MinecraftProtocolVersionIdentifier;	func_151322_c	getProtocolVersionInfo	#getProtocolVersionInfo, getVersion, ~, getVersion
+	m	()Ljava/lang/String;	func_151316_d	getFavicon	#getFavicon, :, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

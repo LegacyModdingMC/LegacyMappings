@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockAnvil	net/minecraft/block/BlockAnvil	
+	f	[Ljava/lang/String;	field_149835_N	anvilIconNames	#anvilIconNames, :, ~, TOP_SPRITE_NAMES
+	f	[Lnet/minecraft/util/IIcon;	field_149836_O	anvilIcons	#anvilIcons, :, ~, topSprites
+	f	[Ljava/lang/String;	field_149834_a	anvilDamageNames	#anvilDamageNames, :, ~, VARIANTS
+	f	I	field_149833_b	anvilRenderSide	#anvilRenderSide, :, ~, currentRenderPart
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

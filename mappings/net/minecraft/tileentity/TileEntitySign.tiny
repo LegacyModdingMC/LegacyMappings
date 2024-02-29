@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntitySign	net/minecraft/tileentity/TileEntitySign	
+	f	[Ljava/lang/String;	field_145915_a	signText	#signText, :, ~, lines
+		c	An array of four strings storing the lines of text on the sign.
+	f	I	field_145918_i	lineBeingEdited	#lineBeingEdited, :, :, currentRow
+		c	The index of the line currently being edited. Only used on client side, but defined on both. Note this is only really used when the > < are going to be visible.
+	f	Z	field_145916_j	isEditable	#isEditable, :, editable, :
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_145917_k	player	#player, :, editor, player
+	m	()Z	func_145914_a	getIsEditable	#getIsEditable, :, isEditable, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_145912_a	setPlayer	#setPlayer, :, setEditor, setPlayer
+		p	1	p_145912_1_	playerIn	#playerIn, :, editor, player
+	m	(Z)V	func_145913_a	setEditable	#setEditable, :, :, :
+		c	Sets the sign's isEditable flag to the specified parameter.
+		p	1	p_145913_1_	isEditableIn	#isEditableIn, :, editable, :
+	m	()Lnet/minecraft/entity/player/EntityPlayer;	func_145911_b	getPlayer	#getPlayer, :, getEditor, getPlayer
+	m	()V	<init>	<init>	#~, ~, ~, ~

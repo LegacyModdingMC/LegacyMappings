@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiLabel	net/minecraft/client/gui/GuiLabel	
+	f	I	field_146167_a	width	#width, :, :, :
+	f	I	field_146161_f	height	#height, :, :, :
+	f	I	field_146162_g	x	#x, :, :, :
+	f	I	field_146174_h	y	#y, :, :, :
+	f	Z	field_146172_j	visible	#visible, :, :, :
+	f	Ljava/util/ArrayList;	field_146173_k	labels	#labels, :, ~, texts
+	f	Z	field_146170_l	centered	#centered, :, :, :
+	f	Z	field_146171_m	labelBgEnabled	#labelBgEnabled, :, hasBorderer, hasBorder
+	f	I	field_146168_n	textColor	#textColor, :, color, textColor
+	f	I	field_146169_o	backColor	#backColor, :, backgroundColor, fillColor
+	f	I	field_146166_p	ulColor	#ulColor, :, upperRightColor, lineColor1
+	f	I	field_146165_q	brColor	#brColor, :, lowerLeftColor, lineColor2
+	f	Lnet/minecraft/client/gui/FontRenderer;	field_146164_r	fontRenderer	#fontRenderer, :, textRenderer, :
+	f	I	field_146163_s	border	#border, :, borderThickness, offset
+	m	(Lnet/minecraft/client/Minecraft;II)V	func_146159_a	drawLabel	#drawLabel, :, render, :
+		p	1	p_146159_1_	mc	#mc, :, client, minecraft
+		p	2	p_146159_2_	mouseX	#mouseX, :, :, :
+		p	3	p_146159_3_	mouseY	#mouseY, :, :, :
+	m	(Lnet/minecraft/client/Minecraft;II)V	func_146160_b	drawLabelBackground	#drawLabelBackground, :, renderBorder, :
+		p	1	p_146160_1_	mcIn	#mcIn, :, client, minecraft
+		p	2	p_146160_2_	mouseX	#mouseX, :, :, :
+		p	3	p_146160_3_	mouseY	#mouseY, :, :, :

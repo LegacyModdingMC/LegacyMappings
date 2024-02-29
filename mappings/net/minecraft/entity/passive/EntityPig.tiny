@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityPig	net/minecraft/entity/passive/EntityPig	
+	f	Lnet/minecraft/entity/ai/EntityAIControlledByPlayer;	field_82184_d	aiControlledByPlayer	#aiControlledByPlayer, :, playerControlGoal, :
+		c	AI task for player control.
+	m	()Z	func_70901_n	getSaddled	#getSaddled, :, isSaddled, :
+		c	Returns true if the pig is saddled.
+	m	()Lnet/minecraft/entity/ai/EntityAIControlledByPlayer;	func_82183_n	getAIControlledByPlayer	#getAIControlledByPlayer, :, getPlayerControlGoal, :
+		c	Return the AI task for player control.
+	m	(Z)V	func_70900_e	setSaddled	#setSaddled, :, :, :
+		c	Set or remove the saddle of the pig.
+		p	1	p_70900_1_	saddled	#saddled, :, ~, saddled
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1689_1_	worldIn	#worldIn, :, ~, world

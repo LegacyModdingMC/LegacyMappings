@@ -1,0 +1,155 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityHorse	net/minecraft/entity/passive/EntityHorse	
+	f	[Ljava/lang/String;	field_110269_bA	HORSE_TEXTURES_ABBR	#HORSE_TEXTURES_ABBR, :, ~, HORSE_VARIANT_HASHES
+	f	[Ljava/lang/String;	field_110291_bB	horseMarkingTextures	#horseMarkingTextures, HORSE_MARKING_TEXTURES, HORSE_MARKINGS_TEXTURES, HORSE_MARKINGS_TEXTURE_PATHS
+	f	[Ljava/lang/String;	field_110292_bC	HORSE_MARKING_TEXTURES_ABBR	#HORSE_MARKING_TEXTURES_ABBR, :, ~, HORSE_MARKINGS_HASHES
+	f	I	field_110289_bD	eatingHaystackCounter	#eatingHaystackCounter, :, eatingGrassTicks, :
+	f	I	field_110290_bE	openMouthCounter	#openMouthCounter, :, eatingTicks, :
+	f	I	field_110295_bF	jumpRearingCounter	#jumpRearingCounter, :, angryTicks, :
+	f	Lnet/minecraft/inventory/AnimalChest;	field_110296_bG	horseChest	#horseChest, :, inventory, :
+	f	Z	field_110293_bH	hasReproduced	#hasReproduced, :, ~, hasBred
+	f	Z	field_110294_bI	allowStandSliding	#allowStandSliding, :, jumping, :
+	f	F	field_110283_bJ	headLean	#headLean, :, eatingGrassAnimationProgress, :
+	f	F	field_110284_bK	prevHeadLean	#prevHeadLean, :, lastEatingGrassAnimationProgress, :
+	f	F	field_110281_bL	rearingAmount	#rearingAmount, :, angryAnimationProgress, :
+	f	F	field_110282_bM	prevRearingAmount	#prevRearingAmount, :, lastAngryAnimationProgress, :
+	f	F	field_110287_bN	mouthOpenness	#mouthOpenness, :, eatingAnimationProgress, :
+	f	F	field_110288_bO	prevMouthOpenness	#prevMouthOpenness, :, lastEatingAnimationProgress, :
+	f	I	field_110285_bP	gallopTime	#gallopTime, :, soundTicks, :
+		c	Used to determine the sound that the horse should make when it steps
+	f	Ljava/lang/String;	field_110286_bQ	texturePrefix	#texturePrefix, :, ~, baseTexturePath
+	f	[Ljava/lang/String;	field_110280_bR	horseTexturesArray	#horseTexturesArray, :, ~, armoredTexturePaths
+	f	I	field_110278_bp	tailCounter	#tailCounter, :, ~, type
+	f	I	field_110279_bq	sprintCounter	#sprintCounter, :, ~, cooldown
+	f	Z	field_110275_br	horseJumping	#horseJumping, :, inAir, :
+	f	I	field_110274_bs	temper	#temper, :, :, :
+		c	"The higher this value, the more likely the horse is to be tamed next time a player rides it."
+	f	F	field_110277_bt	jumpPower	#jumpPower, :, jumpStrength, :
+	f	Lnet/minecraft/command/IEntitySelector;	field_110276_bu	horseBreedingSelector	#horseBreedingSelector, IS_HORSE_BREEDING, ~, BREED_FILTER
+	f	Lnet/minecraft/entity/ai/attributes/IAttribute;	field_110271_bv	horseJumpStrength	#horseJumpStrength, JUMP_STRENGTH, JUMP_STRENGTH_ATTRIBUTE, :
+	f	[Ljava/lang/String;	field_110270_bw	horseArmorTextures	#horseArmorTextures, :, HORSE_ARMOR_TEXTURES, HORSE_ARMOR_TEXTURE_PATHS
+	f	[Ljava/lang/String;	field_110273_bx	HORSE_ARMOR_TEXTURES_ABBR	#HORSE_ARMOR_TEXTURES_ABBR, :, ~, HORSE_ARMOR_HASHES
+	f	[I	field_110272_by	armorValues	#armorValues, :, ~, HORSE_ARMOR_PROTECTION
+	f	[Ljava/lang/String;	field_110268_bz	horseTextures	#horseTextures, HORSE_TEXTURES, :, HORSE_VARIANT_TEXTURE_PATHS
+	m	(Lnet/minecraft/item/Item;)Z	func_146085_a	isArmorItem	#isArmorItem, :, isHorseArmor, :
+		c	Returns true if given item is horse armor
+		p	0	p_146085_0_	item	#~, ~, item, :
+	m	(Lnet/minecraft/entity/Entity;D)Lnet/minecraft/entity/passive/EntityHorse;	func_110250_a	getClosestHorse	#getClosestHorse, :, ~, findClosestEntity
+		p	1	p_110250_1_	entityIn	#entityIn, :, ~, entity
+		p	2	p_110250_2_	distance	#distance, :, ~, stretch
+	m	(Lnet/minecraft/entity/Entity;Lnet/minecraft/inventory/AnimalChest;)V	func_110240_a	dropItemsInChest	#dropItemsInChest, :, ~, dropInventory
+		p	1	p_110240_1_	entityIn	#entityIn, :, ~, entity
+		p	2	p_110240_2_	animalChestIn	#animalChestIn, :, ~, inventory
+	m	(IZ)V	func_110208_b	setHorseWatchableBoolean	#setHorseWatchableBoolean, :, setHorseFlag, :
+		p	1	p_110208_1_	bitmask	#~, ~, bitmask, :
+		p	2	p_110208_2_	flag	#~, ~, flag, :
+	m	(Ljava/lang/String;)V	func_152120_b	setOwnerId	#setOwnerId, :, ~, setOwnerName
+		p	1	p_152120_1_	id	#id, :, ~, name
+	m	()I	func_110265_bP	getHorseType	#getHorseType, :, getType, :
+		c	returns the horse type
+	m	()Z	func_110259_cr	canWearArmor	#canWearArmor, :, drawHoverEffect, :
+		c	Return true if the horse entity can wear an armor
+	m	()Z	func_110229_cs	canCarryChest	#canCarryChest, :, ~, isNotAngry
+		c	Return true if the horse entity can carry a chest.
+	m	()Z	func_110256_cu	isUndead	#isUndead, :, ~, isAngryHorse
+		c	Used to know if the horse can be leashed, if he can mate, or if we can interact with him
+	m	()Z	func_110222_cv	isSterile	#isSterile, :, ~, noLove
+		c	Return true if the horse entity is sterile (Undead || Mule)
+	m	()V	func_110231_cz	makeHorseRearWithSound	#makeHorseRearWithSound, :, playAngrySound, :
+	m	()V	func_110244_cA	dropChestItems	#dropChestItems, :, ~, dropInventoryAndChest
+	m	()V	func_110266_cB	eatingHorse	#eatingHorse, :, playEatingAnimation, :
+	m	()I	func_110225_cC	getChestSize	#getChestSize, :, ~, getInventorySize
+		c	Returns number of slots depending horse type
+	m	()V	func_110226_cD	initHorseChest	#initHorseChest, :, ~, updateInventory
+	m	()V	func_110232_cE	updateHorseSlots	#updateHorseSlots, :, updateSaddle, :
+		c	Updates the items in the saddle and armor slots of the horse's inventory.
+	m	()V	func_110230_cF	resetTexturePrefix	#resetTexturePrefix, :, ~, deleteName
+	m	()V	func_110247_cG	setHorseTexturePaths	#setHorseTexturePaths, :, ~, updateTexturePaths
+	m	()V	func_110210_cH	moveTail	#moveTail, :, ~, setType
+	m	()V	func_110249_cI	openHorseMouth	#openHorseMouth, :, setEating, :
+	m	()Z	func_110200_cJ	canMate	#canMate, :, canBreed, :
+		c	Return true if the horse entity ready to mate. (no rider, not riding, tame, adult, not steril...)
+	m	()V	func_110220_cK	makeHorseRear	#makeHorseRear, :, updateAnger, :
+	m	()F	func_110267_cL	getModifiedMaxHealth	#getModifiedMaxHealth, :, getChildHealthBonus, :
+		c	Returns randomized max health
+	m	()D	func_110245_cM	getModifiedJumpStrength	#getModifiedJumpStrength, :, getChildJumpStrengthBonus, :
+		c	Returns randomized jump strength
+	m	()D	func_110203_cN	getModifiedMovementSpeed	#getModifiedMovementSpeed, :, ~, getMovementSpeedBonus
+		c	Returns randomized movement speed
+	m	()I	func_110202_bQ	getHorseVariant	#getHorseVariant, :, getVariant, :
+	m	()Z	func_110228_bR	isAdultHorse	#isAdultHorse, :, ~, isNotBaby
+	m	()Z	func_110248_bS	isTame	#isTame, :, :, :
+	m	()Z	func_110253_bW	isRidable	#isRidable, :, ~, isAdult
+	m	()Ljava/lang/String;	func_152119_ch	getOwnerId	#getOwnerId, :, getOwnerUuid, :
+		c	Gets the horse's owner
+	m	()F	func_110254_bY	getHorseSize	#getHorseSize, :, ~, getSize
+	m	()Z	func_110246_bZ	isHorseJumping	#isHorseJumping, :, isInAir, :
+	m	()Z	func_110261_ca	isChested	#isChested, :, hasChest, :
+	m	()I	func_110241_cb	getHorseArmorIndexSynced	#getHorseArmorIndexSynced, :, ~, getArmor
+		c	Returns type of armor from DataWatcher (0 = iron, 1 = gold, 2 = diamond)
+	m	()Z	func_110204_cc	isEatingHaystack	#isEatingHaystack, :, isEating, :
+	m	()Z	func_110209_cd	isRearing	#isRearing, :, isAngry, :
+	m	()Z	func_110205_ce	isBreeding	#isBreeding, :, isReadyToBreed, :
+	m	()Z	func_110243_cf	getHasReproduced	#getHasReproduced, :, hasBred, :
+	m	()I	func_110252_cg	getTemper	#getTemper, :, :, :
+	m	()Z	func_110262_ch	prepareChunkForSpawn	#prepareChunkForSpawn, :, ~, getSpawnBiome
+	m	()V	func_110224_ci	dropChests	#dropChests, :, ~, dropChest
+	m	()D	func_110215_cj	getHorseJumpStrength	#getHorseJumpStrength, :, getJumpStrength, getCustomJumpStrength
+	m	()Z	func_110257_ck	isHorseSaddled	#isHorseSaddled, :, isSaddled, :
+	m	()Ljava/lang/String;	func_110217_cl	getAngrySoundName	#getAngrySoundName, :, ~, getAngreType
+	m	()I	func_110218_cm	getMaxTemper	#getMaxTemper, :, :, :
+	m	()Z	func_110239_cn	hasLayeredTextures	#hasLayeredTextures, :, ~, hasArmor
+	m	()Ljava/lang/String;	func_110264_co	getHorseTexture	#getHorseTexture, :, ~, getBaseTexturePath
+	m	()[Ljava/lang/String;	func_110212_cp	getVariantTexturePaths	#getVariantTexturePaths, :, ~, getArmoredTexturePaths
+	m	(Lnet/minecraft/item/ItemStack;)V	func_146086_d	setHorseArmorStack	#setHorseArmorStack, :, ~, setArmourIndex
+		c	Set horse armor stack (for example: new ItemStack(Items.iron_horse_armor))
+		p	1	p_146086_1_	itemStackIn	#itemStackIn, :, ~, item
+	m	(Lnet/minecraft/item/ItemStack;)I	func_110260_d	getHorseArmorIndex	#getHorseArmorIndex, :, ~, getArmorIndex
+		c	0 = iron, 1 = gold, 2 = diamond
+		p	1	p_110260_1_	itemStackIn	#itemStackIn, :, ~, item
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_110199_f	openGUI	#openGUI, :, openInventory, :
+		p	1	p_110199_1_	playerEntity	#playerEntity, :, player, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_110263_g	setTamedBy	#setTamedBy, :, bondWithPlayer, :
+		p	1	p_110263_1_	player	#player, :, :, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_110237_h	mountTo	#mountTo, :, putPlayerOnBack, :
+		p	1	p_110237_1_	player	#player, :, :, :
+	m	(Z)V	func_110234_j	setHorseTamed	#setHorseTamed, :, setTame, :
+		p	1	p_110234_1_	tamed	#tamed, :, tame, :
+	m	(Z)V	func_110255_k	setHorseJumping	#setHorseJumping, :, setInAir, :
+		p	1	p_110255_1_	jumping	#jumping, :, inAir, :
+	m	(Z)V	func_110242_l	setBreeding	#setBreeding, :, setBred, setBredFlag
+		p	1	p_110242_1_	breeding	#breeding, :, ~, bred
+	m	(Z)V	func_110207_m	setChested	#setChested, :, setHasChest, setHasChestFlag
+		p	1	p_110207_1_	chested	#chested, :, ~, hasChest
+	m	(Z)V	func_110221_n	setHasReproduced	#setHasReproduced, :, setHasBred, :
+		p	1	p_110221_1_	hasReproducedIn	#hasReproducedIn, :, ~, hasBred
+	m	(Z)V	func_110251_o	setHorseSaddled	#setHorseSaddled, :, setSaddled, :
+		p	1	p_110251_1_	saddled	#saddled, :, ~, saddled
+	m	(Z)V	func_110227_p	setEatingHaystack	#setEatingHaystack, :, setEatingGrass, :
+		p	1	p_110227_1_	eatingGrass	#~, ~, eatingGrass, :
+	m	(F)F	func_110258_o	getGrassEatingAmount	#getGrassEatingAmount, :, ~, getGrassAnimationProgress
+		p	1	p_110258_1_	tickDelta	#~, ~, ~, tickDelta
+	m	(Z)V	func_110219_q	setRearing	#setRearing, :, setAngry, :
+		p	1	p_110219_1_	rearing	#rearing, :, angry, :
+	m	(F)F	func_110223_p	getRearingAmount	#getRearingAmount, :, getAngryAnimationProgress, :
+		p	1	p_110223_1_	tickDelta	#~, ~, tickDelta, :
+	m	(Z)V	func_110216_r	spawnHorseParticles	#spawnHorseParticles, :, spawnPlayerReactionParticles, addTamingParticles
+		c	"Spawns particles for the horse entity. par1 tells whether to spawn hearts. If it is false, it spawns smoke."
+		p	1	p_110216_1_	success	#~, ~, positive, success
+	m	(F)F	func_110201_q	getMouthOpennessAngle	#getMouthOpennessAngle, :, getEatingAnimationProgress, :
+		p	1	p_110201_1_	tickDelta	#~, ~, tickDelta, :
+	m	(I)V	func_110214_p	setHorseType	#setHorseType, :, setType, :
+		p	1	p_110214_1_	type	#type, :, :, :
+	m	(I)V	func_110235_q	setHorseVariant	#setHorseVariant, :, setVariant, :
+		p	1	p_110235_1_	variant	#variant, :, :, :
+	m	(I)V	func_110238_s	setTemper	#setTemper, :, :, :
+		p	1	p_110238_1_	temperIn	#temperIn, :, temper, :
+	m	(I)I	func_110198_t	increaseTemper	#increaseTemper, :, addTemper, :
+		p	1	p_110198_1_	difference	#~, ~, difference, :
+	m	(I)V	func_110206_u	setJumpPower	#setJumpPower, :, ~, setJumpStrength
+		p	1	p_110206_1_	jumpPowerIn	#jumpPowerIn, :, ~, strength
+	m	(I)Z	func_110233_w	getHorseWatchableBoolean	#getHorseWatchableBoolean, :, getHorseFlag, getDatatracker
+		p	1	p_110233_1_	value	#~, ~, bitmask, value
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1685_1_	worldIn	#worldIn, :, ~, ~

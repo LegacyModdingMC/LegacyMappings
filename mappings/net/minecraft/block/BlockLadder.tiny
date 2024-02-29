@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockLadder	net/minecraft/block/BlockLadder	
+	m	(I)V	func_149797_b	updateShape	#~, ~, ~, updateShape
+		p	1	p_149797_1_	metadata	#~, ~, ~, metadata
+	m	()V	<init>	<init>	#~, ~, ~, ~

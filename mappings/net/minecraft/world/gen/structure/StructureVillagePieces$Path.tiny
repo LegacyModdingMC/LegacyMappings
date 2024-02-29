@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$Path	net/minecraft/world/gen/structure/StructureVillagePieces$Path	
+	f	I	field_74934_a	averageGroundLevel	#averageGroundLevel, length, ~, length
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIII)Lnet/minecraft/world/gen/structure/StructureBoundingBox;	func_74933_a	findSize	#~, ~, ~, findSize
+		p	0	p_74933_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_74933_1_	pieces	#~, ~, ~, pieces
+		p	2	p_74933_2_	random	#~, ~, ~, random
+		p	3	p_74933_3_	x	#~, ~, ~, x
+		p	4	p_74933_4_	y	#~, ~, ~, y
+		p	5	p_74933_5_	z	#~, ~, ~, z
+		p	6	p_74933_6_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2105_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_i2105_2_	generationDepth	#~, ~, ~, generationDepth
+		p	3	p_i2105_3_	random	#~, ~, ~, random
+		p	4	p_i2105_4_	box	#~, ~, ~, box
+		p	5	p_i2105_5_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

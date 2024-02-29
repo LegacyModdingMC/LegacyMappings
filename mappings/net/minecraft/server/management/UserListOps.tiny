@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/management/UserListOps	net/minecraft/server/management/UserListOps	
+	m	(Ljava/lang/String;)Lcom/mojang/authlib/GameProfile;	func_152700_a	getGameProfileFromName	#getGameProfileFromName, :, getOperatorPlayer, getProfile
+		c	Gets the GameProfile of based on the provided username.
+		p	1	p_152700_1_	username	#username, :, playerName, name
+	m	(Lcom/mojang/authlib/GameProfile;)Ljava/lang/String;	func_152699_b	getKey	#~, ~, toString, getKey
+		p	1	p_152699_1_	p_152699_1_	#~, ~, ~, ~
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1152_1_	saveFile	#saveFile, :, ~, ~

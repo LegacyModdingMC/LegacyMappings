@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiMerchant	net/minecraft/client/gui/GuiMerchant	
+	f	Ljava/lang/String;	field_147040_A	chatComponent	#chatComponent, :, ~, name
+		c	The chat component utilized by this GuiMerchant instance.
+	f	Lorg/apache/logging/log4j/Logger;	field_147039_u	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_147038_v	MERCHANT_GUI_TEXTURE	#MERCHANT_GUI_TEXTURE, :, TEXTURE, MENU_LOCATION
+		c	The GUI texture for the villager merchant GUI.
+	f	Lnet/minecraft/entity/IMerchant;	field_147037_w	merchant	#merchant, :, trader, :
+		c	The current IMerchant instance in use for this specific merchant.
+	f	Lnet/minecraft/client/gui/GuiMerchant$MerchantButton;	field_147043_x	nextButton	#nextButton, :, ~, buttonForward
+		c	The button which proceeds to the next available merchant recipe.
+	f	Lnet/minecraft/client/gui/GuiMerchant$MerchantButton;	field_147042_y	previousButton	#previousButton, :, ~, buttonBack
+		c	Returns to the previous Merchant recipe if one is applicable.
+	f	I	field_147041_z	selectedMerchantRecipe	#selectedMerchantRecipe, :, page, currentPage
+		c	The integer value corresponding to the currently selected merchant recipe.
+	m	()Lnet/minecraft/entity/IMerchant;	func_147035_g	getMerchant	#getMerchant, :, getTrader, :
+	m	()Lnet/minecraft/util/ResourceLocation;	access$000	access$000	#~, ~, ~, ~
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/entity/IMerchant;Lnet/minecraft/world/World;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1096_1_	playerInventory	#~, ~, ~, playerInventory
+		p	2	p_i1096_2_	trader	#~, ~, ~, trader
+		p	3	p_i1096_3_	sessionTypeIn	#sessionTypeIn, :, ~, world
+		p	4	p_i1096_4_	name	#~, ~, ~, name
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

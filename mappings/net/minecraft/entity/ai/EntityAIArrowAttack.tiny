@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIArrowAttack	net/minecraft/entity/ai/EntityAIArrowAttack	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75322_b	entityHost	#entityHost, :, entity, :
+		c	The entity the AI instance has been applied to
+	f	Lnet/minecraft/entity/IRangedAttackMob;	field_82641_b	rangedAttackEntityHost	#rangedAttackEntityHost, :, rangedAttackMob, :
+		c	The entity (as a RangedAttackMob) the AI instance has been applied to.
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75323_c	attackTarget	#attackTarget, :, target, :
+	f	I	field_75320_d	rangedAttackTime	#rangedAttackTime, :, updateCountdownTicks, :
+		c	A decrementing tick that spawns a ranged attack once this value reaches 0. It is then set back to the maxRangedAttackTime.
+	f	D	field_75321_e	entityMoveSpeed	#entityMoveSpeed, :, mobSpeed, :
+	f	I	field_75318_f	seeTime	#seeTime, :, seenTargetTicks, :
+	f	I	field_96561_g	attackIntervalMin	#attackIntervalMin, :, minIntervalTicks, minCooldown
+	f	I	field_75325_h	maxRangedAttackTime	#maxRangedAttackTime, :, maxIntervalTicks, maxCooldown
+		c	The maximum time the AI has to wait before peforming another ranged attack.
+	f	F	field_96562_i	attackRadius	#attackRadius, :, maxShootRange, attackRange
+	f	F	field_82642_h	maxAttackDistance	#maxAttackDistance, :, squaredMaxShootRange, squaredAttackRange
+	m	(Lnet/minecraft/entity/IRangedAttackMob;DIF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1649_1_	attacker	#attacker, :, mob, :
+		p	2	p_i1649_2_	movespeed	#movespeed, :, mobSpeed, :
+		p	4	p_i1649_4_	maxAttackTime	#maxAttackTime, :, intervalTicks, cooldown
+		p	5	p_i1649_5_	maxAttackDistanceIn	#maxAttackDistanceIn, :, maxShootRange, attackRange
+	m	(Lnet/minecraft/entity/IRangedAttackMob;DIIF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1650_1_	attacker	#attacker, :, mob, :
+		p	2	p_i1650_2_	movespeed	#movespeed, :, mobSpeed, :
+		p	4	p_i1650_4_	minCooldown	#~, ~, minIntervalTicks, minCooldown
+		p	5	p_i1650_5_	maxAttackTime	#maxAttackTime, :, maxIntervalTicks, maxCooldown
+		p	6	p_i1650_6_	maxAttackDistanceIn	#maxAttackDistanceIn, :, maxShootRange, attackRange

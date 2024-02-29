@@ -1,0 +1,130 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSlot	net/minecraft/client/gui/GuiSlot	
+	f	I	field_148155_a	width	#width, :, :, :
+	f	I	field_148153_b	top	#top, :, yStart, minY
+		c	The top of the slot container. Affects the overlays and scrolling.
+	f	I	field_148154_c	bottom	#bottom, :, yEnd, maxY
+		c	The bottom of the slot container. Affects the overlays and scrolling.
+	f	I	field_148151_d	right	#right, :, xEnd, maxX
+	f	I	field_148152_e	left	#left, :, xStart, minX
+	f	I	field_148149_f	slotHeight	#slotHeight, :, entryHeight, :
+		c	The height of a slot.
+	f	I	field_148150_g	mouseX	#mouseX, :, lastMouseX, mouseX
+	f	I	field_148162_h	mouseY	#mouseY, :, lastMouseY, mouseY
+	f	Z	field_148163_i	centerListVertically	#centerListVertically, :, :, centerAlongY
+	f	I	field_148160_j	headerPadding	#headerPadding, :, headerHeight, :
+	f	Lnet/minecraft/client/Minecraft;	field_148161_k	mc	#mc, :, client, minecraft
+	f	I	field_148158_l	height	#height, :, :, :
+	f	I	field_148159_m	scrollUpButtonID	#scrollUpButtonID, :, homeButtonId, upButtonId
+		c	The buttonID of the button used to scroll up
+	f	I	field_148156_n	scrollDownButtonID	#scrollDownButtonID, :, endButtonId, downButtonId
+		c	The buttonID of the button used to scroll down
+	f	F	field_148157_o	initialClickY	#initialClickY, :, ~, mouseYStart
+		c	Where the mouse was in the window when you first clicked to scroll
+	f	F	field_148170_p	scrollMultiplier	#scrollMultiplier, :, scrollSpeed, scrollingSpeedMultiplier
+		c	What to multiply the amount you moved your mouse by (used for slowing down scrolling when over the items and not on the scroll bar)
+	f	F	field_148169_q	amountScrolled	#amountScrolled, :, scrollAmount, :
+		c	How far down this slot has been scrolled
+	f	I	field_148168_r	selectedElement	#selectedElement, :, selectedEntry, pos
+		c	The element in the list that was selected
+	f	J	field_148167_s	lastClicked	#lastClicked, :, time, :
+		c	The time when this button was last clicked.
+	f	Z	field_148166_t	showSelectionBox	#showSelectionBox, :, renderSelection, renderSelectionHighlight
+		c	Set to true if a selected element in this gui will show an outline box
+	f	Z	field_148165_u	hasListHeader	#hasListHeader, :, renderHeader, :
+	f	Z	field_148164_v	enabled	#enabled, :, dragging, scrolling
+	m	(Lnet/minecraft/client/Minecraft;IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1052_1_	mcIn	#mcIn, :, client, minecraft
+		p	2	p_i1052_2_	width	#width, :, :, :
+		p	3	p_i1052_3_	height	#height, :, :, :
+		p	4	p_i1052_4_	topIn	#topIn, :, top, minY
+		p	5	p_i1052_5_	bottomIn	#bottomIn, :, bottom, maxY
+		p	6	p_i1052_6_	slotHeightIn	#slotHeightIn, :, entryHeight, :
+	m	()V	func_148123_a	drawBackground	#drawBackground, :, renderBackground, :
+	m	(I)Z	func_148131_a	isSelected	#isSelected, :, isEntrySelected, :
+		c	Returns true if the element passed in is currently selected
+		p	1	p_148131_1_	slotIndex	#slotIndex, :, index, :
+	m	(II)V	func_148132_a	clickedHeader	#clickedHeader, :, :, headerClicked
+		p	1	p_148132_1_	mouseX	#~, ~, mouseX, :
+		p	2	p_148132_2_	mouseY	#~, ~, mouseY, :
+	m	(IIF)V	func_148128_a	drawScreen	#drawScreen, :, render, :
+		p	1	p_148128_1_	mouseXIn	#mouseXIn, :, mouseX, :
+		p	2	p_148128_2_	mouseYIn	#mouseYIn, :, mouseY, :
+		p	3	p_148128_3_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(IIII)V	func_148122_a	setDimensions	#setDimensions, :, updateBounds, setBounds
+		p	1	p_148122_1_	widthIn	#widthIn, :, right, width
+		p	2	p_148122_2_	heightIn	#heightIn, :, height, :
+		p	3	p_148122_3_	topIn	#topIn, :, top, minY
+		p	4	p_148122_4_	bottomIn	#bottomIn, :, bottom, maxY
+	m	(IIIILnet/minecraft/client/renderer/Tessellator;II)V	func_148126_a	drawSlot	#drawSlot, :, ~, renderEntry
+		p	1	p_148126_1_	index	#~, ~, ~, index
+		p	2	p_148126_2_	x	#~, ~, ~, x
+		p	3	p_148126_3_	y	#~, ~, ~, y
+		p	4	p_148126_4_	entryHeight	#~, ~, ~, entryHeight
+		p	5	p_148126_5_	bufferBuilder	#~, ~, ~, bufferBuilder
+		p	6	p_148126_6_	mouseX	#~, ~, ~, mouseX
+		p	7	p_148126_7_	mouseY	#~, ~, ~, mouseY
+	m	(IILnet/minecraft/client/renderer/Tessellator;)V	func_148129_a	drawListHeader	#drawListHeader, :, renderHeader, :
+		c	Handles drawing a list's header row.
+		p	1	p_148129_1_	insideLeft	#insideLeft, :, x, mouseX
+		p	2	p_148129_2_	insideTop	#insideTop, :, y, mouseY
+		p	3	p_148129_3_	tessellatorIn	#tessellatorIn, :, tessellator, bufferBuilder
+	m	(IZII)V	func_148144_a	elementClicked	#elementClicked, :, selectEntry, entryClicked
+		c	The element in the slot that was clicked, boolean for whether it was double clicked or not
+		p	1	p_148144_1_	slotIndex	#slotIndex, :, index, :
+		p	2	p_148144_2_	isDoubleClick	#isDoubleClick, :, doubleClick, :
+		p	3	p_148144_3_	mouseX	#mouseX, :, lastMouseX, mouseX
+		p	4	p_148144_4_	mouseY	#mouseY, :, lastMouseY, mouseY
+	m	(Lnet/minecraft/client/gui/GuiButton;)V	func_148147_a	actionPerformed	#actionPerformed, :, buttonClicked, :
+		p	1	p_148147_1_	button	#button, :, :, :
+	m	(Z)V	func_148130_a	setShowSelectionBox	#setShowSelectionBox, :, setRenderSelection, setRenderSelectionHighlight
+		p	1	p_148130_1_	showSelectionBoxIn	#showSelectionBoxIn, :, renderSelection, renderSelectionHighlight
+	m	(ZI)V	func_148133_a	setHasListHeader	#setHasListHeader, :, setHeader, :
+		c	Sets hasListHeader and headerHeight. Params: hasListHeader, headerHeight. If hasListHeader is false headerHeight is set to 0.
+		p	1	p_148133_1_	hasListHeaderIn	#hasListHeaderIn, :, renderHeader, :
+		p	2	p_148133_2_	headerPaddingIn	#headerPaddingIn, :, headerHeight, :
+	m	()I	func_148127_b	getSize	#getSize, :, getEntryCount, size
+	m	(II)V	func_148142_b	renderDecorations	#renderDecorations, :, :, :
+		p	1	p_148142_1_	mouseXIn	#mouseXIn, :, mouseX, :
+		p	2	p_148142_2_	mouseYIn	#mouseYIn, :, mouseY, :
+	m	(IIII)V	func_148120_b	drawSelectionBox	#drawSelectionBox, :, renderList, :
+		c	Draws the selection box around the selected slot element.
+		p	1	p_148120_1_	insideLeft	#insideLeft, :, x, :
+		p	2	p_148120_2_	insideTop	#insideTop, :, y, :
+		p	3	p_148120_3_	mouseXIn	#mouseXIn, :, mouseX, :
+		p	4	p_148120_4_	mouseYIn	#mouseYIn, :, mouseY, :
+	m	(Z)V	func_148143_b	setEnabled	#setEnabled, :, setDragging, setScrolling
+		p	1	p_148143_1_	enabledIn	#enabledIn, :, dragging, scrolling
+	m	()I	func_148139_c	getListWidth	#getListWidth, :, getRowWidth, :
+		c	Gets the width of the list
+	m	(II)I	func_148124_c	getSlotIndexFromScreenCoords	#getSlotIndexFromScreenCoords, :, getEntryAt, :
+		p	1	p_148124_1_	posX	#posX, :, x, :
+		p	2	p_148124_2_	posY	#posY, :, y, :
+	m	(IIII)V	func_148136_c	overlayBackground	#overlayBackground, :, renderHoleBackground, :
+		c	Overlays the background to hide scrolled items
+		p	1	p_148136_1_	startY	#startY, :, top, :
+		p	2	p_148136_2_	endY	#endY, :, bottom, :
+		p	3	p_148136_3_	startAlpha	#startAlpha, :, topAlpha, :
+		p	4	p_148136_4_	endAlpha	#endAlpha, :, bottomAlpha, :
+	m	()I	func_148137_d	getScrollBarX	#getScrollBarX, :, getScrollbarPosition, :
+	m	(II)V	func_148134_d	registerScrollButtons	#registerScrollButtons, :, setButtonIds, setScrollButtonIds
+		c	Registers the IDs that can be used for the scrollbar's up/down buttons.
+		p	1	p_148134_1_	scrollUpButtonIDIn	#scrollUpButtonIDIn, :, homeButtonId, upButtonId
+		p	2	p_148134_2_	scrollDownButtonIDIn	#scrollDownButtonIDIn, :, endButtonId, downButtonId
+	m	()I	func_148138_e	getContentHeight	#getContentHeight, :, getMaxPosition, getHeight
+		c	Return the height of the content being scrolled
+	m	(I)Z	func_148141_e	isMouseYWithinSlotBounds	#isMouseYWithinSlotBounds, :, isMouseInList, :
+		p	1	p_148141_1_	mouseY	#~, ~, mouseY, :
+	m	()I	func_148135_f	getMaxScroll	#getMaxScroll, :, :, :
+	m	(I)V	func_148145_f	scrollBy	#scrollBy, :, scroll, :
+		c	Scrolls the slot by the given amount. A positive value scrolls down, and a negative value scrolls up.
+		p	1	p_148145_1_	amount	#amount, :, :, :
+	m	()I	func_148148_g	getAmountScrolled	#getAmountScrolled, :, getScrollAmount, :
+		c	Returns the amountScrolled field as an integer.
+	m	(I)V	func_148140_g	setSlotXBoundsFromLeft	#setSlotXBoundsFromLeft, :, setXPos, setX
+		c	Sets the left and right bounds of the slot. Param is the left bound, right is calculated as left + width.
+		p	1	p_148140_1_	leftIn	#leftIn, :, x, :
+	m	()Z	func_148125_i	getEnabled	#getEnabled, :, isDragging, isScrolling
+	m	()I	func_148146_j	getSlotHeight	#getSlotHeight, :, getItemHeight, getEntryHeight
+	m	()V	func_148121_k	bindAmountScrolled	#bindAmountScrolled, :, capYPosition, capScrolling
+		c	Stop the thing from scrolling out of bounds

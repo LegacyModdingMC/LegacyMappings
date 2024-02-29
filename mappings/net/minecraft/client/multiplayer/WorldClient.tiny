@@ -1,0 +1,59 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/multiplayer/WorldClient	net/minecraft/client/multiplayer/WorldClient	
+	f	Ljava/util/Set;	field_73032_d	entityList	#entityList, :, world, forcedEntities
+		c	Contains all entities for this client, both spawned and non-spawned.
+	f	Ljava/util/Set;	field_73036_L	entitySpawnQueue	#entitySpawnQueue, :, entitiesForSpawn, pendingEntities
+		c	Contains all entities for this client that were not spawned due to a non-present chunk. The game will attempt to spawn up to 10 pending entities with each subsequent tick until the spawn queue is empty.
+	f	Lnet/minecraft/client/Minecraft;	field_73037_M	mc	#mc, :, client, minecraft
+	f	Ljava/util/Set;	field_73038_N	previousActiveChunkSet	#previousActiveChunkSet, :, previousChunkPos, lastTickingChunks
+		c	All chunks that were ticking the previous tick.
+	f	Lnet/minecraft/client/network/NetHandlerPlayClient;	field_73035_a	sendQueue	#sendQueue, connection, clientNetHandler, networkHandler
+		c	The packets that need to be sent to the server.
+	f	Lnet/minecraft/client/multiplayer/ChunkProviderClient;	field_73033_b	clientChunkProvider	#clientChunkProvider, :, clientChunkCache, chunkCache
+		c	The ChunkProviderClient instance
+	f	Lnet/minecraft/util/IntHashMap;	field_73034_c	entityHashSet	#entityHashSet, :, ~, entitiesByNetworkId
+		c	The hash set of entities handled by this client. Uses the entity's ID as the hash set's key.
+	m	(Lnet/minecraft/client/network/NetHandlerPlayClient;Lnet/minecraft/world/WorldSettings;ILnet/minecraft/world/EnumDifficulty;Lnet/minecraft/profiler/Profiler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45063_1_	netHandler	#netHandler, :, :, networkHandler
+		p	2	p_i45063_2_	settings	#settings, :, levelInfo, settings
+		p	3	p_i45063_3_	dimension	#dimension, :, dimensionId, dimension
+		p	4	p_i45063_4_	difficulty	#difficulty, :, :, :
+		p	5	p_i45063_5_	profilerIn	#profilerIn, :, profiler, :
+	m	(III)V	func_73029_E	doVoidFogParticles	#doVoidFogParticles, :, spawnRandomParticles, doRandomDisplayTicks
+		p	1	p_73029_1_	posX	#posX, :, x, :
+		p	2	p_73029_2_	posY	#posY, :, y, :
+		p	3	p_73029_3_	posZ	#posZ, :, z, :
+	m	()V	func_73022_a	removeAllEntities	#removeAllEntities, :, clearEntities, unloadEntities
+		c	also releases skins.
+	m	(IIIIII)V	func_73031_a	invalidateBlockReceiveRegion	#invalidateBlockReceiveRegion, :, ~, clearScheduledBlockChanges
+		c	Invalidates an AABB region of blocks from the receive queue, in the event that the block has been modified client-side in the intervening 80 receive ticks.
+		p	1	p_73031_1_	x1	#x1, :, ~, minX
+		p	2	p_73031_2_	y1	#y1, :, ~, minY
+		p	3	p_73031_3_	z1	#z1, :, ~, minZ
+		p	4	p_73031_4_	x2	#x2, :, ~, maxX
+		p	5	p_73031_5_	y2	#y2, :, ~, maxY
+		p	6	p_73031_6_	z2	#z2, :, ~, maxZ
+	m	(IIZ)V	func_73025_a	doPreChunk	#doPreChunk, :, handleChunk, updateChunk
+		p	1	p_73025_1_	chuncX	#chuncX, chunkX, x, chunkX
+		p	2	p_73025_2_	chuncZ	#chuncZ, chunkZ, z, chunkZ
+		p	3	p_73025_3_	loadChunk	#loadChunk, :, load, :
+	m	(ILnet/minecraft/entity/Entity;)V	func_73027_a	addEntityToWorld	#addEntityToWorld, :, addEntity, :
+		c	Add an ID to Entity mapping to entityHashSet
+		p	1	p_73027_1_	entityID	#entityID, :, id, networkId
+		p	2	p_73027_2_	entityToSpawn	#entityToSpawn, :, entity, :
+	m	(Lnet/minecraft/scoreboard/Scoreboard;)V	func_96443_a	setWorldScoreboard	#setWorldScoreboard, :, setScoreboard, :
+		p	1	p_96443_1_	scoreboardIn	#scoreboardIn, :, sb, scoreboard
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;)Ljava/util/Set;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(I)Lnet/minecraft/entity/Entity;	func_73028_b	removeEntityFromWorld	#removeEntityFromWorld, :, removeEntity, :
+		p	1	p_73028_1_	entityID	#entityID, :, id, networkId
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;)Ljava/util/Set;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+	m	(IIILnet/minecraft/block/Block;I)Z	func_147492_c	setBlockWithMetadataFromPacket	#~, ~, ~, setBlockWithMetadataFromPacket
+		p	1	p_147492_1_	x	#~, ~, ~, x
+		p	2	p_147492_2_	y	#~, ~, ~, y
+		p	3	p_147492_3_	z	#~, ~, ~, z
+		p	4	p_147492_4_	block	#~, ~, ~, block
+		p	5	p_147492_5_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/client/multiplayer/WorldClient;)Lnet/minecraft/client/Minecraft;	access$200	access$200	#~, ~, ~, ~
+		p	0	p_access$200_0_	p_access$200_0_	#~, ~, ~, ~

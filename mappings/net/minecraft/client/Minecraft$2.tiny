@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$2	net/minecraft/client/Minecraft$2	
+	f	Lnet/minecraft/client/Minecraft;	field_74536_a	mc	#mc, :, ~, ~
+		c	Minecraft instance
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1006_1_	p_i1006_1_	#~, ~, ~, ~

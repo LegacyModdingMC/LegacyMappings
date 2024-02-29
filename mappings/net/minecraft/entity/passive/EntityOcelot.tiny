@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/passive/EntityOcelot	net/minecraft/entity/passive/EntityOcelot	
+	f	Lnet/minecraft/entity/ai/EntityAITempt;	field_70914_e	aiTempt	#aiTempt, :, ~, temptGoal
+		c	The tempt AI task for this mob, used to prevent taming while it is fleeing.
+	m	()I	func_70913_u	getTameSkin	#getTameSkin, :, getCatVariant, getVariant
+	m	(I)V	func_70912_b	setTameSkin	#setTameSkin, :, setCatVariant, :
+		p	1	p_70912_1_	skinId	#skinId, :, variant, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1688_1_	worldIn	#worldIn, :, ~, world

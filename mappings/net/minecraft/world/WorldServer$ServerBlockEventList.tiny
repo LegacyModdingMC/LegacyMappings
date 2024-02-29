@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldServer$ServerBlockEventList	net/minecraft/world/WorldServer$ServerBlockEventList	
+	m	(Lnet/minecraft/world/WorldServer$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1521_1_	p_i1521_1_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

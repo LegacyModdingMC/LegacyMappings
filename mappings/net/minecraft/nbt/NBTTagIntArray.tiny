@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagIntArray	net/minecraft/nbt/NBTTagIntArray	
+	f	[I	field_74749_a	intArray	#intArray, :, value, :
+		c	The array of saved integers
+	m	([I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45132_1_	value	#~, ~, value, :
+	m	()[I	func_150302_c	getIntArray	#getIntArray, :, :, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	o	#~, ~, o, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

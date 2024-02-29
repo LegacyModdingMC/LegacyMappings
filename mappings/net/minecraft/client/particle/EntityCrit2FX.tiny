@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityCrit2FX	net/minecraft/client/particle/EntityCrit2FX	
+	f	Lnet/minecraft/entity/Entity;	field_70557_a	theEntity	#theEntity, :, ~, target
+		c	Entity that had been hit and done the Critical hit on.
+	f	I	field_70560_aq	currentLife	#currentLife, :, ~, age
+	f	I	field_70559_ar	maximumLife	#maximumLife, :, ~, lifetime
+	f	Ljava/lang/String;	field_70558_as	particleName	#particleName, :, ~, type
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1199_1_	world	#~, ~, ~, world
+		p	2	p_i1199_2_	target	#~, ~, ~, target
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1200_1_	world	#~, ~, ~, world
+		p	2	p_i1200_2_	target	#~, ~, ~, target
+		p	3	p_i1200_3_	type	#~, ~, ~, type

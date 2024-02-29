@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/Util$EnumOS	net/minecraft/util/Util$EnumOS	
+	f	Lnet/minecraft/util/Util$EnumOS;	LINUX	LINUX	#~, ~, LINUX, :
+	f	Lnet/minecraft/util/Util$EnumOS;	SOLARIS	SOLARIS	#~, ~, SOLARIS, :
+	f	Lnet/minecraft/util/Util$EnumOS;	WINDOWS	WINDOWS	#~, ~, WINDOWS, :
+	f	Lnet/minecraft/util/Util$EnumOS;	OSX	OSX	#~, ~, OSX, MACOS
+	f	Lnet/minecraft/util/Util$EnumOS;	UNKNOWN	UNKNOWN	#~, ~, UNKNOWN, :
+	f	[Lnet/minecraft/util/Util$EnumOS;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Lnet/minecraft/util/Util$EnumOS;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/util/Util$EnumOS;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	(Ljava/lang/String;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1357_1_	p_i1357_1_	#~, ~, ~, ~
+		p	2	p_i1357_2_	p_i1357_2_	#~, ~, ~, ~

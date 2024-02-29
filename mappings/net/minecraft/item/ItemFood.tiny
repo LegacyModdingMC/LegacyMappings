@@ -1,0 +1,44 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemFood	net/minecraft/item/ItemFood	
+	f	I	field_77855_a	itemUseDuration	#itemUseDuration, :, eatingTime, :
+		c	Number of ticks to run while 'EnumAction'ing until result.
+	f	I	field_77853_b	healAmount	#healAmount, :, hungerPoints, :
+		c	The amount this food item heals the player.
+	f	F	field_77854_c	saturationModifier	#saturationModifier, :, saturation, :
+	f	Z	field_77856_bY	isWolfsFavoriteMeat	#isWolfsFavoriteMeat, :, meat, canBeCooked
+		c	Whether wolves like this food (true for raw and cooked porkchop).
+	f	Z	field_77852_bZ	alwaysEdible	#alwaysEdible, :, :, :
+		c	If this field is true, the food can be consumed even if the player don't need to eat.
+	f	I	field_77851_ca	potionId	#potionId, :, statusEffectId, :
+		c	represents the potion effect that will occurr upon eating this food. Set by setPotionEffect
+	f	I	field_77850_cb	potionDuration	#potionDuration, :, duration, :
+		c	set by setPotionEffect
+	f	I	field_77857_cc	potionAmplifier	#potionAmplifier, :, multiplier, :
+		c	set by setPotionEffect
+	f	F	field_77858_cd	potionEffectProbability	#potionEffectProbability, :, effectChance, :
+		c	probably of the set potion effect occurring
+	m	(IFZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45339_1_	amount	#amount, :, hungerPoints, :
+		p	2	p_i45339_2_	saturation	#saturation, :, :, :
+		p	3	p_i45339_3_	isWolfFood	#isWolfFood, :, meat, canBeCooked
+	m	(IZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45340_1_	amount	#amount, :, hungerPoints, :
+		p	2	p_i45340_2_	isWolfFood	#isWolfFood, :, cookable, canBeCooked
+	m	(IIIF)Lnet/minecraft/item/ItemFood;	func_77844_a	setPotionEffect	#setPotionEffect, :, setStatusEffect, :
+		c	sets a potion effect on the item. Args: int potionId, int duration (will be multiplied by 20), int amplifier, float probability of effect happening
+		p	1	p_77844_1_	id	#id, :, :, :
+		p	2	p_77844_2_	duration	#duration, :, :, :
+		p	3	p_77844_3_	amplifier	#amplifier, :, multiplier, :
+		p	4	p_77844_4_	probability	#probability, :, effectChance, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)V	func_77849_c	onFoodEaten	#onFoodEaten, :, eat, :
+		p	1	p_77849_1_	stack	#stack, :, :, :
+		p	2	p_77849_2_	worldIn	#worldIn, :, world, :
+		p	3	p_77849_3_	player	#player, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;)I	func_150905_g	getHealAmount	#getHealAmount, :, getHungerPoints, :
+		p	1	p_150905_1_	itemStackIn	#itemStackIn, stack, :, :
+	m	(Lnet/minecraft/item/ItemStack;)F	func_150906_h	getSaturationModifier	#getSaturationModifier, :, getSaturation, :
+		p	1	p_150906_1_	itemStackIn	#itemStackIn, stack, :, :
+	m	()Z	func_77845_h	isWolfsFavoriteMeat	#isWolfsFavoriteMeat, :, isMeat, canBeCooked
+		c	Whether wolves like this food (true for raw and cooked porkchop).
+	m	()Lnet/minecraft/item/ItemFood;	func_77848_i	setAlwaysEdible	#setAlwaysEdible, :, alwaysEdible, setAlwaysEdible
+		c	Set the field 'alwaysEdible' to true, and make the food edible even if the player don't need to eat.

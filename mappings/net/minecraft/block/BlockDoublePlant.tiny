@@ -1,0 +1,34 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDoublePlant	net/minecraft/block/BlockDoublePlant	
+	f	[Lnet/minecraft/util/IIcon;	field_149893_M	doublePlantBottomIcons	#doublePlantBottomIcons, :, ~, bottomSprites
+	f	[Lnet/minecraft/util/IIcon;	field_149894_N	doublePlantTopIcons	#doublePlantTopIcons, :, ~, topSprites
+	f	[Ljava/lang/String;	field_149892_a	TEXTURES	#~, ~, ~, TEXTURES
+	f	[Lnet/minecraft/util/IIcon;	field_149891_b	sunflowerIcons	#sunflowerIcons, :, ~, sunflowerSprite
+	m	(ZI)Lnet/minecraft/util/IIcon;	func_149888_a	getSprite	#~, ~, ~, getSprite
+		p	1	p_149888_1_	isTop	#~, ~, ~, isTop
+		p	2	p_149888_2_	id	#~, ~, ~, id
+	m	(Lnet/minecraft/world/World;IIIILnet/minecraft/entity/player/EntityPlayer;)Z	func_149886_b	onMinedByPlayer	#~, ~, ~, onMinedByPlayer
+		p	1	p_149886_1_	world	#~, ~, ~, world
+		p	2	p_149886_2_	x	#~, ~, ~, x
+		p	3	p_149886_3_	y	#~, ~, ~, y
+		p	4	p_149886_4_	z	#~, ~, ~, z
+		p	5	p_149886_5_	metadata	#~, ~, ~, metadata
+		p	6	p_149886_6_	player	#~, ~, ~, player
+	m	(I)Z	func_149887_c	isBottomHalf	#~, ~, ~, isBottomHalf
+		p	0	p_149887_0_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/World;IIIII)V	func_149889_c	setVariant	#~, ~, ~, setVariant
+		p	1	p_149889_1_	world	#~, ~, ~, world
+		p	2	p_149889_2_	x	#~, ~, ~, x
+		p	3	p_149889_3_	y	#~, ~, ~, y
+		p	4	p_149889_4_	z	#~, ~, ~, z
+		p	5	p_149889_5_	metadata	#~, ~, ~, metadata
+		p	6	p_149889_6_	flags	#~, ~, ~, flags
+	m	(I)I	func_149890_d	getVariant	#~, ~, ~, getVariant
+		p	0	p_149890_0_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;III)I	func_149885_e	getVariant	#~, ~, ~, getVariant
+		p	1	p_149885_1_	world	#~, ~, ~, world
+		p	2	p_149885_2_	x	#~, ~, ~, x
+		p	3	p_149885_3_	y	#~, ~, ~, y
+		p	4	p_149885_4_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

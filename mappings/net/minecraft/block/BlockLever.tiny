@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockLever	net/minecraft/block/BlockLever	
+	m	(I)I	func_149819_b	invertMetadata	#invertMetadata, :, ~, getMetadataUnpowered
+		p	0	p_149819_0_	facing	#~, ~, ~, facing
+	m	(Lnet/minecraft/world/World;III)Z	func_149820_e	canSurviveOrBreak	#~, ~, ~, canSurviveOrBreak
+		p	1	p_149820_1_	world	#~, ~, ~, world
+		p	2	p_149820_2_	x	#~, ~, ~, x
+		p	3	p_149820_3_	y	#~, ~, ~, y
+		p	4	p_149820_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

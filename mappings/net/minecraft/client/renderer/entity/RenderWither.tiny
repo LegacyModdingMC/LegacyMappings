@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderWither	net/minecraft/client/renderer/entity/RenderWither	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110913_a	invulnerableWitherTextures	#invulnerableWitherTextures, INVULNERABLE_WITHER_TEXTURES, WITHER_INVULNERABLE_TEX, WITHER_INVULNERABLE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110912_f	witherTextures	#witherTextures, WITHER_TEXTURES, WITHER_TEX, WITHER_LOCATION
+	f	I	field_82419_a	handModel	#~, ~, ~, handModel
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

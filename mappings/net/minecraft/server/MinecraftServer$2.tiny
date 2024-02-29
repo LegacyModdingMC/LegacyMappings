@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/MinecraftServer$2	net/minecraft/server/MinecraftServer$2	
+	f	Lnet/minecraft/server/dedicated/DedicatedServer;	field_96244_a	connectedDedicatedServer	#connectedDedicatedServer, :, ~, server
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Ljava/lang/String;Lnet/minecraft/server/dedicated/DedicatedServer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1226_1_	p_i1226_1_	#~, ~, ~, ~
+		p	2	p_i1226_2_	p_i1226_2_	#~, ~, ~, ~

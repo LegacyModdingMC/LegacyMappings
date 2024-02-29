@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S1BPacketEntityAttach	net/minecraft/network/play/server/S1BPacketEntityAttach	
+	f	I	field_149408_a	leash	#leash, :, attachedId, type
+		c	The type of attachment. The possible values are:\n<br>0: mounting on e.g. a minecart or a boat\n<br>1: attaching a leash on an entity
+	f	I	field_149406_b	entityId	#entityId, :, id, :
+	f	I	field_149407_c	vehicleEntityId	#vehicleEntityId, :, holdingId, holderId
+	m	(ILnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45218_1_	leashIn	#leashIn, :, attachedId, type
+		p	2	p_i45218_2_	entityIn	#entityIn, :, entity, :
+		p	3	p_i45218_3_	vehicle	#vehicle, :, attached, holder
+	m	()I	func_149404_c	getLeash	#getLeash, :, getAttachedEntityId, getType
+	m	()I	func_149403_d	getEntityId	#getEntityId, :, getId, :
+	m	()I	func_149402_e	getVehicleEntityId	#getVehicleEntityId, :, getHoldingEntityId, getHolderId
+	m	()V	<init>	<init>	#~, ~, ~, ~

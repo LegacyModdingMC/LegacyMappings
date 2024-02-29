@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/crafting/CraftingManager	net/minecraft/item/crafting/CraftingManager	
+	f	Lnet/minecraft/item/crafting/CraftingManager;	field_77598_a	instance	#instance, INSTANCE, :, :
+		c	The static instance of this class
+	f	Ljava/util/List;	field_77597_b	recipes	#recipes, :, :, :
+		c	A list of all the recipes added
+	m	()Lnet/minecraft/item/crafting/CraftingManager;	func_77594_a	getInstance	#getInstance, :, :, :
+		c	Returns the static instance of this class
+	m	(Lnet/minecraft/inventory/InventoryCrafting;Lnet/minecraft/world/World;)Lnet/minecraft/item/ItemStack;	func_82787_a	findMatchingRecipe	#findMatchingRecipe, findMatchingResult, matches, applyRecipe
+		c	Retrieves an ItemStack that has multiple recipes for it.
+		p	1	p_82787_1_	craftMatrix	#craftMatrix, worldIn, inventory, :
+		p	2	p_82787_2_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)Lnet/minecraft/item/crafting/ShapedRecipes;	func_92103_a	addRecipe	#addRecipe, :, registerShapedRecipe, registerShaped
+		c	Adds a shaped recipe to the games recipe list.
+		p	1	p_92103_1_	stack	#stack, :, :, result
+		p	2	p_92103_2_	recipeComponents	#recipeComponents, :, args, :
+	m	()Ljava/util/List;	func_77592_b	getRecipeList	#getRecipeList, :, getAllRecipes, getRecipes
+		c	returns the List<> of all recipes
+	m	(Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)V	func_77596_b	addShapelessRecipe	#addShapelessRecipe, :, registerShapelessRecipe, registerShapeless
+		c	Adds a shapeless crafting recipe to the the game.
+		p	1	p_77596_1_	stack	#stack, :, result, :
+		p	2	p_77596_2_	recipeComponents	#recipeComponents, :, args, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

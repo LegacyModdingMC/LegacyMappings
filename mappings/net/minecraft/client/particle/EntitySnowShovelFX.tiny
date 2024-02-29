@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntitySnowShovelFX	net/minecraft/client/particle/EntitySnowShovelFX	
+	f	F	field_70588_a	snowDigParticleScale	#snowDigParticleScale, :, prevScale, baseScale
+	m	(Lnet/minecraft/world/World;DDDDDDF)V	<init>	<init>	#~, ~, ~, ~
+		p	2	p_i1228_2_	xCoordIn	#xCoordIn, :, x, :
+		p	4	p_i1228_4_	yCoordIn	#yCoordIn, :, y, :
+		p	6	p_i1228_6_	zCoordIn	#zCoordIn, :, z, :
+		p	8	p_i1228_8_	xSpeedIn	#xSpeedIn, :, velocityX, :
+		p	10	p_i1228_10_	ySpeedIn	#ySpeedIn, :, velocityY, :
+		p	12	p_i1228_12_	zSpeedIn	#zSpeedIn, :, velocityZ, :
+		p	1	p_i1228_1_	worldIn	#worldIn, :, ~, world
+		p	14	p_i1228_14_	scaleFactor	#~, ~, ~, scaleFactor
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1227_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1227_2_	xCoordIn	#xCoordIn, :, ~, x
+		p	4	p_i1227_4_	yCoordIn	#yCoordIn, :, ~, y
+		p	6	p_i1227_6_	zCoordIn	#zCoordIn, :, ~, z
+		p	8	p_i1227_8_	xSpeedIn	#xSpeedIn, :, ~, velocityX
+		p	10	p_i1227_10_	ySpeedIn	#ySpeedIn, :, ~, velocityY
+		p	12	p_i1227_12_	zSpeedIn	#zSpeedIn, :, ~, velocityZ

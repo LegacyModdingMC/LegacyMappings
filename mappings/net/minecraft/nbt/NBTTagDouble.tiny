@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/nbt/NBTTagDouble	net/minecraft/nbt/NBTTagDouble	
+	f	D	field_74755_a	data	#data, :, value, :
+		c	The double value for the tag.
+	m	(D)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45130_1_	data	#data, :, value, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	o	#~, ~, o, ~
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

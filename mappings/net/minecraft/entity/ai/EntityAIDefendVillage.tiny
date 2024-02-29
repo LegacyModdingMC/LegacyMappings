@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAIDefendVillage	net/minecraft/entity/ai/EntityAIDefendVillage	
+	f	Lnet/minecraft/entity/monster/EntityIronGolem;	field_75305_a	irongolem	#irongolem, :, ~, golem
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75304_b	villageAgressorTarget	#villageAgressorTarget, :, ~, target
+		c	The aggressor of the iron golem's village which is now the golem's attack target.
+	m	(Lnet/minecraft/entity/monster/EntityIronGolem;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1659_1_	ironGolemIn	#ironGolemIn, :, ~, golem

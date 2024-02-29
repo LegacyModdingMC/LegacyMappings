@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAISwimming	net/minecraft/entity/ai/EntityAISwimming	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75373_a	theEntity	#theEntity, entity, mob, entity
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1624_1_	entitylivingIn	#entitylivingIn, entityIn, mob, :

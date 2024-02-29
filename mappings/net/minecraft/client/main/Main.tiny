@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/main/Main	net/minecraft/client/main/Main	
+	f	Ljava/lang/reflect/Type;	field_152370_a	field_152370_a	#~, ~, ~, ~
+	m	(Ljava/lang/String;)Z	func_110121_a	isNullOrEmpty	#isNullOrEmpty, isNotEmpty, isNotNullOrEmpty, :
+		c	Returns whether a string is either null or empty.
+		p	0	p_110121_0_	str	#str, :, s, :
+	m	([Ljava/lang/String;)V	main	main	#~, ~, ~, ~
+		p	0	p_main_0_	args	#~, ~, args, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

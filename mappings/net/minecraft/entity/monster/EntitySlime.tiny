@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntitySlime	net/minecraft/entity/monster/EntitySlime	
+	f	F	field_70812_c	prevSquishFactor	#prevSquishFactor, :, lastStretch, :
+	f	I	field_70810_d	slimeJumpDelay	#slimeJumpDelay, :, ~, ticksUntilNextJump
+		c	ticks until this slime jumps again
+	f	F	field_70813_a	squishAmount	#squishAmount, :, targetStretch, :
+	f	F	field_70811_b	squishFactor	#squishFactor, :, stretch, :
+	m	(I)V	func_70799_a	setSlimeSize	#setSlimeSize, :, setSize, :
+		p	1	p_70799_1_	size	#size, :, :, :
+	m	()Ljava/lang/String;	func_70801_i	getSlimeParticle	#getSlimeParticle, :, ~, getParticleType
+		c	Returns the name of a particle effect that may be randomly created by EntitySlime.onUpdate()
+	m	()Lnet/minecraft/entity/monster/EntitySlime;	func_70802_j	createInstance	#createInstance, :, ~, getInstance
+	m	()I	func_70806_k	getJumpDelay	#getJumpDelay, :, getTicksUntilNextJump, :
+		c	Gets the amount of time the slime needs to wait between jumps.
+	m	()V	func_70808_l	alterSquishAmount	#alterSquishAmount, :, updateStretch, :
+	m	()Z	func_70800_m	canDamagePlayer	#canDamagePlayer, :, isBig, :
+		c	Indicates weather the slime is able to damage the player (based upon the slime's size)
+	m	()I	func_70805_n	getAttackStrength	#getAttackStrength, :, getDamageAmount, :
+		c	Gets the amount of damage dealt to the player when "attacked" by the slime.
+	m	()Ljava/lang/String;	func_70803_o	getJumpSound	#getJumpSound, :, getSound, getSoundName
+		c	Returns the name of the sound played when the slime jumps.
+	m	()Z	func_70804_p	makesSoundOnLand	#makesSoundOnLand, :, ~, makesLandSound
+		c	Returns true if the slime makes a sound when it lands after a jump (based upon the slime's size)
+	m	()I	func_70809_q	getSlimeSize	#getSlimeSize, :, getSize, :
+		c	Returns the size of the slime.
+	m	()Z	func_70807_r	makesSoundOnJump	#makesSoundOnJump, :, makesJumpSound, :
+		c	Returns true if the slime makes a sound when it jumps (based upon the slime's size)
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1742_1_	worldIn	#worldIn, :, ~, ~

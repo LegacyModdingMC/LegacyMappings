@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntitySenses	net/minecraft/entity/ai/EntitySenses	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75526_a	entityObj	#entityObj, entity, owner, mob
+	f	Ljava/util/List;	field_75524_b	seenEntities	#seenEntities, :, visibleEntities, :
+		c	Cache of entities which we can see
+	f	Ljava/util/List;	field_75525_c	unseenEntities	#unseenEntities, :, invisibleEntities, :
+		c	Cache of entities which we cannot see
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1672_1_	entityObjIn	#entityObjIn, entityIn, owner, mob
+	m	()V	func_75523_a	clearSensingCache	#clearSensingCache, :, clear, :
+		c	Clears canSeeCachePositive and canSeeCacheNegative.
+	m	(Lnet/minecraft/entity/Entity;)Z	func_75522_a	canSee	#canSee, :, :, :
+		c	Checks, whether 'our' entity can see the entity given as argument (true) or not (false), caching the result.
+		p	1	p_75522_1_	entityIn	#entityIn, :, entity, :

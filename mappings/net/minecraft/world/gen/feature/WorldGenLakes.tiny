@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenLakes	net/minecraft/world/gen/feature/WorldGenLakes	
+	f	Lnet/minecraft/block/Block;	field_150556_a	block	#block, :, :, liquid
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45455_1_	blockIn	#blockIn, :, block, liquid

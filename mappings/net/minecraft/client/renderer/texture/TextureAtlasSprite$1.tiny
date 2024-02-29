@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/TextureAtlasSprite$1	net/minecraft/client/renderer/texture/TextureAtlasSprite$1	
+	f	[[I	field_147983_a	frames	#~, ~, ~, frames
+	f	Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;	field_147982_b	sprite	#~, ~, ~, sprite
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/renderer/texture/TextureAtlasSprite;[[I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45099_1_	p_i45099_1_	#~, ~, ~, ~
+		p	2	p_i45099_2_	p_i45099_2_	#~, ~, ~, ~

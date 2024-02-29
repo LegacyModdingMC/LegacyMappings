@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityFlameFX	net/minecraft/client/particle/EntityFlameFX	
+	f	F	field_70562_a	flameScale	#flameScale, :, prevScale, baseScale
+		c	the scale of the flame FX
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1209_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1209_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1209_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1209_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1209_8_	xSpeedIn	#xSpeedIn, :, ~, ~
+		p	10	p_i1209_10_	ySpeedIn	#ySpeedIn, :, ~, ~
+		p	12	p_i1209_12_	zSpeedIn	#zSpeedIn, :, ~, ~

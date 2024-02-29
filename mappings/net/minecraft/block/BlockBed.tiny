@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockBed	net/minecraft/block/BlockBed	
+	f	[Lnet/minecraft/util/IIcon;	field_149982_M	iconSide	#iconSide, :, ~, spritesSide
+	f	[Lnet/minecraft/util/IIcon;	field_149983_N	iconTop	#iconTop, :, ~, spritesTop
+	f	[[I	field_149981_a	bedDirections	#bedDirections, :, ~, BED_OFFSETS
+	f	[Lnet/minecraft/util/IIcon;	field_149980_b	iconEnd	#iconEnd, :, ~, spritesEnd
+	m	(Lnet/minecraft/world/World;IIII)Lnet/minecraft/util/ChunkCoordinates;	func_149977_a	getSafeExitLocation	#getSafeExitLocation, :, ~, getSpawnPoint
+		p	0	p_149977_0_	worldIn	#worldIn, :, ~, world
+		p	1	p_149977_1_	x	#x, :, ~, x
+		p	2	p_149977_2_	y	#y, :, ~, y
+		p	3	p_149977_3_	z	#z, :, ~, z
+		p	4	p_149977_4_	safeIndex	#safeIndex, :, ~, skip
+	m	(Lnet/minecraft/world/World;IIIZ)V	func_149979_a	setBedOccupied	#setBedOccupied, :, ~, updateState
+		p	0	p_149979_0_	worldIn	#worldIn, :, ~, world
+		p	1	p_149979_1_	x	#x, :, ~, x
+		p	2	p_149979_2_	y	#y, :, ~, y
+		p	3	p_149979_3_	z	#z, :, ~, z
+		p	4	p_149979_4_	occupied	#occupied, :, ~, occupied
+	m	(I)Z	func_149975_b	isBlockHeadOfBed	#isBlockHeadOfBed, :, ~, isHeadOfBed
+		c	Returns whether or not this bed block is the head of the bed.
+		p	0	p_149975_0_	meta	#meta, :, ~, metadata
+	m	(I)Z	func_149976_c	isBedOccupied	#isBedOccupied, :, ~, isOccupied
+		p	0	p_149976_0_	meta	#meta, :, ~, metadata
+	m	()V	func_149978_e	setBedBounds	#setBedBounds, :, setBoundingBox, setDefaultShape
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

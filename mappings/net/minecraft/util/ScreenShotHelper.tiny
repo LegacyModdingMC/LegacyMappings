@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ScreenShotHelper	net/minecraft/util/ScreenShotHelper	
+	f	Lorg/apache/logging/log4j/Logger;	field_148261_a	logger	#logger, LOGGER, :, :
+	f	Ljava/text/DateFormat;	field_74295_a	dateFormat	#dateFormat, DATE_FORMAT, :, :
+	f	Ljava/nio/IntBuffer;	field_74293_b	pixelBuffer	#pixelBuffer, :, intBuffer, :
+		c	A buffer to hold pixel values returned by OpenGL.
+	f	[I	field_74294_c	pixelValues	#pixelValues, :, ~, buffer
+		c	The built-up array that contains all the pixel values returned by OpenGL.
+	m	(Ljava/io/File;)Ljava/io/File;	func_74290_a	getTimestampedPNGFileForDirectory	#getTimestampedPNGFileForDirectory, :, getScreenshotFile, :
+		c	Creates a unique PNG file in the given directory named by a timestamp.  Handles cases where the timestamp alone is not enough to create a uniquely named file, though it still might suffer from an unlikely race condition where the filename was unique when this method was called, but another process or thread created a file at the same path immediately after this method returned.
+		p	0	p_74290_0_	gameDirectory	#gameDirectory, :, screenshotsDirectory, :
+	m	(Ljava/io/File;IILnet/minecraft/client/shader/Framebuffer;)Lnet/minecraft/util/IChatComponent;	func_148260_a	saveScreenshot	#saveScreenshot, :, :, :
+		c	Saves a screenshot in the game directory with a time-stamped filename.  Args: gameDirectory, requestedWidthInPixels, requestedHeightInPixels, frameBuffer
+		p	0	p_148260_0_	gameDirectory	#gameDirectory, :, parent, :
+		p	1	p_148260_1_	width	#width, :, textureWidth, :
+		p	2	p_148260_2_	height	#height, :, textureHeight, :
+		p	3	p_148260_3_	buffer	#buffer, :, :, :
+	m	(Ljava/io/File;Ljava/lang/String;IILnet/minecraft/client/shader/Framebuffer;)Lnet/minecraft/util/IChatComponent;	func_148259_a	saveScreenshot	#saveScreenshot, :, :, :
+		c	Saves a screenshot in the game directory with the given file name (or null to generate a time-stamped name).  Args: gameDirectory, fileName, requestedWidthInPixels, requestedHeightInPixels, frameBuffer
+		p	0	p_148259_0_	gameDirectory	#gameDirectory, :, parent, :
+		p	1	p_148259_1_	screenshotName	#screenshotName, :, name, :
+		p	2	p_148259_2_	width	#width, :, textureWidth, :
+		p	3	p_148259_3_	height	#height, :, textureHeight, :
+		p	4	p_148259_4_	buffer	#buffer, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

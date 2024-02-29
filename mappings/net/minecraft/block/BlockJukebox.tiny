@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockJukebox	net/minecraft/block/BlockJukebox	
+	f	Lnet/minecraft/util/IIcon;	field_149927_a	topSprite	#~, ~, ~, topSprite
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/item/ItemStack;)V	func_149926_b	setRecord	#~, ~, ~, setRecord
+		p	1	p_149926_1_	world	#~, ~, ~, world
+		p	2	p_149926_2_	x	#~, ~, ~, x
+		p	3	p_149926_3_	y	#~, ~, ~, y
+		p	4	p_149926_4_	z	#~, ~, ~, z
+		p	5	p_149926_5_	stack	#~, ~, ~, stack
+	m	(Lnet/minecraft/world/World;III)V	func_149925_e	removeRecord	#~, ~, ~, removeRecord
+		p	1	p_149925_1_	world	#~, ~, ~, world
+		p	2	p_149925_2_	x	#~, ~, ~, x
+		p	3	p_149925_3_	y	#~, ~, ~, y
+		p	4	p_149925_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

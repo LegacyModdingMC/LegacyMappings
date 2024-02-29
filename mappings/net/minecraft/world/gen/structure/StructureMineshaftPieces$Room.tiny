@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureMineshaftPieces$Room	net/minecraft/world/gen/structure/StructureMineshaftPieces$Room	
+	f	Ljava/util/List;	field_74949_a	roomsLinkedToTheRoom	#roomsLinkedToTheRoom, connectedRooms, ~, entrances
+		c	List of other Mineshaft components linked to this room.
+	m	(ILjava/util/Random;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2037_1_	type	#type, :, ~, generationDepth
+		p	2	p_i2037_2_	rand	#rand, :, ~, random
+		p	3	p_i2037_3_	x	#x, :, ~, x
+		p	4	p_i2037_4_	z	#z, :, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

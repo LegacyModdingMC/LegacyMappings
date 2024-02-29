@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S0FPacketSpawnMob	net/minecraft/network/play/server/S0FPacketSpawnMob	
+	f	I	field_149042_a	entityId	#entityId, :, id, :
+	f	I	field_149040_b	type	#type, :, entityTypeId, type
+	f	I	field_149041_c	x	#x, :, :, :
+	f	I	field_149038_d	y	#y, :, :, :
+	f	I	field_149039_e	z	#z, :, :, :
+	f	I	field_149036_f	velocityX	#velocityX, :, :, :
+	f	I	field_149037_g	velocityY	#velocityY, :, :, :
+	f	I	field_149047_h	velocityZ	#velocityZ, :, :, :
+	f	B	field_149048_i	yaw	#yaw, :, :, :
+	f	B	field_149045_j	pitch	#pitch, :, :, :
+	f	B	field_149046_k	headPitch	#headPitch, :, headYaw, :
+	f	Lnet/minecraft/entity/DataWatcher;	field_149043_l	dataManager	#dataManager, :, tracker, :
+	f	Ljava/util/List;	field_149044_m	watcher	#watcher, dataManagerEntries, entries, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45192_1_	entityIn	#entityIn, :, entity, :
+	m	()Ljava/util/List;	func_149027_c	getDataManagerEntries	#getDataManagerEntries, :, getEntries, :
+	m	()I	func_149024_d	getEntityID	#getEntityID, :, getId, :
+	m	()I	func_149025_e	getEntityType	#getEntityType, :, getEntityTypeId, getType
+	m	()I	func_149023_f	getX	#getX, :, :, :
+	m	()I	func_149034_g	getY	#getY, :, :, :
+	m	()I	func_149029_h	getZ	#getZ, :, :, :
+	m	()I	func_149026_i	getVelocityX	#getVelocityX, :, :, :
+	m	()I	func_149033_j	getVelocityY	#getVelocityY, :, :, :
+	m	()I	func_149031_k	getVelocityZ	#getVelocityZ, :, :, :
+	m	()B	func_149028_l	getYaw	#getYaw, :, :, :
+	m	()B	func_149030_m	getPitch	#getPitch, :, :, :
+	m	()B	func_149032_n	getHeadPitch	#getHeadPitch, :, getHeadYaw, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

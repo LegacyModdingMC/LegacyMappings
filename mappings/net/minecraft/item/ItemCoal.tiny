@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemCoal	net/minecraft/item/ItemCoal	
+	f	Lnet/minecraft/util/IIcon;	field_111220_a	sprite	#~, ~, ~, sprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

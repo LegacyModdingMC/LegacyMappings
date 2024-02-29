@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/StructureVillagePieces$Field2	net/minecraft/world/gen/structure/StructureVillagePieces$Field2	
+	f	Lnet/minecraft/block/Block;	field_82675_b	cropTypeA	#cropTypeA, :, ~, cropA
+		c	First crop type for this field.
+	f	Lnet/minecraft/block/Block;	field_82676_c	cropTypeB	#cropTypeB, :, ~, cropB
+		c	Second crop type for this field.
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;Ljava/util/List;Ljava/util/Random;IIIII)Lnet/minecraft/world/gen/structure/StructureVillagePieces$Field2;	func_74902_a	create	#~, ~, ~, create
+		p	0	p_74902_0_	startPiece	#~, ~, ~, startPiece
+		p	1	p_74902_1_	pieces	#~, ~, ~, pieces
+		p	2	p_74902_2_	random	#~, ~, ~, random
+		p	3	p_74902_3_	x	#~, ~, ~, x
+		p	4	p_74902_4_	y	#~, ~, ~, y
+		p	5	p_74902_5_	z	#~, ~, ~, z
+		p	6	p_74902_6_	facing	#~, ~, ~, facing
+		p	7	p_74902_7_	generationDepth	#~, ~, ~, generationDepth
+	m	(Ljava/util/Random;)Lnet/minecraft/block/Block;	func_151560_a	getRandomCropType	#getRandomCropType, :, ~, pickCrop
+		p	1	p_151560_1_	rand	#rand, :, ~, random
+	m	(Lnet/minecraft/world/gen/structure/StructureVillagePieces$Start;ILjava/util/Random;Lnet/minecraft/world/gen/structure/StructureBoundingBox;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2096_1_	startPiece	#~, ~, ~, startPiece
+		p	2	p_i2096_2_	generationDepth	#~, ~, ~, generationDepth
+		p	3	p_i2096_3_	random	#~, ~, ~, random
+		p	4	p_i2096_4_	box	#~, ~, ~, box
+		p	5	p_i2096_5_	facing	#~, ~, ~, facing
+	m	()V	<init>	<init>	#~, ~, ~, ~

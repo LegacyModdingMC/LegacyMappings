@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityXPOrb	net/minecraft/entity/item/EntityXPOrb	
+	f	I	field_70533_a	xpColor	#xpColor, :, renderTicks, :
+		c	A constantly increasing value that RenderXPOrb uses to control the colour shifting (Green / yellow)
+	f	I	field_70531_b	xpOrbAge	#xpOrbAge, :, orbAge, :
+		c	The age of the XP orb in ticks.
+	f	I	field_70532_c	delayBeforeCanPickup	#delayBeforeCanPickup, :, pickupDelay, :
+	f	I	field_70529_d	xpOrbHealth	#xpOrbHealth, :, health, :
+		c	The health of this XP orb.
+	f	I	field_70530_e	xpValue	#xpValue, :, amount, xp
+		c	This is how much XP this orb has.
+	f	Lnet/minecraft/entity/player/EntityPlayer;	field_80001_f	closestPlayer	#closestPlayer, :, target, igniter
+		c	The closest EntityPlayer to this orb.
+	f	I	field_80002_g	xpTargetColor	#xpTargetColor, :, lastTargetUpdateTick, :
+		c	Threshold color for tracking players
+	m	(Lnet/minecraft/world/World;DDDI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1585_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1585_2_	x	#x, :, :, :
+		p	4	p_i1585_4_	y	#y, :, :, :
+		p	6	p_i1585_6_	z	#z, :, :, :
+		p	8	p_i1585_8_	expValue	#expValue, :, amount, xp
+	m	(I)I	func_70527_a	getXPSplit	#getXPSplit, :, roundToOrbSize, roundSize
+		c	Get a fragment of the maximum experience points value for the supplied value of experience points value.
+		p	0	p_70527_0_	expValue	#expValue, :, value, size
+	m	()I	func_70526_d	getXpValue	#getXpValue, :, getExperienceAmount, getXp
+		c	Returns the XP value of this XP orb.
+	m	()I	func_70528_g	getTextureByXP	#getTextureByXP, :, getOrbSize, getSize
+		c	Returns a number from 1 to 10 based on how much XP this orb is worth. This is used by RenderXPOrb to determine what texture to use.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1586_1_	worldIn	#worldIn, :, ~, ~

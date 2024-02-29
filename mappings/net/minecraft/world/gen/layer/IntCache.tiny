@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/IntCache	net/minecraft/world/gen/layer/IntCache	
+	f	I	field_76451_a	intCacheSize	#intCacheSize, :, size, num
+	f	Ljava/util/List;	field_76449_b	freeSmallArrays	#freeSmallArrays, :, tcache, :
+		c	A list of pre-allocated int[256] arrays that are currently unused and can be returned by getIntCache()
+	f	Ljava/util/List;	field_76450_c	inUseSmallArrays	#inUseSmallArrays, :, tallocated, :
+		c	A list of pre-allocated int[256] arrays that were previously returned by getIntCache() and which will not be re-used again until resetIntCache() is called.
+	f	Ljava/util/List;	field_76447_d	freeLargeArrays	#freeLargeArrays, :, cache, :
+		c	A list of pre-allocated int[cacheSize] arrays that are currently unused and can be returned by getIntCache()
+	f	Ljava/util/List;	field_76448_e	inUseLargeArrays	#inUseLargeArrays, :, allocated, :
+		c	A list of pre-allocated int[cacheSize] arrays that were previously returned by getIntCache() and which will not be re-used again until resetIntCache() is called.
+	m	()V	func_76446_a	resetIntCache	#resetIntCache, :, clear, next
+		c	Mark all pre-allocated arrays as available for re-use by moving them to the appropriate free lists.
+	m	(I)[I	func_76445_a	getIntCache	#getIntCache, :, get, :
+		p	0	p_76445_0_	size	#size, :, index, size
+	m	()Ljava/lang/String;	func_85144_b	getCacheSizes	#getCacheSizes, :, asString, toString
+		c	Gets a human-readable string that indicates the sizes of all the cache fields.  Basically a synchronized static toString.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

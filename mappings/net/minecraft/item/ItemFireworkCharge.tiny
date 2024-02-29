@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemFireworkCharge	net/minecraft/item/ItemFireworkCharge	
+	f	Lnet/minecraft/util/IIcon;	field_150904_a	sprite	#~, ~, ~, sprite
+	m	(Lnet/minecraft/item/ItemStack;Ljava/lang/String;)Lnet/minecraft/nbt/NBTBase;	func_150903_a	getExplosionTag	#getExplosionTag, :, getExplosionNbt, :
+		p	0	p_150903_0_	stack	#stack, :, :, :
+		p	1	p_150903_1_	key	#key, :, name, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;Ljava/util/List;)V	func_150902_a	addExplosionInfo	#addExplosionInfo, :, :, :
+		p	0	p_150902_0_	nbt	#nbt, :, :, :
+		p	1	p_150902_1_	tooltip	#tooltip, :, list, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,486 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/Entity	net/minecraft/entity/Entity	
+	f	F	field_70126_B	prevRotationYaw	#prevRotationYaw, :, prevYaw, :
+	f	F	field_70127_C	prevRotationPitch	#prevRotationPitch, :, prevPitch, :
+	f	Lnet/minecraft/util/AxisAlignedBB;	field_70121_D	boundingBox	#boundingBox, :, :, shape
+		c	Axis aligned bounding box.
+	f	Z	field_70122_E	onGround	#onGround, :, :, :
+	f	Z	field_70123_F	isCollidedHorizontally	#isCollidedHorizontally, collidedHorizontally, horizontalCollision, collidingHorizontally
+		c	True if after a move this entity has collided with something on X- or Z-axis
+	f	Z	field_70124_G	isCollidedVertically	#isCollidedVertically, collidedVertically, verticalCollision, collidingVertically
+		c	True if after a move this entity has collided with something on Y-axis
+	f	Z	field_70132_H	isCollided	#isCollided, collided, colliding, :
+		c	True if after a move this entity has collided with something either vertically or horizontally
+	f	Z	field_70133_I	velocityChanged	#velocityChanged, :, velocityModified, damaged
+		c	If true, an {@link SPacketEntityVelocity} will be sent updating this entity's velocity.
+	f	Z	field_70134_J	isInWeb	#isInWeb, :, inLava, inCobweb
+	f	Z	field_70135_K	immovable	#~, ~, ~, immovable
+	f	Z	field_70128_L	isDead	#isDead, :, removed, :
+		c	Gets set by setDead, so this must be the flag whether an Entity is dead (inactive may be better term)
+	f	F	field_70129_M	yOffset	#yOffset, :, heightOffset, eyeHeight
+	f	F	field_70130_N	width	#width, :, :, :
+		c	How wide this entity is considered to be
+	f	F	field_70131_O	height	#height, :, :, :
+		c	How high this entity is considered to be
+	f	F	field_70141_P	prevDistanceWalkedModified	#prevDistanceWalkedModified, :, prevHorizontalSpeed, :
+		c	The previous ticks distance walked multiplied by 0.6
+	f	F	field_70140_Q	distanceWalkedModified	#distanceWalkedModified, :, horizontalSpeed, horizontalVelocity
+		c	The distance walked multiplied by 0.6
+	f	F	field_82151_R	distanceWalkedOnStepModified	#distanceWalkedOnStepModified, :, distanceTraveled, distanceMoved
+	f	F	field_70143_R	fallDistance	#fallDistance, :, :, :
+	f	D	field_70142_S	lastTickPosX	#lastTickPosX, :, prevTickX, :
+		c	The entity's X coordinate at the previous tick, used to calculate position during rendering routines
+	f	D	field_70137_T	lastTickPosY	#lastTickPosY, :, prevTickY, :
+		c	The entity's Y coordinate at the previous tick, used to calculate position during rendering routines
+	f	D	field_70136_U	lastTickPosZ	#lastTickPosZ, :, prevTickZ, :
+		c	The entity's Z coordinate at the previous tick, used to calculate position during rendering routines
+	f	F	field_70139_V	ySize	#ySize, yOffset2, ~, eyeHeightSneakOffset
+		c	Appears to be a secondary offset along the y-axis
+	f	F	field_70138_W	stepHeight	#stepHeight, :, :, :
+		c	How high this entity can step up when running into a block to try to get over it (currently make note the entity will always step up this amount and not just the amount needed)
+	f	Z	field_70145_X	noClip	#noClip, :, :, :
+		c	Whether this entity won't clip with collision or not (make note it won't disable gravity)
+	f	F	field_70144_Y	entityCollisionReduction	#entityCollisionReduction, :, pushSpeedReduction, :
+		c	Reduces the velocity applied by entity collisions by the specified percent.
+	f	Ljava/util/Random;	field_70146_Z	rand	#rand, :, random, :
+	f	I	field_70173_aa	ticksExisted	#ticksExisted, :, ticksAlive, time
+		c	How many ticks has this entity had ran since being alive
+	f	I	field_70174_ab	fireResistance	#fireResistance, :, :, :
+		c	The amount of ticks you have to stand inside of fire before be set on fire
+	f	Z	field_70171_ac	inWater	#inWater, :, touchingWater, inWater
+		c	Whether this entity is currently inside of water (if it handles water movement that is)
+	f	I	field_70172_ad	hurtResistantTime	#hurtResistantTime, :, timeUntilRegen, maxHealth
+		c	Remaining time an entity will be "immune" to further damage after being hurt.
+	f	Z	field_70178_ae	isImmuneToFire	#isImmuneToFire, :, isFireImmune, immuneToFire
+	f	Lnet/minecraft/entity/DataWatcher;	field_70180_af	dataWatcher	#dataWatcher, dataManager, dataTracker, :
+	f	Z	field_70175_ag	addedToChunk	#addedToChunk, :, updateNeeded, isLoaded
+		c	Has this entity been added to the chunk its within
+	f	I	field_70176_ah	chunkCoordX	#chunkCoordX, :, chunkX, :
+	f	I	field_70162_ai	chunkCoordY	#chunkCoordY, :, chunkY, :
+	f	I	field_70164_aj	chunkCoordZ	#chunkCoordZ, :, chunkZ, :
+	f	Z	field_70158_ak	ignoreFrustumCheck	#ignoreFrustumCheck, :, ignoreCameraFrustum, :
+		c	Render entity even if it is outside the camera frustum. Only true in EntityFish for now. Used in RenderGlobal: render if ignoreFrustumCheck or in frustum.
+	f	Z	field_70160_al	isAirBorne	#isAirBorne, :, velocityDirty, :
+	f	I	field_71088_bW	timeUntilPortal	#timeUntilPortal, :, netherPortalCooldown, :
+	f	Z	field_71087_bX	inPortal	#inPortal, :, changingDimension, :
+		c	Whether the entity is inside a Portal
+	f	I	field_82153_h	portalCounter	#portalCounter, :, netherPortalTime, :
+	f	I	field_71093_bK	dimension	#dimension, :, :, dimensionId
+		c	Which dimension the player is in (-1 = the Nether, 0 = normal world)
+	f	I	field_82152_aq	teleportDirection	#teleportDirection, :, lastNetherPortalAxis, facing
+	f	Ljava/util/UUID;	field_96093_i	entityUniqueID	#entityUniqueID, :, playerUuid, uuid
+	f	Lnet/minecraft/entity/Entity$EnumEntitySize;	field_70168_am	myEntitySize	#myEntitySize, :, ~, size
+	f	I	field_70152_a	nextEntityID	#nextEntityID, :, entityCount, networkIdCounter
+	f	I	field_70118_ct	serverPosX	#serverPosX, :, trackedX, packetX
+	f	I	field_145783_c	entityId	#entityId, :, :, networkId
+		c	A number that uniquely identifies this entity. It is used for server-client communication.
+	f	I	field_70117_cu	serverPosY	#serverPosY, :, trackedY, packetY
+	f	I	field_70116_cv	serverPosZ	#serverPosZ, :, trackedZ, packetZ
+	f	I	field_70150_b	nextStepDistance	#nextStepDistance, :, ~, distanceOnNextBlock
+		c	The distance that has to be exceeded in order to triger a new step sound and an onEntityWalking event on a block
+	f	I	field_70151_c	fire	#fire, :, fireTicks, onFireTimer
+		c	The number of ticks left for which this entity will be on fire.
+	f	Z	field_70148_d	firstUpdate	#firstUpdate, :, :, inFirstTick
+		c	True if the entity is in the first tick of its existence.
+	f	D	field_70149_e	entityRiderPitchDelta	#entityRiderPitchDelta, :, vehiclePitch, ridingEntityPitchDelta
+	f	D	field_70147_f	entityRiderYawDelta	#entityRiderYawDelta, :, vehicleYaw, ridingEntityYawDelta
+	f	Z	field_83001_bt	invulnerable	#invulnerable, :, :, :
+	f	D	field_70155_l	renderDistanceWeight	#renderDistanceWeight, :, renderDistanceMultiplier, viewDistanceScaling
+	f	Z	field_70156_m	preventEntitySpawning	#preventEntitySpawning, :, inanimate, blocksBuilding
+		c	Blocks entities from spawning when they do their AABB check to make sure the spot is clear of entities that can prevent spawning.
+	f	Lnet/minecraft/entity/Entity;	field_70153_n	riddenByEntity	#riddenByEntity, :, rider, :
+		c	The entity that is riding this entity
+	f	Lnet/minecraft/entity/Entity;	field_70154_o	ridingEntity	#ridingEntity, :, vehicle, :
+		c	The entity we are currently riding
+	f	Z	field_98038_p	forceSpawn	#forceSpawn, :, teleporting, :
+		c	If true, forces the World to spawn the entity and send it to clients even if the Chunk it is located in has not yet been loaded.
+	f	Lnet/minecraft/world/World;	field_70170_p	worldObj	#worldObj, world, :, :
+		c	Reference to the World object.
+	f	D	field_70169_q	prevPosX	#prevPosX, :, prevX, :
+	f	D	field_70167_r	prevPosY	#prevPosY, :, prevY, :
+	f	D	field_70166_s	prevPosZ	#prevPosZ, :, prevZ, :
+	f	D	field_70165_t	posX	#posX, :, x, :
+		c	Entity position X
+	f	D	field_70163_u	posY	#posY, :, y, :
+		c	Entity position Y
+	f	D	field_70161_v	posZ	#posZ, :, z, :
+		c	Entity position Z
+	f	D	field_70159_w	motionX	#motionX, :, velocityX, :
+		c	Entity motion X
+	f	D	field_70181_x	motionY	#motionY, :, velocityY, :
+		c	Entity motion Y
+	f	D	field_70179_y	motionZ	#motionZ, :, velocityZ, :
+		c	Entity motion Z
+	f	F	field_70177_z	rotationYaw	#rotationYaw, :, yaw, :
+		c	Entity rotation Yaw
+	f	F	field_70125_A	rotationPitch	#rotationPitch, :, pitch, :
+		c	Entity rotation Pitch
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		c	All classes that extend Entity <b>must</b> have a constructor\nthat takes in one, and only one {@link net.minecraft.world.World} parameter.\nThis is due to the fact that entity constructors are called reflectively\nfrom {@link net.minecraft.entity.EntityDispatcher}
+		p	1	p_i1582_1_	worldIn	#worldIn, :, world, :
+	m	()V	func_70065_x	preparePlayerToSpawn	#preparePlayerToSpawn, :, afterSpawn, postSpawn
+		c	Keeps moving the entity up so it isn't colliding with blocks and other requirements for this entity to be spawned (only actually used on players though its also on Entity)
+	m	()V	func_70106_y	setDead	#setDead, :, remove, :
+		c	Will get destroyed next tick.
+	m	()V	func_70030_z	onEntityUpdate	#onEntityUpdate, :, baseTick, :
+		c	Gets called every tick from main Entity class
+	m	()I	func_82145_z	getMaxInPortalTime	#getMaxInPortalTime, :, getMaxNetherPortalTime, :
+		c	Return the amount of time this entity should stay in a portal before being transported.
+	m	()V	func_70044_A	setOnFireFromLava	#setOnFireFromLava, :, :, :
+		c	Called whenever the entity is walking inside of lava.
+	m	()V	func_70066_B	extinguish	#extinguish, :, :, :
+		c	Removes fire from entity.
+	m	()V	func_70076_C	kill	#kill, outOfWorld, destroy, tickVoid
+		c	sets the dead flag. Used when you fall off the bottom of the world.
+	m	()Ljava/lang/String;	func_145776_H	getSwimSound	#getSwimSound, :, :, :
+	m	()V	func_145775_I	doBlockCollisions	#doBlockCollisions, :, checkBlockCollision, checkBlockCollisions
+	m	()Lnet/minecraft/util/AxisAlignedBB;	func_70046_E	getBoundingBox	#getBoundingBox, getCollisionBoundingBox, getBox, getCollisionShape
+		c	returns the bounding box for this entity
+	m	()Z	func_70045_F	isImmuneToFire	#isImmuneToFire, :, isFireImmune, isImmuneToFire
+	m	()Z	func_70026_G	isWet	#isWet, :, tickFire, isBeingRainedOn
+		c	Checks if this entity is either in water or on an open air block in rain (used in wolves).
+	m	()Z	func_70090_H	isInWater	#isInWater, :, isTouchingWater, isInWater
+		c	Checks if this entity is inside water (if inWater field is true as a result of handleWaterMovement() returning true)
+	m	()Z	func_70072_I	handleWaterMovement	#handleWaterMovement, :, updateWaterState, checkWaterCollisions
+		c	Returns if this entity is in water and will end up adding the waters velocity to the entity
+	m	()Ljava/lang/String;	func_145777_O	getSplashSound	#getSplashSound, :, :, :
+	m	()Z	func_70058_J	handleLavaMovement	#handleLavaMovement, isNotColliding, ~, isInLava
+		c	Whether or not the current entity is in lava
+	m	()V	func_70018_K	setBeenAttacked	#setBeenAttacked, markVelocityChanged, scheduleVelocityUpdate, onDamaged
+		c	Sets that this entity has been attacked.
+	m	()Z	func_70067_L	canBeCollidedWith	#canBeCollidedWith, :, collides, hasCollision
+		c	Returns true if other Entities should be prevented from moving through this Entity.
+	m	()Z	func_70104_M	canBePushed	#canBePushed, :, isPushable, :
+		c	Returns true if this entity should push and be pushed by other entities when colliding.
+	m	()Z	func_142008_O	shouldSetPosAfterLoading	#shouldSetPosAfterLoading, :, shouldSetPositionOnLoad, :
+	m	()Ljava/lang/String;	func_70022_Q	getEntityString	#getEntityString, :, getSavedEntityId, getTypeId
+		c	Returns the string that identifies this Entity's class
+	m	()V	func_110123_P	onChunkLoad	#onChunkLoad, :, ~, load
+	m	()F	func_70053_R	getShadowSize	#getShadowSize, :, ~, yShadowOrigin
+	m	()Z	func_70089_S	isEntityAlive	#isEntityAlive, :, isAlive, :
+		c	Checks whether target entity is alive.
+	m	(B)V	func_70103_a	handleHealthUpdate	#handleHealthUpdate, handleStatusUpdate, handleStatus, doEvent
+		c	Handler for {@link World#setEntityState}
+		p	1	p_70103_1_	id	#id, :, status, event
+	m	(D)Z	func_70112_a	isInRangeToRenderDist	#isInRangeToRenderDist, :, shouldRender, isWithinViewDistance
+		c	Checks if the entity is in range to render by using the past in distance and comparing it to its average edge length * 64 * renderDistanceWeight Args: distance
+		p	1	p_70112_1_	distance	#distance, :, :, :
+	m	(DDDFF)V	func_70080_a	setPositionAndRotation	#setPositionAndRotation, :, updatePositionAndAngles, teleport
+		c	Sets the entity's position and rotation. Args: posX, posY, posZ, yaw, pitch
+		p	1	p_70080_1_	x	#x, :, :, :
+		p	3	p_70080_3_	y	#y, :, :, :
+		p	5	p_70080_5_	z	#z, :, :, :
+		p	7	p_70080_7_	yaw	#yaw, :, :, :
+		p	8	p_70080_8_	pitch	#pitch, :, :, :
+	m	(DDDFFI)V	func_70056_a	setPositionAndRotation2	#setPositionAndRotation2, :, ~, updatePositionAndAngles
+		c	Sets the position and rotation. Only difference from the other one is no bounding on the rotation. Args: posX, posY, posZ, yaw, pitch
+		p	1	p_70056_1_	x	#x, :, ~, x
+		p	3	p_70056_3_	y	#y, :, ~, y
+		p	5	p_70056_5_	z	#z, :, ~, z
+		p	7	p_70056_7_	yaw	#yaw, :, ~, yaw
+		p	8	p_70056_8_	pitch	#pitch, :, ~, pitch
+		p	9	p_70056_9_	rotationIncrements	#rotationIncrements, :, ~, steps
+	m	(DZ)V	func_70064_a	updateFallState	#updateFallState, :, ~, onFall
+		c	Takes in the distance the entity has fallen this tick and whether its on the ground to update the fall distance and deal fall damage if landing on the ground.  Args: distanceFallenThisTick, onGround
+		p	1	p_70064_1_	distanceFallenThisTick	#distanceFallenThisTick, :, ~, dy
+		p	3	p_70064_3_	isOnGround	#isOnGround, :, ~, onGround
+	m	(FF)V	func_70105_a	setSize	#setSize, :, setBounds, setDimensions
+		c	Sets the width and height of the entity. Args: width, height
+		p	1	p_70105_1_	width	#width, :, :, :
+		p	2	p_70105_2_	height	#height, :, :, :
+	m	(FFF)V	func_70060_a	moveFlying	#moveFlying, moveRelative, updateVelocity, :
+		c	Used in both water and by flying objects
+		p	1	p_70060_1_	strafe	#strafe, :, ~, sideways
+		p	2	p_70060_2_	forward	#forward, :, ~, forward
+		p	3	p_70060_3_	friction	#friction, :, ~, factor
+	m	(IIILnet/minecraft/block/Block;)V	func_145780_a	playStepSound	#playStepSound, :, ~, playStepSound
+		p	1	p_145780_1_	x	#x, :, ~, x
+		p	2	p_145780_2_	y	#y, :, ~, y
+		p	3	p_145780_3_	z	#z, :, ~, z
+		p	4	p_145780_4_	blockIn	#blockIn, :, ~, block
+	m	(IZ)V	func_70052_a	setFlag	#setFlag, :, :, :
+		c	Enable or disable a entity flag, see getEntityFlag to read the know flags.
+		p	1	p_70052_1_	flag	#flag, :, index, :
+		p	2	p_70052_2_	set	#set, :, value, :
+	m	(Lnet/minecraft/item/Item;I)Lnet/minecraft/entity/item/EntityItem;	func_145779_a	dropItem	#dropItem, :, :, :
+		p	1	p_145779_1_	itemIn	#itemIn, :, item, :
+		p	2	p_145779_2_	size	#size, :, yOffset, count
+	m	(Lnet/minecraft/item/Item;IF)Lnet/minecraft/entity/item/EntityItem;	func_145778_a	dropItemWithOffset	#dropItemWithOffset, :, dropItem, :
+		p	1	p_145778_1_	itemIn	#itemIn, :, item, :
+		p	2	p_145778_2_	size	#size, :, count, :
+		p	3	p_145778_3_	offsetY	#offsetY, :, yOffset, :
+	m	(Lnet/minecraft/item/ItemStack;F)Lnet/minecraft/entity/item/EntityItem;	func_70099_a	entityDropItem	#entityDropItem, :, dropItem, :
+		c	Drops an item at the position of the entity.
+		p	1	p_70099_1_	itemStackIn	#itemStackIn, stack, :, :
+		p	2	p_70099_2_	offsetY	#offsetY, :, yOffset, :
+	m	(Lnet/minecraft/world/Explosion;Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;)F	func_145772_a	getExplosionResistance	#getExplosionResistance, :, ~, getBlastResistance
+		c	Called for explosions caused by Entities instead of the method on Block. Default forwards to Block.
+		p	1	p_145772_1_	explosionIn	#explosionIn, :, ~, explosion
+		p	2	p_145772_2_	worldIn	#worldIn, :, ~, world
+		p	3	p_145772_3_	x	#x, :, ~, x
+		p	4	p_145772_4_	y	#y, :, ~, y
+		p	5	p_145772_5_	z	#z, :, ~, z
+		p	6	p_145772_6_	blockIn	#blockIn, :, ~, block
+	m	(Lnet/minecraft/world/Explosion;Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;F)Z	func_145774_a	canExplodeBlock	#~, ~, ~, canExplodeBlock
+		c	Check if an explosion caused by this entity can explode the given block.
+		p	1	p_145774_1_	explosionIn	#explosionIn, :, ~, explosion
+		p	2	p_145774_2_	worldIn	#worldIn, :, ~, world
+		p	3	p_145774_3_	x	#x, :, ~, x
+		p	4	p_145774_4_	y	#y, :, ~, y
+		p	5	p_145774_5_	z	#z, :, ~, z
+		p	6	p_145774_6_	blockIn	#blockIn, :, ~, block
+		p	7	p_145774_7_	unused	#unused, :, ~, power
+	m	(Lnet/minecraft/world/World;)V	func_70029_a	setWorld	#setWorld, :, :, :
+		c	Sets the reference to the World object.
+		p	1	p_70029_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/block/material/Material;)Z	func_70055_a	isInsideOfMaterial	#isInsideOfMaterial, :, isSubmergedIn, :
+		c	Checks if the current block the entity is within of the specified material type
+		p	1	p_70055_1_	materialIn	#materialIn, :, material, liquid
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_70037_a	readEntityFromNBT	#readEntityFromNBT, :, readCustomDataFromNbt, readCustomNbt
+		c	(abstract) Protected helper method to read subclass entity data from NBT.
+		p	1	p_70037_1_	tagCompund	#tagCompund, compound, nbt, :
+	m	(Ljava/lang/String;FF)V	func_85030_a	playSound	#playSound, :, :, :
+		p	1	p_85030_1_	name	#name, :, id, :
+		p	2	p_85030_2_	volume	#volume, :, :, :
+		p	3	p_85030_3_	pitch	#pitch, :, :, :
+	m	(Lnet/minecraft/crash/CrashReportCategory;)V	func_85029_a	addEntityCrashInfo	#addEntityCrashInfo, :, populateCrashReport, :
+		p	1	p_85029_1_	category	#category, :, section, :
+	m	(Lnet/minecraft/util/DamageSource;F)Z	func_70097_a	attackEntityFrom	#attackEntityFrom, :, damage, :
+		c	Called when the entity is attacked.
+		p	1	p_70097_1_	source	#source, :, :, :
+		p	2	p_70097_2_	amount	#amount, :, :, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_70078_a	mountEntity	#mountEntity, :, startRiding, :
+		c	Called when a player mounts an entity. e.g. mounts a pig, mounts a boat.
+		p	1	p_70078_1_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/Entity;Z)V	func_82141_a	copyDataFrom	#copyDataFrom, :, copyFrom, copyNbtFrom
+		c	Copies important data from another entity to this entity. Used when teleporting entities between worlds, as this actually deletes the teleporting entity and re-creates it on the other side. Params: Entity to copy from, unused (always true)
+		p	1	p_82141_1_	entityIn	#entityIn, :, original, sourceEntity
+		p	2	p_82141_2_	unused	#unused, :, ~, ~
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_70074_a	onKillEntity	#onKillEntity, :, onKilledOther, onKill
+		c	This method gets called when the entity kills another one.
+		p	1	p_70074_1_	entityLivingIn	#entityLivingIn, :, other, victim
+	m	(Lnet/minecraft/entity/effect/EntityLightningBolt;)V	func_70077_a	onStruckByLightning	#onStruckByLightning, :, onLightningStrike, :
+		c	Called when a lightning bolt hits the entity.
+		p	1	p_70077_1_	lightningBolt	#lightningBolt, :, lightning, :
+	m	([D)Lnet/minecraft/nbt/NBTTagList;	func_70087_a	newDoubleNBTList	#newDoubleNBTList, :, toListNbt, toNbtList
+		c	creates a NBT list from the array of doubles passed to this function
+		p	1	p_70087_1_	numbers	#numbers, :, values, :
+	m	([F)Lnet/minecraft/nbt/NBTTagList;	func_70049_a	newFloatNBTList	#newFloatNBTList, :, toListNbt, toNbtList
+		c	Returns a new NBTTagList filled with the specified floats
+		p	1	p_70049_1_	numbers	#numbers, :, values, :
+	m	()Z	func_90999_ad	canRenderOnFire	#canRenderOnFire, :, doesRenderOnFire, shouldRenderOnFire
+		c	Return whether this entity should be rendered as on fire.
+	m	()Ljava/util/UUID;	func_110124_au	getUniqueID	#getUniqueID, :, getUuid, :
+		c	Returns the UUID of this entity.
+	m	()Z	func_96092_aw	isPushedByWater	#isPushedByWater, :, canFly, hasLiquidCollision
+	m	()Z	func_70094_T	isEntityInsideOpaqueBlock	#isEntityInsideOpaqueBlock, :, isInsideWall, isInWall
+		c	Checks if this entity is inside of an opaque block
+	m	()V	func_70098_U	updateRidden	#updateRidden, :, tickRiding, :
+		c	Handles updating while being ridden by an entity
+	m	()V	func_70043_V	updateRiderPosition	#updateRiderPosition, :, updatePassengerPosition, updateRiderPositon
+	m	()D	func_70033_W	getYOffset	#getYOffset, :, getHeightOffset, getRideHeight
+		c	Returns the Y Offset of this entity.
+	m	()D	func_70042_X	getMountedYOffset	#getMountedYOffset, :, getMountedHeightOffset, getMountHeight
+		c	Returns the Y offset from the entity's position for any entity riding this one.
+	m	()F	func_70111_Y	getCollisionBorderSize	#getCollisionBorderSize, :, getTargetingMargin, getExtraHitboxSize
+	m	()Lnet/minecraft/util/Vec3;	func_70040_Z	getLookVec	#getLookVec, :, getRotation, getCameraRotation
+		c	returns a (normalized) vector of where this entity is looking
+	m	()V	func_70063_aa	setInPortal	#setInPortal, :, enterNetherPortal, onPortalCollision
+		c	Called by portal blocks when an entity is within it.
+	m	()I	func_82147_ab	getPortalCooldown	#getPortalCooldown, :, getDefaultNetherPortalCooldown, :
+		c	Return the amount of cooldown before this entity can use a portal again.
+	m	()V	func_70057_ab	performHurtAnimation	#performHurtAnimation, :, animateDamage, :
+		c	Setups the entity to do the hurt animation. Only used by packets in multiplayer.
+	m	()[Lnet/minecraft/item/ItemStack;	func_70035_c	getLastActiveItems	#getLastActiveItems, getInventory, getArmorStacks, getInventory
+		c	returns the inventory of this entity (only used in EntityPlayerMP it seems)
+	m	()Z	func_70027_ad	isBurning	#isBurning, :, isOnFire, :
+		c	Returns true if the entity is on fire. Used by render to add the fire effect on rendering.
+	m	()Z	func_70115_ae	isRiding	#isRiding, :, hasVehicle, :
+		c	Returns true if the entity is riding another entity, used by render to rotate the legs to be in 'sit' position for players.
+	m	()Z	func_70093_af	isSneaking	#isSneaking, :, :, :
+		c	Returns if this entity is sneaking.
+	m	()Z	func_70051_ag	isSprinting	#isSprinting, :, :, :
+		c	Get if the Entity is sprinting.
+	m	()Z	func_82150_aj	isInvisible	#isInvisible, :, :, :
+	m	()Z	func_70113_ah	isEating	#isEating, :, isSwimming, :
+	m	()I	func_70086_ai	getAir	#getAir, :, :, getBreath
+	m	()V	func_70110_aj	setInWeb	#setInWeb, :, setInLava, onCobwebCollision
+		c	Sets the Entity inside a web block.
+	m	()[Lnet/minecraft/entity/Entity;	func_70021_al	getParts	#getParts, :, :, :
+		c	Return the Entity parts making up this Entity (currently only for dragons)
+	m	()F	func_70079_am	getRotationYawHead	#getRotationYawHead, :, getHeadRotation, getHeadYaw
+	m	()Z	func_70075_an	canAttackWithItem	#canAttackWithItem, canBeAttackedWithItem, isAttackable, canBePunched
+		c	If returns false, the item will not inflict any damage against entities.
+	m	()Z	func_85032_ar	isEntityInvulnerable	#isEntityInvulnerable, :, ~, isInvulnerable
+		c	Return whether this entity is invulnerable to damage.
+	m	()I	func_82143_as	getMaxSafePointTries	#getMaxSafePointTries, getMaxFallHeight, getSafeFallDistance, :
+		c	The number of iterations PathFinder.getSafePoint will execute before giving up.
+	m	()I	func_82148_at	getTeleportDirection	#getTeleportDirection, :, getLastNetherPortalAxis, getLastPortalFacing
+	m	()Z	func_145773_az	doesEntityNotTriggerPressurePlate	#doesEntityNotTriggerPressurePlate, :, canAvoidTraps, :
+		c	Return whether this entity should NOT trigger a pressure plate or a tripwire.
+	m	(DDD)V	func_70107_b	setPosition	#setPosition, :, updatePosition, setPosition
+		c	Sets the x,y,z of the entity from the given parameters. Also seems to set up a bounding box.
+		p	1	p_70107_1_	x	#x, :, :, :
+		p	3	p_70107_3_	y	#y, :, :, :
+		p	5	p_70107_5_	z	#z, :, :, :
+	m	(DDDFF)V	func_70012_b	setLocationAndAngles	#setLocationAndAngles, :, refreshPositionAndAngles, :
+		c	Sets the location and Yaw/Pitch of an entity in the world
+		p	1	p_70012_1_	x	#x, :, :, :
+		p	3	p_70012_3_	y	#y, :, :, :
+		p	5	p_70012_5_	z	#z, :, :, :
+		p	7	p_70012_7_	yaw	#yaw, :, :, :
+		p	8	p_70012_8_	pitch	#pitch, :, :, :
+	m	(F)V	func_70069_a	fall	#fall, :, ~, applyFallDamage
+		c	Called when the mob is falling. Calculates and applies fall damage.
+		p	1	p_70069_1_	distance	#distance, :, ~, distance
+	m	(FF)V	func_70101_b	setRotation	#setRotation, :, :, :
+		c	Sets the rotation of the entity
+		p	1	p_70101_1_	yaw	#yaw, :, :, :
+		p	2	p_70101_2_	pitch	#pitch, :, :, :
+	m	(I)V	func_71027_c	travelToDimension	#travelToDimension, :, teleportToDimension, :
+		c	Teleports the entity to another dimension. Params: Dimension number to teleport to
+		p	1	p_71027_1_	dimensionId	#dimensionId, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_70014_b	writeEntityToNBT	#writeEntityToNBT, :, writeCustomDataToNbt, writeCustomNbt
+		c	(abstract) Protected helper method to write subclass entity data to NBT.
+		p	1	p_70014_1_	tagCompound	#tagCompound, compound, nbt, :
+	m	(Lnet/minecraft/entity/Entity;I)V	func_70084_c	addToPlayerScore	#addToPlayerScore, :, updateKilledAdvancementCriterion, onKillEntity
+		c	Adds a value to the player score. Currently not actually used and the entity passed in does nothing. Args: entity, scoreToAdd
+		p	1	p_70084_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_70084_2_	amount	#amount, :, score, :
+	m	(Z)V	func_70095_a	setSneaking	#setSneaking, :, :, :
+		c	Sets the sneaking flag.
+		p	1	p_70095_1_	sneaking	#sneaking, :, :, :
+	m	()Ljava/lang/String;	func_70005_c_	getCommandSenderName	#getCommandSenderName, getName, getTranslationKey, getName
+		c	Gets the name of this command sender (usually username, but possibly "Rcon")
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_70100_b_	onCollideWithPlayer	#onCollideWithPlayer, :, onPlayerCollision, :
+		c	Called by a player entity when they collide with an entity
+		p	1	p_70100_1_	entityIn	#entityIn, :, player, :
+	m	()V	func_70088_a	entityInit	#entityInit, :, initDataTracker, :
+	m	(DDD)Z	func_70038_c	isOffsetPositionInLiquid	#isOffsetPositionInLiquid, :, doesNotCollide, canMove
+		c	Checks if the offset position from the entity's current position is inside of liquid. Args: x, y, z
+		p	1	p_70038_1_	x	#x, :, offsetX, dx
+		p	3	p_70038_3_	y	#y, :, offsetY, dy
+		p	5	p_70038_5_	z	#z, :, offsetZ, dz
+	m	(F)I	func_70070_b	getBrightnessForRender	#getBrightnessForRender, :, getLightmapCoordinates, getLightLevel
+		p	1	p_70070_1_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(FF)V	func_70082_c	setAngles	#setAngles, turn, increaseTransforms, updateLocalPlayerCamera
+		c	Adds par1*0.15 to the entity's yaw, and *subtracts* par2*0.15 from the pitch. Clamps pitch from -90 to 90. Both arguments in degrees.
+		p	1	p_70082_1_	yaw	#yaw, :, :, :
+		p	2	p_70082_2_	pitch	#pitch, :, :, :
+	m	(ILnet/minecraft/item/ItemStack;)V	func_70062_b	setCurrentItemOrArmor	#setCurrentItemOrArmor, :, setArmorSlot, setEquipmentStack
+		c	Sets the held item, or an armor slot. Slot 0 is held item. Slot 1-4 is armor. Params: Item, slot
+		p	1	p_70062_1_	slotIn	#slotIn, :, armorSlot, slot
+		p	2	p_70062_2_	itemStackIn	#itemStackIn, stack, item, stack
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Z	func_98035_c	writeMountToNBT	#writeMountToNBT, :, saveSelfToNbt, writeNbt
+		c	Like writeToNBTOptional but does not check if the entity is ridden. Used for saving ridden entities with their riders.
+		p	1	p_98035_1_	tagCompund	#tagCompund, :, nbt, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_130002_c	interactFirst	#interactFirst, :, openInventory, interact
+		c	First layer of player interaction
+		p	1	p_130002_1_	player	#player, playerIn, player, :
+	m	(Z)V	func_70031_b	setSprinting	#setSprinting, :, :, :
+		c	Set sprinting switch for Entity.
+		p	1	p_70031_1_	sprinting	#sprinting, :, :, :
+	m	()Lnet/minecraft/util/IChatComponent;	func_145748_c_	getFormattedCommandSenderName	#getFormattedCommandSenderName, getDisplayName, getName, getDisplayName
+		c	Get the formatted ChatComponent that will be used for the sender's username in chat
+	m	(DDD)V	func_70091_d	moveEntity	#moveEntity, move, :, :
+		c	Tries to moves the entity by the passed in displacement. Args: x, y, z
+		p	1	p_70091_1_	x	#x, type, velocityX, dx
+		p	3	p_70091_3_	y	#y, :, velocityY, dy
+		p	5	p_70091_5_	z	#z, :, velocityZ, dz
+	m	(F)F	func_70013_c	getBrightness	#getBrightness, :, getBrightnessAtEyes, getBrightness
+		c	Gets how bright this entity is.
+		p	1	p_70013_1_	partialTicks	#partialTicks, :, ~, tickDelta
+	m	(I)V	func_145769_d	setEntityId	#setEntityId, :, :, setNetworkId
+		p	1	p_145769_1_	id	#id, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Z	func_70039_c	writeToNBTOptional	#writeToNBTOptional, :, saveToNbt, writeNbtNoRider
+		c	Either write this entity to the NBT tag given and return true, or return false without doing anything. If this returns false the entity is not saved on disk. Ridden entities return false here as they are saved with their rider.
+		p	1	p_70039_1_	tagCompund	#tagCompund, compound, nbt, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_98034_c	isInvisibleToPlayer	#isInvisibleToPlayer, :, isInvisibleTo, :
+		c	Only used by renderer in EntityLivingBase subclasses.\nDetermines if an entity is visible or not to a specfic player, if the entity is normally invisible.\nFor EntityLivingBase subclasses, returning false when invisible will render the entity semitransparent.
+		p	1	p_98034_1_	player	#player, :, :, :
+	m	(Z)V	func_82142_c	setInvisible	#setInvisible, :, :, :
+		p	1	p_82142_1_	invisible	#invisible, :, :, :
+	m	(DDD)D	func_70092_e	getDistanceSq	#getDistanceSq, :, squaredDistanceTo, getSquaredDistanceTo
+		c	Gets the squared distance to the position. Args: x, y, z
+		p	1	p_70092_1_	x	#x, :, :, :
+		p	3	p_70092_3_	y	#y, :, :, :
+		p	5	p_70092_5_	z	#z, :, :, :
+	m	(F)V	func_70034_d	setRotationYawHead	#setRotationYawHead, :, setHeadYaw, :
+		c	Sets the head's yaw rotation of the entity.
+		p	1	p_70034_1_	rotation	#rotation, :, headYaw, :
+	m	(I)V	func_70015_d	setFire	#setFire, :, setOnFireFor, :
+		c	Sets entity to burn for x amount of seconds, cannot lower amount of existing fire.
+		p	1	p_70015_1_	seconds	#seconds, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_70109_d	writeToNBT	#writeToNBT, :, writePlayerData, writeEntityNbt
+		c	Save the entity to NBT (calls an abstract helper method to write extra data)
+		p	1	p_70109_1_	tagCompund	#tagCompund, :, nbt, :
+	m	(Lnet/minecraft/entity/Entity;)F	func_70032_d	getDistanceToEntity	#getDistanceToEntity, getDistance, distanceTo, getDistanceTo
+		c	Returns the distance to the entity. Args: entity
+		p	1	p_70032_1_	entityIn	#entityIn, :, entity, :
+	m	(Z)V	func_70019_c	setEating	#setEating, :, setSwimming, :
+		p	1	p_70019_1_	eating	#eating, :, swimming, :
+	m	(Ljava/lang/Object;)Z	equals	equals	#~, ~, ~, ~
+		p	1	p_equals_1_	object	#~, ~, object, :
+	m	(DDD)D	func_70011_f	getDistance	#getDistance, :, distanceTo, getDistanceTo
+		c	Gets the distance to the position. Args: x, y, z
+		p	1	p_70011_1_	x	#x, :, :, :
+		p	3	p_70011_3_	y	#y, :, :, :
+		p	5	p_70011_5_	z	#z, :, :, :
+	m	(I)V	func_70081_e	dealFireDamage	#dealFireDamage, :, burn, applyFireDamage
+		c	Will deal the specified amount of damage to the entity if the entity isn't immune to fire damage. Args: amountDamage
+		p	1	p_70081_1_	amount	#amount, :, time, amount
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_70020_e	readFromNBT	#readFromNBT, :, fromNbt, readEntityNbt
+		c	Reads the entity from NBT (calls an abstract helper method to read specialized data)
+		p	1	p_70020_1_	tagCompund	#tagCompund, compound, nbt, :
+	m	(Lnet/minecraft/entity/Entity;)D	func_70068_e	getDistanceSqToEntity	#getDistanceSqToEntity, getDistanceSq, squaredDistanceTo, getSquaredDistanceTo
+		c	Returns the squared distance to the entity. Args: entity
+		p	1	p_70068_1_	entityIn	#entityIn, :, entity, :
+	m	()F	func_70047_e	getEyeHeight	#getEyeHeight, :, :, :
+	m	(DDD)V	func_70024_g	addVelocity	#addVelocity, :, :, :
+		c	Adds to the current velocity of the entity. Args: x, y, z
+		p	1	p_70024_1_	x	#x, :, :, velocityX
+		p	3	p_70024_3_	y	#y, :, :, velocityY
+		p	5	p_70024_5_	z	#z, :, :, velocityZ
+	m	(I)Z	func_70083_f	getFlag	#getFlag, :, :, :
+		c	Returns true if the flag is active for the entity. Known flags: 0) is burning; 1) is sneaking; 2) is riding something; 3) is sprinting; 4) is eating
+		p	1	p_70083_1_	flag	#flag, :, index, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_70108_f	applyEntityCollision	#applyEntityCollision, :, pushAwayFrom, push
+		c	Applies a velocity to each of the entities pushing them away from each other. Args: entity
+		p	1	p_70108_1_	entityIn	#entityIn, :, entity, :
+	m	()Z	func_70041_e_	canTriggerWalking	#canTriggerWalking, :, canClimb, :
+		c	returns if this entity triggers Block.onEntityWalking on the blocks they walk on. used for spiders and wolves to prevent them from trampling crops
+	m	()V	func_70071_h_	onUpdate	#onUpdate, :, tick, :
+		c	Called to update the entity's position/logic.
+	m	(DDD)Z	func_145770_h	isInRangeToRender3d	#isInRangeToRender3d, :, shouldRender, isWithinViewDistanceOf
+		p	1	p_145770_1_	x	#x, :, :, :
+		p	3	p_145770_3_	y	#y, :, :, :
+		p	5	p_145770_5_	z	#z, :, :, :
+	m	(I)V	func_70050_g	setAir	#setAir, :, :, setBreath
+		p	1	p_70050_1_	air	#air, :, :, breath
+	m	(Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/AxisAlignedBB;	func_70114_g	getCollisionBox	#getCollisionBox, :, getHardCollisionBox, getCollisionAgainstShape
+		c	Returns a boundingBox used to collide the entity with other entities and blocks. This enables the entity to be pushable on contact, like boats or minecarts.
+		p	1	p_70114_1_	entityIn	#entityIn, :, collidingEntity, other
+	m	()I	hashCode	hashCode	#~, ~, ~, ~
+	m	(DDD)V	func_70016_h	setVelocity	#setVelocity, :, setVelocityClient, setVelocity
+		c	Sets the velocity to the args. Args: x, y, z
+		p	1	p_70016_1_	x	#x, :, :, velocityX
+		p	3	p_70016_3_	y	#y, :, :, velocityY
+		p	5	p_70016_5_	z	#z, :, :, velocityZ
+	m	(I)V	func_145781_i	onDataWatcherUpdate	#onDataWatcherUpdate, :, ~, onDataValueChanged
+		p	1	p_145781_1_	dataID	#dataID, :, ~, id
+	m	(Lnet/minecraft/entity/Entity;)Z	func_70028_i	isEntityEqual	#isEntityEqual, :, isPartOf, is
+		c	Returns true if Entity argument is equal to this Entity
+		p	1	p_70028_1_	entityIn	#entityIn, :, entity, :
+	m	(DDD)Z	func_145771_j	pushOutOfBlocks	#pushOutOfBlocks, :, :, pushAwayFrom
+		p	1	p_145771_1_	x	#x, :, :, :
+		p	3	p_145771_3_	y	#y, :, :, :
+		p	5	p_145771_5_	z	#z, :, :, :
+	m	(Lnet/minecraft/entity/Entity;)Z	func_85031_j	hitByEntity	#hitByEntity, :, handleAttack, onPunched
+		c	Called when a player attacks an entity. If this returns true the attack will not happen.
+		p	1	p_85031_1_	entityIn	#entityIn, :, attacker, :
+	m	(Lnet/minecraft/entity/Entity;)V	func_82149_j	copyLocationAndAnglesFrom	#copyLocationAndAnglesFrom, :, copyPosition, copyPositionAndRotationFrom
+		c	Sets this entity's location and angles to the location and angles of the passed in entity.
+		p	1	p_82149_1_	entityIn	#entityIn, :, original, entity
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()I	func_145782_y	getEntityId	#getEntityId, :, :, getNetworkId
+	m	()Lnet/minecraft/entity/DataWatcher;	func_70096_w	getDataWatcher	#getDataWatcher, :, getDataTracker, :

@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/GameRules	net/minecraft/world/GameRules	
+	f	Ljava/util/TreeMap;	field_82771_a	theGameRules	#theGameRules, rules, gameRules, values
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_82770_a	writeGameRulesToNBT	#writeGameRulesToNBT, writeToNBT, getNbt, toNbt
+		c	Return the defined game rules as NBT.
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_82768_a	readGameRulesFromNBT	#readGameRulesFromNBT, readFromNBT, setNbt, readNbt
+		c	Set defined game rules from NBT.
+		p	1	p_82768_1_	nbt	#nbt, :, :, :
+	m	(Ljava/lang/String;)Ljava/lang/String;	func_82767_a	getGameRuleStringValue	#getGameRuleStringValue, getString, :, get
+		c	Gets the string Game Rule value.
+		p	1	p_82767_1_	name	#name, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/String;)V	func_82769_a	addGameRule	#addGameRule, :, ~, add
+		c	Define a game rule and its default value.
+		p	1	p_82769_1_	name	#~, ~, ~, name
+		p	2	p_82769_2_	defaultValue	#~, ~, ~, defaultValue
+	m	()[Ljava/lang/String;	func_82763_b	getRules	#getRules, :, ~, getAll
+		c	Return the defined game rules.
+	m	(Ljava/lang/String;)Z	func_82766_b	getGameRuleBooleanValue	#getGameRuleBooleanValue, getBoolean, :, :
+		c	Gets the boolean Game Rule value.
+		p	1	p_82766_1_	name	#name, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/String;)V	func_82764_b	setOrCreateGameRule	#setOrCreateGameRule, :, setGameRule, set
+		p	1	p_82764_1_	key	#key, :, rule, name
+		p	2	p_82764_2_	ruleValue	#ruleValue, :, value, :
+	m	(Ljava/lang/String;)Z	func_82765_e	hasRule	#hasRule, :, contains, :
+		c	Return whether the specified game rule is defined.
+		p	1	p_82765_1_	name	#name, :, key, name
+	m	()V	<init>	<init>	#~, ~, ~, ~

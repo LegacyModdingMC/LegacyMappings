@@ -1,0 +1,60 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/creativetab/CreativeTabs	net/minecraft/creativetab/CreativeTabs	
+	f	[Lnet/minecraft/creativetab/CreativeTabs;	field_78032_a	creativeTabArray	#creativeTabArray, CREATIVE_TAB_ARRAY, itemGroups, ALL
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78030_b	tabBlock	#tabBlock, BUILDING_BLOCKS, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78031_c	tabDecorations	#tabDecorations, DECORATIONS, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78028_d	tabRedstone	#tabRedstone, REDSTONE, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78029_e	tabTransport	#tabTransport, TRANSPORTATION, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78026_f	tabMisc	#tabMisc, MISC, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78027_g	tabAllSearch	#tabAllSearch, SEARCH, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78039_h	tabFood	#tabFood, FOOD, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78040_i	tabTools	#tabTools, TOOLS, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78037_j	tabCombat	#tabCombat, COMBAT, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78038_k	tabBrewing	#tabBrewing, BREWING, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78035_l	tabMaterials	#tabMaterials, MATERIALS, :, :
+	f	Lnet/minecraft/creativetab/CreativeTabs;	field_78036_m	tabInventory	#tabInventory, INVENTORY, :, :
+	f	I	field_78033_n	tabIndex	#tabIndex, index, :, id
+	f	Ljava/lang/String;	field_78034_o	tabLabel	#tabLabel, :, id, name
+	f	Ljava/lang/String;	field_78043_p	backgroundImageName	#backgroundImageName, backgroundTexture, texture, :
+		c	Texture to use.
+	f	Z	field_78042_q	hasScrollbar	#hasScrollbar, :, scrollbar, :
+	f	Z	field_78041_r	drawTitle	#drawTitle, :, tooltip, tooltips
+		c	Whether to draw the title in the foreground of the creative GUI
+	f	[Lnet/minecraft/enchantment/EnumEnchantmentType;	field_111230_s	enchantmentTypes	#enchantmentTypes, :, targets, categories
+	f	Lnet/minecraft/item/ItemStack;	field_151245_t	iconItemStack	#iconItemStack, icon, item, :
+	m	(ILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1853_1_	index	#index, :, :, id
+		p	2	p_i1853_2_	label	#label, :, id, name
+	m	()I	func_78021_a	getTabIndex	#getTabIndex, getIndex, :, getId
+	m	(Lnet/minecraft/enchantment/EnumEnchantmentType;)Z	func_111226_a	hasRelevantEnchantmentType	#hasRelevantEnchantmentType, :, containsEnchantments, hasEchantmentCategory
+		p	1	p_111226_1_	enchantmentType	#enchantmentType, :, target, category
+	m	(Ljava/lang/String;)Lnet/minecraft/creativetab/CreativeTabs;	func_78025_a	setBackgroundImageName	#setBackgroundImageName, :, setTexture, :
+		p	1	p_78025_1_	texture	#texture, :, :, :
+	m	(Ljava/util/List;)V	func_78018_a	displayAllReleventItems	#displayAllReleventItems, displayAllRelevantItems, showItems, addItems
+		c	only shows items which have tabToDisplayOn == this
+		p	1	p_78018_1_	inventory	#~, ~, stacks, inventory
+	m	(Ljava/util/List;[Lnet/minecraft/enchantment/EnumEnchantmentType;)V	func_92116_a	addEnchantmentBooksToList	#addEnchantmentBooksToList, :, showBooks, addEnchantedBooks
+		c	Adds the enchantment books from the supplied EnumEnchantmentType to the given list.
+		p	1	p_92116_1_	itemList	#itemList, :, stacks, inventory
+		p	2	p_92116_2_	enchantmentType	#enchantmentType, :, targets, categories
+	m	([Lnet/minecraft/enchantment/EnumEnchantmentType;)Lnet/minecraft/creativetab/CreativeTabs;	func_111229_a	setRelevantEnchantmentTypes	#setRelevantEnchantmentTypes, :, setEnchantments, setEnchantmentCategories
+		c	Sets the enchantment types for populating this tab with enchanting books
+		p	1	p_111229_1_	types	#types, :, targets, categories
+	m	()Ljava/lang/String;	func_78013_b	getTabLabel	#getTabLabel, :, getId, getName
+	m	()Ljava/lang/String;	func_78024_c	getTranslatedTabLabel	#getTranslatedTabLabel, getTranslationKey, :, getDisplayName
+		c	Gets the translated Label.
+	m	()Lnet/minecraft/item/ItemStack;	func_151244_d	getIconItemStack	#getIconItemStack, getIcon, :, :
+	m	()Lnet/minecraft/item/Item;	func_78016_d	getTabIconItem	#getTabIconItem, createIcon, getIconItem, :
+	m	()I	func_151243_f	getIconItemDamage	#getIconItemDamage, :, getIconMeta, getIconMetadata
+	m	()Ljava/lang/String;	func_78015_f	getBackgroundImageName	#getBackgroundImageName, :, getTexture, :
+	m	()Z	func_78019_g	drawInForegroundOfTab	#drawInForegroundOfTab, :, hasTooltip, hasTooltips
+	m	()Lnet/minecraft/creativetab/CreativeTabs;	func_78014_h	setNoTitle	#setNoTitle, :, setNoTooltip, hideTooltips
+	m	()Z	func_78017_i	shouldHidePlayerInventory	#shouldHidePlayerInventory, hasScrollbar, :, :
+	m	()Lnet/minecraft/creativetab/CreativeTabs;	func_78022_j	setNoScrollbar	#setNoScrollbar, :, :, hideScrollbar
+	m	()I	func_78020_k	getTabColumn	#getTabColumn, getColumn, :, :
+		c	returns index % 6
+	m	()Z	func_78023_l	isTabInFirstRow	#isTabInFirstRow, isOnTopRow, isTopRow, :
+		c	returns tabIndex < 6
+	m	()[Lnet/minecraft/enchantment/EnumEnchantmentType;	func_111225_m	getRelevantEnchantmentTypes	#getRelevantEnchantmentTypes, :, getEnchantments, getEnchantmentCategories
+		c	Returns the enchantment types relevant to this tab
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

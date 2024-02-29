@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderZombie	net/minecraft/client/renderer/entity/RenderZombie	
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82437_k	zombieModel1	#~, ~, ~, zombieModel1
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82435_l	zombieModel2	#~, ~, ~, zombieModel2
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82436_m	zombieVillagerModel2	#~, ~, ~, zombieVillagerModel2
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82433_n	zombieVillagerModel3	#~, ~, ~, zombieVillagerModel3
+	f	Lnet/minecraft/util/ResourceLocation;	field_110866_o	zombiePigmanTextures	#zombiePigmanTextures, :, ~, ZOMBIE_PIGMAN_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110865_p	zombieTextures	#zombieTextures, ZOMBIE_TEXTURES, ZOMBIE, ZOMBIE_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110864_q	zombieVillagerTextures	#zombieVillagerTextures, ZOMBIE_VILLAGER_TEXTURES, ZOMBIE_VILLAGER, ZOMBIE_VILLAGER_LOCATION
+	f	Lnet/minecraft/client/model/ModelBiped;	field_82434_o	defaultModel	#defaultModel, :, ~, zombieModel
+	f	Lnet/minecraft/client/model/ModelZombieVillager;	field_82432_p	zombieVillagerModel	#zombieVillagerModel, :, ~, zombieVillagerModel
+	f	I	field_82431_q	modelNumber	#~, ~, ~, modelNumber
+	m	(Lnet/minecraft/entity/monster/EntityZombie;)V	func_82427_a	swapArmor	#swapArmor, :, ~, updateModels
+		p	1	p_82427_1_	zombie	#zombie, :, ~, zombie
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

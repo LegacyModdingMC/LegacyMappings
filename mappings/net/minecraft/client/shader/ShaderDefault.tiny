@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/shader/ShaderDefault	net/minecraft/client/shader/ShaderDefault	
+	m	()V	<init>	<init>	#~, ~, ~, ~

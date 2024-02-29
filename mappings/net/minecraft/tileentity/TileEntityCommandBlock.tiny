@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityCommandBlock	net/minecraft/tileentity/TileEntityCommandBlock	
+	f	Lnet/minecraft/command/server/CommandBlockLogic;	field_145994_a	commandBlockLogic	#commandBlockLogic, :, executor, :
+	m	()Lnet/minecraft/command/server/CommandBlockLogic;	func_145993_a	getCommandBlockLogic	#getCommandBlockLogic, :, getCommandExecutor, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

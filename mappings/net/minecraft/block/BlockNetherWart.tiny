@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockNetherWart	net/minecraft/block/BlockNetherWart	
+	f	[Lnet/minecraft/util/IIcon;	field_149883_a	sprites	#~, ~, ~, sprites
+	m	()V	<init>	<init>	#~, ~, ~, ~

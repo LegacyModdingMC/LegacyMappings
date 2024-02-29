@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSlime	net/minecraft/client/model/ModelSlime	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78200_a	slimeBodies	#slimeBodies, :, ~, body
+		c	The slime's bodies, both the inside box and the outside box
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78198_b	slimeRightEye	#slimeRightEye, :, ~, rightEye
+		c	The slime's right eye
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78199_c	slimeLeftEye	#slimeLeftEye, :, ~, leftEye
+		c	The slime's left eye
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78197_d	slimeMouth	#slimeMouth, :, ~, mouth
+		c	The slime's mouth
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1157_1_	slimeBodyTexOffY	#slimeBodyTexOffY, :, ~, size

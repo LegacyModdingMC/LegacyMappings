@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S1FPacketSetExperience	net/minecraft/network/play/server/S1FPacketSetExperience	
+	f	F	field_149401_a	experienceBar	#experienceBar, :, health, levelProgress
+	f	I	field_149399_b	totalExperience	#totalExperience, :, food, xp
+	f	I	field_149400_c	level	#level, :, xpLevel, level
+	m	(FII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45222_1_	levelProgress	#~, ~, health, levelProgress
+		p	2	p_i45222_2_	totalExperienceIn	#totalExperienceIn, :, food, xp
+		p	3	p_i45222_3_	levelIn	#levelIn, :, xpLevel, level
+	m	()F	func_149397_c	getExperienceBar	#getExperienceBar, :, getBarProgress, getLevelProgress
+	m	()I	func_149396_d	getTotalExperience	#getTotalExperience, :, getExperienceLevel, getXp
+	m	()I	func_149395_e	getLevel	#getLevel, :, getExperience, getLevel
+	m	()V	<init>	<init>	#~, ~, ~, ~

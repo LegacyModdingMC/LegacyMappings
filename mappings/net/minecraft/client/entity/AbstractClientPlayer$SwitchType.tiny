@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/entity/AbstractClientPlayer$SwitchType	net/minecraft/client/entity/AbstractClientPlayer$SwitchType	
+	f	[I	field_152630_a	SKIN_PART_TYPES	#SKIN_PART_TYPES, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

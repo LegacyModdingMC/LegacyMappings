@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderLeashKnot	net/minecraft/client/renderer/entity/RenderLeashKnot	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110802_a	leashKnotTextures	#leashKnotTextures, LEASH_KNOT_TEXTURES, ~, LEAD_KNOT_LOCATION
+	f	Lnet/minecraft/client/model/ModelLeashKnot;	field_110801_f	leashKnotModel	#leashKnotModel, :, ~, model
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

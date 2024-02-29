@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/OldServerPinger	net/minecraft/client/network/OldServerPinger	
+	f	Lcom/google/common/base/Splitter;	field_147230_a	PING_RESPONSE_SPLITTER	#PING_RESPONSE_SPLITTER, :, ZERO_SPLITTER, :
+	f	Lorg/apache/logging/log4j/Logger;	field_147228_b	logger	#logger, LOGGER, :, :
+	f	Ljava/util/List;	field_147229_c	pingDestinations	#pingDestinations, :, clientConnections, clientConnectionList
+		c	A list of NetworkManagers that have pending pings
+	m	()V	func_147223_a	pingPendingNetworks	#pingPendingNetworks, :, tick, :
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_147224_a	ping	#ping, :, add, :
+		p	1	p_147224_1_	server	#server, :, entry, serverEntry
+	m	(Lnet/minecraft/client/network/OldServerPinger;Lnet/minecraft/client/multiplayer/ServerData;)V	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~
+		p	1	p_access$100_1_	p_access$100_1_	#~, ~, ~, ~
+	m	()V	func_147226_b	clearPendingNetworks	#clearPendingNetworks, :, cancel, :
+	m	(Lnet/minecraft/client/multiplayer/ServerData;)V	func_147225_b	tryCompatibilityPing	#tryCompatibilityPing, :, ping, :
+		p	1	p_147225_1_	server	#server, :, ~, serverListEntry
+	m	()Lorg/apache/logging/log4j/Logger;	access$000	access$000	#~, ~, ~, ~
+	m	()Lcom/google/common/base/Splitter;	access$200	access$200	#~, ~, getZeroSplitter, :
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderPlayer	net/minecraft/client/renderer/entity/RenderPlayer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110826_a	steveTextures	#steveTextures, :, ~, STEVE_LOCATION
+	f	Lnet/minecraft/client/model/ModelBiped;	field_77109_a	modelBipedMain	#modelBipedMain, :, ~, handmodel
+	f	Lnet/minecraft/client/model/ModelBiped;	field_77108_b	modelArmorChestplate	#modelArmorChestplate, :, ~, model1
+	f	Lnet/minecraft/client/model/ModelBiped;	field_77111_i	modelArmor	#modelArmor, :, ~, model2
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)V	func_82441_a	renderFirstPersonArm	#renderFirstPersonArm, :, ~, renderPlayerRightHandModel
+		p	1	p_82441_1_	player	#~, ~, ~, player
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

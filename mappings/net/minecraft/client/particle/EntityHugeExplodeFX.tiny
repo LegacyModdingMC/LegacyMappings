@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityHugeExplodeFX	net/minecraft/client/particle/EntityHugeExplodeFX	
+	f	I	field_70579_a	timeSinceStart	#timeSinceStart, :, age_, age
+	f	I	field_70580_aq	maximumTime	#maximumTime, :, maxAge_, maxAge
+		c	the maximum time for the explosion
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1214_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1214_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1214_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1214_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1214_8_	p_i1214_8_	#~, ~, ~, ~
+		p	10	p_i1214_10_	p_i1214_10_	#~, ~, ~, ~
+		p	12	p_i1214_12_	p_i1214_12_	#~, ~, ~, ~

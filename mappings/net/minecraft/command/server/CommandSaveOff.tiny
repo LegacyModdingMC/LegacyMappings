@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandSaveOff	net/minecraft/command/server/CommandSaveOff	
+	m	()V	<init>	<init>	#~, ~, ~, ~

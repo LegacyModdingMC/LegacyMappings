@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiKeyBindingList	net/minecraft/client/gui/GuiKeyBindingList	
+	f	Lnet/minecraft/client/gui/GuiControls;	field_148191_k	controlsScreen	#controlsScreen, :, parent, :
+	f	Lnet/minecraft/client/Minecraft;	field_148189_l	mc	#mc, :, :, minecraft
+	f	[Lnet/minecraft/client/gui/GuiListExtended$IGuiListEntry;	field_148190_m	listEntries	#listEntries, :, ~, entries
+	f	I	field_148188_n	maxListLabelWidth	#maxListLabelWidth, :, maxKeyNameLength, :
+	m	(Lnet/minecraft/client/gui/GuiControls;Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45031_1_	controls	#controls, :, parent, :
+		p	2	p_i45031_2_	mcIn	#mcIn, :, client, minecraft
+	m	(Lnet/minecraft/client/gui/GuiKeyBindingList;)Lnet/minecraft/client/Minecraft;	access$100	access$100	#~, ~, ~, getMinecraftClient
+		p	0	p_access$100_0_	controlsListWidget	#~, ~, ~, controlsListWidget
+	m	(Lnet/minecraft/client/gui/GuiKeyBindingList;)Lnet/minecraft/client/gui/GuiControls;	access$200	access$200	#~, ~, ~, getParent
+		p	0	p_access$200_0_	controlsListWidget	#~, ~, ~, controlsListWidget
+	m	(Lnet/minecraft/client/gui/GuiKeyBindingList;)I	access$300	access$300	#~, ~, ~, getMaxKeyNameLength
+		p	0	p_access$300_0_	controlsListWidget	#~, ~, ~, controlsListWidget

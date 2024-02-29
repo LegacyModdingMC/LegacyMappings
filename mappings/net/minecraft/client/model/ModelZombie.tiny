@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelZombie	net/minecraft/client/model/ModelZombie	
+	m	(FZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1168_1_	modelSize	#modelSize, :, ~, reduction
+		p	2	p_i1168_2_	pivot	#~, ~, ~, pivot
+	m	(FFII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1167_1_	modelSize	#modelSize, :, ~, ~
+		p	2	p_i1167_2_	p_i1167_2_	#~, ~, ~, ~
+		p	3	p_i1167_3_	textureWidthIn	#textureWidthIn, :, ~, ~
+		p	4	p_i1167_4_	textureHeightIn	#textureHeightIn, :, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

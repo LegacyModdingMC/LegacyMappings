@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAITasks	net/minecraft/entity/ai/EntityAITasks	
+	f	Lorg/apache/logging/log4j/Logger;	field_151506_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/List;	field_75782_a	taskEntries	#taskEntries, :, goals, :
+		c	A list of EntityAITaskEntrys in EntityAITasks.
+	f	Ljava/util/List;	field_75780_b	executingTaskEntries	#executingTaskEntries, :, ~, activeGoals
+		c	A list of EntityAITaskEntrys that are currently being executed.
+	f	Lnet/minecraft/profiler/Profiler;	field_75781_c	theProfiler	#theProfiler, profiler, :, :
+		c	Instance of Profiler.
+	f	I	field_75778_d	tickCount	#tickCount, :, ~, ticks
+	f	I	field_75779_e	tickRate	#tickRate, :, timeInterval, constantThree
+	m	(Lnet/minecraft/profiler/Profiler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1628_1_	profilerIn	#profilerIn, :, profiler, :
+	m	()V	func_75774_a	onUpdateTasks	#onUpdateTasks, :, tick, :
+	m	(ILnet/minecraft/entity/ai/EntityAIBase;)V	func_75776_a	addTask	#addTask, :, add, addGoal
+		c	Add a now AITask. Args : priority, task
+		p	1	p_75776_1_	priority	#priority, :, :, :
+		p	2	p_75776_2_	task	#task, :, goal, :
+	m	(Lnet/minecraft/entity/ai/EntityAIBase;)V	func_85156_a	removeTask	#removeTask, :, ~, removeGoal
+		c	removes the indicated task from the entity's AI tasks.
+		p	1	p_85156_1_	task	#task, :, goal, :
+	m	(Lnet/minecraft/entity/ai/EntityAITasks$EntityAITaskEntry;)Z	func_75773_a	canContinue	#canContinue, :, ~, canContinue
+		c	Determine if a specific AI Task should continue being executed.
+		p	1	p_75773_1_	taskEntry	#taskEntry, :, ~, goalListEntry
+	m	(Lnet/minecraft/entity/ai/EntityAITasks$EntityAITaskEntry;Lnet/minecraft/entity/ai/EntityAITasks$EntityAITaskEntry;)Z	func_75777_a	areTasksCompatible	#areTasksCompatible, :, ~, differentControlBits
+		c	Returns whether two EntityAITaskEntries can be executed concurrently
+		p	1	p_75777_1_	taskEntry1	#taskEntry1, :, ~, goalListEntry1
+		p	2	p_75777_2_	taskEntry2	#taskEntry2, :, ~, goalListEntry2
+	m	(Lnet/minecraft/entity/ai/EntityAITasks$EntityAITaskEntry;)Z	func_75775_b	canUse	#canUse, :, ~, canUse
+		c	Determine if a specific AI Task can be executed, which means that all running higher (= lower int value) priority tasks are compatible with it or all lower priority tasks can be interrupted.
+		p	1	p_75775_1_	taskEntry	#taskEntry, :, ~, goalListEntry
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/ClientBrandRetriever	net/minecraft/client/ClientBrandRetriever	
+	m	()Ljava/lang/String;	getClientModName	getClientModName	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,23 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IChatComponent	net/minecraft/util/IChatComponent	
+	m	()Ljava/util/List;	func_150253_a	getSiblings	#getSiblings, :, :, :
+		c	Gets the sibling components of this one.
+	m	(Lnet/minecraft/util/IChatComponent;)Lnet/minecraft/util/IChatComponent;	func_150257_a	appendSibling	#appendSibling, :, append, :
+		c	Appends the given component to the end of this one.
+		p	1	p_150257_1_	component	#component, :, text, :
+	m	(Lnet/minecraft/util/ChatStyle;)Lnet/minecraft/util/IChatComponent;	func_150255_a	setChatStyle	#setChatStyle, setStyle, :, :
+		c	Sets the style of this component and updates the parent style of all of the sibling components.
+		p	1	p_150255_1_	style	#style, :, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/util/IChatComponent;	func_150258_a	appendText	#appendText, :, append, :
+		c	Appends the given text to the end of this component.
+		p	1	p_150258_1_	text	#text, :, :, :
+	m	()Lnet/minecraft/util/ChatStyle;	func_150256_b	getChatStyle	#getChatStyle, getStyle, :, :
+		c	Gets the style of this component. Returns a direct reference; changes to this style will modify the style of this component (IE, there is no need to call {@link #setStyle(Style)} again after modifying it).\n \nIf this component's style is currently <code>null</code>, it will be initialized to the default style, and the parent style of all sibling components will be set to that style. (IE, changes to this style will also be reflected in sibling components.)\n \nThis method never returns <code>null</code>.
+	m	()Ljava/lang/String;	func_150260_c	getUnformattedText	#getUnformattedText, :, asUnformattedString, getString
+		c	Gets the text of this component, without any special formatting codes added.  TODO: why is this two different methods?
+	m	()Ljava/lang/String;	func_150254_d	getFormattedText	#getFormattedText, :, asFormattedString, getFormattedString
+		c	Gets the text of this component, with formatting codes added for rendering.
+	m	()Ljava/lang/String;	func_150261_e	getUnformattedTextForChat	#getUnformattedTextForChat, getUnformattedComponentText, computeValue, getContent
+		c	Gets the text of this component, without any special formatting codes added, for chat.  TODO: why is this two different methods?
+	m	()Lnet/minecraft/util/IChatComponent;	func_150259_f	createCopy	#createCopy, :, copy, :
+		c	Creates a copy of this component.  Almost a deep copy, except the style is shallow-copied.

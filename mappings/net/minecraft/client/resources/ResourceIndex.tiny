@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourceIndex	net/minecraft/client/resources/ResourceIndex	
+	f	Lorg/apache/logging/log4j/Logger;	field_152783_a	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Map;	field_152784_b	resourceMap	#resourceMap, :, index, :
+	m	(Ljava/io/File;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1047_1_	assetsFolder	#assetsFolder, :, assetsDir, dir
+		p	2	p_i1047_2_	indexName	#indexName, :, version, index
+	m	()Ljava/util/Map;	func_152782_a	getResourceMap	#getResourceMap, :, getIndex, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

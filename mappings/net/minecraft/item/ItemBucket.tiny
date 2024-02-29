@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemBucket	net/minecraft/item/ItemBucket	
+	f	Lnet/minecraft/block/Block;	field_77876_a	isFull	#isFull, containedBlock, fluid, liquid
+		c	field for checking if the bucket has been filled.
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45331_1_	containedBlock	#containedBlock, containedBlockIn, fluid, liquid
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/item/Item;)Lnet/minecraft/item/ItemStack;	func_150910_a	fillBucket	#fillBucket, :, fill, :
+		p	1	p_150910_1_	emptyBuckets	#emptyBuckets, :, stack, :
+		p	2	p_150910_2_	player	#player, :, :, :
+		p	3	p_150910_3_	fullBucket	#fullBucket, :, item, :
+	m	(Lnet/minecraft/world/World;III)Z	func_77875_a	tryPlaceContainedLiquid	#tryPlaceContainedLiquid, :, ~, place
+		c	Attempts to place the liquid contained inside the bucket.
+		p	1	p_77875_1_	world	#~, ~, ~, world
+		p	2	p_77875_2_	x	#~, ~, ~, x
+		p	3	p_77875_3_	y	#~, ~, ~, y
+		p	4	p_77875_4_	z	#~, ~, ~, z

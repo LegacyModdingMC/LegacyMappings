@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderWolf	net/minecraft/client/renderer/entity/RenderWolf	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110917_a	wolfTextures	#wolfTextures, WOLF_TEXTURES, WOLF_TEX, WOLF_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110915_f	tamedWolfTextures	#tamedWolfTextures, TAMED_WOLF_TEXTURES, WOLF_TAME, TAME_WOLF_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110916_g	anrgyWolfTextures	#anrgyWolfTextures, ANRGY_WOLF_TEXTURES, WOLF_ANGRY, ANGRY_WOLF_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110918_h	wolfCollarTextures	#wolfCollarTextures, :, ~, WOLF_COLLAR_LOCATION
+	m	(Lnet/minecraft/client/model/ModelBase;Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1269_1_	wolfModel	#~, ~, ~, wolfModel
+		p	2	p_i1269_2_	dogModel	#~, ~, ~, dogModel
+		p	3	p_i1269_3_	shadowSize	#~, ~, ~, shadowSize
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

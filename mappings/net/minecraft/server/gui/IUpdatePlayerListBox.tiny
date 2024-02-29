@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/gui/IUpdatePlayerListBox	net/minecraft/server/gui/IUpdatePlayerListBox	
+	m	()V	func_73660_a	update	#update, :, tick, :
+		c	Updates the JList with a new model.

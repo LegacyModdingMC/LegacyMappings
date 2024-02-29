@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/NetHandlerLoginClient	net/minecraft/client/network/NetHandlerLoginClient	
+	f	Lorg/apache/logging/log4j/Logger;	field_147396_a	logger	#logger, LOGGER, :, :
+	f	Lnet/minecraft/client/Minecraft;	field_147394_b	mc	#mc, :, client, minecraft
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_147395_c	previousGuiScreen	#previousGuiScreen, :, parent, screen
+	f	Lnet/minecraft/network/NetworkManager;	field_147393_d	networkManager	#networkManager, :, connection, :
+	m	(Lnet/minecraft/network/NetworkManager;Lnet/minecraft/client/Minecraft;Lnet/minecraft/client/gui/GuiScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45059_1_	networkManagerIn	#networkManagerIn, :, connection, :
+		p	2	p_i45059_2_	mcIn	#mcIn, :, client, minecraft
+		p	3	p_i45059_3_	previousScreenIn	#previousScreenIn, :, parent, screen
+	m	(Lnet/minecraft/client/network/NetHandlerLoginClient;)Lnet/minecraft/network/NetworkManager;	access$000	access$000	#~, ~, ~, getConnection
+		p	0	p_access$000_0_	connector	#~, ~, ~, connector
+	m	()Lcom/mojang/authlib/minecraft/MinecraftSessionService;	func_147391_c	getSessionService	#getSessionService, :, :, createAuthenticationService
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

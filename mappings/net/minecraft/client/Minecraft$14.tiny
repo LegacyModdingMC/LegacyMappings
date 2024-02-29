@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/Minecraft$14	net/minecraft/client/Minecraft$14	
+	f	Lnet/minecraft/client/Minecraft;	field_151425_a	field_151425_a	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/Minecraft;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45002_1_	mcIn	#mcIn, :, client, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

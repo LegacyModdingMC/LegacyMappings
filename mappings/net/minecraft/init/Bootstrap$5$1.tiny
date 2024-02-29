@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/init/Bootstrap$5$1	net/minecraft/init/Bootstrap$5$1	
+	f	Lnet/minecraft/item/ItemStack;	field_150836_b	stack	#~, ~, ~, stack
+	f	Lnet/minecraft/init/Bootstrap$5;	field_150837_c	parent	#~, ~, ~, parent
+	m	(Lnet/minecraft/init/Bootstrap$5;Lnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45277_1_	p_i45277_1_	#~, ~, ~, ~
+		p	2	p_i45277_2_	p_i45277_2_	#~, ~, ~, ~

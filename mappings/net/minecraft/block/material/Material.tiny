@@ -1,0 +1,90 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/material/Material	net/minecraft/block/material/Material	
+	f	Lnet/minecraft/block/material/Material;	field_151570_A	cactus	#cactus, CACTUS, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151571_B	clay	#clay, CLAY, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151572_C	gourd	#gourd, GOURD, PUMPKIN, :
+	f	Lnet/minecraft/block/material/Material;	field_151566_D	dragonEgg	#dragonEgg, DRAGON_EGG, EGG, :
+	f	Lnet/minecraft/block/material/Material;	field_151567_E	portal	#portal, PORTAL, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151568_F	cake	#cake, CAKE, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151569_G	web	#web, WEB, COBWEB, :
+	f	Lnet/minecraft/block/material/Material;	field_76233_E	piston	#piston, PISTON, :, :
+		c	Pistons' material.
+	f	Z	field_76235_G	canBurn	#canBurn, :, burnable, flammable
+		c	Bool defining if the block can burn or not.
+	f	Z	field_76239_H	replaceable	#replaceable, :, :, :
+		c	Determines whether blocks with this material can be "overwritten" by other blocks when placed - eg snow, vines and tall grass.
+	f	Z	field_76240_I	isTranslucent	#isTranslucent, :, requiresSilkTouch, translucent
+		c	Indicates if the material is translucent
+	f	Lnet/minecraft/block/material/MapColor;	field_76234_F	materialMapColor	#materialMapColor, :, color, :
+		c	The color index used to draw the blocks of this material on maps.
+	f	Z	field_76241_J	requiresNoTool	#requiresNoTool, :, blocksMovement, toolNotRequired
+		c	Determines if the material can be harvested without a tool (or with the wrong tool)
+	f	I	field_76242_K	mobilityFlag	#mobilityFlag, pushReaction, pistonInteractionType, pistonMoveBehavior
+		c	Mobility information flag. 0 indicates that this block is normal, 1 indicates that it can't push other blocks, 2 indicates that it can't be pushed.
+	f	Z	field_85159_M	isAdventureModeExempt	#isAdventureModeExempt, :, canBeBrokenInAdventureMode, :
+	f	Lnet/minecraft/block/material/Material;	field_151579_a	air	#air, AIR, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151577_b	grass	#grass, GRASS, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151578_c	ground	#ground, GROUND, DIRT, :
+	f	Lnet/minecraft/block/material/Material;	field_151575_d	wood	#wood, WOOD, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151576_e	rock	#rock, ROCK, STONE, :
+	f	Lnet/minecraft/block/material/Material;	field_151573_f	iron	#iron, IRON, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151574_g	anvil	#anvil, ANVIL, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151586_h	water	#water, WATER, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151587_i	lava	#lava, LAVA, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151584_j	leaves	#leaves, LEAVES, FOILAGE, LEAVES
+	f	Lnet/minecraft/block/material/Material;	field_151585_k	plants	#plants, PLANTS, PLANT, :
+	f	Lnet/minecraft/block/material/Material;	field_151582_l	vine	#vine, VINE, REPLACEABLE_PLANT, :
+	f	Lnet/minecraft/block/material/Material;	field_151583_m	sponge	#sponge, SPONGE, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151580_n	cloth	#cloth, CLOTH, WOOL, :
+	f	Lnet/minecraft/block/material/Material;	field_151581_o	fire	#fire, FIRE, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151595_p	sand	#sand, SAND, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151594_q	circuits	#circuits, CIRCUITS, DECORATION, :
+	f	Lnet/minecraft/block/material/Material;	field_151593_r	carpet	#carpet, CARPET, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151592_s	glass	#glass, GLASS, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151591_t	redstoneLight	#redstoneLight, REDSTONE_LIGHT, REDSTONE_LAMP, :
+	f	Lnet/minecraft/block/material/Material;	field_151590_u	tnt	#tnt, TNT, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151589_v	coral	#coral, CORAL, SWORD, CORAL
+	f	Lnet/minecraft/block/material/Material;	field_151588_w	ice	#ice, ICE, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151598_x	packedIce	#packedIce, PACKED_ICE, :, :
+	f	Lnet/minecraft/block/material/Material;	field_151597_y	snow	#snow, SNOW, SNOW_LAYER, :
+	f	Lnet/minecraft/block/material/Material;	field_151596_z	craftedSnow	#craftedSnow, CRAFTED_SNOW, SNOW, :
+		c	The material for crafted snow.
+	m	(Lnet/minecraft/block/material/MapColor;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2116_1_	color	#color, :, :, :
+	m	()Z	func_76220_a	isSolid	#isSolid, :, :, :
+		c	Returns true if the block is a considered solid. This is true by default.
+	m	()Z	func_76228_b	getCanBlockGrass	#getCanBlockGrass, blocksLight, isTransluscent, isOpaque
+		c	Will prevent grass from growing on dirt underneath and kill any grass below it if it returns true
+	m	()Z	func_76230_c	blocksMovement	#blocksMovement, :, :, :
+		c	Returns if this material is considered solid or not
+	m	()Z	func_76224_d	isLiquid	#isLiquid, :, isFluid, isLiquid
+		c	Returns if blocks of these materials are liquids.
+	m	()Lnet/minecraft/block/material/Material;	func_76221_f	setRequiresTool	#setRequiresTool, :, requiresTool, setRequiresTool
+		c	Makes blocks with this material require the correct tool to be harvested.
+	m	()Lnet/minecraft/block/material/Material;	func_76226_g	setBurning	#setBurning, :, setFlammable, :
+		c	Set the canBurn bool to True and return the current object.
+	m	()Z	func_76217_h	getCanBurn	#getCanBurn, :, isBurnable, isFlammable
+		c	Returns if the block can burn or not.
+	m	()Lnet/minecraft/block/material/Material;	func_76231_i	setReplaceable	#setReplaceable, :, :, :
+		c	Sets {@link #replaceable} to true.
+	m	()Z	func_76222_j	isReplaceable	#isReplaceable, :, :, :
+		c	Returns whether the material can be replaced by other blocks when placed - eg snow, vines and tall grass.
+	m	()Z	func_76218_k	isOpaque	#isOpaque, :, :, isSolidBlocking
+		c	Indicate if the material is opaque
+	m	()Z	func_76229_l	isToolNotRequired	#isToolNotRequired, :, doesBlockMovement, isToolNotRequired
+		c	Returns true if the material can be harvested without a tool (or with the wrong tool)
+	m	()I	func_76227_m	getMaterialMobility	#getMaterialMobility, :, getPistonInteractionType, getPistonMoveBehavior
+		c	Returns the mobility information of the material, 0 = free, 1 = can't push but can move over, 2 = total immobility and stop pistons.
+	m	()Lnet/minecraft/block/material/Material;	func_76219_n	setNoPushMobility	#setNoPushMobility, :, setNoPushing, setDestroyOnPistonMove
+		c	This type of material can't be pushed, but pistons can move over it.
+	m	()Lnet/minecraft/block/material/Material;	func_76225_o	setImmovableMobility	#setImmovableMobility, :, setImmovable, setBlocksPistonMove
+		c	This type of material can't be pushed, and pistons are blocked to move.
+	m	()Lnet/minecraft/block/material/Material;	func_85158_p	setAdventureModeExempt	#setAdventureModeExempt, :, setCanBeBrokenInAdventureMode, :
+		c	@see #isAdventureModeExempt()
+	m	()Z	func_85157_q	isAdventureModeExempt	#isAdventureModeExempt, :, canBeBrokenIndAdventureMode, canBeBrokenInAdventureMode
+		c	Returns true if blocks with this material can always be mined in adventure mode.
+	m	()Lnet/minecraft/block/material/MapColor;	func_151565_r	getMaterialMapColor	#getMaterialMapColor, :, getColor, :
+		c	Retrieves the color index of the block. This is is the same color used by vanilla maps to represent this block.
+	m	()Lnet/minecraft/block/material/Material;	func_76223_p	setTranslucent	#setTranslucent, :, requiresSilkTouch, setTranslucent
+		c	Marks the material as translucent
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

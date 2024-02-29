@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/tileentity/TileEntitySignRenderer	net/minecraft/client/renderer/tileentity/TileEntitySignRenderer	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147513_b	SIGN_TEXTURE	#SIGN_TEXTURE, :, TEXTURE, BACKGROUND_LOCATION
+	f	Lnet/minecraft/client/model/ModelSign;	field_147514_c	model	#model, :, :, :
+		c	The ModelSign instance for use in this renderer
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

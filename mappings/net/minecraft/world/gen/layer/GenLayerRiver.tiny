@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerRiver	net/minecraft/world/gen/layer/GenLayerRiver	
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i2128_3_	parent	#~, ~, layer, parent
+		p	1	p_i2128_1_	seed	#~, ~, ~, seed
+	m	(I)I	func_151630_c	riverFilter	#riverFilter, :, ~, makeCurves
+		p	1	p_151630_1_	value	#~, ~, ~, value

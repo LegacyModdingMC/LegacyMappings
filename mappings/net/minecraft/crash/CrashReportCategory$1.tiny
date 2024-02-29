@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/crash/CrashReportCategory$1	net/minecraft/crash/CrashReportCategory$1	
+	f	I	field_85080_a	blockID	#blockID, :, id, blockId
+	f	Lnet/minecraft/block/Block;	field_147151_b	block	#~, ~, ~, block
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(ILnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45125_1_	p_i45125_1_	#~, ~, ~, ~
+		p	2	p_i45125_2_	p_i45125_2_	#~, ~, ~, ~

@@ -1,0 +1,137 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityLiving	net/minecraft/entity/EntityLiving	
+	f	I	field_70757_a	livingSoundTime	#livingSoundTime, :, ambientSoundChance, ambientSoundDelay
+		c	Number of ticks since this EntityLiving last produced its sound
+	f	I	field_70728_aV	experienceValue	#experienceValue, :, experiencePoints, :
+		c	The experience points the Entity gives.
+	f	Lnet/minecraft/entity/ai/EntityJumpHelper;	field_70767_i	jumpHelper	#jumpHelper, :, jumpControl, :
+		c	Entity jumping helper
+	f	Lnet/minecraft/entity/EntityBodyHelper;	field_70762_j	bodyHelper	#bodyHelper, :, bodyControl, :
+	f	Lnet/minecraft/pathfinding/PathNavigate;	field_70699_by	navigator	#navigator, :, navigation, entityNavigation
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_70696_bz	attackTarget	#attackTarget, :, :, targetEntity
+		c	The active target the Task system uses for tracking
+	f	Lnet/minecraft/entity/ai/EntitySenses;	field_70723_bA	senses	#senses, :, visbilityCache, mobVisibilityCache
+	f	[Lnet/minecraft/item/ItemStack;	field_82182_bS	equipment	#equipment, :, armorInventory, inventorySlots
+		c	Equipment (armor and held item) for this entity.
+	f	Z	field_82172_bs	canPickUpLoot	#canPickUpLoot, :, pickUpLoot, canPickupLoot
+		c	Whether this entity can pick up items from the ground.
+	f	Z	field_82179_bU	persistenceRequired	#persistenceRequired, :, persistent, :
+		c	Whether this entity should NOT despawn.
+	f	Lnet/minecraft/entity/Entity;	field_70776_bF	currentTarget	#currentTarget, :, ~, currentTarget
+		c	This entity's current target.
+	f	Z	field_110169_bv	isLeashed	#isLeashed, :, leashed, isLeashed
+	f	Lnet/minecraft/entity/Entity;	field_110168_bw	leashedToEntity	#leashedToEntity, leashHolder, leashOwner, holdingEntity
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_110170_bx	leashNBTTag	#leashNBTTag, :, leash, leashNbt
+	f	Lnet/minecraft/entity/ai/EntityAITasks;	field_70714_bg	tasks	#tasks, :, goals, goalSelector
+		c	Passive tasks (wandering, look, idle, ...)
+	f	Lnet/minecraft/entity/ai/EntityAITasks;	field_70715_bh	targetTasks	#targetTasks, :, attackGoals, targetSelector
+		c	Fighting tasks (used by monsters, wolves, ocelots)
+	f	[F	field_82174_bp	equipmentDropChances	#equipmentDropChances, inventoryHandsDropChances, armorDropChances, inventoryDropChances
+		c	Chances for each equipment piece from dropping when this entity dies.
+	f	F	field_70698_bv	defaultPitch	#defaultPitch, :, ~, standardPitch
+	f	I	field_70700_bx	numTicksToChaseTarget	#numTicksToChaseTarget, :, ~, angryCountdown
+		c	How long to keep a specific target entity
+	f	Lnet/minecraft/entity/ai/EntityLookHelper;	field_70749_g	lookHelper	#lookHelper, :, lookControl, :
+	f	Lnet/minecraft/entity/ai/EntityMoveHelper;	field_70765_h	moveHelper	#moveHelper, :, entityMotionHelper, motionControl
+	m	(IF)V	func_96120_a	setEquipmentDropChance	#setEquipmentDropChance, :, ~, setInventoryDropChances
+		p	1	p_96120_1_	slotIn	#slotIn, :, ~, arrayIndex
+		p	2	p_96120_2_	chance	#chance, :, ~, value
+	m	(II)Lnet/minecraft/item/Item;	func_82161_a	getArmorItemForSlot	#getArmorItemForSlot, :, getArmorItem, getEquipmentForSlot
+		c	Params: Armor slot, Item tier
+		p	0	p_82161_0_	armorSlot	#armorSlot, :, part, slot
+		p	1	p_82161_1_	itemTier	#itemTier, :, material, equipmentLevel
+	m	(Ljava/lang/Class;)Z	func_70686_a	canAttackClass	#canAttackClass, :, canAttackEntity, :
+		c	Returns true if this entity can attack entities of the specified class.
+		p	1	p_70686_1_	cls	#cls, :, clazz, entityClass
+	m	(Ljava/lang/String;)V	func_94058_c	setCustomNameTag	#setCustomNameTag, :, ~, setCustomName
+		p	1	p_94058_1_	name	#~, ~, ~, name
+	m	(Lnet/minecraft/entity/Entity;FF)V	func_70625_a	faceEntity	#faceEntity, :, lookAtEntity, :
+		c	Changes pitch and yaw so that the entity calling the function is facing the entity provided as an argument.
+		p	1	p_70625_1_	entityIn	#entityIn, :, targetEntity, target
+		p	2	p_70625_2_	maxYawIncrease	#maxYawIncrease, :, maxYawChange, :
+		p	3	p_70625_3_	maxPitchIncrease	#maxPitchIncrease, :, maxPitchChange, :
+	m	(Lnet/minecraft/entity/IEntityLivingData;)Lnet/minecraft/entity/IEntityLivingData;	func_110161_a	onSpawnWithEgg	#onSpawnWithEgg, :, ~, initialize
+		p	1	p_110161_1_	entityData	#~, ~, ~, entityData
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_70085_c	interact	#interact, :, ~, interactMob
+		c	Called when a player interacts with a mob. e.g. gets milk from a cow, gets into the saddle on a pig.
+		p	1	p_70085_1_	player	#player, :, ~, player
+	m	(ZZ)V	func_110160_i	clearLeashed	#clearLeashed, :, detachLeash, :
+		c	Removes the leash from this entity. Second parameter tells whether to send a packet to surrounding players.
+		p	1	p_110160_1_	sendPacket	#sendPacket, :, :, :
+		p	2	p_110160_2_	dropLead	#dropLead, :, ~, dropItem
+	m	(FFF)F	func_70663_b	updateRotation	#updateRotation, :, changeAngle, :
+		c	Arguments: current rotation, intended rotation, max increment.
+		p	1	p_70663_1_	angle	#angle, :, oldAngle, :
+		p	2	p_70663_2_	targetAngle	#targetAngle, :, newAngle, :
+		p	3	p_70663_3_	maxIncrease	#maxIncrease, :, maxChangeInAngle, :
+	m	(Lnet/minecraft/item/ItemStack;)I	func_82159_b	getArmorPosition	#getArmorPosition, :, getEquipableSlot, getSlotForEquipment
+		p	0	p_82159_0_	stack	#stack, :, :, equipment
+	m	(Lnet/minecraft/entity/Entity;Z)V	func_110162_b	setLeashedToEntity	#setLeashedToEntity, setLeashHolder, attachLeash, :
+		c	Sets the entity to be leashed to.\nArgs:\n@param par1Entity: The entity to be tethered to.\n@param par2: Whether to send an attaching notification packet to surrounding players.
+		p	1	p_110162_1_	entityIn	#entityIn, :, entity, :
+		p	2	p_110162_2_	sendAttachNotification	#sendAttachNotification, :, ~, sendPacket
+	m	()I	func_70641_bl	getMaxSpawnedInChunk	#getMaxSpawnedInChunk, :, getLimitPerChunk, :
+		c	Will return how many at most can spawn in a chunk at once.
+	m	()V	func_82164_bB	addRandomArmor	#addRandomArmor, addRandomDrop, ~, initSpawningEquipment
+		c	Makes entity wear random armor based on difficulty
+	m	()V	func_82162_bC	enchantEquipment	#enchantEquipment, :, ~, enchantEquipmentItemStack
+		c	Enchants the entity's armor and held item based on difficulty
+	m	()Z	func_82171_bF	canBeSteered	#canBeSteered, :, canBeControlledByRider, :
+		c	returns true if all the conditions for steering the entity are met. For pigs, this is true if it is being ridden by a player and the player is holding a carrot-on-a-stick
+	m	()V	func_110163_bv	enablePersistence	#enablePersistence, :, setPersistent, :
+		c	Enable the Entity persistence
+	m	()Ljava/lang/String;	func_94057_bL	getCustomNameTag	#getCustomNameTag, :, ~, getCustomName
+	m	()Z	func_94056_bM	hasCustomNameTag	#hasCustomNameTag, :, ~, hasCustomName
+	m	()Z	func_94062_bN	getAlwaysRenderNameTag	#getAlwaysRenderNameTag, :, hasNoAi, getCustomNameVisibility
+	m	()Z	func_98052_bS	canPickUpLoot	#canPickUpLoot, :, :, canPickupLoot
+	m	()Z	func_104002_bU	isNoDespawnRequired	#isNoDespawnRequired, :, isPersistent, :
+		c	Return the persistenceRequired field (whether this entity is allowed to naturally despawn)
+	m	()V	func_110159_bB	updateLeashedState	#updateLeashedState, :, updateLeash, updateLeashStatus
+		c	Applies logic related to leashes, for example dragging the entity or breaking the leash.
+	m	()Z	func_110164_bC	allowLeashing	#allowLeashing, :, isTameable, :
+	m	()Z	func_110167_bD	getLeashed	#getLeashed, :, isLeashed, :
+	m	()Lnet/minecraft/entity/Entity;	func_110166_bE	getLeashedToEntity	#getLeashedToEntity, getLeashHolder, getLeashOwner, getHoldingEntity
+	m	()V	func_110165_bF	recreateLeash	#recreateLeash, :, ~, readLeashNbt
+	m	()Z	func_70601_bi	getCanSpawnHere	#getCanSpawnHere, :, canSpawn, :
+		c	Checks if the entity's current position is a valid location to spawn this entity.
+	m	()F	func_70603_bj	getRenderSizeModifier	#getRenderSizeModifier, :, ~, getShadowScale
+		c	Returns render size modifier
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	func_70624_b	setAttackTarget	#setAttackTarget, :, setTarget, setAttackTarget
+		c	Sets the active target the Task system uses for tracking
+		p	1	p_70624_1_	entitylivingbaseIn	#entitylivingbaseIn, :, target, targetEntity
+	m	(Z)V	func_94061_f	setAlwaysRenderNameTag	#setAlwaysRenderNameTag, setNoAI, setAiDisabled, setCustomNameVisibility
+		c	Set whether this Entity's AI is disabled
+		p	1	p_94061_1_	disable	#disable, :, value, visibility
+	m	(Z)V	func_98053_h	setCanPickUpLoot	#setCanPickUpLoot, :, :, setCanPickupLoot
+		p	1	p_98053_1_	canPickup	#canPickup, :, pickUpLoot, blValue
+	m	()Lnet/minecraft/entity/ai/EntityLookHelper;	func_70671_ap	getLookHelper	#getLookHelper, :, getLookControl, :
+	m	()Lnet/minecraft/entity/ai/EntityMoveHelper;	func_70605_aq	getMoveHelper	#getMoveHelper, :, getMotionHelper, getMovementControl
+	m	()Lnet/minecraft/entity/ai/EntityJumpHelper;	func_70683_ar	getJumpHelper	#getJumpHelper, :, getJumpControl, :
+	m	()Lnet/minecraft/pathfinding/PathNavigate;	func_70661_as	getNavigator	#getNavigator, :, getNavigation, :
+	m	()Lnet/minecraft/entity/ai/EntitySenses;	func_70635_at	getEntitySenses	#getEntitySenses, :, getVisibilityCache, getMobVisibilityCache
+		c	returns the EntitySenses Object for the EntityLiving
+	m	(F)V	func_70657_f	setMoveForward	#setMoveForward, setMoveVertical, setForwardSpeed, setForwardVelocity
+		p	1	p_70657_1_	amount	#amount, :, forwardSpeed, velocity
+	m	()Lnet/minecraft/entity/EntityLivingBase;	func_70638_az	getAttackTarget	#getAttackTarget, :, getTarget, getTargetEntity
+		c	Gets the active target the Task system uses for tracking
+	m	()V	func_70615_aA	eatGrassBonus	#eatGrassBonus, :, onEatingGrass, :
+		c	This function applies the benefits of growing back wool and faster growing up to the acting entity. (This function is used in the AIEatGrass)
+	m	()I	func_70627_aG	getTalkInterval	#getTalkInterval, :, getMinAmbientSoundDelay, :
+		c	Get number of ticks, at least during which the living entity will be silent.
+	m	()V	func_70642_aH	playLivingSound	#playLivingSound, :, playAmbientSound, :
+		c	Plays living's sound at its position
+	m	(I)Lnet/minecraft/item/ItemStack;	func_130225_q	getArmorStack	#~, ~, ~, getArmorStack
+		p	1	p_130225_1_	armorSlot	#~, ~, ~, armorSlot
+	m	()V	func_70656_aK	spawnExplosionParticle	#spawnExplosionParticle, :, playSpawnEffects, doSpawnEffects
+		c	Spawns an explosion particle around the Entity's location
+	m	()Ljava/lang/String;	func_70639_aQ	getLivingSound	#getLivingSound, :, getAmbientSound, :
+		c	Returns the sound this mob makes while it's alive.
+	m	()Lnet/minecraft/item/Item;	func_146068_u	getDropItem	#getDropItem, :, getDefaultDrop, getDefaultDropLoot
+	m	()Z	func_70692_ba	canDespawn	#canDespawn, :, canImmediatelyDespawn, canDespawn
+		c	Determines if an entity can be despawned, used on idle far away entities
+	m	()V	func_70623_bb	despawnEntity	#despawnEntity, :, checkDespawn, :
+		c	Makes the entity despawn if requirements are reached
+	m	()I	func_70646_bf	getVerticalFaceSpeed	#getVerticalFaceSpeed, :, getLookPitchSpeed, :
+		c	The speed it takes to move the entityliving's rotationPitch through the faceEntity method. This is only currently use in wolves.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1595_1_	worldIn	#worldIn, :, ~, ~

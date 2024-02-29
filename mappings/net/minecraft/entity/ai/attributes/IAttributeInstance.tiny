@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/attributes/IAttributeInstance	net/minecraft/entity/ai/attributes/IAttributeInstance	
+	m	()Lnet/minecraft/entity/ai/attributes/IAttribute;	func_111123_a	getAttribute	#getAttribute, :, :, :
+		c	Get the Attribute this is an instance of
+	m	(D)V	func_111128_a	setBaseValue	#setBaseValue, :, :, setBase
+		p	1	p_111128_1_	baseValue	#baseValue, :, :, base
+	m	(Ljava/util/UUID;)Lnet/minecraft/entity/ai/attributes/AttributeModifier;	func_111127_a	getModifier	#getModifier, :, getByUuid, getModifier
+		c	Returns attribute modifier, if any, by the given UUID
+		p	1	p_111127_1_	uuid	#uuid, :, id, :
+	m	(Lnet/minecraft/entity/ai/attributes/AttributeModifier;)V	func_111121_a	applyModifier	#applyModifier, :, addModifier, :
+		p	1	p_111121_1_	modifier	#modifier, :, :, :
+	m	()D	func_111125_b	getBaseValue	#getBaseValue, :, :, getBase
+	m	(Lnet/minecraft/entity/ai/attributes/AttributeModifier;)V	func_111124_b	removeModifier	#removeModifier, :, ~, removeModifier
+		p	1	p_111124_1_	modifier	#modifier, :, :, :
+	m	()Ljava/util/Collection;	func_111122_c	getModifiers	#getModifiers, :, :, :
+	m	()V	func_142049_d	removeAllModifiers	#removeAllModifiers, :, clearModifiers, :
+	m	()D	func_111126_e	getAttributeValue	#getAttributeValue, :, getValue, get

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityDispenser	net/minecraft/tileentity/TileEntityDispenser	
+	f	Ljava/lang/String;	field_146020_a	customName	#customName, :, :, :
+	f	[Lnet/minecraft/item/ItemStack;	field_146022_i	stacks	#stacks, :, items, inventory
+	f	Ljava/util/Random;	field_146021_j	random	#~, ~, ~, random
+	m	(Lnet/minecraft/item/ItemStack;)I	func_146019_a	addItemStack	#addItemStack, :, addToFirstFreeSlot, insertStack
+		c	Add the given ItemStack to this Dispenser. Return the Slot the Item was placed in or -1 if no free slot is available.
+		p	1	p_146019_1_	stack	#stack, :, :, :
+	m	(Ljava/lang/String;)V	func_146018_a	setCustomName	#setCustomName, :, :, :
+		p	1	p_146018_1_	customName	#customName, :, :, name
+	m	()I	func_146017_i	getDispenseSlot	#getDispenseSlot, :, chooseNonEmptySlot, pickNonEmptySlot
+	m	()V	<init>	<init>	#~, ~, ~, ~

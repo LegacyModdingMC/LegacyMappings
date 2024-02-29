@@ -1,0 +1,64 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiMainMenu	net/minecraft/client/gui/GuiMainMenu	
+	f	[Lnet/minecraft/util/ResourceLocation;	field_73978_o	titlePanoramaPaths	#titlePanoramaPaths, TITLE_PANORAMA_PATHS, PANORAMA_CUBE_FACES, PANORAMA_LOCATIONS
+		c	An array of all the paths to the panorama pictures.
+	f	I	field_92024_r	openGLWarning2Width	#openGLWarning2Width, :, oldGl2Width, warningTextWidth
+		c	Width of openGLWarning2
+	f	I	field_92023_s	openGLWarning1Width	#openGLWarning1Width, :, oldGl1Width, outdatedGpuTextWidth
+		c	Width of openGLWarning1
+	f	I	field_92022_t	openGLWarningX1	#openGLWarningX1, :, oldGlLeft, x1
+		c	Left x coordinate of the OpenGL warning
+	f	I	field_92021_u	openGLWarningY1	#openGLWarningY1, :, oldGlTop, y1
+		c	Top y coordinate of the OpenGL warning
+	f	I	field_92020_v	openGLWarningX2	#openGLWarningX2, :, oldGlRight, x2
+		c	Right x coordinate of the OpenGL warning
+	f	I	field_92019_w	openGLWarningY2	#openGLWarningY2, :, oldGlBottom, y2
+		c	Bottom y coordinate of the OpenGL warning
+	f	Lnet/minecraft/util/ResourceLocation;	field_110351_G	backgroundTexture	#backgroundTexture, :, backgroundTextureId, backgroundLocation
+	f	Ljava/lang/String;	field_96138_a	MORE_INFO_TEXT	#MORE_INFO_TEXT, :, MORE_INFO_MESSAGE, MORE_INFO
+	f	Lorg/apache/logging/log4j/Logger;	field_146974_g	logger	#logger, LOGGER, :, :
+	f	Ljava/util/Random;	field_73976_a	rand	#rand, :, RANDOM, :
+		c	The RNG used by the Main Menu Screen.
+	f	F	field_73974_b	updateCounter	#updateCounter, minceraftRoll, minceraftRandomNumber, randomFloat
+		c	Counts the number of screen updates.
+	f	Ljava/lang/String;	field_73975_c	splashText	#splashText, :, :, :
+		c	The splash message.
+	f	Lnet/minecraft/client/gui/GuiButton;	field_73973_d	buttonResetDemo	#buttonResetDemo, :, resetDemoButton, buttonResetDemo
+	f	I	field_73979_m	panoramaTimer	#panoramaTimer, :, ticks, time
+		c	Timer used to rotate the panorama, increases every tick.
+	f	Lnet/minecraft/client/renderer/texture/DynamicTexture;	field_73977_n	viewportTexture	#viewportTexture, :, backgroundTexture, defualtBackgroundImage
+		c	Texture allocated for the current viewport of the main menu's panorama background.
+	f	Ljava/lang/Object;	field_104025_t	threadLock	#threadLock, :, mutex, threadedLock
+		c	The Object object utilized as a thread lock when performing non thread-safe operations
+	f	Ljava/lang/String;	field_92025_p	openGLWarning1	#openGLWarning1, :, oldGl1, outdatedGpuWarning
+		c	OpenGL graphics card warning.
+	f	Ljava/lang/String;	field_146972_A	openGLWarning2	#openGLWarning2, :, oldGl2, warningInfo
+		c	OpenGL graphics card warning.
+	f	Ljava/lang/String;	field_104024_v	openGLWarningLink	#openGLWarningLink, :, oldGlLink, warningInfoLink
+		c	Link to the Mojang Support about minimum requirements
+	f	Lnet/minecraft/util/ResourceLocation;	field_110353_x	splashTexts	#splashTexts, SPLASH_TEXTS, SPLASHES, SPLASHES_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110352_y	minecraftTitleTextures	#minecraftTitleTextures, MINECRAFT_TITLE_TEXTURES, MINECRAFT_TITLE_TEXTURE, TITLE_LOCATION
+	m	()V	func_140005_i	switchToRealms	#switchToRealms, :, :, ~
+	m	(F)V	func_73968_a	rotateAndBlurSkybox	#rotateAndBlurSkybox, :, transformPanorama, drawBackgroundImage
+		c	Rotate and blurs the skybox view in the main menu
+		p	1	p_73968_1_	partialTicks	#partialTicks, :, tickDelta, :
+	m	(II)V	func_73969_a	addSingleplayerMultiplayerButtons	#addSingleplayerMultiplayerButtons, :, initWidgetsNormal, :
+		c	Adds Singleplayer and Multiplayer buttons on Main Menu for players who have bought the game.
+		p	1	p_73969_1_	height	#~, ~, y, height
+		p	2	p_73969_2_	offset	#~, ~, spacingY, offset
+	m	(IIF)V	func_73970_b	drawPanorama	#drawPanorama, :, renderPanorama, drawBackgroundBase
+		c	Draws the main menu panorama
+		p	1	p_73970_1_	mouseX	#mouseX, :, :, :
+		p	2	p_73970_2_	mouseY	#mouseY, :, :, :
+		p	3	p_73970_3_	partialTicks	#partialTicks, :, tickDelta, tickdelta
+	m	(II)V	func_73972_b	addDemoButtons	#addDemoButtons, :, initWidgetsDemo, :
+		c	Adds Demo buttons on Main Menu for players who are playing Demo.
+		p	1	p_73972_1_	y	#~, ~, y, :
+		p	2	p_73972_2_	spacingY	#~, ~, spacingY, :
+	m	(IIF)V	func_73971_c	renderSkybox	#renderSkybox, :, renderBackground, drawBackground
+		c	Renders the skybox in the main menu
+		p	1	p_73971_1_	mouseX	#mouseX, :, :, :
+		p	2	p_73971_2_	mouseY	#mouseY, :, :, :
+		p	3	p_73971_3_	partialTicks	#partialTicks, :, tickDelta, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

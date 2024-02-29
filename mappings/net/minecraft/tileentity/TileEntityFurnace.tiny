@@ -1,0 +1,35 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityFurnace	net/minecraft/tileentity/TileEntityFurnace	
+	f	I	field_145956_a	furnaceBurnTime	#furnaceBurnTime, :, fuelTime, :
+		c	The number of ticks that the furnace will keep burning
+	f	I	field_145963_i	currentItemBurnTime	#currentItemBurnTime, :, totalFuelTime, :
+		c	The number of ticks that a fresh copy of the currently-burning item would keep the furnace burning for
+	f	I	field_145961_j	furnaceCookTime	#furnaceCookTime, :, ~, cookTime
+		c	The number of ticks that the current item has been cooking for
+	f	[I	field_145962_k	slotsTop	#slotsTop, SLOTS_TOP, inputs, INVENTORY_SLOTS_TOP
+	f	[I	field_145959_l	slotsBottom	#slotsBottom, SLOTS_BOTTOM, outputs, INVENTORY_SLOTS_BOTTOM
+	f	[I	field_145960_m	slotsSides	#slotsSides, SLOTS_SIDES, fuelInputs, INVENTORY_SLOTS_SIDES
+	f	[Lnet/minecraft/item/ItemStack;	field_145957_n	furnaceItemStacks	#furnaceItemStacks, :, stacks, inventory
+		c	The ItemStacks that hold the items currently being used in the furnace
+	f	Ljava/lang/String;	field_145958_o	furnaceCustomName	#furnaceCustomName, :, customName, :
+	m	(Lnet/minecraft/item/ItemStack;)I	func_145952_a	getItemBurnTime	#getItemBurnTime, :, getBurnTime, getFuelTime
+		c	Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't fuel
+		p	0	p_145952_0_	stack	#stack, :, :, :
+	m	(Ljava/lang/String;)V	func_145951_a	setCustomInventoryName	#setCustomInventoryName, :, setCustomName, :
+		p	1	p_145951_1_	name	#~, ~, name, :
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_145954_b	isItemFuel	#isItemFuel, :, isFuel, :
+		p	0	p_145954_0_	stack	#stack, :, :, :
+	m	(I)I	func_145953_d	getCookProgressScaled	#getCookProgressScaled, :, ~, getCookProgress
+		c	Returns an integer between 0 and the passed value representing how close the current item is to being completely cooked
+		p	1	p_145953_1_	range	#~, ~, ~, range
+	m	(I)I	func_145955_e	getBurnTimeRemainingScaled	#getBurnTimeRemainingScaled, :, ~, getLitProgress
+		c	Returns an integer between 0 and the passed value representing how much burn time is left on the current fuel item, where 0 means that the item is exhausted and the passed value means that the item is fresh
+		p	1	p_145955_1_	range	#~, ~, ~, range
+	m	()Z	func_145950_i	isBurning	#isBurning, :, isFueled, hasFuel
+		c	Furnace isBurning
+	m	()V	func_145949_j	smeltItem	#smeltItem, :, craftRecipe, finishCooking
+		c	Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack
+	m	()Z	func_145948_k	canSmelt	#canSmelt, :, canAcceptRecipeOutput, canCook
+		c	Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

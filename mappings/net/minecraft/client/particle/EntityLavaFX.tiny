@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityLavaFX	net/minecraft/client/particle/EntityLavaFX	
+	f	F	field_70586_a	lavaParticleScale	#lavaParticleScale, :, prevScale, baseScale
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1215_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1215_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1215_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1215_6_	zCoordIn	#zCoordIn, :, ~, ~

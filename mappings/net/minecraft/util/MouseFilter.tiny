@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MouseFilter	net/minecraft/util/MouseFilter	
+	f	F	field_76336_a	targetValue	#targetValue, :, actualSum, :
+	f	F	field_76334_b	remainingValue	#remainingValue, :, smoothedSum, :
+	f	F	field_76335_c	lastAmount	#lastAmount, :, movementLatency, :
+	m	(FF)F	func_76333_a	smooth	#smooth, :, :, :
+		c	Smooths mouse input
+		p	1	p_76333_1_	original	#~, ~, original, :
+		p	2	p_76333_2_	smoother	#~, ~, smoother, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

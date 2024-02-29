@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSnowMan	net/minecraft/client/renderer/entity/RenderSnowMan	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110895_a	snowManTextures	#snowManTextures, SNOW_MAN_TEXTURES, SNOW_GOLEM_TEX, SNOW_GOLEM_LOCATION
+	f	Lnet/minecraft/client/model/ModelSnowMan;	field_77094_a	snowmanModel	#snowmanModel, :, ~, model
+		c	A reference to the Snowman model in RenderSnowMan.
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

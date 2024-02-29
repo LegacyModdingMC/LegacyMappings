@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S09PacketHeldItemChange	net/minecraft/network/play/server/S09PacketHeldItemChange	
+	f	I	field_149387_a	heldItemHotbarIndex	#heldItemHotbarIndex, :, slot, :
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45215_1_	hotbarIndexIn	#hotbarIndexIn, :, slot, :
+	m	()I	func_149385_c	getHeldItemHotbarIndex	#getHeldItemHotbarIndex, :, getSlot, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

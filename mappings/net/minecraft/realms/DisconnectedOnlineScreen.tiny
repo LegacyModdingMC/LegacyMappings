@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/DisconnectedOnlineScreen	net/minecraft/realms/DisconnectedOnlineScreen	
+	f	Ljava/util/List;	lines	lines	#~, ~, ~, ~
+	f	Lnet/minecraft/realms/RealmsScreen;	parent	parent	#~, ~, ~, ~
+	f	Lnet/minecraft/util/IChatComponent;	reason	reason	#~, ~, ~, ~
+	f	Ljava/lang/String;	title	title	#~, ~, ~, ~
+	m	()V	init	init	#~, ~, ~, ~
+	m	(IIF)V	render	render	#~, ~, ~, ~
+		p	1	p_render_1_	p_render_1_	#~, ~, ~, ~
+		p	2	p_render_2_	p_render_2_	#~, ~, ~, ~
+		p	3	p_render_3_	p_render_3_	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsButton;)V	buttonClicked	buttonClicked	#~, ~, ~, ~
+		p	1	p_buttonClicked_1_	p_buttonClicked_1_	#~, ~, ~, ~
+	m	(CI)V	keyPressed	keyPressed	#~, ~, ~, ~
+		p	1	p_keyPressed_1_	p_keyPressed_1_	#~, ~, ~, ~
+		p	2	p_keyPressed_2_	p_keyPressed_2_	#~, ~, ~, ~
+	m	(Lnet/minecraft/realms/RealmsScreen;Ljava/lang/String;Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1000_1_	p_i1000_1_	#~, ~, ~, ~
+		p	2	p_i1000_2_	p_i1000_2_	#~, ~, ~, ~
+		p	3	p_i1000_3_	p_i1000_3_	#~, ~, ~, ~

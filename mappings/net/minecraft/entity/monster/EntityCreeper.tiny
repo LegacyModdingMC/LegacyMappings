@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityCreeper	net/minecraft/entity/monster/EntityCreeper	
+	f	I	field_70834_e	lastActiveTime	#lastActiveTime, :, lastFuseTime, :
+		c	Time when this creeper was last in an active state (Messed up code here, probably causes creeper animation to go weird)
+	f	I	field_70833_d	timeSinceIgnited	#timeSinceIgnited, :, currentFuseTime, :
+		c	The amount of time since the creeper was close enough to the player to ignite
+	f	I	field_82225_f	fuseTime	#fuseTime, :, :, :
+	f	I	field_82226_g	explosionRadius	#explosionRadius, :, :, :
+		c	Explosion radius for this creeper.
+	m	(F)F	func_70831_j	getCreeperFlashIntensity	#getCreeperFlashIntensity, :, getClientFuseTime, getFuseTime
+		c	Params: (Float)Render tick. Returns the intensity of the creeper's flash when it is ignited.
+		p	1	p_70831_1_	timeDelta	#~, ~, timeDelta, :
+	m	(I)V	func_70829_a	setCreeperState	#setCreeperState, :, setFuseSpeed, :
+		c	Sets the state of creeper, -1 to idle and 1 to be 'in fuse'
+		p	1	p_70829_1_	state	#state, :, value, fuseSpeed
+	m	()Z	func_70830_n	getPowered	#getPowered, :, ~, isCharged
+		c	Returns true if the creeper is powered by a lightning bolt.
+	m	()I	func_70832_p	getCreeperState	#getCreeperState, :, getFuseSpeed, :
+		c	Returns the current state of creeper, -1 is idle, 1 is 'in fuse'
+	m	()Z	func_146078_ca	hasIgnited	#hasIgnited, :, isIgnited, getIgnited
+	m	()V	func_146079_cb	ignite	#ignite, :, :, setIgnited
+	m	()V	func_146077_cc	explode	#explode, :, :, :
+		c	Creates an explosion as determined by this creeper's power and explosion radius.
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1733_1_	worldIn	#worldIn, :, ~, ~

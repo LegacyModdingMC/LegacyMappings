@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/audio/MusicTicker$MusicType	net/minecraft/client/audio/MusicTicker$MusicType	
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	MENU	MENU	#~, ~, MENU, :
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	GAME	GAME	#~, ~, GAME, :
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	CREATIVE	CREATIVE	#~, ~, CREATIVE, :
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	CREDITS	CREDITS	#~, ~, CREDITS, :
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	NETHER	NETHER	#~, ~, NETHER, :
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	END_BOSS	END_BOSS	#~, ~, END_BOSS, :
+	f	Lnet/minecraft/client/audio/MusicTicker$MusicType;	END	END	#~, ~, END, :
+	f	Lnet/minecraft/util/ResourceLocation;	field_148645_h	musicLocation	#musicLocation, :, ~, location
+	f	I	field_148646_i	minDelay	#minDelay, :, ~, minWaitTime
+	f	I	field_148643_j	maxDelay	#maxDelay, :, ~, maxWaitTime
+	f	[Lnet/minecraft/client/audio/MusicTicker$MusicType;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	()Lnet/minecraft/util/ResourceLocation;	func_148635_a	getMusicTickerLocation	#getMusicTickerLocation, getMusicLocation, ~, getLocation
+	m	()I	func_148634_b	getMinDelay	#getMinDelay, :, ~, getMinWaitTime
+		c	Returns the minimum delay between playing music of this type.
+	m	()I	func_148633_c	getMaxDelay	#getMaxDelay, :, ~, getMaxWaitTime
+		c	Returns the maximum delay between playing music of this type.
+	m	(Ljava/lang/String;)Lnet/minecraft/client/audio/MusicTicker$MusicType;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/client/audio/MusicTicker$MusicType;	values	values	#~, ~, ~, ~
+	m	(Ljava/lang/String;ILnet/minecraft/util/ResourceLocation;II)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i45111_3_	location	#location, :, ~, location
+		p	4	p_i45111_4_	minDelayIn	#minDelayIn, :, ~, minWaitTime
+		p	5	p_i45111_5_	maxDelayIn	#maxDelayIn, :, ~, maxWaitTime
+		p	1	p_i45111_1_	p_i45111_1_	#~, ~, ~, ~
+		p	2	p_i45111_2_	p_i45111_2_	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

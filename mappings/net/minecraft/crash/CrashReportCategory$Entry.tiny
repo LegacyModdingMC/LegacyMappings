@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/crash/CrashReportCategory$Entry	net/minecraft/crash/CrashReportCategory$Entry	
+	f	Ljava/lang/String;	field_85092_a	key	#key, :, ~, key
+	f	Ljava/lang/String;	field_85091_b	value	#value, :, ~, value
+	m	()Ljava/lang/String;	func_85089_a	getKey	#getKey, :, ~, getKey
+	m	()Ljava/lang/String;	func_85090_b	getValue	#getValue, :, ~, getValue
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1352_1_	key	#key, :, ~, key
+		p	2	p_i1352_2_	value	#value, :, ~, value

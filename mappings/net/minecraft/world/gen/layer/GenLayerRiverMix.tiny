@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayerRiverMix	net/minecraft/world/gen/layer/GenLayerRiverMix	
+	f	Lnet/minecraft/world/gen/layer/GenLayer;	field_75910_b	biomePatternGeneratorChain	#biomePatternGeneratorChain, :, ~, biomeLayer
+	f	Lnet/minecraft/world/gen/layer/GenLayer;	field_75911_c	riverPatternGeneratorChain	#riverPatternGeneratorChain, :, ~, riverLayer
+	m	(JLnet/minecraft/world/gen/layer/GenLayer;Lnet/minecraft/world/gen/layer/GenLayer;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2129_1_	seed	#~, ~, ~, seed
+		p	3	p_i2129_3_	biomeLayer	#~, ~, ~, biomeLayer
+		p	4	p_i2129_4_	riverLayer	#~, ~, ~, riverLayer

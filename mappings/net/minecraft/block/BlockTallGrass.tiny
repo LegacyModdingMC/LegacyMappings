@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockTallGrass	net/minecraft/block/BlockTallGrass	
+	f	[Ljava/lang/String;	field_149871_a	SPRITE_NAMES	#~, ~, ~, SPRITE_NAMES
+	f	[Lnet/minecraft/util/IIcon;	field_149870_b	sprites	#~, ~, ~, sprites
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

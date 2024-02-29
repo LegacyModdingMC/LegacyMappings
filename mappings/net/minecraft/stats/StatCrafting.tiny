@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/StatCrafting	net/minecraft/stats/StatCrafting	
+	f	Lnet/minecraft/item/Item;	field_150960_a	item	#item, :, :, :
+	m	()Lnet/minecraft/item/Item;	func_150959_a	getItem	#getItem, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/util/IChatComponent;Lnet/minecraft/item/Item;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45305_1_	id	#~, ~, ~, id
+		p	2	p_i45305_2_	name	#~, ~, ~, name
+		p	3	p_i45305_3_	item	#~, ~, ~, item

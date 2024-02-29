@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityDropParticleFX	net/minecraft/client/particle/EntityDropParticleFX	
+	f	Lnet/minecraft/block/material/Material;	field_70563_a	materialType	#materialType, :, material, :
+		c	the material type for dropped items/blocks
+	f	I	field_70564_aq	bobTimer	#bobTimer, :, ticks, leakTime
+		c	The height of the current bob
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/block/material/Material;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1203_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1203_2_	xCoordIn	#xCoordIn, :, x, :
+		p	4	p_i1203_4_	yCoordIn	#yCoordIn, :, y, :
+		p	6	p_i1203_6_	zCoordIn	#zCoordIn, :, z, :
+		p	8	p_i1203_8_	material	#~, ~, material, :

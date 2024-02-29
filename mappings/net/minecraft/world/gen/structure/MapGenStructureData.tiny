@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenStructureData	net/minecraft/world/gen/structure/MapGenStructureData	
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_143044_a	tagCompound	#tagCompound, :, features, :
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_143041_a	getTagCompound	#getTagCompound, :, getFeatures, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;II)V	func_143043_a	writeInstance	#writeInstance, :, putFeature, put
+		c	Writes the NBT tag of an instance of this structure type to the internal NBT tag, using the chunkcoordinates as the key
+		p	1	p_143043_1_	tagCompoundIn	#tagCompoundIn, :, nbt, :
+		p	2	p_143043_2_	chunkX	#chunkX, :, x, chunkX
+		p	3	p_143043_3_	chunkZ	#chunkZ, :, z, chunkZ
+	m	(II)Ljava/lang/String;	func_143042_b	formatChunkCoords	#formatChunkCoords, :, format, toKey
+		p	0	p_143042_0_	chunkX	#chunkX, :, x, chunkX
+		p	1	p_143042_1_	chunkZ	#chunkZ, :, z, chunkZ
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i43001_1_	name	#name, :, ~, ~

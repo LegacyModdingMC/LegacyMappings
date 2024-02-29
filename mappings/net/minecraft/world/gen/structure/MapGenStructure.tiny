@@ -1,0 +1,45 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenStructure	net/minecraft/world/gen/structure/MapGenStructure	
+	f	Ljava/util/Map;	field_75053_d	structureMap	#structureMap, :, config, structures
+		c	Used to store a list of all structures that have been recursively generated. Used so that during recursive generation, the structure generator can avoid generating structures that intersect ones that have already been placed.
+	f	Lnet/minecraft/world/gen/structure/MapGenStructureData;	field_143029_e	structureData	#structureData, :, ~, savedData
+	m	()Ljava/lang/String;	func_143025_a	getStructureName	#getStructureName, :, getName, :
+	m	(II)Z	func_75047_a	canSpawnStructureAtCoords	#canSpawnStructureAtCoords, :, shouldStartAt, isFeatureChunk
+		p	1	p_75047_1_	chunkX	#chunkX, :, :, :
+		p	2	p_75047_2_	chunkZ	#chunkZ, :, :, :
+	m	(IILnet/minecraft/world/gen/structure/StructureStart;)V	func_143026_a	setStructureStart	#setStructureStart, :, ~, save
+		p	1	p_143026_1_	chunkX	#chunkX, :, ~, chunkX
+		p	2	p_143026_2_	chunkZ	#chunkZ, :, ~, chunkZ
+		p	3	p_143026_3_	start	#start, :, ~, structure
+	m	(Lnet/minecraft/world/World;)V	func_143027_a	initializeStructureData	#initializeStructureData, :, ~, loadSavedData
+		p	1	p_143027_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/world/World;III)Lnet/minecraft/world/ChunkPosition;	func_151545_a	getNearestInstance	#getNearestInstance, :, ~, findNearestStructure
+		p	1	p_151545_1_	world	#~, ~, ~, world
+		p	2	p_151545_2_	x	#~, ~, ~, x
+		p	3	p_151545_3_	y	#~, ~, ~, y
+		p	4	p_151545_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;II)Z	func_75051_a	generateStructuresInChunk	#generateStructuresInChunk, :, ~, place
+		c	Generates structures in specified chunk next to existing structures. Does *not* generate StructureStarts.
+		p	1	p_75051_1_	world	#~, ~, ~, world
+		p	2	p_75051_2_	random	#~, ~, ~, random
+		p	3	p_75051_3_	chunkX	#~, ~, ~, chunkX
+		p	4	p_75051_4_	chunkZ	#~, ~, ~, chunkZ
+	m	(II)Lnet/minecraft/world/gen/structure/StructureStart;	func_75049_b	getStructureStart	#getStructureStart, :, getGeneratorConfig, createStructure
+		p	1	p_75049_1_	chunkX	#chunkX, :, :, x
+		p	2	p_75049_2_	chunkZ	#chunkZ, :, :, z
+	m	(III)Z	func_75048_a	hasStructureAt	#hasStructureAt, :, ~, isInsideStructure
+		c	Returns true if the structure generator has generated a structure located at the given position tuple.
+		p	1	p_75048_1_	x	#~, ~, ~, x
+		p	2	p_75048_2_	y	#~, ~, ~, y
+		p	3	p_75048_3_	z	#~, ~, ~, z
+	m	(III)Lnet/minecraft/world/gen/structure/StructureStart;	func_143028_c	getStructure	#~, ~, ~, getStructure
+		p	1	p_143028_1_	x	#~, ~, ~, x
+		p	2	p_143028_2_	y	#~, ~, ~, y
+		p	3	p_143028_3_	z	#~, ~, ~, z
+	m	(III)Z	func_142038_b	isInsideStructureBounds	#~, ~, ~, isInsideStructureBounds
+		p	1	p_142038_1_	x	#~, ~, ~, x
+		p	2	p_142038_2_	y	#~, ~, ~, y
+		p	3	p_142038_3_	z	#~, ~, ~, z
+	m	()Ljava/util/List;	func_75052_o_	getCoordList	#getCoordList, :, ~, getPotentialStructurePos
+		c	Returns a list of other locations at which the structure generation has been run, or null if not relevant to this structure generator.
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityReddustFX	net/minecraft/client/particle/EntityReddustFX	
+	f	F	field_70570_a	reddustParticleScale	#reddustParticleScale, :, prevScale, baseScale
+	m	(Lnet/minecraft/world/World;DDDFFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1223_1_	world	#~, ~, world, :
+		p	2	p_i1223_2_	x	#~, ~, x, :
+		p	4	p_i1223_4_	y	#~, ~, y, :
+		p	6	p_i1223_6_	z	#~, ~, z, :
+		p	8	p_i1223_8_	r	#~, ~, ~, r
+		p	9	p_i1223_9_	g	#~, ~, ~, g
+		p	10	p_i1223_10_	b	#~, ~, ~, b
+	m	(Lnet/minecraft/world/World;DDDFFFF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1224_1_	world	#~, ~, world, :
+		p	2	p_i1224_2_	x	#~, ~, x, :
+		p	4	p_i1224_4_	y	#~, ~, y, :
+		p	6	p_i1224_6_	z	#~, ~, z, :
+		p	8	p_i1224_8_	scaleFactor	#~, ~, ~, scaleFactor
+		p	9	p_i1224_9_	r	#~, ~, ~, r
+		p	10	p_i1224_10_	g	#~, ~, ~, g
+		p	11	p_i1224_11_	b	#~, ~, ~, b

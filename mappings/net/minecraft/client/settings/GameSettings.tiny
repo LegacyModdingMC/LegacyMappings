@@ -1,0 +1,171 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/settings/GameSettings	net/minecraft/client/settings/GameSettings	
+	f	I	field_92119_C	overrideHeight	#overrideHeight, :, :, :
+	f	Z	field_92117_D	heldItemTooltips	#heldItemTooltips, :, :, :
+	f	F	field_96691_E	chatScale	#chatScale, :, :, :
+	f	F	field_96692_F	chatWidth	#chatWidth, :, :, :
+	f	F	field_96693_G	chatHeightUnfocused	#chatHeightUnfocused, :, :, unfocusedChatHeight
+	f	F	field_96694_H	chatHeightFocused	#chatHeightFocused, :, :, focusedChatHeight
+	f	Z	field_151441_H	showInventoryAchievementHint	#showInventoryAchievementHint, :, :, :
+	f	I	field_151442_I	mipmapLevels	#mipmapLevels, :, :, :
+	f	I	field_151443_J	anisotropicFiltering	#anisotropicFiltering, :, ~, anisotropicFiltering
+	f	F	field_152400_J	streamBytesPerPixel	#streamBytesPerPixel, :, :, :
+	f	F	field_152401_K	streamMicVolume	#streamMicVolume, :, :, :
+	f	F	field_152402_L	streamGameVolume	#streamGameVolume, :, streamSystemVolume, :
+	f	F	field_152403_M	streamKbps	#streamKbps, :, :, :
+	f	F	field_152404_N	streamFps	#streamFps, :, :, :
+	f	I	field_152405_O	streamCompression	#streamCompression, :, :, :
+	f	Z	field_152406_P	streamSendMetadata	#streamSendMetadata, :, :, :
+	f	Ljava/lang/String;	field_152407_Q	streamPreferredServer	#streamPreferredServer, :, currentTexturePackName, streamPreferredServer
+	f	I	field_152408_R	streamChatEnabled	#streamChatEnabled, :, :, :
+	f	I	field_152409_S	streamChatUserFilter	#streamChatUserFilter, :, :, :
+	f	I	field_152410_T	streamMicToggleBehavior	#streamMicToggleBehavior, :, :, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74351_w	keyBindForward	#keyBindForward, :, forwardKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74370_x	keyBindLeft	#keyBindLeft, :, leftKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74368_y	keyBindBack	#keyBindBack, :, backKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74366_z	keyBindRight	#keyBindRight, :, rightKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74314_A	keyBindJump	#keyBindJump, :, jumpKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74311_E	keyBindSneak	#keyBindSneak, :, sneakKey, :
+	f	F	field_74341_c	mouseSensitivity	#mouseSensitivity, :, sensitivity, mouseSensitivity
+	f	Z	field_74331_S	noclip	#noclip, :, ~, discreteScroll
+		c	No clipping for singleplayer
+	f	Z	field_74326_T	smoothCamera	#smoothCamera, :, smoothCameraEnabled, smoothCamera
+		c	Smooth Camera Toggle
+	f	Z	field_74325_U	debugCamEnable	#debugCamEnable, :, ~, debugCamera
+	f	F	field_74328_V	noclipRate	#noclipRate, :, ~, totalDiscreteScroll
+		c	No clipping movement rate
+	f	F	field_74327_W	debugCamRate	#debugCamRate, :, ~, ~
+		c	Change rate for debug camera
+	f	F	field_74334_X	fovSetting	#fovSetting, :, fov, :
+	f	F	field_74333_Y	gammaSetting	#gammaSetting, :, gamma, :
+	f	F	field_151452_as	saturation	#saturation, :, :, :
+	f	I	field_74335_Z	guiScale	#guiScale, :, :, :
+		c	GUI scale
+	f	I	field_74362_aa	particleSetting	#particleSetting, :, particle, particles
+		c	Determines amount of particles. 0 = All, 1 = Decreased, 2 = Minimal
+	f	Ljava/lang/String;	field_74363_ab	language	#language, :, :, :
+		c	Game settings language
+	f	Z	field_151455_aw	forceUnicodeFont	#forceUnicodeFont, :, forcesUnicodeFont, forceUnicodeFont
+	f	Lorg/apache/logging/log4j/Logger;	field_151454_ax	logger	#logger, LOGGER, :, :
+	f	Lcom/google/gson/Gson;	field_151450_ay	gson	#gson, GSON, :, :
+	f	Ljava/lang/reflect/ParameterizedType;	field_151449_az	typeListString	#typeListString, TYPE_LIST_STRING, STRING_LIST_TYPE, :
+	f	[Ljava/lang/String;	field_74367_ae	GUISCALES	#GUISCALES, :, GUI_SCALE, GUI_SCALE_SETTINGS
+		c	GUI scale values
+	f	[Ljava/lang/String;	field_74364_ag	PARTICLES	#PARTICLES, :, :, PARTICLE_SETTINGS
+	f	[Ljava/lang/String;	field_98303_au	AMBIENT_OCCLUSIONS	#AMBIENT_OCCLUSIONS, :, AMBIENT_OCCLUSION, AMBIENT_OCCLUSION_SETTINGS
+	f	[Ljava/lang/String;	field_152391_aS	STREAM_COMPRESSIONS	#STREAM_COMPRESSIONS, :, CHAT_VISIBILITY, STREAM_COMPRESSION_SETTINGS
+	f	[Ljava/lang/String;	field_152392_aT	STREAM_CHAT_MODES	#STREAM_CHAT_MODES, :, STREAM_CHAT_ENABLED, STREAM_CHAT_ENABLED_SETTINGS
+	f	[Ljava/lang/String;	field_152393_aU	STREAM_CHAT_FILTER_MODES	#STREAM_CHAT_FILTER_MODES, :, STREAM_CHAT_USERFILTER, STREAM_USER_FILTER_SETTINGS
+	f	[Ljava/lang/String;	field_152394_aV	STREAM_MIC_MODES	#STREAM_MIC_MODES, :, STREAM_MIC_TIGGLE, STREAM_MIC_TOGGLE_SETTINGS
+	f	Ljava/util/Map;	field_151446_aD	mapSoundLevels	#mapSoundLevels, :, soundVolumeLevels, soundCategoryVolumes
+	f	Ljava/io/File;	field_74354_ai	optionsFile	#optionsFile, :, :, file
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_151445_Q	keyBindInventory	#keyBindInventory, :, inventoryKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74313_G	keyBindUseItem	#keyBindUseItem, :, useKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74316_C	keyBindDrop	#keyBindDrop, :, dropKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74312_F	keyBindAttack	#keyBindAttack, :, attackKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74322_I	keyBindPickBlock	#keyBindPickBlock, :, pickItemKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_151444_V	keyBindSprint	#keyBindSprint, :, sprintKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74310_D	keyBindChat	#keyBindChat, :, chatKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74321_H	keyBindPlayerList	#keyBindPlayerList, :, playerListKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_74323_J	keyBindCommand	#keyBindCommand, :, commandKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_151447_Z	keyBindScreenshot	#keyBindScreenshot, :, screenshotKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_151457_aa	keyBindTogglePerspective	#keyBindTogglePerspective, :, togglePerspectiveKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_151458_ab	keyBindSmoothCamera	#keyBindSmoothCamera, :, smoothCameraKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_152395_am	keyBindFullscreen	#keyBindFullscreen, :, fullscreenKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_152396_an	keyBindStreamStartStop	#keyBindStreamStartStop, :, streamStartStopKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_152397_ao	keyBindStreamPauseUnpause	#keyBindStreamPauseUnpause, :, streamPauseUnpauseKey, streamPauseKey
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_152398_ap	keyBindStreamCommercials	#keyBindStreamCommercials, :, streamCommercialKey, :
+	f	Lnet/minecraft/client/settings/KeyBinding;	field_152399_aq	keyBindStreamToggleMic	#keyBindStreamToggleMic, :, streamToggleMicKey, :
+	f	[Lnet/minecraft/client/settings/KeyBinding;	field_151456_ac	keyBindsHotbar	#keyBindsHotbar, :, hotbarKeys, horbarKeyBindings
+	f	[Lnet/minecraft/client/settings/KeyBinding;	field_74324_K	keyBindings	#keyBindings, :, allKeys, keyBindings
+	f	Lnet/minecraft/client/Minecraft;	field_74317_L	mc	#mc, :, client, minecraft
+	f	Lnet/minecraft/world/EnumDifficulty;	field_74318_M	difficulty	#difficulty, :, :, :
+	f	Z	field_74319_N	hideGUI	#hideGUI, :, hudHidden, hideGui
+	f	I	field_74320_O	thirdPersonView	#thirdPersonView, :, perspective, :
+		c	Camera perspective (0 = first person, 1 = second person, 2 = third person)
+	f	Z	field_74330_P	showDebugInfo	#showDebugInfo, :, debugEnabled, :
+		c	true if debug info should be displayed instead of version
+	f	Z	field_74329_Q	showDebugProfilerChart	#showDebugProfilerChart, :, debugProfilerEnabled, :
+	f	Ljava/lang/String;	field_74332_R	lastServer	#lastServer, :, :, :
+		c	The lastServer string.
+	f	Z	field_74338_d	invertMouse	#invertMouse, :, invertYMouse, invertMouseY
+	f	I	field_151451_c	renderDistanceChunks	#renderDistanceChunks, :, viewDistance, :
+	f	Z	field_74336_f	viewBobbing	#viewBobbing, :, bobView, viewBobbing
+	f	Z	field_74337_g	anaglyph	#anaglyph, :, anaglyph3d, anaglyph
+	f	Z	field_74349_h	advancedOpengl	#advancedOpengl, :, :, :
+		c	Advanced OpenGL
+	f	Z	field_151448_g	fboEnable	#fboEnable, :, fbo, fboEnable
+	f	I	field_74350_i	limitFramerate	#limitFramerate, :, maxFramerate, fpsLimit
+	f	Z	field_74347_j	fancyGraphics	#fancyGraphics, :, :, :
+	f	I	field_74348_k	ambientOcclusion	#ambientOcclusion, :, ao, ambientOcclusion
+		c	Smooth Lighting
+	f	Z	field_74345_l	clouds	#clouds, :, renderClouds, :
+		c	Clouds flag
+	f	Ljava/util/List;	field_151453_l	resourcePacks	#resourcePacks, :, :, :
+	f	Lnet/minecraft/entity/player/EntityPlayer$EnumChatVisibility;	field_74343_n	chatVisibility	#chatVisibility, :, ~, chatVisibility
+	f	Z	field_74344_o	chatColours	#chatColours, :, chatColor, chatColors
+	f	Z	field_74359_p	chatLinks	#chatLinks, :, chatLink, chatLinks
+	f	Z	field_74358_q	chatLinksPrompt	#chatLinksPrompt, :, chatLinkPrompt, promptChatLinks
+	f	F	field_74357_r	chatOpacity	#chatOpacity, :, :, :
+	f	Z	field_74355_t	snooperEnabled	#snooperEnabled, :, snopperEnabled, serverTextures
+	f	Z	field_74353_u	fullScreen	#fullScreen, :, fullscreen, :
+	f	Z	field_74352_v	enableVsync	#enableVsync, :, vsync, :
+	f	Z	field_80005_w	hideServerAddress	#hideServerAddress, :, :, :
+	f	Z	field_82882_x	advancedItemTooltips	#advancedItemTooltips, :, :, :
+		c	Whether to show advanced information on item tooltips, toggled by F3+H
+	f	Z	field_82881_y	pauseOnLostFocus	#pauseOnLostFocus, :, :, pauseOnUnfocus
+		c	Whether to pause when the game loses focus, toggled by F3+P
+	f	Z	field_82880_z	showCape	#showCape, :, ~, showCape
+		c	Whether to show your cape
+	f	Z	field_85185_A	touchscreen	#touchscreen, :, :, :
+	f	I	field_92118_B	overrideWidth	#overrideWidth, :, :, :
+	m	(Lnet/minecraft/client/Minecraft;Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1016_1_	minecraft	#~, ~, client, minecraft
+		p	2	p_i1016_2_	file	#~, ~, gameFolder, file
+	m	()V	func_74300_a	loadOptions	#loadOptions, :, load, :
+		c	Loads the options from the options file. It appears that this has replaced the previous 'loadOptions'
+	m	(Lnet/minecraft/client/settings/KeyBinding;)Z	func_100015_a	isKeyDown	#isKeyDown, :, isPressed, :
+		c	Returns whether the specified key binding is currently being pressed.
+		p	0	p_100015_0_	key	#key, :, binding, keyBinding
+	m	(Lnet/minecraft/client/settings/KeyBinding;I)V	func_151440_a	setOptionKeyBinding	#setOptionKeyBinding, :, setKeyBindingCode, setKeyCode
+		c	Sets a key binding and then saves all settings.
+		p	1	p_151440_1_	key	#key, :, binding, keyBinding
+		p	2	p_151440_2_	keyCode	#keyCode, :, code, :
+	m	(Lnet/minecraft/client/settings/GameSettings$Options;)F	func_74296_a	getOptionFloatValue	#getOptionFloatValue, :, getFLoatOption, getValueFloat
+		p	1	p_74296_1_	settingOption	#settingOption, :, option, :
+	m	(Lnet/minecraft/client/settings/GameSettings$Options;F)V	func_74304_a	setOptionFloatValue	#setOptionFloatValue, :, setOption, setValue
+		c	If the specified option is controlled by a slider (float value), this will set the float value.
+		p	1	p_74304_1_	settingsOption	#settingsOption, :, option, :
+		p	2	p_74304_2_	value	#value, :, :, :
+	m	(Lnet/minecraft/client/settings/GameSettings$Options;I)V	func_74306_a	setOptionValue	#setOptionValue, :, setOption, setValue
+		c	For non-float options. Toggles the option on/off, or cycles through the list i.e. render distances.
+		p	1	p_74306_1_	settingsOption	#settingsOption, :, option, :
+		p	2	p_74306_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;)F	func_74305_a	parseFloat	#parseFloat, :, :, :
+		c	Parses a string into a float.
+		p	1	p_74305_1_	str	#str, :, s, value
+	m	(Lnet/minecraft/client/audio/SoundCategory;)F	func_151438_a	getSoundLevel	#getSoundLevel, :, getSoundVolume, getSoundCategoryVolume
+		p	1	p_151438_1_	sndCategory	#sndCategory, :, category, :
+	m	(Lnet/minecraft/client/audio/SoundCategory;F)V	func_151439_a	setSoundLevel	#setSoundLevel, :, setSoundVolume, setSoundCategoryVolume
+		p	1	p_151439_1_	sndCategory	#sndCategory, :, category, :
+		p	2	p_151439_2_	soundLevel	#soundLevel, :, volume, :
+	m	([Ljava/lang/String;I)Ljava/lang/String;	func_74299_a	getTranslation	#getTranslation, :, translateArrayElement, getName
+		c	Returns the translation of the given index in the given String array. If the index is smaller than 0 or greater than/equal to the length of the String array, it is changed to 0.
+		p	0	p_74299_0_	strArray	#strArray, :, array, settings
+		p	1	p_74299_1_	index	#index, :, :, :
+	m	()V	func_74303_b	saveOptions	#saveOptions, :, save, :
+		c	Saves the options to the options file.
+	m	(Lnet/minecraft/client/settings/GameSettings$Options;)Z	func_74308_b	getOptionOrdinalValue	#getOptionOrdinalValue, :, gteIntOption, getValueBool
+		p	1	p_74308_1_	settingOption	#settingOption, :, option, :
+	m	()V	func_82879_c	sendSettingsToServer	#sendSettingsToServer, :, onPlayerModelPartChange, syncClientSettings
+		c	Send a client info packet with settings information to the server
+	m	(I)Ljava/lang/String;	func_74298_c	getKeyDisplayString	#getKeyDisplayString, :, getFormattedNameForKeyCode, getKeyName
+		c	Represents a key or mouse button as a string. Args: key
+		p	0	p_74298_0_	key	#key, :, code, keyCode
+	m	(Lnet/minecraft/client/settings/GameSettings$Options;)Ljava/lang/String;	func_74297_c	getKeyBinding	#getKeyBinding, :, getStringOption, getValueAsString
+		c	Gets a key binding.
+		p	1	p_74297_1_	settingOption	#settingOption, :, option, :
+	m	()Z	func_74309_c	shouldRenderClouds	#shouldRenderClouds, :, ~, renderClouds
+		c	Should render clouds
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

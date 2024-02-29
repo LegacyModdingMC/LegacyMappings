@@ -1,0 +1,47 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/IChunkProvider	net/minecraft/world/chunk/IChunkProvider	
+	m	(II)Z	func_73149_a	chunkExists	#chunkExists, :, :, hasChunk
+		c	Checks to see if a chunk exists at x, y
+		p	1	p_73149_1_	x	#x, :, :, chunkX
+		p	2	p_73149_2_	z	#z, :, :, chunkZ
+	m	(Lnet/minecraft/world/World;Ljava/lang/String;III)Lnet/minecraft/world/ChunkPosition;	func_147416_a	findClosestStructure	#findClosestStructure, :, getFeatureLocation, findNearestStructure
+		p	1	p_147416_1_	world	#~, ~, world, :
+		p	2	p_147416_2_	name	#~, ~, featureName, name
+		p	3	p_147416_3_	x	#~, ~, startX, x
+		p	4	p_147416_4_	y	#~, ~, startY, y
+		p	5	p_147416_5_	z	#~, ~, startZ, z
+	m	(Lnet/minecraft/world/chunk/IChunkProvider;II)V	func_73153_a	populate	#populate, :, decorateChunk, populateChunk
+		c	Populates chunk with ores etc etc
+		p	1	p_73153_1_	chunkProvider	#chunkProvider, :, provider, source
+		p	2	p_73153_2_	x	#x, :, :, chunkX
+		p	3	p_73153_3_	z	#z, :, :, chunkZ
+	m	(Lnet/minecraft/entity/EnumCreatureType;III)Ljava/util/List;	func_73155_a	getPossibleCreatures	#getPossibleCreatures, :, ~, getSpawnEntries
+		c	Returns a list of creatures of the specified type that can spawn at the given location.
+		p	1	p_73155_1_	category	#~, ~, ~, category
+		p	2	p_73155_2_	x	#~, ~, ~, x
+		p	3	p_73155_3_	y	#~, ~, ~, y
+		p	4	p_73155_4_	z	#~, ~, ~, z
+	m	(ZLnet/minecraft/util/IProgressUpdate;)Z	func_73151_a	saveChunks	#saveChunks, :, :, save
+		c	Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.  Return true if all chunks have been saved.
+		p	1	p_73151_1_	saveAllChunks	#saveAllChunks, :, saveEntities, :
+		p	2	p_73151_2_	progressCallback	#progressCallback, :, progressListener, listener
+	m	()V	func_104112_b	saveExtraData	#saveExtraData, flushToDisk, flushChunks, save
+		c	Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently unimplemented.
+	m	(II)Lnet/minecraft/world/chunk/Chunk;	func_73158_c	loadChunk	#loadChunk, :, getOrGenerateChunk, generateChunk
+		c	loads or generates the chunk at the chunk location specified
+		p	1	p_73158_1_	chunkX	#chunkX, :, x, chunkX
+		p	2	p_73158_2_	chunkZ	#chunkZ, :, z, chunkZ
+	m	()Z	func_73156_b	unloadQueuedChunks	#unloadQueuedChunks, tick, tickChunks, tick
+		c	Unloads chunks that are marked to be unloaded. This is not guaranteed to unload every such chunk.
+	m	(II)Lnet/minecraft/world/chunk/Chunk;	func_73154_d	provideChunk	#provideChunk, :, getChunk, :
+		c	Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the specified chunk from the map seed and chunk seed
+		p	1	p_73154_1_	x	#x, :, :, chunkX
+		p	2	p_73154_2_	z	#z, :, :, chunkZ
+	m	()Z	func_73157_c	canSave	#canSave, :, isSavingEnabled, canSave
+		c	Returns if the IChunkProvider supports saving.
+	m	(II)V	func_82695_e	recreateStructures	#recreateStructures, :, ~, placeStructures
+		p	1	p_82695_1_	chunkX	#~, ~, ~, chunkX
+		p	2	p_82695_2_	chunkZ	#~, ~, ~, chunkZ
+	m	()Ljava/lang/String;	func_73148_d	makeString	#makeString, :, getChunkProviderName, getName
+		c	Converts the instance data to a readable string.
+	m	()I	func_73152_e	getLoadedChunkCount	#getLoadedChunkCount, :, getLoadedChunksCount, size

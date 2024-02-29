@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/main/Main$1$1	net/minecraft/client/main/Main$1$1	
+	f	Lnet/minecraft/client/main/Main$1;	field_152580_a	field_152580_a	#~, ~, ~, ~
+	m	()[Ljava/lang/reflect/Type;	getActualTypeArguments	getActualTypeArguments	#~, ~, ~, ~
+	m	()Ljava/lang/reflect/Type;	getOwnerType	getOwnerType	#~, ~, ~, ~
+	m	()Ljava/lang/reflect/Type;	getRawType	getRawType	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/main/Main$1;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1062_1_	parentScreenIn	#parentScreenIn, :, ~, ~

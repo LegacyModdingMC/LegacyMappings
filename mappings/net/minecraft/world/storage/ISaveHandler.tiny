@@ -1,0 +1,27 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/ISaveHandler	net/minecraft/world/storage/ISaveHandler	
+	m	()V	func_75759_a	flush	#flush, :, clear, waitIfSaving
+		c	Called to flush all changes to disk, waiting for them to complete.
+	m	(Lnet/minecraft/world/WorldProvider;)Lnet/minecraft/world/chunk/storage/IChunkLoader;	func_75763_a	getChunkLoader	#getChunkLoader, :, getChunkWriter, getChunkStorage
+		c	Returns the chunk loader with the provided world provider
+		p	1	p_75763_1_	provider	#provider, :, dim, dimension
+	m	(Lnet/minecraft/world/storage/WorldInfo;)V	func_75761_a	saveWorldInfo	#saveWorldInfo, :, saveWorld, saveData
+		c	Saves the passed in world info.
+		p	1	p_75761_1_	worldInformation	#worldInformation, :, properties, data
+	m	(Lnet/minecraft/world/storage/WorldInfo;Lnet/minecraft/nbt/NBTTagCompound;)V	func_75755_a	saveWorldInfoWithPlayer	#saveWorldInfoWithPlayer, :, saveWorld, saveData
+		c	Saves the given World Info with the given NBTTagCompound as the Player.
+		p	1	p_75755_1_	worldInformation	#worldInformation, :, properties, data
+		p	2	p_75755_2_	tagCompound	#tagCompound, :, nbt, playerData
+	m	(Ljava/lang/String;)Ljava/io/File;	func_75758_b	getMapFileFromName	#getMapFileFromName, :, getDataFile, :
+		c	Gets the file location of the given map
+		p	1	p_75758_1_	mapName	#mapName, :, fileName, name
+	m	()Ljava/io/File;	func_75765_b	getWorldDirectory	#getWorldDirectory, :, getWorldFolder, getDir
+		c	Gets the File object corresponding to the base directory of this world.
+	m	()V	func_75762_c	checkSessionLock	#checkSessionLock, :, readSessionLock, checkSessionLock
+		c	Checks the session lock to prevent save collisions
+	m	()Lnet/minecraft/world/storage/WorldInfo;	func_75757_d	loadWorldInfo	#loadWorldInfo, :, getLevelProperties, loadData
+		c	Loads and returns the world info
+	m	()Lnet/minecraft/world/storage/IPlayerFileData;	func_75756_e	getSaveHandler	#getSaveHandler, getPlayerNBTManager, getInstance, getPlayerDataStorage
+		c	returns null if no saveHandler is relevent (eg. SMP)
+	m	()Ljava/lang/String;	func_75760_g	getWorldDirectoryName	#getWorldDirectoryName, :, getWorldName, getName
+		c	Returns the name of the directory where world information is saved.

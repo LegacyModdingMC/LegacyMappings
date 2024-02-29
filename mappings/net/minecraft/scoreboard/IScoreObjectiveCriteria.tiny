@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/scoreboard/IScoreObjectiveCriteria	net/minecraft/scoreboard/IScoreObjectiveCriteria	
+	f	Ljava/util/Map;	field_96643_a	INSTANCES	#INSTANCES, :, OBJECTIVES, BY_NAME
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_96641_b	DUMMY	#DUMMY, :, :, :
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_96642_c	deathCount	#deathCount, DEATH_COUNT, :, :
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_96639_d	playerKillCount	#playerKillCount, PLAYER_KILL_COUNT, PLAYERS_KILLED, PLAYER_KILL_COUNT
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_96640_e	totalKillCount	#totalKillCount, TOTAL_KILL_COUNT, TOTAL_KILLED, TOTAL_KILL_COUNT
+	f	Lnet/minecraft/scoreboard/IScoreObjectiveCriteria;	field_96638_f	health	#health, HEALTH, :, :
+	m	()Ljava/lang/String;	func_96636_a	getName	#getName, :, :, :
+	m	(Ljava/util/List;)I	func_96635_a	setScore	#setScore, :, ~, countScore
+		p	1	p_96635_1_	owners	#~, ~, players, owners
+	m	()Z	func_96637_b	isReadOnly	#isReadOnly, :, ~, isReadOnly
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

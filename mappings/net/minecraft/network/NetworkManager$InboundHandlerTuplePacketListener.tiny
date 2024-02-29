@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkManager$InboundHandlerTuplePacketListener	net/minecraft/network/NetworkManager$InboundHandlerTuplePacketListener	
+	f	Lnet/minecraft/network/Packet;	field_150774_a	packet	#packet, :, :, :
+	f	[Lio/netty/util/concurrent/GenericFutureListener;	field_150773_b	futureListeners	#futureListeners, :, listeners, :
+	m	(Lnet/minecraft/network/Packet;[Lio/netty/util/concurrent/GenericFutureListener;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45146_1_	inPacket	#inPacket, :, packet, :
+		p	2	p_i45146_2_	inFutureListeners	#inFutureListeners, :, listeners, :
+	m	(Lnet/minecraft/network/NetworkManager$InboundHandlerTuplePacketListener;)Lnet/minecraft/network/Packet;	access$100	access$100	#~, ~, ~, getPacket
+		p	0	p_access$100_0_	packetWrapper	#~, ~, ~, packetWrapper
+	m	(Lnet/minecraft/network/NetworkManager$InboundHandlerTuplePacketListener;)[Lio/netty/util/concurrent/GenericFutureListener;	access$200	access$200	#~, ~, ~, getListeners
+		p	0	p_access$200_0_	packetWrapper	#~, ~, ~, packetWrapper

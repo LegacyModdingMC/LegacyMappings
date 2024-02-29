@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/FolderResourcePack	net/minecraft/client/resources/FolderResourcePack	
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1291_1_	resourcePackFileIn	#resourcePackFileIn, :, ~, ~

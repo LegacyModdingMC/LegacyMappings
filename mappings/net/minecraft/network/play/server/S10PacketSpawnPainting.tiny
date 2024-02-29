@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S10PacketSpawnPainting	net/minecraft/network/play/server/S10PacketSpawnPainting	
+	f	I	field_148973_a	entityID	#entityID, :, id, :
+	f	I	field_148971_b	x	#~, ~, ~, x
+	f	I	field_148972_c	y	#~, ~, ~, y
+	f	I	field_148969_d	z	#~, ~, ~, z
+	f	I	field_148970_e	facing	#~, ~, ~, facing
+	f	Ljava/lang/String;	field_148968_f	title	#title, :, name, motive
+	m	(Lnet/minecraft/entity/item/EntityPainting;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45170_1_	painting	#painting, :, entity, painting
+	m	()I	func_148965_c	getEntityID	#getEntityID, :, getId, :
+	m	()I	func_148964_d	getX	#~, ~, ~, getX
+	m	()I	func_148963_e	getY	#~, ~, ~, getY
+	m	()I	func_148962_f	getZ	#~, ~, ~, getZ
+	m	()I	func_148966_g	getFacing	#~, ~, ~, getFacing
+	m	()Ljava/lang/String;	func_148961_h	getTitle	#getTitle, :, getName, getMotive
+	m	()V	<init>	<init>	#~, ~, ~, ~

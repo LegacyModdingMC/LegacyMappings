@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/ResourcePackRepository	net/minecraft/client/resources/ResourcePackRepository	
+	f	Ljava/io/FileFilter;	field_110622_a	resourcePackFilter	#resourcePackFilter, RESOURCE_PACK_FILTER, FILE_FILTER, RESOURCE_PACK_FILTER
+	f	Lnet/minecraft/client/resources/IResourcePack;	field_110620_b	rprDefaultResourcePack	#rprDefaultResourcePack, :, defaultResourcePack, defaultPack
+	f	Lnet/minecraft/client/resources/data/IMetadataSerializer;	field_110621_c	rprMetadataSerializer	#rprMetadataSerializer, :, metadataSerializer, metadataSerializers
+	f	Ljava/io/File;	field_110618_d	dirResourcepacks	#dirResourcepacks, :, resourcePackDir, dir
+	f	Ljava/io/File;	field_148534_e	dirServerResourcepacks	#dirServerResourcepacks, :, serverResourcePackDir, serverPackDir
+	f	Lnet/minecraft/client/resources/IResourcePack;	field_148532_f	resourcePackInstance	#resourcePackInstance, serverResourcePack, serverContainer, serverPack
+	f	Z	field_148533_g	awaitingServerResourcePack	#~, ~, ~, awaitingServerResourcePack
+	f	Ljava/util/List;	field_110619_e	repositoryEntriesAll	#repositoryEntriesAll, :, availableResourcePacks, availablePacks
+	f	Ljava/util/List;	field_110617_f	repositoryEntries	#repositoryEntries, :, selectedResourcePacks, appliedPacks
+	m	(Ljava/io/File;Ljava/io/File;Lnet/minecraft/client/resources/IResourcePack;Lnet/minecraft/client/resources/data/IMetadataSerializer;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45101_1_	dirResourcepacksIn	#dirResourcepacksIn, :, resourcePackDir, dir
+		p	2	p_i45101_2_	dirServerResourcepacksIn	#dirServerResourcepacksIn, :, serverResourcePackDir, file
+		p	3	p_i45101_3_	rprDefaultResourcePackIn	#rprDefaultResourcePackIn, :, defaultPack, defaultResourcePack
+		p	4	p_i45101_4_	rprMetadataSerializerIn	#rprMetadataSerializerIn, :, serializer, meterdataSerializerRegistry
+		p	5	p_i45101_5_	settings	#settings, :, gameOptions, options
+	m	()V	func_110611_a	updateRepositoryEntriesAll	#updateRepositoryEntriesAll, :, initResourcePacks, loadResourcePacks
+	m	(Lnet/minecraft/client/resources/ResourcePackRepository;)Z	access$100	access$100	#~, ~, ~, isSet
+		p	0	p_access$100_0_	resourcePackLoader	#~, ~, ~, resourcePackLoader
+	m	(Lnet/minecraft/client/resources/ResourcePackRepository;Lnet/minecraft/client/resources/IResourcePack;)Lnet/minecraft/client/resources/IResourcePack;	access$202	access$202	#~, ~, ~, setResourcePack
+		p	0	p_access$202_0_	resourcePackLoader	#~, ~, ~, resourcePackLoader
+		p	1	p_access$202_1_	resourcePack	#~, ~, ~, resourcePack
+	m	(Lnet/minecraft/client/resources/ResourcePackRepository;Z)Z	access$102	access$102	#~, ~, ~, setIsSet
+		p	0	p_access$102_0_	resourcePackLoader	#~, ~, ~, resourcePackLoader
+		p	1	p_access$102_1_	isSet	#~, ~, ~, isSet
+	m	(Ljava/lang/String;)V	func_148526_a	obtainResourcePack	#obtainResourcePack, :, ~, downloadServerResourcePack
+		p	1	p_148526_1_	url	#~, ~, ~, url
+	m	(Ljava/lang/String;Ljava/io/File;)V	func_148528_a	downloadServerResourcePack	#~, ~, ~, downloadServerResourcePack
+		p	1	p_148528_1_	url	#~, ~, ~, url
+		p	2	p_148528_2_	dst	#~, ~, ~, dst
+	m	(Ljava/util/List;)V	func_148527_a	setRepositories	#setRepositories, :, setSelectedResourcePacks, apply
+		p	1	p_148527_1_	repositories	#repositories, :, selectedResourcePacks, packs
+	m	()Ljava/util/List;	func_110609_b	getRepositoryEntriesAll	#getRepositoryEntriesAll, :, getAvailableResourcePacks, getAvailable
+	m	()Ljava/util/List;	func_110613_c	getRepositoryEntries	#getRepositoryEntries, :, getSelectedResourcePacks, getApplied
+	m	()Ljava/io/File;	func_110612_e	getDirResourcepacks	#getDirResourcepacks, :, getResourcePackDir, getDirectory
+	m	()Lnet/minecraft/client/resources/IResourcePack;	func_148530_e	getResourcePackInstance	#getResourcePackInstance, getServerResourcePack, getServerContainer, getServerPack
+		c	Getter for the IResourcePack instance associated with this ResourcePackRepository
+	m	()V	func_148529_f	clearResourcePack	#clearResourcePack, :, clear, removeServerResourcePack
+	m	()V	func_110616_f	fixDirResourcepacks	#fixDirResourcepacks, :, initResourcePackDir, mkdirs
+	m	()Ljava/util/List;	func_110614_g	getResourcePackFiles	#getResourcePackFiles, :, getResourcePacks, collectAvailablePackFiles
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

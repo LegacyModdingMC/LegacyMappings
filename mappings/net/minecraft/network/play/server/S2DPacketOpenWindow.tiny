@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S2DPacketOpenWindow	net/minecraft/network/play/server/S2DPacketOpenWindow	
+	f	I	field_148909_a	windowId	#windowId, :, id, menuId
+	f	I	field_148907_b	inventoryType	#inventoryType, :, ~, menuType
+		c	The type of inventory menu. The possible values are:\n<br>0: container (e.g. chest)\n<br>1: crafting table\n<br>2: furnace\n<br>3: dispenser\n<br>4: enchanting table\n<br>5: brewing stand\n<br>6: trader (i.e. villager)\n<br>7: beacon\n<br>8: anvil\n<br>9: hopper\n<br>10: dropper\n<br>11: horse with chest
+	f	Ljava/lang/String;	field_148908_c	windowTitle	#windowTitle, :, name, displayName
+	f	I	field_148905_d	slotCount	#slotCount, :, slots, size
+	f	Z	field_148906_e	useProvidedTitle	#useProvidedTitle, :, ~, hasCustomName
+	f	I	field_148904_f	entityId	#entityId, :, :, ownerId
+	m	()I	func_148901_c	getWindowId	#getWindowId, :, getId, getMenuId
+	m	()I	func_148899_d	getMenuType	#~, ~, ~, getMenuType
+	m	()Ljava/lang/String;	func_148902_e	getGuiId	#getGuiId, :, getName, getDisplayName
+	m	()I	func_148898_f	getSlotCount	#getSlotCount, :, :, getSize
+	m	()Z	func_148900_g	hasSlots	#hasSlots, :, :, getLocked
+	m	()I	func_148897_h	getEntityId	#getEntityId, :, :, getOwnerId
+	m	(IILjava/lang/String;IZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45184_1_	menuId	#~, ~, ~, menuId
+		p	2	p_i45184_2_	menuType	#~, ~, ~, menuType
+		p	3	p_i45184_3_	displayName	#~, ~, ~, displayName
+		p	4	p_i45184_4_	size	#~, ~, ~, size
+		p	5	p_i45184_5_	hasCustomName	#~, ~, ~, hasCustomName
+	m	(IILjava/lang/String;IZI)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45185_1_	menuId	#~, ~, ~, menuId
+		p	2	p_i45185_2_	menuType	#~, ~, ~, menuType
+		p	3	p_i45185_3_	displayName	#~, ~, ~, displayName
+		p	4	p_i45185_4_	size	#~, ~, ~, size
+		p	5	p_i45185_5_	hasCustomName	#~, ~, ~, hasCustomName
+		p	6	p_i45185_6_	ownerId	#~, ~, ~, ownerId
+	m	()V	<init>	<init>	#~, ~, ~, ~

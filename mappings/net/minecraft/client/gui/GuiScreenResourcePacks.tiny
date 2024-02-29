@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiScreenResourcePacks	net/minecraft/client/gui/GuiScreenResourcePacks	
+	f	Lorg/apache/logging/log4j/Logger;	field_146968_a	logger	#logger, :, LOGGER, :
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146965_f	parentScreen	#parentScreen, :, parent, :
+	f	Ljava/util/List;	field_146966_g	availableResourcePacks	#availableResourcePacks, :, availablePackList, availablePacks
+		c	List of available resource packs
+	f	Ljava/util/List;	field_146969_h	selectedResourcePacks	#selectedResourcePacks, :, selectedPackList, appliedPacks
+		c	List of selected resource packs
+	f	Lnet/minecraft/client/gui/GuiResourcePackAvailable;	field_146970_i	availableResourcePacksList	#availableResourcePacksList, :, availablePacks, availablePacksWidget
+		c	List component that contains the available resource packs
+	f	Lnet/minecraft/client/gui/GuiResourcePackSelected;	field_146967_r	selectedResourcePacksList	#selectedResourcePacksList, :, selectedPacks, appliedPacksWidget
+		c	List component that contains the selected resource packs
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45050_1_	parentScreenIn	#parentScreenIn, :, parent, :
+	m	()Ljava/util/List;	func_146964_g	getAvailableResourcePacks	#getAvailableResourcePacks, :, getAvailablePacks, :
+		c	Returns a list containing the available resource packs
+	m	(Lnet/minecraft/client/resources/ResourcePackListEntry;)Z	func_146961_a	hasResourcePackEntry	#hasResourcePackEntry, :, isPackSelected, isApplied
+		p	1	p_146961_1_	resourcePackEntry	#resourcePackEntry, :, resourcePack, pack
+	m	(Lnet/minecraft/client/resources/ResourcePackListEntry;)Ljava/util/List;	func_146962_b	getListContaining	#getListContaining, :, getContainingList, getSiblingPacks
+		c	Returns the list containing the resource pack entry, returns the selected list if it is selected, otherwise returns the available list
+		p	1	p_146962_1_	resourcePackEntry	#resourcePackEntry, :, resourcePack, pack
+	m	()Ljava/util/List;	func_146963_h	getSelectedResourcePacks	#getSelectedResourcePacks, :, getSelectedPacks, getAppliedPacks
+		c	Returns a list containing the selected resource packs
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

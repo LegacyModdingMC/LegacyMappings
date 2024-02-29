@@ -1,0 +1,37 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldSettings$GameType	net/minecraft/world/WorldSettings$GameType	
+	f	Lnet/minecraft/world/WorldSettings$GameType;	NOT_SET	NOT_SET	#~, ~, NOT_SET, :
+	f	Lnet/minecraft/world/WorldSettings$GameType;	SURVIVAL	SURVIVAL	#~, ~, SURVIVAL, :
+	f	Lnet/minecraft/world/WorldSettings$GameType;	CREATIVE	CREATIVE	#~, ~, CREATIVE, :
+	f	Lnet/minecraft/world/WorldSettings$GameType;	ADVENTURE	ADVENTURE	#~, ~, ADVENTURE, :
+	f	I	field_77154_e	id	#id, :, gameModeId, id
+	f	Ljava/lang/String;	field_77151_f	name	#name, :, gameModeName, key
+	f	[Lnet/minecraft/world/WorldSettings$GameType;	$VALUES	$VALUES	#~, ~, ~, ~
+	m	(Ljava/lang/String;IILjava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	3	p_i1956_3_	typeId	#typeId, :, id, :
+		p	4	p_i1956_4_	nameIn	#nameIn, :, name, key
+		p	1	p_i1956_1_	p_i1956_1_	#~, ~, ~, ~
+		p	2	p_i1956_2_	p_i1956_2_	#~, ~, ~, ~
+	m	()I	func_77148_a	getID	#getID, :, getGameModeId, getId
+		c	Returns the ID of this game type
+	m	(I)Lnet/minecraft/world/WorldSettings$GameType;	func_77146_a	getByID	#getByID, :, setGameModeWithId, byId
+		c	Returns the game type with the specified ID, or SURVIVAL if none found. Args: id
+		p	0	p_77146_0_	idIn	#idIn, :, gamemode, id
+	m	(Ljava/lang/String;)Lnet/minecraft/world/WorldSettings$GameType;	func_77142_a	getByName	#getByName, :, setGameModeWithString, byKey
+		c	Returns the game type with the specified name, or SURVIVAL if none found. This is case sensitive. Args: name
+		p	0	p_77142_0_	gamemodeName	#gamemodeName, :, gamemode, key
+	m	(Lnet/minecraft/entity/player/PlayerCapabilities;)V	func_77147_a	configurePlayerCapabilities	#configurePlayerCapabilities, :, gameModeAbilities, apply
+		c	Configures the player capabilities based on the game type
+		p	1	p_77147_1_	capabilities	#capabilities, :, abilities, :
+	m	()Ljava/lang/String;	func_77149_b	getName	#getName, :, getGameModeName, getKey
+		c	Returns the name of this game type
+	m	()Z	func_82752_c	isAdventure	#isAdventure, hasLimitedInteractions, isAdventure, restrictsWorldModification
+		c	Returns true if this is the ADVENTURE game type
+	m	()Z	func_77145_d	isCreative	#isCreative, :, :, :
+		c	Returns true if this is the CREATIVE game type
+	m	()Z	func_77144_e	isSurvivalOrAdventure	#isSurvivalOrAdventure, :, canBeDamaged, isSurvival
+		c	Returns true if this is the SURVIVAL or ADVENTURE game type
+	m	(Ljava/lang/String;)Lnet/minecraft/world/WorldSettings$GameType;	valueOf	valueOf	#~, ~, ~, ~
+		p	0	p_valueOf_0_	p_valueOf_0_	#~, ~, ~, ~
+	m	()[Lnet/minecraft/world/WorldSettings$GameType;	values	values	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

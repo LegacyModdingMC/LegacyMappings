@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/status/server/S01PacketPong	net/minecraft/network/status/server/S01PacketPong	
+	f	J	field_149293_a	clientTime	#clientTime, :, startTime, time
+	m	(J)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45272_1_	time	#time, :, startTime, time
+	m	()J	func_149292_c	getTime	#~, ~, ~, getTime
+	m	()V	<init>	<init>	#~, ~, ~, ~

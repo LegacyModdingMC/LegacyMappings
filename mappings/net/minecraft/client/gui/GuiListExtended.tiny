@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiListExtended	net/minecraft/client/gui/GuiListExtended	
+	m	(III)Z	func_148179_a	mouseClicked	#mouseClicked, :, :, :
+		p	1	p_148179_1_	mouseX	#mouseX, :, :, :
+		p	2	p_148179_2_	mouseY	#mouseY, :, :, :
+		p	3	p_148179_3_	mouseEvent	#mouseEvent, :, button, :
+	m	(I)Lnet/minecraft/client/gui/GuiListExtended$IGuiListEntry;	func_148180_b	getListEntry	#getListEntry, :, ~, getEntry
+		c	Gets the IGuiListEntry object for the given index
+		p	1	p_148180_1_	index	#index, :, ~, index
+	m	(III)Z	func_148181_b	mouseReleased	#mouseReleased, :, :, :
+		p	1	p_148181_1_	x	#x, :, mouseX, :
+		p	2	p_148181_2_	y	#y, :, mouseY, :
+		p	3	p_148181_3_	mouseEvent	#mouseEvent, :, button, :
+	m	(Lnet/minecraft/client/Minecraft;IIIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45010_1_	mcIn	#mcIn, :, ~, minecraft
+		p	2	p_i45010_2_	widthIn	#widthIn, :, ~, width
+		p	3	p_i45010_3_	heightIn	#heightIn, :, ~, height
+		p	4	p_i45010_4_	topIn	#topIn, :, ~, minY
+		p	5	p_i45010_5_	bottomIn	#bottomIn, :, ~, maxY
+		p	6	p_i45010_6_	slotHeightIn	#slotHeightIn, :, ~, itemHeight

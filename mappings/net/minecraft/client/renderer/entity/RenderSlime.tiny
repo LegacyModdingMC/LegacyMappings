@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderSlime	net/minecraft/client/renderer/entity/RenderSlime	
+	f	Lnet/minecraft/util/ResourceLocation;	field_110897_a	slimeTextures	#slimeTextures, SLIME_TEXTURES, SLIME_TEX, SLIME_LOCATION
+	f	Lnet/minecraft/client/model/ModelBase;	field_77092_a	scaleAmount	#scaleAmount, :, ~, smallModel
+	m	(Lnet/minecraft/client/model/ModelBase;Lnet/minecraft/client/model/ModelBase;F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1267_1_	model	#~, ~, ~, model
+		p	2	p_i1267_2_	smallModel	#~, ~, ~, smallModel
+		p	3	p_i1267_3_	shadowSize	#~, ~, ~, shadowSize
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

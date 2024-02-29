@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenFlowers	net/minecraft/world/gen/feature/WorldGenFlowers	
+	f	Lnet/minecraft/block/Block;	field_150552_a	flower	#flower, :, ~, flower
+	f	I	field_150551_b	variant	#~, ~, ~, variant
+	m	(Lnet/minecraft/block/Block;I)V	func_150550_a	set	#~, ~, ~, set
+		p	1	p_150550_1_	flower	#~, ~, ~, flower
+		p	2	p_150550_2_	flowerVariant	#~, ~, ~, flowerVariant
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45452_1_	flower	#~, ~, ~, flower

@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockPortal$Size	net/minecraft/block/BlockPortal$Size	
+	f	Lnet/minecraft/world/World;	field_150867_a	world	#world, :, ~, world
+	f	I	field_150865_b	axis	#axis, :, ~, axis
+	f	I	field_150866_c	rightDir	#rightDir, :, ~, right
+	f	I	field_150863_d	leftDir	#leftDir, :, ~, left
+	f	I	field_150864_e	portalBlockCount	#portalBlockCount, :, ~, foundPortalBlocks
+	f	Lnet/minecraft/util/ChunkCoordinates;	field_150861_f	bottomLeft	#bottomLeft, :, ~, bottomLeft
+	f	I	field_150862_g	height	#height, :, ~, height
+	f	I	field_150868_h	width	#width, :, ~, width
+	m	()I	func_150858_a	calculatePortalHeight	#calculatePortalHeight, :, ~, findHeight
+	m	(IIII)I	func_150853_a	findWidth	#~, ~, ~, findWidth
+		p	1	p_150853_1_	x	#~, ~, ~, x
+		p	2	p_150853_2_	y	#~, ~, ~, y
+		p	3	p_150853_3_	z	#~, ~, ~, z
+		p	4	p_150853_4_	dir	#~, ~, ~, dir
+	m	(Lnet/minecraft/block/Block;)Z	func_150857_a	isEmptyBlock	#isEmptyBlock, :, ~, canBeReplacedByPortal
+		p	1	p_150857_1_	blockIn	#blockIn, :, ~, block
+	m	(Lnet/minecraft/block/BlockPortal$Size;)I	access$000	access$000	#~, ~, ~, getFoundPortalBlocks
+		p	0	p_access$000_0_	portalHelper	#~, ~, ~, portalHelper
+	m	()Z	func_150860_b	isValid	#isValid, :, ~, isValid
+	m	(Lnet/minecraft/block/BlockPortal$Size;)I	access$100	access$100	#~, ~, ~, getWidth
+		p	0	p_access$100_0_	portalHelper	#~, ~, ~, portalHelper
+	m	()V	func_150859_c	placePortalBlocks	#placePortalBlocks, :, ~, build
+	m	(Lnet/minecraft/block/BlockPortal$Size;)I	access$200	access$200	#~, ~, ~, getHeight
+		p	0	p_access$200_0_	portalHelper	#~, ~, ~, portalHelper
+	m	(Lnet/minecraft/world/World;IIII)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45415_1_	world	#~, ~, ~, world
+		p	2	p_i45415_2_	x	#~, ~, ~, x
+		p	3	p_i45415_3_	y	#~, ~, ~, y
+		p	4	p_i45415_4_	z	#~, ~, ~, z
+		p	5	p_i45415_5_	axis	#~, ~, ~, axis

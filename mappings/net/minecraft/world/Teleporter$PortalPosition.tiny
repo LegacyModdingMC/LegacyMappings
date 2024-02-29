@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/Teleporter$PortalPosition	net/minecraft/world/Teleporter$PortalPosition	
+	f	J	field_85087_d	lastUpdateTime	#lastUpdateTime, :, ~, lastUseTime
+		c	The worldtime at which this PortalPosition was last verified
+	f	Lnet/minecraft/world/Teleporter;	field_85088_e	teleporterInstance	#teleporterInstance, :, portalTeleporter, portalForcer
+		c	The teleporter to which this PortalPosition applies
+	m	(Lnet/minecraft/world/Teleporter;IIIJ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1962_1_	portalTeleporter	#~, ~, portalTeleporter, ~
+		p	2	p_i1962_2_	x	#~, ~, x, :
+		p	3	p_i1962_3_	y	#~, ~, y, :
+		p	4	p_i1962_4_	z	#~, ~, z, :
+		p	5	p_i1962_5_	time	#~, ~, ~, time

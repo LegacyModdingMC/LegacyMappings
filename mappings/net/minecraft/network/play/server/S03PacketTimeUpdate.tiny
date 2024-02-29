@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S03PacketTimeUpdate	net/minecraft/network/play/server/S03PacketTimeUpdate	
+	f	J	field_149369_a	totalWorldTime	#totalWorldTime, :, time, :
+	f	J	field_149368_b	worldTime	#worldTime, :, timeOfDay, :
+	m	(JJZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45230_1_	totalWorldTimeIn	#totalWorldTimeIn, :, time, :
+		p	3	p_i45230_3_	totalTimeIn	#totalTimeIn, :, timeOfDay, :
+		p	5	p_i45230_5_	doDayLightCycle	#doDayLightCycle, :, doDaylightCycle, :
+	m	()J	func_149366_c	getTotalWorldTime	#getTotalWorldTime, :, getTime, :
+	m	()J	func_149365_d	getWorldTime	#getWorldTime, :, getTimeOfDay, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

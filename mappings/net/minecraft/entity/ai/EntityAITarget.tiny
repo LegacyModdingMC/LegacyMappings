@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAITarget	net/minecraft/entity/ai/EntityAITarget	
+	f	Z	field_75303_a	nearbyOnly	#nearbyOnly, :, checkNavigable, checkCanNavigate
+		c	When true, only entities that can be reached with minimal effort will be targetted.
+	f	I	field_75301_b	targetSearchStatus	#targetSearchStatus, :, canNavigateFlag, :
+		c	When nearbyOnly is true: 0 -> No target, but OK to search; 1 -> Nearby target found; 2 -> Target too far.
+	f	Lnet/minecraft/entity/EntityCreature;	field_75299_d	taskOwner	#taskOwner, :, mob, entity
+		c	The entity that this task belongs to
+	f	Z	field_75297_f	shouldCheckSight	#shouldCheckSight, :, checkVisibility, :
+		c	If true, EntityAI targets must be able to be seen (cannot be blocked by walls) to be suitable targets.
+	f	I	field_75302_c	targetSearchDelay	#targetSearchDelay, :, checkCanNavigateCooldown, :
+		c	When nearbyOnly is true, this throttles target searching to avoid excessive pathfinding.
+	f	I	field_75298_g	targetUnseenTicks	#targetUnseenTicks, :, timeWithoutVisibility, :
+		c	If  @shouldCheckSight is true, the number of ticks before the interuption of this AITastk when the entity does't see the target
+	m	(Lnet/minecraft/entity/EntityCreature;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1669_1_	creature	#creature, :, mob, entity
+		p	2	p_i1669_2_	checkSight	#checkSight, :, checkVisibility, :
+	m	(Lnet/minecraft/entity/EntityCreature;ZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1670_1_	creature	#creature, :, mob, entity
+		p	2	p_i1670_2_	checkSight	#checkSight, :, checkVisibility, :
+		p	3	p_i1670_3_	onlyNearby	#onlyNearby, :, checkNavigable, checkCanNavigate
+	m	(Lnet/minecraft/entity/EntityLivingBase;)Z	func_75295_a	canEasilyReach	#canEasilyReach, :, canNavigateToEntity, canNavigateToTarget
+		c	Checks to see if this entity can find a short path to the given target.
+		p	1	p_75295_1_	target	#target, :, entity, targetEntity
+	m	(Lnet/minecraft/entity/EntityLivingBase;Z)Z	func_75296_a	isSuitableTarget	#isSuitableTarget, :, canTrack, canTarget
+		c	A method used to see if an entity is a suitable target through a number of checks.
+		p	1	p_75296_1_	target	#target, :, :, targetEntity
+		p	2	p_75296_2_	includeInvincibles	#includeInvincibles, :, ~, isPlayer
+	m	()D	func_111175_f	getTargetDistance	#getTargetDistance, :, getFollowRange, :

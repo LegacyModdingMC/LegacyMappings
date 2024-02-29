@@ -1,0 +1,203 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemStack	net/minecraft/item/ItemStack	
+	f	Ljava/text/DecimalFormat;	field_111284_a	DECIMALFORMAT	#DECIMALFORMAT, :, MODIFIER_FORMAT, :
+	f	I	field_77994_a	stackSize	#stackSize, :, count, size
+		c	Size of the stack.
+	f	I	field_77992_b	animationsToGo	#animationsToGo, :, pickupTick, popAnimationTime
+		c	Number of animation frames to go when receiving an item (by walking into it, for example).
+	f	Lnet/minecraft/nbt/NBTTagCompound;	field_77990_d	stackTagCompound	#stackTagCompound, :, nbt, :
+		c	A NBTTagMap containing data about an ItemStack. Can only be used for non stackable items
+	f	Lnet/minecraft/item/Item;	field_151002_e	theItem	#theItem, item, :, :
+	f	I	field_77991_e	itemDamage	#itemDamage, :, damage, metadata
+		c	Damage dealt to the item or number of use. Raise when using items.
+	f	Lnet/minecraft/entity/item/EntityItemFrame;	field_82843_f	itemFrame	#itemFrame, :, :, :
+		c	Item frame this stack is on, or null if not on an item frame.
+	m	(Lnet/minecraft/item/Item;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1879_1_	itemIn	#itemIn, :, item, :
+	m	(Lnet/minecraft/item/Item;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1880_1_	itemIn	#itemIn, :, item, :
+		p	2	p_i1880_2_	amount	#amount, :, count, size
+	m	(Lnet/minecraft/item/Item;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1881_1_	itemIn	#itemIn, :, item, :
+		p	2	p_i1881_2_	amount	#amount, :, count, size
+		p	3	p_i1881_3_	meta	#meta, :, damage, metadata
+	m	(Lnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1876_1_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1877_1_	blockIn	#blockIn, :, block, :
+		p	2	p_i1877_2_	amount	#amount, :, count, size
+	m	(Lnet/minecraft/block/Block;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1878_1_	blockIn	#blockIn, :, block, :
+		p	2	p_i1878_2_	amount	#amount, :, count, size
+		p	3	p_i1878_3_	meta	#meta, :, damage, metadata
+	m	()Z	func_82839_y	isOnItemFrame	#isOnItemFrame, :, isInItemFrame, :
+		c	Return whether this stack is on an item frame.
+	m	()Lnet/minecraft/entity/item/EntityItemFrame;	func_82836_z	getItemFrame	#getItemFrame, :, :, :
+		c	Return the item frame this stack is on. Returns null if not on an item frame.
+	m	()I	func_82838_A	getRepairCost	#getRepairCost, :, :, :
+		c	Get this stack's repair cost, or 0 if no repair cost is defined.
+	m	()Lcom/google/common/collect/Multimap;	func_111283_C	getAttributeModifiers	#getAttributeModifiers, :, getAttributes, getAttributeModifiers
+		c	Gets the attribute modifiers for this ItemStack.\nWill check for an NBT tag list containing modifiers for the stack.
+	m	()Lnet/minecraft/util/IChatComponent;	func_151000_E	getChatComponent	#getChatComponent, getTextComponent, toHoverableText, getDisplayName
+		c	Get a ChatComponent for this Item's display name that shows this Item on hover
+	m	()Ljava/lang/String;	func_77977_a	getUnlocalizedName	#getUnlocalizedName, getTranslationKey, :, :
+	m	(I)Lnet/minecraft/item/ItemStack;	func_77979_a	splitStack	#splitStack, :, split, :
+		c	Remove the argument from the stack size. Return a new stack object with argument size.
+		p	1	p_77979_1_	amount	#amount, :, :, :
+	m	(ILjava/util/Random;)Z	func_96631_a	attemptDamageItem	#attemptDamageItem, :, damage, :
+		c	Attempts to damage the ItemStack with par1 amount of damage, If the ItemStack has the Unbreaking enchantment there is a chance for each point of damage to be negated. Returns true if it takes more damage than getMaxDamage(). Returns false otherwise or if the ItemStack can't be damaged or if all points of damage are negated.
+		p	1	p_96631_1_	amount	#amount, :, :, :
+		p	2	p_96631_2_	rand	#rand, :, random, :
+	m	(ILnet/minecraft/entity/EntityLivingBase;)V	func_77972_a	damageItem	#damageItem, :, damage, damageAndBreak
+		c	Damages the item in the ItemStack
+		p	1	p_77972_1_	amount	#amount, :, :, :
+		p	2	p_77972_2_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/item/Item;)V	func_150996_a	setItem	#setItem, :, :, :
+		p	1	p_150996_1_	newItem	#newItem, :, item, :
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_77969_a	isItemEqual	#isItemEqual, :, equalsIgnoreNbt, matchesItem
+		c	compares ItemStack argument to the instance ItemStack; returns true if the Items contained in both ItemStacks are equal
+		p	1	p_77969_1_	other	#other, :, stack, other
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z	func_77970_a	areItemStackTagsEqual	#areItemStackTagsEqual, :, equalsIgnoreDamage, matchesNbt
+		p	0	p_77970_0_	stackA	#stackA, :, left, stack1
+		p	1	p_77970_1_	stackB	#stackB, :, right, stack2
+	m	(Lnet/minecraft/enchantment/Enchantment;I)V	func_77966_a	addEnchantment	#addEnchantment, :, :, :
+		c	Adds an enchantment with a desired level on the ItemStack.
+		p	1	p_77966_1_	ench	#ench, :, enchantment, :
+		p	2	p_77966_2_	level	#level, :, :, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/block/Block;IIILnet/minecraft/entity/player/EntityPlayer;)V	func_150999_a	onBlockDestroyed	#onBlockDestroyed, :, ~, mineBlock
+		p	1	p_150999_1_	world	#~, ~, ~, world
+		p	2	p_150999_2_	block	#~, ~, ~, block
+		p	3	p_150999_3_	x	#~, ~, ~, x
+		p	4	p_150999_4_	y	#~, ~, ~, y
+		p	5	p_150999_5_	z	#~, ~, ~, z
+		p	6	p_150999_6_	player	#~, ~, ~, player
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/Entity;IZ)V	func_77945_a	updateAnimation	#updateAnimation, :, inventoryTick, tick
+		c	Called each tick as long the ItemStack in on player inventory. Used to progress the pickup animation and update maps.
+		p	1	p_77945_1_	worldIn	#worldIn, :, world, :
+		p	2	p_77945_2_	entityIn	#entityIn, :, entity, :
+		p	3	p_77945_3_	inventorySlot	#inventorySlot, :, slot, :
+		p	4	p_77945_4_	isCurrentItem	#isCurrentItem, :, selected, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;	func_77957_a	useItemRightClick	#useItemRightClick, :, onStartUse, startUsing
+		c	Called whenever this item stack is equipped and right clicked. Returns the new item stack to put in the position where this item is. Args: world, player
+		p	1	p_77957_1_	worldIn	#worldIn, :, world, :
+		p	2	p_77957_2_	playerIn	#playerIn, :, player, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;I)V	func_77980_a	onCrafting	#onCrafting, :, onCraft, onResult
+		p	1	p_77980_1_	worldIn	#worldIn, :, world, :
+		p	2	p_77980_2_	playerIn	#playerIn, :, player, :
+		p	3	p_77980_3_	amount	#amount, :, :, :
+	m	(Lnet/minecraft/block/Block;)F	func_150997_a	getStrVsBlock	#getStrVsBlock, getDestroySpeed, getMiningSpeedMultiplier, getMiningSpeed
+		p	1	p_150997_1_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/item/ItemStack;	func_77949_a	loadItemStackFromNBT	#loadItemStackFromNBT, :, fromNbt, :
+		p	0	p_77949_0_	nbt	#nbt, :, :, :
+	m	(Ljava/lang/String;Lnet/minecraft/nbt/NBTBase;)V	func_77983_a	setTagInfo	#setTagInfo, :, putSubNbt, addToNbt
+		p	1	p_77983_1_	key	#key, :, :, :
+		p	2	p_77983_2_	value	#value, :, nbt, :
+	m	(Lnet/minecraft/entity/item/EntityItemFrame;)V	func_82842_a	setItemFrame	#setItemFrame, :, setInItemFrame, setItemFrame
+		c	Set the item frame this stack is on.
+		p	1	p_82842_1_	frame	#frame, :, itemFrame, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;Lnet/minecraft/entity/player/EntityPlayer;)V	func_77961_a	hitEntity	#hitEntity, :, onEntityHit, attackEntity
+		c	Calls the corresponding fct in di
+		p	1	p_77961_1_	entityIn	#entityIn, :, entity, target
+		p	2	p_77961_2_	playerIn	#playerIn, :, attacker, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;IIIIFFF)Z	func_77943_a	tryPlaceItemIntoWorld	#tryPlaceItemIntoWorld, :, ~, use
+		p	1	p_77943_1_	player	#~, ~, ~, player
+		p	2	p_77943_2_	world	#~, ~, ~, world
+		p	3	p_77943_3_	x	#~, ~, ~, x
+		p	4	p_77943_4_	y	#~, ~, ~, y
+		p	5	p_77943_5_	z	#~, ~, ~, z
+		p	6	p_77943_6_	face	#~, ~, ~, face
+		p	7	p_77943_7_	dx	#~, ~, ~, dx
+		p	8	p_77943_8_	dy	#~, ~, ~, dy
+		p	9	p_77943_9_	dz	#~, ~, ~, dz
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/entity/EntityLivingBase;)Z	func_111282_a	interactWithEntity	#interactWithEntity, :, canUseOnEntity, interact
+		p	1	p_111282_1_	playerIn	#playerIn, :, player, :
+		p	2	p_111282_2_	entityIn	#entityIn, :, entity, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;Z)Ljava/util/List;	func_82840_a	getTooltip	#getTooltip, :, :, :
+		c	Return a list of strings containing information about the item
+		p	1	p_82840_1_	playerIn	#playerIn, :, player, :
+		p	2	p_82840_2_	advanced	#advanced, :, :, :
+	m	()Lnet/minecraft/item/Item;	func_77973_b	getItem	#getItem, :, :, :
+		c	Returns the object corresponding to the stack.
+	m	(I)V	func_77964_b	setItemDamage	#setItemDamage, :, setDamage, :
+		c	Sets the item damage of the ItemStack.
+		p	1	p_77964_1_	meta	#meta, :, damage, :
+	m	(Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack;	func_77944_b	copyItemStack	#copyItemStack, :, copyOf, :
+		c	Creates a copy of a ItemStack, a null parameters will return a null.
+		p	0	p_77944_0_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z	func_77989_b	areItemStacksEqual	#areItemStacksEqual, :, equalsAll, matches
+		c	compares ItemStack argument1 with ItemStack argument2; returns true if both ItemStacks are equal
+		p	0	p_77989_0_	stackA	#stackA, :, left, stack1
+		p	1	p_77989_1_	stackB	#stackB, :, right, stack2
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;)Lnet/minecraft/item/ItemStack;	func_77950_b	onFoodEaten	#onFoodEaten, onItemUseFinish, onFinishUse, finishUsing
+		c	Called when the item in use count reach 0, e.g. item food eaten. Return the new ItemStack. Args : world, entity
+		p	1	p_77950_1_	worldIn	#worldIn, :, world, :
+		p	2	p_77950_2_	playerIn	#playerIn, entityLiving, player, :
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/player/EntityPlayer;I)V	func_77974_b	onPlayerStoppedUsing	#onPlayerStoppedUsing, :, onUseStopped, stopUsing
+		c	Called when the player releases the use item button. Args: world, entityplayer, itemInUseCount
+		p	1	p_77974_1_	worldIn	#worldIn, :, world, :
+		p	2	p_77974_2_	playerIn	#playerIn, entityLiving, player, :
+		p	3	p_77974_3_	timeLeft	#timeLeft, :, :, remainingUseTime
+	m	(Lnet/minecraft/block/Block;)Z	func_150998_b	canItemHarvestBlock	#canItemHarvestBlock, canHarvestBlock, isEffectiveOn, canEffectivelyMine
+		c	Check whether the given Block can be harvested using this ItemStack.
+		p	1	p_150998_1_	blockIn	#blockIn, :, block, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/nbt/NBTTagCompound;	func_77955_b	writeToNBT	#writeToNBT, :, toNbt, writeNbt
+		c	Write the stack fields to a NBT object. Return the new NBT object.
+		p	1	p_77955_1_	nbt	#nbt, :, :, :
+	m	()Lnet/minecraft/util/IIcon;	func_77954_c	getIconIndex	#getIconIndex, :, ~, getSprite
+		c	Returns the icon index of the current stack.
+	m	(I)V	func_82841_c	setRepairCost	#setRepairCost, :, :, :
+		c	Set this stack's repair cost.
+		p	1	p_82841_1_	cost	#cost, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_77963_c	readFromNBT	#readFromNBT, :, writeNbt, readNbt
+		c	Read the stack fields from a NBT object.
+		p	1	p_77963_1_	nbt	#nbt, :, :, :
+	m	(Ljava/lang/String;)Lnet/minecraft/item/ItemStack;	func_151001_c	setStackDisplayName	#setStackDisplayName, :, setCustomName, setHoverName
+		p	1	p_151001_1_	displayName	#displayName, :, name, :
+	m	()I	func_94608_d	getItemSpriteNumber	#getItemSpriteNumber, :, ~, getAtlasType
+	m	(Lnet/minecraft/item/ItemStack;)Z	func_77959_d	isItemStackEqual	#isItemStackEqual, :, equalsAll, matches
+		c	compares ItemStack argument to the instance ItemStack; returns true if both ItemStacks are equal
+		p	1	p_77959_1_	other	#other, :, stack, other
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_77982_d	setTagCompound	#setTagCompound, :, setNbt, :
+		c	Assigns a NBTTagCompound to the ItemStack, minecraft validates that only non-stackable items can have it.
+		p	1	p_77982_1_	nbt	#nbt, :, :, :
+	m	()I	func_77976_d	getMaxStackSize	#getMaxStackSize, :, getMaxCount, getMaxSize
+		c	Returns maximum size of the stack.
+	m	()Z	func_77985_e	isStackable	#isStackable, :, :, :
+		c	Returns true if the ItemStack can hold 2 or more units of the item.
+	m	()Z	func_77984_f	isItemStackDamageable	#isItemStackDamageable, :, isDamageable, :
+		c	true if this itemStack is damageable
+	m	()Z	func_77981_g	getHasSubtypes	#getHasSubtypes, :, isUnbreakable, isItemStackable
+	m	()Z	func_77951_h	isItemDamaged	#isItemDamaged, :, isDamaged, :
+		c	returns true when a damageable item is damaged
+	m	()I	func_77952_i	getItemDamageForDisplay	#getItemDamageForDisplay, getItemDamage, getDamage, :
+		c	gets the damage of an itemstack, for displaying purposes
+	m	()I	func_77960_j	getItemDamage	#getItemDamage, getMetadata, getData, getMetadata
+		c	gets the damage of an itemstack
+	m	()I	func_77958_k	getMaxDamage	#getMaxDamage, :, :, :
+		c	Returns the max damage an item in the stack can take.
+	m	()Lnet/minecraft/item/ItemStack;	func_77946_l	copy	#copy, :, :, :
+		c	Returns a new stack with the same properties.
+	m	()I	func_77988_m	getMaxItemUseDuration	#getMaxItemUseDuration, :, getMaxUseTime, getUseDuration
+	m	()Lnet/minecraft/item/EnumAction;	func_77975_n	getItemUseAction	#getItemUseAction, :, getUseAction, :
+	m	()Z	func_77942_o	hasTagCompound	#hasTagCompound, :, hasNbt, :
+		c	Returns true if the ItemStack has an NBTTagCompound. Currently used to store enchantments.
+	m	()Lnet/minecraft/nbt/NBTTagCompound;	func_77978_p	getTagCompound	#getTagCompound, :, getNbt, :
+		c	Returns the NBTTagCompound of the ItemStack.
+	m	()Lnet/minecraft/nbt/NBTTagList;	func_77986_q	getEnchantmentTagList	#getEnchantmentTagList, :, getEnchantments, :
+	m	()Ljava/lang/String;	func_82833_r	getDisplayName	#getDisplayName, :, getCustomName, getHoverName
+		c	returns the display name of the itemstack
+	m	()V	func_135074_t	clearCustomName	#clearCustomName, :, removeCustomName, resetHoverName
+		c	Clear any custom name set for this ItemStack
+	m	()Ljava/lang/String;	toString	toString	#~, ~, ~, ~
+	m	()Z	func_82837_s	hasDisplayName	#hasDisplayName, :, hasCustomName, hasCustomHoverName
+		c	Returns true if the itemstack has a display name
+	m	()Z	func_77962_s	hasEffect	#hasEffect, :, hasEnchantmentGlint, :
+	m	()Lnet/minecraft/item/EnumRarity;	func_77953_t	getRarity	#getRarity, :, :, :
+	m	()Z	func_77956_u	isItemEnchantable	#isItemEnchantable, :, isEnchantable, :
+		c	True if it is a tool and has no enchantments to begin with
+	m	()Z	func_77948_v	isItemEnchanted	#isItemEnchanted, :, hasEnchantments, :
+		c	True if the item has enchantment data
+	m	()Z	func_82835_x	canEditBlocks	#canEditBlocks, :, hasSubTypes, canAlwaysUse
+		c	Returns whether this stack is always allowed to edit the world. Forces {@link net.minecraft.entity.player.EntityPlayer#canPlayerEdit EntityPlayer#canPlayerEdit} to return {@code true}.\n\n@return whether this stack ignores other restrictions on how a player can modify the world.\n@see Item#canItemEditBlocks
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

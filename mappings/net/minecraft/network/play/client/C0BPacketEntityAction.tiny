@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/client/C0BPacketEntityAction	net/minecraft/network/play/client/C0BPacketEntityAction	
+	f	I	field_149517_a	entityID	#entityID, :, entityId, id
+	f	I	field_149515_b	action	#action, :, ~, action
+		c	The type of interaction. This can be one of the following:\n<br> 0: start sneaking\n<br> 1: stop sneaking\n<br> 2: stop sleeping\n<br> 3: start sprinting\n<br> 4: stop sprinting\n<br> 5: riding jump\n<br> 6: open horse inventory
+	f	I	field_149516_c	auxData	#auxData, :, mountJumpHeight, data
+	m	(Lnet/minecraft/entity/Entity;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45259_1_	entity	#~, ~, entity, :
+		p	2	p_i45259_2_	action	#~, ~, command, action
+	m	()I	func_149513_d	getAction	#~, ~, ~, getAction
+	m	()I	func_149512_e	getAuxData	#getAuxData, :, getMountJumpHeight, getData
+	m	(Lnet/minecraft/entity/Entity;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45260_1_	entity	#~, ~, ~, entity
+		p	2	p_i45260_2_	action	#~, ~, ~, action
+		p	3	p_i45260_3_	data	#~, ~, ~, data
+	m	()V	<init>	<init>	#~, ~, ~, ~

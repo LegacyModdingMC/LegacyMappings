@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenBigMushroom	net/minecraft/world/gen/feature/WorldGenBigMushroom	
+	f	I	field_76523_a	mushroomType	#mushroomType, :, ~, variant
+		c	The mushroom type. 0 for brown, 1 for red.
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2017_1_	variant	#~, ~, ~, variant
+	m	()V	<init>	<init>	#~, ~, ~, ~

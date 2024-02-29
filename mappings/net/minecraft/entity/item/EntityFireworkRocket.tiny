@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityFireworkRocket	net/minecraft/entity/item/EntityFireworkRocket	
+	f	I	field_92056_a	fireworkAge	#fireworkAge, :, life, age
+		c	The age of the firework in ticks.
+	f	I	field_92055_b	lifetime	#lifetime, :, lifeTime, maxAge
+		c	The lifetime of the firework in ticks. When the age reaches the lifetime the firework explodes.
+	m	(Lnet/minecraft/world/World;DDDLnet/minecraft/item/ItemStack;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1763_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1763_2_	x	#x, :, :, :
+		p	4	p_i1763_4_	y	#y, :, :, :
+		p	6	p_i1763_6_	z	#z, :, :, :
+		p	8	p_i1763_8_	givenItem	#givenItem, :, item, stack
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1762_1_	worldIn	#worldIn, :, ~, ~

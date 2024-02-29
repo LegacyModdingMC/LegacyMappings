@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenTallGrass	net/minecraft/world/gen/feature/WorldGenTallGrass	
+	f	Lnet/minecraft/block/Block;	field_150522_a	plant	#~, ~, ~, plant
+	f	I	field_76534_b	tallGrassMetadata	#tallGrassMetadata, :, ~, plantVariant
+	m	(Lnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45466_1_	plant	#~, ~, ~, plant
+		p	2	p_i45466_2_	plantVariant	#~, ~, ~, plantVariant

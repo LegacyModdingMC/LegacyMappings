@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenMinable	net/minecraft/world/gen/feature/WorldGenMinable	
+	f	Lnet/minecraft/block/Block;	field_150519_a	block	#~, ~, ~, block
+	f	I	field_76541_b	numberOfBlocks	#numberOfBlocks, :, amount, size
+		c	The number of blocks to generate.
+	f	Lnet/minecraft/block/Block;	field_150518_c	replacable	#~, ~, ~, replacable
+	m	(Lnet/minecraft/block/Block;I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45459_1_	block	#~, ~, ~, block
+		p	2	p_i45459_2_	size	#~, ~, ~, size
+	m	(Lnet/minecraft/block/Block;ILnet/minecraft/block/Block;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45460_1_	block	#~, ~, ~, block
+		p	2	p_i45460_2_	size	#~, ~, ~, size
+		p	3	p_i45460_3_	replacable	#~, ~, ~, replacable

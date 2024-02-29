@@ -1,0 +1,30 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/SkinManager	net/minecraft/client/resources/SkinManager	
+	f	Lnet/minecraft/util/ResourceLocation;	field_152793_a	DEFAULT_SKIN	#DEFAULT_SKIN, :, ~, ~
+	f	Ljava/util/concurrent/ExecutorService;	field_152794_b	THREAD_POOL	#THREAD_POOL, :, executorService, ~
+	f	Lnet/minecraft/client/renderer/texture/TextureManager;	field_152795_c	textureManager	#textureManager, :, ~, ~
+	f	Ljava/io/File;	field_152796_d	skinCacheDir	#skinCacheDir, :, :, ~
+	f	Lcom/mojang/authlib/minecraft/MinecraftSessionService;	field_152797_e	sessionService	#sessionService, :, :, ~
+	f	Lcom/google/common/cache/LoadingCache;	field_152798_f	skinCacheLoader	#skinCacheLoader, :, skinCache, ~
+	m	(Lnet/minecraft/client/resources/SkinManager;)Lcom/mojang/authlib/minecraft/MinecraftSessionService;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lcom/mojang/authlib/GameProfile;)Ljava/util/Map;	func_152788_a	loadSkinFromCache	#loadSkinFromCache, :, getTextures, ~
+		p	1	p_152788_1_	profile	#profile, :, :, ~
+	m	(Lcom/mojang/authlib/GameProfile;Lnet/minecraft/client/resources/SkinManager$SkinAvailableCallback;Z)V	func_152790_a	loadProfileTextures	#loadProfileTextures, :, ~, ~
+		p	1	p_152790_1_	profile	#profile, :, ~, ~
+		p	2	p_152790_2_	skinAvailableCallback	#skinAvailableCallback, :, ~, ~
+		p	3	p_152790_3_	requireSecure	#requireSecure, :, ~, ~
+	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;)Lnet/minecraft/util/ResourceLocation;	func_152792_a	loadSkin	#loadSkin, :, :, ~
+		c	Used in the Skull renderer to fetch a skin. May download the skin if it's not in the cache
+		p	1	p_152792_1_	profileTexture	#profileTexture, :, :, ~
+		p	2	p_152792_2_	textureType	#textureType, :, type, ~
+	m	(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/client/resources/SkinManager$SkinAvailableCallback;)Lnet/minecraft/util/ResourceLocation;	func_152789_a	loadSkin	#loadSkin, :, ~, ~
+		c	May download the skin if its not in the cache, can be passed a SkinManager#SkinAvailableCallback for handling
+		p	1	p_152789_1_	profileTexture	#profileTexture, :, ~, ~
+		p	2	p_152789_2_	textureType	#textureType, :, ~, ~
+		p	3	p_152789_3_	skinAvailableCallback	#skinAvailableCallback, :, ~, ~
+	m	(Lnet/minecraft/client/renderer/texture/TextureManager;Ljava/io/File;Lcom/mojang/authlib/minecraft/MinecraftSessionService;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1044_1_	textureManagerInstance	#textureManagerInstance, :, ~, ~
+		p	2	p_i1044_2_	skinCacheDirectory	#skinCacheDirectory, :, ~, ~
+		p	3	p_i1044_3_	sessionService	#sessionService, :, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

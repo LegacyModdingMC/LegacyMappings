@@ -1,0 +1,17 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityBodyHelper	net/minecraft/entity/EntityBodyHelper	
+	f	Lnet/minecraft/entity/EntityLivingBase;	field_75668_a	theLiving	#theLiving, living, entity, :
+		c	Instance of EntityLiving.
+	f	I	field_75666_b	rotationTickCounter	#rotationTickCounter, :, activeTicks, :
+		c	Used to progressively ajust the rotation of the body to the rotation of the head
+	f	F	field_75667_c	prevRenderYawHead	#prevRenderYawHead, :, lastHeadYaw, :
+	m	(Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1611_1_	livingIn	#livingIn, :, entity, :
+	m	()V	func_75664_a	updateRenderAngles	#updateRenderAngles, :, tick, :
+		c	Update the Head and Body rendenring angles
+	m	(FFF)F	func_75665_a	computeAngleWithBound	#computeAngleWithBound, :, clampAndWrapAngle, :
+		c	Return the new angle2 such that the difference between angle1 and angle2 is lower than angleMax. Args : angle1, angle2, angleMax
+		p	1	p_75665_1_	yaw1	#~, ~, from, yaw1
+		p	2	p_75665_2_	yaw2	#~, ~, to, yaw2
+		p	3	p_75665_3_	maxOffset	#~, ~, max, maxOffset
+			c	The maximum offset that is allowed between the yaw1 and the yaw2

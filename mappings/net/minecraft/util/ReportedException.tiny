@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/ReportedException	net/minecraft/util/ReportedException	
+	f	Lnet/minecraft/crash/CrashReport;	field_71576_a	theReportedExceptionCrashReport	#theReportedExceptionCrashReport, crashReport, :, report
+		c	Instance of CrashReport.
+	m	(Lnet/minecraft/crash/CrashReport;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1356_1_	report	#report, :, crashReport, report
+	m	()Lnet/minecraft/crash/CrashReport;	func_71575_a	getCrashReport	#getCrashReport, :, getReport, :
+		c	Gets the CrashReport wrapped by this exception.
+	m	()Ljava/lang/Throwable;	getCause	getCause	#~, ~, ~, ~
+	m	()Ljava/lang/String;	getMessage	getMessage	#~, ~, ~, ~

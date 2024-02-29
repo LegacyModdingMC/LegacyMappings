@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockQuartz	net/minecraft/block/BlockQuartz	
+	f	[Lnet/minecraft/util/IIcon;	field_150192_M	sideSprites	#~, ~, ~, sideSprites
+	f	Lnet/minecraft/util/IIcon;	field_150193_N	chiseledTopSprite	#~, ~, ~, chiseledTopSprite
+	f	Lnet/minecraft/util/IIcon;	field_150194_O	linesTopSprite	#~, ~, ~, linesTopSprite
+	f	Lnet/minecraft/util/IIcon;	field_150190_P	topSprite	#~, ~, ~, topSprite
+	f	Lnet/minecraft/util/IIcon;	field_150188_Q	bottomSprite	#~, ~, ~, bottomSprite
+	f	[Ljava/lang/String;	field_150191_a	VARIANTS	#~, ~, ~, VARIANTS
+	f	[Ljava/lang/String;	field_150189_b	SPRITE_NAMES	#~, ~, ~, SPRITE_NAMES
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

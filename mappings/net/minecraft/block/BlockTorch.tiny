@@ -1,0 +1,19 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockTorch	net/minecraft/block/BlockTorch	
+	m	(Lnet/minecraft/world/World;IIILnet/minecraft/block/Block;)Z	func_150108_b	tryBreak	#~, ~, ~, tryBreak
+		p	1	p_150108_1_	world	#~, ~, ~, world
+		p	2	p_150108_2_	x	#~, ~, ~, x
+		p	3	p_150108_3_	y	#~, ~, ~, y
+		p	4	p_150108_4_	z	#~, ~, ~, z
+		p	5	p_150108_5_	neighborBlock	#~, ~, ~, neighborBlock
+	m	(Lnet/minecraft/world/World;III)Z	func_150109_e	dropTorchIfCantStay	#dropTorchIfCantStay, :, ~, canSurviveOrBreak
+		p	1	p_150109_1_	world	#~, ~, ~, world
+		p	2	p_150109_2_	x	#~, ~, ~, x
+		p	3	p_150109_3_	y	#~, ~, ~, y
+		p	4	p_150109_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)Z	func_150107_m	canPlaceTorchOn	#canPlaceTorchOn, :, ~, canSitOnTop
+		p	1	p_150107_1_	world	#~, ~, ~, world
+		p	2	p_150107_2_	x	#~, ~, ~, x
+		p	3	p_150107_3_	y	#~, ~, ~, y
+		p	4	p_150107_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

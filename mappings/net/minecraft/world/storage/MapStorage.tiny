@@ -1,0 +1,29 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/storage/MapStorage	net/minecraft/world/storage/MapStorage	
+	f	Lnet/minecraft/world/storage/ISaveHandler;	field_75751_a	saveHandler	#saveHandler, :, :, storage
+	f	Ljava/util/Map;	field_75749_b	loadedDataMap	#loadedDataMap, :, stateMap, savedDataById
+		c	Map of item data String id to loaded MapDataBases
+	f	Ljava/util/List;	field_75750_c	loadedDataList	#loadedDataList, :, states, savedData
+		c	List of loaded MapDataBases.
+	f	Ljava/util/Map;	field_75748_d	idCounts	#idCounts, :, :, :
+		c	Map of MapDataBase id String prefixes ('map' etc) to max known unique Short id (the 0 part etc) for that prefix
+	m	(Lnet/minecraft/world/storage/ISaveHandler;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2162_1_	saveHandlerIn	#saveHandlerIn, :, saveHandler, storage
+	m	()V	func_75744_a	saveAllData	#saveAllData, :, save, :
+		c	Saves all dirty loaded MapDataBases to disk.
+	m	(Lnet/minecraft/world/WorldSavedData;)V	func_75747_a	saveData	#saveData, :, save, :
+		c	Saves the given MapDataBase to disk.
+		p	1	p_75747_1_	data	#data, :, state, data
+	m	(Ljava/lang/Class;Ljava/lang/String;)Lnet/minecraft/world/WorldSavedData;	func_75742_a	loadData	#loadData, getOrLoadData, getOrCreate, load
+		c	Loads an existing MapDataBase corresponding to the given String id from disk, instantiating the given Class, or returns null if none such file exists. args: Class to instantiate, String dataid
+		p	1	p_75742_1_	clazz	#clazz, :, :, type
+		p	2	p_75742_2_	dataIdentifier	#dataIdentifier, :, name, id
+	m	(Ljava/lang/String;)I	func_75743_a	getUniqueDataId	#getUniqueDataId, :, getInt, getNextCount
+		c	Returns an unique new data id for the given prefix and saves the idCounts map to the 'idcounts' file.
+		p	1	p_75743_1_	key	#key, :, name, id
+	m	(Ljava/lang/String;Lnet/minecraft/world/WorldSavedData;)V	func_75745_a	setData	#setData, :, replace, set
+		c	Assigns the given String id to the given MapDataBase, removing any existing ones of the same id.
+		p	1	p_75745_1_	dataIdentifier	#dataIdentifier, :, name, id
+		p	2	p_75745_2_	data	#data, :, state, data
+	m	()V	func_75746_b	loadIdCounts	#loadIdCounts, :, readIdCounts, loadIdCounts
+		c	Loads the idCounts Map from the 'idcounts' file.

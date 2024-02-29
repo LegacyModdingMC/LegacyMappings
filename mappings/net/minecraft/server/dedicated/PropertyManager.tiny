@@ -1,0 +1,32 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/dedicated/PropertyManager	net/minecraft/server/dedicated/PropertyManager	
+	f	Lorg/apache/logging/log4j/Logger;	field_164440_a	LOGGER	#LOGGER, :, :, :
+	f	Ljava/util/Properties;	field_73672_b	serverProperties	#serverProperties, :, properties, :
+		c	The server properties object.
+	f	Ljava/io/File;	field_73673_c	serverPropertiesFile	#serverPropertiesFile, :, propertyFile, file
+		c	The server properties file.
+	m	(Ljava/io/File;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45278_1_	file	#~, ~, propertyFile, file
+	m	()V	func_73666_a	generateNewProperties	#generateNewProperties, :, generate, :
+		c	Generates a new properties file.
+	m	(Ljava/lang/String;I)I	func_73669_a	getIntProperty	#getIntProperty, :, getIntOrDefault, getOrDefault
+		c	Gets an integer property. If it does not exist, set it to the specified value.
+		p	1	p_73669_1_	key	#key, :, :, :
+		p	2	p_73669_2_	defaultValue	#defaultValue, :, ~, defaultValue
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	func_73667_a	setProperty	#setProperty, :, set, :
+		c	Saves an Object with the given property name.
+		p	1	p_73667_1_	key	#key, :, :, :
+		p	2	p_73667_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	func_73671_a	getStringProperty	#getStringProperty, :, getOrDefault, :
+		c	Returns a string property. If the property doesn't exist the default is returned.
+		p	1	p_73671_1_	key	#key, :, :, :
+		p	2	p_73671_2_	defaultValue	#defaultValue, :, value, defaultValue
+	m	(Ljava/lang/String;Z)Z	func_73670_a	getBooleanProperty	#getBooleanProperty, :, getBooleanOrDefault, getOrDefault
+		c	Gets a boolean property. If it does not exist, set it to the specified value.
+		p	1	p_73670_1_	key	#key, :, :, :
+		p	2	p_73670_2_	defaultValue	#defaultValue, :, value, defaultValue
+	m	()V	func_73668_b	saveProperties	#saveProperties, :, save, :
+		c	Writes the properties to the properties file.
+	m	()Ljava/io/File;	func_73665_c	getPropertiesFile	#getPropertiesFile, :, :, getFile
+		c	Returns this PropertyManager's file object used for property saving.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

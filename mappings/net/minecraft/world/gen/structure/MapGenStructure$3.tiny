@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/MapGenStructure$3	net/minecraft/world/gen/structure/MapGenStructure$3	
+	f	Lnet/minecraft/world/gen/structure/MapGenStructure;	field_85161_a	theMapStructureGenerator	#theMapStructureGenerator, :, structureFeature, feature
+	m	(Lnet/minecraft/world/gen/structure/MapGenStructure;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i2090_1_	structureFeature	#~, ~, structureFeature, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~

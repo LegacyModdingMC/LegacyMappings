@@ -1,0 +1,73 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelHorse	net/minecraft/client/model/ModelHorse	
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110688_A	frontLeftLeg	#frontLeftLeg, :, ~, leftForearm
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110689_B	frontLeftShin	#frontLeftShin, :, ~, frontLeftCannon
+		c	The <a href="https://en.wikipedia.org/wiki/Equine_anatomy#External_anatomy">cannon</a> is the lower part of a horse's leg.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110690_C	frontLeftHoof	#frontLeftHoof, :, ~, frontLeftHoof
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110684_D	frontRightLeg	#frontRightLeg, :, ~, rightForearm
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110685_E	frontRightShin	#frontRightShin, :, ~, frontRightCannon
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110686_F	frontRightHoof	#frontRightHoof, :, ~, frontRightHoof
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110687_G	muleLeftChest	#muleLeftChest, :, ~, leftDonkeyChest
+		c	The left chest box on the mule model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110695_H	muleRightChest	#muleRightChest, :, ~, rightDonkeyChest
+		c	The right chest box on the mule model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110696_I	horseSaddleBottom	#horseSaddleBottom, :, ~, saddleSeat
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110697_J	horseSaddleFront	#horseSaddleFront, :, ~, gullet
+		c	The <a href="https://en.wikipedia.org/wiki/Saddle">gullet</a> is the front part of a horse's saddle.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110698_K	horseSaddleBack	#horseSaddleBack, :, ~, cantle
+		c	The <a href="https://en.wikipedia.org/wiki/Saddle">cantle</a> is the back part of a horse's saddle.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110691_L	horseLeftSaddleRope	#horseLeftSaddleRope, :, ~, leftFender
+		c	The <a href="https://en.wikipedia.org/wiki/Saddle#Parts">fender</a> is the leather strap connecting the saddle to the stirrup..
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110692_M	horseLeftSaddleMetal	#horseLeftSaddleMetal, :, ~, leftStirrup
+		c	The <a href="https://en.wikipedia.org/wiki/Saddle#Parts">stirrup</a> is the metal part in which a horse's rider puts their foot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110693_N	horseRightSaddleRope	#horseRightSaddleRope, :, ~, rightFender
+		c	The <a href="https://en.wikipedia.org/wiki/Saddle#Parts">fender</a> is the leather strap connecting the saddle to the stirrup..
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110694_O	horseRightSaddleMetal	#horseRightSaddleMetal, :, ~, rightStirrup
+		c	The <a href="https://en.wikipedia.org/wiki/Saddle#Parts">stirrup</a> is the metal part in which a horse's rider puts their foot.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110700_P	horseLeftFaceMetal	#horseLeftFaceMetal, :, ~, leftSnaffleBit
+		c	The left metal connected to the horse's face ropes.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110699_Q	horseRightFaceMetal	#horseRightFaceMetal, :, ~, rightSnaffleBit
+		c	The right metal connected to the horse's face ropes.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110702_R	horseLeftRein	#horseLeftRein, :, ~, leftReign
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110701_S	horseRightRein	#horseRightRein, :, ~, rightReign
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110709_a	head	#head, :, ~, head
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110707_b	mouthTop	#mouthTop, :, ~, topJaw
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110708_c	mouthBottom	#mouthBottom, :, ~, bottomJaw
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110705_d	horseLeftEar	#horseLeftEar, :, ~, donkeyLeftEar
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110706_e	horseRightEar	#horseRightEar, :, ~, donkeyRightEar
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110703_f	muleLeftEar	#muleLeftEar, :, ~, muleEarLeft
+		c	The left ear box for the mule model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110704_g	muleRightEar	#muleRightEar, :, ~, muleEarRight
+		c	The right ear box for the mule model.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110716_h	neck	#neck, :, ~, neck
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110717_i	horseFaceRopes	#horseFaceRopes, :, ~, halster
+		c	The box for the horse's ropes on its face.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110714_j	mane	#mane, :, ~, mane
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110715_k	body	#body, :, torso, mainBody
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110712_l	tailBase	#tailBase, :, head, dock
+		c	A <a href="https://en.wikipedia.org/wiki/Tail_(horse)">dock</a> is the area where the tail connects to the body of a horse.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110713_m	tailMiddle	#tailMiddle, :, ~, tail
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110710_n	tailTip	#tailTip, :, ~, skirt
+		c	The <a href="https://en.wikipedia.org/wiki/Tail_(horse)">skirt</a> are the long hairs extending down at the tail.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110711_o	backLeftLeg	#backLeftLeg, :, ~, leftThigh
+		c	The <a href="https://en.wikipedia.org/wiki/Equine_anatomy#External_anatomy">thigh</a> is the upper part of a horse's back leg.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110719_v	backLeftShin	#backLeftShin, :, ~, backLeftCannon
+		c	The <a href="https://en.wikipedia.org/wiki/Equine_anatomy#External_anatomy">cannon</a> is the lower part of a horse's leg.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110718_w	backLeftHoof	#backLeftHoof, :, ~, backLeftHoof
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110722_x	backRightLeg	#backRightLeg, :, ~, rightThigh
+		c	The <a href="https://en.wikipedia.org/wiki/Equine_anatomy#External_anatomy">thigh</a> is the upper part of a horse's back leg.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110721_y	backRightShin	#backRightShin, :, ~, backRightCannon
+		c	The <a href="https://en.wikipedia.org/wiki/Equine_anatomy#External_anatomy">cannon</a> is the lower part of a horse's leg.
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_110720_z	backRightHoof	#backRightHoof, :, ~, backRightHoof
+	m	(FFF)F	func_110683_a	updateHorseRotation	#updateHorseRotation, :, ~, tickRotation
+		c	Fixes and offsets a rotation in the ModelHorse class.
+		p	1	p_110683_1_	prevBodyYaw	#~, ~, ~, prevBodyYaw
+		p	2	p_110683_2_	bodyYaw	#~, ~, ~, bodyYaw
+		p	3	p_110683_3_	tickdelta	#~, ~, ~, tickdelta
+	m	(Lnet/minecraft/client/model/ModelRenderer;FFF)V	func_110682_a	setBoxRotation	#setBoxRotation, :, ~, setModelRotation
+		c	Sets the rotations for a ModelRenderer in the ModelHorse class.
+		p	1	p_110682_1_	renderer	#renderer, :, ~, model
+		p	2	p_110682_2_	rotateAngleX	#rotateAngleX, :, ~, rotationX
+		p	3	p_110682_3_	rotateAngleY	#rotateAngleY, :, ~, rotationY
+		p	4	p_110682_4_	rotateAngleZ	#rotateAngleZ, :, ~, rotationZ
+	m	()V	<init>	<init>	#~, ~, ~, ~

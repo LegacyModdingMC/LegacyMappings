@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S2BPacketChangeGameState	net/minecraft/network/play/server/S2BPacketChangeGameState	
+	f	[Ljava/lang/String;	field_149142_a	MESSAGE_NAMES	#MESSAGE_NAMES, :, REASON_MESSAGES, EVENT_MESSAGES
+	f	I	field_149140_b	state	#state, :, changeType, event
+	f	F	field_149141_c	value	#value, :, :, data
+	m	(IF)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45194_1_	stateIn	#stateIn, :, changeType, event
+		p	2	p_i45194_2_	data	#~, ~, value, data
+	m	()I	func_149138_c	getGameState	#getGameState, :, getChangeTyoe, getEvent
+	m	()F	func_149137_d	getValue	#getValue, :, :, getData
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

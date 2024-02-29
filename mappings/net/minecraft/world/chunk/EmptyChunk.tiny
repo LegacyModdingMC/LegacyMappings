@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/EmptyChunk	net/minecraft/world/chunk/EmptyChunk	
+	m	(Lnet/minecraft/world/World;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1994_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1994_2_	x	#x, :, ~, ~
+		p	3	p_i1994_3_	z	#z, :, ~, ~

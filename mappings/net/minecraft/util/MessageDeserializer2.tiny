@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/MessageDeserializer2	net/minecraft/util/MessageDeserializer2	
+	m	(Lio/netty/channel/ChannelHandlerContext;Lio/netty/buffer/ByteBuf;Ljava/util/List;)V	decode	decode	#~, ~, ~, ~
+		p	1	p_decode_1_	context	#~, ~, ~, context
+		p	2	p_decode_2_	buffer	#~, ~, ~, buffer
+		p	3	p_decode_3_	output	#~, ~, ~, output
+	m	()V	<init>	<init>	#~, ~, ~, ~

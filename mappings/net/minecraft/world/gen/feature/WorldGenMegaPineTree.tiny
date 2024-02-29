@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/feature/WorldGenMegaPineTree	net/minecraft/world/gen/feature/WorldGenMegaPineTree	
+	f	Z	field_150542_e	useBaseHeight	#useBaseHeight, :, :, sparseLeaves
+	m	(ZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45457_1_	notify	#notify, :, emitNeighborBlockUpdates, notifyNeighbors
+		p	2	p_i45457_2_	sparseLeaves	#~, ~, useBaseHeight, sparseLeaves
+	m	(Lnet/minecraft/world/World;III)V	func_150540_a	placePodzol	#~, ~, ~, placePodzol
+		p	1	p_150540_1_	world	#~, ~, ~, world
+		p	2	p_150540_2_	x	#~, ~, ~, x
+		p	3	p_150540_3_	y	#~, ~, ~, y
+		p	4	p_150540_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;IIIILjava/util/Random;)V	func_150541_c	createCrown	#createCrown, :, generateTopLeaves, placeLeaves
+		p	1	p_150541_1_	worldIn	#worldIn, :, world, :
+		p	2	p_150541_2_	x	#x, :, posX, x
+		p	3	p_150541_3_	z	#z, :, posZ, z
+		p	4	p_150541_4_	y	#y, :, maxHeight, y
+		p	5	p_150541_5_	baseRadius	#~, ~, nothing, baseRadius
+		p	6	p_150541_6_	rand	#rand, :, random, :
+	m	(Lnet/minecraft/world/World;Ljava/util/Random;III)V	func_150539_c	placePodzolPatch	#~, ~, ~, placePodzolPatch
+		p	1	p_150539_1_	world	#~, ~, ~, world
+		p	2	p_150539_2_	random	#~, ~, ~, random
+		p	3	p_150539_3_	x	#~, ~, ~, x
+		p	4	p_150539_4_	y	#~, ~, ~, y
+		p	5	p_150539_5_	z	#~, ~, ~, z

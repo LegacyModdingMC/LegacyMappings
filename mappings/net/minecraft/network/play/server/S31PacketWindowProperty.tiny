@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S31PacketWindowProperty	net/minecraft/network/play/server/S31PacketWindowProperty	
+	f	I	field_149186_a	windowId	#windowId, :, syncId, menuId
+	f	I	field_149184_b	varIndex	#varIndex, property, propertyId, dataId
+	f	I	field_149185_c	varValue	#varValue, value, :, :
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45187_1_	windowIdIn	#windowIdIn, :, syncId, menuId
+		p	2	p_i45187_2_	varIndexIn	#varIndexIn, :, propertyId, dataId
+		p	3	p_i45187_3_	varValueIn	#varValueIn, :, value, :
+	m	()I	func_149182_c	getWindowId	#getWindowId, :, getSyncId, getMenuId
+	m	()I	func_149181_d	getVarIndex	#getVarIndex, getProperty, getPropertyId, getDataId
+	m	()I	func_149180_e	getVarValue	#getVarValue, getValue, :, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

@@ -1,0 +1,9 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/resources/data/FontMetadataSection	net/minecraft/client/resources/data/FontMetadataSection	
+	f	[F	field_110467_a	charWidths	#charWidths, :, widths, :
+	f	[F	field_110465_b	charLefts	#charLefts, :, lefts, :
+	f	[F	field_110466_c	charSpacings	#charSpacings, :, spacings, :
+	m	([F[F[F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1310_1_	charWidthsIn	#charWidthsIn, :, widths, :
+		p	2	p_i1310_2_	charLeftsIn	#charLeftsIn, :, lefts, :
+		p	3	p_i1310_3_	charSpacingsIn	#charSpacingsIn, :, spacings, :

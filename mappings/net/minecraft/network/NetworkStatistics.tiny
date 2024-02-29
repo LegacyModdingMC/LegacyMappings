@@ -1,0 +1,28 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkStatistics	net/minecraft/network/NetworkStatistics	
+	f	Lorg/apache/logging/log4j/Logger;	field_152478_a	LOGGER	#LOGGER, :, ~, ~
+	f	Lorg/apache/logging/log4j/Marker;	field_152479_b	NETSTAT_MARKER	#NETSTAT_MARKER, :, ~, ~
+	f	Lnet/minecraft/network/NetworkStatistics$Tracker;	field_152480_c	field_152480_c	#~, ~, ~, ~
+	f	Lnet/minecraft/network/NetworkStatistics$Tracker;	field_152481_d	field_152481_d	#~, ~, ~, ~
+	m	()J	func_152465_a	func_152465_a	#~, ~, ~, ~
+	m	(I)Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152466_a	func_152466_a	#~, ~, ~, ~
+		p	1	p_152466_1_	p_152466_1_	#~, ~, ~, ~
+	m	(IJ)V	func_152469_a	func_152469_a	#~, ~, ~, ~
+		p	1	p_152469_1_	p_152469_1_	#~, ~, ~, ~
+		p	2	p_152469_2_	p_152469_2_	#~, ~, ~, ~
+	m	()J	func_152471_b	func_152471_b	#~, ~, ~, ~
+	m	(I)Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152468_b	func_152468_b	#~, ~, ~, ~
+		p	1	p_152468_1_	p_152468_1_	#~, ~, ~, ~
+	m	(IJ)V	func_152464_b	func_152464_b	#~, ~, ~, ~
+		p	1	p_152464_1_	p_152464_1_	#~, ~, ~, ~
+		p	2	p_152464_2_	p_152464_2_	#~, ~, ~, ~
+	m	()J	func_152472_c	func_152472_c	#~, ~, ~, ~
+	m	()J	func_152473_d	func_152473_d	#~, ~, ~, ~
+	m	()Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152477_e	func_152477_e	#~, ~, ~, ~
+	m	()Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152467_f	func_152467_f	#~, ~, ~, ~
+	m	()Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152475_g	func_152475_g	#~, ~, ~, ~
+	m	()Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152470_h	func_152470_h	#~, ~, ~, ~
+	m	()Lorg/apache/logging/log4j/Logger;	access$100	access$100	#~, ~, ~, ~
+	m	()Lorg/apache/logging/log4j/Marker;	access$200	access$200	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

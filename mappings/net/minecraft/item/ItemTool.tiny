@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemTool	net/minecraft/item/ItemTool	
+	f	F	field_77864_a	efficiencyOnProperMaterial	#efficiencyOnProperMaterial, efficiency, miningSpeed, :
+	f	Lnet/minecraft/item/Item$ToolMaterial;	field_77862_b	toolMaterial	#toolMaterial, :, ~, material
+		c	The material this tool is made from.
+	f	Ljava/util/Set;	field_150914_c	effectiveBlocksTool	#effectiveBlocksTool, effectiveBlocks, :, :
+		c	Hardcoded set of blocks this tool can properly dig at full speed. Modders see {@link #getToolClasses} instead.
+	f	F	field_77865_bY	damageVsEntity	#damageVsEntity, attackDamage, :, :
+		c	Damage versus entities.
+	m	()Lnet/minecraft/item/Item$ToolMaterial;	func_150913_i	getToolMaterial	#getToolMaterial, :, ~, getMaterial
+	m	()Ljava/lang/String;	func_77861_e	getToolMaterialName	#getToolMaterialName, :, getMaterialAsString, :
+		c	Return the name for this tool's material.
+	m	(FLnet/minecraft/item/Item$ToolMaterial;Ljava/util/Set;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45333_1_	attackDamage	#attackDamage, :, ~, baseAttackDamage
+		p	2	p_i45333_2_	material	#material, :, ~, material
+		p	3	p_i45333_3_	effectiveBlocks	#effectiveBlocks, :, ~, effectiveBlocks

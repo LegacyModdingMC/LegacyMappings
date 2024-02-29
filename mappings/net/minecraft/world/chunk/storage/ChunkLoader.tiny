@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/ChunkLoader	net/minecraft/world/chunk/storage/ChunkLoader	
+	m	(Lnet/minecraft/world/chunk/storage/ChunkLoader$AnvilConverterData;Lnet/minecraft/nbt/NBTTagCompound;Lnet/minecraft/world/biome/WorldChunkManager;)V	func_76690_a	convertToAnvilFormat	#convertToAnvilFormat, :, ~, convertToAnvilFormat
+		p	0	p_76690_0_	converterData	#converterData, :, ~, chunk
+		p	1	p_76690_1_	compound	#compound, :, ~, nbt
+		p	2	p_76690_2_	provider	#provider, :, ~, biomeSource
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Lnet/minecraft/world/chunk/storage/ChunkLoader$AnvilConverterData;	func_76691_a	load	#load, :, ~, load
+		p	0	p_76691_0_	nbt	#nbt, :, ~, nbt

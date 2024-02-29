@@ -1,0 +1,8 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/server/MinecraftServer$3	net/minecraft/server/MinecraftServer$3	
+	f	Lnet/minecraft/server/MinecraftServer;	field_73716_a	theServer	#theServer, :, ~, server
+		c	Instance of MinecraftServer.
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/server/MinecraftServer;Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1494_1_	p_i1494_1_	#~, ~, ~, ~
+		p	2	p_i1494_2_	p_i1494_2_	#~, ~, ~, ~

@@ -1,0 +1,55 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/profiler/PlayerUsageSnooper	net/minecraft/profiler/PlayerUsageSnooper	
+	f	Ljava/util/Map;	field_152773_a	snooperStats	#snooperStats, :, systemInfo, fixedData
+		c	The snooper Map of stats
+	f	Ljava/util/Map;	field_152774_b	clientStats	#clientStats, :, gameInfo, dynamicData
+		c	The client Map of stats
+	f	Ljava/lang/String;	field_76480_b	uniqueID	#uniqueID, :, token, :
+	f	Ljava/net/URL;	field_76481_c	serverUrl	#serverUrl, :, snooperUrl, url
+		c	URL of the server to send the report to
+	f	Lnet/minecraft/profiler/IPlayerUsage;	field_76478_d	playerStatsCollector	#playerStatsCollector, :, snooped, populator
+	f	Ljava/util/Timer;	field_76479_e	threadTrigger	#threadTrigger, :, timer, :
+		c	set to fire the snooperThread every 15 mins
+	f	Ljava/lang/Object;	field_76476_f	syncLock	#syncLock, :, lock, :
+	f	J	field_98224_g	minecraftStartTimeMilis	#minecraftStartTimeMilis, :, startTime, initTime
+	f	Z	field_76477_g	isRunning	#isRunning, :, active, initialized
+	f	I	field_76483_h	selfCounter	#selfCounter, :, snooperCount, count
+		c	incremented on every getSelfCounterFor
+	m	(Ljava/lang/String;Lnet/minecraft/profiler/IPlayerUsage;J)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1563_1_	side	#side, :, name, side
+		p	2	p_i1563_2_	playerStatCollector	#playerStatCollector, :, snooped, populator
+		p	3	p_i1563_3_	startTime	#startTime, :, :, time
+	m	()V	func_76463_a	startSnooper	#startSnooper, :, setActive, init
+		c	Note issuing start multiple times is not an error.
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	func_152768_a	addClientStat	#addClientStat, :, addGameInfo, putDynamic
+		p	1	p_152768_1_	statName	#statName, :, key, :
+		p	2	p_152768_2_	statValue	#statValue, :, value, :
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)Lnet/minecraft/profiler/IPlayerUsage;	access$000	access$000	#~, ~, isSnooped, ~
+		p	0	p_access$000_0_	snooper	#~, ~, snooper, ~
+	m	()V	func_76471_b	addMemoryStatsToSnooper	#addMemoryStatsToSnooper, :, addCpuInfo, populate
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	func_152767_b	addStatToSnooper	#addStatToSnooper, :, addSystemInfo, putFixed
+		p	1	p_152767_1_	statName	#statName, :, key, :
+		p	2	p_152767_2_	statValue	#statValue, :, value, :
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/lang/Object;	access$100	access$100	#~, ~, getLock, ~
+		p	0	p_access$100_0_	snooper	#~, ~, snooper, ~
+	m	()Ljava/util/Map;	func_76465_c	getCurrentStats	#getCurrentStats, :, getAllInfo, getAll
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/util/Map;	access$200	access$200	#~, ~, ~, ~
+		p	0	p_access$200_0_	snooper	#~, ~, snooper, ~
+	m	()Z	func_76468_d	isSnooperRunning	#isSnooperRunning, :, isActive, isInitialized
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)I	access$300	access$300	#~, ~, ~, ~
+		p	0	p_access$300_0_	p_access$300_0_	#~, ~, ~, ~
+	m	()V	func_76470_e	stopSnooper	#stopSnooper, :, concel, interrupt
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/util/Map;	access$400	access$400	#~, ~, ~, ~
+		p	0	p_access$400_0_	p_access$400_0_	#~, ~, ~, ~
+	m	()Ljava/lang/String;	func_80006_f	getUniqueID	#getUniqueID, :, getSnooperToken, getToken
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)I	access$308	access$308	#~, ~, getSnoopedCount, ~
+		p	0	p_access$308_0_	snooper	#~, ~, snooper, ~
+	m	()J	func_130105_g	getMinecraftStartTimeMillis	#getMinecraftStartTimeMillis, :, getStartTime, getInitTime
+		c	Returns the saved value of System#currentTimeMillis when the game started
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/lang/String;	access$500	access$500	#~, ~, ~, ~
+		p	0	p_access$500_0_	p_access$500_0_	#~, ~, ~, ~
+	m	()V	func_152766_h	addOSData	#addOSData, :, addJavaInfo, doInit
+		c	Add OS data into the snooper
+	m	(Lnet/minecraft/profiler/PlayerUsageSnooper;)Ljava/net/URL;	access$600	access$600	#~, ~, getSnooperUrl, ~
+		p	0	p_access$600_0_	snooper	#~, ~, snooper, ~
+	m	()V	func_76467_g	addJvmArgsToSnooper	#addJvmArgsToSnooper, :, addJvmArgs, putJvmArgs

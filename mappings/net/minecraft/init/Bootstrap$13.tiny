@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/init/Bootstrap$13	net/minecraft/init/Bootstrap$13	
+	f	Z	field_150838_b	succeeded	#succeeded, :, ~, dyed
+	m	()V	<init>	<init>	#~, ~, ~, ~

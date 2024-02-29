@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelSkeleton	net/minecraft/client/model/ModelSkeleton	
+	m	(F)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1156_1_	p_i1156_1_	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

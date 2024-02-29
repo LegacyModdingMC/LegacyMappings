@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/stats/IStatType	net/minecraft/stats/IStatType	
+	m	(I)Ljava/lang/String;	func_75843_a	format	#format, :, formatValue, format
+		c	Formats a given stat for human consumption.
+		p	1	p_75843_1_	number	#number, :, value, :

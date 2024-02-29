@@ -1,0 +1,47 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/WorldSettings	net/minecraft/world/WorldSettings	
+	f	J	field_77174_a	seed	#seed, :, :, :
+		c	The seed for the map.
+	f	Lnet/minecraft/world/WorldSettings$GameType;	field_77172_b	theGameType	#theGameType, gameType, ~, gameMode
+		c	The EnumGameType.
+	f	Z	field_77173_c	mapFeaturesEnabled	#mapFeaturesEnabled, :, structures, allowStructures
+		c	Switch for the map features. 'true' for enabled, 'false' for disabled.
+	f	Z	field_77170_d	hardcoreEnabled	#hardcoreEnabled, :, hardcore, :
+		c	True if hardcore mode is enabled
+	f	Lnet/minecraft/world/WorldType;	field_77171_e	terrainType	#terrainType, :, generatorType, :
+	f	Z	field_77168_f	commandsAllowed	#commandsAllowed, :, commands, allowCommands
+		c	True if Commands (cheats) are allowed.
+	f	Z	field_77169_g	bonusChestEnabled	#bonusChestEnabled, :, bonusChest, hasBonusChest
+		c	True if the Bonus Chest is enabled.
+	f	Ljava/lang/String;	field_82751_h	worldName	#worldName, generatorOptions, :, :
+	m	(Lnet/minecraft/world/storage/WorldInfo;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1958_1_	info	#info, :, levelProperties, data
+	m	()Lnet/minecraft/world/WorldSettings;	func_77159_a	enableBonusChest	#enableBonusChest, :, setBonusChest, enableBonusChest
+		c	Enables the bonus chest.
+	m	(I)Lnet/minecraft/world/WorldSettings$GameType;	func_77161_a	getGameTypeById	#getGameTypeById, :, ~, getGameModeById
+		c	Gets the GameType by ID
+		p	0	p_77161_0_	id	#id, :, ~, id
+	m	(Ljava/lang/String;)Lnet/minecraft/world/WorldSettings;	func_82750_a	setWorldName	#setWorldName, setGeneratorOptions, :, :
+		p	1	p_82750_1_	name	#name, options, generatorOptions, :
+	m	()Lnet/minecraft/world/WorldSettings;	func_77166_b	enableCommands	#enableCommands, :, :, :
+		c	Enables Commands (cheats).
+	m	()Z	func_77167_c	isBonusChestEnabled	#isBonusChestEnabled, :, hasBonusChest, :
+		c	Returns true if the Bonus Chest is enabled.
+	m	()J	func_77160_d	getSeed	#getSeed, :, :, :
+		c	Returns the seed for the world.
+	m	()Lnet/minecraft/world/WorldSettings$GameType;	func_77162_e	getGameType	#getGameType, :, ~, getGameMode
+		c	Gets the game type.
+	m	()Z	func_77158_f	getHardcoreEnabled	#getHardcoreEnabled, :, isHardcore, :
+		c	Returns true if hardcore mode is enabled, otherwise false
+	m	()Z	func_77164_g	isMapFeaturesEnabled	#isMapFeaturesEnabled, :, hasStructures, allowStructures
+		c	Get whether the map features (e.g. strongholds) generation is enabled or disabled.
+	m	()Lnet/minecraft/world/WorldType;	func_77165_h	getTerrainType	#getTerrainType, :, getGeneratorType, :
+	m	()Z	func_77163_i	areCommandsAllowed	#areCommandsAllowed, :, allowCommands, :
+		c	Returns true if Commands (cheats) are allowed.
+	m	()Ljava/lang/String;	func_82749_j	getWorldName	#getWorldName, getGeneratorOptions, :, :
+	m	(JLnet/minecraft/world/WorldSettings$GameType;ZZLnet/minecraft/world/WorldType;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1957_1_	seedIn	#seedIn, :, ~, seed
+		p	3	p_i1957_3_	gameType	#gameType, :, ~, gameMode
+		p	4	p_i1957_4_	enableMapFeatures	#enableMapFeatures, :, ~, allowStructures
+		p	5	p_i1957_5_	hardcoreMode	#hardcoreMode, :, ~, hardcore
+		p	6	p_i1957_6_	worldTypeIn	#worldTypeIn, :, ~, generatorType

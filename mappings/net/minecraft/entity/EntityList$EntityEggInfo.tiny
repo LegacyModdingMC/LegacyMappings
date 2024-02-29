@@ -1,0 +1,14 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/EntityList$EntityEggInfo	net/minecraft/entity/EntityList$EntityEggInfo	
+	f	I	field_75613_a	spawnedID	#spawnedID, :, ~, id
+		c	The entityID of the spawned mob
+	f	I	field_75611_b	primaryColor	#primaryColor, :, ~, baseColor
+		c	Base color of the egg
+	f	I	field_75612_c	secondaryColor	#secondaryColor, :, ~, spotsColor
+		c	Color of the egg spots
+	f	Lnet/minecraft/stats/StatBase;	field_151512_d	killEntityStat	#killEntityStat, :, ~, killEntityStat
+	f	Lnet/minecraft/stats/StatBase;	field_151513_e	entityKilledByStat	#entityKilledByStat, :, ~, entityKilledByStat
+	m	(III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1583_1_	id	#id, :, ~, id
+		p	2	p_i1583_2_	baseColor	#baseColor, :, ~, baseColor
+		p	3	p_i1583_3_	spotColor	#spotColor, :, ~, spotsColor

@@ -1,0 +1,21 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockTripWire	net/minecraft/block/BlockTripWire	
+	m	(Lnet/minecraft/world/World;IIII)V	func_150138_a	updateTripwireHooks	#~, ~, ~, updateTripwireHooks
+		p	1	p_150138_1_	world	#~, ~, ~, world
+		p	2	p_150138_2_	x	#~, ~, ~, x
+		p	3	p_150138_3_	y	#~, ~, ~, y
+		p	4	p_150138_4_	z	#~, ~, ~, z
+		p	5	p_150138_5_	metadata	#~, ~, ~, metadata
+	m	(Lnet/minecraft/world/IBlockAccess;IIIII)Z	func_150139_a	shouldConnectTo	#~, ~, ~, shouldConnectTo
+		p	0	p_150139_0_	world	#~, ~, ~, world
+		p	1	p_150139_1_	x	#~, ~, ~, x
+		p	2	p_150139_2_	y	#~, ~, ~, y
+		p	3	p_150139_3_	z	#~, ~, ~, z
+		p	4	p_150139_4_	metadata	#~, ~, ~, metadata
+		p	5	p_150139_5_	dir	#~, ~, ~, dir
+	m	(Lnet/minecraft/world/World;III)V	func_150140_e	updateOutputState	#~, ~, ~, updateOutputState
+		p	1	p_150140_1_	world	#~, ~, ~, world
+		p	2	p_150140_2_	x	#~, ~, ~, x
+		p	3	p_150140_3_	y	#~, ~, ~, y
+		p	4	p_150140_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

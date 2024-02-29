@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces	net/minecraft/world/gen/structure/ComponentScatteredFeaturePieces	
+	m	()V	func_143045_a	registerScatteredFeaturePieces	#registerScatteredFeaturePieces, :, registerPieces, register

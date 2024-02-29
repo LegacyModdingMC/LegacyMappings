@@ -1,0 +1,52 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityFireworkStarterFX	net/minecraft/client/particle/EntityFireworkStarterFX	
+	f	Z	field_92041_a	twinkle	#twinkle, :, ~, twinkleDelay
+	f	I	field_92042_ax	fireworkAge	#fireworkAge, :, ~, life
+	f	Lnet/minecraft/client/particle/EffectRenderer;	field_92040_ay	theEffectRenderer	#theEffectRenderer, manager, ~, manager
+	f	Lnet/minecraft/nbt/NBTTagList;	field_92039_az	fireworkExplosions	#fireworkExplosions, :, ~, explosions
+	m	(DDDDDD[I[IZZ)V	func_92034_a	createParticle	#createParticle, :, ~, create
+		c	Creates a single particle. Args: x, y, z, x velocity, y velocity, z velocity, colours, fade colours, whether to trail, whether to twinkle
+		p	1	p_92034_1_	x	#~, ~, ~, x
+		p	3	p_92034_3_	y	#~, ~, ~, y
+		p	5	p_92034_5_	z	#~, ~, ~, z
+		p	7	p_92034_7_	velocityX	#~, ~, ~, velocityX
+		p	9	p_92034_9_	velocityY	#~, ~, ~, velocityY
+		p	11	p_92034_11_	velocityZ	#~, ~, ~, velocityZ
+		p	13	p_92034_13_	colors	#~, ~, ~, colors
+		p	14	p_92034_14_	fadeColors	#~, ~, ~, fadeColors
+		p	15	p_92034_15_	trail	#~, ~, ~, trail
+		p	16	p_92034_16_	flicker	#~, ~, ~, flicker
+	m	(DI[I[IZZ)V	func_92035_a	createBall	#createBall, :, ~, createBall
+		c	Creates a small ball or large ball type explosion. Args: particle speed, size, colours, fade colours, whether to trail, whether to flicker
+		p	1	p_92035_1_	speed	#speed, :, ~, size
+		p	3	p_92035_3_	size	#size, :, ~, amount
+		p	4	p_92035_4_	colours	#colours, :, ~, colors
+		p	5	p_92035_5_	fadeColours	#fadeColours, :, ~, fadeColors
+		p	6	p_92035_6_	trail	#trail, :, ~, trail
+		p	7	p_92035_7_	twinkleIn	#twinkleIn, :, ~, flicker
+	m	(D[[D[I[IZZZ)V	func_92038_a	createShaped	#createShaped, :, ~, createShape
+		c	Creates a creeper-shaped or star-shaped explosion. Args: particle speed, shape, colours, fade colours, whether to trail, whether to flicker, unknown
+		p	1	p_92038_1_	speed	#speed, :, ~, size
+		p	3	p_92038_3_	shape	#shape, :, ~, pattern
+		p	4	p_92038_4_	colours	#colours, :, ~, colors
+		p	5	p_92038_5_	fadeColours	#fadeColours, :, ~, fadeColors
+		p	6	p_92038_6_	trail	#trail, :, ~, trail
+		p	7	p_92038_7_	twinkleIn	#twinkleIn, :, ~, flicker
+		p	8	p_92038_8_	keepShape	#~, ~, ~, keepShape
+	m	([I[IZZ)V	func_92036_a	createBurst	#createBurst, :, ~, createBurst
+		c	Creates a burst type explosion. Args: colours, fade colours, whether to trail, whether to flicker
+		p	1	p_92036_1_	colours	#colours, :, ~, colors
+		p	2	p_92036_2_	fadeColours	#fadeColours, :, ~, fadeColors
+		p	3	p_92036_3_	trail	#trail, :, ~, trail
+		p	4	p_92036_4_	twinkleIn	#twinkleIn, :, ~, flicker
+	m	()Z	func_92037_i	isFarFromCamera	#isFarFromCamera, :, ~, isFarAway
+	m	(Lnet/minecraft/world/World;DDDDDDLnet/minecraft/client/particle/EffectRenderer;Lnet/minecraft/nbt/NBTTagCompound;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1208_1_	world	#~, ~, ~, world
+		p	2	p_i1208_2_	x	#~, ~, ~, x
+		p	4	p_i1208_4_	y	#~, ~, ~, y
+		p	6	p_i1208_6_	z	#~, ~, ~, z
+		p	8	p_i1208_8_	velocityX	#~, ~, ~, velocityX
+		p	10	p_i1208_10_	velocityY	#~, ~, ~, velocityY
+		p	12	p_i1208_12_	velocityZ	#~, ~, ~, velocityZ
+		p	14	p_i1208_14_	manager	#~, ~, ~, manager
+		p	15	p_i1208_15_	explosions	#~, ~, ~, explosions

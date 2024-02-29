@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/network/LanServerDetector$ThreadLanServerFind	net/minecraft/client/network/LanServerDetector$ThreadLanServerFind	
+	f	Lnet/minecraft/client/network/LanServerDetector$LanServerList;	field_77500_a	localServerList	#localServerList, :, ~, serverList
+		c	The LanServerList
+	f	Ljava/net/InetAddress;	field_77498_b	broadcastAddress	#broadcastAddress, :, ~, address
+		c	InetAddress for 224.0.2.60
+	f	Ljava/net/MulticastSocket;	field_77499_c	socket	#socket, :, ~, socket
+		c	The socket we're using to receive packets on.
+	m	()V	run	run	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/network/LanServerDetector$LanServerList;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1320_1_	list	#list, :, ~, serverList

@@ -1,0 +1,26 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/WeightedRandom	net/minecraft/util/WeightedRandom	
+	m	(Ljava/util/Collection;)I	func_76272_a	getTotalWeight	#getTotalWeight, :, getRate, getTotalWeight
+		c	Returns the total weight of all items in a collection.
+		p	0	p_76272_0_	collection	#collection, :, pool, entries
+	m	(Ljava/util/Random;Ljava/util/Collection;)Lnet/minecraft/util/WeightedRandom$Item;	func_76271_a	getRandomItem	#getRandomItem, :, getRandom, pick
+		c	Returns a random choice from the input items.
+		p	0	p_76271_0_	random	#random, :, :, :
+		p	1	p_76271_1_	collection	#collection, :, pool, entries
+	m	(Ljava/util/Random;Ljava/util/Collection;I)Lnet/minecraft/util/WeightedRandom$Item;	func_76273_a	getRandomItem	#getRandomItem, :, getRandom, pick
+		c	Returns a random choice from the input items, with a total weight value.
+		p	0	p_76273_0_	random	#random, :, :, :
+		p	1	p_76273_1_	collection	#collection, :, pool, entries
+		p	2	p_76273_2_	totalWeight	#totalWeight, :, :, :
+	m	(Ljava/util/Random;[Lnet/minecraft/util/WeightedRandom$Item;)Lnet/minecraft/util/WeightedRandom$Item;	func_76274_a	getRandomItem	#getRandomItem, :, getRandom, pick
+		c	Returns a random choice from the input items.
+		p	0	p_76274_0_	random	#~, ~, random, :
+		p	1	p_76274_1_	entries	#~, ~, pool, entries
+	m	(Ljava/util/Random;[Lnet/minecraft/util/WeightedRandom$Item;I)Lnet/minecraft/util/WeightedRandom$Item;	func_76269_a	getRandomItem	#getRandomItem, :, getRandom, pick
+		c	Returns a random choice from the input array of items, with a total weight value.
+		p	0	p_76269_0_	random	#~, ~, random, :
+		p	1	p_76269_1_	entries	#~, ~, pool, entries
+		p	2	p_76269_2_	totalWeight	#~, ~, totalWeight, :
+	m	([Lnet/minecraft/util/WeightedRandom$Item;)I	func_76270_a	getTotalWeight	#getTotalWeight, :, getWeightSum, getTotalWeight
+		c	Returns the total weight of all items in a array.
+		p	0	p_76270_0_	entries	#~, ~, pool, entries

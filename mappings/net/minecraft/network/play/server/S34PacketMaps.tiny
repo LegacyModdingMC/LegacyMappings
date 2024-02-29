@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S34PacketMaps	net/minecraft/network/play/server/S34PacketMaps	
+	f	I	field_149191_a	mapId	#mapId, :, id, :
+	f	[B	field_149190_b	data	#~, ~, colors, data
+	m	()I	func_149188_c	getMapId	#getMapId, :, getId, :
+	m	()[B	func_149187_d	getData	#getData, :, ~, getData
+	m	(I[B)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45202_1_	id	#~, ~, ~, id
+		p	2	p_i45202_2_	data	#~, ~, ~, data
+	m	()V	<init>	<init>	#~, ~, ~, ~

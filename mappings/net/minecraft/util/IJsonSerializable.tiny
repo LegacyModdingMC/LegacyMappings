@@ -1,0 +1,6 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/util/IJsonSerializable	net/minecraft/util/IJsonSerializable	
+	m	()Lcom/google/gson/JsonElement;	func_151003_a	getSerializableElement	#getSerializableElement, :, write, toJson
+		c	Gets the JsonElement that can be serialized.
+	m	(Lcom/google/gson/JsonElement;)V	func_152753_a	fromJson	#fromJson, :, read, add
+		p	1	p_152753_1_	json	#json, :, jsonElement, element

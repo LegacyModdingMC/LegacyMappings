@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandToggleDownfall	net/minecraft/command/CommandToggleDownfall	
+	m	()V	func_71554_c	toggleDownfall	#toggleDownfall, :, :, :
+		c	Toggle rain and enable thundering.
+	m	()V	<init>	<init>	#~, ~, ~, ~

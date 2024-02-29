@@ -1,0 +1,3 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandTestFor	net/minecraft/command/server/CommandTestFor	
+	m	()V	<init>	<init>	#~, ~, ~, ~

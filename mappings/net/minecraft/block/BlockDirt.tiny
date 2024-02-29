@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockDirt	net/minecraft/block/BlockDirt	
+	f	Lnet/minecraft/util/IIcon;	field_150010_M	spriteSide	#~, ~, ~, spriteSide
+	f	[Ljava/lang/String;	field_150009_a	VARIANTS	#~, ~, ~, VARIANTS
+	f	Lnet/minecraft/util/IIcon;	field_150008_b	spriteTop	#~, ~, ~, spriteTop
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

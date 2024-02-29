@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandNetstat	net/minecraft/command/server/CommandNetstat	
+	m	(Lnet/minecraft/command/ICommandSender;ILnet/minecraft/network/NetworkStatistics$PacketStat;)V	func_152375_a	sendPacketStats	#~, ~, ~, sendPacketStats
+		p	1	p_152375_1_	source	#~, ~, ~, source
+		p	2	p_152375_2_	id	#~, ~, ~, id
+		p	3	p_152375_3_	stats	#~, ~, ~, stats
+	m	()V	<init>	<init>	#~, ~, ~, ~

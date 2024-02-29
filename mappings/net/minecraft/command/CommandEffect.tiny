@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandEffect	net/minecraft/command/CommandEffect	
+	m	()[Ljava/lang/String;	func_98152_d	getAllUsernames	#getAllUsernames, :, ~, getPlayerNames
+	m	()V	<init>	<init>	#~, ~, ~, ~

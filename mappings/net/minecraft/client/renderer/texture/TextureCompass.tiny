@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/texture/TextureCompass	net/minecraft/client/renderer/texture/TextureCompass	
+	f	D	field_94244_i	currentAngle	#currentAngle, :, ~, angle
+		c	Current compass heading in radians
+	f	D	field_94242_j	angleDelta	#angleDelta, :, ~, angleDelta
+		c	Speed and direction of compass rotation
+	m	(Lnet/minecraft/world/World;DDDZZ)V	func_94241_a	updateCompass	#updateCompass, :, ~, tick
+		c	Updates the compass based on the given x,z coords and camera direction
+		p	1	p_94241_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_94241_2_	x	#~, ~, ~, x
+		p	4	p_94241_4_	y	#~, ~, ~, y
+		p	6	p_94241_6_	z	#~, ~, ~, z
+		p	8	p_94241_8_	findSpawnPoint	#~, ~, ~, findSpawnPoint
+		p	9	p_94241_9_	skipAngleInterpolation	#~, ~, ~, skipAngleInterpolation
+	m	(Ljava/lang/String;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1286_1_	iconName	#iconName, :, ~, ~

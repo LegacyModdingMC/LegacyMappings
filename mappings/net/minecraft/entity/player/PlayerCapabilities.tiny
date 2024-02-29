@@ -1,0 +1,25 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/player/PlayerCapabilities	net/minecraft/entity/player/PlayerCapabilities	
+	f	Z	field_75102_a	disableDamage	#disableDamage, :, invulnerable, :
+		c	Disables player damage.
+	f	Z	field_75100_b	isFlying	#isFlying, :, flying, :
+		c	Sets/indicates whether the player is flying.
+	f	Z	field_75101_c	allowFlying	#allowFlying, :, :, canFly
+		c	whether or not to allow the player to fly when they double jump.
+	f	Z	field_75098_d	isCreativeMode	#isCreativeMode, :, creativeMode, :
+		c	Used to determine if creative mode is enabled, and therefore if items should be depleted on usage
+	f	Z	field_75099_e	allowEdit	#allowEdit, :, allowModifyWorld, canModifyWorld
+		c	Indicates whether the player is allowed to modify the surroundings
+	f	F	field_75096_f	flySpeed	#flySpeed, :, :, :
+	f	F	field_75097_g	walkSpeed	#walkSpeed, :, :, :
+	m	()F	func_75093_a	getFlySpeed	#getFlySpeed, :, :, :
+	m	(F)V	func_75092_a	setFlySpeed	#setFlySpeed, :, :, :
+		p	1	p_75092_1_	speed	#speed, :, flySpeed, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_75091_a	writeCapabilitiesToNBT	#writeCapabilitiesToNBT, :, serialize, writeNbt
+		p	1	p_75091_1_	tagCompound	#tagCompound, :, nbt, :
+	m	()F	func_75094_b	getWalkSpeed	#getWalkSpeed, :, :, :
+	m	(F)V	func_82877_b	setPlayerWalkSpeed	#setPlayerWalkSpeed, :, setWalkSpeed, :
+		p	1	p_82877_1_	speed	#speed, :, walkSpeed, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_75095_b	readCapabilitiesFromNBT	#readCapabilitiesFromNBT, :, deserialize, readNbt
+		p	1	p_75095_1_	tagCompound	#tagCompound, :, nbt, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

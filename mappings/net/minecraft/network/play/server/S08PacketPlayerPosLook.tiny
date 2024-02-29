@@ -1,0 +1,22 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S08PacketPlayerPosLook	net/minecraft/network/play/server/S08PacketPlayerPosLook	
+	f	D	field_148940_a	x	#x, :, :, :
+	f	D	field_148938_b	y	#y, :, :, :
+	f	D	field_148939_c	z	#z, :, :, :
+	f	F	field_148936_d	yaw	#yaw, :, :, :
+	f	F	field_148937_e	pitch	#pitch, :, :, :
+	f	Z	field_148935_f	onGround	#~, ~, ~, onGround
+	m	()D	func_148932_c	getX	#getX, :, :, :
+	m	()D	func_148928_d	getY	#getY, :, :, :
+	m	()D	func_148933_e	getZ	#getZ, :, :, :
+	m	()F	func_148931_f	getYaw	#getYaw, :, :, :
+	m	()F	func_148930_g	getPitch	#getPitch, :, :, :
+	m	()Z	func_148929_h	getOnGround	#~, ~, ~, getOnGround
+	m	(DDDFFZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45164_1_	x	#~, ~, ~, x
+		p	3	p_i45164_3_	y	#~, ~, ~, y
+		p	5	p_i45164_5_	z	#~, ~, ~, z
+		p	7	p_i45164_7_	yaw	#~, ~, ~, yaw
+		p	8	p_i45164_8_	pitch	#~, ~, ~, pitch
+		p	9	p_i45164_9_	onGround	#~, ~, ~, onGround
+	m	()V	<init>	<init>	#~, ~, ~, ~

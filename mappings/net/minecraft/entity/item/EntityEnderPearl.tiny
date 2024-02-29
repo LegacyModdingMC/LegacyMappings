@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityEnderPearl	net/minecraft/entity/item/EntityEnderPearl	
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1784_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1784_2_	x	#x, :, ~, x
+		p	4	p_i1784_4_	y	#y, :, ~, y
+		p	6	p_i1784_6_	z	#z, :, ~, z
+	m	(Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityLivingBase;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1783_1_	worldIn	#worldIn, :, ~, world
+		p	2	p_i1783_2_	throwerIn	#throwerIn, :, ~, owner
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1782_1_	p_i1782_1_	#~, ~, ~, ~

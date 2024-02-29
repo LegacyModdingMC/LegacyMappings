@@ -1,0 +1,7 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/gen/layer/GenLayer$2	net/minecraft/world/gen/layer/GenLayer$2	
+	f	I	field_151682_a	field_151682_a	#~, ~, ~, ~
+	m	()Ljava/lang/String;	call	call	#~, ~, call, :
+	m	()Ljava/lang/Object;	call	call	#~, ~, ~, ~
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45477_1_	p_i45477_1_	#~, ~, ~, ~

@@ -1,0 +1,42 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/server/CommandBlockLogic	net/minecraft/command/server/CommandBlockLogic	
+	f	Ljava/text/SimpleDateFormat;	field_145766_a	timestampFormat	#timestampFormat, TIMESTAMP_FORMAT, DATE_FORMAT, :
+		c	The formatting for the timestamp on commands run.
+	f	I	field_145764_b	successCount	#successCount, :, :, :
+		c	The number of successful commands run. (used for redstone output)
+	f	Z	field_145765_c	trackOutput	#trackOutput, :, :, :
+	f	Lnet/minecraft/util/IChatComponent;	field_145762_d	lastOutput	#lastOutput, :, :, :
+		c	The previously run command.
+	f	Ljava/lang/String;	field_145763_e	commandStored	#commandStored, :, command, :
+		c	The command stored in the command block.
+	f	Ljava/lang/String;	field_145761_f	customName	#customName, :, name, :
+		c	The custom name of the command block. (defaults to "@")
+	m	(Lnet/minecraft/world/World;)V	func_145755_a	trigger	#trigger, :, execute, run
+		p	1	p_145755_1_	worldIn	#worldIn, :, world, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_145758_a	writeDataToNBT	#writeDataToNBT, :, toNbt, writeNbt
+		c	Stores data to NBT format.
+		p	1	p_145758_1_	tagCompound	#tagCompound, :, nbt, :
+	m	(Lio/netty/buffer/ByteBuf;)V	func_145757_a	fillInInfo	#fillInInfo, :, writeEntityId, writeInfo
+		c	Fills in information about the command block for the packet. X/Y/Z for the minecart version, and entityId for the traditional version
+		p	1	p_145757_1_	buf	#buf, :, byteBuf, buffer
+	m	(Ljava/lang/String;)V	func_145752_a	setCommand	#setCommand, :, :, :
+		c	Sets the command.
+		p	1	p_145752_1_	command	#command, :, :, :
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)V	func_145759_b	readDataFromNBT	#readDataFromNBT, :, fromNbt, readNbt
+		c	Reads NBT formatting and stored data into variables.
+		p	1	p_145759_1_	nbt	#nbt, :, :, :
+	m	(Lnet/minecraft/util/IChatComponent;)V	func_145750_b	setLastOutput	#setLastOutput, :, :, :
+		p	1	p_145750_1_	lastOutputMessage	#lastOutputMessage, :, lastOutput, output
+	m	(Ljava/lang/String;)V	func_145754_b	setName	#setName, :, :, :
+		p	1	p_145754_1_	name	#name, :, :, :
+	m	()V	func_145756_e	updateCommand	#updateCommand, :, markDirty, :
+	m	()I	func_145751_f	getCommandBlockType	#getCommandBlockType, :, getType, :
+		c	Currently this returns 0 for the traditional command block, and 1 for the minecart command block
+	m	()I	func_145760_g	getSuccessCount	#getSuccessCount, :, :, :
+		c	returns the successCount int.
+	m	()Lnet/minecraft/util/IChatComponent;	func_145749_h	getLastOutput	#getLastOutput, :, :, :
+		c	Returns the lastOutput.
+	m	()Ljava/lang/String;	func_145753_i	getCustomName	#getCustomName, getCommand, :, :
+		c	Returns the customName of the command block.
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

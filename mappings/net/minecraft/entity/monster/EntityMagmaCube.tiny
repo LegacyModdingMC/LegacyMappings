@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/monster/EntityMagmaCube	net/minecraft/entity/monster/EntityMagmaCube	
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1737_1_	worldIn	#worldIn, :, ~, ~

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/achievement/GuiStats$StatsGeneral	net/minecraft/client/gui/achievement/GuiStats$StatsGeneral	
+	f	Lnet/minecraft/client/gui/achievement/GuiStats;	field_148208_k	parent	#~, ~, ~, parent
+	m	(Lnet/minecraft/client/gui/achievement/GuiStats;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1067_1_	p_i1067_1_	#~, ~, ~, ~

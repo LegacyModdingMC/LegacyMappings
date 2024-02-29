@@ -1,0 +1,24 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/shader/TesselatorVertexState	net/minecraft/client/shader/TesselatorVertexState	
+	f	[I	field_147583_a	rawBuffer	#rawBuffer, :, ~, buffer
+	f	I	field_147581_b	rawBufferIndex	#rawBufferIndex, :, ~, index
+	f	I	field_147582_c	vertexCount	#vertexCount, :, ~, vertexCount
+	f	Z	field_147579_d	hasTexture	#hasTexture, :, ~, textured
+	f	Z	field_147580_e	hasBrightness	#hasBrightness, :, ~, hasBrightness
+	f	Z	field_147577_f	hasNormals	#hasNormals, :, ~, hasNormals
+	f	Z	field_147578_g	hasColor	#hasColor, :, ~, colored
+	m	()[I	func_147572_a	getRawBuffer	#getRawBuffer, :, ~, getBuffer
+	m	()I	func_147576_b	getRawBufferIndex	#getRawBufferIndex, :, ~, getIndex
+	m	()I	func_147575_c	getVertexCount	#getVertexCount, :, ~, getVertexCount
+	m	()Z	func_147573_d	getHasTexture	#getHasTexture, :, ~, hasTexture
+	m	()Z	func_147571_e	getHasBrightness	#getHasBrightness, :, ~, hasBrightness
+	m	()Z	func_147570_f	getHasNormals	#getHasNormals, :, ~, hasNormals
+	m	()Z	func_147574_g	getHasColor	#getHasColor, :, ~, hasColor
+	m	([IIIZZZZ)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45079_1_	buffer	#~, ~, ~, buffer
+		p	2	p_i45079_2_	index	#~, ~, ~, index
+		p	3	p_i45079_3_	vertexCount	#~, ~, ~, vertexCount
+		p	4	p_i45079_4_	textured	#~, ~, ~, textured
+		p	5	p_i45079_5_	hasBrightness	#~, ~, ~, hasBrightness
+		p	6	p_i45079_6_	hasNormals	#~, ~, ~, hasNormals
+		p	7	p_i45079_7_	colored	#~, ~, ~, colored

@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/CommandDefaultGameMode	net/minecraft/command/CommandDefaultGameMode	
+	m	(Lnet/minecraft/world/WorldSettings$GameType;)V	func_71541_a	setGameType	#setGameType, :, ~, setDefault
+		p	1	p_71541_1_	gameMode	#gameMode, :, ~, gameMode
+	m	()V	<init>	<init>	#~, ~, ~, ~

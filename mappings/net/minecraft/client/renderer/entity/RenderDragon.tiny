@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/entity/RenderDragon	net/minecraft/client/renderer/entity/RenderDragon	
+	f	Lnet/minecraft/client/model/ModelDragon;	field_77084_b	modelDragon	#modelDragon, :, dragonModel, model
+		c	An instance of the dragon model in RenderDragon
+	f	Lnet/minecraft/util/ResourceLocation;	field_110842_f	enderDragonExplodingTextures	#enderDragonExplodingTextures, DRAGON_EXPLODING_TEXTURES, EXPLOSION_TEXTURE, DRAGON_EXPLODING_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110843_g	enderDragonCrystalBeamTextures	#enderDragonCrystalBeamTextures, ENDERCRYSTAL_BEAM_TEXTURES, CRYSTAL_BEAM_TEXTURE, ENDER_CRYSTAL_BEAM_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110845_h	enderDragonEyesTextures	#enderDragonEyesTextures, :, ~, DRAGON_EYES_LOCATION
+	f	Lnet/minecraft/util/ResourceLocation;	field_110844_k	enderDragonTextures	#enderDragonTextures, DRAGON_TEXTURES, DRAGON_TEXTURE, DRAGON_LOCATION
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

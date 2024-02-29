@@ -1,0 +1,20 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/inventory/GuiBeacon$Button	net/minecraft/client/gui/inventory/GuiBeacon$Button	
+	f	Lnet/minecraft/util/ResourceLocation;	field_146145_o	iconTexture	#iconTexture, :, ~, textureLocation
+		c	The texture of the button inside the beacon GUI
+	f	I	field_146144_p	iconX	#iconX, :, ~, xPos
+		c	The horizontal position relative to the beacon GUI at which the button starts
+	f	I	field_146143_q	iconY	#iconY, :, ~, yPos
+		c	The vertical position relative to the beacon GUI at which the button starts
+	f	Z	field_146142_r	selected	#selected, :, ~, disabled
+		c	If clicking the button is disabled (button becomes unclickable and grayed out).
+	m	(Z)V	func_146140_b	setSelected	#setSelected, :, ~, setDisabled
+		p	1	p_146140_1_	selectedIn	#selectedIn, :, ~, disabled
+	m	()Z	func_146141_c	isSelected	#isSelected, :, ~, isDisabled
+	m	(IIILnet/minecraft/util/ResourceLocation;II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1077_1_	buttonId	#buttonId, :, ~, x
+		p	2	p_i1077_2_	x	#x, :, ~, y
+		p	3	p_i1077_3_	y	#y, :, ~, id
+		p	4	p_i1077_4_	iconTextureIn	#iconTextureIn, :, ~, textureLocation
+		p	5	p_i1077_5_	iconXIn	#iconXIn, :, ~, xPos
+		p	6	p_i1077_6_	iconYIn	#iconYIn, :, ~, yPos

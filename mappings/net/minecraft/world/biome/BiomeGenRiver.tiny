@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/biome/BiomeGenRiver	net/minecraft/world/biome/BiomeGenRiver	
+	m	(I)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1987_1_	id	#id, :, ~, ~

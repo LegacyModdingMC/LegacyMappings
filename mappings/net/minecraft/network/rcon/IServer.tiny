@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/rcon/IServer	net/minecraft/network/rcon/IServer	
+	m	()V	func_71326_a	saveProperties	#saveProperties, :, saveAbstractPropertiesHandler, saveProperties
+		c	Saves all of the server properties to the properties file.
+	m	(Ljava/lang/String;I)I	func_71327_a	getIntProperty	#getIntProperty, :, getIntOrDefault, getPropertyOrDefault
+		c	Gets an integer property. If it does not exist, set it to the specified value.
+		p	1	p_71327_1_	key	#key, :, name, key
+		p	2	p_71327_2_	defaultValue	#defaultValue, :, value, defaultValue
+	m	(Ljava/lang/String;Ljava/lang/Object;)V	func_71328_a	setProperty	#setProperty, :, :, :
+		c	Saves an Object with the given property name.
+		p	1	p_71328_1_	key	#key, :, property, key
+		p	2	p_71328_2_	value	#value, :, :, :
+	m	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;	func_71330_a	getStringProperty	#getStringProperty, :, getOrDefault, getPropertyOrDefault
+		c	Gets a string property. If it does not exist, set it to the specified value.
+		p	1	p_71330_1_	key	#key, :, name, key
+		p	2	p_71330_2_	defaultValue	#defaultValue, :, value, defaultValue
+	m	()Ljava/lang/String;	func_71329_c	getSettingsFilename	#getSettingsFilename, :, getPropertiesFilePath, :
+		c	Returns the filename where server properties are stored

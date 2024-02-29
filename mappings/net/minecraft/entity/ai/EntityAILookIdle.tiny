@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/ai/EntityAILookIdle	net/minecraft/entity/ai/EntityAILookIdle	
+	f	Lnet/minecraft/entity/EntityLiving;	field_75258_a	idleEntity	#idleEntity, :, mob, entity
+		c	The entity that is looking idle.
+	f	D	field_75256_b	lookX	#lookX, :, deltaX, :
+		c	X offset to look at
+	f	D	field_75257_c	lookZ	#lookZ, :, deltaZ, :
+		c	Z offset to look at
+	f	I	field_75255_d	idleTime	#idleTime, :, lookTime, :
+		c	A decrementing tick that stops the entity from being idle once it reaches 0.
+	m	(Lnet/minecraft/entity/EntityLiving;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1647_1_	entitylivingIn	#entitylivingIn, :, mob, :

@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/particle/EntityAuraFX	net/minecraft/client/particle/EntityAuraFX	
+	m	(Lnet/minecraft/world/World;DDDDDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1232_1_	worldIn	#worldIn, :, ~, ~
+		p	2	p_i1232_2_	xCoordIn	#xCoordIn, :, ~, ~
+		p	4	p_i1232_4_	yCoordIn	#yCoordIn, :, ~, ~
+		p	6	p_i1232_6_	zCoordIn	#zCoordIn, :, ~, ~
+		p	8	p_i1232_8_	xSpeedIn	#xSpeedIn, :, ~, ~
+		p	10	p_i1232_10_	ySpeedIn	#ySpeedIn, :, ~, ~
+		p	12	p_i1232_12_	speedIn	#speedIn, :, ~, ~

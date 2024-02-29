@@ -1,0 +1,10 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiShareToLan	net/minecraft/client/gui/GuiShareToLan	
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146598_a	lastScreen	#lastScreen, :, parent, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146596_f	allowCheatsButton	#allowCheatsButton, :, allowCommandsButton, :
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146597_g	gameModeButton	#gameModeButton, :, :, :
+	f	Ljava/lang/String;	field_146599_h	gameMode	#gameMode, :, :, :
+	f	Z	field_146600_i	allowCheats	#allowCheats, :, allowCommands, :
+	m	(Lnet/minecraft/client/gui/GuiScreen;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1055_1_	lastScreenIn	#lastScreenIn, :, parent, :
+	m	()V	func_146595_g	updateDisplayNames	#updateDisplayNames, :, updateButtonTexts, :

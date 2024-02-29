@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/play/server/S02PacketChat	net/minecraft/network/play/server/S02PacketChat	
+	f	Lnet/minecraft/util/IChatComponent;	field_148919_a	chatComponent	#chatComponent, :, text, message
+	f	Z	field_148918_b	isChat	#isChat, :, nonChat, system
+	m	(Lnet/minecraft/util/IChatComponent;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45179_1_	component	#component, :, text, mesage
+	m	(Lnet/minecraft/util/IChatComponent;Z)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45180_1_	component	#component, :, text, message
+		p	2	p_i45180_2_	chat	#chat, :, nonChat, system
+	m	()Lnet/minecraft/util/IChatComponent;	func_148915_c	getChatComponent	#getChatComponent, :, getMessage, :
+	m	()Z	func_148916_d	isChat	#isChat, isSystem, isNonChat, isSystemMessage
+		c	This method returns true if the type is SYSTEM or ABOVE_HOTBAR, and false if CHAT
+	m	()V	<init>	<init>	#~, ~, ~, ~

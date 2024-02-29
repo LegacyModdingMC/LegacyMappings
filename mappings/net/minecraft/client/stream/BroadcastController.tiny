@@ -1,0 +1,160 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/stream/BroadcastController	net/minecraft/client/stream/BroadcastController	
+	f	Lnet/minecraft/client/stream/IngestServerTester;	field_152860_A	ingestServTester	#ingestServTester, :, twitchStream, ingestTester
+		c	Instance of the IngestServerTester
+	f	Lorg/apache/logging/log4j/Logger;	field_152861_B	logger	#logger, :, LOGGER, :
+	f	Lnet/minecraft/util/ThreadSafeBoundList;	field_152862_C	ERRORS	#~, ~, THREAD_SAFE_BOUND, ERRORS
+	f	Ljava/lang/String;	field_152863_D	lastError	#lastError, :, message, ~
+		c	The last error that ocurred
+	f	Ltv/twitch/ErrorCode;	field_152864_E	errorCode	#errorCode, :, :, initializationError
+	f	I	field_152865_a	field_152865_a	#~, ~, ~, ~
+	f	I	field_152866_b	field_152866_b	#~, ~, ~, ~
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastListener;	field_152867_c	broadcastListener	#broadcastListener, :, ~, listener
+	f	Ljava/lang/String;	field_152868_d	clientId	#~, ~, clientId, ~
+	f	Ljava/lang/String;	field_152869_e	field_152869_e	#~, ~, ~, ~
+	f	Ljava/lang/String;	field_152870_f	field_152870_f	#~, ~, ~, ~
+	f	Z	field_152871_g	field_152871_g	#~, ~, ~, ~
+	f	Ltv/twitch/Core;	field_152872_h	streamCore	#streamCore, :, core, :
+		c	The stream's core
+	f	Ltv/twitch/broadcast/Stream;	field_152873_i	theStream	#theStream, :, stream, :
+		c	The Stream's instance
+	f	Ljava/util/List;	field_152874_j	captureBuffers	#~, ~, ~, captureBuffers
+	f	Ljava/util/List;	field_152875_k	freeBuffers	#~, ~, ~, freeBuffers
+	f	Z	field_152876_l	authenticated	#~, ~, running, authenticated
+	f	Z	field_152877_m	loggedIn	#~, ~, loginSuccessful, loggedIn
+	f	Z	field_152878_n	shuttingDown	#~, ~, shuttingDown, ~
+	f	Lnet/minecraft/client/stream/BroadcastController$BroadcastState;	field_152879_o	broadcastState	#broadcastState, :, ~, status
+	f	Ljava/lang/String;	field_152880_p	username	#~, ~, username, :
+	f	Ltv/twitch/broadcast/VideoParams;	field_152881_q	videoParamaters	#videoParamaters, :, videoParams, :
+	f	Ltv/twitch/broadcast/AudioParams;	field_152882_r	audioParamaters	#audioParamaters, :, audioParams, :
+	f	Ltv/twitch/broadcast/IngestList;	field_152883_s	ingestList	#ingestList, :, :, servers
+	f	Ltv/twitch/broadcast/IngestServer;	field_152884_t	ingestServ	#ingestServ, :, ingestServer, defaultServer
+		c	The IngestServer's instance
+	f	Ltv/twitch/AuthToken;	field_152885_u	authenticationToken	#authenticationToken, :, authToken, token
+	f	Ltv/twitch/broadcast/ChannelInfo;	field_152886_v	channelInfo	#channelInfo, :, :, :
+	f	Ltv/twitch/broadcast/UserInfo;	field_152887_w	userInfo	#userInfo, :, :, :
+	f	Ltv/twitch/broadcast/StreamInfo;	field_152888_x	streamInfo	#streamInfo, :, :, :
+	f	Ltv/twitch/broadcast/ArchivingState;	field_152889_y	archivingState	#archivingState, :, :, :
+		c	The current archiving state
+	f	J	field_152890_z	field_152890_z	#~, ~, ~, ~
+	m	()Z	func_152817_A	start	#~, ~, start, ~
+	m	()Z	func_152851_B	shutdown	#~, ~, shutdown, ~
+	m	()Z	func_152845_C	init	#~, ~, stopStream, init
+	m	()Z	func_152830_D	requestCommercial	#requestCommercial, :, :, runCommercial
+	m	()Z	func_152819_E	stopBroadcasting	#stopBroadcasting, :, stopBroadcast, stop
+	m	()Z	func_152847_F	pause	#~, ~, pauseBroadcast, pause
+	m	()Z	func_152854_G	resume	#~, ~, resumeBroadcase, resume
+	m	()V	func_152821_H	func_152821_H	#~, ~, ~, ~
+	m	()V	func_152835_I	fetchStreamInfo	#~, ~, ~, fetchStreamInfo
+	m	()Lnet/minecraft/client/stream/IngestServerTester;	func_152838_J	startIngestTesting	#~, ~, getStream, startIngestTesting
+	m	()Z	func_152823_L	allocateFrameBuffer	#~, ~, ~, allocateFrameBuffer
+	m	()V	func_152831_M	func_152831_M	#~, ~, ~, ~
+	m	()Ltv/twitch/broadcast/FrameBuffer;	func_152822_N	pollFreeBuffer	#~, ~, ~, pollFreeBuffer
+	m	()Ltv/twitch/ErrorCode;	func_152852_P	getErrorCode	#getErrorCode, :, :, getInitializationError
+	m	(F)V	func_152829_a	setRecordingDeviceVolume	#setRecordingDeviceVolume, :, setRecorderVolume, :
+		p	1	p_152829_1_	volume	#volume, :, :, :
+	m	(IIFF)Ltv/twitch/broadcast/VideoParams;	func_152834_a	getVideoParams	#~, ~, setProperties, getVideoParams
+		p	1	p_152834_1_	maxKbps	#maxKbps, :, :, :
+		p	2	p_152834_2_	targetFps	#~, ~, fps, targetFps
+		p	3	p_152834_3_	bytesPerPixel	#~, ~, bytesPerPixel, :
+		p	4	p_152834_4_	aspectRatio	#~, ~, aspectRatio, :
+	m	(Lnet/minecraft/client/stream/BroadcastController$BroadcastState;)V	func_152827_a	setStatus	#~, ~, ~, setStatus
+		p	1	p_152827_1_	p_152827_1_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/stream/BroadcastController$BroadcastListener;)V	func_152841_a	setBroadcastListener	#setBroadcastListener, :, ~, setListener
+		c	Set a new BroadcastListener\n \n@param broadcastListenerIn The BroadcastListener to set
+		p	1	p_152841_1_	broadcastListenerIn	#broadcastListenerIn, :, ~, ~
+	m	(Ljava/lang/String;)V	func_152842_a	setClientId	#~, ~, setClientId, ~
+		p	1	p_152842_1_	clientId	#~, ~, clientId, ~
+	m	(Ljava/lang/String;JLjava/lang/String;Ljava/lang/String;)Z	func_152840_a	sendActionMetadata	#~, ~, ~, sendActionMetadata
+		p	1	p_152840_1_	name	#~, ~, ~, name
+		p	2	p_152840_2_	time	#~, ~, ~, time
+		p	4	p_152840_4_	description	#~, ~, ~, description
+		p	5	p_152840_5_	metadata	#~, ~, ~, metadata
+	m	(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z	func_152828_a	setStreamInfo	#~, ~, setStreamInfo, :
+		p	1	p_152828_1_	username	#~, ~, username, ~
+		p	2	p_152828_2_	gameName	#~, ~, gameName, ~
+		p	3	p_152828_3_	streamTitle	#~, ~, streamTitle, ~
+	m	(Ljava/lang/String;Ltv/twitch/AuthToken;)Z	func_152818_a	authenticate	#~, ~, setAuthentication, authenticate
+		p	1	p_152818_1_	username	#~, ~, username, :
+		p	2	p_152818_2_	token	#~, ~, authToken, token
+	m	(Ltv/twitch/ErrorCode;)Z	func_152853_a	error	#~, ~, wasSuccessful, error
+		p	1	p_152853_1_	error	#~, ~, code, error
+	m	(Ltv/twitch/broadcast/FrameBuffer;)V	func_152846_a	captureFramebuffer	#captureFramebuffer, :, ~, readPixels
+		c	caputres the current framebuffer
+		p	1	p_152846_1_	buffer	#~, ~, ~, buffer
+	m	(Ltv/twitch/broadcast/IngestServer;)V	func_152824_a	setIngestServer	#setIngestServer, :, :, setDefaultServer
+		c	Set a new IngestServer\n \n@param ingestServerSet The new IngestServer
+		p	1	p_152824_1_	ingestServerSet	#ingestServerSet, :, ingestServer, server
+	m	(Ltv/twitch/broadcast/VideoParams;)Z	func_152836_a	start	#~, ~, setVideoParams, start
+		p	1	p_152836_1_	videoParams	#~, ~, videoParams, :
+	m	()Z	func_152858_b	isAuthenticated	#~, ~, isRunning, isAuthenticated
+	m	(F)V	func_152837_b	setPlaybackDeviceVolume	#setPlaybackDeviceVolume, :, setPlaybackVolume, :
+		p	1	p_152837_1_	volume	#volume, :, :, :
+	m	(Ltv/twitch/broadcast/FrameBuffer;)Ltv/twitch/ErrorCode;	func_152859_b	submitStreamFrame	#submitStreamFrame, :, ~, submitTexturePointer
+		c	passes the framebuffer on to the video stream\n \n@param frame The FrameBuffer tu submit
+		p	1	p_152859_1_	frame	#frame, :, buffer, ptr
+	m	(J)V	bufferUnlockCallback	bufferUnlockCallback	#~, ~, ~, ~
+		p	1	p_bufferUnlockCallback_1_	p_bufferUnlockCallback_1_	#~, ~, ~, ~
+	m	(Ljava/lang/String;)V	func_152820_d	logError	#logError, :, sendErrorMessage, error
+		c	Log an error\n \n@param error The error to log
+		p	1	p_152820_1_	error	#error, :, message, :
+	m	(Ljava/lang/String;)V	func_152832_e	logWarning	#logWarning, :, sendWarnMessage, warn
+		c	Log an warning\n \n@param warning The warning to log
+		p	1	p_152832_1_	warning	#warning, :, message, :
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/broadcast/ArchivingState;)V	getArchivingStateCallback	getArchivingStateCallback	#~, ~, ~, ~
+		p	1	p_getArchivingStateCallback_1_	p_getArchivingStateCallback_1_	#~, ~, ~, ~
+		p	2	p_getArchivingStateCallback_2_	p_getArchivingStateCallback_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/broadcast/GameInfoList;)V	getGameNameListCallback	getGameNameListCallback	#~, ~, ~, ~
+		p	1	p_getGameNameListCallback_1_	p_getGameNameListCallback_1_	#~, ~, ~, ~
+		p	2	p_getGameNameListCallback_2_	p_getGameNameListCallback_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/broadcast/IngestList;)V	getIngestServersCallback	getIngestServersCallback	#~, ~, ~, ~
+		p	1	p_getIngestServersCallback_1_	p_getIngestServersCallback_1_	#~, ~, ~, ~
+		p	2	p_getIngestServersCallback_2_	p_getIngestServersCallback_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/broadcast/StreamInfo;)V	getStreamInfoCallback	getStreamInfoCallback	#~, ~, ~, ~
+		p	1	p_getStreamInfoCallback_1_	p_getStreamInfoCallback_1_	#~, ~, ~, ~
+		p	2	p_getStreamInfoCallback_2_	p_getStreamInfoCallback_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/broadcast/UserInfo;)V	getUserInfoCallback	getUserInfoCallback	#~, ~, ~, ~
+		p	1	p_getUserInfoCallback_1_	p_getUserInfoCallback_1_	#~, ~, ~, ~
+		p	2	p_getUserInfoCallback_2_	p_getUserInfoCallback_2_	#~, ~, ~, ~
+	m	()Ltv/twitch/broadcast/StreamInfo;	func_152816_j	getStreamInfo	#getStreamInfo, :, :, :
+	m	()Ltv/twitch/broadcast/ChannelInfo;	func_152843_l	getChannelInfo	#getChannelInfo, :, :, :
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/broadcast/ChannelInfo;)V	loginCallback	loginCallback	#~, ~, ~, ~
+		p	1	p_loginCallback_1_	p_loginCallback_1_	#~, ~, ~, ~
+		p	2	p_loginCallback_2_	p_loginCallback_2_	#~, ~, ~, ~
+	m	()Z	func_152850_m	isBroadcasting	#isBroadcasting, :, isLive, isBroadcasting
+	m	()Z	func_152857_n	isReadyToBroadcast	#isReadyToBroadcast, :, isReady, isReadyToBroadcast
+	m	()Z	func_152825_o	isIngestTesting	#isIngestTesting, :, isTesting, isIngestTesting
+	m	()Z	func_152839_p	isBroadcastPaused	#isBroadcastPaused, :, isPaused, :
+	m	()Z	func_152849_q	isLoggedIn	#~, ~, isLoginSuccessful, isLoggedIn
+	m	(Ltv/twitch/ErrorCode;Ltv/twitch/AuthToken;)V	requestAuthTokenCallback	requestAuthTokenCallback	#~, ~, ~, ~
+		p	1	p_requestAuthTokenCallback_1_	p_requestAuthTokenCallback_1_	#~, ~, ~, ~
+		p	2	p_requestAuthTokenCallback_2_	p_requestAuthTokenCallback_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	runCommercialCallback	runCommercialCallback	#~, ~, ~, ~
+		p	1	p_runCommercialCallback_1_	p_runCommercialCallback_1_	#~, ~, ~, ~
+	m	()Ltv/twitch/broadcast/IngestServer;	func_152833_s	getIngestServer	#getIngestServer, :, :, getDefaultServer
+		c	Return the IngestServer's instance
+	m	(Ltv/twitch/ErrorCode;)V	sendActionMetaDataCallback	sendActionMetaDataCallback	#~, ~, ~, ~
+		p	1	p_sendActionMetaDataCallback_1_	p_sendActionMetaDataCallback_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	sendEndSpanMetaDataCallback	sendEndSpanMetaDataCallback	#~, ~, ~, ~
+		p	1	p_sendEndSpanMetaDataCallback_1_	p_sendEndSpanMetaDataCallback_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	sendStartSpanMetaDataCallback	sendStartSpanMetaDataCallback	#~, ~, ~, ~
+		p	1	p_sendStartSpanMetaDataCallback_1_	p_sendStartSpanMetaDataCallback_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	setStreamInfoCallback	setStreamInfoCallback	#~, ~, ~, ~
+		p	1	p_setStreamInfoCallback_1_	p_setStreamInfoCallback_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	startCallback	startCallback	#~, ~, ~, ~
+		p	1	p_startCallback_1_	p_startCallback_1_	#~, ~, ~, ~
+	m	(Ltv/twitch/broadcast/StatType;J)V	statCallback	statCallback	#~, ~, ~, ~
+		p	1	p_statCallback_1_	p_statCallback_1_	#~, ~, ~, ~
+		p	2	p_statCallback_2_	p_statCallback_2_	#~, ~, ~, ~
+	m	(Ltv/twitch/ErrorCode;)V	stopCallback	stopCallback	#~, ~, ~, ~
+		p	1	p_stopCallback_1_	p_stopCallback_1_	#~, ~, ~, ~
+	m	()Ltv/twitch/broadcast/IngestList;	func_152855_t	getIngestList	#getIngestList, :, :, getServers
+		c	Return the IngestList
+	m	()Lnet/minecraft/client/stream/IngestServerTester;	func_152856_w	isReady	#isReady, :, getTwitchStream, getIngestTester
+	m	()J	func_152844_x	getStreamTime	#getStreamTime, :, :, :
+		c	Return the stream time
+	m	()Z	func_152848_y	func_152848_y	#~, ~, ~, ~
+	m	()Ltv/twitch/broadcast/PixelFormat;	func_152826_z	getPixelFormat	#getPixelFormat, :, :, :
+		c	Return the PixelFormat
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

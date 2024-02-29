@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSleepMP	net/minecraft/client/gui/GuiSleepMP	
+	m	()V	func_146418_g	wakeFromSleep	#wakeFromSleep, :, stopSleeping, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

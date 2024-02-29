@@ -1,0 +1,18 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiSnooper	net/minecraft/client/gui/GuiSnooper	
+	f	Lnet/minecraft/client/gui/GuiScreen;	field_146608_a	lastScreen	#lastScreen, :, parent, :
+	f	Lnet/minecraft/client/settings/GameSettings;	field_146603_f	game_settings_2	#game_settings_2, :, options, :
+		c	Reference to the GameSettings object.
+	f	Ljava/util/List;	field_146604_g	keys	#keys, :, entryNames, snooperKeys
+	f	Ljava/util/List;	field_146609_h	values	#values, :, entryValues, snooperValues
+	f	Ljava/lang/String;	field_146610_i	title	#title, :, :, :
+	f	[Ljava/lang/String;	field_146607_r	desc	#desc, :, description, :
+	f	Lnet/minecraft/client/gui/GuiSnooper$List;	field_146606_s	list	#list, :, ~, snooperList
+	f	Lnet/minecraft/client/gui/GuiButton;	field_146605_t	toggleButton	#toggleButton, :, enableButton, snooperToggleButton
+	m	(Lnet/minecraft/client/gui/GuiScreen;Lnet/minecraft/client/settings/GameSettings;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1061_1_	parent	#~, ~, parent, :
+		p	2	p_i1061_2_	options	#~, ~, options, :
+	m	(Lnet/minecraft/client/gui/GuiSnooper;)Ljava/util/List;	access$000	access$000	#~, ~, ~, ~
+		p	0	p_access$000_0_	p_access$000_0_	#~, ~, ~, ~
+	m	(Lnet/minecraft/client/gui/GuiSnooper;)Ljava/util/List;	access$100	access$100	#~, ~, ~, ~
+		p	0	p_access$100_0_	p_access$100_0_	#~, ~, ~, ~

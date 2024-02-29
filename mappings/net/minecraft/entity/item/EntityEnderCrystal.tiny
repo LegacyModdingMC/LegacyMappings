@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/item/EntityEnderCrystal	net/minecraft/entity/item/EntityEnderCrystal	
+	f	I	field_70261_a	innerRotation	#innerRotation, :, endCrystalAge, age
+		c	Used to create the rotation animation when rendering the crystal.
+	f	I	field_70260_b	health	#health, :, ~, explosionCountdown
+	m	(Lnet/minecraft/world/World;DDD)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1699_1_	worldIn	#worldIn, :, world, :
+		p	2	p_i1699_2_	x	#x, :, :, :
+		p	4	p_i1699_4_	y	#y, :, :, :
+		p	6	p_i1699_6_	z	#z, :, :, :
+	m	(Lnet/minecraft/world/World;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1698_1_	worldIn	#worldIn, :, ~, ~

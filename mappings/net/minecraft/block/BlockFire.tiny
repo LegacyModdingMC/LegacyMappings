@@ -1,0 +1,46 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockFire	net/minecraft/block/BlockFire	
+	f	[Lnet/minecraft/util/IIcon;	field_149850_M	fireSprite	#~, ~, ~, fireSprite
+	f	[I	field_149849_a	encouragements	#encouragements, :, ~, burnChance
+	f	[I	field_149848_b	flammabilities	#flammabilities, :, ~, spreadChance
+	m	(III)V	func_149842_a	registerBurnProperties	#~, ~, ~, registerBurnProperties
+		p	1	p_149842_1_	blockId	#~, ~, ~, blockId
+		p	2	p_149842_2_	burnChance	#~, ~, ~, burnChance
+		p	3	p_149842_3_	spreadChance	#~, ~, ~, spreadChance
+	m	(Lnet/minecraft/world/World;IIII)I	func_149846_a	updateBurnChance	#~, ~, ~, updateBurnChance
+		p	1	p_149846_1_	world	#~, ~, ~, world
+		p	2	p_149846_2_	x	#~, ~, ~, x
+		p	3	p_149846_3_	y	#~, ~, ~, y
+		p	4	p_149846_4_	z	#~, ~, ~, z
+		p	5	p_149846_5_	burnChance	#~, ~, ~, burnChance
+	m	(Lnet/minecraft/world/World;IIIILjava/util/Random;I)V	func_149841_a	tryCatchFire	#tryCatchFire, :, ~, spread
+		c	Tries to set block on fire. Deprecated in favour of side-sensitive version.
+		p	1	p_149841_1_	world	#~, ~, ~, world
+		p	2	p_149841_2_	x	#~, ~, ~, x
+		p	3	p_149841_3_	y	#~, ~, ~, y
+		p	4	p_149841_4_	z	#~, ~, ~, z
+		p	5	p_149841_5_	spreadFactor	#~, ~, ~, spreadFactor
+		p	6	p_149841_6_	rand	#~, ~, ~, rand
+		p	7	p_149841_7_	metadata	#~, ~, ~, metadata
+	m	(I)Lnet/minecraft/util/IIcon;	func_149840_c	getFireIcon	#getFireIcon, :, ~, get
+		p	1	p_149840_1_	dir	#~, ~, ~, dir
+	m	()V	func_149843_e	init	#init, :, registerDefaultFlammables, registerBurnProperties
+	m	(Lnet/minecraft/world/World;III)Z	func_149847_e	canNeighborBurn	#canNeighborBurn, :, ~, hasFlammableNeighbor
+		c	Returns true if at least one block next to this one can burn.
+		p	1	p_149847_1_	world	#~, ~, ~, world
+		p	2	p_149847_2_	x	#~, ~, ~, x
+		p	3	p_149847_3_	y	#~, ~, ~, y
+		p	4	p_149847_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/IBlockAccess;III)Z	func_149844_e	canBlockCatchFire	#canBlockCatchFire, :, ~, canBurn
+		c	Checks the specified block coordinate to see if it can catch fire.  Args: blockAccess, x, y, z
+		p	1	p_149844_1_	world	#~, ~, ~, world
+		p	2	p_149844_2_	x	#~, ~, ~, x
+		p	3	p_149844_3_	y	#~, ~, ~, y
+		p	4	p_149844_4_	z	#~, ~, ~, z
+	m	(Lnet/minecraft/world/World;III)I	func_149845_m	getChanceOfNeighborsEncouragingFire	#getChanceOfNeighborsEncouragingFire, :, ~, getBurnChance
+		c	Gets the highest chance of a neighbor block encouraging this block to catch fire
+		p	1	p_149845_1_	world	#~, ~, ~, world
+		p	2	p_149845_2_	x	#~, ~, ~, x
+		p	3	p_149845_3_	y	#~, ~, ~, y
+		p	4	p_149845_4_	z	#~, ~, ~, z
+	m	()V	<init>	<init>	#~, ~, ~, ~

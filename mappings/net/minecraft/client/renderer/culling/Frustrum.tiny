@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/renderer/culling/Frustrum	net/minecraft/client/renderer/culling/Frustrum	
+	f	Lnet/minecraft/client/renderer/culling/ClippingHelper;	field_78552_a	clippingHelper	#clippingHelper, :, ~, frustum
+	f	D	field_78550_b	xPosition	#xPosition, x, :, :
+	f	D	field_78551_c	yPosition	#yPosition, y, :, :
+	f	D	field_78549_d	zPosition	#zPosition, z, :, :
+	m	(DDDDDD)Z	func_78548_b	isBoxInFrustum	#isBoxInFrustum, :, :, isVisible
+		c	Calls the clipping helper. Returns true if the box is inside all 6 clipping planes, otherwise returns false.
+		p	1	p_78548_1_	minX	#~, ~, minX, :
+		p	3	p_78548_3_	minY	#~, ~, minY, :
+		p	5	p_78548_5_	minZ	#~, ~, minZ, :
+		p	7	p_78548_7_	maxX	#~, ~, maxX, :
+		p	9	p_78548_9_	maxY	#~, ~, maxY, :
+		p	11	p_78548_11_	maxZ	#~, ~, maxZ, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

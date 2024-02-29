@@ -1,0 +1,16 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ICrafting	net/minecraft/inventory/ICrafting	
+	m	(Lnet/minecraft/inventory/Container;II)V	func_71112_a	sendProgressBarUpdate	#sendProgressBarUpdate, sendWindowProperty, onScreenHandlerPropertyUpdate, onDataChanged
+		c	Sends two ints to the client-side Container. Used for furnace burning time, smelting progress, brewing progress, and enchanting level. Normally the first int identifies which variable to update, and the second contains the new value. Both are truncated to shorts in non-local SMP.
+		p	1	p_71112_1_	containerIn	#containerIn, :, handler, menu
+		p	2	p_71112_2_	varToUpdate	#varToUpdate, :, propertyId, id
+		p	3	p_71112_3_	newValue	#newValue, :, value, :
+	m	(Lnet/minecraft/inventory/Container;ILnet/minecraft/item/ItemStack;)V	func_71111_a	sendSlotContents	#sendSlotContents, :, onScreenHandlerSlotUpdate, onSlotChanged
+		c	Sends the contents of an inventory slot to the client-side Container. This doesn't have to match the actual contents of that slot. Args: Container, slot number, slot contents
+		p	1	p_71111_1_	containerToSend	#containerToSend, :, handler, menu
+		p	2	p_71111_2_	slotInd	#slotInd, :, slotId, id
+		p	3	p_71111_3_	stack	#stack, :, :, :
+	m	(Lnet/minecraft/inventory/Container;Ljava/util/List;)V	func_71110_a	sendContainerAndContentsToPlayer	#sendContainerAndContentsToPlayer, sendAllContents, updateScreenHandler, updateMenu
+		c	update the crafting window inventory with the items in the list
+		p	1	p_71110_1_	containerToSend	#containerToSend, :, handler, menu
+		p	2	p_71110_2_	itemsList	#itemsList, :, list, stacks

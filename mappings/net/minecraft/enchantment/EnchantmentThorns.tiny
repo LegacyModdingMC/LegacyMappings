@@ -1,0 +1,11 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/enchantment/EnchantmentThorns	net/minecraft/enchantment/EnchantmentThorns	
+	m	(ILjava/util/Random;)Z	func_92094_a	shouldHit	#shouldHit, :, shouldDamageAttacker, :
+		p	0	p_92094_0_	level	#level, :, :, :
+		p	1	p_92094_1_	rnd	#rnd, :, random, :
+	m	(ILjava/util/Random;)I	func_92095_b	getDamage	#getDamage, :, getDamageAmount, :
+		p	0	p_92095_0_	level	#level, :, :, :
+		p	1	p_92095_1_	rnd	#rnd, :, random, :
+	m	(II)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1937_1_	id	#~, ~, ~, id
+		p	2	p_i1937_2_	type	#~, ~, ~, type

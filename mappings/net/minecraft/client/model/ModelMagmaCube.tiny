@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/model/ModelMagmaCube	net/minecraft/client/model/ModelMagmaCube	
+	f	[Lnet/minecraft/client/model/ModelRenderer;	field_78109_a	segments	#segments, :, ~, slices
+	f	Lnet/minecraft/client/model/ModelRenderer;	field_78108_b	core	#core, :, ~, body
+	m	()V	<init>	<init>	#~, ~, ~, ~

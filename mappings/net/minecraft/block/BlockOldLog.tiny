@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockOldLog	net/minecraft/block/BlockOldLog	
+	f	[Ljava/lang/String;	field_150168_M	VARIANTS	#~, ~, ~, VARIANTS
+	m	()V	<init>	<init>	#~, ~, ~, ~
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

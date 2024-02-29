@@ -1,0 +1,13 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/network/NetworkStatistics$Tracker	net/minecraft/network/NetworkStatistics$Tracker	
+	f	[Ljava/util/concurrent/atomic/AtomicReference;	field_152490_a	field_152490_a	#~, ~, ~, ~
+	m	()J	func_152485_a	func_152485_a	#~, ~, ~, ~
+	m	(I)Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152487_a	func_152487_a	#~, ~, ~, ~
+		p	1	p_152487_1_	p_152487_1_	#~, ~, ~, ~
+	m	(IJ)V	func_152488_a	func_152488_a	#~, ~, ~, ~
+		p	1	p_152488_1_	p_152488_1_	#~, ~, ~, ~
+		p	2	p_152488_2_	p_152488_2_	#~, ~, ~, ~
+	m	()J	func_152489_b	func_152489_b	#~, ~, ~, ~
+	m	()Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152484_c	func_152484_c	#~, ~, ~, ~
+	m	()Lnet/minecraft/network/NetworkStatistics$PacketStat;	func_152486_d	func_152486_d	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

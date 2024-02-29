@@ -1,0 +1,4 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/block/BlockCarrot	net/minecraft/block/BlockCarrot	
+	f	[Lnet/minecraft/util/IIcon;	field_149868_a	growthStageSprite	#~, ~, ~, growthStageSprite
+	m	()V	<init>	<init>	#~, ~, ~, ~

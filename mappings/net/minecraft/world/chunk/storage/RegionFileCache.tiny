@@ -1,0 +1,31 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/world/chunk/storage/RegionFileCache	net/minecraft/world/chunk/storage/RegionFileCache	
+	f	Ljava/util/Map;	field_76553_a	regionsByFilename	#regionsByFilename, REGIONS_BY_FILE, FORMATS, REGION_FILES
+		c	A map containing Files as keys and RegionFiles as values
+	m	()V	func_76551_a	clearRegionFileReferences	#clearRegionFileReferences, :, clearRegionFormats, clear
+		c	Saves the current Chunk Map Cache
+	m	(Ljava/io/File;II)Lnet/minecraft/world/chunk/storage/RegionFile;	func_76550_a	createOrLoadRegionFile	#createOrLoadRegionFile, :, create, getRegionFile
+		c	@return the region file for the specified chunk. If the region file does not\n        exist in the cache, then it will be created upon invoking this method.
+		p	0	p_76550_0_	worldDir	#worldDir, :, :, :
+			c	the world directory
+		p	1	p_76550_1_	chunkX	#chunkX, :, x, chunkX
+			c	the absolute x-coordinate of the chunk
+		p	2	p_76550_2_	chunkZ	#chunkZ, :, y, chunkZ
+			c	the absolute z-coordinate of the chunk
+	m	(Ljava/io/File;II)Ljava/io/DataInputStream;	func_76549_c	getChunkInputStream	#getChunkInputStream, :, read, getChunkInputStream
+		c	Returns an input stream for the specified chunk. Args: worldDir, chunkX, chunkZ
+		p	0	p_76549_0_	worldDir	#worldDir, :, :, :
+			c	the world directory
+		p	1	p_76549_1_	chunkX	#chunkX, :, x, chunkX
+			c	the absolute x-coordinate of the chunk
+		p	2	p_76549_2_	chunkZ	#chunkZ, :, y, chunkZ
+			c	the absolute z-coordinate of the chunk
+	m	(Ljava/io/File;II)Ljava/io/DataOutputStream;	func_76552_d	getChunkOutputStream	#getChunkOutputStream, :, write, getChunkOutputStream
+		c	Returns an output stream for the specified chunk. Args: worldDir, chunkX, chunkZ
+		p	0	p_76552_0_	worldDir	#worldDir, :, :, :
+			c	the world directory
+		p	1	p_76552_1_	chunkX	#chunkX, :, x, chunkX
+			c	the absolute x-coordinate for the specified chunk
+		p	2	p_76552_2_	chunkZ	#chunkZ, :, y, chunkZ
+			c	the absolute z-coordinate for the specified chunk
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

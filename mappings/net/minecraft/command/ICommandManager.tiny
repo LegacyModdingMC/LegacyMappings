@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/command/ICommandManager	net/minecraft/command/ICommandManager	
+	m	()Ljava/util/Map;	func_71555_a	getCommands	#getCommands, :, getCommandMap, getCommands
+		c	returns a map of string to commads. All commands are returned, not just ones which someone has permission to use.
+	m	(Lnet/minecraft/command/ICommandSender;)Ljava/util/List;	func_71557_a	getPossibleCommands	#getPossibleCommands, :, ~, getAvailableCommands
+		c	returns all commands that the commandSender can use
+		p	1	p_71557_1_	sender	#sender, :, source, :
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)I	func_71556_a	executeCommand	#executeCommand, :, execute, run
+		c	Attempt to execute a command. This method should return the number of times that the command was executed. If the command does not exist or if the player does not have permission, 0 will be returned. A number greater than 1 can be returned if a player selector is used.\n \n@param sender The person who executed the command. This could be an EntityPlayer, RCon Source, Command Block, etc.\n@param rawCommand The raw arguments that were passed. This includes the command name.
+		p	1	p_71556_1_	sender	#sender, :, source, :
+		p	2	p_71556_2_	rawCommand	#rawCommand, :, name, command
+	m	(Lnet/minecraft/command/ICommandSender;Ljava/lang/String;)Ljava/util/List;	func_71558_b	getPossibleCommands	#getPossibleCommands, :, ~, getSuggestions
+		c	Performs a "begins with" string match on each token in par2. Only returns commands that par1 can use.
+		p	1	p_71558_1_	source	#~, ~, source, :
+		p	2	p_71558_2_	command	#~, ~, ~, command

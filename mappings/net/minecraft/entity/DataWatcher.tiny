@@ -1,0 +1,67 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/entity/DataWatcher	net/minecraft/entity/DataWatcher	
+	f	Lnet/minecraft/entity/Entity;	field_151511_a	owner	#owner, :, entity, :
+	f	Z	field_92086_a	isBlank	#isBlank, :, empty, :
+		c	When isBlank is true the DataWatcher is not watching any objects
+	f	Ljava/util/HashMap;	field_75697_a	dataTypes	#dataTypes, :, ~, DATA_TYPES
+	f	Ljava/util/Map;	field_75695_b	watchedObjects	#watchedObjects, :, entries, :
+	f	Z	field_75696_c	objectChanged	#objectChanged, :, dirty, :
+		c	true if one or more object was changed
+	f	Ljava/util/concurrent/locks/ReadWriteLock;	field_75694_d	lock	#lock, :, :, :
+	m	(Lnet/minecraft/entity/Entity;)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i45313_1_	owner	#owner, :, entity, :
+	m	()Z	func_75684_a	hasChanges	#hasChanges, hasObjectChanged, isDirty, :
+		c	true if one or more object was changed
+	m	(I)B	func_75683_a	getWatchableObjectByte	#getWatchableObjectByte, :, getByte, :
+		c	gets the bytevalue of a watchable object
+		p	1	p_75683_1_	id	#id, :, :, :
+	m	(II)V	func_82709_a	addObjectByDataType	#addObjectByDataType, :, addEntry, add
+		c	Add a new object for the DataWatcher to watch, using the specified data type.
+		p	1	p_82709_1_	id	#id, :, ~, type
+		p	2	p_82709_2_	type	#type, :, ~, id
+	m	(ILjava/lang/Object;)V	func_75682_a	addObject	#addObject, :, track, put
+		c	adds a new object to dataWatcher to watch, to update an already existing object see updateObject. Arguments: data Value Id, Object to add
+		p	1	p_75682_1_	id	#id, :, :, :
+		p	2	p_75682_2_	object	#object, :, :, value
+	m	(Lnet/minecraft/network/PacketBuffer;)V	func_151509_a	writeTo	#writeTo, :, write, :
+		p	1	p_151509_1_	buffer	#buffer, :, packet, buffer
+	m	(Lnet/minecraft/network/PacketBuffer;Lnet/minecraft/entity/DataWatcher$WatchableObject;)V	func_151510_a	writeWatchableObjectToPacketBuffer	#writeWatchableObjectToPacketBuffer, :, ~, writeEntry
+		c	Writes a watchable object (entity attribute of type {byte, short, int, float, string, ItemStack, ChunkCoordinates}) to the specified PacketBuffer
+		p	0	p_151510_0_	buffer	#buffer, :, ~, buffer
+		p	1	p_151510_1_	object	#object, :, ~, entry
+	m	(Ljava/util/List;)V	func_75687_a	updateWatchedObjectsFromList	#updateWatchedObjectsFromList, :, writeUpdatedEntries, update
+		p	1	p_75687_1_	entries	#~, ~, ~, entries
+	m	(Ljava/util/List;Lnet/minecraft/network/PacketBuffer;)V	func_151507_a	writeWatchedListToPacketBuffer	#writeWatchedListToPacketBuffer, :, writeData, write
+		c	Writes the list of watched objects (entity attribute of type {byte, short, int, float, string, ItemStack, ChunkCoordinates}) to the specified PacketBuffer
+		p	0	p_151507_0_	objectsList	#objectsList, :, entries, :
+		p	1	p_151507_1_	buffer	#buffer, :, data, buffer
+	m	()Ljava/util/List;	func_75688_b	getChanged	#getChanged, :, getChangedEntries, collectDirty
+	m	(I)S	func_75693_b	getWatchableObjectShort	#getWatchableObjectShort, :, getShort, :
+		p	1	p_75693_1_	id	#id, :, :, :
+	m	(ILjava/lang/Object;)V	func_75692_b	updateObject	#updateObject, :, setProperty, update
+		c	updates an already existing object
+		p	1	p_75692_1_	id	#id, :, :, :
+		p	2	p_75692_2_	newData	#newData, :, value, :
+	m	(Lnet/minecraft/network/PacketBuffer;)Ljava/util/List;	func_151508_b	readWatchedListFromPacketBuffer	#readWatchedListFromPacketBuffer, :, deserializePacket, read
+		c	Reads a list of watched objects (entity attribute of type {byte, short, int, float, string, ItemStack, ChunkCoordinates}) from the supplied PacketBuffer
+		p	0	p_151508_0_	buffer	#buffer, :, packet, buffer
+	m	()Ljava/util/List;	func_75685_c	getAllWatched	#getAllWatched, :, getEntries, getAll
+	m	(I)I	func_75679_c	getWatchableObjectInt	#getWatchableObjectInt, :, getInt, :
+		c	gets a watchable object and returns it as a Integer
+		p	1	p_75679_1_	id	#id, :, :, :
+	m	()Z	func_92085_d	getIsBlank	#getIsBlank, :, isEmpty, :
+	m	(I)F	func_111145_d	getWatchableObjectFloat	#getWatchableObjectFloat, :, getFloat, :
+		p	1	p_111145_1_	id	#id, :, :, :
+	m	()V	func_111144_e	markClean	#~, ~, clearDirty, markClean
+	m	(I)Ljava/lang/String;	func_75681_e	getWatchableObjectString	#getWatchableObjectString, :, getString, :
+		c	gets a watchable object and returns it as a String
+		p	1	p_75681_1_	id	#id, :, :, :
+	m	(I)Lnet/minecraft/item/ItemStack;	func_82710_f	getWatchableObjectItemStack	#getWatchableObjectItemStack, :, getStack, :
+		c	Get a watchable object as an ItemStack.
+		p	1	p_82710_1_	id	#id, :, :, :
+	m	(I)V	func_82708_h	setObjectWatched	#setObjectWatched, :, markDirty, :
+		p	1	p_82708_1_	id	#id, :, :, :
+	m	(I)Lnet/minecraft/entity/DataWatcher$WatchableObject;	func_75691_i	getWatchedObject	#getWatchedObject, :, ~, getEntry
+		c	is threadsafe, unless it throws an exception, then
+		p	1	p_75691_1_	id	#id, :, :, :
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

@@ -1,0 +1,12 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/tileentity/TileEntityEnderChest	net/minecraft/tileentity/TileEntityEnderChest	
+	f	F	field_145972_a	lidAngle	#lidAngle, :, animationProgress, :
+	f	F	field_145975_i	prevLidAngle	#prevLidAngle, :, lastAnimationProgress, :
+		c	The angle of the ender chest lid last tick
+	f	I	field_145973_j	numPlayersUsing	#numPlayersUsing, :, viewerCount, :
+	f	I	field_145974_k	ticksSinceSync	#ticksSinceSync, :, ticks, :
+	m	()V	func_145969_a	openChest	#openChest, :, onOpen, :
+	m	(Lnet/minecraft/entity/player/EntityPlayer;)Z	func_145971_a	canBeUsed	#canBeUsed, :, canPlayerUse, isValid
+		p	1	p_145971_1_	player	#player, :, :, :
+	m	()V	func_145970_b	closeChest	#closeChest, :, onClose, :
+	m	()V	<init>	<init>	#~, ~, ~, ~

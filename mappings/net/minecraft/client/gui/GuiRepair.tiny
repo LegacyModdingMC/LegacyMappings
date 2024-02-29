@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/client/gui/GuiRepair	net/minecraft/client/gui/GuiRepair	
+	f	Lnet/minecraft/util/ResourceLocation;	field_147093_u	anvilResource	#anvilResource, ANVIL_RESOURCE, TEXTURE, MENU_LOCATION
+	f	Lnet/minecraft/inventory/ContainerRepair;	field_147092_v	anvil	#anvil, :, anvilScreenHandler, menu
+		c	The same reference as {@link GuiContainer#field_147002_h}, downcasted to {@link ContainerRepair}.
+	f	Lnet/minecraft/client/gui/GuiTextField;	field_147091_w	nameField	#nameField, :, renameTextField, :
+	f	Lnet/minecraft/entity/player/InventoryPlayer;	field_147094_x	playerInventory	#playerInventory, :, :, inventory
+	m	()V	func_147090_g	renameItem	#renameItem, :, sendRepameUpdates, sendRenameUpdates
+	m	(Lnet/minecraft/entity/player/InventoryPlayer;Lnet/minecraft/world/World;III)V	<init>	<init>	#~, ~, ~, ~
+		p	1	p_i1073_1_	parentScreenIn	#parentScreenIn, :, ~, playerInventory
+		p	2	p_i1073_2_	world	#~, ~, ~, world
+		p	3	p_i1073_3_	x	#~, ~, ~, x
+		p	4	p_i1073_4_	y	#~, ~, ~, y
+		p	5	p_i1073_5_	z	#~, ~, ~, z
+	m	()V	<clinit>	<clinit>	#~, ~, ~, ~

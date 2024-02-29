@@ -1,0 +1,15 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/inventory/ISidedInventory	net/minecraft/inventory/ISidedInventory	
+	m	(ILnet/minecraft/item/ItemStack;I)Z	func_102007_a	canInsertItem	#canInsertItem, :, ~, canHopperAddStack
+		c	Returns true if automation can insert the given item in the given slot from the given side. Args: Slot, item, side
+		p	1	p_102007_1_	slot	#~, ~, ~, slot
+		p	2	p_102007_2_	stack	#~, ~, ~, stack
+		p	3	p_102007_3_	side	#~, ~, ~, side
+	m	(ILnet/minecraft/item/ItemStack;I)Z	func_102008_b	canExtractItem	#canExtractItem, :, ~, canHopperRemoveStack
+		c	Returns true if automation can extract the given item in the given slot from the given side. Args: Slot, item, side
+		p	1	p_102008_1_	slot	#~, ~, ~, slot
+		p	2	p_102008_2_	stack	#~, ~, ~, stack
+		p	3	p_102008_3_	side	#~, ~, ~, side
+	m	(I)[I	func_94128_d	getAccessibleSlotsFromSide	#getAccessibleSlotsFromSide, getSlotsForFace, ~, getSlots
+		c	Returns an array containing the indices of the slots that can be accessed by automation on the given side of this block.
+		p	1	p_94128_1_	side	#~, ~, ~, side

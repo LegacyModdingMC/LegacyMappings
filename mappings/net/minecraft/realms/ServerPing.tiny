@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/realms/ServerPing	net/minecraft/realms/ServerPing	
+	f	J	lastPingSnapshot	lastPingSnapshot	#~, ~, ~, ~
+	f	Ljava/lang/String;	nrOfPlayers	nrOfPlayers	#~, ~, ~, ~
+	m	()V	<init>	<init>	#~, ~, ~, ~

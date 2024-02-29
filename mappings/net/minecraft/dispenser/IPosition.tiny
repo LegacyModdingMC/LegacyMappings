@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/dispenser/IPosition	net/minecraft/dispenser/IPosition	
+	m	()D	func_82615_a	getX	#getX, :, :, :
+	m	()D	func_82617_b	getY	#getY, :, :, :
+	m	()D	func_82616_c	getZ	#getZ, :, :, :

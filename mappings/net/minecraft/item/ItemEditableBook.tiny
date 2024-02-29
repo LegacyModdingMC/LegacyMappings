@@ -1,0 +1,5 @@
+tiny	2	0	srg	named	comment
+c	net/minecraft/item/ItemEditableBook	net/minecraft/item/ItemEditableBook	
+	m	(Lnet/minecraft/nbt/NBTTagCompound;)Z	func_77828_a	validBookTagContents	#validBookTagContents, :, isValid, :
+		p	0	p_77828_0_	nbt	#nbt, :, :, tag
+	m	()V	<init>	<init>	#~, ~, ~, ~
