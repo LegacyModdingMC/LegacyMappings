@@ -37,6 +37,8 @@ import net.fabricmc.mappingio.tree.MappingTree.MethodArgMapping;
 import net.fabricmc.mappingio.tree.MappingTree.MethodMapping;
 import net.fabricmc.mappingio.tree.MemoryMappingTree;
 
+import io.github.legacymoddingmc.legacymappings.util.MappingUtil;
+
 public abstract class ExportMappingsTask extends DefaultTask {
 
     @InputDirectory
@@ -55,45 +57,14 @@ public abstract class ExportMappingsTask extends DefaultTask {
     }
 
     private static void exportCsv(Path srcDir, Path outDir) throws IOException {
-        writeCsv(readSplitMappings(srcDir), outDir);
+        writeCsv(MappingUtil.readSplitMappings(srcDir), outDir);
     }
 
     private static void build(Path srcDir, Path out) throws IOException {
         Files.createDirectories(out.getParent());
-        MemoryMappingTree mappings = readSplitMappings(srcDir);
+        MemoryMappingTree mappings = MappingUtil.readSplitMappings(srcDir);
         mappings.setDstNamespaces(Collections.singletonList("named"));
         mappings.accept(MappingWriter.create(out, MappingFormat.TINY_2_FILE), VisitOrder.createByName());
-    }
-
-    private static MemoryMappingTree readSplitMappings(Path srcDir) throws IOException {
-        MemoryMappingTree mappings = new MemoryMappingTree();
-        try(StringReader reader = new StringReader(String.join("\n", readSplitMappingLines(srcDir)))) {
-            MappingReader.read(reader, mappings);
-        }
-        return mappings;
-    }
-
-    private static List<String> readSplitMappingLines(Path srcDir) throws IOException {
-        List<String> lines = new ArrayList<>();
-        boolean wroteHeader = false;
-        try(Stream<Path> files = Files.walk(srcDir)) {
-            for(Iterator<Path> it = files.iterator(); it.hasNext();) {
-                Path p = it.next();
-                if(p.toString().endsWith(".tiny") && Files.isRegularFile(p)) {
-                    for(String line : Files.readAllLines(p)) {
-                        if(line.startsWith("tiny")) {
-                            if(!wroteHeader) {
-                                lines.add(line);
-                                wroteHeader = true;
-                            }
-                        } else {
-                            lines.add(line);
-                        }
-                    }
-                }
-            }
-        }
-        return lines;
     }
 
     private static void writeCsv(MemoryMappingTree mappingTree, Path outDir) throws IOException {

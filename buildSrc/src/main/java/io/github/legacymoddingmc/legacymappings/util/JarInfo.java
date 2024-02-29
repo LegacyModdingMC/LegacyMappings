@@ -35,7 +35,9 @@ public class JarInfo {
 
     public JarInfo(Path srgJar, Path srgSourcesJar) throws IOException {
         extractClassInfo(srgJar);
-        extractParameters(srgSourcesJar);
+        if(srgSourcesJar != null) {
+            extractParameters(srgSourcesJar);
+        }
     }
 
     public Map<String, ClassInfo> getData() {

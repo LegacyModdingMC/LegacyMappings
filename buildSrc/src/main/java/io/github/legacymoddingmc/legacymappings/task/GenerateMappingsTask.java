@@ -9,6 +9,8 @@ import io.github.legacymoddingmc.legacymappings.LegacyMappingsExtension;
 import io.github.legacymoddingmc.legacymappings.LegacyMappingsPlugin;
 import io.github.legacymoddingmc.legacymappings.util.JarInfo;
 import io.github.legacymoddingmc.legacymappings.util.JarInfo.ClassInfo;
+import io.github.legacymoddingmc.legacymappings.util.MappingUtil;
+import io.github.legacymoddingmc.legacymappings.util.DependencyUtil;
 import net.fabricmc.mappingio.MappedElementKind;
 import net.fabricmc.mappingio.tree.MappingTree;
 import net.fabricmc.mappingio.tree.MappingTree.MemberMapping;
@@ -91,26 +93,7 @@ public abstract class GenerateMappingsTask extends DefaultTask {
     }
 
     private Path extractDep(Dependency dep) {
-        Path depPath = resolveDep(dep);
-        Path outPath = tmpDir.resolve("extracted/" + FilenameUtils.removeExtension(depPath.getFileName().toString()));
-        extract(depPath, outPath);
-        return outPath;
-    }
-
-    private void extract(Path zip, Path out) {
-        getProject().copy(c -> {
-            c.from(getProject().zipTree(zip));
-            c.into(out);
-        });
-    }
-
-    private Path resolveDep(Dependency dep) {
-        Set<File> files = getProject().getConfigurations().detachedConfiguration(dep).resolve();
-
-        if(files.size() != 1) {
-            throw new IllegalStateException("Expected one file resolving " + dep + " but found these: " + files);
-        }
-        return files.iterator().next().toPath();
+        return DependencyUtil.extractDep(getProject(), dep, tmpDir);
     }
 
     public void generateMappings() throws IOException {
@@ -207,7 +190,7 @@ public abstract class GenerateMappingsTask extends DefaultTask {
         MemoryMappingTree merged = layer(joinedFinal, "named",
                 ext.getLayerOrder(),
                 ext.getCommentOrder());
-        removeDuplicateSrgs(merged, srgJar, false);
+        MappingUtil.removeDuplicateSrgs(merged, srgJar, false);
         removeHardToMap(merged);
 
         MemoryMappingTree mergedCompleted = new MemoryMappingTree();
@@ -256,142 +239,6 @@ public abstract class GenerateMappingsTask extends DefaultTask {
                     m.setDstName(null, 0);
                 }
             }
-        }
-    }
-
-    private static Collection<MethodMapping> removeDuplicateSrgs(MemoryMappingTree tree, JarInfo srgJar, boolean dry) throws IOException {
-        Set<MethodMapping> removed = new HashSet<>();
-
-        Map<String, Set<NameOriginCandidate>> originMap = new HashMap<>();
-        Map<String, NameOriginCandidate> finalOriginMap = new HashMap<>();
-        for(ClassMapping cls : tree.getClasses()) {
-            for(MethodMapping m : cls.getMethods()) {
-                String name = m.getSrcName();
-                if(name.startsWith("func_")) {
-                    NameOriginCandidate origin = findOrigin(cls.getSrcName(), name, false, tree, srgJar);
-                    originMap.computeIfAbsent(name, k -> new HashSet<>()).add(origin);
-                }
-            }
-        }
-        for(String name : originMap.keySet()) {
-            List<NameOriginCandidate> candidates = new ArrayList<>();
-            candidates.addAll(originMap.get(name));
-            NameOriginCandidate chosen = null;
-            if(candidates.size() == 1) {
-                chosen = candidates.get(0);
-            } else {
-                candidates.sort((l, r) -> {
-                    // prefer concrete class, otherwise prefer shorter name
-                    return l.itf && !r.itf ? 1 : !l.itf && r.itf ? -1 : l.getSimpleName().length() - r.getSimpleName().length();
-                });
-
-                chosen = candidates.get(0);
-
-                if(!dry) {
-                    System.out.println("Origin conflict: " + candidates + " # " + tree.getMethod(chosen.owner, chosen.member, chosen.desc).getDstName(0));
-                    System.out.println("Choosing " + chosen + "\n");
-                }
-
-                for(int i = 1; i < candidates.size(); i++) {
-                    NameOriginCandidate candidate = candidates.get(i);
-                    removed.add(tree.getMethod(candidate.owner, candidate.member, candidate.desc));
-                }
-            }
-            finalOriginMap.put(name, chosen);
-        }
-
-        if(!dry) {
-            for(ClassMapping cls : tree.getClasses()) {
-                cls.getMethods().removeIf(m -> m.getSrcName().startsWith("func_") && !finalOriginMap.get(m.getSrcName()).matches(cls, m));
-            }
-        }
-
-        return removed;
-    }
-
-    private static NameOriginCandidate findOrigin(String className, String name, boolean isField, MemoryMappingTree tree, JarInfo srgJar) {
-        List<NameOriginCandidate> candidates = new ArrayList<>();
-        findOrigin(className, name, isField, tree, srgJar, candidates, 0);
-
-        if(candidates.size() == 1) {
-            return candidates.get(0);
-        } else {
-            Collections.sort(candidates);
-            List<NameOriginCandidate> candidatesOfSameType = candidates.stream().distinct().filter(c -> c.itf == candidates.get(0).itf).collect(Collectors.toList());
-            if(candidatesOfSameType.size() == 1) {
-                return candidatesOfSameType.get(0);
-            } else if(candidatesOfSameType.get(1).distance == candidatesOfSameType.get(0).distance) {
-                System.out.println("multiple candidates for " + name + ": " + candidates);
-                return null;
-            } else {
-                return candidatesOfSameType.get(0);
-            }
-        }
-    }
-
-    private static void findOrigin(String className, String name, boolean isField, MemoryMappingTree tree, JarInfo srgJar, List<NameOriginCandidate> candidates, int level) {
-        ClassMapping cls = tree.getClass(className);
-        for(MemberMapping method : (isField ? cls.getFields() : cls.getMethods())) {
-            if(method.getSrcName().equals(name)) {
-                candidates.add(new NameOriginCandidate(cls.getSrcName(), method.getSrcName(), method.getSrcDesc(), level, srgJar.getData().get(className).isInterface()));
-            }
-        }
-        for(ClassInfo superior : srgJar.getSuperiors(className)) {
-            findOrigin(superior.getClassNode().name, name, isField, tree, srgJar, candidates, level + 1);
-        }
-    }
-
-    public static class NameOriginCandidate implements Comparable<NameOriginCandidate> {
-        private final String owner;
-        private final String member;
-        private final String desc;
-        private final int distance;
-        private final boolean itf;
-
-        public NameOriginCandidate(String owner, String member, String desc, int distance, boolean itf) {
-            this.owner = owner;
-            this.member = member;
-            this.desc = desc;
-            this.distance = distance;
-            this.itf = itf;
-        }
-
-        @Override
-        public int compareTo(NameOriginCandidate o) {
-            // prefer interface, otherwise prefer farther ancestor
-            return itf && !o.itf ? -1 : o.itf && !itf ? 1 : -Integer.compare(distance, o.distance);
-        }
-
-        public boolean matches(ClassMapping cls, MethodMapping m) {
-            return (owner.equals(cls.getSrcName()) && member.equals(m.getSrcName()) && desc.equals(m.getSrcDesc()));
-        }
-
-        public String getSimpleName() {
-            int lastSlash = owner.lastIndexOf('/');
-            if(lastSlash != -1) {
-                return owner.substring(lastSlash + 1);
-            } else {
-                return owner;
-            }
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if(obj instanceof NameOriginCandidate) {
-                NameOriginCandidate oc = (NameOriginCandidate)obj;
-                return owner.equals(oc.owner) && member.equals(oc.member) && desc.equals(oc.desc);
-            }
-            return super.equals(obj);
-        }
-
-        @Override
-        public int hashCode() {
-            return 0;
-        }
-
-        @Override
-        public String toString() {
-            return owner + "." + member + desc;
         }
     }
 

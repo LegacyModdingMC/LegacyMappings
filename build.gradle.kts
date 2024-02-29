@@ -1,3 +1,5 @@
+import io.github.legacymoddingmc.legacymappings.task.PrepareEnigmaTask
+
 // Use RFG to fetch the srg jar
 plugins {
   id("com.gtnewhorizons.retrofuturagradle") version "1.3.33"
@@ -95,9 +97,14 @@ tasks.build.configure {
 
 tasks.register<JavaExec>("enigma") {
   classpath = enigmaRuntime
-  mainClass.set("cuchaz.enigma.gui.Main")
-  jvmArgs("-Xmx2048M")
-  args("-jar", "build/rfg/srg_merged_minecraft.jar", "-mappings", file("rezult").absolutePath)
+  mainClass.set("org.quiltmc.enigma.gui.Main")
+  jvmArgs("-Xmx2048M", "-Denigma.legacymodding=true")
+  args(
+      "-jar",
+      tasks.named<PrepareEnigmaTask>("prepareEnigma").get().outputEnigmaJar.get().asFile,
+      "-mappings",
+      tasks.named<PrepareEnigmaTask>("prepareEnigma").get().outputEnigmaMapping.get().asFile
+  )
 }
 
 tasks.jar.configure { enabled = false }
@@ -113,8 +120,7 @@ val enigmaRuntime: Configuration by configurations.creating {
 }
 
 dependencies {
-  enigmaRuntime("cuchaz:enigma-swing:2.4.1")
-  enigmaRuntime("cuchaz:enigma-cli:2.4.1")
+  enigmaRuntime(files("libs/enigma-swing-2.2.0+local-all.jar"))
 }
 
 legacyMappings {
@@ -132,30 +138,4 @@ legacyMappings {
 
   layerOrder("yarn", "feather", "mcpPreferOlder")
   commentOrder("mcpPreferOlder", "mcpPreferNewer", "yarn", "feather")
-}
-
-@DisableCachingByDefault
-abstract class EnigmaTask() : JavaExec() {
-  /*@InputFile
-  abstract fun getJar() : RegularFileProperty
-
-  @Input
-  abstract fun getMappings() : Property<File>*/
-
-  init {
-    classpath = enigmaRuntime
-    mainClass.set("cuchaz.enigma.gui.Main")
-    jvmArgs?.add("-Xmx2048m")
-  }
-/*
-  @TaskAction
-  override fun exec() {
-    args.add("-jar")
-    args.add(getJar().get().asFile.absolutePath)
-    args.add("-mappings")
-    args.add(getMappings().get().absolutePath)
-    //args.add("-profile")
-    //args.add("enigma_profile.json")
-    super.exec()
-  }*/
 }
