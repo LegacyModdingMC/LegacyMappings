@@ -99,8 +99,14 @@ val csvZip = tasks.register<Zip>("csvZip") {
   destinationDirectory.set(file("build/libs"))
 }
 
-tasks.build.configure {
+val packageMappings = tasks.register("packageMappings") {
+  group = "mapping build"
+  setDescription("Assembles all the mapping archives.");
   dependsOn(v2UnmergedMappingsJar, csvZip)
+}
+
+tasks.assemble.configure {
+  dependsOn(packageMappings)
 }
 
 val openEnigma = tasks.register<JavaExec>("openEnigma") {

@@ -42,9 +42,9 @@ Opens Enigma for editing the mappings, using a custom fork that can display comm
 
 Builds the mappings in tiny-v2 and csv formats, and attempts to build the example mod using the mappings.
 
-### `exportMappings`
+### `packageMappings`
 
-Builds the mappings without testing.
+Builds the mapping archives without testing.
 
 ### `generateMappings`
 
