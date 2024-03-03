@@ -26,7 +26,53 @@ This means the field is called `textureName` in MCP↓, also `textureName` in MC
 
 ## Usage
 
-RetroFuturaGradle's support for custom mappings is [still a work in progress](https://github.com/GTNewHorizons/RetroFuturaGradle/issues/58), so using these mappings is not yet recommended for the general public. The adventurous ones can refer to the buildscript of this repo to see how it can be done.
+RetroFuturaGradle's support for custom mappings is [still a work in progress](https://github.com/GTNewHorizons/RetroFuturaGradle/issues/58), so using these mappings is not yet recommended for the general public, but it can already be done.
+
+<details>
+  <summary>Usage</summary>
+
+### Migration
+
+First of all, unless you are starting a new project, you will want to migrate your existing source code to the new mappings. The [PR](https://github.com/GTNewHorizons/RetroFuturaGradle/pull/57) for this has not been merged yet, so you will need to compile and install it yourself.
+
+### Switching to the mappings
+
+Add this snippet to your buildscript:
+
+```gradle
+repositories {
+    exclusiveContent {
+        forRepository {
+            ivy {
+                name = "LegacyMappings releases"
+                url = uri("https://github.com/LegacyModdingMC/LegacyMappings/releases/download/")
+                patternLayout {
+                    artifact("[revision]/[module]-[revision](-[classifier])(.[ext])")
+                }
+                metadataSources {
+                    artifact()
+                }
+            }
+        }
+        filter {
+            includeModule("io.github.legacymoddingmc", "legacymappings")
+        }
+    }
+}
+
+minecraft {
+    mcpMappingChannel = "legacymappings"
+    mcpMappingVersion = "1.7.10+build.1-pre1"
+    useForgeEmbeddedMappings = false
+}
+
+project.dependencies.add("mcpMappingData", "io.github.legacymoddingmc:legacymappings:" + minecraft.mcpMappingVersion.get() + ":csv@zip")
+
+project.configurations.named("mcpMappingData").configure {
+    exclude(group: "de.oceanlabs.mcp")
+}
+```
+</details>
 
 ## Contributing
 
